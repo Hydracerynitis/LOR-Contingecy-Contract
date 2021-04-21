@@ -1,9 +1,6 @@
-# LORMod-EmotionFix
+# LORMod-ContingecyContract
 A Mod for the game Library Of Ruina
 
-In this Mod, I bring several tweak upon vanila game with a main focus over emotion cards
+Like Contingency Contract in Arknights (or Heat in Hades), I add a mechanic that you can add multiple Modifiers upon Guest and Librarian. Each Modifier will increase the Risk Level. When Player complete a stage with enough risk level (usually 18), they will be rewarded by unique reword.
 
-- Give Guests the ability to apply random emotion cards among those currently are available in the library
-- - All emotion cards have been tweaked to ensure every Guest are able to gain advantage from it, they may have different ability from the emotion cards Librarian harnessed 
-- - The intensity of Guests accquire emotion card can be scalled up and down by changing text file in the mod folder
-- Rework several emotion cards that are underwhelming to allow competition with other emotion cards
+It's for player who feel realy confident for more difficult challenge or people who has immense power require a better opposing force
