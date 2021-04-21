@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B01679FD-857C-4903-8D97-ECB108B739B3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Contingecy_Contract</RootNamespace>
+    <AssemblyName>Contingecy Contract</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="BaseMod">
+      <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\BaseMod.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ContractList_Argalia.cs" />
+    <Compile Include="ContractList_Jaeheon.cs" />
+    <Compile Include="ContractList_Philip.cs" />
+    <Compile Include="ContractReward\BattleUnitBuf_AgelicaPuppet.cs" />
+    <Compile Include="ContractReward\BattleUnitBuf_AttackTarget.cs" />
+    <Compile Include="ContractReward\BattleUnitBuf_Barrier.cs" />
+    <Compile Include="ContractReward\BattleUnitBuf_Insanity.cs" />
+    <Compile Include="ContractReward\DiceCardSelfAbility_AllPuppetControl.cs" />
+    <Compile Include="ContractReward\DiceCardSelfAbility_AllVibrate.cs" />
+    <Compile Include="ContractReward\DiceCardSelfAbility_AttackTarget.cs" />
+    <Compile Include="ContractReward\DiceCardSelfAbility_Barrier.cs" />
+    <Compile Include="ContractReward\DiceCardSelfAbility_BurnCostDown.cs" />
+    <Compile Include="ContractReward\DiceCardSelfAbility_BurnPowerUp.cs" />
+    <Compile Include="ContractReward\DiceCardSelfAbility_Canard0.cs" />
+    <Compile Include="ContractReward\DiceCardSelfAbility_Insane1.cs" />
+    <Compile Include="ContractReward\DiceCardSelfAbility_Insane2.cs" />
+    <Compile Include="ContractReward\DiceCardSelfAbility_Jaeheon_AreaDt.cs" />
+    <Compile Include="ContractReward\DiceCardSelfAbility_LoseBurn.cs" />
+    <Compile Include="ContractReward\DiceCardSelfAbility_PerfectResonance.cs" />
+    <Compile Include="ContractReward\DiceCardSelfAbility_PerfectResonanceActivate.cs" />
+    <Compile Include="ContractReward\DiceCardSelfAbility_PlutoAoe.cs" />
+    <Compile Include="ContractReward\DiceCardSelfAbility_PlutoContract1.cs" />
+    <Compile Include="ContractReward\DiceCardSelfAbility_PlutoContract2.cs" />
+    <Compile Include="ContractReward\DiceCardSelfAbility_PlutoContract3.cs" />
+    <Compile Include="ContractReward\DiceCardSelfAbility_PlutoContract4.cs" />
+    <Compile Include="ContractReward\DiceCardSelfAbility_PlutoContract5.cs" />
+    <Compile Include="ContractReward\DiceCardSelfAbility_PuppetEndure.cs" />
+    <Compile Include="ContractReward\DiceCardSelfAbility_PuppetHeal.cs" />
+    <Compile Include="ContractReward\DiceCardSelfAbility_PuppetProtect.cs" />
+    <Compile Include="ContractReward\DiceCardSelfAbility_PuppetStrength.cs" />
+    <Compile Include="ContractReward\DiceCardSelfAbility_ReconnectAngelica.cs" />
+    <Compile Include="ContractReward\DiceCardSelfAbility_ReviveAngelica.cs" />
+    <Compile Include="ContractReward\DiceCardSelfAbility_SelfBurn2.cs" />
+    <Compile Include="ContractReward\DiceCardSelfAbility_ShiftCard.cs" />
+    <Compile Include="ContractReward\DiceCardSelfAbility_ShiftHP.cs" />
+    <Compile Include="ContractReward\DiceCardSelfAbility_vibrateActivate.cs" />
+    <Compile Include="ContractReward\PassiveAbility_1800000.cs" />
+    <Compile Include="ContractReward\PassiveAbility_1800001.cs" />
+    <Compile Include="ContractReward\PassiveAbility_1800002.cs" />
+    <Compile Include="ContractReward\PassiveAbility_1800003.cs" />
+    <Compile Include="ContractReward\PassiveAbility_1810001.cs" />
+    <Compile Include="ContractReward\PassiveAbility_1810002.cs" />
+    <Compile Include="ContractReward\PassiveAbility_1810003.cs" />
+    <Compile Include="ContractReward\PassiveAbility_1810004.cs" />
+    <Compile Include="ContractReward\PassiveAbility_1870001.cs" />
+    <Compile Include="ContractReward\PassiveAbility_1870002.cs" />
+    <Compile Include="ContractReward\PassiveAbility_1870003.cs" />
+    <Compile Include="ContractReward\PassiveAbility_1870004.cs" />
+    <Compile Include="ContractReward\PassiveAbility_1870101.cs" />
+    <Compile Include="ContractReward\PassiveAbility_1870102.cs" />
+    <Compile Include="ContractReward\PassiveAbility_1870103.cs" />
+    <Compile Include="ContractReward\PassiveAbility_1890001.cs" />
+    <Compile Include="ContractReward\PassiveAbility_1890002.cs" />
+    <Compile Include="ContractReward\PassiveAbility_1890003.cs" />
+    <Compile Include="Debug.cs" />
+    <Compile Include="ContractList_Nightmare.cs" />
+    <Compile Include="ContractList_Player.cs" />
+    <Compile Include="ContractRewardSystem.cs" />
+    <Compile Include="ContractAttribution.cs" />
+    <Compile Include="ContractList_Enemy.cs" />
+    <Compile Include="ContractLoader.cs" />
+    <Compile Include="Contrasts.cs" />
+    <Compile Include="Harmony_Patch.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
