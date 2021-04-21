@@ -70,8 +70,8 @@ namespace Contingecy_Contract
             {
                 Debug.Error("HP_" + Patch3.Name, ex);
             }
-            MethodInfo Method4 = typeof(StageController).GetMethod("InitStageByTheBlueReverberationPrimary", AccessTools.all);
-            MethodInfo Patch4 = typeof(Harmony_Patch).GetMethod("StageController_InitStageByTheBlueReverberationPrimary");
+            MethodInfo Method4 = typeof(StageController).GetMethod("InitStageByEndContentsStage", AccessTools.all);
+            MethodInfo Patch4 = typeof(Harmony_Patch).GetMethod("StageController_InitStageByEndContentsStage");
             try
             {
                 harmony.Patch(Method4, null, new HarmonyMethod(Patch4), null, null);
@@ -202,7 +202,7 @@ namespace Contingecy_Contract
             Singleton<ContractLoader>.Instance.Init();
             Cheat = false;
         }
-        public static void StageController_InitStageByTheBlueReverberationPrimary(StageClassInfo stage)
+        public static void StageController_InitStageByEndContentsStage(StageClassInfo stage)
         {
             Duel = false;
             if (stage.id == 70010)
