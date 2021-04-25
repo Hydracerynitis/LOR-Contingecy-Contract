@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Source Code\ContractList_Argalia.cs" />
+    <Compile Include="Source Code\ContractList_Pluto.cs" />
     <Compile Include="Source Code\ContractList_Jaeheon.cs" />
     <Compile Include="Source Code\ContractList_Philip.cs" />
     <Compile Include="Source Code\ContractReward\Jaeheon\BattleUnitBuf_AgelicaPuppet.cs" />
