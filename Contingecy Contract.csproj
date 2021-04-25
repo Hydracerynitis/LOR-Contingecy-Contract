@@ -90,8 +90,6 @@
     <Compile Include="Source Code\ContractReward\Jaeheon\DiceCardSelfAbility_ReconnectAngelica.cs" />
     <Compile Include="Source Code\ContractReward\Jaeheon\DiceCardSelfAbility_ReviveAngelica.cs" />
     <Compile Include="Source Code\ContractReward\Philiph\DiceCardSelfAbility_SelfBurn2.cs" />
-    <Compile Include="Source Code\ContractReward\Pluto\DiceCardSelfAbility_ShiftCard.cs" />
-    <Compile Include="Source Code\ContractReward\Pluto\DiceCardSelfAbility_ShiftHP.cs" />
     <Compile Include="Source Code\ContractReward\Argalia\DiceCardSelfAbility_vibrateActivate.cs" />
     <Compile Include="Source Code\ContractReward\Argalia\PassiveAbility_1800000.cs" />
     <Compile Include="Source Code\ContractReward\Argalia\PassiveAbility_1800001.cs" />

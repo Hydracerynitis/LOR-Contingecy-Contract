@@ -23,8 +23,6 @@ namespace ContractReward
             this.stack = 0;
             count = 0;
             this._bActivated = false;
-            Pluto.allyCardDetail.AddNewCard(18900006);
-            Pluto.allyCardDetail.AddNewCard(18900007);
         }
         public override void OnRoundEndTheLast()
         {
@@ -64,8 +62,6 @@ namespace ContractReward
         private void OnDeadEvent(BattleUnitView view)
         {
             Pluto.allyCardDetail.AddNewCard(18900005);
-            Pluto.allyCardDetail.ExhaustCard(18900006);
-            Pluto.allyCardDetail.ExhaustCard(18900007);
             if (!((UnityEngine.Object)this._auraEffect != (UnityEngine.Object)null))
                 return;
             UnityEngine.Object.Destroy((UnityEngine.Object)this._auraEffect);

@@ -14,12 +14,32 @@ namespace ContractReward
         public override void OnUseCard()
         {
             base.OnUseCard();
-            if (this.card.target != null)
+            BattleUnitModel victim = this.card.target;
+            if (victim != null)
             {
                 BattleUnitBuf unitBufPlutoBarrier = new BattleUnitBuf_Barrier() { Pluto = this.card.owner };
-                this.card.target.bufListDetail.AddBuf(unitBufPlutoBarrier);
+                victim.bufListDetail.AddBuf(unitBufPlutoBarrier);
             }
+            List<BattleDiceCardModel> Cardlist = victim.allyCardDetail.GetAllDeck();
+            BattleDiceCardModel Card = RandomUtil.SelectOne<BattleDiceCardModel>(Cardlist);
+            Cardlist.Remove(Card);
+            Card = this.owner.allyCardDetail.AddNewCard(Card.XmlData.id);
+            Card.SetCurrentCost(0);
+            Card.AddBuf(new Exhaust());
+            Card = RandomUtil.SelectOne<BattleDiceCardModel>(Cardlist);
+            Card = this.owner.allyCardDetail.AddNewCard(Card.XmlData.id);
+            Card.SetCurrentCost(0);
+            Card.AddBuf(new Exhaust());
             this.card.card.exhaust = true;
+            this.card.card.exhaust = true;
+        }
+        public class Exhaust : BattleDiceCardBuf
+        {
+            public override void OnUseCard(BattleUnitModel owner)
+            {
+                base.OnUseCard(owner);
+                this._card.exhaust = true;
+            }
         }
     }
 }
