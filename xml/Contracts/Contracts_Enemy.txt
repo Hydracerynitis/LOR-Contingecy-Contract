@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ContractList>
+	<Contract Type="Damage">
+		<DescList>
+			<Desc language="cn" name="研磨锋刃" desc="所有来宾造成伤害+{0}%" />
+		</DescList>
+		<Faction>Enemy</Faction>
+		<Variation>4</Variation>
+	</Contract>
+	<Contract Type="BreakDamage">
+		<DescList>
+			<Desc language="cn" name="震荡猛击" desc="所有来宾造成混乱伤害+{0}%" />
+		</DescList>
+		<Faction>Enemy</Faction>
+		<Variation>4</Variation>
+	</Contract>
+	<Contract Type="Hp">
+		<DescList>
+			<Desc language="cn" name="手术强化" desc="所有来宾最大血量提升{0}%" />
+		</DescList>
+		<Faction>Enemy</Faction>
+		<Variation>4</Variation>
+	</Contract>
+	<Contract Type="Bp">
+		<DescList>
+			<Desc language="cn" name="身经百战" desc="所有来宾最大混乱抗性提升{0}%" />
+		</DescList>
+		<Faction>Enemy</Faction>
+		<Variation>4</Variation>
+	</Contract>
+	<Contract Type="NoBreak">
+		<DescList>
+			<Desc language="cn" name="临危不乱" desc="所有来宾陷入混乱时不改变伤害抗性" />
+		</DescList>
+		<Faction>Enemy</Faction>
+		<BaseLevel>5</BaseLevel>
+	</Contract>
+</ContractList>

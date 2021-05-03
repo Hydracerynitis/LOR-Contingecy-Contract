@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleEffectTextRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<effectTextList>
+		<BattleEffectText ID="Insanity">
+			<Name>狂乱</Name>
+			<Desc>每造成或承受2%自身最大血量的伤害便提升一点层数</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="NullifyPowerAll">
+			<Name>封锁威力</Name>
+			<Desc>无视骰子威力增减</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="Mark">
+			<Name>红靶</Name>
+			<Desc>被安洁莉卡傀儡司书指定攻击</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="AngelicaPuppet">
+			<Name>操纵</Name>
+			<Desc>速度骰+1，该司书可以自由活动</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="TemporyPuppet">
+			<Name>临时操纵</Name>
+			<Desc>这一幕内无法死亡，速度骰+1</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="Barrier">
+			<Name>封锁结界</Name>
+			<Desc>无法行动无法被指定</Desc>
+		</BattleEffectText>
+	</effectTextList>
+</BattleEffectTextRoot>

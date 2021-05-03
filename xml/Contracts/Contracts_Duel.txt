@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ContractList>
+	<Contract Type="Duel">
+		<DescList>
+			<Desc language="cn" name="决斗修正" desc="提高罗兰在危机合约激活时{0}点血量和混乱抗性上限加成" />
+		</DescList>
+		<Faction>Player</Faction>
+		<BaseLevel>0</BaseLevel>
+	</Contract>
+</ContractList>

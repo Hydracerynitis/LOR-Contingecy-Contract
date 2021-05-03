@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ContractList>
+	<Contract Type="Yujin">
+		<DescList>
+			<Desc language="cn" name="重振雄风" desc="柳真首次开启舞台时恢复{0}%的血量，生死界限第一骰最小值提升{1}点" />
+		</DescList>
+		<Faction>Enemy</Faction>
+		<Variation>3</Variation>
+		<BaseLevel>1</BaseLevel>
+		<Conflict>ValTem</Conflict>
+		<Enemy>40001</Enemy>
+	</Contract>
+	<Contract Type="ValTem">
+		<DescList>
+			<Desc language="cn" name="二协中坚" desc="天满和瓦伦丁提升{0}%最大血量和最大混乱抗性
+天满速度不会低于{1}，瓦伦丁使用单骰书页时拼点胜利会摧毁目标下{2}个骰子" />
+		</DescList>
+		<Faction>Enemy</Faction>
+		<Variation>3</Variation>
+		<BaseLevel>1</BaseLevel>
+		<Conflict>Yujin</Conflict>
+		<Enemy>40002</Enemy>
+		<Enemy>40003</Enemy>
+	</Contract>
+</ContractList>
