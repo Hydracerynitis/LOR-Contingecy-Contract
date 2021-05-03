@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PassiveDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<PassiveDesc ID="20210302">
+		<Name>危机合约:</Name> 
+		<Desc></Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="20210331">
+		<Name>心灵共振</Name> 
+		<Desc>使用近战书页时若自身速度与目标震颤层数相差不高于{0}则使其中的所有骰子威力+{1}</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1309013">
+		<Name>魔法结界</Name> 
+		<Desc>免疫所有负面状态
+免疫所有伤害
+(仅在第1阶段生效)</Desc>
+	</PassiveDesc>
+	<!--奖励通用-->
+	<PassiveDesc ID="1800000">
+		<Name>完美提取</Name> 
+		<Desc>每一幕开始时抽牌直至你手中战斗书页数量达到7</Desc>
+	</PassiveDesc>
+	<!--阿尔加利亚-->
+	<PassiveDesc ID="1800001">
+		<Name>完美共振</Name> 
+		<Desc>触发心灵共振时恢复3点光芒并抽2张牌</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1800002">
+		<Name>镇魂之曲</Name> 
+		<Desc>战斗开始时将一张"蘭·舞"置入手牌，每触发5次心灵共振会升级该书页</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1800003">
+		<Name>狂乱演奏</Name> 
+		<Desc>每造成或承受2%自身最大血量的伤害便提升一点"狂乱",可以消耗"狂乱"发动强大书页</Desc>
+	</PassiveDesc>
+	<!--菲利普 -->
+	<PassiveDesc ID="1810001">
+		<Name>神采奕奕</Name> 
+		<Desc>情感等级提升时对所有角色施加3层“烧伤”(包括自身)
+使自身的所有骰子威力+(当前情感等级/2 向下取整)</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1810002">
+		<Name>残火之刃</Name> 
+		<Desc>使用书页施加“烧伤”时层数+1
+每一幕开始时若自身的“烧伤”层数不低于10层，则使攻击模式更激进，否则使攻击模式更保守</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1810003">
+		<Name>冰冷之心</Name> 
+		<Desc>所受"烧伤"伤害-10,自身攻击抗性提升</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1810004">
+		<Name>爆燃之心</Name> 
+		<Desc>击中目标时对其施加2层“烧伤”
+被击中时对攻击方施加2层“烧伤”
+自身攻击抗性下降</Desc>
+	</PassiveDesc>
+	<!--在宪-->
+	<PassiveDesc ID="1870001">
+		<Name>现场缝纫</Name> 
+		<Desc>获得一张仅限有友方单位死亡时使用的“现场缝纫”书页
+效果为以安洁莉卡傀儡的姿态随机复活一个已死亡的司书并开始操控其动作</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1870002">
+		<Name>傀儡师</Name> 
+		<Desc>打击骰子威力+1且命中时追加2点混乱伤害
+若自身速度不低于5点则混乱伤害+1</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1870003">
+		<Name>傀儡戏</Name> 
+		<Desc>反击骰子威力+1
+但其拼点失败时会对安洁莉卡傀儡造成8点混乱伤害
+可使用3费“再连线”使安洁莉卡再次获得"操纵"</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1870004">
+		<Name>傀儡守卫</Name> 
+		<Desc>每一幕开始时获得其他存活的司书层数的“守护”与“振奋”</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1870101">
+		<Name>叽叽叽叽</Name> 
+		<Desc>打击骰子威力+1且命中时追加2点混乱伤害
+若自身速度不低于5点则混乱伤害+1</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1870102">
+		<Name>咯咯咯咯</Name> 
+		<Desc>在宪存活时无法死亡，若自身处于“操纵”状态每一幕开始时获得1层“强壮”，“忍耐”与“迅捷”
+只能攻击带有"红靶"的敌人</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1870103">
+		<Name>嘎吱嘎吱</Name> 
+		<Desc>若自身未处于"操纵状态"则无法行动
+在宪或自身陷入混乱会解除“操纵“状态，若在宪死亡自身也会死亡</Desc>
+	</PassiveDesc>
+	<!--伊莲娜-->
+	<PassiveDesc ID="1880001">
+		<Name>血魔之力</Name> 
+		<Desc>命中时恢复自身2%血量上限</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1880002">
+		<Name>难熬饥饿</Name> 
+		<Desc>自身每损失25%血量上限的血量，提升自身进攻骰威力1点但提升20%所受混乱伤害</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1880003">
+		<Name>血管盛宴</Name> 
+		<Desc>获得一张能将低状态的敌人处决并复活成自己傀儡的战斗书页</Desc>
+	</PassiveDesc>
+	<!--普鲁托-->
+	<PassiveDesc ID="1890001">
+		<Name>恶魔契约</Name> 
+		<Desc>获得5张合同,你可以向友方单位施加其效果或者指向敌方单位使合同对自己生效</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1890002">
+		<Name>虚实难分</Name> 
+		<Desc>每一幕若没有陷入混乱则免疫随一种机攻击类型的伤害</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1890003">
+		<Name>昨日之约</Name> 
+		<Desc>舞台开启时获得随机3个可转移被动</Desc>
+	</PassiveDesc>
+</PassiveDescRoot>

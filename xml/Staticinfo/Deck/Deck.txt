@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<DeckXmlRoot>
+	<Deck ID="18000000">
+		<Card>18000001</Card>
+		<Card>18000001</Card>
+		<Card>18000002</Card>
+		<Card>18000003</Card>
+		<Card>18000004</Card>
+		<Card>18000005</Card>
+		<Card>18000006</Card>
+		<Card>18000007</Card>
+		<Card>18000007</Card>
+	</Deck>
+	<Deck ID="18100000">
+		<Card>18100001</Card>
+		<Card>18100001</Card>
+		<Card>18100002</Card>
+		<Card>18100002</Card>
+		<Card>18100002</Card>
+		<Card>18100003</Card>
+		<Card>18100004</Card>
+		<Card>18100004</Card>
+		<Card>18100005</Card>
+	</Deck>
+	<Deck ID="18100001">
+		<Card>18100011</Card>
+		<Card>18100011</Card>
+		<Card>18100012</Card>
+		<Card>18100012</Card>
+		<Card>18100012</Card>
+		<Card>18100013</Card>
+		<Card>18100014</Card>
+		<Card>18100014</Card>
+		<Card>18100015</Card>
+	</Deck>
+	<Deck ID="18700000">
+		<Card>18700001</Card>
+		<Card>18700001</Card>
+		<Card>18700002</Card>
+		<Card>18700003</Card>
+		<Card>18700004</Card>
+		<Card>18700013</Card>
+		<Card>18700013</Card>
+		<Card>18700012</Card>
+		<Card>18700011</Card>
+	</Deck>
+	<Deck ID="18700001">
+		<Card>18700021</Card>
+		<Card>18700022</Card>
+		<Card>18700022</Card>
+		<Card>18700023</Card>
+		<Card>18700023</Card>
+		<Card>18700024</Card>
+		<Card>18700024</Card>
+		<Card>18700025</Card>
+		<Card>18700025</Card>
+	</Deck>
+	<Deck ID="18710000">
+		<Card>18700001</Card>
+		<Card>18700001</Card>
+		<Card>18700002</Card>
+		<Card>18700003</Card>
+		<Card>18700004</Card>
+		<Card>18700031</Card>
+		<Card>18700031</Card>
+		<Card>18700032</Card>
+		<Card>18700033</Card>
+	</Deck>
+	<Deck ID="18900000">
+		<Card>18900001</Card>
+		<Card>18900001</Card>
+		<Card>18900002</Card>
+		<Card>18900003</Card>
+		<Card>18900003</Card>
+		<Card>18900004</Card>
+		<Card>18900004</Card>
+		<Card>18900005</Card>
+		<Card>18900008</Card>
+	</Deck>
+</DeckXmlRoot>
