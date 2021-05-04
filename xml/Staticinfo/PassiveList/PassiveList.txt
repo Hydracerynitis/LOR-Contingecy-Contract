@@ -79,6 +79,22 @@
     		<CanGivePassive>false</CanGivePassive>
 		<Cost>5</Cost>
   	</Passive>
+	<!-- 伊莲娜-->
+	<Passive ID="1880001">
+		<Rarity>Unique</Rarity>
+    		<CanGivePassive>false</CanGivePassive>
+		<Cost>6</Cost>
+  	</Passive>
+	<Passive ID="1880002">
+		<Rarity>Unique</Rarity>
+    		<CanGivePassive>false</CanGivePassive>
+		<Cost>4</Cost>
+  	</Passive>
+	<Passive ID="1880003">
+		<Rarity>Unique</Rarity>
+    		<CanGivePassive>false</CanGivePassive>
+		<Cost>6</Cost>
+  	</Passive>
 	<!-- 普鲁托-->
 	<Passive ID="1890001">
 		<Rarity>Unique</Rarity>

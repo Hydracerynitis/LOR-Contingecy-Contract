@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Card ID="18800001">
+        <Name>猩红之爪</Name>
+        <Artwork>Elena2</Artwork>
+        <Rarity>Common</Rarity>
+		<Option>NoInventory</Option>
+        <Spec Range="Near" Cost="2" />
+        <Script>energy4</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="4" Dice="7" Type="Atk" Detail="Hit" Motion="H" EffectRes="Elena_H" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="3" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="Elena_J" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="3" Dice="7" Type="Atk" Detail="Slash" Motion="J" EffectRes="Elena_J" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="5" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="18800002">
+        <Name>利爪横扫</Name>
+        <Artwork>Elena2</Artwork>
+        <Rarity>Common</Rarity>
+		<Option>NoInventory</Option>
+        <Spec Range="Near" Cost="2" />
+        <Script>debufHalf</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="5" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="Elena_J" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Elena_Z" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="5" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="18800003">
+        <Name>体液循环</Name>
+        <Artwork>Elena1</Artwork>
+        <Rarity>Uncommon</Rarity>
+		<Option>NoInventory</Option>
+        <Spec Range="Near" Cost="4" />
+        <Script>ElenaBuff</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="6" Dice="9" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="6" Dice="9" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="6" Dice="9" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="18800004">
+        <Name>遁入阴影</Name>
+        <Artwork>Elena1</Artwork>
+        <Rarity>Uncommon</Rarity>
+		<Option>NoInventory</Option>
+        <Spec Range="Near" Cost="4" />
+        <Script>Invisible</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="6" Dice="9" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="6" Dice="9" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="6" Dice="9" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="18800005">
+        <Name>能量灌注</Name>
+        <Artwork>Elena1</Artwork>
+        <Rarity>Uncommon</Rarity>
+		<Option>NoInventory</Option>
+        <Spec Range="Near" Cost="3" />
+        <Script></Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="6" Dice="9" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="3" Dice="5" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Elena_Z" Script="argaliaBuf" ActionScript="" Desc="" />
+            <Behaviour Min="6" Dice="8" Type="Atk" Detail="Slash" Motion="H" EffectRes="Elena_H" Script="" ActionScript="" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="18800006">
+        <Name>血液扩散/Name>
+        <Artwork>Elena3</Artwork>
+        <Rarity>Unique</Rarity>
+		<Option>NoInventory</Option>
+        <Spec Range="FarArea" Cost="5" Affection="Team"/>
+        <Script>AoeCoolDown</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="17" Dice="25" Type="Atk" Detail="Slash" Motion="Z" EffectRes="" Script="elenaAreaDice" ActionScript="ElenaAreaAtk" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="18800007">
+        <Name>血管盛宴/Name>
+        <Artwork>Elena3</Artwork>
+        <Rarity>Unique</Rarity>
+		<Option>Personal</Option>
+        <Spec Range="Special" Cost="3"/>
+        <Script>ElenaZombie</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="30" Dice="30" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="ElenaExecute" ActionScript="theclaw_strongpiercingAtk" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+</DiceCardXmlRoot>

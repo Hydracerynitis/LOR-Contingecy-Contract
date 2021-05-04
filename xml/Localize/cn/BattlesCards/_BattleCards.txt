@@ -131,6 +131,28 @@
 		<BattleCardDesc ID="18700103">
 			<LocalizedName>攻击命令</LocalizedName>
 		</BattleCardDesc>
+		<!--伊莲娜-->
+		<BattleCardDesc ID="18800001">
+			<LocalizedName>猩红之爪</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18800002">
+			<LocalizedName>利爪横扫</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18800003">
+			<LocalizedName>体液循环</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18800004">
+			<LocalizedName>遁入阴影</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18800005">
+			<LocalizedName>能量灌注</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18800006">
+			<LocalizedName>血液扩散</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18800007">
+			<LocalizedName>血管盛宴</LocalizedName>
+		</BattleCardDesc>
 		<!--普鲁托-->
 		<BattleCardDesc ID="18900001">
 			<LocalizedName>魔法: 反冲</LocalizedName>
