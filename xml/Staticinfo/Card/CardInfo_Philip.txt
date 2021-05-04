@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Card ID="18100001">
+		<Name>冰冷残阳</Name>
+		<Artwork>CryPhilip_Parry</Artwork>
+		<Rarity>Common</Rarity>
+		<Option>NoInventory</Option>
+		<Spec Range="Near" Cost="2" />
+		<Script>SelfBurn2</Script>
+		<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+      		<Behaviour Min="3" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      		<Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      		<Behaviour Min="3" Dice="7" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		 <Priority>0</Priority>
+	</Card>
+	<Card ID="18100002">
+		<Name>情感碰撞</Name>
+		<Artwork>CryPhilip_Parry</Artwork>
+		<Rarity>Common</Rarity>
+		<Option>NoInventory</Option>
+		<Spec Range="Near" Cost="2" />
+		<Script></Script>
+		<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+			<Behaviour Min="4" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="philip_emotion_pw" ActionScript="" Desc="" />
+      		<Behaviour Min="4" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="philip_emotion_pw" ActionScript="" Desc="" />
+      		<Behaviour Min="3" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+      		<Behaviour Min="3" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="philip_emotion_pw" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+	</Card>
+	<Card ID="18100003">
+		<Name>绝望烙印</Name>
+		<Artwork>CryPhilip_Atk</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Option>NoInventory</Option>
+		<Spec Range="Near" Cost="2" />
+		<Script>energy4</Script>
+		<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+      		<Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="philip_stigma_atk" ActionScript="" Desc="" />
+      		<Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		 <Priority>0</Priority>
+	</Card>
+	<Card ID="18100004">
+		<Name>灼烧勇气</Name>
+		<Artwork>CryPhilip_Atk</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Option>NoInventory</Option>
+		<Spec Range="Near" Cost="2" />
+		<Script></Script>
+		<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+      		<Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="philip_heat_atk1" ActionScript="" Desc="" />
+      		<Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="philip_heat_atk2" ActionScript="" Desc="" />
+      		<Behaviour Min="3" Dice="6" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="philip_emotion_pw" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		 <Priority>0</Priority>
+	</Card>
+	<Card ID="18100005">
+		<Name>迅猛气势</Name>
+		<Artwork>CryPhilip_Phase2</Artwork>
+		<Rarity>Rare</Rarity>
+		<Option>NoInventory</Option>
+		<Spec Range="Near" Cost="2" />
+		<Script>energy4</Script>
+		<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+      		<Behaviour Min="4" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="philip_emotion_pw" ActionScript="" Desc="" />
+      		<Behaviour Min="3" Dice="7" Type="Standby" Detail="Slash" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+      		<Behaviour Min="3" Dice="7" Type="Standby" Detail="Slash" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		 <Priority>0</Priority>
+	</Card>
+	<Card ID="18100011">
+		<Name>自我束缚</Name>
+		<Artwork>Crying5</Artwork>
+		<Rarity>Rare</Rarity>
+		<Option>NoInventory</Option>
+		<Spec Range="Near" Cost="2" />
+		<Script>energy2</Script>
+		<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+     		<Behaviour Min="3" Dice="9" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="philip_restrict_pw" ActionScript="" Desc="" />
+      		<Behaviour Min="8" Dice="10" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="philip_restrict_atk" ActionScript="philip_restriction" Desc="" />
+      		<Behaviour Min="4" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="philip_restrict_pw" ActionScript="" Desc="" />
+      		<Behaviour Min="3" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="philip_restrict_pw" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		 <Priority>0</Priority>
+	</Card>
+	<Card ID="18100012">
+		<Name>痛彻骨髓</Name>
+		<Artwork>Crying1</Artwork>
+		<Rarity>Rare</Rarity>
+		<Option>NoInventory</Option>
+		<Spec Range="Far" Cost="3" />
+		<Script>BurnPowerUp</Script>
+		<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+      		<Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="Philip_Laser" Script="" ActionScript="" Desc="" />
+      		<Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="Philip_Laser" Script="" ActionScript="" Desc="" />
+      		<Behaviour Min="6" Dice="10" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="Philip_Laser" Script="" ActionScript="" Desc="" />
+      		<Behaviour Min="3" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="philip_restrict_pw" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+	</Card>
+	<Card ID="18100013">
+		<Name>爆燃意志</Name>
+		<Artwork>CryPhilip_Phase2</Artwork>
+		<Rarity>Unique</Rarity>
+		<Option>NoInventory</Option>
+		<Spec Range="Near" Cost="3" />
+		<Script>LoseBurn</Script>
+		<ScriptDesc></ScriptDesc>
+    		<BehaviourList>
+      		<Behaviour Min="5" Dice="9" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="burnSpread" ActionScript="dawnAction" Desc="" />
+      		<Behaviour Min="5" Dice="9" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="burnSpread" ActionScript="dawnAction" Desc="" />
+      		<Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="burnSpread" ActionScript="dawnAction" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		 <Priority>0</Priority>
+	</Card>
+	<Card ID="18100014">
+		<Name>重燃一击</Name>
+		<Artwork>CryPhilip_Strong</Artwork>
+		<Rarity>Unique</Rarity>
+		<Option>NoInventory</Option>
+		<Spec Range="Near" Cost="2" />
+		<Script>BurnCostDown</Script>
+		<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+			<Behaviour Min="12" Dice="20" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="FX_Mon_Pilip_SPATK" Script="philip_bamboospear_atk" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		 <Priority>0</Priority>
+	</Card>
+	<Card ID="18100015">
+		<Name>焦灼死灰</Name>
+		<Artwork>CryPhilip_FarArea</Artwork>
+		<Rarity>Unique</Rarity>
+		<Option>NoInventory</Option>
+		<Spec Range="FarAreaEach" Cost="4" Affection="Team"/>
+		<Script>LoseBurn</Script>
+		<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+      		<Behaviour Min="4" Dice="6" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="" Script="" ActionScript="PhilipAreaAtk" Desc="" />
+      		<Behaviour Min="8" Dice="14" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="" Script="philip_area_atk" ActionScript="PhilipAreaAtk" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		 <Priority>0</Priority>
+	</Card>
+</DiceCardXmlRoot>

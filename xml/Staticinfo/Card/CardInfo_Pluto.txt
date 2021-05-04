@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Card ID="18900001">
+		<Name>魔法: 反冲</Name>
+		<Artwork>Pluto_Atk</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Option>NoInventory</Option>
+		<Spec Range="Near" Cost="2"/>
+		<Script></Script>
+		<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+      		<Behaviour Min="7" Dice="10" Type="Def" Detail="Guard" Motion="G" EffectRes="Pluto_G" Script="" ActionScript="" Desc="" />
+      		<Behaviour Min="3" Dice="8" Type="Atk" Detail="Penetrate" Motion="J" EffectRes="Pluto_J" Script="" ActionScript="" Desc="" />
+      		<Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="Pluto_H" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		 <Priority>0</Priority>
+	</Card>
+	<Card ID="18900002">
+		<Name>魔法: 投射</Name>
+		<Artwork>Pluto_Atk</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Option>NoInventory</Option>
+		<Spec Range="Far" Cost="3"/>
+		<Script></Script>
+		<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+      		<Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="" ActionScript="" Desc="" />
+      		<Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="" ActionScript="" Desc="" />
+      		<Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="" ActionScript="" Desc="" />
+      		<Behaviour Min="3" Dice="6" Type="Standby" Detail="Guard" Motion="G" EffectRes="Pluto_G" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+	</Card>
+	<Card ID="18900003">
+		<Name>魔法: 进攻</Name>
+		<Artwork>Pluto_Atk</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Option>NoInventory</Option>
+		<Spec Range="Near" Cost="2"/>
+		<Script></Script>
+		<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+      		<Behaviour Min="6" Dice="10" Type="Atk" Detail="Hit" Motion="H" EffectRes="Pluto_H" Script="" ActionScript="" Desc="" />
+      		<Behaviour Min="6" Dice="10" Type="Atk" Detail="Hit" Motion="H" EffectRes="Pluto_H" Script="" ActionScript="" Desc="" />
+      		<Behaviour Min="3" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="Pluto_G" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		 <Priority>0</Priority>
+	</Card>
+	<Card ID="18900004">
+		<Name>魔法: 防御</Name>
+		<Artwork>Pluto_Atk</Artwork>
+		<Rarity>Common</Rarity>
+		<Option>NoInventory</Option>
+		<Spec Range="Near" Cost="2"/>
+		<Script>energy4</Script>
+		<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+      		<Behaviour Min="3" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="Pluto_G" Script="" ActionScript="" Desc="" />
+      		<Behaviour Min="3" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="Pluto_G" Script="" ActionScript="" Desc="" />
+      		<Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Pluto_Z" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		 <Priority>0</Priority>
+	</Card>
+	<Card ID="18900005">
+		<Name>变数: 封印</Name>
+		<Artwork>Pluto_Change</Artwork>
+		<Rarity>Rare</Rarity>
+		<Option>NoInventory</Option>
+		<Spec Range="Far" Cost="2"/>
+		<Script>Barrier</Script>
+		<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+      		<Behaviour Min="6" Dice="6" Type="Atk" Detail="Hit" Motion="S2" EffectRes="" Script="" ActionScript="" Desc="" />
+      		<Behaviour Min="3" Dice="7" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		 <Priority>0</Priority>
+	</Card>
+	<Card ID="18900007">
+		<Name>安息之臂</Name>
+		<Artwork>Pluto_Strong</Artwork>
+		<Rarity>Unique</Rarity>
+		<Option>NoInventory</Option>
+    	<Spec Range="FarAreaEach" Cost="5" Affection="Team"/>
+		<Script>PlutoAoe</Script>
+		<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+      		<Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="" Script="" ActionScript="Pluto_AreaAtk" Desc="" />
+      		<Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="" Script="" ActionScript="Pluto_AreaAtk_Continue" Desc="" />
+      		<Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="" Script="" ActionScript="Pluto_AreaAtk_Continue" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+	</Card>
+	<Card ID="18900011">
+		<Name>自由合同</Name>
+		<Artwork>Pluto_Contract</Artwork>
+		<Rarity>Unique</Rarity>
+    	<Option>Personal</Option>
+		<Spec Range="Instance" Cost="1"/>
+		<Script>PlutoContract1</Script>
+    	<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+    	</BehaviourList>
+    	<Chapter>7</Chapter>
+    	<Priority>0</Priority>
+	</Card> 
+	<Card ID="18900012">
+		<Name>增幅合同</Name>
+		<Artwork>Pluto_Contract</Artwork>
+		<Rarity>Unique</Rarity>
+    	<Option>Personal</Option>
+		<Spec Range="Instance" Cost="1"/>
+		<Script>PlutoContract2</Script>
+    	<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+    	</BehaviourList>
+    	<Chapter>7</Chapter>
+    	<Priority>0</Priority>
+	</Card> 
+	<Card ID="18900013">
+		<Name>迅猛合同</Name>
+		<Artwork>Pluto_Contract</Artwork>
+		<Rarity>Unique</Rarity>
+    	<Option>Personal</Option>
+		<Spec Range="Instance" Cost="1"/>
+		<Script>PlutoContract3</Script>
+    	<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+    	</BehaviourList>
+    	<Chapter>7</Chapter>
+    	<Priority>0</Priority>
+	</Card> 
+	<Card ID="18900014">
+		<Name>力量合同</Name>
+		<Artwork>Pluto_Contract</Artwork>
+		<Rarity>Unique</Rarity>
+    	<Option>Personal</Option>
+		<Spec Range="Instance" Cost="1"/>
+		<Script>PlutoContract4</Script>
+    	<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+    	</BehaviourList>
+    	<Chapter>7</Chapter>
+    	<Priority>0</Priority>
+	</Card> 
+	<Card ID="18900015">
+		<Name>光明合同</Name>
+		<Artwork>Pluto_Contract</Artwork>
+		<Rarity>Unique</Rarity>
+    	<Option>Personal</Option>
+		<Spec Range="Instance" Cost="1"/>
+		<Script>PlutoContract5</Script>
+    	<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+    	</BehaviourList>
+    	<Chapter>7</Chapter>
+    	<Priority>0</Priority>
+	</Card>
+</DiceCardXmlRoot>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Card ID="18000001">
+    		<Name>崩坏序曲</Name>
+    		<Artwork>Argalia2</Artwork>
+    		<Rarity>Common</Rarity>
+		    <Option>NoInventory</Option>
+    		<Spec Range="Near" Cost="2" />
+    		<Script>PerfectResonance</Script>
+    		<ScriptDesc></ScriptDesc>
+    		<BehaviourList>
+      			<Behaviour Min="5" Dice="7" Type="Atk" Detail="Slash" Motion="J" EffectRes="Argalia2_J" Script="argaliaVibrateUp2" ActionScript="" Desc="" />
+      			<Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="Argalia2_H" Script="argaliaVibrateUp2" ActionScript="" Desc="" />
+      			<Behaviour Min="3" Dice="6" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    		</BehaviourList>
+    		<Chapter>7</Chapter>
+    		<Priority>0</Priority>
+  	</Card>
+  	<Card ID="18000002">
+    		<Name>独奏之刻</Name>
+    		<Artwork>Argalia2_1</Artwork>
+    		<Rarity>Common</Rarity>
+		    <Option>NoInventory</Option>
+    		<Spec Range="Near" Cost="3" />
+    		<Script>PerfectResonance</Script>
+    		<ScriptDesc></ScriptDesc>
+    		<BehaviourList>
+      			<Behaviour Min="6" Dice="9" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      			<Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="J" EffectRes="Argalia2_J" Script="argaliaDownWithCond" ActionScript="" Desc="" />
+      			<Behaviour Min="5" Dice="9" Type="Atk" Detail="Hit" Motion="H" EffectRes="Argalia2_H" Script="argaliaDownWithCond" ActionScript="" Desc="" />
+      			<Behaviour Min="3" Dice="6" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    		</BehaviourList>
+    		<Chapter>7</Chapter>
+    		<Priority>0</Priority>
+  	</Card>
+  	<Card ID="18000003">
+    		<Name>不谐和音</Name>
+    		<Artwork>Argalia2_3</Artwork>
+    		<Rarity>Uncommon</Rarity>
+		    <Option>NoInventory</Option>
+    		<Spec Range="Near" Cost="3" />
+    		<Script>PerfectResonance</Script>
+    		<ScriptDesc></ScriptDesc>
+    		<BehaviourList>
+			<Behaviour Min="5" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      			<Behaviour Min="4" Dice="7" Type="Atk" Detail="Hit" Motion="H" EffectRes="Argalia2_H" Script="argaliaDownWithCond" ActionScript="" Desc="" />
+      			<Behaviour Min="5" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="Argalia2_J" Script="argaliaDownWithCond" ActionScript="" Desc="" />
+    		</BehaviourList>
+    		<Chapter>7</Chapter>
+    		<Priority>0</Priority>
+  	</Card>
+  	<Card ID="18000004">
+    		<Name>破空镰斩</Name>
+    		<Artwork>Argalia2_1</Artwork>
+    		<Rarity>Common</Rarity>
+		    <Option>NoInventory</Option>
+    		<Spec Range="Near" Cost="1" />
+    		<Script>PerfectResonance</Script>
+    		<ScriptDesc></ScriptDesc>
+    		<BehaviourList>
+      			<Behaviour Min="3" Dice="4" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="Argalia2_H" Script="damage2atk" ActionScript="" Desc="" />
+      			<Behaviour Min="3" Dice="4" Type="Atk" Detail="Hit" Motion="J" EffectRes="Argalia2_J" Script="damage2atk" ActionScript="" Desc="" />
+      			<Behaviour Min="4" Dice="5" Type="Atk" Detail="Slash" Motion="H" EffectRes="Argalia2_H" Script="" ActionScript="argaliaDawnAction" Desc="" />
+      			<Behaviour Min="3" Dice="6" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    		</BehaviourList>
+    		<Chapter>7</Chapter>
+    		<Priority>0</Priority>
+  	</Card>
+  	<Card ID="18000005">
+    		<Name>不安音律</Name>
+    		<Artwork>Argalia2_1</Artwork>
+    		<Rarity>Common</Rarity>
+		    <Option>NoInventory</Option>
+    		<Spec Range="Near" Cost="2" />
+    		<Script>PerfectResonance</Script>
+    		<ScriptDesc></ScriptDesc>
+    		<BehaviourList>
+      			<Behaviour Min="7" Dice="13" Type="Atk" Detail="Slash" Motion="H" EffectRes="Argalia2_H" Script="" ActionScript="" Desc="" />
+      			<Behaviour Min="3" Dice="5" Type="Atk" Detail="Hit" Motion="J" EffectRes="Argalia2_J" Script="argaliaStrengthPl" ActionScript="" Desc="" />
+    		</BehaviourList>
+    		<Chapter>7</Chapter>
+    		<Priority>0</Priority>
+  	</Card>
+  	<Card ID="18000006">
+    		<Name>癫狂连击</Name>
+    		<Artwork>Argalia2_1</Artwork>
+    		<Rarity>Rare</Rarity>
+		    <Option>NoInventory</Option>
+    		<Spec Range="Near" Cost="2" />
+    		<Script>PerfectResonance</Script>
+    		<ScriptDesc></ScriptDesc>
+    		<BehaviourList>
+      			<Behaviour Min="4" Dice="6" Type="Atk" Detail="Slash" Motion="H" EffectRes="Argalia2_H" Script="paralysis1atk" ActionScript="argaliaDawnAction" Desc="" />
+      			<Behaviour Min="4" Dice="6" Type="Atk" Detail="Hit" Motion="J" EffectRes="Argalia2_J" Script="" ActionScript="argaliaDawnAction" Desc="" />
+      			<Behaviour Min="4" Dice="6" Type="Atk" Detail="Hit" Motion="H" EffectRes="Argalia2_H" Script="" ActionScript="argaliaDawnAction" Desc="" />
+      			<Behaviour Min="3" Dice="5" Type="Atk" Detail="Slash" Motion="J" EffectRes="Argalia2_J" Script="" ActionScript="argaliaDawnAction" Desc="" />
+    		</BehaviourList>
+    		<Chapter>7</Chapter>
+    		<Priority>0</Priority>
+  	</Card>
+  	<Card ID="18000007">
+    		<Name>心灵共振</Name>
+    		<Artwork>Argalia2_2</Artwork>
+    		<Rarity>Rare</Rarity>
+		    <Option>NoInventory</Option>
+    		<Spec Range="Near" Cost="3" />
+    		<Script>PerfectResonanceActivate</Script>
+    		<ScriptDesc></ScriptDesc>
+    		<BehaviourList>
+      			<Behaviour Min="5" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="Argalia_G" Script="" ActionScript="" Desc="" />
+      			<Behaviour Min="5" Dice="8" Type="Atk" Detail="Slash" Motion="S1" EffectRes="FX_Mon_Argalia_Slash_H" Script="damage3atk" ActionScript="" Desc="" />
+      			<Behaviour Min="5" Dice="7" Type="Atk" Detail="Hit" Motion="S3" EffectRes="FX_Mon_Argalia_Slash_Down" Script="" ActionScript="" Desc="" />
+    		</BehaviourList>
+    		<Chapter>7</Chapter>
+    		<Priority>0</Priority>
+  	</Card>
+  	<Card ID="18000011">
+    		<Name>苍蓝轨迹</Name>
+    		<Artwork>Argalia1</Artwork>
+    		<Rarity>Unique</Rarity>
+		    <Option>Personal</Option>
+    		<Spec Range="Near" Cost="3" />
+    		<Script>Insane1</Script>
+    		<ScriptDesc></ScriptDesc>
+    		<BehaviourList>
+      			<Behaviour Min="8" Dice="17" Type="Atk" Detail="Slash" Motion="J" EffectRes="FX_Mon_Argalia_Slash_Up" Script="" ActionScript="argalia_atk" Desc="" />
+      			<Behaviour Min="5" Dice="9" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    		</BehaviourList>
+    		<Chapter>7</Chapter>
+    		<Priority>0</Priority>
+  	</Card>
+  	<Card ID="18000012">
+    		<Name>最终旋律</Name>
+    		<Artwork>Argalia5</Artwork>
+    		<Rarity>Unique</Rarity>
+		    <Option>Personal</Option>
+    		<Spec Range="Near" Cost="4" />
+    		<Script>Insane2</Script>
+    		<ScriptDesc></ScriptDesc>
+    		<BehaviourList>
+ 			<Behaviour Min="7" Dice="10" Type="Atk" Detail="Slash" Motion="J" EffectRes="FX_Mon_Argalia_Slash_Up" Script="forbidReuseDice" ActionScript="" Desc="" />
+      			<Behaviour Min="8" Dice="14" Type="Atk" Detail="Penetrate" Motion="J" EffectRes="Argalia2_J" Script="repeat3" ActionScript="argaliaRandomAction" Desc="" />
+      			<Behaviour Min="8" Dice="14" Type="Atk" Detail="Slash" Motion="H" EffectRes="Argalia2_H" Script="repeat4" ActionScript="argaliaRandomAction" Desc="" />
+      			<Behaviour Min="8" Dice="14" Type="Atk" Detail="Hit" Motion="H" EffectRes="Argalia2_H" Script="repeat4" ActionScript="argaliaRandomAction" Desc="" />
+      			<Behaviour Min="8" Dice="16" Type="Def" Detail="Guard" Motion="G" EffectRes="Argalia_G" Script="" ActionScript="" Desc="" />
+    		</BehaviourList>
+    		<Chapter>7</Chapter>
+    		<Priority>0</Priority>
+  	</Card>
+  	<Card ID="18000021">
+    		<Name>蘭·舞</Name>
+    		<Artwork>Argalia5</Artwork>
+    		<Rarity>Unique</Rarity>
+    		<Spec Range="FarAreaEach" Cost="3" Affection ="Team"/>
+    		<Script>AllVibrate</Script>
+    		<ScriptDesc></ScriptDesc>
+    		<BehaviourList>
+      			<Behaviour Min="8" Dice="8" Type="Atk" Detail="Slash" Motion="S3" EffectRes="" Script="" ActionScript="argalia_area_ex" Desc="" />
+    		</BehaviourList>
+    		<Chapter>7</Chapter>
+    		<Priority>0</Priority>
+  	</Card>
+  	<Card ID="18000022">
+    		<Name>蘭·舞</Name>
+    		<Artwork>Argalia5</Artwork>
+    		<Rarity>Unique</Rarity>
+    		<Spec Range="FarAreaEach" Cost="3" Affection ="Team"/>
+    		<Script>AllVibrate</Script>
+    		<ScriptDesc></ScriptDesc>
+    		<BehaviourList>
+      			<Behaviour Min="8" Dice="8" Type="Atk" Detail="Slash" Motion="S3" EffectRes="" Script="" ActionScript="argalia_area_ex" Desc="" />
+      			<Behaviour Min="7" Dice="7" Type="Atk" Detail="Hit" Motion="S4" EffectRes="" Script="" ActionScript="argalia_area_ex" Desc="" />
+    		</BehaviourList>
+    		<Chapter>7</Chapter>
+    		<Priority>0</Priority>
+  	</Card>
+  	<Card ID="18000023">
+    		<Name>蘭·舞</Name>
+    		<Artwork>Argalia5</Artwork>
+    		<Rarity>Unique</Rarity>
+    		<Spec Range="FarAreaEach" Cost="3" Affection ="Team"/>
+    		<Script>AllVibrate</Script>
+    		<ScriptDesc></ScriptDesc>
+    		<BehaviourList>
+      			<Behaviour Min="8" Dice="8" Type="Atk" Detail="Slash" Motion="S3" EffectRes="" Script="" ActionScript="argalia_area_ex" Desc="" />
+      			<Behaviour Min="7" Dice="7" Type="Atk" Detail="Hit" Motion="S4" EffectRes="" Script="" ActionScript="argalia_area_ex" Desc="" />
+      			<Behaviour Min="5" Dice="5" Type="Atk" Detail="Slash" Motion="S3" EffectRes="" Script="" ActionScript="argalia_area_ex" Desc="" />
+    		</BehaviourList>
+    		<Chapter>7</Chapter>
+    		<Priority>0</Priority>
+  	</Card>
+  	<Card ID="18000024">
+    		<Name>蘭·舞</Name>
+    		<Artwork>Argalia5</Artwork>
+    		<Rarity>Unique</Rarity>
+    		<Spec Range="FarAreaEach" Cost="3" Affection ="Team"/>
+    		<Script>AllVibrate</Script>
+    		<ScriptDesc></ScriptDesc>
+    		<BehaviourList>
+      			<Behaviour Min="8" Dice="8" Type="Atk" Detail="Slash" Motion="S3" EffectRes="" Script="" ActionScript="argalia_area_ex" Desc="" />
+      			<Behaviour Min="7" Dice="7" Type="Atk" Detail="Hit" Motion="S4" EffectRes="" Script="" ActionScript="argalia_area_ex" Desc="" />
+      			<Behaviour Min="5" Dice="5" Type="Atk" Detail="Slash" Motion="S3" EffectRes="" Script="" ActionScript="argalia_area_ex" Desc="" />
+      			<Behaviour Min="3" Dice="4" Type="Atk" Detail="Hit" Motion="S4" EffectRes="" Script="" ActionScript="argalia_area_ex" Desc="" />
+    		</BehaviourList>
+    		<Chapter>7</Chapter>
+    		<Priority>0</Priority>
+  	</Card>
+</DiceCardXmlRoot>
