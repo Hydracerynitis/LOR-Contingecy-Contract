@@ -12,5 +12,5 @@
 		</BehaviourList>
 		<Chapter>1</Chapter>
 		 <Priority>0</Priority>
-	</Card> 
+	</Card>
 </DiceCardXmlRoot>
