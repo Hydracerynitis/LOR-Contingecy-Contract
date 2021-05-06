@@ -58,6 +58,14 @@
     <Compile Include="Source Code\ContractList_Pluto.cs" />
     <Compile Include="Source Code\ContractList_Jaeheon.cs" />
     <Compile Include="Source Code\ContractList_Philip.cs" />
+    <Compile Include="Source Code\ContractReward\DiceCardAbility_AoeCoolDown.cs" />
+    <Compile Include="Source Code\ContractReward\DiceCardAbility_invalid.cs" />
+    <Compile Include="Source Code\ContractReward\Elena\PassiveAbility_1880002.cs" />
+    <Compile Include="Source Code\ContractReward\Elena\PassiveAbility_1880001.cs" />
+    <Compile Include="Source Code\ContractReward\Elena\DiceCardAbility_ElenaExecute.cs" />
+    <Compile Include="Source Code\ContractReward\Elena\DiceCardSelfAbility_ElenaZombie.cs" />
+    <Compile Include="Source Code\ContractReward\Elena\DiceCardSelfAbility_Invisible.cs" />
+    <Compile Include="Source Code\ContractReward\Elena\DiceCardSelfAbility_ElenaBuff.cs" />
     <Compile Include="Source Code\ContractReward\Jaeheon\BattleUnitBuf_AgelicaPuppet.cs" />
     <Compile Include="Source Code\ContractReward\Jaeheon\BattleUnitBuf_AttackTarget.cs" />
     <Compile Include="Source Code\ContractReward\Pluto\BattleUnitBuf_Barrier.cs" />
@@ -89,7 +97,7 @@
     <Compile Include="Source Code\ContractReward\Jaeheon\DiceCardSelfAbility_ReviveAngelica.cs" />
     <Compile Include="Source Code\ContractReward\Philiph\DiceCardSelfAbility_SelfBurn2.cs" />
     <Compile Include="Source Code\ContractReward\Argalia\DiceCardSelfAbility_vibrateActivate.cs" />
-    <Compile Include="Source Code\ContractReward\Argalia\PassiveAbility_1800000.cs" />
+    <Compile Include="Source Code\ContractReward\PassiveAbility_1800000.cs" />
     <Compile Include="Source Code\ContractReward\Argalia\PassiveAbility_1800001.cs" />
     <Compile Include="Source Code\ContractReward\Argalia\PassiveAbility_1800002.cs" />
     <Compile Include="Source Code\ContractReward\Argalia\PassiveAbility_1800003.cs" />

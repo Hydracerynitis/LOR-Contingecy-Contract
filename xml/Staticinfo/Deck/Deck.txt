@@ -86,6 +86,6 @@
 		<Card>18900004</Card>
 		<Card>18900004</Card>
 		<Card>18900005</Card>
-		<Card>18900008</Card>
+		<Card>18900006</Card>
 	</Deck>
 </DeckXmlRoot>

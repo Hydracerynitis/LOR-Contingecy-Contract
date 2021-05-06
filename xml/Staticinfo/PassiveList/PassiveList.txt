@@ -88,11 +88,6 @@
 	<Passive ID="1880002">
 		<Rarity>Unique</Rarity>
     		<CanGivePassive>false</CanGivePassive>
-		<Cost>4</Cost>
-  	</Passive>
-	<Passive ID="1880003">
-		<Rarity>Unique</Rarity>
-    		<CanGivePassive>false</CanGivePassive>
 		<Cost>6</Cost>
   	</Passive>
 	<!-- 普鲁托-->

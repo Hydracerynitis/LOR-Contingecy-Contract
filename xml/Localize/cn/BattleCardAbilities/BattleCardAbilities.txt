@@ -116,7 +116,7 @@
 		<Desc>仅限对低于25%血量上限的目标使用</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="ElenaExecute">
-    	<Desc>[无效化]目标骰子,不造成伤害并使目标陷入混乱</Desc>
+    	<Desc>[无效化]目标骰子并使目标陷入混乱</Desc>
   	</BattleCardAbility>
 	<!--普鲁托-->
 	<BattleCardAbility ID="Barrier">

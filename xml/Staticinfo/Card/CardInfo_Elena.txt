@@ -82,7 +82,7 @@
         <Priority>0</Priority>
     </Card>
     <Card ID="18800006">
-        <Name>血液扩散/Name>
+        <Name>血液扩散</Name>
         <Artwork>Elena3</Artwork>
         <Rarity>Unique</Rarity>
 		<Option>NoInventory</Option>
@@ -96,11 +96,11 @@
         <Priority>0</Priority>
     </Card>
     <Card ID="18800007">
-        <Name>血管盛宴/Name>
+        <Name>血管盛宴</Name>
         <Artwork>Elena3</Artwork>
         <Rarity>Unique</Rarity>
 		<Option>Personal</Option>
-        <Spec Range="Special" Cost="3"/>
+        <Spec Range="Near" Cost="3"/>
         <Script>ElenaZombie</Script>
         <ScriptDesc></ScriptDesc>
         <BehaviourList>

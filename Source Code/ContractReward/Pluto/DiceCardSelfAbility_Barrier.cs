@@ -11,6 +11,10 @@ namespace ContractReward
 {
     public class DiceCardSelfAbility_Barrier : DiceCardSelfAbilityBase
     {
+        public override bool OnChooseCard(BattleUnitModel owner)
+        {
+            return BattleObjectManager.instance.GetAliveList_opponent(owner.faction).Find(x => x.bufListDetail.GetActivatedBufList().Find(y => y is BattleUnitBuf_Barrier)!=null)==null;
+        }
         public override void OnUseCard()
         {
             base.OnUseCard();
@@ -30,8 +34,6 @@ namespace ContractReward
             Card = this.owner.allyCardDetail.AddNewCard(Card.XmlData.id);
             Card.SetCurrentCost(0);
             Card.AddBuf(new Exhaust());
-            this.card.card.exhaust = true;
-            this.card.card.exhaust = true;
         }
         public class Exhaust : BattleDiceCardBuf
         {

@@ -91,16 +91,17 @@
 	</PassiveDesc>
 	<!--伊莲娜-->
 	<PassiveDesc ID="1880001">
-		<Name>血魔之力</Name> 
-		<Desc>命中时恢复自身2%血量上限</Desc>
+		<Name>难熬饥饿</Name> 
+		<Desc>命中时恢复自身2%的最大生命值
+自身每损失25%血量上限的血量，提升自身进攻骰威力1点(至多3点)</Desc>
 	</PassiveDesc>
 	<PassiveDesc ID="1880002">
-		<Name>难熬饥饿</Name> 
-		<Desc>自身每损失25%血量上限的血量，提升自身进攻骰威力1点</Desc>
-	</PassiveDesc>
-	<PassiveDesc ID="1880003">
 		<Name>血管盛宴</Name> 
 		<Desc>获得一张能将低状态的敌人处决并复活成自己傀儡的战斗书页</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1880003">
+		<Name>空虚的躯壳</Name> 
+		<Desc>优先攻击其他友方单位，若无其他友方单位则自动消散</Desc>
 	</PassiveDesc>
 	<!--普鲁托-->
 	<PassiveDesc ID="1890001">

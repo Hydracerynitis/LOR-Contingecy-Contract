@@ -141,7 +141,6 @@
       		<Passive>1300001</Passive>
       		<Passive>1880001</Passive>
       		<Passive>1880002</Passive>
-      		<Passive>1880003</Passive>
     	</EquipEffect>
     	<BookIcon>ThePerfectBlueReverberation</BookIcon>
     	<Chapter>7</Chapter>

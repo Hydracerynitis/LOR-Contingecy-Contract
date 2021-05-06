@@ -14,8 +14,8 @@ namespace Contingecy_Contract
         private string GetChpaterParams(StageClassInfo info) => TextDataModel.GetText("ui_maintitle_citystate_" + info.chapter.ToString());
         public void CheckReward(StageClassInfo info)
         {
-            if (Singleton<BookInventoryModel>.Instance.GetBookListAll().Find((Predicate<BookModel>)(x => x.GetBookClassInfoId() == 18900000)) == null)
-                Singleton<BookInventoryModel>.Instance.CreateBook(18900000);
+            //if (Singleton<BookInventoryModel>.Instance.GetBookListAll().Find((Predicate<BookModel>)(x => x.GetBookClassInfoId() == 18800000)) == null)
+            //    Singleton<BookInventoryModel>.Instance.CreateBook(18800000);
             if (Singleton<ContractLoader>.Instance.GetLevel(info.id) >= 18)
             {
                 if (Harmony_Patch.Cheat)

@@ -80,7 +80,7 @@
 		<Chapter>7</Chapter>
 		 <Priority>0</Priority>
 	</Card>
-	<Card ID="18900007">
+	<Card ID="18900006">
 		<Name>安息之臂</Name>
 		<Artwork>Pluto_Strong</Artwork>
 		<Rarity>Unique</Rarity>

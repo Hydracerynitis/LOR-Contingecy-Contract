@@ -53,7 +53,6 @@ namespace ContractReward
         public override void OnDie()
         {
             base.OnDie();
-            Pluto.allyCardDetail.AddNewCard(18900005);
             if (!((UnityEngine.Object)this._owner?.view != (UnityEngine.Object)null))
                 return;
             this._owner.view.deadEvent += new BattleUnitView.DeadEvent(this.OnDeadEvent);
@@ -61,7 +60,6 @@ namespace ContractReward
 
         private void OnDeadEvent(BattleUnitView view)
         {
-            Pluto.allyCardDetail.AddNewCard(18900005);
             if (!((UnityEngine.Object)this._auraEffect != (UnityEngine.Object)null))
                 return;
             UnityEngine.Object.Destroy((UnityEngine.Object)this._auraEffect);
@@ -70,7 +68,6 @@ namespace ContractReward
         public override void Destroy()
         {
             base.Destroy();
-            Pluto.allyCardDetail.AddNewCard(18900005);
             if (!((UnityEngine.Object)this._auraEffect != (UnityEngine.Object)null))
                 return;
             UnityEngine.Object.Destroy((UnityEngine.Object)this._auraEffect);
