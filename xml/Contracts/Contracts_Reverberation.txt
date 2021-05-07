@@ -89,6 +89,35 @@
 		<BaseLevel>4</BaseLevel>
 		<Enemy>1307011</Enemy>
 	</Contract>
+	<Contract Type="Elena_Cross">
+		<DescList>
+			<Desc language="cn" name="烧灼十字" desc="被朱红十字攻击3次会下一幕内获得{0}层烧印(被朱红十字攻击会消耗一层并使其对其他司书额外攻击,此次伤害提升{1}%" />
+		</DescList>
+		<Faction>Enemy</Faction>
+		<Variation>3</Variation>
+		<BaseLevel>1</BaseLevel>
+		<Conflict>Elena_Zombie</Conflict>
+		<Enemy>1308021</Enemy>
+	</Contract>
+	<Contract Type="Elena_Zombie">
+		<DescList>
+			<Desc language="cn" name="血管盛宴" desc="伊莲娜会将血量低于25%的司书转化为攻击其他友方单位的无名躯壳并使其血量和混乱抗性提升{0}%，一场接待最多转化{1}个无名躯壳" />
+		</DescList>
+		<Faction>Enemy</Faction>
+		<Variation>3</Variation>
+		<BaseLevel>1</BaseLevel>
+		<Conflict>Elena_Cross</Conflict>
+		<Enemy>1308011</Enemy>
+	</Contract>
+	<Contract Type="Elena">
+		<DescList>
+			<Desc language="cn" name="一号小提琴的典雅" desc="使伊莲娜和朱红十字的攻击方式更加激进" />
+		</DescList>
+		<Faction>Enemy</Faction>
+		<BaseLevel>4</BaseLevel>
+		<Enemy>1308011</Enemy>
+		<Enemy>1308021</Enemy>
+	</Contract>
 	<Contract Type="Pluto_Shadow">
 		<DescList>
 			<Desc language="cn" name="真假难分" desc="提高阴影{0}血量和混乱抗性,阴影攻击其复制司书骰子威力提升{1}点" />
