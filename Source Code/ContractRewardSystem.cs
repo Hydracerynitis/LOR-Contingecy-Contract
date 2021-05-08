@@ -40,6 +40,12 @@ namespace Contingecy_Contract
                         case (70007):
                             id = 18700000;
                             break;
+                        case (70008):
+                            id = 18800000;
+                            break;
+                        case (70009):
+                            id = 18900000;
+                            break;
                         case (70010):
                             id = 18000000;
                             break;
