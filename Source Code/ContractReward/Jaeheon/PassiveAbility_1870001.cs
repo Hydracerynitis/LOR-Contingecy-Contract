@@ -66,6 +66,7 @@ namespace ContractReward
             Angelica.RollSpeedDice();
             Angelica.view.EnableView(true);
             Angelica.view.StartEgoSkinChangeEffect("Character");
+            Angelica.moveDetail.ReturnToFormationByBlink();
             List<PassiveAbilityBase> list1 = Angelica.passiveDetail.PassiveList;
             list1.Add(new PassiveAbility_1800000(Angelica));
             list1.Add(new PassiveAbility_1870101(Angelica));
