@@ -187,7 +187,6 @@ namespace Contingecy_Contract
                     if (cheatList.Contains(alive.Book.GetBookClassInfoId()) && alive.faction == Faction.Player)
                         Cheat = true;
                 }
-                return true;
             }
             return true;
         }
@@ -381,6 +380,6 @@ namespace Contingecy_Contract
             AvailablePassive.Add(Singleton<PassiveXmlList>.Instance.GetData(1300001));
             PassiveAbility_1890003_init = true;
         }
-        public static List<int> cheatList => new List<int> (){ 18000000, 18100000,18700000, 18710000, 18900000 };
+        public static List<int> cheatList => new List<int> (){ 18000000, 18100000,18700000, 18710000, 18800000, 18900000 };
     }
 }

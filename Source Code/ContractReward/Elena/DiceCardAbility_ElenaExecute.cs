@@ -10,9 +10,12 @@ namespace ContractReward
     {
         public override void BeforRollDice()
         {
+            if (behavior.card.target == null)
+                return;
             base.BeforRollDice();
             if (behavior.TargetDice != null)
                 behavior.TargetDice.AddAbility(new DiceCardAbility_invalid());
+            this.behavior.ApplyDiceStatBonus(new DiceStatBonus() { dmg = (int)behavior.card.target.hp });
         }
         public override void OnSucceedAttack()
         {

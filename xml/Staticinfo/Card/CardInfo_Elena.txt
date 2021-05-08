@@ -109,4 +109,17 @@
         <Chapter>7</Chapter>
         <Priority>0</Priority>
     </Card>
+    <Card ID="18800008">
+        <Name>血管盛宴</Name>
+        <Artwork>Elena3</Artwork>
+        <Rarity>Unique</Rarity>
+        <Spec Range="Near" Cost="0"/>
+        <Script>ElenaZombieEnemy</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="30" Dice="30" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="ElenaExecute" ActionScript="theclaw_strongpiercingAtk" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
 </DiceCardXmlRoot>

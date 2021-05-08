@@ -1,0 +1,4 @@
+在ContractLibrary里找到你偏好语言的合约集
+然后把你想要添加的合约的代码写在ContractLoader.txt里
+（代码可以在合约集找到）
+HaveFun

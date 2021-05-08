@@ -153,6 +153,9 @@
 		<BattleCardDesc ID="18800007">
 			<LocalizedName>血管盛宴</LocalizedName>
 		</BattleCardDesc>
+		<BattleCardDesc ID="18800008">
+			<LocalizedName>血管盛宴</LocalizedName>
+		</BattleCardDesc>
 		<!--普鲁托-->
 		<BattleCardDesc ID="18900001">
 			<LocalizedName>魔法: 反冲</LocalizedName>
@@ -169,7 +172,7 @@
 		<BattleCardDesc ID="18900005">
 			<LocalizedName>变数: 封印</LocalizedName>
 		</BattleCardDesc>
-		<BattleCardDesc ID="18900007">
+		<BattleCardDesc ID="18900006">
 			<LocalizedName>安息之臂</LocalizedName>
 		</BattleCardDesc>
 		<BattleCardDesc ID="18900011">

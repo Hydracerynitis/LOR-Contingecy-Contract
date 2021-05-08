@@ -55,11 +55,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Source Code\ContractList_Argalia.cs" />
+    <Compile Include="Source Code\ContractList_Elena.cs" />
     <Compile Include="Source Code\ContractList_Pluto.cs" />
     <Compile Include="Source Code\ContractList_Jaeheon.cs" />
     <Compile Include="Source Code\ContractList_Philip.cs" />
     <Compile Include="Source Code\ContractReward\DiceCardAbility_AoeCoolDown.cs" />
     <Compile Include="Source Code\ContractReward\DiceCardAbility_invalid.cs" />
+    <Compile Include="Source Code\ContractReward\Elena\DiceCardSelfAbility_ElenaZombieEnemy.cs" />
     <Compile Include="Source Code\ContractReward\Elena\PassiveAbility_1880002.cs" />
     <Compile Include="Source Code\ContractReward\Elena\PassiveAbility_1880001.cs" />
     <Compile Include="Source Code\ContractReward\Elena\DiceCardAbility_ElenaExecute.cs" />
@@ -79,7 +81,7 @@
     <Compile Include="Source Code\ContractReward\Chapter\DiceCardSelfAbility_Canard0.cs" />
     <Compile Include="Source Code\ContractReward\Argalia\DiceCardSelfAbility_Insane1.cs" />
     <Compile Include="Source Code\ContractReward\Argalia\DiceCardSelfAbility_Insane2.cs" />
-    <Compile Include="Source Code\ContractReward\Jaeheon\DiceCardSelfAbility_Jaeheon_AreaDt.cs" />
+    <Compile Include="Source Code\ContractReward\Fix\DiceCardSelfAbility_Jaeheon_AreaDt.cs" />
     <Compile Include="Source Code\ContractReward\Philiph\DiceCardSelfAbility_LoseBurn.cs" />
     <Compile Include="Source Code\ContractReward\Argalia\DiceCardSelfAbility_PerfectResonance.cs" />
     <Compile Include="Source Code\ContractReward\Argalia\DiceCardSelfAbility_PerfectResonanceActivate.cs" />
@@ -96,7 +98,7 @@
     <Compile Include="Source Code\ContractReward\Jaeheon\DiceCardSelfAbility_ReconnectAngelica.cs" />
     <Compile Include="Source Code\ContractReward\Jaeheon\DiceCardSelfAbility_ReviveAngelica.cs" />
     <Compile Include="Source Code\ContractReward\Philiph\DiceCardSelfAbility_SelfBurn2.cs" />
-    <Compile Include="Source Code\ContractReward\Argalia\DiceCardSelfAbility_vibrateActivate.cs" />
+    <Compile Include="Source Code\ContractReward\Fix\DiceCardSelfAbility_vibrateActivate.cs" />
     <Compile Include="Source Code\ContractReward\PassiveAbility_1800000.cs" />
     <Compile Include="Source Code\ContractReward\Argalia\PassiveAbility_1800001.cs" />
     <Compile Include="Source Code\ContractReward\Argalia\PassiveAbility_1800002.cs" />

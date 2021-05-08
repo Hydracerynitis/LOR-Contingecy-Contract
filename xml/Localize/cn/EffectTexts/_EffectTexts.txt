@@ -25,5 +25,9 @@
 			<Name>封锁结界</Name>
 			<Desc>无法行动无法被指定</Desc>
 		</BattleEffectText>
+		<BattleEffectText ID="CrossBurn">
+			<Name>烧印</Name>
+			<Desc>被朱红十字攻击会消耗一层并使其对其他司书额外攻击,此次伤害提升{0}%</Desc>
+		</BattleEffectText>
 	</effectTextList>
 </BattleEffectTextRoot>

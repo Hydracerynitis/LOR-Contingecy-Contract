@@ -75,22 +75,6 @@ namespace Contingecy_Contract
                 {
 
                 }
-                try
-                {
-                    contract.OnRoundStart();
-                }
-                catch
-                {
-
-                }
-                try
-                {
-                    contract.OnRoundStartAfter();
-                }
-                catch
-                {
-
-                }
             }
             if (BuffContracts.Count > 0)
             {

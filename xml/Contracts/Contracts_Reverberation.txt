@@ -91,7 +91,7 @@
 	</Contract>
 	<Contract Type="Elena_Cross">
 		<DescList>
-			<Desc language="cn" name="烧灼十字" desc="被朱红十字攻击3次会下一幕内获得{0}层烧印(被朱红十字攻击会消耗一层并使其对其他司书额外攻击,此次伤害提升{1}%" />
+			<Desc language="cn" name="烧灼十字" desc="被朱红十字攻击3次会下一幕内获得{0}层烧印(被朱红十字攻击会消耗一层并使其对其他司书额外攻击,此次伤害提升{1}%)" />
 		</DescList>
 		<Faction>Enemy</Faction>
 		<Variation>3</Variation>
@@ -101,13 +101,14 @@
 	</Contract>
 	<Contract Type="Elena_Zombie">
 		<DescList>
-			<Desc language="cn" name="血管盛宴" desc="伊莲娜会将血量低于25%的司书转化为攻击其他友方单位的无名躯壳并使其血量和混乱抗性提升{0}%，一场接待最多转化{1}个无名躯壳" />
+			<Desc language="cn" name="血管盛宴" desc="伊莲娜会将血量低于20/25/30%的司书转化为攻击其他友方单位的无名躯壳，一场接待最多转化{1}个无名躯壳" />
 		</DescList>
 		<Faction>Enemy</Faction>
 		<Variation>3</Variation>
 		<BaseLevel>1</BaseLevel>
 		<Conflict>Elena_Cross</Conflict>
 		<Enemy>1308011</Enemy>
+		<Enemy>1308021</Enemy>
 	</Contract>
 	<Contract Type="Elena">
 		<DescList>

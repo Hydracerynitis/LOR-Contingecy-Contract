@@ -21,19 +21,32 @@ namespace ContractReward
         }
         public class ZombieInit: BattleUnitBuf
         {
-            public override bool IsImmortal() => true;
+            private bool init;
+            public override bool IsControllable => false;
+            public override bool IsImmortal() => !init;
+            public override void Init(BattleUnitModel owner)
+            {
+                base.Init(owner);
+                init = false;
+            }
             public override void OnRoundEndTheLast()
             {
                 base.OnRoundEndTheLast();
-                this._owner.RecoverHP(this._owner.MaxHp);
-                this._owner.RecoverBreakLife(1);
-                this._owner.ResetBreakGauge();
-                this._owner.breakDetail.nextTurnBreak = false;
-                List<PassiveAbilityBase> list = this._owner.passiveDetail.PassiveList;
-                list.Insert(0, new Zombie(this._owner));
-                typeof(BattleUnitPassiveDetail).GetField("_passiveList", AccessTools.all).SetValue((object)this._owner.passiveDetail, (object)list);
-                this._owner.UnitData.unitData.SetCustomName(TextDataModel.GetText("Zombie_name"));
-                this.Destroy();
+                if (!init)
+                {
+                    this._owner.RecoverHP(this._owner.MaxHp);
+                    this._owner.RecoverBreakLife(1);
+                    this._owner.ResetBreakGauge();
+                    this._owner.breakDetail.nextTurnBreak = false;
+                    List<PassiveAbilityBase> list = this._owner.passiveDetail.PassiveList;
+                    list.Insert(0, new Zombie(this._owner));
+                    typeof(BattleUnitPassiveDetail).GetField("_passiveList", AccessTools.all).SetValue((object)this._owner.passiveDetail, (object)list);
+                    if(this._owner.faction==Faction.Enemy)
+                        this._owner.UnitData.unitData.SetCustomName(TextDataModel.GetText("Zombie_name"));
+                    if (this._owner.faction == Faction.Player)
+                        this._owner.UnitData.unitData.SetTempName(TextDataModel.GetText("Zombie_name"));
+                    init = true;
+                }
             }
             public class Zombie: PassiveAbilityBase
             {
