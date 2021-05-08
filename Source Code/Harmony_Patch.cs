@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Xml;
 using UI;
-using BaseMod;
 using System.Reflection;
 using System.Xml.Serialization;
 using UnityEngine;
