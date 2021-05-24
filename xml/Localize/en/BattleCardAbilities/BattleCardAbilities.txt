@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleCardAbilityDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	  <BattleCardAbility ID="vibrateActivate">
+    		<Desc>[使用时]若自身速度与目标[震颤]层数相等则使本书页的所有骰子威力+4</Desc>
+  	</BattleCardAbility>
+	<!--章节奖励-->
+  	<BattleCardAbility ID="Canard0">
+    		<Desc>[每一幕都会变形成全新的卡]</Desc>
+  	</BattleCardAbility>
+	<!--阿尔加利亚-->
+	  <BattleCardAbility ID="PerfectResonanceActivate">
+    		<Desc>[使用时]若自身速度与目标[震颤]层数相等则使本书页的所有骰子威力+2</Desc>
+  	</BattleCardAbility>
+	  <BattleCardAbility ID="Insane1">
+    		<Desc>消耗100点[狂乱]值使用</Desc>
+    		<Desc>[使用时]下一幕起封锁目标威力加成</Desc>
+  	</BattleCardAbility>
+	 <BattleCardAbility ID="Insane2">
+    		<Desc>消耗100点[狂乱]值使用</Desc>
+  	</BattleCardAbility>
+	  <BattleCardAbility ID="AllVibrate">
+    		<Desc>[使用时]将所有敌方单位[震颤]层数设为4</Desc>
+    		<Desc>该书页3幕内最多使用1次</Desc>
+  	</BattleCardAbility>
+	<!--菲利普-->
+  	<BattleCardAbility ID="SelfBurn2">
+    		<Desc>[使用时] 对自身施加2层[烧伤]</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="philip_emotion_pw">
+    		<Desc>[拼点胜利] 对双方施加1层[烧伤]</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="philip_stigma_atk">
+    		<Desc>[命中时] 获得3枚负面情感硬币</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="philip_heat_atk1">
+    		<Desc>[命中时] 对目标施加1层[烧伤]</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="philip_heat_atk2">
+    		<Desc>[命中时] 对目标施加1层[烧伤]</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="philip_restrict_pw">
+    		<Desc>[拼点胜利] 对双方施加1层[烧伤]</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="philip_restrict_atk">
+    		<Desc>[命中时] 对目标施加2层[虚弱][破绽][束缚]</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="BurnPowerUp">
+    		<Desc>[使用时] 若目标[烧伤]层数大于10则本书页所有骰子威力+2</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="LoseBurn">
+    		<Desc>[使用时] 减少自身[烧伤]层数5点</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="BurnCostDown">
+    		<Desc>[使用时] 若目标烧伤层数大于5层则使随机2张手牌费用设定为0(仅限这一次)</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="philip_area_atk">
+    		<Desc>[交锋] [命中时] 对目标施加3层烧伤</Desc>
+  	</BattleCardAbility>
+	<!--在宪-->
+  	<BattleCardAbility ID="QuickPuppet_Special">
+    		<Desc>若自身速度不低于5点则使本书页的所有骰子威力+1</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="AngelicaPuppet_Special">
+    		<Desc>若自身速度不低于5点则使本书页的所有骰子威力+2</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="break4atk">
+    		<Desc>[命中时]追加4点混乱伤害</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="AllPuppetControl">
+    		<Desc>[范围杀伤书页][使用时] 下一幕使所有其他司书获得[临时操纵]</Desc>
+    		<Desc>该书页4幕内最多使用1次</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="Jaeheon_AreaBind">
+    		<Desc>[交锋][命中时]下一幕中对目标施加1层[束缚]</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="PuppetProtect">
+    		<Desc>[战斗开始] 使安洁莉卡傀儡获得1层[守护][振奋]</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="PuppetEndure">
+    		<Desc>[战斗开始] 使安洁莉卡傀儡获得1层[忍耐]</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="PuppetStrength">
+    		<Desc>[战斗开始] 使安洁莉卡傀儡获得1层[强壮]</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="PuppetHeal">
+    		<Desc>[战斗开始] 使安洁莉卡傀儡恢复10点混乱抗性</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="AngelicaPuppet_Wheels">
+    		<Desc>[拼点胜利]摧毁目标当前书页的下一颗骰子</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="ReviveAngelica">
+    		<Desc>该书页仅有已死亡司书时才能使用</Desc>
+    		<Desc>[装备时]以安洁莉卡傀儡的姿态随机复活一个已死亡的司书</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="ReconnectAngelica">
+    		<Desc>[装备时]使安洁莉卡再次获得[操纵]</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="AttackTarget">
+    		<Desc>[装备时]将[红靶]单位转移到该卡的目标</Desc>
+  	</BattleCardAbility>
+	<!--伊莲娜-->
+  	<BattleCardAbility ID="ElenaBuff">
+    	<Desc>[战斗开始]使目标获得2层强壮忍耐</Desc>
+		<Desc>可指向友方单位为目标</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="Invisible">
+    	<Desc>这一幕内若没有受到一次攻击则下一幕内无法指定为目标</Desc>
+		<Desc>仅限自己能被指定为目标时使用</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="AoeCoolDown">
+		<Desc>该书页4幕内只能使用一次</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="ElenaZombie">
+    	<Desc>使目标下一幕起恢复所有血量和混乱抗性并转向攻击其友方单位</Desc>
+    	<Desc>若无目标的其他友方单位则自动消散</Desc>
+		<Desc>仅限对低于25%血量上限的目标使用</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="ElenaZombieEnemy">
+    	<Desc>使目标下一幕起恢复所有血量和混乱抗性并转向攻击其友方单位</Desc>
+    	<Desc>若无目标的其他友方单位则自动消散</Desc>
+  	</BattleCardAbility>
+	<!--普鲁托-->
+	<BattleCardAbility ID="Barrier">
+    		<Desc>[使用时]将目标锁入[封印结界]持续2幕并复制目标两张战斗书页</Desc>
+    		<Desc>这些书页费用为0并且使用后会被移除战斗</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="PlutoAoe">
+    		<Desc>[使用时]根据目标数量提升该书页所有骰子伤害</Desc>
+    		<Desc>目标数量越少伤害加成越大</Desc>
+    	<Desc>该书页4幕内只能使用一次</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="PlutoContract1">
+    		<Desc>[装备时]为选择的友方单位生效自由合同</Desc>
+    		<Desc>若选择的单位为敌方单位则为自身生效</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="PlutoContract2">
+    		<Desc>[装备时]为选择的友方单位生效增幅合同</Desc>
+    		<Desc>若选择的单位为敌方单位则为自身生效</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="PlutoContract3">
+    		<Desc>[装备时]为选择的友方单位生效迅猛合同</Desc>
+    		<Desc>若选择的单位为敌方单位则为自身生效</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="PlutoContract4">
+    		<Desc>[装备时]为选择的友方单位生效力量合同</Desc>
+    		<Desc>若选择的单位为敌方单位则为自身生效</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="PlutoContract5">
+    		<Desc>[装备时]为选择的友方单位生效光明合同</Desc>
+    		<Desc>若选择的单位为敌方单位则为自身生效</Desc>
+  	</BattleCardAbility>
+</BattleCardAbilityDescRoot>

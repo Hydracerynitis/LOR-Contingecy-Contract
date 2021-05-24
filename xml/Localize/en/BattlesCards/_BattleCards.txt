@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleCardDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	 <cardDescList>
+		<!--章节奖励-->
+		<BattleCardDesc ID="185001">
+			<LocalizedName>图书馆碎片</LocalizedName>
+		</BattleCardDesc>
+		<!--阿尔加利亚-->
+		<BattleCardDesc ID="18000001">
+			<LocalizedName>崩坏序曲</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18000002">
+			<LocalizedName>独奏之刻</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18000003">
+			<LocalizedName>不谐和音</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18000004">
+			<LocalizedName>破空镰斩</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18000005">
+			<LocalizedName>不安音律</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18000006">
+			<LocalizedName>癫狂连击</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18000007">
+			<LocalizedName>心灵共振</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18000011">
+			<LocalizedName>苍蓝轨迹</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18000012">
+			<LocalizedName>最终旋律</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18000021">
+			<LocalizedName>蘭·舞</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18000022">
+			<LocalizedName>蘭·舞</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18000023">
+			<LocalizedName>蘭·舞</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18000024">
+			<LocalizedName>蘭·舞</LocalizedName>
+		</BattleCardDesc>
+		<!--菲利普-->
+		<BattleCardDesc ID="18100001">
+			<LocalizedName>冰冷残阳</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18100002">
+			<LocalizedName>情感碰撞</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18100003">
+			<LocalizedName>绝望烙印</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18100004">
+			<LocalizedName>灼烧勇气</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18100005">
+			<LocalizedName>迅猛气势</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18100011">
+			<LocalizedName>自我束缚</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18100012">
+			<LocalizedName>痛彻骨髓</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18100013">
+			<LocalizedName>爆燃意志</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18100014">
+			<LocalizedName>重燃一击</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18100015">
+			<LocalizedName>焦灼死灰</LocalizedName>
+		</BattleCardDesc>
+		<!--在宪-->
+		<BattleCardDesc ID="18700001">
+			<LocalizedName>操控傀儡</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18700002">
+			<LocalizedName>操控傀儡</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18700003">
+			<LocalizedName>操控傀儡</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18700004">
+			<LocalizedName>操控傀儡</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18700011">
+			<LocalizedName>绞杀线</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18700012">
+			<LocalizedName>蛮力推搡</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18700013">
+			<LocalizedName>软弱无力</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18700021">
+			<LocalizedName>休想靠近</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18700022">
+			<LocalizedName>傀儡线</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18700023">
+			<LocalizedName>纤细傀儡线</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18700024">
+			<LocalizedName>沉重傀儡线</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18700025">
+			<LocalizedName>特殊傀儡线</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18700031">
+			<LocalizedName>咯咯…</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18700032">
+			<LocalizedName>咯…叽叽…叽</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18700033">
+			<LocalizedName>嗑…咯咯咯…</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18700101">
+			<LocalizedName>现场缝纫</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18700102">
+			<LocalizedName>再连线</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18700103">
+			<LocalizedName>攻击命令</LocalizedName>
+		</BattleCardDesc>
+		<!--伊莲娜-->
+		<BattleCardDesc ID="18800001">
+			<LocalizedName>猩红之爪</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18800002">
+			<LocalizedName>利爪横扫</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18800003">
+			<LocalizedName>体液循环</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18800004">
+			<LocalizedName>遁入阴影</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18800005">
+			<LocalizedName>能量灌注</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18800006">
+			<LocalizedName>血液扩散</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18800007">
+			<LocalizedName>血管盛宴</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18800008">
+			<LocalizedName>血管盛宴</LocalizedName>
+		</BattleCardDesc>
+		<!--普鲁托-->
+		<BattleCardDesc ID="18900001">
+			<LocalizedName>魔法: 反冲</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18900002">
+			<LocalizedName>魔法: 投射</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18900003">
+			<LocalizedName>魔法: 进攻</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18900004">
+			<LocalizedName>魔法: 防御</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18900005">
+			<LocalizedName>变数: 封印</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18900006">
+			<LocalizedName>安息之臂</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18900011">
+			<LocalizedName>自由合同</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18900012">
+			<LocalizedName>增幅合同</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18900013">
+			<LocalizedName>迅捷合同</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18900014">
+			<LocalizedName>力量合同</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18900015">
+			<LocalizedName>光明合同</LocalizedName>
+		</BattleCardDesc>
+ 	</cardDescList>
+</BattleCardDescRoot>

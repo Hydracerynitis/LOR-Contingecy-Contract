@@ -1,36 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ContractList>
-	<Contract Type="Argalia_Resonance">
-		<DescList>
-			<Desc language="cn" name="共鸣交响曲" desc="阿尔加利亚速度骰值和目标震颤层数差值至多为{0}时将会触发心灵共振,额外提升书页威力{1}点并下一幕获得1层强壮忍耐" />
-		</DescList>
-		<Faction>Enemy</Faction>
-		<Variation>3</Variation>
-		<BaseLevel>1</BaseLevel>
-		<Conflict>Argalia_TieUP</Conflict>
-		<Enemy>1310011</Enemy>
-	</Contract>
-	<Contract Type="Argalia_TieUP">
-		<DescList>
-			<Desc language="cn" name="以逸待劳" desc="提升阿尔加利亚{0}%血量和混乱抗性及其攻击抗性,一幕内命中目标{1}次便恢复10点血量和混乱抗性" />
-		</DescList>
-		<Faction>Enemy</Faction>
-		<Variation>3</Variation>
-		<BaseLevel>1</BaseLevel>
-		<Conflict>Argalia_Resonance</Conflict>
-		<Enemy>1310011</Enemy>
-	</Contract>
-	<Contract Type="Argalia">
-		<DescList>
-			<Desc language="cn" name="指挥家的杰作" desc="使阿尔加利亚的攻击方式更加激进" />
-		</DescList>
-		<Faction>Enemy</Faction>
-		<BaseLevel>4</BaseLevel>
-		<Enemy>1310011</Enemy>
-	</Contract>
 	<Contract Type="Philip_Burn">
 		<DescList>
 			<Desc language="cn" name="自焚烈焰" desc="菲利普混乱抗性提升50%，过热只会使混乱抗性降至{0}，过热时造成的伤害+{1}" />
+			<Desc language="en" name="自焚烈焰" desc="菲利普混乱抗性提升50%，过热只会使混乱抗性降至{0}，过热时造成的伤害+{1}" />
 		</DescList>
 		<Faction>Enemy</Faction>
 		<Variation>3</Variation>
@@ -41,6 +14,7 @@
 	<Contract Type="Philip_Silence">
 		<DescList>
 			<Desc language="cn" name="静默无言" desc="哭泣之子速度骰+1，攻击更加激进并且最大血量和混乱抗性提高{0}%" />
+			<Desc language="en" name="静默无言" desc="哭泣之子速度骰+1，攻击更加激进并且最大血量和混乱抗性提高{0}%" />
 		</DescList>
 		<Faction>Enemy</Faction>
 		<Variation>3</Variation>
@@ -52,6 +26,7 @@
 	<Contract Type="Philip">
 		<DescList>
 			<Desc language="cn" name="大提琴的悲哀" desc="使菲利普的攻击方式更加激进" />
+			<Desc language="en" name="大提琴的悲哀" desc="使菲利普的攻击方式更加激进" />
 		</DescList>
 		<Faction>Enemy</Faction>
 		<BaseLevel>4</BaseLevel>
@@ -60,6 +35,7 @@
 	<Contract Type="Jaeheon_Thread">
 		<DescList>
 			<Desc language="cn" name="傀儡戏演奏" desc="在宪反击骰威力+{0}，有其他友方单位存活时免疫任何伤害和混乱伤害,提高首次施加操纵层数+{1}" />
+			<Desc language="en" name="傀儡戏演奏" desc="在宪反击骰威力+{0}，有其他友方单位存活时免疫任何伤害和混乱伤害,提高首次施加操纵层数+{1}" />
 		</DescList>
 		<Faction>Enemy</Faction>
 		<Variation>3</Variation>
@@ -70,6 +46,7 @@
 	<Contract Type="Jaeheon_Puppet">
 		<DescList>
 			<Desc language="cn" name="自由操纵" desc="在宪会在傀儡失去操纵后的第{0}幕重新获得其控制,操纵速度骰+1,在宪混乱抗性提升{1}%" />
+			<Desc language="en" name="自由操纵" desc="在宪会在傀儡失去操纵后的第{0}幕重新获得其控制,操纵速度骰+1,在宪混乱抗性提升{1}%" />
 		</DescList>
 		<Faction>Enemy</Faction>
 		<Variation>3</Variation>
@@ -84,6 +61,7 @@
 	<Contract Type="Jaeheon">
 		<DescList>
 			<Desc language="cn" name="第二小提琴的愤慨" desc="使在宪的攻击方式更加激进" />
+			<Desc language="en" name="第二小提琴的愤慨" desc="使在宪的攻击方式更加激进" />
 		</DescList>
 		<Faction>Enemy</Faction>
 		<BaseLevel>4</BaseLevel>
@@ -92,6 +70,7 @@
 	<Contract Type="Elena_Cross">
 		<DescList>
 			<Desc language="cn" name="烧灼十字" desc="被朱红十字攻击3次会下一幕内获得{0}层烧印(被朱红十字攻击会消耗一层并使其对其他司书额外攻击,此次伤害提升{1}%)" />
+			<Desc language="en" name="烧灼十字" desc="被朱红十字攻击3次会下一幕内获得{0}层烧印(被朱红十字攻击会消耗一层并使其对其他司书额外攻击,此次伤害提升{1}%)" />
 		</DescList>
 		<Faction>Enemy</Faction>
 		<Variation>3</Variation>
@@ -102,6 +81,7 @@
 	<Contract Type="Elena_Zombie">
 		<DescList>
 			<Desc language="cn" name="血管盛宴" desc="伊莲娜会将血量低于20/25/30%的司书转化为攻击其他友方单位的无名躯壳，一场接待最多转化{1}个无名躯壳" />
+			<Desc language="en" name="血管盛宴" desc="伊莲娜会将血量低于20/25/30%的司书转化为攻击其他友方单位的无名躯壳，一场接待最多转化{1}个无名躯壳" />
 		</DescList>
 		<Faction>Enemy</Faction>
 		<Variation>3</Variation>
@@ -113,6 +93,7 @@
 	<Contract Type="Elena">
 		<DescList>
 			<Desc language="cn" name="一号小提琴的典雅" desc="使伊莲娜和朱红十字的攻击方式更加激进" />
+			<Desc language="en" name="一号小提琴的典雅" desc="使伊莲娜和朱红十字的攻击方式更加激进" />
 		</DescList>
 		<Faction>Enemy</Faction>
 		<BaseLevel>4</BaseLevel>
@@ -122,6 +103,7 @@
 	<Contract Type="Pluto_Shadow">
 		<DescList>
 			<Desc language="cn" name="真假难分" desc="提高阴影{0}血量和混乱抗性,阴影攻击其复制司书骰子威力提升{1}点" />
+			<Desc language="en" name="真假难分" desc="提高阴影{0}血量和混乱抗性,阴影攻击其复制司书骰子威力提升{1}点" />
 		</DescList>
 		<Faction>Enemy</Faction>
 		<Variation>3</Variation>
@@ -133,6 +115,7 @@
 	<Contract Type="Pluto_Barrier">
 		<DescList>
 			<Desc language="cn" name="碾压结界" desc="被锁入封印结界的司书每3幕会承受{0}最大血量的伤害，提高100%普鲁托的血量和陷入封印结界司书{1}混乱抗性" />
+			<Desc language="en" name="碾压结界" desc="被锁入封印结界的司书每3幕会承受{0}最大血量的伤害，提高100%普鲁托的血量和陷入封印结界司书{1}混乱抗性" />
 		</DescList>
 		<Faction>Enemy</Faction>
 		<Variation>3</Variation>
@@ -143,6 +126,7 @@
 	<Contract Type="Pluto">
 		<DescList>
 			<Desc language="cn" name="管风琴的洪大" desc="每3幕普鲁托会发布一个新的随机合同" />
+			<Desc language="en" name="管风琴的洪大" desc="每3幕普鲁托会发布一个新的随机合同" />
 		</DescList>
 		<Faction>Enemy</Faction>
 		<BaseLevel>4</BaseLevel>

@@ -3,6 +3,7 @@
 	<Contract Type="Damage_L">
 		<DescList>
 			<Desc language="cn" name="保养不佳" desc="所有司书造成伤害-{0}%" />
+			<Desc language="en" name="保养不佳" desc="所有司书造成伤害-{0}%" />
 		</DescList>
 		<Faction>Player</Faction>
 		<Variation>3</Variation>
@@ -10,6 +11,7 @@
 	<Contract Type="BreakDamage_L">
 		<DescList>
 			<Desc language="cn" name="规避要害" desc="所有司书造成混乱伤害-{0}%" />
+			<Desc language="en" name="规避要害" desc="所有司书造成混乱伤害-{0}%" />
 		</DescList>
 		<Faction>Player</Faction>
 		<Variation>3</Variation>
@@ -17,6 +19,7 @@
 	<Contract Type="Hp_L">
 		<DescList>
 			<Desc language="cn" name="破碎之躯" desc="所有司书血量上限减少-{0}%" />
+			<Desc language="en" name="破碎之躯" desc="所有司书血量上限减少-{0}%" />
 		</DescList>	
 		<Faction>Player</Faction>
 		<Variation>3</Variation>
@@ -24,6 +27,7 @@
 	<Contract Type="Bp_L">
 		<DescList>
 			<Desc language="cn" name="惊慌失措" desc="所有司书混乱抗性上限减少-{0}%" />
+			<Desc language="en" name="惊慌失措" desc="所有司书混乱抗性上限减少-{0}%" />
 		</DescList>
 		<Faction>Player</Faction>
 		<Variation>3</Variation>
@@ -31,6 +35,7 @@
 	<Contract Type="Darkness">
 		<DescList>
 			<Desc language="cn" name="陷入漆黑" desc="所有司书舞台开启时只有{0}点光芒" />
+			<Desc language="en" name="陷入漆黑" desc="所有司书舞台开启时只有{0}点光芒" />
 		</DescList>
 		<Faction>Player</Faction>
 		<Variation>4</Variation>
