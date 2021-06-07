@@ -18,12 +18,6 @@ namespace Contingecy_Contract
             ChosenList=new List<Contract>();
             Debug.PathDebug("/ContractLoader.txt", PathType.File);
             Debug.Log("Start Loading Contract");
-            if (Harmony_Patch.Duel)
-            {
-                Contract Duel = Singleton<ContractXmlList>.Instance.GetContract("Duel");
-                Duel.level = 0;
-                ChosenList.Add(Duel);
-            }
             foreach (string readAllLine in File.ReadAllLines(Harmony_Patch.ModPath + "/ContractLoader.txt"))
             {
                 int level = 0;

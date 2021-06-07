@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<localize xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<text id="ui_ContingecyLevel">{0}级危机--{1}</text>
-	<text id="ui_RewardChapter">恭喜你打过{0}关卡的18级危机合约挑战</text>
-	<text id="ui_RewardRevebrate">恭喜你打过{0}的危机合约挑战</text>
-	<text id="ui_popup_getequippage">获得核心书页-“{0}”</text>
-	<text id="Cheat_Detect">注意: 携带增强版核心书页通关不会给予核心书页奖励</text>
-	<text id="Zombie_name">无名躯壳</text>
-</localize>

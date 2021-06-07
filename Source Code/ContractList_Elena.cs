@@ -13,6 +13,7 @@ namespace Contingecy_Contract
 {
     public class ContingecyContract_Elena_Cross : ContingecyContract
     {
+        private bool ExtraHit;
         public ContingecyContract_Elena_Cross(int level)
         {
             Level = level - 1;
@@ -32,13 +33,19 @@ namespace Contingecy_Contract
         public override void OnUseCard(BattlePlayingCardDataInUnitModel curCard)
         {
             base.OnUseCard(curCard);
+            ExtraHit = false;
             if (extrahit.Contains(curCard))
-                curCard.ApplyDiceStatBonus(DiceMatch.AllAttackDice, new DiceStatBonus() { dmgRate = (Level - 1)*25 });
+            {
+                curCard.ApplyDiceStatBonus(DiceMatch.AllAttackDice, new DiceStatBonus() { dmgRate = (Level - 1) * 25 });
+                ExtraHit = true;
+            }
             extrahit.Remove(curCard);
         }
         public override void OnSucceedAttack(BattleDiceBehavior behavior)
         {
             base.OnSucceedAttack(behavior);
+            if (ExtraHit)
+                return;
             CrossBurn crossburn = (CrossBurn) behavior.card.target.bufListDetail.GetActivatedBufList().Find(x => x is CrossBurn);
             if (crossburn == null)
             {

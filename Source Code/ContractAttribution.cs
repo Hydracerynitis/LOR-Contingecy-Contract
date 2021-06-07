@@ -125,17 +125,4 @@ namespace Contingecy_Contract
         public virtual StatBonus GetStatBonus(BattleUnitModel owner) => new StatBonus();
         public virtual string[] GetFormatParam => new string[0];
     }
-    public class ContingecyContract_Duel: ContingecyContract
-    {
-        public ContingecyContract_Duel(int level)
-        {
-            this.Level = Singleton<ContractLoader>.Instance.GetLevel(Singleton<StageController>.Instance.GetStageModel().ClassInfo.id);
-        }
-        public override ContractType Type => ContractType.Buff;
-        public override string[] GetFormatParam => new string[] { (Level*5).ToString()};
-        public override StatBonus GetStatBonus(BattleUnitModel owner)
-        {
-            return new StatBonus() { hpAdder=Level*10,breakGageAdder=Level*5};
-        }
-    }
 }

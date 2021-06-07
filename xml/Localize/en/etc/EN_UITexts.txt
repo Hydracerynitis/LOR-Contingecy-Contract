@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<localize xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<text id="ui_ContingecyLevel">Risk Level {0} : {1}</text>
+	<text id="ui_RewardChapter">Congrats for completing Risk 12 Level Challenge of {0}</text>
+	<text id="ui_RewardRevebrate">Congrats for completing Ensemble Challenge of {0}</text>
+	<text id="ui_popup_getequippage">Gain Equip Page: “{0}”</text>
+	<text id="Cheat_Detect">注意: 携带增强版核心书页通关不会给予核心书页奖励</text>
+	<text id="Zombie_name">Nameless Shell</text>
+</localize>

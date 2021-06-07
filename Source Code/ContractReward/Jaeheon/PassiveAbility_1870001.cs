@@ -77,7 +77,7 @@ namespace ContractReward
             Contingecy_Contract.ContractAttribution.Init(Angelica);
             int num = 0;
             foreach (BattleUnitModel battleUnitModel in BattleObjectManager.instance.GetList())
-                SingletonBehavior<UICharacterRenderer>.Instance.SetCharacter(battleUnitModel.UnitData.unitData, num++, true);
+                SingletonBehavior<UICharacterRenderer>.Instance.SetCharacter(battleUnitModel.UnitData.unitData, num++,renderRealtime: true);
             RandomUtil.SelectOne<BattleUnitModel>(BattleObjectManager.instance.GetAliveList_opponent(this.owner.faction)).bufListDetail.AddBuf(new BattleUnitBuf_AttackTarget());
             BattleObjectManager.instance.InitUI();
             this.owner.personalEgoDetail.AddCard(18700103);
@@ -124,7 +124,8 @@ namespace ContractReward
         public override void OnDie()
         {
             base.OnDie();
-            Angelica.Die();
+            if(Angelica!=null)
+                Angelica.Die();
         }
     }
 }

@@ -16,7 +16,9 @@ namespace Contingecy_Contract
         {
             //if (Singleton<BookInventoryModel>.Instance.GetBookListAll().Find((Predicate<BookModel>)(x => x.GetBookClassInfoId() == 18800000)) == null)
             //    Singleton<BookInventoryModel>.Instance.CreateBook(18800000);
-            if (Singleton<ContractLoader>.Instance.GetLevel(info.id) >= 18)
+            if (Harmony_Patch.CheckDuel(info.id))
+                return;
+            if (Singleton<ContractLoader>.Instance.GetLevel(info.id) >= 12)
             {
                 if (Harmony_Patch.Cheat)
                 {
@@ -52,11 +54,13 @@ namespace Contingecy_Contract
                     }
                     if (id != -1)
                     {
-                        if(Singleton<BookInventoryModel>.Instance.GetBookListAll().Find((Predicate<BookModel>)(x => x.GetBookClassInfoId()==id))==null)
-                            Singleton<BookInventoryModel>.Instance.CreateBook(id);
-                        Debug.Log(string.Format("Achieved Reverberation Reward: {0}",id ));
                         UIs.Add(TextDataModel.GetText("ui_RewardRevebrate", Singleton<StageNameXmlList>.Instance.GetName(info.id)));
-                        UIs.Add(TextDataModel.GetText("ui_popup_getequippage", (object)Singleton<BookDescXmlList>.Instance.GetBookName(id)));
+                        if (Singleton<BookInventoryModel>.Instance.GetBookListAll().Find((Predicate<BookModel>)(x => x.GetBookClassInfoId() == id)) == null)
+                        {
+                            Singleton<BookInventoryModel>.Instance.CreateBook(id);
+                            Debug.Log(string.Format("Achieved Reverberation Reward: {0}", id));
+                            UIs.Add(TextDataModel.GetText("ui_popup_getequippage", (object)Singleton<BookDescXmlList>.Instance.GetBookName(id)));
+                        }
                     }
                 }
                 else
@@ -69,14 +73,31 @@ namespace Contingecy_Contract
                     }
                     if (id != -1)
                     {
+                        UIs.Add(TextDataModel.GetText("ui_RewardChapter", (object)GetChpaterParams(info)));
                         Singleton<InventoryModel>.Instance.AddCard(id);
                         Debug.Log(string.Format("Achieved Chapter Reward: {0}", (object)GetChpaterParams(info)));
-                        UIs.Add(TextDataModel.GetText("ui_RewardChapter", (object)GetChpaterParams(info)));
                         UIs.Add(TextDataModel.GetText("ui_popup_getstorycard", (object)ItemXmlDataList.instance.GetCardItem(id).Name, (object)1));
                     }
                 }
+                CheckRevebrateReward();
                 if (UIs.Count > 0)
                     UIAlarmPopup.instance.SetAlarmText(string.Join("\n", UIs));
+            }
+        }
+        public void CheckRevebrateReward()
+        {
+            if (Singleton<BookInventoryModel>.Instance.GetBookListAll().Find((Predicate<BookModel>)(x => x.GetBookClassInfoId() == 18100000)) == null)
+                return;
+            if (Singleton<BookInventoryModel>.Instance.GetBookListAll().Find((Predicate<BookModel>)(x => x.GetBookClassInfoId() == 18700000)) == null)
+                return;
+            if (Singleton<BookInventoryModel>.Instance.GetBookListAll().Find((Predicate<BookModel>)(x => x.GetBookClassInfoId() == 18800000)) == null)
+                return;
+            if (Singleton<BookInventoryModel>.Instance.GetBookListAll().Find((Predicate<BookModel>)(x => x.GetBookClassInfoId() == 18900000)) == null)
+                return;
+            if (Singleton<BookInventoryModel>.Instance.GetBookListAll().Find((Predicate<BookModel>)(x => x.GetBookClassInfoId() == 18000000)) == null)
+            {
+                Singleton<BookInventoryModel>.Instance.CreateBook(18000000);
+                UIs.Add(TextDataModel.GetText("ui_popup_getequippage", (object)Singleton<BookDescXmlList>.Instance.GetBookName(18000000)));
             }
         }
     }

@@ -171,11 +171,13 @@ namespace Contingecy_Contract
         }
         public static void StageNameXmlList_GetName(ref string __result,int id)
         {
+            if (CheckDuel(id))
+                return;
             __result = TextDataModel.GetText("ui_ContingecyLevel", (object)Singleton<ContractLoader>.Instance.GetLevel(id), (object)__result);
         }
         public static bool StageController_RoundStartPhase_System(StageType ____stageType)
         {
-            if (____stageType != StageType.Invitation)
+            if (____stageType != StageType.Invitation || Duel)
                 return true;
             foreach (BattleUnitModel alive in BattleObjectManager.instance.GetAliveList())
             {
@@ -193,7 +195,7 @@ namespace Contingecy_Contract
         public static void StageController_InitStageByInvitation(StageClassInfo stage)
         {
             Duel = false;
-            if (stage.id == 60002)
+            if (CheckDuel(stage.id))
                 Duel = true;
             if (!PassiveAbility_1890003_init)
                 PassiveAbility_1890003_InitList();
@@ -203,7 +205,7 @@ namespace Contingecy_Contract
         public static void StageController_InitStageByEndContentsStage(StageClassInfo stage)
         {
             Duel = false;
-            if (stage.id == 70010)
+            if (CheckDuel(stage.id))
                 Duel = true;
             if (!PassiveAbility_1890003_init)
                 PassiveAbility_1890003_InitList();
@@ -219,15 +221,15 @@ namespace Contingecy_Contract
         {
             foreach(BattleUnitModel unit in BattleObjectManager.instance.GetAliveList())
             {
-                if(unit.bufListDetail.GetActivatedBufList().Exists((Predicate<BattleUnitBuf>)(x => x is ContractStatBonus)))
+                if(unit.bufListDetail.GetActivatedBufList().Exists(x => x is ContractStatBonus))
                 {
-                    if (!Harmony_Patch.CombaltData.ContainsKey(unit.UnitData))
+                    if (!CombaltData.ContainsKey(unit.UnitData))
                     {
-                        Harmony_Patch.CombaltData.Add(unit.UnitData, (int)unit.hp);
+                        CombaltData.Add(unit.UnitData, (int)unit.hp);
                     }
                     else
                     {
-                        Harmony_Patch.CombaltData[unit.UnitData] = (int)unit.hp;
+                        CombaltData[unit.UnitData] = (int)unit.hp;
                     }
                 }
             }
@@ -320,6 +322,10 @@ namespace Contingecy_Contract
                 owner.bufListDetail.AddBuf((BattleUnitBuf)jaeheonPuppetThread);
             }
             return false;
+        }
+        public static bool CheckDuel(int stageId)
+        {
+            return stageId == 60002 || stageId == 70010 || stageId == 60007;
         }
         public static void LoadContract()
         {
