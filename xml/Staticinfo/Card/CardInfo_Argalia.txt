@@ -156,48 +156,6 @@
     		<ScriptDesc></ScriptDesc>
     		<BehaviourList>
       			<Behaviour Min="8" Dice="8" Type="Atk" Detail="Slash" Motion="S3" EffectRes="" Script="" ActionScript="argalia_area_ex" Desc="" />
-    		</BehaviourList>
-    		<Chapter>7</Chapter>
-    		<Priority>0</Priority>
-  	</Card>
-  	<Card ID="18000022">
-    		<Name>蘭·舞</Name>
-    		<Artwork>Argalia5</Artwork>
-    		<Rarity>Unique</Rarity>
-    		<Spec Range="FarAreaEach" Cost="3" Affection ="Team"/>
-    		<Script>AllVibrate</Script>
-    		<ScriptDesc></ScriptDesc>
-    		<BehaviourList>
-      			<Behaviour Min="8" Dice="8" Type="Atk" Detail="Slash" Motion="S3" EffectRes="" Script="" ActionScript="argalia_area_ex" Desc="" />
-      			<Behaviour Min="7" Dice="7" Type="Atk" Detail="Hit" Motion="S4" EffectRes="" Script="" ActionScript="argalia_area_ex" Desc="" />
-    		</BehaviourList>
-    		<Chapter>7</Chapter>
-    		<Priority>0</Priority>
-  	</Card>
-  	<Card ID="18000023">
-    		<Name>蘭·舞</Name>
-    		<Artwork>Argalia5</Artwork>
-    		<Rarity>Unique</Rarity>
-    		<Spec Range="FarAreaEach" Cost="3" Affection ="Team"/>
-    		<Script>AllVibrate</Script>
-    		<ScriptDesc></ScriptDesc>
-    		<BehaviourList>
-      			<Behaviour Min="8" Dice="8" Type="Atk" Detail="Slash" Motion="S3" EffectRes="" Script="" ActionScript="argalia_area_ex" Desc="" />
-      			<Behaviour Min="7" Dice="7" Type="Atk" Detail="Hit" Motion="S4" EffectRes="" Script="" ActionScript="argalia_area_ex" Desc="" />
-      			<Behaviour Min="5" Dice="5" Type="Atk" Detail="Slash" Motion="S3" EffectRes="" Script="" ActionScript="argalia_area_ex" Desc="" />
-    		</BehaviourList>
-    		<Chapter>7</Chapter>
-    		<Priority>0</Priority>
-  	</Card>
-  	<Card ID="18000024">
-    		<Name>蘭·舞</Name>
-    		<Artwork>Argalia5</Artwork>
-    		<Rarity>Unique</Rarity>
-    		<Spec Range="FarAreaEach" Cost="3" Affection ="Team"/>
-    		<Script>AllVibrate</Script>
-    		<ScriptDesc></ScriptDesc>
-    		<BehaviourList>
-      			<Behaviour Min="8" Dice="8" Type="Atk" Detail="Slash" Motion="S3" EffectRes="" Script="" ActionScript="argalia_area_ex" Desc="" />
       			<Behaviour Min="7" Dice="7" Type="Atk" Detail="Hit" Motion="S4" EffectRes="" Script="" ActionScript="argalia_area_ex" Desc="" />
       			<Behaviour Min="5" Dice="5" Type="Atk" Detail="Slash" Motion="S3" EffectRes="" Script="" ActionScript="argalia_area_ex" Desc="" />
       			<Behaviour Min="3" Dice="4" Type="Atk" Detail="Hit" Motion="S4" EffectRes="" Script="" ActionScript="argalia_area_ex" Desc="" />

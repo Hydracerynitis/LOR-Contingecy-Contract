@@ -105,7 +105,8 @@ namespace Contingecy_Contract
             this.Level = level - 1;
         }
         public override ContractType Type => ContractType.Special;
-        public override string[] GetFormatParam => new string[] { (20 * Level).ToString() };
+        public override string[] GetFormatParam => new string[] { AttackPatternText,(20 * Level).ToString() };
+        private string AttackPatternText => TextDataModel.GetText("Philip_Silence_param"+Level.ToString());
         private bool IsCrying() => this.owner.UnitData.unitData.EnemyUnitId == 1301021;
         public override int SpeedDiceNumAdder()
         {

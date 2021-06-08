@@ -22,7 +22,7 @@ namespace ContractReward
         public class ZombieInit: BattleUnitBuf
         {
             private bool init;
-            public override bool IsControllable => false;
+            public override bool IsControllable => this._owner.faction==Faction.Player? false: base.IsControllable;
             public override bool IsImmortal() => !init;
             public override void Init(BattleUnitModel owner)
             {
@@ -41,34 +41,31 @@ namespace ContractReward
                     List<PassiveAbilityBase> list = this._owner.passiveDetail.PassiveList;
                     list.Insert(0, new Zombie(this._owner));
                     typeof(BattleUnitPassiveDetail).GetField("_passiveList", AccessTools.all).SetValue((object)this._owner.passiveDetail, (object)list);
-                    if(this._owner.faction==Faction.Enemy)
-                        this._owner.UnitData.unitData.SetCustomName(TextDataModel.GetText("Zombie_name"));
-                    if (this._owner.faction == Faction.Player)
-                        this._owner.UnitData.unitData.SetTempName(TextDataModel.GetText("Zombie_name"));
+                    this._owner.UnitData.unitData.SetTempName(TextDataModel.GetText("Zombie_name"));
                     init = true;
                 }
             }
-            public class Zombie: PassiveAbilityBase
+        }
+    }
+    public class Zombie : PassiveAbilityBase
+    {
+        public Zombie(BattleUnitModel unit)
+        {
+            this.owner = unit;
+            this.name = Singleton<PassiveDescXmlList>.Instance.GetName(1880003);
+            this.desc = Singleton<PassiveDescXmlList>.Instance.GetDesc(1880003);
+            this.rare = Rarity.Common;
+        }
+        public override BattleUnitModel ChangeAttackTarget(BattleDiceCardModel card, int currentSlot)
+        {
+            List<BattleUnitModel> aliveList = BattleObjectManager.instance.GetAliveList(this.owner.faction).FindAll(x=> !x.passiveDetail.HasPassive<Zombie>());
+            if (aliveList.Count <= 0)
             {
-                public Zombie(BattleUnitModel unit)
-                {
-                    this.owner = unit;
-                    this.name = Singleton<PassiveDescXmlList>.Instance.GetName(1880003);
-                    this.desc = Singleton<PassiveDescXmlList>.Instance.GetDesc(1880003);
-                    this.rare = Rarity.Common;
-                }
-                public override BattleUnitModel ChangeAttackTarget(BattleDiceCardModel card, int currentSlot)
-                {
-                    List<BattleUnitModel> ally = new List<BattleUnitModel>();
-                    ally.AddRange(BattleObjectManager.instance.GetAliveList(this.owner.faction).FindAll(x => x != this.owner));
-                    if (ally.Count <= 0)
-                    {
-                        this.owner.Die();
-                        Singleton<StageController>.Instance.CheckEndBattle();
-                    }
-                    return RandomUtil.SelectOne<BattleUnitModel>(ally);
-                }
+                this.owner.Die();
+                Singleton<StageController>.Instance.CheckEndBattle();
             }
+            Contingecy_Contract.Debug.Log("Zomebie try to move");
+            return RandomUtil.SelectOne<BattleUnitModel>(aliveList);
         }
     }
 }

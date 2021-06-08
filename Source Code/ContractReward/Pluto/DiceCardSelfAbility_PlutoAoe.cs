@@ -15,7 +15,7 @@ namespace ContractReward
         {
             base.OnUseAoe();
             int count = this.card.subTargets.Count + 1;
-            this.card.ApplyDiceStatBonus(DiceMatch.AllAttackDice, new DiceStatBonus() { dmg = (5 - count) * 3 });
+            this.card.ApplyDiceStatBonus(DiceMatch.AllAttackDice, new DiceStatBonus() { dmg = Math.Max((5 - count) * 3,0) });
         }
     }
 }

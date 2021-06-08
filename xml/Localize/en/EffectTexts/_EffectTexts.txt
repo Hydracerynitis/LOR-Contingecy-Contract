@@ -2,32 +2,32 @@
 <BattleEffectTextRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<effectTextList>
 		<BattleEffectText ID="Insanity">
-			<Name>狂乱</Name>
-			<Desc>每造成或承受2%自身最大血量的伤害便提升一点层数</Desc>
+			<Name>Frantic</Name>
+			<Desc>Gain 1 stack after inflicting or recieving damage equal to 2% of Max HP</Desc>
 		</BattleEffectText>
 		<BattleEffectText ID="NullifyPowerAll">
-			<Name>封锁威力</Name>
-			<Desc>无视骰子威力增减</Desc>
+			<Name>Power Stripped</Name>
+			<Desc>Dices are not affected by Power gain or loss</Desc>
 		</BattleEffectText>
 		<BattleEffectText ID="Mark">
-			<Name>红靶</Name>
-			<Desc>被安洁莉卡傀儡司书指定攻击</Desc>
+			<Name>Red Mark</Name>
+			<Desc>Being the target of Puppet Angelica Librarian.</Desc>
 		</BattleEffectText>
 		<BattleEffectText ID="AngelicaPuppet">
-			<Name>操纵</Name>
-			<Desc>速度骰+1，该司书可以自由活动</Desc>
+			<Name>Puppet Strings</Name>
+			<Desc>Gain 1 Speed dice, the character is free for you to control.</Desc>
 		</BattleEffectText>
 		<BattleEffectText ID="TemporyPuppet">
-			<Name>临时操纵</Name>
-			<Desc>这一幕内无法死亡，速度骰+1</Desc>
+			<Name>Temporary Puppet Strings</Name>
+			<Desc>Gain 1 Speed dice, Immortal for the duraction of this Scene.</Desc>
 		</BattleEffectText>
 		<BattleEffectText ID="Barrier">
-			<Name>封锁结界</Name>
-			<Desc>无法行动无法被指定</Desc>
+			<Name>Sealing Barrier</Name>
+			<Desc>Can not act, Untargetable.</Desc>
 		</BattleEffectText>
 		<BattleEffectText ID="CrossBurn">
-			<Name>烧印</Name>
-			<Desc>被朱红十字攻击会消耗一层并使其对其他司书额外攻击,此次伤害提升{0}%</Desc>
+			<Name>Scorched</Name>
+			<Desc>Being Hit by The Vermilion Cross will reduce the stack by 1 and make her attack other random Librarian with damage boosed by {0}%</Desc>
 		</BattleEffectText>
 	</effectTextList>
 </BattleEffectTextRoot>

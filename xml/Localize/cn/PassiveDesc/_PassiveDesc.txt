@@ -4,16 +4,6 @@
 		<Name>危机合约:</Name> 
 		<Desc></Desc>
 	</PassiveDesc>
-	<PassiveDesc ID="20210331">
-		<Name>心灵共振</Name> 
-		<Desc>使用近战书页时若自身速度与目标震颤层数相差不高于{0}则使其中的所有骰子威力+{1}</Desc>
-	</PassiveDesc>
-	<PassiveDesc ID="1309013">
-		<Name>魔法结界</Name> 
-		<Desc>免疫所有负面状态
-免疫所有伤害
-(仅在第1阶段生效)</Desc>
-	</PassiveDesc>
 	<!--奖励通用-->
 	<PassiveDesc ID="1800000">
 		<Name>完美提取</Name> 

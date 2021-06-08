@@ -19,8 +19,6 @@ namespace Contingecy_Contract
         public static Dictionary<UnitBattleDataModel, int> CombaltData;
         public static Dictionary<BattleUnitModel, int> UnitBookId;
         public static string ModPath;
-        public static bool Cheat;
-        public static bool Warn;
         public static bool Duel;
         public static bool PassiveAbility_1890003_init;
         public Harmony_Patch()
@@ -34,7 +32,6 @@ namespace Contingecy_Contract
             CombaltData = new Dictionary<UnitBattleDataModel, int>();
             ContractAttribution.Inition = new List<BattleUnitModel>();
             UnitBookId = new Dictionary<BattleUnitModel, int>();
-            Warn = false;
             PassiveAbility_1890003_init = false;
             MethodInfo Method1 = typeof(StageNameXmlList).GetMethod("GetName", AccessTools.all);
             MethodInfo Patch1 = typeof(Harmony_Patch).GetMethod("StageNameXmlList_GetName");
@@ -184,11 +181,6 @@ namespace Contingecy_Contract
                 if (ContractAttribution.Inition.Contains(alive))
                     continue;
                 ContractAttribution.Init(alive);
-                if (!Cheat)
-                {
-                    if (cheatList.Contains(alive.Book.GetBookClassInfoId()) && alive.faction == Faction.Player)
-                        Cheat = true;
-                }
             }
             return true;
         }
@@ -200,7 +192,6 @@ namespace Contingecy_Contract
             if (!PassiveAbility_1890003_init)
                 PassiveAbility_1890003_InitList();
             Singleton<ContractLoader>.Instance.Init();
-            Cheat = false;
         }
         public static void StageController_InitStageByEndContentsStage(StageClassInfo stage)
         {
@@ -210,7 +201,6 @@ namespace Contingecy_Contract
             if (!PassiveAbility_1890003_init)
                 PassiveAbility_1890003_InitList();
             Singleton<ContractLoader>.Instance.Init();
-            Cheat = false;
         }
         public static void StageController_InitStageByCreature()
         {
@@ -386,6 +376,5 @@ namespace Contingecy_Contract
             AvailablePassive.Add(Singleton<PassiveXmlList>.Instance.GetData(1300001));
             PassiveAbility_1890003_init = true;
         }
-        public static List<int> cheatList => new List<int> (){ 18000000, 18100000,18700000, 18710000, 18800000, 18900000 };
     }
 }

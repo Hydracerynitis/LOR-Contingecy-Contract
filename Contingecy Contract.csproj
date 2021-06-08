@@ -77,7 +77,6 @@
     <Compile Include="Source Code\ContractReward\Pluto\DiceCardSelfAbility_Barrier.cs" />
     <Compile Include="Source Code\ContractReward\Philiph\DiceCardSelfAbility_BurnCostDown.cs" />
     <Compile Include="Source Code\ContractReward\Philiph\DiceCardSelfAbility_BurnPowerUp.cs" />
-    <Compile Include="Source Code\ContractReward\Chapter\DiceCardSelfAbility_Canard0.cs" />
     <Compile Include="Source Code\ContractReward\Argalia\DiceCardSelfAbility_Insane1.cs" />
     <Compile Include="Source Code\ContractReward\Argalia\DiceCardSelfAbility_Insane2.cs" />
     <Compile Include="Source Code\ContractReward\Fix\DiceCardSelfAbility_Jaeheon_AreaDt.cs" />
@@ -117,7 +116,7 @@
     <Compile Include="Source Code\ContractReward\Pluto\PassiveAbility_1890002.cs" />
     <Compile Include="Source Code\ContractReward\Pluto\PassiveAbility_1890003.cs" />
     <Compile Include="Source Code\Debug.cs" />
-    <Compile Include="Source Code\ContractList_Nightmare.cs" />
+    <Compile Include="Source Code\ContractList_Shi.cs" />
     <Compile Include="Source Code\ContractList_Player.cs" />
     <Compile Include="Source Code\ContractRewardSystem.cs" />
     <Compile Include="Source Code\ContractAttribution.cs" />

@@ -1,152 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
 <BattleCardAbilityDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	  <BattleCardAbility ID="vibrateActivate">
-    		<Desc>[使用时]若自身速度与目标[震颤]层数相等则使本书页的所有骰子威力+4</Desc>
-  	</BattleCardAbility>
-	<!--章节奖励-->
-  	<BattleCardAbility ID="Canard0">
-    		<Desc>[每一幕都会变形成全新的卡]</Desc>
+    		<Desc>[On Use] If Speed is equal to target's Vibration, all dice on this page gain +4 Power</Desc>
   	</BattleCardAbility>
 	<!--阿尔加利亚-->
 	  <BattleCardAbility ID="PerfectResonanceActivate">
-    		<Desc>[使用时]若自身速度与目标[震颤]层数相等则使本书页的所有骰子威力+2</Desc>
+    		<Desc>[On Use] If Speed is equal to target's Vibration, all dice on this page gain +2 Power</Desc>
   	</BattleCardAbility>
 	  <BattleCardAbility ID="Insane1">
-    		<Desc>消耗100点[狂乱]值使用</Desc>
-    		<Desc>[使用时]下一幕起封锁目标威力加成</Desc>
+    		<Desc>Spend 100 Frantic to Use</Desc>
+    		<Desc>[On Use] Since next Scene, target's dices are not affected by Power gain or loss</Desc>
   	</BattleCardAbility>
 	 <BattleCardAbility ID="Insane2">
-    		<Desc>消耗100点[狂乱]值使用</Desc>
+    		<Desc>Spend 100 Frantic to Use</Desc>
   	</BattleCardAbility>
 	  <BattleCardAbility ID="AllVibrate">
-    		<Desc>[使用时]将所有敌方单位[震颤]层数设为4</Desc>
-    		<Desc>该书页3幕内最多使用1次</Desc>
+    		<Desc>[On Use] Set all enemies' [Virbrate] stack to 4</Desc>
+    		<Desc>This card can be used at most use once per 4 Scene</Desc>
   	</BattleCardAbility>
 	<!--菲利普-->
   	<BattleCardAbility ID="SelfBurn2">
-    		<Desc>[使用时] 对自身施加2层[烧伤]</Desc>
+    		<Desc>[On Use] Inflict 2 [Burn] to self</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="philip_emotion_pw">
-    		<Desc>[拼点胜利] 对双方施加1层[烧伤]</Desc>
+    		<Desc>[On Clash Win] Inflict 1 Burn to each other</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="philip_stigma_atk">
-    		<Desc>[命中时] 获得3枚负面情感硬币</Desc>
+    		<Desc>[On Hit] Gain 3 Negative Emotion Coins</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="philip_heat_atk1">
-    		<Desc>[命中时] 对目标施加1层[烧伤]</Desc>
+    		<Desc>[On Hit] Inflict 1 Burn</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="philip_heat_atk2">
-    		<Desc>[命中时] 对目标施加1层[烧伤]</Desc>
+    		<Desc>[On Hit] Inflict 2 Burn</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="philip_restrict_pw">
-    		<Desc>[拼点胜利] 对双方施加1层[烧伤]</Desc>
+    		<Desc>[On Clash Win] Inflict 1 Burn to each other</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="philip_restrict_atk">
-    		<Desc>[命中时] 对目标施加2层[虚弱][破绽][束缚]</Desc>
+    		<Desc>[On Hit] Inflict 2 Feeble, Disarm, and Bind next Scene</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="BurnPowerUp">
-    		<Desc>[使用时] 若目标[烧伤]层数大于10则本书页所有骰子威力+2</Desc>
+    		<Desc>[On Use] All dice of this page gain 2 Power if target has more than 10 Burn </Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="LoseBurn">
-    		<Desc>[使用时] 减少自身[烧伤]层数5点</Desc>
+    		<Desc>[On Use] Reduce self's Burn stack by 5</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="BurnCostDown">
-    		<Desc>[使用时] 若目标烧伤层数大于5层则使随机2张手牌费用设定为0(仅限这一次)</Desc>
+    		<Desc>[On Use] if target has mor than 5 Burn, set costs of 2 random cards from hand to 0 (Reset after Use)</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="philip_area_atk">
-    		<Desc>[交锋] [命中时] 对目标施加3层烧伤</Desc>
+    		<Desc>[On Hit] Inflict 3 Burn</Desc>
   	</BattleCardAbility>
 	<!--在宪-->
   	<BattleCardAbility ID="QuickPuppet_Special">
-    		<Desc>若自身速度不低于5点则使本书页的所有骰子威力+1</Desc>
+    		<Desc>If Speed is 5 or higher, all dice on this page gain +1 Power</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="AngelicaPuppet_Special">
-    		<Desc>若自身速度不低于5点则使本书页的所有骰子威力+2</Desc>
+    		<Desc>If Speed is 5 or higher, all dice on this page gain +2 Power</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="break4atk">
-    		<Desc>[命中时]追加4点混乱伤害</Desc>
+    		<Desc>[On Hit] Deal 4 Stagger damage</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="AllPuppetControl">
-    		<Desc>[范围杀伤书页][使用时] 下一幕使所有其他司书获得[临时操纵]</Desc>
-    		<Desc>该书页4幕内最多使用1次</Desc>
+    		<Desc>[On Use] Give Temporary Puppet String to all other allies next Scene</Desc>
+    		<Desc>This card can be used at most use once per 4 Scene </Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="Jaeheon_AreaBind">
-    		<Desc>[交锋][命中时]下一幕中对目标施加1层[束缚]</Desc>
+    		<Desc>[On Hit] Inflict 1 Bind next Scene</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="PuppetProtect">
-    		<Desc>[战斗开始] 使安洁莉卡傀儡获得1层[守护][振奋]</Desc>
+    		<Desc>[Combat Start] Give Puppet Angelica 1 [Protection] [Stagger Protection]</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="PuppetEndure">
-    		<Desc>[战斗开始] 使安洁莉卡傀儡获得1层[忍耐]</Desc>
+    		<Desc>[Combat Start] Give Puppet Angelica 1 [Endurance]</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="PuppetStrength">
-    		<Desc>[战斗开始] 使安洁莉卡傀儡获得1层[强壮]</Desc>
+    		<Desc>[Combat Start] Give Puppet Angelica 1 [Strength]</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="PuppetHeal">
-    		<Desc>[战斗开始] 使安洁莉卡傀儡恢复10点混乱抗性</Desc>
+    		<Desc>[Combat Start] Puppet Angelica recover 10 Stagger Resist</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="AngelicaPuppet_Wheels">
-    		<Desc>[拼点胜利]摧毁目标当前书页的下一颗骰子</Desc>
+    		<Desc>[On Clash Win] Destroy opponent's next die</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="ReviveAngelica">
-    		<Desc>该书页仅有已死亡司书时才能使用</Desc>
-    		<Desc>[装备时]以安洁莉卡傀儡的姿态随机复活一个已死亡的司书</Desc>
+    		<Desc>This card can be only used when there is a dead ally</Desc>
+    		<Desc>[On Play]Reive a random dead ally in the form of Puppet Angelica</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="ReconnectAngelica">
-    		<Desc>[装备时]使安洁莉卡再次获得[操纵]</Desc>
+    		<Desc>[On Play] make Puppet Angelica regain [Puppet Strings]</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="AttackTarget">
-    		<Desc>[装备时]将[红靶]单位转移到该卡的目标</Desc>
+    		<Desc>[On Play] Change the Enemy with Red Mark to target</Desc>
   	</BattleCardAbility>
 	<!--伊莲娜-->
   	<BattleCardAbility ID="ElenaBuff">
-    	<Desc>[战斗开始]使目标获得2层强壮忍耐</Desc>
-		<Desc>可指向友方单位为目标</Desc>
+    	<Desc>[Combat Start] give target 2 [Strength] [Endurance]</Desc>
+		<Desc>Can point ally as target</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="Invisible">
-    	<Desc>这一幕内若没有受到一次攻击则下一幕内无法指定为目标</Desc>
-		<Desc>仅限自己能被指定为目标时使用</Desc>
+    	<Desc>Become Untargetable in the next Scene if recieve no hit in this Scene</Desc>
+		<Desc>Can only use when self is targetable</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="AoeCoolDown">
-		<Desc>该书页4幕内只能使用一次</Desc>
+		<Desc>This card can be used at most use once per 4 Scene</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="ElenaZombie">
-    	<Desc>使目标下一幕起恢复所有血量和混乱抗性并转向攻击其友方单位</Desc>
-    	<Desc>若无目标的其他友方单位则自动消散</Desc>
-		<Desc>仅限对低于25%血量上限的目标使用</Desc>
+    	<Desc>Recover all Health and Stagger Resist in Next Scene and start attack allies</Desc>
+    	<Desc>target will vanish if it has not alive allies</Desc>
+		<Desc>Can only target enemy with 25% Max HP or less</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="ElenaZombieEnemy">
-    	<Desc>使目标下一幕起恢复所有血量和混乱抗性并转向攻击其友方单位</Desc>
-    	<Desc>若无目标的其他友方单位则自动消散</Desc>
+    	<Desc>Recover all Health and Stagger Resist in Next Scene and start attack allies</Desc>
+    	<Desc>target will vanish if it has not alive allies</Desc>
   	</BattleCardAbility>
 	<!--普鲁托-->
 	<BattleCardAbility ID="Barrier">
-    		<Desc>[使用时]将目标锁入[封印结界]持续2幕并复制目标两张战斗书页</Desc>
-    		<Desc>这些书页费用为0并且使用后会被移除战斗</Desc>
+    		<Desc>[On Use] Seal target into [Sealing Barrier] for 2 Scene and add 2 copy of Combat Pages from target's deck</Desc>
+    		<Desc>These card's cost are 0 and exhaust after use</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="PlutoAoe">
-    		<Desc>[使用时]根据目标数量提升该书页所有骰子伤害</Desc>
-    		<Desc>目标数量越少伤害加成越大</Desc>
-    	<Desc>该书页4幕内只能使用一次</Desc>
+    		<Desc>[On Use]Boost dices' damage according to numbers of enemies targeted</Desc>
+    		<Desc>Less target greated the boost</Desc>
+    		<Desc>This card can be used at most use once per 4 Scene</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="PlutoContract1">
-    		<Desc>[装备时]为选择的友方单位生效自由合同</Desc>
-    		<Desc>若选择的单位为敌方单位则为自身生效</Desc>
+    		<Desc>[On Play] Activate Contract of Liberty for targeted ally</Desc>
+    		<Desc>if target is enemy then activate for self</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="PlutoContract2">
-    		<Desc>[装备时]为选择的友方单位生效增幅合同</Desc>
-    		<Desc>若选择的单位为敌方单位则为自身生效</Desc>
+    		<Desc>[On Play] Activate Contract of Amplification for targeted ally</Desc>
+    		<Desc>if target is enemy then activate for self</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="PlutoContract3">
-    		<Desc>[装备时]为选择的友方单位生效迅猛合同</Desc>
-    		<Desc>若选择的单位为敌方单位则为自身生效</Desc>
+    		<Desc>[On Play] Activate Contract of Swiftness for targeted ally</Desc>
+    		<Desc>if target is enemy then activate for self</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="PlutoContract4">
-    		<Desc>[装备时]为选择的友方单位生效力量合同</Desc>
-    		<Desc>若选择的单位为敌方单位则为自身生效</Desc>
+    		<Desc>[On Play] Activate Contract of Might for targeted ally</Desc>
+    		<Desc>if target is enemy then activate for self</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="PlutoContract5">
-    		<Desc>[装备时]为选择的友方单位生效光明合同</Desc>
-    		<Desc>若选择的单位为敌方单位则为自身生效</Desc>
+    		<Desc>[On Play] Activate Contract of Light for targeted ally</Desc>
+    		<Desc>if target is enemy then activate for self</Desc>
   	</BattleCardAbility>
 </BattleCardAbilityDescRoot>

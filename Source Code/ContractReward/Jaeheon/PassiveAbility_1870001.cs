@@ -46,6 +46,7 @@ namespace ContractReward
             Angelica.Book.GetType().GetField("_maxPlayPoint", AccessTools.all).SetValue(Angelica.Book, puppet.GetMaxPlayPoint());
             Angelica.Book.ClassInfo.id = puppet.GetBookClassInfoId();
             Angelica.view.ChangeSkin(puppet.GetCharacterName());
+            Angelica.view.ChangeHeight(250);
             Angelica.formation = Singleton<StageController>.Instance.GetCurrentStageFloorModel().GetFormationPosition(Angelica.index);
             Angelica.view.charAppearance.ChangeMotion(ActionDetail.Standing);
             Angelica.cardSlotDetail.LosePlayPoint(Angelica.cardSlotDetail.GetMaxPlayPoint());
@@ -56,6 +57,8 @@ namespace ContractReward
                 Decklist.Add(ItemXmlDataList.instance.GetCardItem(i));
             Angelica.allyCardDetail.Init(Decklist);
             Angelica.allyCardDetail.DrawCards(8);
+            Angelica.personalEgoDetail = new BattlePersonalEgoCardDetail(Angelica);
+            Angelica.personalEgoDetail.Init();
             Angelica.breakDetail.nextTurnBreak = false;
             Angelica.breakDetail.RecoverBreakLife(1, true);
             Angelica.bufListDetail.RemoveBufAll();

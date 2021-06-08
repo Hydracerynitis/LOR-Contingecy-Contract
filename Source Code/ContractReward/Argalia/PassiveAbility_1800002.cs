@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using LOR_DiceSystem;
+using HarmonyLib;
 using System.Threading.Tasks;
 
 namespace ContractReward
@@ -10,19 +12,30 @@ namespace ContractReward
     {
         public int count;
         private BattleDiceCardModel model;
+        private Queue<DiceBehaviour> RestDice;
         public override void OnWaveStart()
         {
             base.OnWaveStart();
-            model=this.owner.allyCardDetail.AddNewCard(18000021);
+            RestDice = new Queue<DiceBehaviour>();
+            DiceCardXmlInfo xml = ItemXmlDataList.instance.GetCardItem(18000021).Copy(true);
+            foreach(DiceBehaviour dice in xml.DiceBehaviourList)
+            {
+                RestDice.Enqueue(dice);
+            }
+            xml.DiceBehaviourList.Clear();
+            xml.DiceBehaviourList.Add(RestDice.Dequeue());
+            model = BattleDiceCardModel.CreatePlayingCard(xml);
+            this.owner.allyCardDetail.AddCardToHand(model);
             count = 0;
         }
         public void Upgrade()
         {
-            if(model.XmlData.id!= 18000024)
-            {
-                model.exhaust = true;
-                model=this.owner.allyCardDetail.AddNewCard(model.XmlData.id + 1);
-            }
+            if (RestDice.Count <= 0)
+                return;
+            model.CopySelf();
+            DiceCardXmlInfo xml = model.XmlData;
+            xml.DiceBehaviourList.Add(RestDice.Dequeue());
+            typeof(BattleDiceCardModel).GetField("_xmlData", AccessTools.all).SetValue(model, xml);
         }
     }
 }

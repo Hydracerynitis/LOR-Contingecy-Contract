@@ -3,7 +3,7 @@
 	<Contract Type="Damage">
 		<DescList>
 			<Desc language="cn" name="研磨锋刃" desc="所有来宾造成伤害+{0}%" />
-			<Desc language="en" name="研磨锋刃" desc="所有来宾造成伤害+{0}%" />
+			<Desc language="en" name="Sharpened Blade" desc="Increase all Guests' outgoing Damage by {0}%" />
 		</DescList>
 		<Faction>Enemy</Faction>
 		<Variation>4</Variation>
@@ -11,7 +11,7 @@
 	<Contract Type="BreakDamage">
 		<DescList>
 			<Desc language="cn" name="震荡猛击" desc="所有来宾造成混乱伤害+{0}%" />
-			<Desc language="en" name="震荡猛击" desc="所有来宾造成混乱伤害+{0}%" />
+			<Desc language="en" name="Concussing Strike" desc="Increase all Guests' outgoing Stagger Damage by {0}%" />
 		</DescList>
 		<Faction>Enemy</Faction>
 		<Variation>4</Variation>
@@ -19,7 +19,7 @@
 	<Contract Type="Hp">
 		<DescList>
 			<Desc language="cn" name="手术强化" desc="所有来宾最大血量提升{0}%" />
-			<Desc language="en" name="手术强化" desc="所有来宾最大血量提升{0}%" />
+			<Desc language="en" name="Surgery Enhancement" desc="Increase all Guests' Max HP by {0}%" />
 		</DescList>
 		<Faction>Enemy</Faction>
 		<Variation>4</Variation>
@@ -27,7 +27,7 @@
 	<Contract Type="Bp">
 		<DescList>
 			<Desc language="cn" name="身经百战" desc="所有来宾最大混乱抗性提升{0}%" />
-			<Desc language="en" name="身经百战" desc="所有来宾最大混乱抗性提升{0}%" />
+			<Desc language="en" name="Experienced Combatant" desc="Increase all Guests' Max Stagger Resist by {0}%" />
 		</DescList>
 		<Faction>Enemy</Faction>
 		<Variation>4</Variation>
@@ -35,7 +35,7 @@
 	<Contract Type="NoBreak">
 		<DescList>
 			<Desc language="cn" name="临危不乱" desc="所有来宾陷入混乱时不改变伤害抗性" />
-			<Desc language="en" name="临危不乱" desc="所有来宾陷入混乱时不改变伤害抗性" />
+			<Desc language="en" name="Unflappable" desc="For all Guests, Becoming Staggered does not temporarily change the character's resistances." />
 		</DescList>
 		<Faction>Enemy</Faction>
 		<BaseLevel>5</BaseLevel>

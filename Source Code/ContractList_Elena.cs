@@ -91,12 +91,10 @@ namespace Contingecy_Contract
         public ContingecyContract_Elena_Zombie(int level)
         {
             Level = level - 1;
-            MaxZombie = Level;
         }
-        private int MaxZombie;
         public override ContractType Type => ContractType.Special;
-        public override string[] GetFormatParam => new string[] { (4 - Level).ToString(), (10+30*Level).ToString() };
-        public override int SpeedDiceNumAdder() => this.GetVictimList().Count;
+        public override string[] GetFormatParam => new string[] { ( 15+ 5*Level).ToString(), (Level * 20).ToString() };
+        public override int SpeedDiceNumAdder() => IsElena? this.GetVictimList().Count: 0;
         private bool IsElena => this.owner.UnitData.unitData.EnemyUnitId == 1308011;
         private List<BattleUnitModel> GetVictimList()
         {
@@ -105,8 +103,6 @@ namespace Contingecy_Contract
                 return list;
             foreach (BattleUnitModel unit in BattleObjectManager.instance.GetAliveList(Faction.Player))
             {
-                if (list.Count >= MaxZombie)
-                    return list;
                 if (unit.hp < unit.MaxHp * (0.15 + Level * 0.05))
                     list.Add(unit);
             }
@@ -130,17 +126,16 @@ namespace Contingecy_Contract
                 victim.RemoveAt(0);
             }
         }
+        public override StatBonus GetStatBonus(BattleUnitModel owner)
+        {
+            if(IsElena)
+                return new StatBonus() { hpRate=Level*20};
+            return base.GetStatBonus(owner);
+        }
         public override BattleUnitModel ChangeAttackTarget(BattleDiceCardModel card, int idx)
         {
-            return RandomUtil.SelectOne<BattleUnitModel>(BattleObjectManager.instance.GetAliveList_opponent(this.owner.faction).FindAll(x => !x.passiveDetail.PassiveList.Exists(y => y is DiceCardSelfAbility_ElenaZombie.ZombieInit.Zombie)));
+            return RandomUtil.SelectOne<BattleUnitModel>(BattleObjectManager.instance.GetAliveList_opponent(this.owner.faction).FindAll(x => !x.passiveDetail.PassiveList.Exists(y => y is Zombie)));
         }
-        public override void OnUseCard(BattlePlayingCardDataInUnitModel curCard)
-        {
-            base.OnUseCard(curCard);
-            if (curCard.card.GetID() == 18800008)
-                MaxZombie -= 1;
-        }
-
     }
     public class ContingecyContract_Elena : ContingecyContract
     {

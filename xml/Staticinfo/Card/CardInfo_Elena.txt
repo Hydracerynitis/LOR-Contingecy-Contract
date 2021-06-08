@@ -100,7 +100,7 @@
         <Artwork>Elena3</Artwork>
         <Rarity>Unique</Rarity>
 		<Option>Personal</Option>
-        <Spec Range="Near" Cost="3"/>
+        <Spec Range="Special" Cost="3"/>
         <Script>ElenaZombie</Script>
         <ScriptDesc></ScriptDesc>
         <BehaviourList>
@@ -113,7 +113,7 @@
         <Name>血管盛宴</Name>
         <Artwork>Elena3</Artwork>
         <Rarity>Unique</Rarity>
-        <Spec Range="Near" Cost="0"/>
+        <Spec Range="Special" Cost="0"/>
         <Script>ElenaZombieEnemy</Script>
         <ScriptDesc></ScriptDesc>
         <BehaviourList>

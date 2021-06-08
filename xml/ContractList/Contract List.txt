@@ -1,78 +1,171 @@
-来宾全体篇：
-研磨锋刃1：||所有来宾造成伤害+25%||   ||合约等级1||		||代码:Damage1||
-研磨锋刃2：||所有来宾造成伤害+50%||   ||合约等级2||		||代码:Damage2||
-研磨锋刃3：||所有来宾造成伤害+75%||   ||合约等级3||		||代码:Damage3||
-研磨锋刃4：||所有来宾造成伤害+100%||   ||合约等级4||	||代码:Damage4||
-震荡猛击1：||所有来宾造成混乱伤害+25%||    ||合约等级1||	||代码:BreakDamage1||
-震荡猛击2：||所有来宾造成混乱伤害+50%||    ||合约等级2||	||代码:BreakDamage2||
-震荡猛击3：||所有来宾造成混乱伤害+75%||    ||合约等级3||	||代码:BreakDamage3||	
-震荡猛击4：||所有来宾造成混乱伤害+100%||    ||合约等级4||	||代码:BreakDamage4||
-手术强化1：||所有来宾最大血量提升25%||    ||合约等级1||	||代码:Hp1||
-手术强化2：||所有来宾最大血量提升50%||    ||合约等级2||	||代码:Hp2||
-手术强化3：||所有来宾最大血量提升75%||    ||合约等级3||	||代码:Hp3||
-手术强化4：||所有来宾最大血量提升100%||    ||合约等级4||	||代码:Hp4||
-身经百战1：||所有来宾最大混乱抗性提升25%||    ||合约等级1|| 	||代码:Bp1||
-身经百战2：||所有来宾最大混乱抗性提升50%||    ||合约等级2||	||代码:Bp2||
-身经百战3：||所有来宾最大混乱抗性提升75%||    ||合约等级3||	||代码:Bp3||
-身经百战4：||所有来宾最大混乱抗性提升100%||    ||合约等级4||	||代码:Bp4||
-临危不乱：||所有来宾陷入混乱时不改变伤害抗性||    ||合约等级5||  ||代码:NoBreak||	
-司书全体篇：
-保管不良1：||所有司书造成伤害-20%||   ||合约等级1||		||代码:Damage_L1||
-保管不良2：||所有司书造成伤害-40%||   ||合约等级2||		||代码:Damage_L2||
-保管不良3：||所有司书造成伤害-60%||   ||合约等级3||		||代码:Damage_L3||
-规避要害1：||所有司书造成混乱伤害-20%||    ||合约等级1||	||代码:BreakDamage_L1||
-规避要害2：||所有司书造成混乱伤害-40%||    ||合约等级2||	||代码:BreakDamage_L2||
-规避要害3：||所有司书造成混乱伤害-60%||    ||合约等级3||	||代码:BreakDamage_L3||
-破碎之躯1：||所有司书血量上限减少20%|| ||合约等级1||	||代码:Hp_L1||
-破碎之躯2：||所有司书血量上限减少40%|| ||合约等级2||	||代码:Hp_L2||
-破碎之躯3：||所有司书血量上限减少60%|| ||合约等级3||	||代码:Hp_L3||
-惊慌失措1：||所有司书混乱抗性上限减少20%|| ||合约等级1||	||代码:Bp_L1||
-惊慌失措2：||所有司书混乱抗性上限减少40%|| ||合约等级2||	||代码:Bp_L2||
-惊慌失措3：||所有司书混乱抗性上限减少60%|| ||合约等级3||	||代码:Bp_L3||
-陷入漆黑1：||所有司书舞台开启时只有3点光芒|| ||合约等级3||	||代码:Darkness1||
-陷入漆黑2：||所有司书舞台开启时只有2点光芒|| ||合约等级4||	||代码:Darkness2||
-陷入漆黑3：||所有司书舞台开启时只有1点光芒|| ||合约等级5||	||代码:Darkness3||
-陷入漆黑4：||所有司书舞台开启时只有0点光芒|| ||合约等级6||	||代码:Darkness4||
-阿尔加利亚：
-共鸣交响曲1： ||阿尔加利亚速度骰值和目标震颤层数差值至多为0时将会触发心灵共振,额外提升书页威力2点并下一幕获得1层强壮忍耐||  ||合约等级2||  ||与以逸待劳冲突||  ||代码:Argalia_Resonance1||
-共鸣交响曲2： ||阿尔加利亚速度骰值和目标震颤层数差值至多为1时将会触发心灵共振,额外提升书页威力4点并下一幕获得1层强壮忍耐||  ||合约等级3||  ||与以逸待劳冲突||  ||代码:Argalia_Resonance2||
-共鸣交响曲3： ||阿尔加利亚速度骰值和目标震颤层数差值至多为2时将会触发心灵共振,额外提升书页威力6点并下一幕获得1层强壮忍耐||  ||合约等级4||  ||与以逸待劳冲突||  ||代码:Argalia_Resonance3||
-以逸待劳3:  ||提升阿尔加利亚30%血量和混乱抗性及其攻击抗性,一幕内命中目标6次便恢复10点血量和混乱抗性||  ||合约等级2||  ||与共鸣交响曲冲突||  ||代码:Argalia_TieUP1||
-以逸待劳3:  ||提升阿尔加利亚40%血量和混乱抗性及其攻击抗性,一幕内命中目标5次便恢复10点血量和混乱抗性||  ||合约等级3||  ||与共鸣交响曲冲突||  ||代码:Argalia_TieUP2||
-以逸待劳3:  ||提升阿尔加利亚50%血量和混乱抗性及其攻击抗性,一幕内命中目标4次便恢复10点血量和混乱抗性||  ||合约等级4||  ||与共鸣交响曲冲突||  ||代码:Argalia_TieUP3||
-指挥家的杰作:  ||使阿尔加利亚的攻击方式更加激进||  ||合约等级4||  ||代码:Argalia||	
-昨日之约：
-真假难分1:  ||提高阴影50%血量和混乱抗性,阴影攻击其复制司书骰子威力提升1点|| ||与碾压结界冲突|| ||合约等级2||  ||代码:Pluto_Shadow1||
-真假难分2:  ||提高阴影65%血量和混乱抗性,阴影攻击其复制司书骰子威力提升2点|| ||与碾压结界冲突|| ||合约等级3||  ||代码:Pluto_Shadow2||
-真假难分3:  ||提高阴影80%血量和混乱抗性,阴影攻击其复制司书骰子威力提升3点|| ||与碾压结界冲突|| ||合约等级4||  ||代码:Pluto_Shadow3||
-碾压结界1:  ||被锁入封印结界的司书每1幕会承受5%最大血量的伤害，提高100%普鲁托的血量和陷入封印结界司书30%混乱抗性||   ||与真假难分冲突||  ||合约等级2||  ||代码:Pluto_Barrier1||
-碾压结界:2  ||被锁入封印结界的司书每1幕会承受10%最大血量的伤害，提高100%普鲁托的血量和陷入封印结界司书40%混乱抗性||  ||与真假难分冲突||  ||合约等级3||  ||代码:Pluto_Barrier2||
-碾压结界3:  ||被锁入封印结界的司书每1幕会承受15%最大血量的伤害，提高100%普鲁托的血量和陷入封印结界司书50%混乱抗性||  ||与真假难分冲突||  ||合约等级4||  ||代码:Pluto_Barrier3||
-管风琴的洪大:  ||每3幕普鲁托会发布一个新的随机合同||  ||合约等级4||  ||代码:Pluto||
-血红之夜：
-烧灼十字：||被朱红十字攻击3次会下一幕内获得1/2/3层"烧印"，朱红十字攻击"烧印"的司书会消耗一层“烧印”并对其他司书额外攻击一次,这次攻击伤害提升0/25/50%||
-血管盛宴：||伊莲娜会将血量低于25%的司书转化为攻击其他友方单位的无名躯壳，最多转化1/2/3个无名躯壳且其血量和混乱抗性提升20/40/60||
-一号小提琴的典雅：||使伊莲娜和朱红十字的攻击方式更加激进||
-傀儡师：
-傀儡戏演奏1：||在宪反击骰威力+1，有其他友方单位存活时免疫任何伤害和混乱伤害,提高首次施加"操纵"层数+0||    ||合约等级2||  ||与自由操纵冲突||  ||代码:Jaeheon_Thread1||
-傀儡戏演奏2：||在宪反击骰威力+2，有其他友方单位存活时免疫任何伤害和混乱伤害,提高首次施加"操纵"层数+1||    ||合约等级3||  ||与自由操纵冲突||  ||代码:Jaeheon_Thread2||
-傀儡戏演奏3：||在宪反击骰威力+3，有其他友方单位存活时免疫任何伤害和混乱伤害,提高首次施加"操纵"层数+2||    ||合约等级4||  ||与自由操纵冲突||  ||代码:Jaeheon_Thread3||
-自由操纵1：||在宪会在傀儡失去操纵后的第3幕重新获得其控制,"操纵"速度骰+1,在宪混乱抗性提升40%||    ||合约等级2||  ||与傀儡戏演奏冲突||  ||代码:Jaeheon_Puppet1||
-自由操纵2：||在宪会在傀儡失去操纵后的第2幕重新获得其控制,"操纵"速度骰+1,在宪混乱抗性提升60%||    ||合约等级3||  ||与傀儡戏演奏冲突||  ||代码:Jaeheon_Puppet2||
-自由操纵3：||在宪会在傀儡失去操纵后的第1幕重新获得其控制,"操纵"速度骰+1,在宪混乱抗性提升100%||    ||合约等级4||  ||与傀儡戏演奏冲突||  ||代码:Jaeheon_Puppet3||
-二号小提琴的愤慨：||使在宪的攻击方式更加激进|| ||合约等级4||	||代码:Jaeheon||
-菲利普:
-自焚烈焰1：||菲利普混乱抗性提升50%,"过热"只会使混乱抗性降至"脆弱",过热时造成的伤害+3||    ||合约等级2||  ||与静默无言冲突||  ||代码:Philip_Burn1||
-自焚烈焰2：||菲利普混乱抗性提升50%,"过热"只会使混乱抗性降至"普通",过热时造成的伤害+5||    ||合约等级3||  ||与静默无言冲突||  ||代码:Philip_Burn2||
-自焚烈焰3：||菲利普混乱抗性提升50%,"过热"只会使混乱抗性降至"耐性",过热时造成的伤害+7||    ||合约等级4||  ||与静默无言冲突||  ||代码:Philip_Burn3||
-静默无言1：||哭泣之子速度骰+1，攻击比较激进并且最大血量和混乱抗性提高20%||    ||合约等级2||  ||与自焚烈焰冲突||  ||代码:Philip_Silence1||
-静默无言2：||哭泣之子速度骰+1，攻击更加激进并且最大血量和混乱抗性提高40%||    ||合约等级3||  ||与自焚烈焰冲突||  ||代码:Philip_Silence2||
-静默无言3：||哭泣之子速度骰+1，攻击非常激进并且最大血量和混乱抗性提高60%||    ||合约等级4||  ||与自焚烈焰冲突||  ||代码:Philip_Silence3||
-大提琴的悲哀：||使菲利普的攻击方式更加激进|| ||合约等级4||	||代码:Philip||
-死协会2科：
-重振雄风1：||柳真首次舞台开启时恢复25%的血量，生死界限第一骰最小值提升1点||    ||合约等级2||  ||与二协中坚冲突||  ||代码:Yujin1||
-重振雄风2：||柳真首次舞台开启时恢复50%的血量，生死界限第一骰最小值提升2点||    ||合约等级3||  ||与二协中坚冲突||  ||代码:Yujin2||
-重振雄风3：||柳真首次舞台开启时恢复75%的血量，生死界限第一骰最小值提升3点||    ||合约等级4||  ||与二协中坚冲突||  ||代码:Yujin3||
-二协中坚1：||天满和瓦伦丁提升25%最大血量和最大混乱抗性,天满速度不会低于3,瓦伦丁使用单骰书页时拼点胜利会摧毁目标下一个骰子||   ||合约等级2||   ||与重振雄风冲突||  ||代码:ValTem1||
-二协中坚2：||天满和瓦伦丁提升50%最大血量和最大混乱抗性,天满速度不会低于5,瓦伦丁使用单骰书页时拼点胜利会摧毁目标下两个骰子||   ||合约等级3||   ||与重振雄风冲突||  ||代码:ValTem2||
-二协中坚3：||天满和瓦伦丁提升75%最大血量和最大混乱抗性,天满速度不会低于7,瓦伦丁使用单骰书页时拼点胜利会摧毁目标下三个骰子||   ||合约等级4||   ||与重振雄风冲突||  ||代码:ValTem3||
+All Guests：
+Sharpened Blade 1   Risk Level 1   Code: Damage1
+Increase all Guests' outgoing Damage by 25%
+Sharpened Blade 2   Risk Level 2   Code:Damage2
+Increase all Guests' outgoing Damage by 50%
+Sharpened Blade 3   Risk Level 3   Code:Damage3
+Increase all Guests' outgoing Damage by 75%
+Sharpened Blade 4   Risk Level 4   Code:Damage4
+Increase all Guests' outgoing Damage by 100%
+Concussing Strike 1   Risk Level 1   Code:BreakDamage1
+Increase all Guests' outgoing Stagger Damage by 25%
+Concussing Strike 2   Risk Level 2   Code:BreakDamage2
+Increase all Guests' outgoing Stagger Damage by 50%
+Concussing Strike 3   Risk Level 3   Code:BreakDamage3
+Increase all Guests' outgoing Stagger Damage by 75%
+Concussing Strike 4   Risk Level 4   Code:BreakDamage4
+Increase all Guests' outgoing Stagger Damage by 100%
+Surgery Enhancement 1   Risk Level 1   Code:Hp1
+Increase all Guests' Max HP by 25%
+Surgery Enhancement 2   Risk Level 2   Code:Hp2
+Increase all Guests' Max HP by 50%
+Surgery Enhancement 3   Risk Level 3   Code:Hp3
+Increase all Guests' Max HP by 75%
+Surgery Enhancement 4   Risk Level 4   Code:Hp4
+Increase all Guests' Max HP by 100%
+Experienced Combatant 1   Risk Level 1   Code:Bp1
+Increase all Guests' Max Stagger Resist by 25%
+Experienced Combatant 2   Risk Level 2   Code:Bp2
+Increase all Guests' Max Stagger Resist by 50%
+Experienced Combatant 3   Risk Level 3   Code:Bp3
+Increase all Guests' Max Stagger Resist by 75%
+Experienced Combatant 4   Risk Level 4   Code:Bp4
+Increase all Guests' Max Stagger Resist by 100%
+Unflappable    Risk Level 5   Code:NoBreak
+For all Guests, Becoming Staggered does not temporarily change the character's resistances.
+
+All Librarian：
+Poor Maintaince 1   Risk Level 1   Code:Damage_L1
+Reduce all Librarians' outgoing damage by 20%
+Poor Maintaince 2   Risk Level 2   Code:Damage_L2
+Reduce all Librarians' outgoing damage by 40%
+Poor Maintaince 3   Risk Level 3   Code:Damage_L3
+Reduce all Librarians' outgoing damage by 60%
+Absentminded 1   Risk Level 1   Code:BreakDamage_L1
+Reduce all Librarians' outgoing Stagger damage by 20%
+Absentminded 2   Risk Level 2   Code:BreakDamage_L2
+Reduce all Librarians' outgoing Stagger damage by 40%
+Absentminded 3   Risk Level 3   Code:BreakDamage_L3
+Reduce all Librarians' outgoing Stagger damage by 60%
+Frangible 1   Risk Level 1   Code:Hp_L1
+Reduce all Librarians' Max HP by 20%
+Frangible 2   Risk Level 2   Code:Hp_L2
+Reduce all Librarians' Max HP by 40%
+Frangible 3   Risk Level 3   Code:Hp_L3
+Reduce all Librarians' Max HP by 60%
+Panic attack 1   Risk Level 1   Code:Bp_L1
+Reduce all Librarians' Max Stagger Resist by 20%
+Panic attack 2   Risk Level 2   Code:Bp_L2
+Reduce all Librarians' Max Stagger Resist by 40%
+Panic attack 3   Risk Level 3   Code:Bp_L3
+Reduce all Librarians' Max Stagger Resist by 60%
+Engulfed by Darkness 1   Risk Level 3   Code:Darkness1
+At the start of any act, all Librarian have 3 Light
+Engulfed by Darkness 2   Risk Level 4   Code:Darkness2
+At the start of any act, all Librarian have 2 Light
+Engulfed by Darkness 3   Risk Level 5   Code:Darkness3
+At the start of any act, all Librarian have 1 Light
+Engulfed by Darkness 4   Risk Level 6   Code:Darkness4
+At the start of any act, all Librarian have 0 Light
+
+Shi Association Section 2：
+Past's Glory 1   Risk Level 2   Confict with The Backbone   Code:Yujin1
+At her first appearance, Yujin recover 25% of Max HP. Increase the Minimun value of first die of Boundry of Death by 1
+Past's Glory 2   Risk Level 3   Confict with The Backbone   Code:Yujin2
+At her first appearance, Yujin recover 50% of Max HP. Increase the Minimun value of first die of Boundry of Death by 2
+Past's Glory 3   Risk Level 4   Confict with The Backbone   Code:Yujin3
+At her first appearance, Yujin recover 75% of Max HP. Increase the Minimun value of first die of Boundry of Death by 3
+The Backbone 1   Risk Level 2   Confict with Past's Glory    Code:ValTem1
+Increase Max HP and Stagger Resist of Tenma and Valentin by 25%; Speed of Tenma won't be lower than 3;
+On win clash using a Combat Page with one non-Counter die, Valentin Destroy targets next 1 dices
+The Backbone 2   Risk Level 3   Confict with Past's Glory    Code:ValTem2
+Increase Max HP and Stagger Resist of Tenma and Valentin by 50%; Speed of Tenma won't be lower than 5;
+On win clash using a Combat Page with one non-Counter die, Valentin Destroy targets next 2 dices
+The Backbone 3   Risk Level 4   Confict with Past's Glory    Code:ValTem3
+Increase Max HP and Stagger Resist of Tenma and Valentin by 75%; Speed of Tenma won't be lower than 7;
+On win clash using a Combat Page with one non-Counter die, Valentin Destroy targets next 3 dices
+
+The Crying Children (Reverbration):
+Immolation 1   Risk Level 2   Conflict with Unspeaking   Code:Philip_Burn1
+Increase Philip's Max Stagger Resist by 50%; OverHeat will only change Stagger Resisteance to Weak; 
+Increase Outgoing damage by 3 when OverHeat
+Immolation 2   Risk Level 3   Conflict with Unspeaking   Code:Philip_Burn2
+Increase Philip's Max Stagger Resist by 50%; OverHeat will only change Stagger Resisteance to Normal; 
+Increase Outgoing damage by 5 when OverHeat
+Immolation 3   Risk Level 4   Conflict with Unspeaking   Code:Philip_Burn3
+Increase Philip's Max Stagger Resist by 50%; OverHeat will only change Stagger Resisteance to Endured; 
+Increase Outgoing damage by 7 when OverHeat
+Unspeaking 1   Risk Level 2   Conflict with Immolation     Code:Philip_Silence1
+Increase Unspeaking Childs' speed dice by 1; Attack pattern become more aggressive; 
+Increase Max HP and Max Stagger Resist by 20%
+Unspeaking 2   Risk Level 3   Conflict with Immolation     Code:Philip_Silence2
+Increase Unspeaking Childs' speed dice by 1; Attack pattern become much more aggressive; 
+Increase Max HP and Max Stagger Resist by 40%
+Unspeaking 3   Risk Level 4   Conflict with Immolation     Code:Philip_Silence3
+Increase Unspeaking Childs' speed dice by 1; Attack pattern become extremely much more aggressive; 
+Increase Max HP and Max Stagger Resist by 60%
+Weighty Cello    Risk Level 4   Code:Philip
+Philip's Attack Pattern becomes more aggressive.
+
+The Puppeteer：
+Puppet Performance 1   Risk Level 2   Conflict with Strings Dexterity   Code:Jaeheon_Thread1
+Boost Jae-heon's Counter dices' Power by 1; Immune to Damage and Stagger Damage as long as other alive ally exist; 
+Increase Puppet Strings stack by 0 when it's first applied to Puppets.
+Puppet Performance 2   Risk Level 3   Conflict with Strings Dexterity   Code:Jaeheon_Thread2
+Boost Jae-heon's Counter dices' Power by 2; Immune to Damage and Stagger Damage as long as other alive ally exist; 
+Increase Puppet Strings stack by 1 when it's first applied to Puppets.
+Puppet Performance 3   Risk Level 4   Conflict with Strings Dexterity   Code:Jaeheon_Thread3
+Boost Jae-heon's Counter dices' Power by 3; Immune to Damage and Stagger Damage as long as other alive ally exist; 
+Increase Puppet Strings stack by 2 when it's first applied to Puppets.
+Strings Dexterity 1   Risk Level 2   Conflict with Puppet Performance  Code:Jaeheon_Puppet1
+3 Scene after Puppets lose Puppet Strings, Jae-heon will apply new Puppet Strings to them;
+Increase Speed dice of Puppets with Puppet Strings by 1; Increase Jae-heon's Max Stagger Resist by 40%.
+Strings Dexterity 2   Risk Level 3   Conflict with Puppet Performance  Code:Jaeheon_Puppet2
+2 Scene after Puppets lose Puppet Strings, Jae-heon will apply new Puppet Strings to them;
+Increase Speed dice of Puppets with Puppet Strings by 1; Increase Jae-heon's Max Stagger Resist by 70%.
+Strings Dexterity 3   Risk Level 4   Conflict with Puppet Performance  Code:Jaeheon_Puppet3
+1 Scene after Puppets lose Puppet Strings, Jae-heon will apply new Puppet Strings to them;
+Increase Speed dice of Puppets with Puppet Strings by 1; Increase Jae-heon's Max Stagger Resist by 100%.
+Shrill Second Violin    Risk Level 4   Code:Jaeheon
+Jae-heon's Attack Pattern becomes more aggressive.
+
+The Blood-red Moon：
+Scorching Cross 1   Risk Level 2   Conflict with Feast  Code:Elena_Cross1
+Upon hit 3 times by The Vermilion Cross will gain 1 Scorched in the next Scene
+(Being Hit by The Vermilion Cross will reduce the stack by 1 and make her attack other random Librarian with damage boosed by 0%)
+Scorching Cross 2   Risk Level 3   Conflict with Feast  Code:Elena_Cross2
+Upon hit 3 times by The Vermilion Cross will gain 2 Scorched in the next Scene
+(Being Hit by The Vermilion Cross will reduce the stack by 1 and make her attack other random Librarian with damage boosed by 25%)
+Scorching Cross 3   Risk Level 4   Conflict with Feast  Code:Elena_Cross3
+Upon hit 3 times by The Vermilion Cross will gain 3 Scorched in the next Scene
+(Being Hit by The Vermilion Cross will reduce the stack by 1 and make her attack other random Librarian with damage boosed by 50%)
+Feast 1   Risk Level 2   Conflict with Scorching Cross  Code:Elena_Zombie1
+Elena will use Feast against Librarian with 20% Max HP or lower, turning them into Nameless Shell that will attack other Librarians;
+Increase Elena's Max HP by 20%.
+Feast 2   Risk Level 3   Conflict with Scorching Cross  Code:Elena_Zombie2
+Elena will use Feast against Librarian with 25% Max HP or lower, turning them into Nameless Shell that will attack other Librarians;
+Increase Elena's Max HP by 40%.
+Feast 3   Risk Level 4   Conflict with Scorching Cross  Code:Elena_Zombie3
+Elena will use Feast against Librarian with 30% Max HP or lower, turning them into Nameless Shell that will attack other Librarians;
+Increase Elena's Max HP by 60%.
+Introspective First Violin    Risk Level 4   Code:Elena
+The Vermilion Cross and Elena's Attack Pattern becomes more aggressive.
+
+Yesterday's Promise：
+Indifference 1   Risk Level 2   Conflict with Crashing Barrier  Code:Pluto_Shadow1
+Increase Shades' Max HP and Stagger Resist by 50%; Boost dice's Power against the Libarain copied from by 1.
+Indifference 2   Risk Level 3   Conflict with Crashing Barrier  Code:Pluto_Shadow2
+Increase Shades' Max HP and Stagger Resist by 65%; Boost dice's Power against the Libarain copied from by 2.
+Indifference 3   Risk Level 4   Conflict with Crashing Barrier  Code:Pluto_Shadow3
+Increase Shades' Max HP and Stagger Resist by 80%; Boost dice's Power against the Libarain copied from by 3.
+Crashing Barrier 1   Risk Level 2   Conflict with Indifference  Code:Pluto_Barrier1
+Librarian sent to Sealing Barrier take damage equal to 5% Max HP; Increase Pluto's Max HP by 100%; 
+Increase Max Stagger Resist Librarian sent to Sealing Barrier by 30%.
+Crashing Barrier 2   Risk Level 3   Conflict with Indifference  Code:Pluto_Barrier2
+Librarian sent to Sealing Barrier take damage equal to 10% Max HP; Increase Pluto's Max HP by 100%; 
+Increase Max Stagger Resist Librarian sent to Sealing Barrier by 40%.
+Crashing Barrier 3   Risk Level 4   Conflict with Indifference  Code:Pluto_Barrier3
+Librarian sent to Sealing Barrier take damage equal to 15% Max HP; Increase Pluto's Max HP by 100%; 
+Increase Max Stagger Resist Librarian sent to Sealing Barrier by 50%.
+Austere Pipe Organ    Risk Level 4   Code:Pluto
+Release a new Random Contract per 3 Scene.

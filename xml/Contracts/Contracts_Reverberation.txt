@@ -3,7 +3,8 @@
 	<Contract Type="Philip_Burn">
 		<DescList>
 			<Desc language="cn" name="自焚烈焰" desc="菲利普混乱抗性提升50%，过热只会使混乱抗性降至{0}，过热时造成的伤害+{1}" />
-			<Desc language="en" name="自焚烈焰" desc="菲利普混乱抗性提升50%，过热只会使混乱抗性降至{0}，过热时造成的伤害+{1}" />
+			<Desc language="en" name="Immolation" desc="Increase Philip's Max Stagger Resist by 50%;
+OverHeat will only change Stagger Resisteance to {0}; Increase Outgoing damage by {1} when OverHeat" />
 		</DescList>
 		<Faction>Enemy</Faction>
 		<Variation>3</Variation>
@@ -13,8 +14,9 @@
 	</Contract>
 	<Contract Type="Philip_Silence">
 		<DescList>
-			<Desc language="cn" name="静默无言" desc="哭泣之子速度骰+1，攻击更加激进并且最大血量和混乱抗性提高{0}%" />
-			<Desc language="en" name="静默无言" desc="哭泣之子速度骰+1，攻击更加激进并且最大血量和混乱抗性提高{0}%" />
+			<Desc language="cn" name="静默无言" desc="哭泣之子速度骰+1，攻击{0}激进并且最大血量和混乱抗性提高{1}%" />
+			<Desc language="en" name="Unspeaking" desc="Increase Unspeaking Childs' speed dice by 1;
+Attack pattern become {0} aggressive; Increase Max HP and Max Stagger Resist by {1}%" />
 		</DescList>
 		<Faction>Enemy</Faction>
 		<Variation>3</Variation>
@@ -26,7 +28,7 @@
 	<Contract Type="Philip">
 		<DescList>
 			<Desc language="cn" name="大提琴的悲哀" desc="使菲利普的攻击方式更加激进" />
-			<Desc language="en" name="大提琴的悲哀" desc="使菲利普的攻击方式更加激进" />
+			<Desc language="en" name="Weighty Cello" desc="Philip's Attack Pattern becomes more aggressive." />
 		</DescList>
 		<Faction>Enemy</Faction>
 		<BaseLevel>4</BaseLevel>
@@ -34,8 +36,9 @@
 	</Contract>
 	<Contract Type="Jaeheon_Thread">
 		<DescList>
-			<Desc language="cn" name="傀儡戏演奏" desc="在宪反击骰威力+{0}，有其他友方单位存活时免疫任何伤害和混乱伤害,提高首次施加操纵层数+{1}" />
-			<Desc language="en" name="傀儡戏演奏" desc="在宪反击骰威力+{0}，有其他友方单位存活时免疫任何伤害和混乱伤害,提高首次施加操纵层数+{1}" />
+			<Desc language="cn" name="傀儡之舞" desc="在宪反击骰威力+{0}，有其他友方单位存活时免疫任何伤害和混乱伤害,提高首次施加操纵层数+{1}" />
+			<Desc language="en" name="Puppet Performance" desc="Boost Jae-heon's Counter dices' Power by {0};
+Immune to Damage and Stagger Damage as long as other alive ally exist; Increase Puppet Strings stack by {1} when it's first applied to Puppets." />
 		</DescList>
 		<Faction>Enemy</Faction>
 		<Variation>3</Variation>
@@ -46,7 +49,8 @@
 	<Contract Type="Jaeheon_Puppet">
 		<DescList>
 			<Desc language="cn" name="自由操纵" desc="在宪会在傀儡失去操纵后的第{0}幕重新获得其控制,操纵速度骰+1,在宪混乱抗性提升{1}%" />
-			<Desc language="en" name="自由操纵" desc="在宪会在傀儡失去操纵后的第{0}幕重新获得其控制,操纵速度骰+1,在宪混乱抗性提升{1}%" />
+			<Desc language="en" name="Strings Dexterity" desc="{0} Scene after Puppets lose Puppet Strings, Jae-heon will apply new Puppet Strings to them;
+Increase Speed dice of Puppets with Puppet Strings by 1, Increase Jae-heon's Max Stagger Resist by {1}%." />
 		</DescList>
 		<Faction>Enemy</Faction>
 		<Variation>3</Variation>
@@ -58,10 +62,10 @@
 		<Enemy>1307041</Enemy>
 		<Enemy>1307051</Enemy>
 	</Contract>
-	<Contract Type="Jaeheon">
+	<Contract Type="Jaeheon">Second Violin
 		<DescList>
 			<Desc language="cn" name="第二小提琴的愤慨" desc="使在宪的攻击方式更加激进" />
-			<Desc language="en" name="第二小提琴的愤慨" desc="使在宪的攻击方式更加激进" />
+			<Desc language="en" name="Shrill Second Violin" desc="Jae-heon's Attack Pattern becomes more aggressive." />
 		</DescList>
 		<Faction>Enemy</Faction>
 		<BaseLevel>4</BaseLevel>
@@ -70,7 +74,8 @@
 	<Contract Type="Elena_Cross">
 		<DescList>
 			<Desc language="cn" name="烧灼十字" desc="被朱红十字攻击3次会下一幕内获得{0}层烧印(被朱红十字攻击会消耗一层并使其对其他司书额外攻击,此次伤害提升{1}%)" />
-			<Desc language="en" name="烧灼十字" desc="被朱红十字攻击3次会下一幕内获得{0}层烧印(被朱红十字攻击会消耗一层并使其对其他司书额外攻击,此次伤害提升{1}%)" />
+			<Desc language="en" name="Scorching Cross" desc="Upon hit 3 times by The Vermilion Cross will gain {0} Scorched in the next Scene
+	(Being Hit by The Vermilion Cross will reduce the stack by 1 and make her attack other random Librarian with damage boosed by {1}%)" />
 		</DescList>
 		<Faction>Enemy</Faction>
 		<Variation>3</Variation>
@@ -80,8 +85,9 @@
 	</Contract>
 	<Contract Type="Elena_Zombie">
 		<DescList>
-			<Desc language="cn" name="血管盛宴" desc="伊莲娜会将血量低于20/25/30%的司书转化为攻击其他友方单位的无名躯壳，一场接待最多转化{1}个无名躯壳" />
-			<Desc language="en" name="血管盛宴" desc="伊莲娜会将血量低于20/25/30%的司书转化为攻击其他友方单位的无名躯壳，一场接待最多转化{1}个无名躯壳" />
+			<Desc language="cn" name="血管盛宴" desc="伊莲娜会将血量低于{0}%的司书转化为攻击其他友方单位的无名躯壳，伊莲娜最大血量提升{1}%" />
+			<Desc language="en" name="Feast" desc="Elena will use Feast against Librarian with {0}% Max HP or lower, turning them into Nameless Shell that will attack other Librarians;
+Increase Elena's Max HP by {1}%." />
 		</DescList>
 		<Faction>Enemy</Faction>
 		<Variation>3</Variation>
@@ -93,7 +99,7 @@
 	<Contract Type="Elena">
 		<DescList>
 			<Desc language="cn" name="一号小提琴的典雅" desc="使伊莲娜和朱红十字的攻击方式更加激进" />
-			<Desc language="en" name="一号小提琴的典雅" desc="使伊莲娜和朱红十字的攻击方式更加激进" />
+			<Desc language="en" name="Introspective First Violin" desc="The Vermilion Cross and Elena's Attack Pattern becomes more aggressive." />
 		</DescList>
 		<Faction>Enemy</Faction>
 		<BaseLevel>4</BaseLevel>
@@ -102,8 +108,9 @@
 	</Contract>
 	<Contract Type="Pluto_Shadow">
 		<DescList>
-			<Desc language="cn" name="真假难分" desc="提高阴影{0}血量和混乱抗性,阴影攻击其复制司书骰子威力提升{1}点" />
-			<Desc language="en" name="真假难分" desc="提高阴影{0}血量和混乱抗性,阴影攻击其复制司书骰子威力提升{1}点" />
+			<Desc language="cn" name="真假难分" desc="提高阴影{0}%血量和混乱抗性,阴影攻击其复制司书骰子威力提升{1}点" />
+			<Desc language="en" name="Indifference" desc="Increase Shades' Max HP and Stagger Resist by {0}%;
+Boost dice's Power against the Libarain copied from by {1}." />
 		</DescList>
 		<Faction>Enemy</Faction>
 		<Variation>3</Variation>
@@ -114,8 +121,9 @@
 	</Contract>
 	<Contract Type="Pluto_Barrier">
 		<DescList>
-			<Desc language="cn" name="碾压结界" desc="被锁入封印结界的司书每3幕会承受{0}最大血量的伤害，提高100%普鲁托的血量和陷入封印结界司书{1}混乱抗性" />
-			<Desc language="en" name="碾压结界" desc="被锁入封印结界的司书每3幕会承受{0}最大血量的伤害，提高100%普鲁托的血量和陷入封印结界司书{1}混乱抗性" />
+			<Desc language="cn" name="碾压结界" desc="被锁入封印结界的司书每1幕会承受{0}%最大血量的伤害，提高100%普鲁托的血量和陷入封印结界司书{1}%混乱抗性" />
+			<Desc language="en" name="Crashing Barrier" desc="Librarian sent to Sealing Barrier take damage equal to {0}% Max HP;
+Increase Pluto's Max HP by 100%; Increase Max Stagger Resist Librarian sent to Sealing Barrier by {1}%." />
 		</DescList>
 		<Faction>Enemy</Faction>
 		<Variation>3</Variation>
@@ -126,7 +134,7 @@
 	<Contract Type="Pluto">
 		<DescList>
 			<Desc language="cn" name="管风琴的洪大" desc="每3幕普鲁托会发布一个新的随机合同" />
-			<Desc language="en" name="管风琴的洪大" desc="每3幕普鲁托会发布一个新的随机合同" />
+			<Desc language="en" name="Austere Pipe Organ" desc="Release a new Random Contract per 3 Scene." />
 		</DescList>
 		<Faction>Enemy</Faction>
 		<BaseLevel>4</BaseLevel>
