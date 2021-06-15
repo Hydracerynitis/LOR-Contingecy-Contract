@@ -54,6 +54,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Source Code\ContractList_Stage.cs" />
+    <Compile Include="Source Code\ContractModification.cs" />
     <Compile Include="Source Code\ContractList_Elena.cs" />
     <Compile Include="Source Code\ContractList_Pluto.cs" />
     <Compile Include="Source Code\ContractList_Jaeheon.cs" />

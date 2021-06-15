@@ -10,47 +10,21 @@ namespace Contingecy_Contract
 {
     public class Debug
     {
-        public static int LoadNum;
-        public static void Log(string message)
-        {
-            PathDebug("/Debug", PathType.Directory);
-            File.AppendAllText(Harmony_Patch.ModPath + "/Debug/Log.txt", message + "\n");
-        }
         public static void ModPatchDebug()
         {
             PathDebug("/Debug", PathType.Directory);
-            File.WriteAllText(Harmony_Patch.ModPath + "/Debug/Log.txt", "ModPath: "+Harmony_Patch.ModPath+"\n");
+            File.WriteAllText(Harmony_Patch.ModPath + "/Debug/Log.txt", "ModPath: " + Harmony_Patch.ModPath + "\n");
+        }
+        public static void Log(string message, params string[] Params)
+        {
+            PathDebug("/Debug", PathType.Directory);
+            File.AppendAllText(Harmony_Patch.ModPath + "/Debug/Log.txt", string.Format(message,Params) + "\n");
         }
         public static void XmlFileDebug()
         {
             PathDebug("/Debug", PathType.Directory);
             foreach (FileInfo file in new DirectoryInfo(Harmony_Patch.ModPath + "/Contracts").GetFiles())
                 File.AppendAllText(Harmony_Patch.ModPath + "/Debug/Log.txt","XmlFile: " +file.Name+" Found\n");
-        }
-        public static void XMlDebug(string ID)
-        {
-            PathDebug("/Debug", PathType.Directory);
-            File.AppendAllText(Harmony_Patch.ModPath + "/Debug/Log.txt", "XML: " + ID + " Added\n");
-        }
-        public static void HPDebug(string name)
-        {
-            PathDebug("/Debug", PathType.Directory);
-            File.AppendAllText(Harmony_Patch.ModPath + "/Debug/Log.txt", "Patch: " + name + " Succeed\n");
-        }
-        public static void LoadDebug()
-        {
-            PathDebug("/Debug", PathType.Directory);
-            LoadNum += 1;
-            File.AppendAllText(Harmony_Patch.ModPath + "/Debug/Log.txt", "ContractLoad"+LoadNum.ToString()+" Start\n");
-            foreach(Contract contract in Singleton<ContractLoader>.Instance.GetList())
-            {
-                File.AppendAllText(Harmony_Patch.ModPath + "/Debug/Log.txt", "Contract " + contract.Type + " Added\n");
-            }
-        }
-        public static void InstanceDebug(params string[] args)
-        {
-            PathDebug("/Debug", PathType.Directory);
-            File.AppendAllText(Harmony_Patch.ModPath + "/Debug/Log.txt", string.Format("Instance of {0} {1} for {2}\n",args));
         }
         public static void Error(string type,Exception ex)
         {

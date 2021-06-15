@@ -24,7 +24,7 @@ namespace Contingecy_Contract
                     XmlList[contract.Type] = contract;
                 else
                     XmlList.Add(contract.Type, contract);
-                Debug.XMlDebug(contract.Type);
+                Debug.Log("XML: {0} Added",contract.Type);
             }
         }
         public Contract GetContract(string Type)
@@ -46,18 +46,23 @@ namespace Contingecy_Contract
         [XmlArray("DescList")]
         [XmlArrayItem("Desc")]
         public List<ContracDesc> desc;
+        [XmlElement("ContractType")]
+        public ContractXmlType contractType = ContractXmlType.Passive;
         [XmlElement("Faction")]
         public Faction Faction;
         [XmlElement("Variation")]
         public int Variation = 0;
         [XmlElement("BaseLevel")]
         public int BaseLevel = 0;
+        [XmlElement("Step")]
+        public int Step = 1;
         [XmlElement("Enemy")]
         public List<int> Enemy = new List<int>();
         [XmlElement("Conflict")]
         public List<string> Conflict=new List<string>();
         [XmlIgnore]
         public int level = -1;
+        public StageModifier modifier;
         public ContracDesc GetDesc(string language)
         {
             return this.desc.Find((Predicate<ContracDesc>)(x => x.language == language));
@@ -71,5 +76,10 @@ namespace Contingecy_Contract
         public string name;
         [XmlAttribute("desc")]
         public string desc;
+    }
+    public enum ContractXmlType
+    {
+        Passive,
+        Stage
     }
 }

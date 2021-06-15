@@ -68,6 +68,23 @@ At the start of any act, all Librarian have 1 Light
 Engulfed by Darkness 4   Risk Level 6   Code:Darkness4
 At the start of any act, all Librarian have 0 Light
 
+Recpetion：(Contracts in this categories require the original recption reach their limitation to be actived)
+REINFORCE!      Risk Level 4    Code: Duplicate
+Add one extra wave consist of copy of random wave
+Limitation: None
+Last Stand      Risk Level 4    Code: Last
+Only one floor of librarian can be involed in reception"
+Limitation: The original reception didn't limit only one floor of Libarain can be involed.
+Ambush 1         Risk Level 4    Code:LowFloor1 
+Random 5 Floor of library is unavailabe for this reception
+Limitation: At most 4 floors is unavailabe in the original recption.
+Ambush 2         Risk Level 6    Code:LowFloor2 
+Random 9 Floor of library is unavailabe for this reception
+Limitation: At most 8 floors is unavailabe in the original recption.
+Oversleep       Risk Level 4    Code: LowPeople
+Reduce number of Maximun Available Librarians by 1
+Limitation: There is a wave that allows at least 2 librarians into battle in original reception, 
+
 Shi Association Section 2：
 Past's Glory 1   Risk Level 2   Confict with The Backbone   Code:Yujin1
 At her first appearance, Yujin recover 25% of Max HP. Increase the Minimun value of first die of Boundry of Death by 1

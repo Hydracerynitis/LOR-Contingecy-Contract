@@ -24,11 +24,11 @@ namespace ContractReward
             }
             foreach (PassiveXmlInfo Info in list)
             {
-                Contingecy_Contract.Debug.Log("开始搜索被动");
+                //Contingecy_Contract.Debug.Log("开始搜索被动");
                 System.Type type = System.Type.GetType("PassiveAbility_" + Info.id.ToString()+ ", Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null");
                 if (!(type == (System.Type)null))
                 {
-                    Contingecy_Contract.Debug.Log("找到被动");
+                    //Contingecy_Contract.Debug.Log("找到被动");
                     if (Activator.CreateInstance(type) is PassiveAbilityBase instance)
                     {
                         instance.name = Singleton<PassiveDescXmlList>.Instance.GetName(Info.id);
@@ -36,7 +36,7 @@ namespace ContractReward
                         instance.rare = Info.rare;
                         this.owner.passiveDetail.AddPassive(instance);
                     }
-                    Contingecy_Contract.Debug.Log("获取被动");
+                    //Contingecy_Contract.Debug.Log("获取被动");
                 }
             }            
         }

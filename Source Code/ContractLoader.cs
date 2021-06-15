@@ -12,10 +12,12 @@ namespace Contingecy_Contract
     public class ContractLoader: Singleton<ContractLoader>
     {
         public bool bInit;
-        private List<Contract> ChosenList;
+        private List<Contract> PassiveList;
+        private List<Contract> StageList;
         public void Init()
         {
-            ChosenList=new List<Contract>();
+            PassiveList = new List<Contract>();
+            StageList = new List<Contract>();
             Debug.PathDebug("/ContractLoader.txt", PathType.File);
             Debug.Log("Start Loading Contract");
             foreach (string readAllLine in File.ReadAllLines(Harmony_Patch.ModPath + "/ContractLoader.txt"))
@@ -32,49 +34,94 @@ namespace Contingecy_Contract
                 Contract New = Singleton<ContractXmlList>.Instance.GetContract(str);
                 if (New == null)
                 {
-                    Debug.Log(string.Format("{0} is not found", str));
+                    Debug.Log("{0} is not found",str);
                     continue;
                 }
-                if (ChosenList.Find((Predicate<Contract>)(x => x.Conflict.Contains(New.Type))) != null)
+                if(New.Variation>0 && level == 0)
                 {
-                    Debug.Log("Conflict contract exist");
+                    Debug.Log("{0}'s level can't be 0",str);
                     continue;
                 }
                 if (level > New.Variation)
                 {
-                    Debug.Log(string.Format("{0}'s {1} excceed {0}'s maximun level", str, level));
+                    Debug.Log("{0}'s level excceed {0}'s maximun level", str);
                     continue;
                 }
-                New.level = New.BaseLevel + level;
-                Contract Old = ChosenList.Find((Predicate<Contract>)(x => x.Type == New.Type));
-                if (Old != null)
+                New.level = New.BaseLevel + level*New.Step;
+                string name = New.Type;
+                if (New.Variation > 0)
+                    name=string.Format("{0} {1}",name,level);
+                if (New.contractType == ContractXmlType.Passive)
                 {
-                    if (Old.level > New.level)
+                    if (PassiveList.Find(x => x.Conflict.Contains(New.Type)) != null)
                     {
-                        Debug.Log(string.Format("Larger level of {0} exist", str));
+                        Debug.Log("Conflict contract exist");
                         continue;
                     }
-                    else
+                    New.level = New.BaseLevel + level;
+                    Contract Old = PassiveList.Find(x => x.Type == New.Type);
+                    if (Old != null)
                     {
-                        ChosenList.Remove(Old);
+                        if (Old.level > New.level)
+                        {
+                            Debug.Log("Larger level of {0} exist", str);
+                            continue;
+                        }
+                        else
+                        {
+                            PassiveList.Remove(Old);
+                        }
                     }
+                    PassiveList.Add(New);
+                    Debug.Log("Contract {0} Added to Passive", name);
                 }
-                ChosenList.Add(New);
-                Debug.Log(string.Format("Contract {0} Added", New.Type + level));
+                else if (New.contractType == ContractXmlType.Stage)
+                {
+                    if (StageList.Find(x => x.Conflict.Contains(New.Type)) != null)
+                    {
+                        Debug.Log("Conflict contract exist");
+                        continue;
+                    }
+                    Contract Old = StageList.Find(x => x.Type == New.Type);
+                    if (Old != null)
+                    {
+                        if (Old.level > New.level)
+                        {
+                            Debug.Log("Larger level of {0} exist", str);
+                            continue;
+                        }
+                        else
+                        {
+                            StageList.Remove(Old);
+                        }
+                    }
+                    System.Type type = System.Type.GetType("Contingecy_Contract.StageModifier_" + New.Type);
+                    if (type == (System.Type)null)
+                    {
+                        Debug.Log(type.Name+ " is not found");
+                        continue;
+                    }
+                    Debug.Log(type.Name+ " is found");
+                    New.modifier = (StageModifier)Activator.CreateInstance(type, new object[] { New.level });
+                    StageList.Add(New);
+                    Debug.Log("Contract {0} Added to Stage", name);
+                }
+
             }
             Debug.Log("End Loading Contract");
         }
         public int GetLevel(int id)
         {
             int i = 0;
-            if (ChosenList.Count > 0)
+            StageClassInfo info = Singleton<StageClassInfoList>.Instance.GetData(id);
+            if (PassiveList.Count > 0)
             {
-                foreach (Contract contract in ChosenList)
+                foreach (Contract contract in PassiveList)
                 {
                     if (contract.Enemy.Count>0)
                     {
                         bool HasEnemy = false;
-                        foreach(StageWaveInfo wave in Singleton<StageClassInfoList>.Instance.GetData(id).waveList)
+                        foreach(StageWaveInfo wave in info.waveList)
                         {
                             if(wave.enemyUnitIdList.Exists((Predicate<int>)(x => contract.Enemy.Contains(x))))
                             {
@@ -89,12 +136,31 @@ namespace Contingecy_Contract
                     i += contract.level;
                 }
             }
+            if (StageList.Count > 0)
+            {
+                foreach(Contract contract in StageList)
+                {
+                    if (contract.modifier == null)
+                    {
+                        Debug.Log("{0} does load modifier",contract.Type);
+                        continue;
+                    }
+                    if (contract.modifier.IsValid(info))
+                        i += contract.level;
+                }
+            }
             return i;
         }      
-        public List<Contract> GetList()
+        public List<Contract> GetPassiveList()
         {
             List<Contract> list = new List<Contract>();
-            list.AddRange(ChosenList);
+            list.AddRange(PassiveList);
+            return list;
+        }
+        public List<Contract> GetStageList()
+        {
+            List<Contract> list = new List<Contract>();
+            list.AddRange(StageList);
             return list;
         }
     }

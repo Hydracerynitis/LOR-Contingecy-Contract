@@ -15,28 +15,29 @@ namespace Contingecy_Contract
             Inition.Add(Model);
             List<ContingecyContract> Contracts = new List<ContingecyContract>();
             List<ContingecyContract> BuffContracts = new List<ContingecyContract>();
-            foreach (Contract contract in Singleton<ContractLoader>.Instance.GetList())
+            List<ContingecyContract> StageContracts = new List<ContingecyContract>();
+            foreach (Contract contract in Singleton<ContractLoader>.Instance.GetPassiveList())
             {
                 if (contract.Faction != Model.faction)
                 {
-                    Debug.Log(string.Format("{0}'s faction doesn't match {1}'s",contract.Type, Model.UnitData.unitData.name));
+                    Debug.Log("{0}'s faction doesn't match {1}'s", contract.Type, Model.UnitData.unitData.name);
                     continue;
                 }
                 if (contract.Enemy.Count > 0 && !contract.Enemy.Contains(Model.UnitData.unitData.EnemyUnitId))
                 {
-                    Debug.Log(string.Format("{0} isn't for {1}", contract.Type, Model.UnitData.unitData.EnemyUnitId));
+                    Debug.Log("{0} isn't for {1}", contract.Type, Model.UnitData.unitData.EnemyUnitId.ToString());
                     continue;
                 }
                 System.Type type = System.Type.GetType("Contingecy_Contract.ContingecyContract_" + contract.Type);
                 if (type == (System.Type)null)
                 {
-                    Debug.InstanceDebug(type.Name, " is not found", Model.UnitData.unitData.name);
+                    Debug.Log("Instance of {0} is not found for {1}", type.Name, Model.UnitData.unitData.name);
                     continue;
                 }
-                Debug.InstanceDebug(type.Name, " is found", Model.UnitData.unitData.name);
+                Debug.Log("Instance of {0} is found for {1}", type.Name, Model.UnitData.unitData.name);
                 if (Activator.CreateInstance(type, new object[] { contract.level }) is ContingecyContract instance)
                 {
-                    Debug.InstanceDebug(type.Name, " is created",Model.UnitData.unitData.name);
+                    Debug.Log("Instance of {0}  is created for {1}", type.Name, Model.UnitData.unitData.name);
                     instance.Init(Model);
                     string level = string.Empty;
                     if (contract.Variation > 0)
@@ -52,18 +53,60 @@ namespace Contingecy_Contract
                     if (instance.Type == ContractType.Buff || instance.Type == ContractType.Special)
                     {
                         BuffContracts.Add(instance);
-                        Debug.InstanceDebug(type.Name, " is added to Buff List",Model.UnitData.unitData.name);
+                        Debug.Log("Instance of {0} is added to Buff List for {1}", type.Name, Model.UnitData.unitData.name);
                     }
                     else
                     {
                         Contracts.Add(instance);
-                        Debug.InstanceDebug(type.Name, " is added to Passive List", Model.UnitData.unitData.name);
+                        Debug.Log("Instance of {0} is added to Passive List for {1}", type.Name, Model.UnitData.unitData.name);
                     }
+                }
+            }
+            foreach(Contract contract in Singleton<ContractLoader>.Instance.GetStageList())
+            {
+                if (contract.Faction != Model.faction)
+                {
+                    Debug.Log("{0}'s faction doesn't match {1}'s", contract.Type, Model.UnitData.unitData.name);
+                    continue;
+                }
+                if (contract.Enemy.Count > 0 && !contract.Enemy.Contains(Model.UnitData.unitData.EnemyUnitId))
+                {
+                    Debug.Log("{0} isn't for {1}", contract.Type, Model.UnitData.unitData.EnemyUnitId.ToString());
+                    continue;
+                }
+                StageClassInfo original = Singleton<StageClassInfoList>.Instance.GetData(Singleton<StageController>.Instance.GetStageModel().ClassInfo.id);
+                if (!contract.modifier.IsValid(original))
+                {
+                    Debug.Log("{0} doesn't match {1}'s requirement",Singleton<StageNameXmlList>.Instance.GetName(original.id), contract.Type);
+                    continue;
+                }                  
+                System.Type type = System.Type.GetType("Contingecy_Contract.ContingecyContract_" + contract.Type);
+                if (type == (System.Type)null)
+                {
+                    Debug.Log("Instance of {0} is not found for {1}", type.Name, Model.UnitData.unitData.name);
+                    continue;
+                }
+                Debug.Log("Instance of {0} is found for {1}", type.Name, Model.UnitData.unitData.name);
+                if (Activator.CreateInstance(type, new object[] { contract.level }) is ContingecyContract stage)
+                {
+                    string level = string.Empty;
+                    if (contract.Variation > 0)
+                        level = (contract.level - contract.BaseLevel).ToString();
+                    stage.name = Singleton<PassiveDescXmlList>.Instance.GetName(20210302) + contract.GetDesc(TextDataModel.CurrentLanguage).name + " " + level;
+                    stage.desc = string.Format(contract.GetDesc(TextDataModel.CurrentLanguage).desc, stage.GetFormatParam);
+                    if (contract.level <= 2)
+                        stage.rare = Rarity.Uncommon;
+                    if (contract.level == 3)
+                        stage.rare = Rarity.Rare;
+                    if (contract.level >= 4)
+                        stage.rare = Rarity.Unique;
+                    StageContracts.Add(stage);
                 }
             }
             List<PassiveAbilityBase> passiveList = Model.passiveDetail.PassiveList;
             passiveList.AddRange(Contracts);
             passiveList.AddRange(BuffContracts);
+            passiveList.AddRange(StageContracts);
             typeof(BattleUnitPassiveDetail).GetField("_passiveList", AccessTools.all).SetValue((object)Model.passiveDetail, (object)passiveList);
             foreach (PassiveAbilityBase contract in Contracts)
             {

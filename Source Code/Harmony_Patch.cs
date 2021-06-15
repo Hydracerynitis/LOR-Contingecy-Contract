@@ -25,9 +25,8 @@ namespace Contingecy_Contract
         {
             Harmony harmony = new Harmony("Hydracerynitis.ContingecyContract");
             ModPath = Path.GetDirectoryName(Uri.UnescapeDataString(new UriBuilder(Assembly.GetExecutingAssembly().CodeBase).Path));
-            Debug.LoadNum = 0;
             Debug.ModPatchDebug();
-            Harmony_Patch.LoadContract();
+            LoadContract();
             Singleton<ContractLoader>.Instance.bInit=false;
             CombaltData = new Dictionary<UnitBattleDataModel, int>();
             ContractAttribution.Inition = new List<BattleUnitModel>();
@@ -38,7 +37,7 @@ namespace Contingecy_Contract
             try
             {
                 harmony.Patch(Method1, null, new HarmonyMethod(Patch1), null, null);
-                Debug.HPDebug(Patch1.Name);
+                Debug.Log("Patch: {0} succeed",Patch1.Name);
             }
             catch(Exception ex)
             {
@@ -49,7 +48,7 @@ namespace Contingecy_Contract
             try
             {
                 harmony.Patch(Method2, new HarmonyMethod(Patch2),null , null, null);
-                Debug.HPDebug(Patch2.Name);
+                Debug.Log("Patch: {0} succeed", Patch2.Name);
             }
             catch (Exception ex)
             {
@@ -59,8 +58,8 @@ namespace Contingecy_Contract
             MethodInfo Patch3 = typeof(Harmony_Patch).GetMethod("StageController_InitStageByInvitation");
             try
             {
-                harmony.Patch(Method3,null , new HarmonyMethod(Patch3), null, null);
-                Debug.HPDebug(Patch3.Name);
+                harmony.Patch(Method3, new HarmonyMethod(Patch3),null , null, null);
+                Debug.Log("Patch: {0} succeed", Patch3.Name);
             }
             catch (Exception ex)
             {
@@ -70,8 +69,8 @@ namespace Contingecy_Contract
             MethodInfo Patch4 = typeof(Harmony_Patch).GetMethod("StageController_InitStageByEndContentsStage");
             try
             {
-                harmony.Patch(Method4, null, new HarmonyMethod(Patch4), null, null);
-                Debug.HPDebug(Patch4.Name);
+                harmony.Patch(Method4, new HarmonyMethod(Patch4), null, null, null);
+                Debug.Log("Patch: {0} succeed", Patch4.Name);
             }
             catch (Exception ex)
             {
@@ -82,7 +81,7 @@ namespace Contingecy_Contract
             try
             {
                 harmony.Patch(Method5, new HarmonyMethod(Patch5), null, null, null);
-                Debug.HPDebug(Patch5.Name);
+                Debug.Log("Patch: {0} succeed", Patch5.Name);
             }
             catch (Exception ex)
             {
@@ -93,7 +92,7 @@ namespace Contingecy_Contract
             try
             {
                 harmony.Patch(Method6, null, new HarmonyMethod(Patch6), null, null);
-                Debug.HPDebug(Patch6.Name);
+                Debug.Log("Patch: {0} succeed", Patch6.Name);
             }
             catch (Exception ex)
             {
@@ -104,7 +103,7 @@ namespace Contingecy_Contract
             try
             {
                 harmony.Patch(Method7, null, new HarmonyMethod(Patch7), null, null);
-                Debug.HPDebug(Patch7.Name);
+                Debug.Log("Patch: {0} succeed", Patch7.Name);
             }
             catch (Exception ex)
             {
@@ -115,7 +114,7 @@ namespace Contingecy_Contract
             try
             {
                 harmony.Patch(Method8, new HarmonyMethod(Patch8),null, null, null);
-                Debug.HPDebug(Patch8.Name);
+                Debug.Log("Patch: {0} succeed", Patch8.Name);
             }
             catch (Exception ex)
             {
@@ -126,7 +125,7 @@ namespace Contingecy_Contract
             try
             {
                 harmony.Patch(Method9, new HarmonyMethod(Patch9), null, null, null);
-                Debug.HPDebug(Patch9.Name);
+                Debug.Log("Patch: {0} succeed", Patch9.Name);
             }
             catch (Exception ex)
             {
@@ -137,7 +136,7 @@ namespace Contingecy_Contract
             try
             {
                 harmony.Patch(Method10, null, new HarmonyMethod(Patch10), null, null);
-                Debug.HPDebug(Patch10.Name);
+                Debug.Log("Patch: {0} succeed", Patch10.Name);
             }
             catch (Exception ex)
             {
@@ -148,7 +147,7 @@ namespace Contingecy_Contract
             try
             {
                 harmony.Patch(Method11, new HarmonyMethod(Patch11), null, null, null);
-                Debug.HPDebug(Patch11.Name);
+                Debug.Log("Patch: {0} succeed", Patch11.Name);
             }
             catch (Exception ex)
             {
@@ -159,11 +158,22 @@ namespace Contingecy_Contract
             try
             {
                 harmony.Patch(Method12, null , new HarmonyMethod(Patch12), null, null);
-                Debug.HPDebug(Patch12.Name);
+                Debug.Log("Patch: {0} succeed", Patch12.Name);
             }
             catch (Exception ex)
             {
                 Debug.Error("HP_" + Patch12.Name, ex);
+            }
+            MethodInfo Method13 = typeof(StageController).GetMethod("InitCommon", AccessTools.all);
+            MethodInfo Patch13 = typeof(Harmony_Patch).GetMethod("StageController_InitCommon");
+            try
+            {
+                harmony.Patch(Method13, new HarmonyMethod(Patch13),null , null, null);
+                Debug.Log("Patch: {0} succeed", Patch13.Name);
+            }
+            catch (Exception ex)
+            {
+                Debug.Error("HP_" + Patch13.Name, ex);
             }
         }
         public static void StageNameXmlList_GetName(ref string __result,int id)
@@ -206,6 +216,13 @@ namespace Contingecy_Contract
         {
             if (!PassiveAbility_1890003_init)
                 PassiveAbility_1890003_InitList();
+        }
+        public static void StageController_InitCommon(ref StageClassInfo stage)
+        {
+            if (stage.stageType==StageType.Creature || Duel)
+                return;
+            stage = CopyXml(stage);
+            ContractModification.Init(stage);
         }
         public static bool StageController_EndBattlePhase()
         {
@@ -337,6 +354,83 @@ namespace Contingecy_Contract
                     }
                 }
             }
+        }
+        public static StageClassInfo CopyXml(StageClassInfo info)
+        {
+            StageClassInfo output = new StageClassInfo();
+            output.id = info.id;
+            output.waveList = new List<StageWaveInfo>();
+            foreach (StageWaveInfo wave in info.waveList)
+                output.waveList.Add(CopyXml(wave));
+            output.stageType = info.stageType;
+            output.mapInfo = new List<string>();
+            output.mapInfo.AddRange(info.mapInfo);
+            output.floorNum = info.floorNum;
+            output.chapter = info.chapter;
+            output.invitationInfo = CopyXml(info.invitationInfo);
+            output.extraCondition = CopyXml(info.extraCondition);
+            output.storyList = new List<StageStoryInfo>();
+            foreach (StageStoryInfo story in info.storyList)
+                output.storyList.Add(CopyXml(story));
+            output.isChapterLast = info.isChapterLast;
+            output._storyType = info._storyType;
+            output.isStageFixedNormal = info.isStageFixedNormal;
+            output.floorOnlyList = new List<SephirahType>();
+            output.floorOnlyList.AddRange(info.floorOnlyList);
+            output.exceptFloorList = new List<SephirahType>();    
+            output.exceptFloorList.AddRange(info.exceptFloorList);
+            output.rewardList = new List<BookDropItemInfo>();
+            foreach (BookDropItemInfo reward in info.rewardList)
+                output.rewardList.Add(CopyXml(reward));
+            return output;
+        }
+        public static StageWaveInfo CopyXml(StageWaveInfo info)
+        {
+            StageWaveInfo output = new StageWaveInfo();
+            output.enemyUnitIdList = new List<int>();
+            output.enemyUnitIdList.AddRange(info.enemyUnitIdList);
+            output.formationId = info.formationId;
+            output.formationType = info.formationType;
+            output.availableNumber = info.availableNumber;
+            output.aggroScript = info.aggroScript;
+            output.managerScript = info.managerScript;
+            return output;
+        }
+        public static StageInvitationInfo CopyXml(StageInvitationInfo info)
+        {
+            StageInvitationInfo output = new StageInvitationInfo();
+            output.combine = info.combine;
+            output.needsBooks = new List<int>();
+            output.needsBooks.AddRange(info.needsBooks);
+            output.bookNum = info.bookNum;
+            output.bookValue = info.bookValue;
+            return output;
+        }
+        public static StageExtraCondition CopyXml(StageExtraCondition info)
+        {
+            StageExtraCondition output = new StageExtraCondition();
+            output.needClearStageList = new List<int>();
+            output.needClearStageList.AddRange(info.needClearStageList);
+            output.needLevel = info.needLevel;
+            return output;
+        }
+        public static StageStoryInfo CopyXml(StageStoryInfo info)
+        {
+            StageStoryInfo output = new StageStoryInfo();
+            output.cond = info.cond;
+            output.story = info.story;
+            output.valid = info.valid;
+            output.chapter = info.chapter;
+            output.group = info.group;
+            output.episode = info.episode;
+            return output;
+        }
+        public static BookDropItemInfo CopyXml(BookDropItemInfo info)
+        {
+            BookDropItemInfo output = new BookDropItemInfo();
+            output.id = info.id;
+            output.itemType = info.itemType;
+            return output;
         }
         public static void PassiveAbility_1890003_InitList()
         {
