@@ -63,6 +63,31 @@
 		<BattleCardDesc ID="18100015">
 			<LocalizedName>Scorching Desperation</LocalizedName>
 		</BattleCardDesc>
+		<!--艾琳-->
+		<BattleCardDesc ID="18200001">
+			<LocalizedName>Thought Gear: Accelerate</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18200002">
+			<LocalizedName>Thought Gear: Preach</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18200003">
+			<LocalizedName>Thought Gear: Propagate</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18200004">
+			<LocalizedName>Thought Gear: Brainwash</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18200005">
+			<LocalizedName>Thought Gear: Prediction</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18200006">
+			<LocalizedName>Meat Gear: Enhance</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18200007">
+			<LocalizedName>Meat Gear: Repair</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18200008">
+			<LocalizedName>Meat Gear: Spin</LocalizedName>
+		</BattleCardDesc>
 		<!--在宪-->
 		<BattleCardDesc ID="18700001">
 			<LocalizedName>Puppetry</LocalizedName>

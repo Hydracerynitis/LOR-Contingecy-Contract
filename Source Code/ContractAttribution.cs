@@ -126,12 +126,35 @@ namespace Contingecy_Contract
                 {
                     Model.SetHp(Harmony_Patch.CombaltData[Model.UnitData]);
                     Model.breakDetail.breakGauge = Model.breakDetail.GetDefaultBreakGauge();
+                    CheckPhaseCondition(Model);
                 }
                 else
                 {
                     Model.SetHp((int)Model.passiveDetail.GetStartHp((float)Model.MaxHp));
                     Model.breakDetail.breakGauge = Model.breakDetail.GetDefaultBreakGauge();
+                    CheckPhaseCondition(Model);
                 }
+            }
+        }
+        public static void CheckPhaseCondition(BattleUnitModel unit)
+        {
+            PassiveAbility_250022 Red = unit.passiveDetail.PassiveList.Find(x => x is PassiveAbility_250022) as PassiveAbility_250022;
+            if (Red != null)
+            {
+                typeof(PassiveAbility_250022).GetField("_egoCondition",AccessTools.all).SetValue(Red, (int)(0.5 * unit.MaxHp));
+            }
+            PassiveAbility_250227 Purple = unit.passiveDetail.PassiveList.Find(x => x is PassiveAbility_250227) as PassiveAbility_250227;
+            if (Purple != null)
+            {
+                typeof(PassiveAbility_250227).GetField("_teleportCondition", AccessTools.all).SetValue(Purple, (int)(0.5 * unit.MaxHp));
+            }
+            try
+            {
+                //给别的mod不上百分比锁血被动适配
+            }
+            catch
+            {
+
             }
         }
     }

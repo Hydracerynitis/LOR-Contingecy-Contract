@@ -10,7 +10,7 @@
     </Wave>
     <FloorNum>10</FloorNum>
     <Chapter>7</Chapter>
-    <StoryType>ThePerfectBlueReverberation</StoryType>
+    <StoryType>ContingencyReward</StoryType>
   </Stage>
 </StageXmlRoot> 
 

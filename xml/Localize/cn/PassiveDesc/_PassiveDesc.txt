@@ -43,6 +43,30 @@
 被击中时对攻击方施加2层“烧伤”
 自身攻击抗性下降</Desc>
 	</PassiveDesc>
+	<!--艾琳-->
+	<PassiveDesc ID="1820001">
+		<Name>血肉齿轮-新生</Name> 
+		<Desc>舞台开启时，召唤并指挥2个齿轮教徒。 齿轮教徒拥有独立的牌库和属性
+当一个齿轮教徒死亡时，承受等同于15%最大混乱抗性的混乱伤害。
+齿轮教徒死亡2幕后召唤一个新的齿轮教徒。 </Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1820002">
+		<Name>思想齿轮-预知</Name> 
+		<Desc>被单方面攻击时以1颗闪避骰子(5~10)迎击(每一幕至多触发1次) </Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1820003">
+		<Name>血肉齿轮-死亡</Name> 
+		<Desc>若“齿轮信徒”死亡则下一幕中使用特殊书页“思想齿轮-洗脑</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1820004">
+		<Name>血肉齿轮-背逆</Name> 
+		<Desc>该角色无法在情感4级时获得额外的速度骰子</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1820005">
+		<Name>信徒的热望</Name> 
+		<Desc>“烟气”将使自身提高伤害而不再承受额外伤害。
+获得3张能增幅自身的特别战斗书页。一幕内只能使用一张且使用完全部3张后才能重新使用。</Desc>
+	</PassiveDesc>
 	<!--在宪-->
 	<PassiveDesc ID="1870001">
 		<Name>现场缝纫</Name> 

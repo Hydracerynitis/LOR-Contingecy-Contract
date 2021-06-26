@@ -7,5 +7,8 @@
 	<text id="Philip_Silence_param1">more</text>
 	<text id="Philip_Silence_param2">much more</text>
 	<text id="Philip_Silence_param3">extremely much more</text>	
+	<text id="Eileen_Production_param1">gain 1 Speed dice, Max Light +2</text>
+	<text id="Eileen_Production_param2">, at the start of each Scene, gain 2 Smoke</text>
+	<text id="Eileen_Production_param3"> and recover 2 light and draw 2 cards</text>	
 	<text id="Zombie_name">Nameless Shell</text>
 </localize>

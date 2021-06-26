@@ -42,6 +42,30 @@ If the character has 10 or more Burn at the start of the Scene, change to much m
 		<Desc>Inflict 2 Burn to target on hit, and inflict 2 Burn to attacker when hit.
 Become more vulnerable to damage.</Desc>
 	</PassiveDesc>
+	<!--艾琳-->
+	<PassiveDesc ID="1820001">
+		<Name>Meat Gear: Production</Name> 
+		<Desc>At the start of the Act, Summon and Commond 2 Gear Worshipper unit. Gear Worshippers have independent deck and stats.
+Take Stagger Damage equal to 15% of Max Stagger Resist when one of the Gear Worshipper die.
+At the end of Scene when one of the Gear Worshipper die two scene before, summon a new Gear Worshipper unit. </Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1820002">
+		<Name>Thought Gear: Predict</Name> 
+		<Desc>Once per Scene, respond to a one-sided attack with an Evade die [Roll: 5-10]. (Not played in clashes where both characters use a Combat Page) </Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1820003">
+		<Name>Meat Gear: Demise</Name> 
+		<Desc>On the Scene after which a Gear Worshipper dies, uses the Combat Page 'Thought Gear: Brainwash'.</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1820004">
+		<Name>Meat Gear: Role</Name> 
+		<Desc>This character can't get bonus Speed Dice from High Emotion Level.</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1820005">
+		<Name>Zeal of the Believers</Name> 
+		<Desc>Smoke' amplifies outgoing damage instead of incoming damage on this character.
+Gain three special Combat Page that can be used to benifit self. Replenish them after all three are used.</Desc>
+	</PassiveDesc>
 	<!--在宪-->
 	<PassiveDesc ID="1870001">
 		<Name>On-site Sewing</Name> 

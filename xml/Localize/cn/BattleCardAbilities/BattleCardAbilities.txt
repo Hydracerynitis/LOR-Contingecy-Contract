@@ -56,6 +56,16 @@
   	<BattleCardAbility ID="philip_area_atk">
     		<Desc>[交锋] [命中时] 对目标施加3层烧伤</Desc>
   	</BattleCardAbility>
+	<!--艾琳-->
+	<BattleCardAbility ID="MeatGearPower">
+		<Desc>[装备时] 这一幕内所有骰子获得1点威力</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="MeatGearHeal">
+		<Desc>[装备时] 恢复10点血量和混乱抗性</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="MeatGearSmoke">
+		<Desc>[装备时] 获得2层烟气</Desc>
+  	</BattleCardAbility>
 	<!--在宪-->
   	<BattleCardAbility ID="QuickPuppet_Special">
     		<Desc>若自身速度不低于5点则使本书页的所有骰子威力+1</Desc>

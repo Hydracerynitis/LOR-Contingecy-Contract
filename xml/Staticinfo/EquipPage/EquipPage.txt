@@ -24,7 +24,7 @@
       			<Passive>1800002</Passive>
       			<Passive>1800003</Passive>
     		</EquipEffect>
-    		<BookIcon>ThePerfectBlueReverberation</BookIcon>
+    		<BookIcon>ContingencyReward</BookIcon>
     		<Chapter>7</Chapter>
     		<Episode>1800000</Episode>
     		<Rarity>Unique</Rarity>
@@ -54,12 +54,68 @@
       			<Passive>1810002</Passive>
       			<Passive>1810003</Passive>
     		</EquipEffect>
-    		<BookIcon>ThePerfectBlueReverberation</BookIcon>
+    		<BookIcon>ContingencyReward</BookIcon>
     		<Chapter>7</Chapter>
     		<Episode>1800000</Episode>
     		<Rarity>Unique</Rarity>
     		<CharacterSkin>Blue_Philip</CharacterSkin>
  	 </Book>
+  	<Book ID="18200000">
+    		<Name>艾琳</Name>
+   		 <TextId>18200000</TextId>
+    		<Category>DeckFixed</Category>
+    		<EquipEffect>
+      			<HP>150</HP>
+      			<Break>80</Break>
+      			<SpeedMin>2</SpeedMin>
+      			<Speed>7</Speed>
+      			<SResist>Normal</SResist>
+      			<PResist>Normal</PResist>
+      			<HResist>Endure</HResist>
+      			<SBResist>Normal</SBResist>
+      			<PBResist>Normal</PBResist>
+      			<HBResist>Endure</HBResist>
+      			<StartPlayPoint>4</StartPlayPoint>
+      			<MaxPlayPoint>4</MaxPlayPoint>
+      			<Passive>1300001</Passive>
+      			<Passive>1820001</Passive>
+      			<Passive>1820002</Passive>
+      			<Passive>1820003</Passive>
+    		</EquipEffect>
+    		<BookIcon>ContingencyReward</BookIcon>
+    		<Chapter>7</Chapter>
+    		<Episode>1800000</Episode>
+    		<Rarity>Unique</Rarity>
+    		<CharacterSkin>Eileen</CharacterSkin>
+	</Book>
+  	<Book ID="18210000">
+    		<Name>血肉齿轮</Name>
+   		 	<TextId>1302021</TextId>
+    		<Category>DeckFixed</Category>
+    		<EquipEffect>
+      			<HP>80</HP>
+      			<Break>40</Break>
+      			<SpeedMin>2</SpeedMin>
+      			<Speed>6</Speed>
+      			<SResist>Normal</SResist>
+      			<PResist>Normal</PResist>
+      			<HResist>Normal</HResist>
+      			<SBResist>Normal</SBResist>
+      			<PBResist>Normal</PBResist>
+      			<HBResist>Endure</HBResist>
+				<AddedStartDraw>3</AddedStartDraw>
+      			<Passive Level="1">1820004</Passive>
+      			<Passive Level="1">1820005</Passive>
+      			<Passive Level="1">250014</Passive>
+      			<Passive Level="1">250114</Passive>
+      			<Passive Level="1">250214</Passive>
+    		</EquipEffect>
+    		<BookIcon>ContingencyReward</BookIcon>
+    		<Chapter>7</Chapter>
+    		<Episode>1800000</Episode>
+    		<Rarity>Unique</Rarity>
+    		<CharacterSkin>GearsUnit</CharacterSkin>
+	</Book>
   	<Book ID="18700000">
     		<Name>在宪</Name>
    		 <TextId>18700000</TextId>
@@ -84,7 +140,7 @@
       			<Passive>1870002</Passive>
       			<Passive>1870004</Passive>
     		</EquipEffect>
-    		<BookIcon>ThePerfectBlueReverberation</BookIcon>
+    		<BookIcon>ContingencyReward</BookIcon>
     		<Chapter>7</Chapter>
     		<Episode>1800000</Episode>
     		<Rarity>Unique</Rarity>
@@ -113,7 +169,7 @@
       			<Passive>1870102</Passive>
       			<Passive>1870103</Passive>
     		</EquipEffect>
-    		<BookIcon>ThePerfectBlueReverberation</BookIcon>
+    		<BookIcon>ContingencyReward</BookIcon>
     		<Chapter>7</Chapter>
     		<Episode>1800000</Episode>
     		<Rarity>Rare</Rarity>
@@ -142,7 +198,7 @@
       		<Passive>1880001</Passive>
       		<Passive>1880002</Passive>
     	</EquipEffect>
-    	<BookIcon>ThePerfectBlueReverberation</BookIcon>
+    	<BookIcon>ContingencyReward</BookIcon>
     	<Chapter>7</Chapter>
     	<Episode>1800000</Episode>
     	<Rarity>Unique</Rarity>
@@ -172,7 +228,7 @@
       			<Passive>1890002</Passive>
       			<Passive>1890003</Passive>
     		</EquipEffect>
-    		<BookIcon>ThePerfectBlueReverberation</BookIcon>
+    		<BookIcon>ContingencyReward</BookIcon>
     		<Chapter>7</Chapter>
     		<Episode>1800000</Episode>
     		<Rarity>Unique</Rarity>

@@ -34,6 +34,43 @@ Attack pattern become {0} aggressive; Increase Max HP and Max Stagger Resist by 
 		<BaseLevel>4</BaseLevel>
 		<Enemy>1301011</Enemy>
 	</Contract>
+	<Contract Type="Eileen_Production">
+		<DescList>
+			<Desc language="cn" name="宗教狂潮" desc="艾琳血量提升{0}%，齿轮信徒{1}。" />
+			<Desc language="en" name="Frantic Faith" desc="Increase Eileen's Max Hp by {0}%;
+Gear Worshipper {1}." />
+		</DescList>
+		<Faction>Enemy</Faction>
+		<Variation>3</Variation>
+		<BaseLevel>1</BaseLevel>
+		<Conflict>Eileen_BodyGuard</Conflict>
+		<Enemy>1302011</Enemy>
+		<Enemy>1302021</Enemy>
+	</Contract>
+	<Contract Type="Eileen_BodyGuard">
+		<DescList>
+			<Desc language="cn" name="齿轮护卫" desc="齿轮信徒血量和混乱抗性提升{0}, “思想齿轮: 洗脑”时第二骰最大值提高{1}
+若有齿轮信徒存活则艾琳所受到的伤害将会转移到存活的齿轮信徒身上。" />
+			<Desc language="en" name="Body Guard" desc="Increase Gear Whorshipper's Max HP and Max Stagger Resist by {0}%;
+Increase the Maximun value of second die of “Thought Gear: Brainwash” by {1}; 
+Whenever alive Gear Worshipper exist, Damage inflicted to Eileen will be transferred to alive Gear Worshipper." />
+		</DescList>
+		<Faction>Enemy</Faction>
+		<Variation>3</Variation>
+		<BaseLevel>1</BaseLevel>
+		<Conflict>Eileen_Production</Conflict>
+		<Enemy>1302011</Enemy>
+		<Enemy>1302021</Enemy>
+	</Contract>
+	<Contract Type="Eileen">
+		<DescList>
+			<Desc language="cn" name="竖琴的锋锐" desc="齿轮信徒获得全新牌库" />
+			<Desc language="en" name="Sharp Harp" desc="Gear Worshipper gain unique deck of Combat Pages." />
+		</DescList>
+		<Faction>Enemy</Faction>
+		<BaseLevel>4</BaseLevel>
+		<Enemy>1302021</Enemy>
+	</Contract>
 	<Contract Type="Jaeheon_Thread">
 		<DescList>
 			<Desc language="cn" name="傀儡之舞" desc="在宪反击骰威力+{0}，有其他友方单位存活时免疫任何伤害和混乱伤害,提高首次施加操纵层数+{1}" />

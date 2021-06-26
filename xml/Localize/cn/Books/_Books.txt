@@ -17,6 +17,21 @@
 			</TextList>
 			<PassiveList />
 		</BookDesc>
+		<BookDesc BookID="18200000">
+			<BookName>清亮的艾琳之页</BookName>
+			<TextList>
+ 				<Desc>在我们曾经生活过的地方，人们无法按照自己的意愿去实现任何目标。因为那里流动着不可抗拒的浪潮。我们之所以称其为齿轮，只是为了亲眼一睹它的流向。事实上，那却是不可视之物。究竟何种存在才能造就如此庞大的湍流，而我们又为何要沿着它的流向行动，无论是谁都无从得知。但是，这股浪潮也并未将我们引向歧途。不，该说是从认知到有那样的地方存在起，就已经是在违抗着浪潮，逆流而上了吧。</Desc>
+        		<Desc>我们不过是成为了凝视这一局面的旁观者。行走于道路之上并不意味着你便是这条道路的开拓者。赋予我们迈开脚步前行的力量的也并非是你，我们仅仅是做出了这一步行动而已。说到底，连想要更进一步的想法或许都不是我们自己的意志。但我想有许多人都在以自己的意志前行着。为了摆脱这股浪潮而奋力挣扎着的他们，只是无法得到救赎，我对此倍感惋惜。</Desc>
+			</TextList>
+			<PassiveList />
+		</BookDesc>
+		<BookDesc BookID="18210000">
+			<BookName>齿轮信徒之页</BookName>
+			<TextList>
+				<Desc>我们为什么要抽笑面的烟</Desc>
+			</TextList>
+			<PassiveList />
+		</BookDesc>
 		<BookDesc BookID="18700000">
 			<BookName>豪放的在宪之页</BookName>
 			<TextList>

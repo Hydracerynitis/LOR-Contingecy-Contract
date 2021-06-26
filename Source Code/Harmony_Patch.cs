@@ -18,6 +18,7 @@ namespace Contingecy_Contract
         public static List<PassiveXmlInfo> AvailablePassive;
         public static Dictionary<UnitBattleDataModel, int> CombaltData;
         public static Dictionary<BattleUnitModel, int> UnitBookId;
+        public static Dictionary<int, int> ThumbPathDictionary;
         public static string ModPath;
         public static bool Duel;
         public static bool PassiveAbility_1890003_init;
@@ -27,6 +28,7 @@ namespace Contingecy_Contract
             ModPath = Path.GetDirectoryName(Uri.UnescapeDataString(new UriBuilder(Assembly.GetExecutingAssembly().CodeBase).Path));
             Debug.ModPatchDebug();
             LoadContract();
+            LoadThumbPath();
             Singleton<ContractLoader>.Instance.bInit=false;
             CombaltData = new Dictionary<UnitBattleDataModel, int>();
             ContractAttribution.Inition = new List<BattleUnitModel>();
@@ -131,44 +133,44 @@ namespace Contingecy_Contract
             {
                 Debug.Error("HP_" + Patch9.Name, ex);
             }
-            MethodInfo Method10 = typeof(DebugConsoleScript).GetMethod("Update", AccessTools.all);
-            MethodInfo Patch10 = typeof(Harmony_Patch).GetMethod("DebugConsoleScript_Update");
+            MethodInfo Method10 = typeof(PassiveAbility_1307012).GetMethod("AddThread", AccessTools.all);
+            MethodInfo Patch10 = typeof(Harmony_Patch).GetMethod("PassiveAbility_1307012_AddThread");
             try
             {
-                harmony.Patch(Method10, null, new HarmonyMethod(Patch10), null, null);
+                harmony.Patch(Method10, new HarmonyMethod(Patch10), null, null, null);
                 Debug.Log("Patch: {0} succeed", Patch10.Name);
             }
             catch (Exception ex)
             {
                 Debug.Error("HP_" + Patch10.Name, ex);
             }
-            MethodInfo Method11 = typeof(PassiveAbility_1307012).GetMethod("AddThread", AccessTools.all);
-            MethodInfo Patch11 = typeof(Harmony_Patch).GetMethod("PassiveAbility_1307012_AddThread");
+            MethodInfo Method11 = typeof(StageController).GetMethod("InitStageByCreature", AccessTools.all);
+            MethodInfo Patch11 = typeof(Harmony_Patch).GetMethod("StageController_InitStageByCreature");
             try
             {
-                harmony.Patch(Method11, new HarmonyMethod(Patch11), null, null, null);
+                harmony.Patch(Method11, null , new HarmonyMethod(Patch11), null, null);
                 Debug.Log("Patch: {0} succeed", Patch11.Name);
             }
             catch (Exception ex)
             {
                 Debug.Error("HP_" + Patch11.Name, ex);
             }
-            MethodInfo Method12 = typeof(StageController).GetMethod("InitStageByCreature", AccessTools.all);
-            MethodInfo Patch12 = typeof(Harmony_Patch).GetMethod("StageController_InitStageByCreature");
+            MethodInfo Method12 = typeof(StageController).GetMethod("InitCommon", AccessTools.all);
+            MethodInfo Patch12 = typeof(Harmony_Patch).GetMethod("StageController_InitCommon");
             try
             {
-                harmony.Patch(Method12, null , new HarmonyMethod(Patch12), null, null);
+                harmony.Patch(Method12, new HarmonyMethod(Patch12),null , null, null);
                 Debug.Log("Patch: {0} succeed", Patch12.Name);
             }
             catch (Exception ex)
             {
                 Debug.Error("HP_" + Patch12.Name, ex);
             }
-            MethodInfo Method13 = typeof(StageController).GetMethod("InitCommon", AccessTools.all);
-            MethodInfo Patch13 = typeof(Harmony_Patch).GetMethod("StageController_InitCommon");
+            MethodInfo Method13 = typeof(BookModel).GetMethod("GetThumbPath", AccessTools.all);
+            MethodInfo Patch13 = typeof(Harmony_Patch).GetMethod("BookModel_GetThumbPath");
             try
             {
-                harmony.Patch(Method13, new HarmonyMethod(Patch13),null , null, null);
+                harmony.Patch(Method13,null , new HarmonyMethod(Patch13), null, null);
                 Debug.Log("Patch: {0} succeed", Patch13.Name);
             }
             catch (Exception ex)
@@ -178,8 +180,9 @@ namespace Contingecy_Contract
         }
         public static void StageNameXmlList_GetName(ref string __result,int id)
         {
-            if (CheckDuel(id))
+            if (CheckDuel(id) || id== 1800000)
                 return;
+            Singleton<ContractLoader>.Instance.Init();
             __result = TextDataModel.GetText("ui_ContingecyLevel", (object)Singleton<ContractLoader>.Instance.GetLevel(id), (object)__result);
         }
         public static bool StageController_RoundStartPhase_System(StageType ____stageType)
@@ -200,8 +203,7 @@ namespace Contingecy_Contract
             if (CheckDuel(stage.id))
                 Duel = true;
             if (!PassiveAbility_1890003_init)
-                PassiveAbility_1890003_InitList();
-            Singleton<ContractLoader>.Instance.Init();
+                PassiveAbility_1890003_InitList();           
         }
         public static void StageController_InitStageByEndContentsStage(StageClassInfo stage)
         {
@@ -210,7 +212,6 @@ namespace Contingecy_Contract
                 Duel = true;
             if (!PassiveAbility_1890003_init)
                 PassiveAbility_1890003_InitList();
-            Singleton<ContractLoader>.Instance.Init();
         }
         public static void StageController_InitStageByCreature()
         {
@@ -245,7 +246,6 @@ namespace Contingecy_Contract
         }
         public static void StageController_GameOver()
         {
-            Singleton<ContractLoader>.Instance.Init();
             CombaltData.Clear();
         }
         public static void LibraryModel_OnClearStage(int stageId)
@@ -255,7 +255,7 @@ namespace Contingecy_Contract
         }
         public static bool BattleUnitBuf_Philip_OverHeat_Init(BattleUnitModel owner, BattleUnitBuf_Philip_OverHeat __instance)
         {
-            ContingecyContract_Philip_Burn burn = owner.passiveDetail.PassiveList.Find((Predicate<PassiveAbilityBase>)(x => x is ContingecyContract_Philip_Burn)) as ContingecyContract_Philip_Burn;
+            ContingecyContract_Philip_Burn burn = owner.passiveDetail.PassiveList.Find(x => x is ContingecyContract_Philip_Burn) as ContingecyContract_Philip_Burn;
             if (burn!=null)
             {
                 owner.bufListDetail.AddBuf(new ContingecyContract_Philip_Burn.OverHeat_cc(burn.Level));
@@ -263,6 +263,11 @@ namespace Contingecy_Contract
                 return false;
             }
             return true;
+        }
+        public static void BookModel_GetThumbPath(ref string __result,BookXmlInfo ____classInfo)
+        {
+            if(ThumbPathDictionary.ContainsKey(____classInfo.id))
+                __result= "Sprites/Books/Thumb/" + ThumbPathDictionary[____classInfo.id].ToString();
         }
         public static bool BattleObjectManager_Clear()
         {
@@ -278,14 +283,6 @@ namespace Contingecy_Contract
             }
             UnitBookId.Clear();
             return true;
-        }
-        public static void DebugConsoleScript_Update()
-        {
-            if (!Singleton<ContractLoader>.Instance.bInit)
-            {
-                Singleton<ContractLoader>.Instance.Init();
-                Singleton<ContractLoader>.Instance.bInit = true;
-            }
         }
         public static bool PassiveAbility_1307012_AddThread(int round, BattleUnitModel ___owner)
         {
@@ -336,8 +333,9 @@ namespace Contingecy_Contract
         }
         public static void LoadContract()
         {
+            ThumbPathDictionary = new Dictionary<int, int>();
             Debug.PathDebug("/Contracts", PathType.Directory);
-            Debug.XmlFileDebug();
+            Debug.XmlFileDebug("/Contracts");
             Singleton<ContractXmlList>.Instance.Init();
             foreach (FileInfo file in new DirectoryInfo(ModPath + "/Contracts").GetFiles())
             {            
@@ -354,6 +352,33 @@ namespace Contingecy_Contract
                     }
                 }
             }
+        }
+        public static void LoadThumbPath()
+        {
+            Debug.PathDebug("/Staticinfo/ThumbPath", PathType.Directory);
+            Debug.XmlFileDebug("/Staticinfo/ThumbPath");
+            foreach (FileInfo file in new DirectoryInfo(ModPath + "/Staticinfo/ThumbPath").GetFiles())
+            {
+                try
+                {
+                    XmlDocument xml = new XmlDocument();
+                    xml.LoadXml(File.ReadAllText(file.FullName));
+                    foreach (XmlNode node in xml.SelectNodes("ThumbPath/Path"))
+                    {
+                        string str = string.Empty;
+                        if (node.Attributes.GetNamedItem("id") != null)
+                            str = node.Attributes.GetNamedItem("id").InnerText;
+                        int key = Int32.Parse(str);
+                        int value = Int32.Parse(node.InnerText);
+                        ThumbPathDictionary[key] = value;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Debug.Error("ThumbLoadError", ex);
+                }
+            }
+
         }
         public static StageClassInfo CopyXml(StageClassInfo info)
         {

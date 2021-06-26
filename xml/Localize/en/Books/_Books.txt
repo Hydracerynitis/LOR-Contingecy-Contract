@@ -17,6 +17,21 @@
 			</TextList>
 			<PassiveList />
 		</BookDesc>
+		<BookDesc BookID="18200000">
+			<BookName>Eileen's Glittering Page</BookName>
+			<TextList>
+				<Desc>Where we live, there is nothing that can be achieved with your own will. A flow that we cannot go against dictates us. What we call “gears” are simply there to show the flow. You can’t see it with your eyes. Nobody knows who created this massive current, or why we must follow it. This flow never leads us to bad places, however. Rather, thinking that such a place exists is an act of defiance in itself.</Desc>
+        		<Desc>We merely watch events unfold as bystanders. You walk along a path, but was it you who laid the path there? You didn’t teach yourself to lift your legs to propel you forward; they simply moved. Furthermore, the decision to walk wasn’t our own, either. Still too many believe that they moved their legs out of their own volition. It’s a shame to see them struggle to escape the flow, for they’re only straying away from salvation.</Desc>
+			</TextList>
+			<PassiveList />
+		</BookDesc>
+		<BookDesc BookID="18210000">
+			<BookName>Gear Worshippers' Page</BookName>
+			<TextList>
+				<Desc>Why we have to use Smiling Faces' Smoke.</Desc>
+			</TextList>
+			<PassiveList />
+		</BookDesc>
 		<BookDesc BookID="18700000">
 			<BookName>Jae-heon's Eloquent Page</BookName>
 			<TextList>

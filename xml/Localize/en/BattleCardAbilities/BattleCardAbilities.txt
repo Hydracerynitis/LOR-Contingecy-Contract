@@ -52,6 +52,16 @@
   	<BattleCardAbility ID="philip_area_atk">
     		<Desc>[On Hit] Inflict 3 Burn</Desc>
   	</BattleCardAbility>
+	<!--艾琳-->
+	<BattleCardAbility ID="MeatGearPower">
+		<Desc>[On Play] For the duration of the Scene, all dice gain 1 Power.</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="MeatGearHeal">
+		<Desc>[On Play] Recover 10 Hp and 10 Stagger Resist.</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="MeatGearSmoke">
+		<Desc>[On Play] Gain 2 smoke.</Desc>
+  	</BattleCardAbility>
 	<!--在宪-->
   	<BattleCardAbility ID="QuickPuppet_Special">
     		<Desc>If Speed is 5 or higher, all dice on this page gain +1 Power</Desc>

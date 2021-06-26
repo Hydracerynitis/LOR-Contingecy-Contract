@@ -39,7 +39,7 @@ namespace ContractReward
             base.OnSucceedAttack(behavior);
             if (behavior.Detail != BehaviourDetail.Hit)
                 return;
-            behavior.card.target.TakeBreakDamage(2,DamageType.Passive);
+            behavior.card.target.TakeBreakDamage(2,DamageType.Attack);
         }
     }
 }

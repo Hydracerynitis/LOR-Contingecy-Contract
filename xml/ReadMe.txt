@@ -17,11 +17,13 @@ Steo 3: Enter a new line in ContractLoader.txt and copy the codes into it before
                 NoBreak
             
 Risk Level 12 Reward List:
-Philip's Sonorous Page ---- Complete The Crying Children under Risk Level 12 or more.
-Jae-heon's Eloquent Page ---- Complete The Puppeteer under Risk Level 12 or more.
-Elena's Sensuous Page ---- Complete The Blood-Red Moon under Risk Level 12 or more.
-Pluto's Solemn Page ---- Complete Yesterday's Promise under Risk Level 12 or more.
+Philip's Sonorous Page ---- Complete The Crying Children reception with Risk Level 12 or more.
+Eileen's Glittering Page ---- Complet The Church of Gear reception with Risk Level 12 or more.
+Jae-heon's Eloquent Page ---- Complete The Puppeteer reception with Risk Level 12 or more.
+Elena's Sensuous Page ---- Complete The Blood-Red Moon reception with Risk Level 12 or more.
+Pluto's Solemn Page ---- Complete Yesterday's Promise reception with Risk Level 12 or more.
 Conductor Argalia's Page ---- Complete all The Reverbration Ensemble Challenge. 
-(Currently only The Crying Children, The Puppeteer, The Blood-Red Moon, Yesterday's Promise)
+(Currently only The Crying Children, The Church of Gear, The Puppeteer, The Blood-Red Moon, Yesterday's Promise)
 
+Credit for elder404 of producing SummonLibrarian.dll tool.
 HaveFun

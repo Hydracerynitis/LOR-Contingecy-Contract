@@ -20,10 +20,10 @@ namespace Contingecy_Contract
             PathDebug("/Debug", PathType.Directory);
             File.AppendAllText(Harmony_Patch.ModPath + "/Debug/Log.txt", string.Format(message,Params) + "\n");
         }
-        public static void XmlFileDebug()
+        public static void XmlFileDebug(string path)
         {
             PathDebug("/Debug", PathType.Directory);
-            foreach (FileInfo file in new DirectoryInfo(Harmony_Patch.ModPath + "/Contracts").GetFiles())
+            foreach (FileInfo file in new DirectoryInfo(Harmony_Patch.ModPath + path).GetFiles())
                 File.AppendAllText(Harmony_Patch.ModPath + "/Debug/Log.txt","XmlFile: " +file.Name+" Found\n");
         }
         public static void Error(string type,Exception ex)

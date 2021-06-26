@@ -37,6 +37,9 @@
     <Reference Include="Assembly-CSharp">
       <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
+    <Reference Include="SummonLiberation">
+      <HintPath>xml\SummonLiberation.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -54,14 +57,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Source Code\ContractList_Eileen.cs" />
     <Compile Include="Source Code\ContractList_Stage.cs" />
     <Compile Include="Source Code\ContractModification.cs" />
     <Compile Include="Source Code\ContractList_Elena.cs" />
     <Compile Include="Source Code\ContractList_Pluto.cs" />
     <Compile Include="Source Code\ContractList_Jaeheon.cs" />
     <Compile Include="Source Code\ContractList_Philip.cs" />
-    <Compile Include="Source Code\ContractReward\DiceCardAbility_AoeCoolDown.cs" />
+    <Compile Include="Source Code\ContractReward\DiceCardSelfAbility_AoeCoolDown.cs" />
     <Compile Include="Source Code\ContractReward\DiceCardAbility_invalid.cs" />
+    <Compile Include="Source Code\ContractReward\Eileen\BattleUnitBuf_ZealLimit.cs" />
+    <Compile Include="Source Code\ContractReward\Eileen\DiceCardSelfAbility_MeatGearSmoke.cs" />
+    <Compile Include="Source Code\ContractReward\Eileen\DiceCardSelfAbility_MeatGearHeal.cs" />
+    <Compile Include="Source Code\ContractReward\Eileen\DiceCardSelfAbility_MeatGearPower.cs" />
+    <Compile Include="Source Code\ContractReward\Eileen\PassiveAbility_1820001.cs" />
+    <Compile Include="Source Code\ContractReward\Eileen\PassiveAbility_1820002.cs" />
+    <Compile Include="Source Code\ContractReward\Eileen\PassiveAbility_1820005.cs" />
+    <Compile Include="Source Code\ContractReward\Eileen\PassiveAbility_1820004.cs" />
+    <Compile Include="Source Code\ContractReward\Eileen\PassiveAbility_1820003.cs" />
     <Compile Include="Source Code\ContractReward\Elena\DiceCardSelfAbility_ElenaZombieEnemy.cs" />
     <Compile Include="Source Code\ContractReward\Elena\PassiveAbility_1880002.cs" />
     <Compile Include="Source Code\ContractReward\Elena\PassiveAbility_1880001.cs" />
@@ -69,6 +82,7 @@
     <Compile Include="Source Code\ContractReward\Elena\DiceCardSelfAbility_ElenaZombie.cs" />
     <Compile Include="Source Code\ContractReward\Elena\DiceCardSelfAbility_Invisible.cs" />
     <Compile Include="Source Code\ContractReward\Elena\DiceCardSelfAbility_ElenaBuff.cs" />
+    <Compile Include="Source Code\ContractReward\Fix\PassiveAbility_1302013.cs" />
     <Compile Include="Source Code\ContractReward\Jaeheon\BattleUnitBuf_AgelicaPuppet.cs" />
     <Compile Include="Source Code\ContractReward\Jaeheon\BattleUnitBuf_AttackTarget.cs" />
     <Compile Include="Source Code\ContractReward\Pluto\BattleUnitBuf_Barrier.cs" />

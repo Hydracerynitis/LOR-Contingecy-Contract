@@ -6,6 +6,9 @@
 	<text id="ui_popup_getequippage">获得核心书页-“{0}”</text>
 	<text id="Philip_Silence_param1">比较</text>
 	<text id="Philip_Silence_param2">更加</text>
-	<text id="Philip_Silence_param3">非常</text>	
+	<text id="Philip_Silence_param3">非常</text>
+	<text id="Eileen_Production_param1">速度骰+1，最高光芒+2</text>
+	<text id="Eileen_Production_param2">,每一幕开始时获得2层烟气</text>
+	<text id="Eileen_Production_param3">并且额外恢复2点光芒抽2张牌</text>	
 	<text id="Zombie_name">无名躯壳</text>
 </localize>

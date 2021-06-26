@@ -76,6 +76,31 @@
 		<BattleCardDesc ID="18100015">
 			<LocalizedName>焦灼死灰</LocalizedName>
 		</BattleCardDesc>
+		<!--艾琳-->
+		<BattleCardDesc ID="18200001">
+			<LocalizedName>思想齿轮: 加速</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18200002">
+			<LocalizedName>思想齿轮: 道破</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18200003">
+			<LocalizedName>思想齿轮: 传教</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18200004">
+			<LocalizedName>思想齿轮: 洗脑</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18200005">
+			<LocalizedName>思想齿轮: 预测</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18200006">
+			<LocalizedName>血肉齿轮: 强化</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18200007">
+			<LocalizedName>血肉齿轮: 修理</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18200008">
+			<LocalizedName>血肉齿轮: 转动</LocalizedName>
+		</BattleCardDesc>
 		<!--在宪-->
 		<BattleCardDesc ID="18700001">
 			<LocalizedName>操控傀儡</LocalizedName>

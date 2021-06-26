@@ -24,6 +24,9 @@ namespace Contingecy_Contract
                 case (70001):
                     id = 18100000;
                     break;
+                case (70002):
+                    id = 18200000;
+                    break;
                 case (70007):
                     id = 18700000;
                     break;
@@ -52,16 +55,18 @@ namespace Contingecy_Contract
         {
             if (Singleton<BookInventoryModel>.Instance.GetBookListAll().Find((Predicate<BookModel>)(x => x.GetBookClassInfoId() == 18100000)) == null)
                 return;
+            if (Singleton<BookInventoryModel>.Instance.GetBookListAll().Find((Predicate<BookModel>)(x => x.GetBookClassInfoId() == 18200000)) == null)
+                return;
             if (Singleton<BookInventoryModel>.Instance.GetBookListAll().Find((Predicate<BookModel>)(x => x.GetBookClassInfoId() == 18700000)) == null)
                 return;
             if (Singleton<BookInventoryModel>.Instance.GetBookListAll().Find((Predicate<BookModel>)(x => x.GetBookClassInfoId() == 18800000)) == null)
                 return;
             if (Singleton<BookInventoryModel>.Instance.GetBookListAll().Find((Predicate<BookModel>)(x => x.GetBookClassInfoId() == 18900000)) == null)
                 return;
-            UIs.Add(TextDataModel.GetText("ui_RewardRevebrate"));
             if (Singleton<BookInventoryModel>.Instance.GetBookListAll().Find((Predicate<BookModel>)(x => x.GetBookClassInfoId() == 18000000)) == null)
             {
                 Singleton<BookInventoryModel>.Instance.CreateBook(18000000);
+                UIs.Add(TextDataModel.GetText("ui_RewardRevebrate"));
                 Debug.Log(string.Format("Achieved Reverberation Reward: {0}", 18000000));
                 UIs.Add(TextDataModel.GetText("ui_popup_getequippage", (object)Singleton<BookDescXmlList>.Instance.GetBookName(18000000)));
             }
