@@ -2,8 +2,10 @@
 <localize xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<text id="ui_ContingecyLevel">{0}级危机--{1}</text>
 	<text id="ui_RewardStage">恭喜你打过{0}关卡的12级危机合约挑战</text>
-	<text id="ui_RewardRevebrate">恭喜你完成残响乐团所有危机合约挑战</text>
-	<text id="ui_popup_getequippage">获得核心书页-“{0}”</text>
+	<text id="ui_RewardSpecial">恭喜你完成{0}挑战</text>
+	<text id="Condition_OrangeCross">朱红十字</text>
+	<text id="Condition_Ensemble">残响乐团所有危机等级12</text>
+	<text id="ui_popup_getequippage">获得{1}张核心书页-“{0}”</text>
 	<text id="Philip_Silence_param1">比较</text>
 	<text id="Philip_Silence_param2">更加</text>
 	<text id="Philip_Silence_param3">非常</text>

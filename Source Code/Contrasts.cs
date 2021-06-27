@@ -11,7 +11,7 @@ namespace Contingecy_Contract
 {
     public class ContractXmlList : Singleton<ContractXmlList>
     {
-        private Dictionary<string, Contract> XmlList = new Dictionary<string, Contract>();
+        private readonly Dictionary<string, Contract> XmlList = new Dictionary<string, Contract>();
         public void Init()
         {
             XmlList.Clear();
@@ -30,7 +30,7 @@ namespace Contingecy_Contract
         public Contract GetContract(string Type)
         {
             if (XmlList.ContainsKey(Type))
-                return XmlList[Type];
+                return XmlList[Type].Copy();
             return null;
         }
     }
@@ -45,7 +45,7 @@ namespace Contingecy_Contract
         public string Type;
         [XmlArray("DescList")]
         [XmlArrayItem("Desc")]
-        public List<ContracDesc> desc;
+        public List<ContractDesc> desc;
         [XmlElement("ContractType")]
         public ContractXmlType contractType = ContractXmlType.Passive;
         [XmlElement("Faction")]
@@ -63,12 +63,32 @@ namespace Contingecy_Contract
         [XmlIgnore]
         public int level = -1;
         public StageModifier modifier;
-        public ContracDesc GetDesc(string language)
+        public ContractDesc GetDesc(string language)
         {
-            return this.desc.Find((Predicate<ContracDesc>)(x => x.language == language));
+            return this.desc.Find((Predicate<ContractDesc>)(x => x.language == language));
+        }
+        public Contract Copy()
+        {
+            Contract copy = new Contract
+            {
+                Type = Type,
+                desc = new List<ContractDesc>(),
+                contractType = contractType,
+                Variation = Variation,
+                BaseLevel = BaseLevel,
+                Faction = Faction,
+                Step = Step,
+                Enemy = new List<int>(),
+                Conflict = new List<string>()
+            };
+            foreach (ContractDesc desc in desc)
+                copy.desc.Add(desc.Copy());
+            copy.Enemy.AddRange(Enemy);
+            copy.Conflict.AddRange(Conflict);
+            return copy;
         }
     }
-    public class ContracDesc
+    public class ContractDesc
     {
         [XmlAttribute("language")]
         public string language;
@@ -76,6 +96,16 @@ namespace Contingecy_Contract
         public string name;
         [XmlAttribute("desc")]
         public string desc;
+        public ContractDesc Copy()
+        {
+            ContractDesc copy = new ContractDesc
+            {
+                language = language,
+                name = name,
+                desc = desc
+            };
+            return copy;
+        }
     }
     public enum ContractXmlType
     {

@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Xml;
+using GameSave;
+using System.Diagnostics;
 using UI;
 using System.Reflection;
 using System.Xml.Serialization;
 using UnityEngine;
+using UnityEngine.UI;
 using System.IO;
 using HarmonyLib;
 using System.Threading.Tasks;
@@ -22,18 +25,20 @@ namespace Contingecy_Contract
         public static string ModPath;
         public static bool Duel;
         public static bool PassiveAbility_1890003_init;
+        public static ChallengeProgress Progess;
         public Harmony_Patch()
         {
             Harmony harmony = new Harmony("Hydracerynitis.ContingecyContract");
             ModPath = Path.GetDirectoryName(Uri.UnescapeDataString(new UriBuilder(Assembly.GetExecutingAssembly().CodeBase).Path));
             Debug.ModPatchDebug();
             LoadContract();
-            LoadThumbPath();
+            LoadThumb();
             Singleton<ContractLoader>.Instance.bInit=false;
             CombaltData = new Dictionary<UnitBattleDataModel, int>();
             ContractAttribution.Inition = new List<BattleUnitModel>();
             UnitBookId = new Dictionary<BattleUnitModel, int>();
             PassiveAbility_1890003_init = false;
+            Progess = new ChallengeProgress();
             MethodInfo Method1 = typeof(StageNameXmlList).GetMethod("GetName", AccessTools.all);
             MethodInfo Patch1 = typeof(Harmony_Patch).GetMethod("StageNameXmlList_GetName");
             try
@@ -177,6 +182,28 @@ namespace Contingecy_Contract
             {
                 Debug.Error("HP_" + Patch13.Name, ex);
             }
+            MethodInfo Method14 = typeof(PlayHistoryModel).GetMethod("LoadFromSaveData", AccessTools.all);
+            MethodInfo Patch14 = typeof(Harmony_Patch).GetMethod("PlayHistoryModel_LoadFromSaveData");
+            try
+            {
+                harmony.Patch(Method14, null, new HarmonyMethod(Patch14), null, null);
+                Debug.Log("Patch: {0} succeed", Patch14.Name);
+            }
+            catch (Exception ex)
+            {
+                Debug.Error("HP_" + Patch14.Name, ex);
+            }
+            MethodInfo Method15 = typeof(PlayHistoryModel).GetMethod("GetSaveData", AccessTools.all);
+            MethodInfo Patch15 = typeof(Harmony_Patch).GetMethod("PlayHistoryModel_GetSaveData");
+            try
+            {
+                harmony.Patch(Method15, null, new HarmonyMethod(Patch15), null, null);
+                Debug.Log("Patch: {0} succeed", Patch15.Name);
+            }
+            catch (Exception ex)
+            {
+                Debug.Error("HP_" + Patch15.Name, ex);
+            }
         }
         public static void StageNameXmlList_GetName(ref string __result,int id)
         {
@@ -253,21 +280,18 @@ namespace Contingecy_Contract
             StageClassInfo info=Singleton<StageClassInfoList>.Instance.GetData(stageId);
             Singleton<ContractRewardSystem>.Instance.CheckReward(info);
         }
-        public static bool BattleUnitBuf_Philip_OverHeat_Init(BattleUnitModel owner, BattleUnitBuf_Philip_OverHeat __instance)
-        {
-            ContingecyContract_Philip_Burn burn = owner.passiveDetail.PassiveList.Find(x => x is ContingecyContract_Philip_Burn) as ContingecyContract_Philip_Burn;
-            if (burn!=null)
-            {
-                owner.bufListDetail.AddBuf(new ContingecyContract_Philip_Burn.OverHeat_cc(burn.Level));
-                __instance.Destroy();
-                return false;
-            }
-            return true;
-        }
         public static void BookModel_GetThumbPath(ref string __result,BookXmlInfo ____classInfo)
         {
             if(ThumbPathDictionary.ContainsKey(____classInfo.id))
                 __result= "Sprites/Books/Thumb/" + ThumbPathDictionary[____classInfo.id].ToString();
+        }
+        public static void PlayHistoryModel_LoadFromSaveData(SaveData data)
+        {
+            Progess.LoadFromSaveData(data.GetData("ContingecyContract_ChallengeProgress"));
+        }
+        public static void PlayHistoryModel_GetSaveData(ref SaveData __result)
+        {
+            __result.AddData("ContingecyContract_ChallengeProgress", Progess.GetSaveData());
         }
         public static bool BattleObjectManager_Clear()
         {
@@ -282,6 +306,16 @@ namespace Contingecy_Contract
                     unit.Book.ClassInfo.id = UnitBookId[unit];
             }
             UnitBookId.Clear();
+            return true;
+        }
+        public static bool BattleUnitBuf_Philip_OverHeat_Init(BattleUnitModel owner, BattleUnitBuf_Philip_OverHeat __instance)
+        {
+            if (owner.passiveDetail.PassiveList.Find(x => x is ContingecyContract_Philip_Burn) is ContingecyContract_Philip_Burn burn)
+            {
+                owner.bufListDetail.AddBuf(new ContingecyContract_Philip_Burn.OverHeat_cc(burn.Level));
+                __instance.Destroy();
+                return false;
+            }
             return true;
         }
         public static bool PassiveAbility_1307012_AddThread(int round, BattleUnitModel ___owner)
@@ -353,7 +387,7 @@ namespace Contingecy_Contract
                 }
             }
         }
-        public static void LoadThumbPath()
+        public static void LoadThumb()
         {
             Debug.PathDebug("/Staticinfo/ThumbPath", PathType.Directory);
             Debug.XmlFileDebug("/Staticinfo/ThumbPath");
@@ -378,83 +412,94 @@ namespace Contingecy_Contract
                     Debug.Error("ThumbLoadError", ex);
                 }
             }
-
         }
         public static StageClassInfo CopyXml(StageClassInfo info)
         {
-            StageClassInfo output = new StageClassInfo();
-            output.id = info.id;
-            output.waveList = new List<StageWaveInfo>();
+            StageClassInfo output = new StageClassInfo
+            {
+                id = info.id,
+                waveList = new List<StageWaveInfo>(),
+                stageType = info.stageType,
+                mapInfo = new List<string>(),
+                floorNum = info.floorNum,
+                chapter = info.chapter,
+                invitationInfo = CopyXml(info.invitationInfo),
+                extraCondition = CopyXml(info.extraCondition),
+                storyList = new List<StageStoryInfo>(),
+                isChapterLast = info.isChapterLast,
+                _storyType = info._storyType,
+                isStageFixedNormal = info.isStageFixedNormal,
+                floorOnlyList = new List<SephirahType>(),
+                exceptFloorList = new List<SephirahType>(),
+                rewardList = new List<BookDropItemInfo>()
+            };
             foreach (StageWaveInfo wave in info.waveList)
                 output.waveList.Add(CopyXml(wave));
-            output.stageType = info.stageType;
-            output.mapInfo = new List<string>();
             output.mapInfo.AddRange(info.mapInfo);
-            output.floorNum = info.floorNum;
-            output.chapter = info.chapter;
-            output.invitationInfo = CopyXml(info.invitationInfo);
-            output.extraCondition = CopyXml(info.extraCondition);
-            output.storyList = new List<StageStoryInfo>();
             foreach (StageStoryInfo story in info.storyList)
                 output.storyList.Add(CopyXml(story));
-            output.isChapterLast = info.isChapterLast;
-            output._storyType = info._storyType;
-            output.isStageFixedNormal = info.isStageFixedNormal;
-            output.floorOnlyList = new List<SephirahType>();
             output.floorOnlyList.AddRange(info.floorOnlyList);
-            output.exceptFloorList = new List<SephirahType>();    
             output.exceptFloorList.AddRange(info.exceptFloorList);
-            output.rewardList = new List<BookDropItemInfo>();
             foreach (BookDropItemInfo reward in info.rewardList)
                 output.rewardList.Add(CopyXml(reward));
             return output;
         }
         public static StageWaveInfo CopyXml(StageWaveInfo info)
         {
-            StageWaveInfo output = new StageWaveInfo();
-            output.enemyUnitIdList = new List<int>();
+            StageWaveInfo output = new StageWaveInfo
+            {
+                enemyUnitIdList = new List<int>(),
+                formationId = info.formationId,
+                formationType = info.formationType,
+                availableNumber = info.availableNumber,
+                aggroScript = info.aggroScript,
+                managerScript = info.managerScript
+            };
             output.enemyUnitIdList.AddRange(info.enemyUnitIdList);
-            output.formationId = info.formationId;
-            output.formationType = info.formationType;
-            output.availableNumber = info.availableNumber;
-            output.aggroScript = info.aggroScript;
-            output.managerScript = info.managerScript;
             return output;
         }
         public static StageInvitationInfo CopyXml(StageInvitationInfo info)
         {
-            StageInvitationInfo output = new StageInvitationInfo();
-            output.combine = info.combine;
-            output.needsBooks = new List<int>();
+            StageInvitationInfo output = new StageInvitationInfo
+            {
+                combine = info.combine,
+                needsBooks = new List<int>(),
+                bookNum = info.bookNum,
+                bookValue = info.bookValue
+            };
             output.needsBooks.AddRange(info.needsBooks);
-            output.bookNum = info.bookNum;
-            output.bookValue = info.bookValue;
             return output;
         }
         public static StageExtraCondition CopyXml(StageExtraCondition info)
         {
-            StageExtraCondition output = new StageExtraCondition();
-            output.needClearStageList = new List<int>();
+            StageExtraCondition output = new StageExtraCondition
+            {
+                needClearStageList = new List<int>(),
+                needLevel = info.needLevel
+            };
             output.needClearStageList.AddRange(info.needClearStageList);
-            output.needLevel = info.needLevel;
             return output;
         }
         public static StageStoryInfo CopyXml(StageStoryInfo info)
         {
-            StageStoryInfo output = new StageStoryInfo();
-            output.cond = info.cond;
-            output.story = info.story;
-            output.valid = info.valid;
-            output.chapter = info.chapter;
-            output.group = info.group;
-            output.episode = info.episode;
+            StageStoryInfo output = new StageStoryInfo
+            {
+                cond = info.cond,
+                story = info.story,
+                valid = info.valid,
+                chapter = info.chapter,
+                group = info.group,
+                episode = info.episode
+            };
             return output;
         }
         public static BookDropItemInfo CopyXml(BookDropItemInfo info)
         {
-            BookDropItemInfo output = new BookDropItemInfo();
-            output.id = info.id;
-            output.itemType = info.itemType;
+            BookDropItemInfo output = new BookDropItemInfo
+            {
+                id = info.id,
+                itemType = info.itemType
+            };
             return output;
         }
         public static void PassiveAbility_1890003_InitList()

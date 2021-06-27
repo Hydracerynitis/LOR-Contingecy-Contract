@@ -2,8 +2,10 @@
 <localize xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<text id="ui_ContingecyLevel">Risk Level {0} : {1}</text>
 	<text id="ui_RewardStage">Congrats for completing Risk 12 Level Challenge of {0}</text>
-	<text id="ui_RewardRevebrate">Congrats for completing All Risk 12 Level Challenge of The Reverbration Ensemble</text>
-	<text id="ui_popup_getequippage">Gain Equip Page: “{0}”</text>
+	<text id="ui_RewardSpecial">Congrats for completing {0} Challenge.</text>
+	<text id="Condition_OrangeCross">The Orange Cross</text>
+	<text id="Condition_Ensemble">All of The Reverbration Ensemble Risk 12 Level </text>
+	<text id="ui_popup_getequippage">Gain {1} Equip Page: “{0}”</text>
 	<text id="Philip_Silence_param1">more</text>
 	<text id="Philip_Silence_param2">much more</text>
 	<text id="Philip_Silence_param3">extremely much more</text>	

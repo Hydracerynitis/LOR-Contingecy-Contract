@@ -9,7 +9,7 @@
       <Unit>1310011</Unit>
     </Wave>
     <FloorNum>10</FloorNum>
-    <Chapter>7</Chapter>
+    <Chapter>1</Chapter>
     <StoryType>ContingencyReward</StoryType>
   </Stage>
 </StageXmlRoot> 

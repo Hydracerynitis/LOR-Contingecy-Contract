@@ -7,10 +7,9 @@ using System.Threading.Tasks;
 
 namespace Contingecy_Contract
 {
-    public class ContractRewardSystem: Singleton<ContractRewardSystem>
+    public class ContractRewardSystem : Singleton<ContractRewardSystem>
     {
         private List<string> UIs;
-        private string GetChpaterParams(StageClassInfo info) => TextDataModel.GetText("ui_maintitle_citystate_" + info.chapter.ToString());
         public void CheckReward(StageClassInfo info)
         {
             if (Harmony_Patch.CheckDuel(info.id))
@@ -18,59 +17,109 @@ namespace Contingecy_Contract
             if (Singleton<ContractLoader>.Instance.GetLevel(info.id) < 12)
                 return;
             UIs = new List<string>();
-            int id = -1;
             switch (info.id)
             {
                 case (70001):
-                    id = 18100000;
+                    Harmony_Patch.Progess.Philiph_Risk = 1;
                     break;
                 case (70002):
-                    id = 18200000;
+                    Harmony_Patch.Progess.Eileen_Risk = 1;
                     break;
                 case (70007):
-                    id = 18700000;
+                    Harmony_Patch.Progess.Jaeheon_Risk = 1;
                     break;
                 case (70008):
-                    id = 18800000;
+                    Harmony_Patch.Progess.Elena_Risk = 1;
                     break;
                 case (70009):
-                    id = 18900000;
+                    Harmony_Patch.Progess.Pluto_Risk = 1;
                     break;
             }
-            if (id != -1)
-            {
-                UIs.Add(TextDataModel.GetText("ui_RewardStage", Singleton<StageNameXmlList>.Instance.GetName(info.id)));
-                if (Singleton<BookInventoryModel>.Instance.GetBookListAll().Find((Predicate<BookModel>)(x => x.GetBookClassInfoId() == id)) == null)
-                {
-                    Singleton<BookInventoryModel>.Instance.CreateBook(id);
-                    Debug.Log(string.Format("Achieved Stage Reward: {0}", id));
-                    UIs.Add(TextDataModel.GetText("ui_popup_getequippage", (object)Singleton<BookDescXmlList>.Instance.GetBookName(id)));
-                }
-            }
-            CheckRevebrateReward();
+            UIs.Add(TextDataModel.GetText("ui_RewardStage", Singleton<StageNameXmlList>.Instance.GetName(info.id)));
+            CheckSpecialCondition(info);
+            CheckRewardAchieved();
+            Debug.SaveDebug();
             if (UIs.Count > 0)
                 UIAlarmPopup.instance.SetAlarmText(string.Join("\n", UIs));
         }
-        public void CheckRevebrateReward()
+        public void CheckSpecialCondition(StageClassInfo info)
         {
-            if (Singleton<BookInventoryModel>.Instance.GetBookListAll().Find((Predicate<BookModel>)(x => x.GetBookClassInfoId() == 18100000)) == null)
-                return;
-            if (Singleton<BookInventoryModel>.Instance.GetBookListAll().Find((Predicate<BookModel>)(x => x.GetBookClassInfoId() == 18200000)) == null)
-                return;
-            if (Singleton<BookInventoryModel>.Instance.GetBookListAll().Find((Predicate<BookModel>)(x => x.GetBookClassInfoId() == 18700000)) == null)
-                return;
-            if (Singleton<BookInventoryModel>.Instance.GetBookListAll().Find((Predicate<BookModel>)(x => x.GetBookClassInfoId() == 18800000)) == null)
-                return;
-            if (Singleton<BookInventoryModel>.Instance.GetBookListAll().Find((Predicate<BookModel>)(x => x.GetBookClassInfoId() == 18900000)) == null)
-                return;
-            if (Singleton<BookInventoryModel>.Instance.GetBookListAll().Find((Predicate<BookModel>)(x => x.GetBookClassInfoId() == 18000000)) == null)
+            if (GetContractCondition(OrangeCrossCondition,info))
             {
-                Singleton<BookInventoryModel>.Instance.CreateBook(18000000);
-                UIs.Add(TextDataModel.GetText("ui_RewardRevebrate"));
-                Debug.Log(string.Format("Achieved Reverberation Reward: {0}", 18000000));
-                UIs.Add(TextDataModel.GetText("ui_popup_getequippage", (object)Singleton<BookDescXmlList>.Instance.GetBookName(18000000)));
+                Harmony_Patch.Progess.Orange_Path = 1;
+                UIs.Add(TextDataModel.GetText("ui_RewardSpecial", TextDataModel.GetText("Condition_OrangeCross")));
+            }
+            if (EnsembleComplete)
+            {
+                if(Harmony_Patch.Progess.Ensemble_Complete==0)
+                    UIs.Add(TextDataModel.GetText("ui_RewardSpecial", TextDataModel.GetText("Condition_Ensemble")));
+                Harmony_Patch.Progess.Ensemble_Complete = 1;
             }
         }
+        public void CheckRewardAchieved()
+        {
+            if (Harmony_Patch.Progess.Ensemble_Complete == 1)
+            {
+                GiveEquipBook(18000000);
+            }
+            if (Harmony_Patch.Progess.Philiph_Risk == 1)
+            {
+                GiveEquipBook(18100000);
+            }
+            if (Harmony_Patch.Progess.Eileen_Risk == 1)
+            {
+                GiveEquipBook(18200000);
+            }
+            if (Harmony_Patch.Progess.Jaeheon_Risk == 1)
+            {
+                GiveEquipBook(18700000);
+            }
+            if (Harmony_Patch.Progess.Elena_Risk == 1)
+            {
+                GiveEquipBook(18800000);
+            }
+            if (Harmony_Patch.Progess.Orange_Path == 1)
+            {
+                GiveEquipBook(18810000);
+            }
+            if (Harmony_Patch.Progess.Pluto_Risk == 1)
+            {
+                GiveEquipBook(18900000);
+            }
+        }
+        public bool GetContractCondition(List<(string, int)> Condition,StageClassInfo info)
+        {
+            List<Contract> contracts = new List<Contract>();
+            contracts.AddRange(Singleton<ContractLoader>.Instance.GetPassiveList());
+            contracts.AddRange(Singleton<ContractLoader>.Instance.GetStageList());
+            foreach ((string,int) condition in Condition)
+            {
+                Contract contract = contracts.Find(x => x.Type == condition.Item1);
+                if (contract != null)
+                {
+                    if (Singleton<ContractLoader>.Instance.CheckActivate(contract,info) && contract.level >= condition.Item2)
+                        continue;
+                }
+                return false;
+            }
+            return true;
+        }
+        public void GiveEquipBook(int bookid)
+        {
+            List<BookModel> all = Singleton<BookInventoryModel>.Instance.GetBookListAll().FindAll((Predicate<BookModel>)(x => x.ClassInfo.id == bookid));
+            BookXmlInfo data2 = Singleton<BookXmlList>.Instance.GetData(bookid);
+            if (data2 == null || all.Count >= data2.Limit)
+                return;
+            int difference = data2.Limit - all.Count;
+            for(int i = 0; i < difference; i++)
+            {
+                Singleton<BookInventoryModel>.Instance.CreateBook(bookid);
+            }
+            UIs.Add(TextDataModel.GetText("ui_popup_getequippage", (object)Singleton<BookDescXmlList>.Instance.GetBookName(bookid),(object)difference));
+        }
+        public static bool EnsembleComplete => Harmony_Patch.Progess.Philiph_Risk == 1 || Harmony_Patch.Progess.Eileen_Risk == 1 || Harmony_Patch.Progess.Jaeheon_Risk == 1
+                                                || Harmony_Patch.Progess.Elena_Risk == 1 || Harmony_Patch.Progess.Pluto_Risk == 1;
+        public static List<(string, int)> OrangeCrossCondition => new List<(string, int)>() { ("Elena_Cross", 4), ("Elena", 4), ("Damage", 4) };
     }
 }
 //废案：给章节战斗书页的奖励

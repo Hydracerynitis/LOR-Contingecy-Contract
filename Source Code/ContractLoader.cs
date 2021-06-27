@@ -110,6 +110,40 @@ namespace Contingecy_Contract
             }
             Debug.Log("End Loading Contract");
         }
+        public bool CheckActivate(Contract contract, StageClassInfo info)
+        {
+            if (PassiveList.Contains(contract))
+            {
+                if (contract.Enemy.Count > 0)
+                {
+                    List<int> enemy = new List<int>();
+                    enemy.AddRange(contract.Enemy);
+                    foreach (StageWaveInfo wave in info.waveList)
+                    {
+                        if (wave.enemyUnitIdList.Exists((Predicate<int>)(x => enemy.Contains(x))))
+                        {
+                            enemy.RemoveAll(x => wave.enemyUnitIdList.Contains(x));
+                        }
+                    }
+                    if (enemy.Count == 0)
+                        return true;
+                    return false;
+                }
+                return true;
+            }
+            if (StageList.Contains(contract))
+            {
+                if (contract.modifier == null)
+                {
+                    Debug.Log("{0} does load modifier", contract.Type);
+                    return false;
+                }
+                if (contract.modifier.IsValid(info))
+                    return true;
+                return false;
+            }
+            return false;
+        }
         public int GetLevel(int id)
         {
             int i = 0;
@@ -118,35 +152,18 @@ namespace Contingecy_Contract
             {
                 foreach (Contract contract in PassiveList)
                 {
-                    if (contract.Enemy.Count>0)
-                    {
-                        bool HasEnemy = false;
-                        foreach(StageWaveInfo wave in info.waveList)
-                        {
-                            if(wave.enemyUnitIdList.Exists((Predicate<int>)(x => contract.Enemy.Contains(x))))
-                            {
-                                HasEnemy = true;
-                                continue;
-                            }
-                        }
-                        if (HasEnemy)
-                            i += contract.level;
-                        continue;
-                    }
-                    i += contract.level;
+                    if (CheckActivate(contract,info))
+                        i += contract.level;
+                    continue;
                 }
             }
             if (StageList.Count > 0)
             {
-                foreach(Contract contract in StageList)
+                foreach (Contract contract in StageList)
                 {
-                    if (contract.modifier == null)
-                    {
-                        Debug.Log("{0} does load modifier",contract.Type);
-                        continue;
-                    }
-                    if (contract.modifier.IsValid(info))
+                    if (CheckActivate(contract, info))
                         i += contract.level;
+                    continue;
                 }
             }
             return i;
