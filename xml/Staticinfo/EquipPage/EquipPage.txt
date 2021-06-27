@@ -204,6 +204,28 @@
     	<Rarity>Unique</Rarity>
     	<CharacterSkin>Elena</CharacterSkin>
  	</Book>
+  	<Book ID="18810000">
+    	<Name>朱红十字</Name>
+    	<TextId>1308021</TextId>
+    	<EquipEffect>
+      		<HP>550</HP>
+      		<Break>350</Break>
+      		<SpeedMin>2</SpeedMin>
+      		<Speed>7</Speed>
+      		<SResist>Normal</SResist>
+      		<PResist>Normal</PResist>
+      		<HResist>Normal</HResist>
+      		<SBResist>Normal</SBResist>
+      		<PBResist>Normal</PBResist>
+      		<HBResist>Normal</HBResist>
+      		<Passive>1308021</Passive>
+    	</EquipEffect>
+    	<BookIcon>ContingencyReward</BookIcon>
+    	<Chapter>7</Chapter>
+    	<Episode>1800000</Episode>
+    	<Rarity>Unique</Rarity>
+    	<CharacterSkin>Custom_OrangeCross</CharacterSkin>
+  	</Book>
   	<Book ID="18900000">
     		<Name>普鲁托</Name>
    		 <TextId>18900000</TextId>

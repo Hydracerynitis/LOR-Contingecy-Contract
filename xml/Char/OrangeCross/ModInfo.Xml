@@ -1,0 +1,55 @@
+<ModInfo>
+  <ClothInfo>
+    <Name>주홍십자의 책장</Name>
+    <Default>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-46" pivot_y="-367.8002" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Default>
+    <Guard>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-46" pivot_y="-367.8" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Guard>
+    <Damaged>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-45.99999" pivot_y="-367.8001" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Damaged>
+    <Evade>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-46" pivot_y="-367.8001" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Evade>
+    <Slash>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-121.9" pivot_y="-367.8001" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Slash>
+    <Hit>
+		<Direction>Front</Direction>
+		<Pivot pivot_x="370.3001" pivot_y="-367.8" />
+		<Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Hit>
+    <Penetrate>
+		<Direction>Front</Direction>
+		<Pivot pivot_x="-121.9" pivot_y="-367.8" />
+		<Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Penetrate>
+    <Move>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-46" pivot_y="-367.8001" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Move>
+    <Fire>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="370.2996" pivot_y="-367.8" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Fire>
+    <Aim>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-46" pivot_y="-367.8002" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Aim>
+  </ClothInfo>
+</ModInfo>
