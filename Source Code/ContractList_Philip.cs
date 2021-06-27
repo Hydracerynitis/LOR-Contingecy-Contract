@@ -17,8 +17,8 @@ namespace Contingecy_Contract
             this.Level = level - 1;
         }
         public override ContractType Type => ContractType.Special;
-        public override string[] GetFormatParam => new string[] {TextDataModel.GetText(param1),(4 + 3 * Level).ToString() };
-        private string param1
+        public override string[] GetFormatParam => new string[] {TextDataModel.GetText(Param1),(1 + 2 * Level).ToString() };
+        private string Param1
         {
             get
             {
@@ -41,7 +41,7 @@ namespace Contingecy_Contract
         public class OverHeat_cc: BattleUnitBuf
         {
             private Battle.CreatureEffect.CreatureEffect _effect;
-            private int level;
+            private readonly int level;
             protected override string keywordId => "Philip_OverHit";
             public OverHeat_cc(int Level)
             {
@@ -66,7 +66,7 @@ namespace Contingecy_Contract
                     return;
                 behavior.ApplyDiceStatBonus(new DiceStatBonus()
                 {
-                    dmg = 4+3*level
+                    dmg = 1 + 2 * level
                 });
             }
             public override AtkResist GetResistBP(AtkResist origin, BehaviourDetail detail)

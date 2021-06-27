@@ -138,13 +138,11 @@ namespace Contingecy_Contract
         }
         public static void CheckPhaseCondition(BattleUnitModel unit)
         {
-            PassiveAbility_250022 Red = unit.passiveDetail.PassiveList.Find(x => x is PassiveAbility_250022) as PassiveAbility_250022;
-            if (Red != null)
+            if (unit.passiveDetail.PassiveList.Find(x => x is PassiveAbility_250022) is PassiveAbility_250022 Red)
             {
-                typeof(PassiveAbility_250022).GetField("_egoCondition",AccessTools.all).SetValue(Red, (int)(0.5 * unit.MaxHp));
+                typeof(PassiveAbility_250022).GetField("_egoCondition", AccessTools.all).SetValue(Red, (int)(0.5 * unit.MaxHp));
             }
-            PassiveAbility_250227 Purple = unit.passiveDetail.PassiveList.Find(x => x is PassiveAbility_250227) as PassiveAbility_250227;
-            if (Purple != null)
+            if (unit.passiveDetail.PassiveList.Find(x => x is PassiveAbility_250227) is PassiveAbility_250227 Purple)
             {
                 typeof(PassiveAbility_250227).GetField("_teleportCondition", AccessTools.all).SetValue(Purple, (int)(0.5 * unit.MaxHp));
             }
@@ -160,7 +158,7 @@ namespace Contingecy_Contract
     }
     public class ContractStatBonus : BattleUnitBuf
     {
-        List<ContingecyContract> Contracts;
+        private readonly List<ContingecyContract> Contracts;
         public ContractStatBonus(List<ContingecyContract> list)
         {
             Contracts = new List<ContingecyContract>();

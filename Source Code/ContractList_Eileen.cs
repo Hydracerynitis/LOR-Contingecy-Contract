@@ -26,19 +26,19 @@ namespace Contingecy_Contract
                 s += TextDataModel.GetText("Eileen_Production_param3");
             return s;
         }
-        private bool isEileen => owner.UnitData.unitData.EnemyUnitId == 1302011;
+        private bool IsEileen => owner.UnitData.unitData.EnemyUnitId == 1302011;
         public override StatBonus GetStatBonus(BattleUnitModel owner)
         {
-            if (isEileen)
+            if (IsEileen)
                 return new StatBonus() { hpRate = 25 + Level * 25 };
             return base.GetStatBonus(owner);
         }
-        public override int SpeedDiceNumAdder() => isEileen || Level <1? 0:1;
-        public override int MaxPlayPointAdder() => isEileen || Level<1? 0:2;
+        public override int SpeedDiceNumAdder() => IsEileen || Level <1? 0:1;
+        public override int MaxPlayPointAdder() => IsEileen || Level<1? 0:2;
         public override void OnRoundStart()
         {
             base.OnRoundStart();
-            if (isEileen || Level < 1)
+            if (IsEileen || Level < 1)
                 return;
             this.owner.cardSlotDetail.RecoverPlayPoint(MaxPlayPointAdder());
             if (Level < 2)
@@ -58,10 +58,10 @@ namespace Contingecy_Contract
         }
         public override ContractType Type => ContractType.Special;
         public override string[] GetFormatParam => new string[] { (25 + Level * 25).ToString(), (Math.Max(0, -3 + 3 * Level)).ToString() };
-        private bool isEileen => owner.UnitData.unitData.EnemyUnitId == 1302011;
+        private bool IsEileen => owner.UnitData.unitData.EnemyUnitId == 1302011;
         public override StatBonus GetStatBonus(BattleUnitModel owner)
         {
-            if (!isEileen)
+            if (!IsEileen)
                 return new StatBonus() { hpRate = 25 + Level * 25, breakRate= 25 + Level * 25 };
             return base.GetStatBonus(owner);
         }
@@ -74,7 +74,7 @@ namespace Contingecy_Contract
         }
         public override bool BeforeTakeDamage(BattleUnitModel attacker, int dmg)
         {
-            if (!isEileen || BattleObjectManager.instance.GetAliveList(this.owner.faction).FindAll(x => x!= owner).Count<=0)
+            if (!IsEileen || BattleObjectManager.instance.GetAliveList(this.owner.faction).FindAll(x => x!= owner).Count<=0)
                 return false;
             RandomUtil.SelectOne<BattleUnitModel>(BattleObjectManager.instance.GetAliveList(this.owner.faction).FindAll(x => x != owner)).TakeDamage(dmg);
             return true;
