@@ -14,7 +14,7 @@ namespace ContractReward
         public override string[] Keywords => new string[]{"Burn_Keyword"};
         public override void OnUseCard()
         {
-            if (card.target == null || card.target.bufListDetail.GetActivatedBuf(KeywordBuf.Burn) == null || card.target.bufListDetail.GetActivatedBuf(KeywordBuf.Burn).stack < 5)
+            if (card.target == null || card.target.bufListDetail.GetActivatedBuf(KeywordBuf.Burn) == null || card.target.bufListDetail.GetActivatedBuf(KeywordBuf.Burn).stack < 10)
                 return;
             List<BattleDiceCardModel> list = this.owner.allyCardDetail.GetHand();
             BattleDiceCardModel Card = RandomUtil.SelectOne<BattleDiceCardModel>(list);

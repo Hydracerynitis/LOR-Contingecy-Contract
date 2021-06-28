@@ -29,6 +29,9 @@
   	<BattleCardAbility ID="philip_emotion_pw">
     		<Desc>[拼点胜利] 对双方施加1层[烧伤]</Desc>
   	</BattleCardAbility>
+  	<BattleCardAbility ID="ParryBurn">
+    		<Desc>[拼点时] 对双方施加1层[烧伤]</Desc>
+  	</BattleCardAbility>
   	<BattleCardAbility ID="philip_stigma_atk">
     		<Desc>[命中时] 获得3枚负面情感硬币</Desc>
   	</BattleCardAbility>
@@ -51,10 +54,10 @@
     		<Desc>[使用时] 减少自身[烧伤]层数5点</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="BurnCostDown">
-    		<Desc>[使用时] 若目标烧伤层数大于5层则使随机2张手牌费用设定为0(仅限这一次)</Desc>
+    		<Desc>[使用时] 若目标烧伤层数大于10层则使随机2张手牌费用设定为0(仅限这一次)</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="philip_area_atk">
-    		<Desc>[交锋] [命中时] 对目标施加3层烧伤</Desc>
+    		<Desc>[命中时] 对目标施加3层烧伤</Desc>
   	</BattleCardAbility>
 	<!--艾琳-->
 	<BattleCardAbility ID="MeatGearPower">
@@ -77,11 +80,11 @@
     		<Desc>[命中时]追加4点混乱伤害</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="AllPuppetControl">
-    		<Desc>[范围杀伤书页][使用时] 下一幕使所有其他司书获得[临时操纵]</Desc>
+    		<Desc>[使用时] 下一幕使所有其他司书获得[临时操纵]</Desc>
     		<Desc>该书页4幕内最多使用1次</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="Jaeheon_AreaBind">
-    		<Desc>[交锋][命中时]下一幕中对目标施加1层[束缚]</Desc>
+    		<Desc>[命中时]下一幕中对目标施加1层[束缚]</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="PuppetProtect">
     		<Desc>[战斗开始] 使安洁莉卡傀儡获得2层[守护][振奋]</Desc>
@@ -112,9 +115,6 @@
   	<BattleCardAbility ID="ElenaBuff">
     	<Desc>[战斗开始]使目标获得2层[强壮][忍耐]</Desc>
 		<Desc>可指向友方单位为目标</Desc>
-  	</BattleCardAbility>
-  	<BattleCardAbility ID="ElenaBuffAtk">
-    	<Desc>[命中时] 使所有友方单位下一幕获得2层[强壮][忍耐]</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="AoeCoolDown">
 		<Desc>该书页4幕内只能使用一次</Desc>

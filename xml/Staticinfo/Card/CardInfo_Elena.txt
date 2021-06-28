@@ -54,12 +54,12 @@
         <Artwork>Elena1</Artwork>
         <Rarity>Uncommon</Rarity>
 		<Option>NoInventory</Option>
-        <Spec Range="Near" Cost="3" />
+        <Spec Range="Near" Cost="2" />
         <Script></Script>
         <ScriptDesc></ScriptDesc>
         <BehaviourList>
             <Behaviour Min="6" Dice="9" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
-            <Behaviour Min="3" Dice="5" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Elena_Z" Script="ElenaBuffAtk" ActionScript="" Desc="" />
+            <Behaviour Min="3" Dice="5" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Elena_Z" Script="argaliaBuf" ActionScript="" Desc="" />
             <Behaviour Min="6" Dice="8" Type="Atk" Detail="Slash" Motion="H" EffectRes="Elena_H" Script="" ActionScript="" Desc="" />
         </BehaviourList>
         <Chapter>7</Chapter>

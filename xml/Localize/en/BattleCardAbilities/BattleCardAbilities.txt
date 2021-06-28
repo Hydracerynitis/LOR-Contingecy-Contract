@@ -25,6 +25,9 @@
   	<BattleCardAbility ID="philip_emotion_pw">
     		<Desc>[On Clash Win] Inflict 1 Burn to each other</Desc>
   	</BattleCardAbility>
+  	<BattleCardAbility ID="ParryBurn">
+    		<Desc>[On Clash] Inflict 1 Burn to each other</Desc>
+  	</BattleCardAbility>
   	<BattleCardAbility ID="philip_stigma_atk">
     		<Desc>[On Hit] Gain 3 Negative Emotion Coins</Desc>
   	</BattleCardAbility>
@@ -47,7 +50,7 @@
     		<Desc>[On Use] Reduce self's Burn stack by 5</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="BurnCostDown">
-    		<Desc>[On Use] if target has mor than 5 Burn, set costs of 2 random cards from hand to 0 (Reset after Use)</Desc>
+    		<Desc>[On Use] if target has more than 10 Burn, set costs of 2 random cards from hand to 0 (Reset after Use)</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="philip_area_atk">
     		<Desc>[On Hit] Inflict 3 Burn</Desc>
@@ -108,9 +111,6 @@
   	<BattleCardAbility ID="ElenaBuff">
     	<Desc>[Combat Start] give target 2 [Strength] [Endurance]</Desc>
 		<Desc>Can point ally as target</Desc>
-  	</BattleCardAbility>
-  	<BattleCardAbility ID="ElenaBuffAtk">
-    	<Desc>[On Hit] give all allies 2 [Strength] [Endurance] Next Scene.</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="AoeCoolDown">
 		<Desc>This card can be used at most use once per 4 Scene</Desc>
