@@ -86,6 +86,7 @@ Can use a copy of 3 Cost "Recoonect" to make Puppet Angelica regain Puppet Strin
 		<Name>Protective Puppetry</Name> 
 		<Desc>At the start of the Scene, gain Protection and Stagger Protection by the numbers of other allies.</Desc>
 	</PassiveDesc>
+	<!--安洁莉卡-->
 	<PassiveDesc ID="1870101">
 		<Name>Gigigigigig</Name> 
 		<Desc>Boost Blunt dices' Power by 1. On hit by Blunt dices inflict 2 Stagger damage.
@@ -116,6 +117,15 @@ Offensive Dices gain 1 Power with 25% Max HP lost (Max. 3)</Desc>
 	<PassiveDesc ID="1880003">
 		<Name>Nameless Shell</Name> 
 		<Desc>Uncontrollable, attack other allies. Vanish when there are no other allies.</Desc>
+	</PassiveDesc>
+	<!--朱红十字-->
+	<PassiveDesc ID="1880101">
+		<Name>Scorched Body / Heated Cross</Name> 
+		<Desc>At the Start of each Scene, Lose HP equal to 10% of Max HP to self/ All Dice gain 2 Power.</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1880102">
+		<Name>Heavy Weaponry / Rampage</Name> 
+		<Desc>Lose 3 Speed / one of used "Cross Blade","Shockwave","Heated Weapon" will be used again.</Desc>
 	</PassiveDesc>
 	<!--普鲁托-->
 	<PassiveDesc ID="1890001">

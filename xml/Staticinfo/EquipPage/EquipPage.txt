@@ -206,7 +206,8 @@
  	</Book>
   	<Book ID="18810000">
     	<Name>朱红十字</Name>
-    	<TextId>1308021</TextId>
+    	<TextId>18810000</TextId>
+		<Category>DeckFixed</Category>
     	<EquipEffect>
       		<HP>550</HP>
       		<Break>350</Break>
@@ -218,7 +219,12 @@
       		<SBResist>Normal</SBResist>
       		<PBResist>Normal</PBResist>
       		<HBResist>Normal</HBResist>
-      		<Passive>1308021</Passive>
+      		<StartPlayPoint>4</StartPlayPoint>
+      		<MaxPlayPoint>4</MaxPlayPoint>
+      		<Passive>10008</Passive>
+      		<Passive>1800000</Passive>
+			<Passive>1880101</Passive>
+			<Passive>1880102</Passive>
     	</EquipEffect>
     	<BookIcon>ContingencyReward</BookIcon>
     	<Chapter>7</Chapter>

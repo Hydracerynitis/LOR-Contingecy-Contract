@@ -6,11 +6,11 @@
 		<Rarity>Common</Rarity>
 		<Option>NoInventory</Option>
 		<Spec Range="Near" Cost="2" />
-		<Script>SelfBurn2</Script>
+		<Script></Script>
 		<ScriptDesc></ScriptDesc>
     	<BehaviourList>
-      		<Behaviour Min="3" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
-      		<Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      		<Behaviour Min="3" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="philip_emotion_pw" ActionScript="" Desc="" />
+      		<Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="philip_emotion_pw" ActionScript="" Desc="" />
       		<Behaviour Min="3" Dice="7" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
 		</BehaviourList>
 		<Chapter>7</Chapter>
@@ -25,8 +25,8 @@
 		<Script></Script>
 		<ScriptDesc></ScriptDesc>
     	<BehaviourList>
-			<Behaviour Min="4" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="philip_emotion_pw" ActionScript="" Desc="" />
-      		<Behaviour Min="4" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="philip_emotion_pw" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="ParryBurn" ActionScript="" Desc="" />
+      		<Behaviour Min="4" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="ParryBurn" ActionScript="" Desc="" />
       		<Behaviour Min="3" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
       		<Behaviour Min="3" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="philip_emotion_pw" ActionScript="" Desc="" />
 		</BehaviourList>
@@ -54,7 +54,7 @@
 		<Rarity>Uncommon</Rarity>
 		<Option>NoInventory</Option>
 		<Spec Range="Near" Cost="2" />
-		<Script></Script>
+		<Script>SelfBurn2</Script>
 		<ScriptDesc></ScriptDesc>
     	<BehaviourList>
       		<Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="philip_heat_atk1" ActionScript="" Desc="" />

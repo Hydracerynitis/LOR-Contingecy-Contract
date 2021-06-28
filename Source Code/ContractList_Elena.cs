@@ -17,10 +17,11 @@ namespace Contingecy_Contract
         public ContingecyContract_Elena_Cross(int level)
         {
             Level = level - 1;
+            extrahit = new List<BattlePlayingCardDataInUnitModel>();
         }
         public override ContractType Type => ContractType.Special;
         public override string[] GetFormatParam => new string[] { Level.ToString(),((Level - 1)*25).ToString() };
-        private List<BattlePlayingCardDataInUnitModel> extrahit=new List<BattlePlayingCardDataInUnitModel>();
+        private readonly List<BattlePlayingCardDataInUnitModel> extrahit;
         public override void OnRoundStart()
         {
             base.OnRoundStart();
@@ -73,7 +74,7 @@ namespace Contingecy_Contract
         }
         public class CrossBurn : BattleUnitBuf
         {
-            private int Level;
+            private readonly int Level;
             public int Hit;
             protected override string keywordId => "CrossBurn";
             protected override string keywordIconId => "Wolf_Scar";
@@ -116,7 +117,7 @@ namespace Contingecy_Contract
             {
                 this.owner.SetCurrentOrder(i);
                 this.owner.speedDiceResult[i].isControlable = false;
-                BattleDiceCardModel card = this.owner.allyCardDetail.AddTempCard(18800008);
+                BattleDiceCardModel card = this.owner.allyCardDetail.AddTempCard(18800007);
                 BattleUnitModel target = victim[0];
                 if (target != null)
                 {

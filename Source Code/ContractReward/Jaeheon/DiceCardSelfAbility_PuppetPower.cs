@@ -9,13 +9,17 @@ using System.Threading.Tasks;
 
 namespace ContractReward
 {
-    public class DiceCardSelfAbility_PuppetStrength : DiceCardSelfAbilityBase
+    public class DiceCardSelfAbility_PuppetPower : DiceCardSelfAbilityBase
     {
         public override void OnStartBattle()
         {
             base.OnStartBattle();
             if (FindAngelica() != null)
-                FindAngelica().bufListDetail.AddKeywordBufThisRoundByCard(KeywordBuf.Strength,1);
+            {
+                FindAngelica().bufListDetail.AddKeywordBufThisRoundByCard(KeywordBuf.Strength, 1);
+                FindAngelica().bufListDetail.AddKeywordBufThisRoundByCard(KeywordBuf.Endurance, 1);
+            }
+
         }
         private BattleUnitModel FindAngelica() => BattleObjectManager.instance.GetAliveList(this.owner.faction).Find((Predicate<BattleUnitModel>)(x => x.Book.GetBookClassInfoId() == 18710000));
     }

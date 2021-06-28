@@ -21,7 +21,7 @@
     		<Artwork>Argalia2_1</Artwork>
     		<Rarity>Common</Rarity>
 		    <Option>NoInventory</Option>
-    		<Spec Range="Near" Cost="3" />
+    		<Spec Range="Near" Cost="2" />
     		<Script>PerfectResonance</Script>
     		<ScriptDesc></ScriptDesc>
     		<BehaviourList>
@@ -38,7 +38,7 @@
     		<Artwork>Argalia2_3</Artwork>
     		<Rarity>Uncommon</Rarity>
 		    <Option>NoInventory</Option>
-    		<Spec Range="Near" Cost="3" />
+    		<Spec Range="Near" Cost="2" />
     		<Script>PerfectResonance</Script>
     		<ScriptDesc></ScriptDesc>
     		<BehaviourList>

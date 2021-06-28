@@ -55,7 +55,7 @@ namespace Contingecy_Contract
             FieldInfo[] values = typeof(ChallengeProgress).GetFields();
             for (int i= 0; i < values.Length; i++)
             {
-                File.AppendAllText(Harmony_Patch.ModPath + "/Debug/Save.txt", values[i].Name+" "+values[i].GetValue(Harmony_Patch.Progess+"\n"));
+                File.AppendAllText(Harmony_Patch.ModPath + "/Debug/Save.txt", values[i].Name+" "+values[i].GetValue(Harmony_Patch.Progess)+"\n");
             }           
         }
     }

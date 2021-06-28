@@ -101,7 +101,7 @@
 		<BattleCardDesc ID="18200008">
 			<LocalizedName>血肉齿轮: 转动</LocalizedName>
 		</BattleCardDesc>
-		<!--在宪-->
+		<!--在宪 & 安洁莉卡-->
 		<BattleCardDesc ID="18700001">
 			<LocalizedName>操控傀儡</LocalizedName>
 		</BattleCardDesc>
@@ -167,19 +167,32 @@
 			<LocalizedName>体液循环</LocalizedName>
 		</BattleCardDesc>
 		<BattleCardDesc ID="18800004">
-			<LocalizedName>遁入阴影</LocalizedName>
-		</BattleCardDesc>
-		<BattleCardDesc ID="18800005">
 			<LocalizedName>能量灌注</LocalizedName>
 		</BattleCardDesc>
-		<BattleCardDesc ID="18800006">
+		<BattleCardDesc ID="18800005">
 			<LocalizedName>血液扩散</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18800006">
+			<LocalizedName>血管盛宴</LocalizedName>
 		</BattleCardDesc>
 		<BattleCardDesc ID="18800007">
 			<LocalizedName>血管盛宴</LocalizedName>
 		</BattleCardDesc>
-		<BattleCardDesc ID="18800008">
-			<LocalizedName>血管盛宴</LocalizedName>
+		<!--朱红十字-->
+		<BattleCardDesc ID="18810001">
+			<LocalizedName>十字剑斩</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18810002">
+			<LocalizedName>震荡冲击</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18810003">
+			<LocalizedName>焦热兵装</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18810004">
+			<LocalizedName>狂乱一击</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18810005">
+			<LocalizedName>肉身阻隔</LocalizedName>
 		</BattleCardDesc>
 		<!--普鲁托-->
 		<BattleCardDesc ID="18900001">

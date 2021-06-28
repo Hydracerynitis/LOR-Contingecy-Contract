@@ -62,7 +62,7 @@
 	<BattleCardAbility ID="MeatGearSmoke">
 		<Desc>[On Play] Gain 2 smoke.</Desc>
   	</BattleCardAbility>
-	<!--在宪-->
+	<!--在宪 & 安洁莉卡-->
   	<BattleCardAbility ID="QuickPuppet_Special">
     		<Desc>If Speed is 5 or higher, all dice on this page gain +1 Power</Desc>
   	</BattleCardAbility>
@@ -80,16 +80,16 @@
     		<Desc>[On Hit] Inflict 1 Bind next Scene</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="PuppetProtect">
-    		<Desc>[Combat Start] Give Puppet Angelica 1 [Protection] [Stagger Protection]</Desc>
+    		<Desc>[Combat Start] Give Puppet Angelica 2 [Protection] [Stagger Protection]</Desc>
   	</BattleCardAbility>
-  	<BattleCardAbility ID="PuppetEndure">
-    		<Desc>[Combat Start] Give Puppet Angelica 1 [Endurance]</Desc>
+  	<BattleCardAbility ID="PuppetDmg">
+    		<Desc>[Combat Start] Give Puppet Angelica 2 [Damage Up]</Desc>
   	</BattleCardAbility>
-  	<BattleCardAbility ID="PuppetStrength">
-    		<Desc>[Combat Start] Give Puppet Angelica 1 [Strength]</Desc>
+  	<BattleCardAbility ID="PuppetPower">
+    		<Desc>[Combat Start] Give Puppet Angelica 1 [Strength] [Endurance]</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="PuppetHeal">
-    		<Desc>[Combat Start] Puppet Angelica recover 10 Stagger Resist</Desc>
+    		<Desc>[Combat Start] Puppet Angelica recover 15 Stagger Resist</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="AngelicaPuppet_Wheels">
     		<Desc>[On Clash Win] Destroy opponent's next die</Desc>
@@ -109,9 +109,8 @@
     	<Desc>[Combat Start] give target 2 [Strength] [Endurance]</Desc>
 		<Desc>Can point ally as target</Desc>
   	</BattleCardAbility>
-  	<BattleCardAbility ID="Invisible">
-    	<Desc>Become Untargetable in the next Scene if recieve no hit in this Scene</Desc>
-		<Desc>Can only use when self is targetable</Desc>
+  	<BattleCardAbility ID="ElenaBuffAtk">
+    	<Desc>[On Hit] give all allies 2 [Strength] [Endurance] Next Scene.</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="AoeCoolDown">
 		<Desc>This card can be used at most use once per 4 Scene</Desc>
@@ -124,6 +123,11 @@
   	<BattleCardAbility ID="ElenaZombieEnemy">
     	<Desc>Recover all Health and Stagger Resist in Next Scene and start attack allies</Desc>
     	<Desc>target will vanish if it has not alive allies</Desc>
+  	</BattleCardAbility>
+	<!-- 朱红十字-->
+	<BattleCardAbility ID="AllyCounter">
+    	<Desc>[Combat Start] target gain all counter dices in this page.</Desc>
+		<Desc>Only point ally as target.</Desc>
   	</BattleCardAbility>
 	<!--普鲁托-->
 	<BattleCardAbility ID="Barrier">

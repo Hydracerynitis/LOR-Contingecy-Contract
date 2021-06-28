@@ -59,6 +59,13 @@
 			</TextList>
 			<PassiveList />
 		</BookDesc>
+		<BookDesc BookID="18810000">
+			<BookName>The Dim Vermilion's Page</BookName>
+			<TextList>
+      			<Desc></Desc>
+			</TextList>
+			<PassiveList />
+		</BookDesc>
 		<BookDesc BookID="18900000">
 			<BookName>Pluto's Solemn Page</BookName>
 			<TextList>

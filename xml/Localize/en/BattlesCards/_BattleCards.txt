@@ -88,7 +88,7 @@
 		<BattleCardDesc ID="18200008">
 			<LocalizedName>Meat Gear: Spin</LocalizedName>
 		</BattleCardDesc>
-		<!--在宪-->
+		<!--在宪 & 安洁莉卡-->
 		<BattleCardDesc ID="18700001">
 			<LocalizedName>Puppetry</LocalizedName>
 		</BattleCardDesc>
@@ -154,19 +154,32 @@
 			<LocalizedName>Circulation</LocalizedName>
 		</BattleCardDesc>
 		<BattleCardDesc ID="18800004">
-			<LocalizedName>Vanish</LocalizedName>
-		</BattleCardDesc>
-		<BattleCardDesc ID="18800005">
 			<LocalizedName>Inject</LocalizedName>
 		</BattleCardDesc>
-		<BattleCardDesc ID="18800006">
+		<BattleCardDesc ID="18800005">
 			<LocalizedName>Bloodspreading</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18800006">
+			<LocalizedName>Feast</LocalizedName>
 		</BattleCardDesc>
 		<BattleCardDesc ID="18800007">
 			<LocalizedName>Feast</LocalizedName>
 		</BattleCardDesc>
-		<BattleCardDesc ID="18800008">
-			<LocalizedName>Feast</LocalizedName>
+		<!--朱红十字-->
+		<BattleCardDesc ID="18810001">
+			<LocalizedName>Cross Blade</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18810002">
+			<LocalizedName>Shockwave</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18810003">
+			<LocalizedName>Heated Weapon</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18810004">
+			<LocalizedName>Rampageous Strike</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18810005">
+			<LocalizedName>Obstruct</LocalizedName>
 		</BattleCardDesc>
 		<!--普鲁托-->
 		<BattleCardDesc ID="18900001">

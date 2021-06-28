@@ -66,7 +66,7 @@
 	<BattleCardAbility ID="MeatGearSmoke">
 		<Desc>[装备时] 获得2层烟气</Desc>
   	</BattleCardAbility>
-	<!--在宪-->
+	<!--在宪 & 安洁莉卡-->
   	<BattleCardAbility ID="QuickPuppet_Special">
     		<Desc>若自身速度不低于5点则使本书页的所有骰子威力+1</Desc>
   	</BattleCardAbility>
@@ -84,16 +84,16 @@
     		<Desc>[交锋][命中时]下一幕中对目标施加1层[束缚]</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="PuppetProtect">
-    		<Desc>[战斗开始] 使安洁莉卡傀儡获得1层[守护][振奋]</Desc>
+    		<Desc>[战斗开始] 使安洁莉卡傀儡获得2层[守护][振奋]</Desc>
   	</BattleCardAbility>
-  	<BattleCardAbility ID="PuppetEndure">
-    		<Desc>[战斗开始] 使安洁莉卡傀儡获得1层[忍耐]</Desc>
+  	<BattleCardAbility ID="PuppetDmg">
+    		<Desc>[战斗开始] 使安洁莉卡傀儡获得2层[伤害提升]</Desc>
   	</BattleCardAbility>
-  	<BattleCardAbility ID="PuppetStrength">
-    		<Desc>[战斗开始] 使安洁莉卡傀儡获得1层[强壮]</Desc>
+  	<BattleCardAbility ID="PuppetPower">
+    		<Desc>[战斗开始] 使安洁莉卡傀儡获得1层[强壮][忍耐]</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="PuppetHeal">
-    		<Desc>[战斗开始] 使安洁莉卡傀儡恢复10点混乱抗性</Desc>
+    		<Desc>[战斗开始] 使安洁莉卡傀儡恢复15点混乱抗性</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="AngelicaPuppet_Wheels">
     		<Desc>[拼点胜利]摧毁目标当前书页的下一颗骰子</Desc>
@@ -110,12 +110,11 @@
   	</BattleCardAbility>
 	<!--伊莲娜-->
   	<BattleCardAbility ID="ElenaBuff">
-    	<Desc>[战斗开始]使目标获得2层强壮忍耐</Desc>
+    	<Desc>[战斗开始]使目标获得2层[强壮][忍耐]</Desc>
 		<Desc>可指向友方单位为目标</Desc>
   	</BattleCardAbility>
-  	<BattleCardAbility ID="Invisible">
-    	<Desc>这一幕内若没有受到一次攻击则下一幕内无法指定为目标</Desc>
-		<Desc>仅限自己能被指定为目标时使用</Desc>
+  	<BattleCardAbility ID="ElenaBuffAtk">
+    	<Desc>[命中时] 使所有友方单位下一幕获得2层[强壮][忍耐]</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="AoeCoolDown">
 		<Desc>该书页4幕内只能使用一次</Desc>
@@ -128,6 +127,11 @@
   	<BattleCardAbility ID="ElenaZombieEnemy">
     	<Desc>使目标下一幕起恢复所有血量和混乱抗性并转向攻击其友方单位</Desc>
     	<Desc>若无目标的其他友方单位则自动消散</Desc>
+  	</BattleCardAbility>
+	<!-- 朱红十字-->
+	<BattleCardAbility ID="AllyCounter">
+    	<Desc>[战斗开始]使目标获得该书页所有骰子的复制</Desc>
+		<Desc>只能指向友方单位为目标</Desc>
   	</BattleCardAbility>
 	<!--普鲁托-->
 	<BattleCardAbility ID="Barrier">

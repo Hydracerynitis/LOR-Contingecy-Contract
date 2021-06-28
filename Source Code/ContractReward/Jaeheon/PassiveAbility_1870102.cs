@@ -8,14 +8,12 @@ namespace ContractReward
 {
     public class PassiveAbility_1870102: PassiveAbilityBase
     {
-        private BattleUnitModel Jaeheon;
-        public PassiveAbility_1870102(BattleUnitModel unit,BattleUnitModel jaeheon)
+        public PassiveAbility_1870102(BattleUnitModel unit)
         {
             this.owner = unit;
             this.name = Singleton<PassiveDescXmlList>.Instance.GetName(1870102);
             this.desc = Singleton<PassiveDescXmlList>.Instance.GetDesc(1870102);
             this.rare = Rarity.Rare;
-            Jaeheon = jaeheon;
         }
         public override void OnBattleEnd_alive()
         {

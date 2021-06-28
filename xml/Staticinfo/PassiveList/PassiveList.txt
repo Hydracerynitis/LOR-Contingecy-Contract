@@ -118,6 +118,17 @@
     		<CanGivePassive>false</CanGivePassive>
 		<Cost>6</Cost>
   	</Passive>
+	<!-- 朱红十字-->
+	<Passive ID="1880101">
+		<Rarity>Unique</Rarity>
+    		<CanGivePassive>false</CanGivePassive>
+		<Cost>6</Cost>
+  	</Passive>
+	<Passive ID="1880102">
+		<Rarity>Unique</Rarity>
+    		<CanGivePassive>false</CanGivePassive>
+		<Cost>6</Cost>
+  	</Passive>
 	<!-- 普鲁托-->
 	<Passive ID="1890001">
 		<Rarity>Unique</Rarity>

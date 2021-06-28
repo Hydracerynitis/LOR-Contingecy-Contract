@@ -10,7 +10,7 @@ namespace ContractReward
 {
     public class PassiveAbility_1870003: PassiveAbilityBase
     {
-        private BattleUnitModel Angelica;
+        private readonly BattleUnitModel Angelica;
         public PassiveAbility_1870003(BattleUnitModel unit,BattleUnitModel angelica)
         {
             this.owner = unit;

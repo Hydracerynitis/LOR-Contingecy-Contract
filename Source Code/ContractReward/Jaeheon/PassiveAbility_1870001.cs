@@ -61,6 +61,7 @@ namespace ContractReward
             Angelica.personalEgoDetail.Init();
             Angelica.breakDetail.nextTurnBreak = false;
             Angelica.breakDetail.RecoverBreakLife(1, true);
+            Angelica.breakDetail.ResetBreakDefault();
             Angelica.bufListDetail.RemoveBufAll();
             Angelica.bufListDetail.AddBuf(new BattleUnitBuf_AngelicaPuppet(this.owner));
             Angelica.passiveDetail.PassiveList.Clear();
@@ -73,7 +74,7 @@ namespace ContractReward
             List<PassiveAbilityBase> list1 = Angelica.passiveDetail.PassiveList;
             list1.Add(new PassiveAbility_1800000(Angelica));
             list1.Add(new PassiveAbility_1870101(Angelica));
-            list1.Add(new PassiveAbility_1870102(Angelica,this.owner));
+            list1.Add(new PassiveAbility_1870102(Angelica));
             list1.Add(new PassiveAbility_1870103(Angelica));
             typeof(BattleUnitPassiveDetail).GetField("_passiveList", AccessTools.all).SetValue((object)Angelica.passiveDetail, (object)list1);
             Contingecy_Contract.ContractAttribution.Inition.Remove(Angelica);

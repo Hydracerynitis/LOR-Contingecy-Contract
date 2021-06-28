@@ -59,6 +59,13 @@
 			</TextList>
 			<PassiveList />
 		</BookDesc>
+		<BookDesc BookID="18810000">
+			<BookName>黯淡朱红之页</BookName>
+			<TextList>
+      			<Desc></Desc>
+			</TextList>
+			<PassiveList />
+		</BookDesc>
 		<BookDesc BookID="18900000">
 			<BookName>雄伟的普鲁托之页</BookName>
 			<TextList>

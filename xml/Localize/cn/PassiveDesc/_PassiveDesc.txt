@@ -88,6 +88,7 @@
 		<Name>傀儡守卫</Name> 
 		<Desc>每一幕开始时获得其他存活的司书层数的“守护”与“振奋”</Desc>
 	</PassiveDesc>
+	<!-- 安洁莉卡-->
 	<PassiveDesc ID="1870101">
 		<Name>叽叽叽叽</Name> 
 		<Desc>打击骰子威力+1且命中时追加2点混乱伤害
@@ -116,6 +117,15 @@
 	<PassiveDesc ID="1880003">
 		<Name>空虚的躯壳</Name> 
 		<Desc>优先攻击其他友方单位，若无其他友方单位则自动消散</Desc>
+	</PassiveDesc>
+	<!--朱红十字-->
+	<PassiveDesc ID="1880101">
+		<Name>焦黑躯壳/炽热十字</Name> 
+		<Desc>每一幕开始时损失10%最大生命值/所有骰子威力+2</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1880102">
+		<Name>沉重兵装/狂乱扫荡</Name> 
+		<Desc>速度-3/每一幕内一张使用过的“十字挥舞”,“震撼冲击”,“焦热兵装”会被再次使用</Desc>
 	</PassiveDesc>
 	<!--普鲁托-->
 	<PassiveDesc ID="1890001">

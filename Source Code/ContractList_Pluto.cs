@@ -69,7 +69,7 @@ namespace Contingecy_Contract
         }
         public class CC_Barrier: BattleUnitBuf
         {
-            private int level;
+            private readonly int level;
             public CC_Barrier(int level)
             {
                 this.level = level;
@@ -93,18 +93,18 @@ namespace Contingecy_Contract
             this.Level = level;
         }
         public override ContractType Type => ContractType.Special;
-        public override int SpeedDiceNumAdder() => activate? 1 : 0;
-        private bool activate => (Singleton<StageController>.Instance.RoundTurn - 1) % 3 == 0;
+        public override int SpeedDiceNumAdder() => Activate? 1 : 0;
+        private bool Activate => (Singleton<StageController>.Instance.RoundTurn - 1) % 3 == 0;
         public override void OnRoundStart()
         {
             base.OnRoundStart();
-            if (!activate)
+            if (!Activate)
                 return;
             this.owner.allyCardDetail.AddNewCard(RandomUtil.SelectOne<int>(703901, 703902, 703903, 703904, 703905));
         }
         public override void OnStartBattle()
         {
-            if (!activate)
+            if (!Activate)
                 return;
             GameObject gameObject = Util.LoadPrefab("Battle/DiceAttackEffects/New/FX/Mon/Pluto/FX_Mon_Pluto_Paper");
             if (!((UnityEngine.Object)gameObject != (UnityEngine.Object)null))

@@ -115,7 +115,7 @@
 		<Artwork>Jaeheon_Atk</Artwork>
 		<Rarity>Common</Rarity>
 		<Option>NoInventory</Option>
-		<Spec Range="Near" Cost="1"/>
+		<Spec Range="Near" Cost="0"/>
 		<Script>energy4</Script>
 		<ScriptDesc></ScriptDesc>
     	<BehaviourList>
@@ -146,7 +146,7 @@
 		<Rarity>Unique</Rarity>
 		<Option>NoInventory</Option>
 		<Spec Range="Near" Cost="1"/>
-		<Script>PuppetEndure</Script>
+		<Script>PuppetDmg</Script>
 		<ScriptDesc></ScriptDesc>
     		<BehaviourList>
 			<Behaviour Min="3" Dice="9" Type="Standby" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
@@ -161,7 +161,7 @@
 		<Rarity>Unique</Rarity>
 		<Option>NoInventory</Option>
 		<Spec Range="Near" Cost="1"/>
-		<Script>PuppetStrength</Script>
+		<Script>PuppetPower</Script>
 		<ScriptDesc></ScriptDesc>
     	<BehaviourList>
       		<Behaviour Min="4" Dice="7" Type="Standby" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
@@ -205,8 +205,8 @@
 		<Artwork>Jaeheon_Angelica</Artwork>
 		<Rarity>Rare</Rarity>
 		<Option>NoInventory</Option>
-		<Spec Range="Near" Cost="1"/>
-		<Script></Script>
+		<Spec Range="Near" Cost="2"/>
+		<Script>energy4</Script>
 		<ScriptDesc></ScriptDesc>
     	<BehaviourList>
       		<Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="Puppet1_J" Script="" Desc="" />

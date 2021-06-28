@@ -8,7 +8,7 @@ namespace ContractReward
 {
     public class BattleUnitBuf_AngelicaPuppet: BattleUnitBuf
     {
-        private BattleUnitModel Jaehoen;
+        private readonly BattleUnitModel Jaehoen;
         protected override string keywordId => Jaehoen!=null? "AngelicaPuppet" : "TemporyPuppet";
         protected override string keywordIconId => "Jaeheon_PuppetThread";
         public BattleUnitBuf_AngelicaPuppet(BattleUnitModel unit=null)
@@ -29,7 +29,7 @@ namespace ContractReward
             base.OnBreakState();
             if (Jaehoen==null)
                 return;
-            if (Jaehoen.passiveDetail.PassiveList.Find((Predicate<PassiveAbilityBase>)(x => x is PassiveAbility_1870001)) is PassiveAbility_1870001 passive)
+            if (Jaehoen.passiveDetail.PassiveList.Find(x => x is PassiveAbility_1870001) is PassiveAbility_1870001 passive)
                 passive.ReturnToActive();
             this.Destroy();
         }

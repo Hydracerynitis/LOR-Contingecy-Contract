@@ -61,6 +61,8 @@ namespace ContractReward
                     passive.Add(cold);
                     typeof(BattleUnitPassiveDetail).GetField("_passiveList", AccessTools.all).SetValue((object)this.owner.passiveDetail, (object)passive);
                     this.phase = PhilipPhase.Cold;
+                    if(this.owner.cardSlotDetail.PlayPoint<4)
+                        this.owner.cardSlotDetail.RecoverPlayPoint(4- this.owner.cardSlotDetail.PlayPoint);
                 }
                 return;
             }
@@ -82,6 +84,8 @@ namespace ContractReward
                 passive.Add(hot);
                 typeof(BattleUnitPassiveDetail).GetField("_passiveList", AccessTools.all).SetValue((object)this.owner.passiveDetail, (object)passive);
                 this.phase = PhilipPhase.Hot;
+                if (this.owner.cardSlotDetail.PlayPoint < 4)
+                    this.owner.cardSlotDetail.RecoverPlayPoint(4 - this.owner.cardSlotDetail.PlayPoint);
             }
 
         }

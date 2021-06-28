@@ -11,13 +11,13 @@ namespace ContractReward
         public override void OnWaveStart()
         {
             base.OnWaveStart();
-            this.owner.personalEgoDetail.AddCard(18800007);
+            this.owner.personalEgoDetail.AddCard(18800006);
         }
         public override void OnUseCard(BattlePlayingCardDataInUnitModel curCard)
         {
             base.OnUseCard(curCard);
-            if (curCard.card.GetID() == 18800007)
-                this.owner.personalEgoDetail.RemoveCard(18800007);
+            if (curCard.card.GetID() == 18800006)
+                this.owner.personalEgoDetail.RemoveCard(18800006);
         }
     }
 }

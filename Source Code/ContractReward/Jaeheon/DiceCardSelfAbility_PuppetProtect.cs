@@ -16,8 +16,8 @@ namespace ContractReward
             base.OnStartBattle();
             if (FindAngelica() != null)
             {
-                FindAngelica().bufListDetail.AddKeywordBufThisRoundByCard(KeywordBuf.Protection, 1);
-                FindAngelica().bufListDetail.AddKeywordBufThisRoundByCard(KeywordBuf.BreakProtection, 1);
+                FindAngelica().bufListDetail.AddKeywordBufThisRoundByCard(KeywordBuf.Protection, 2);
+                FindAngelica().bufListDetail.AddKeywordBufThisRoundByCard(KeywordBuf.BreakProtection, 2);
             }
         }
         private BattleUnitModel FindAngelica() => BattleObjectManager.instance.GetAliveList(this.owner.faction).Find((Predicate<BattleUnitModel>)(x => x.Book.GetBookClassInfoId() == 18710000));

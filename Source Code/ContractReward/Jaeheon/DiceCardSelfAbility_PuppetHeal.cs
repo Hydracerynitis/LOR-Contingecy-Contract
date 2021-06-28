@@ -15,7 +15,7 @@ namespace ContractReward
         {
             base.OnStartBattle();
             if (FindAngelica() != null)
-                FindAngelica().breakDetail.RecoverBreak(10);
+                FindAngelica().breakDetail.RecoverBreak(15);
         }
         private BattleUnitModel FindAngelica() => BattleObjectManager.instance.GetAliveList(this.owner.faction).Find((Predicate<BattleUnitModel>)(x => x.Book.GetBookClassInfoId() == 18710000));
     }

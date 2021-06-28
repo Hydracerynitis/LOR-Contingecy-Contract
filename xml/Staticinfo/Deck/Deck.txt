@@ -75,11 +75,11 @@
 	<Deck ID="18700000">
 		<Card>18700001</Card>
 		<Card>18700001</Card>
-		<Card>18700002</Card>
 		<Card>18700003</Card>
-		<Card>18700004</Card>
+		<Card>18700003</Card>
 		<Card>18700013</Card>
 		<Card>18700013</Card>
+		<Card>18700012</Card>
 		<Card>18700012</Card>
 		<Card>18700011</Card>
 	</Deck>
@@ -95,13 +95,13 @@
 		<Card>18700025</Card>
 	</Deck>
 	<Deck ID="18710000">
-		<Card>18700001</Card>
-		<Card>18700001</Card>
 		<Card>18700002</Card>
-		<Card>18700003</Card>
+		<Card>18700002</Card>
+		<Card>18700004</Card>
 		<Card>18700004</Card>
 		<Card>18700031</Card>
 		<Card>18700031</Card>
+		<Card>18700032</Card>
 		<Card>18700032</Card>
 		<Card>18700033</Card>
 	</Deck>
@@ -111,10 +111,21 @@
 		<Card>18800002</Card>
 		<Card>18800002</Card>
 		<Card>18800003</Card>
+		<Card>18800003</Card>
+		<Card>18800004</Card>
 		<Card>18800004</Card>
 		<Card>18800005</Card>
-		<Card>18800005</Card>
-		<Card>18800006</Card>
+	</Deck>
+	<Deck ID="18810000">
+		<Card>18810001</Card>
+		<Card>18810001</Card>
+		<Card>18810002</Card>
+		<Card>18810002</Card>
+		<Card>18810003</Card>
+		<Card>18810003</Card>
+		<Card>18810004</Card>
+		<Card>18810005</Card>
+		<Card>18810005</Card>
 	</Deck>
 	<Deck ID="18900000">
 		<Card>18900001</Card>
