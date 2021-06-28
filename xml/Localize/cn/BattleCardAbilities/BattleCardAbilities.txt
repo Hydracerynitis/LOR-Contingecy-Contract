@@ -135,8 +135,7 @@
   	</BattleCardAbility>
 	<!--普鲁托-->
 	<BattleCardAbility ID="Barrier">
-    		<Desc>[使用时]将目标锁入[封印结界]持续2幕并复制目标两张战斗书页</Desc>
-    		<Desc>这些书页费用为0并且使用后会被移除战斗</Desc>
+    		<Desc>[使用时]这一幕内将目标锁入[封印结界]</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="PlutoAoe">
     		<Desc>[使用时]根据目标数量提升该书页所有骰子伤害</Desc>

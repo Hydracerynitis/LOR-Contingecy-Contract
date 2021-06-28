@@ -133,11 +133,13 @@ Offensive Dices gain 1 Power with 25% Max HP lost (Max. 3)</Desc>
 		<Desc>Gain copy of 5 contracts. Point to ally to activate it for them or Point to enemy to activate it for self.</Desc>
 	</PassiveDesc>
 	<PassiveDesc ID="1890002">
-		<Name>Shifting Reality</Name> 
-		<Desc>In every Scene, Immune damage from one types of attack when not staggered.</Desc>
+		<Name>Yesterday's Promise</Name> 
+		<Desc>Half Combat Pages on enemies' Speed Dice has one die marked at each Scene. 
+Upon Clash with marked die, Add a single-use copy of enemy's Page to the deck. If Achieve Clash Win, the copy's cost set to 0.</Desc>
 	</PassiveDesc>
 	<PassiveDesc ID="1890003">
-		<Name>Yesterday's Promise</Name> 
-		<Desc>At the start of each act, gain 3 random transferrable passive.</Desc>
+		<Name>Sealing Barrier</Name> 
+		<Desc>In every Scene, Immune damage from one types of attack when not staggered.
+At the start of Act, add a copy of "Hex: Seal" to the deck.</Desc>
 	</PassiveDesc>
 </PassiveDescRoot>

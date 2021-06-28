@@ -131,11 +131,11 @@
 		<Card>18900001</Card>
 		<Card>18900001</Card>
 		<Card>18900002</Card>
+		<Card>18900002</Card>
 		<Card>18900003</Card>
 		<Card>18900003</Card>
 		<Card>18900004</Card>
 		<Card>18900004</Card>
-		<Card>18900005</Card>
 		<Card>18900006</Card>
 	</Deck>
 </DeckXmlRoot>

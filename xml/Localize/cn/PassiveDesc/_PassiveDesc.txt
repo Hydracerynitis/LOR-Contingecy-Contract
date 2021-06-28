@@ -133,11 +133,13 @@
 		<Desc>获得5张合同,你可以向友方单位施加其效果或者指向敌方单位使合同对自己生效</Desc>
 	</PassiveDesc>
 	<PassiveDesc ID="1890002">
-		<Name>虚实难分</Name> 
-		<Desc>每一幕若没有陷入混乱则免疫随一种机攻击类型的伤害</Desc>
+		<Name>昨日之约</Name> 
+		<Desc>每一幕中，所有敌方角色所装备的独特战斗书页将有一半被随机标记一颗骰子.
+与被标记的骰子会将一张该书页置入牌组,其拥有"佚亡". 若取得拼点胜利时该书页费用为0.</Desc>
 	</PassiveDesc>
 	<PassiveDesc ID="1890003">
-		<Name>昨日之约</Name> 
-		<Desc>舞台开启时获得随机3个可转移被动</Desc>
+		<Name>封锁结界</Name> 
+		<Desc>每一幕若没有陷入混乱则免疫随一种机攻击类型的伤害。
+舞台开启时将一张“变数: 封印”加入牌库</Desc>
 	</PassiveDesc>
 </PassiveDescRoot>

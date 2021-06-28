@@ -3,43 +3,29 @@ using HarmonyLib;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using LOR_DiceSystem;
 using System.Threading.Tasks;
 
 namespace ContractReward
 {
     public class PassiveAbility_1890003 : PassiveAbilityBase
     {
-
+        private BehaviourDetail immuneDetail;
+        public override void OnRoundStart()
+        {
+            base.OnRoundStart();
+            immuneDetail = RandomUtil.SelectOne<BehaviourDetail>(BehaviourDetail.Slash, BehaviourDetail.Penetrate, BehaviourDetail.Hit);
+        }
+        public override AtkResist GetResistHP(AtkResist origin, BehaviourDetail detail)
+        {
+            if (detail == immuneDetail)
+                return AtkResist.Immune;
+            return base.GetResistHP(origin, detail);
+        }
         public override void OnWaveStart()
         {
             base.OnWaveStart();
-            //foreach (PassiveAbilityBase passive in this.owner.passiveDetail.PassiveList)
-                //Contingecy_Contract.Debug.Log(passive.GetType().AssemblyQualifiedName);
-            List<PassiveXmlInfo> list = new List<PassiveXmlInfo>();
-            for (; list.Count<3;)
-            {
-                PassiveXmlInfo info = RandomUtil.SelectOne<PassiveXmlInfo>(Contingecy_Contract.Harmony_Patch.AvailablePassive);
-                if (!list.Contains(info))
-                    list.Add(info);
-            }
-            foreach (PassiveXmlInfo Info in list)
-            {
-                //Contingecy_Contract.Debug.Log("开始搜索被动");
-                System.Type type = System.Type.GetType("PassiveAbility_" + Info.id.ToString()+ ", Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null");
-                if (!(type == (System.Type)null))
-                {
-                    //Contingecy_Contract.Debug.Log("找到被动");
-                    if (Activator.CreateInstance(type) is PassiveAbilityBase instance)
-                    {
-                        instance.name = Singleton<PassiveDescXmlList>.Instance.GetName(Info.id);
-                        instance.desc = Singleton<PassiveDescXmlList>.Instance.GetDesc(Info.id);
-                        instance.rare = Info.rare;
-                        this.owner.passiveDetail.AddPassive(instance);
-                    }
-                    //Contingecy_Contract.Debug.Log("获取被动");
-                }
-            }            
+            this.owner.allyCardDetail.AddNewCardToDeck(18900005);
         }
-
     }
 }

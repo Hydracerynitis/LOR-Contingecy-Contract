@@ -131,8 +131,7 @@
   	</BattleCardAbility>
 	<!--普鲁托-->
 	<BattleCardAbility ID="Barrier">
-    		<Desc>[On Use] Seal target into [Sealing Barrier] for 2 Scene and add 2 copy of Combat Pages from target's deck</Desc>
-    		<Desc>These card's cost are 0 and exhaust after use</Desc>
+    		<Desc>[On Play] Seal target into [Sealing Barrier] for the duration of the Scene.</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="PlutoAoe">
     		<Desc>[On Use]Boost dices' damage according to numbers of enemies targeted</Desc>

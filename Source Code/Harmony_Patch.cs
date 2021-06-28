@@ -6,6 +6,7 @@ using System.Xml;
 using GameSave;
 using System.Diagnostics;
 using UI;
+using LOR_DiceSystem;
 using System.Reflection;
 using System.Xml.Serialization;
 using UnityEngine;
@@ -18,13 +19,12 @@ namespace Contingecy_Contract
 {
     public class Harmony_Patch
     {
-        public static List<PassiveXmlInfo> AvailablePassive;
+        public static List<DiceBehaviour> passive18900002_Makred;
         public static Dictionary<UnitBattleDataModel, int> CombaltData;
         public static Dictionary<BattleUnitModel, int> UnitBookId;
         public static Dictionary<int, int> ThumbPathDictionary;
         public static string ModPath;
         public static bool Duel;
-        public static bool PassiveAbility_1890003_init;
         public static ChallengeProgress Progess;
         public Harmony_Patch()
         {
@@ -37,8 +37,8 @@ namespace Contingecy_Contract
             CombaltData = new Dictionary<UnitBattleDataModel, int>();
             ContractAttribution.Inition = new List<BattleUnitModel>();
             UnitBookId = new Dictionary<BattleUnitModel, int>();
-            PassiveAbility_1890003_init = false;
             Progess = new ChallengeProgress();
+            passive18900002_Makred = new List<DiceBehaviour>();
             MethodInfo Method1 = typeof(StageNameXmlList).GetMethod("GetName", AccessTools.all);
             MethodInfo Patch1 = typeof(Harmony_Patch).GetMethod("StageNameXmlList_GetName");
             try
@@ -204,6 +204,17 @@ namespace Contingecy_Contract
             {
                 Debug.Error("HP_" + Patch15.Name, ex);
             }
+            MethodInfo Method16 = typeof(BattleCardAbilityDescXmlList).GetMethod("GetAbilityDesc", new Type[]{ typeof(DiceBehaviour)});
+            MethodInfo Patch16 = typeof(Harmony_Patch).GetMethod("BattleCardAbilityDescXmlList_GetAbilityDesc");
+            try
+            {
+                harmony.Patch(Method16, null, new HarmonyMethod(Patch16), null, null);
+                Debug.Log("Patch: {0} succeed", Patch16.Name);
+            }
+            catch (Exception ex)
+            {
+                Debug.Error("HP_" + Patch16.Name, ex);
+            }
         }
         public static void StageNameXmlList_GetName(ref string __result,int id)
         {
@@ -212,9 +223,9 @@ namespace Contingecy_Contract
             Singleton<ContractLoader>.Instance.Init();
             __result = TextDataModel.GetText("ui_ContingecyLevel", (object)Singleton<ContractLoader>.Instance.GetLevel(id), (object)__result);
         }
-        public static bool StageController_RoundStartPhase_System(StageType ____stageType)
+        public static bool StageController_RoundStartPhase_System()
         {
-            if (____stageType != StageType.Invitation || Duel)
+            if (Duel)
                 return true;
             foreach (BattleUnitModel alive in BattleObjectManager.instance.GetAliveList())
             {
@@ -228,26 +239,20 @@ namespace Contingecy_Contract
         {
             Duel = false;
             if (CheckDuel(stage.id))
-                Duel = true;
-            if (!PassiveAbility_1890003_init)
-                PassiveAbility_1890003_InitList();           
+                Duel = true;      
         }
         public static void StageController_InitStageByEndContentsStage(StageClassInfo stage)
         {
             Duel = false;
             if (CheckDuel(stage.id))
                 Duel = true;
-            if (!PassiveAbility_1890003_init)
-                PassiveAbility_1890003_InitList();
         }
         public static void StageController_InitStageByCreature()
         {
-            if (!PassiveAbility_1890003_init)
-                PassiveAbility_1890003_InitList();
         }
         public static void StageController_InitCommon(ref StageClassInfo stage)
         {
-            if (stage.stageType==StageType.Creature || Duel)
+            if (Duel)
                 return;
             stage = CopyXml(stage);
             ContractModification.Init(stage);
@@ -360,6 +365,14 @@ namespace Contingecy_Contract
                 owner.bufListDetail.AddBuf((BattleUnitBuf)jaeheonPuppetThread);
             }
             return false;
+        }
+        public static void BattleCardAbilityDescXmlList_GetAbilityDesc(ref string __result,DiceBehaviour behaviour)
+        {
+            if (passive18900002_Makred.Contains(behaviour))
+            {
+                __result=__result.Insert(0, TextDataModel.GetText("marked_dice_desc"));
+                Debug.Log(behaviour.Detail.ToString()+" "+behaviour.Min.ToString()+"-"+behaviour.Dice.ToString());
+            }
         }
         public static bool CheckDuel(int stageId)
         {
@@ -501,44 +514,6 @@ namespace Contingecy_Contract
                 itemType = info.itemType
             };
             return output;
-        }
-        public static void PassiveAbility_1890003_InitList()
-        {
-            AvailablePassive = new List<PassiveXmlInfo>();
-            List<PassiveXmlInfo> list = typeof(PassiveXmlList).GetField("_list", AccessTools.all).GetValue(Singleton<PassiveXmlList>.Instance) as List<PassiveXmlInfo>;
-            AvailablePassive.AddRange(list.FindAll(x => x.id > 200000 && x.id < 202000 && x.CanGivePassive == true));
-            AvailablePassive.AddRange(list.FindAll(x => x.id > 210000 && x.id < 270000 && x.CanGivePassive == true));
-            AvailablePassive.Remove(Singleton<PassiveXmlList>.Instance.GetData(230016));
-            AvailablePassive.Remove(Singleton<PassiveXmlList>.Instance.GetData(231016));
-            AvailablePassive.Remove(Singleton<PassiveXmlList>.Instance.GetData(232016));
-            AvailablePassive.Remove(Singleton<PassiveXmlList>.Instance.GetData(230028));
-            AvailablePassive.Remove(Singleton<PassiveXmlList>.Instance.GetData(230128));
-            AvailablePassive.Remove(Singleton<PassiveXmlList>.Instance.GetData(230228));
-            AvailablePassive.Remove(Singleton<PassiveXmlList>.Instance.GetData(240008));
-            AvailablePassive.Remove(Singleton<PassiveXmlList>.Instance.GetData(240108));
-            AvailablePassive.Remove(Singleton<PassiveXmlList>.Instance.GetData(240208));
-            AvailablePassive.Remove(Singleton<PassiveXmlList>.Instance.GetData(240508));
-            AvailablePassive.Remove(Singleton<PassiveXmlList>.Instance.GetData(240028));
-            AvailablePassive.Remove(Singleton<PassiveXmlList>.Instance.GetData(240128));
-            AvailablePassive.Remove(Singleton<PassiveXmlList>.Instance.GetData(240228));
-            AvailablePassive.Remove(Singleton<PassiveXmlList>.Instance.GetData(240328));
-            AvailablePassive.Remove(Singleton<PassiveXmlList>.Instance.GetData(240428));
-            AvailablePassive.Remove(Singleton<PassiveXmlList>.Instance.GetData(240528));
-            AvailablePassive.Remove(Singleton<PassiveXmlList>.Instance.GetData(240628));
-            AvailablePassive.Remove(Singleton<PassiveXmlList>.Instance.GetData(250013)); 
-            AvailablePassive.Remove(Singleton<PassiveXmlList>.Instance.GetData(250022));
-            AvailablePassive.Remove(Singleton<PassiveXmlList>.Instance.GetData(250422));
-            AvailablePassive.Remove(Singleton<PassiveXmlList>.Instance.GetData(250227));
-            AvailablePassive.Remove(Singleton<PassiveXmlList>.Instance.GetData(250327));
-            AvailablePassive.Remove(Singleton<PassiveXmlList>.Instance.GetData(250427));
-            AvailablePassive.Remove(Singleton<PassiveXmlList>.Instance.GetData(250136));
-            AvailablePassive.Remove(Singleton<PassiveXmlList>.Instance.GetData(250236));
-            AvailablePassive.Remove(Singleton<PassiveXmlList>.Instance.GetData(250336));
-            AvailablePassive.Add(Singleton<PassiveXmlList>.Instance.GetData(10001));
-            AvailablePassive.Add(Singleton<PassiveXmlList>.Instance.GetData(10004));
-            AvailablePassive.Add(Singleton<PassiveXmlList>.Instance.GetData(10008));
-            AvailablePassive.Add(Singleton<PassiveXmlList>.Instance.GetData(1300001));
-            PassiveAbility_1890003_init = true;
         }
     }
 }

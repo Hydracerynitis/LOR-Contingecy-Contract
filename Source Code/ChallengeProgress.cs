@@ -44,19 +44,12 @@ namespace Contingecy_Contract
                     return;
                 }
                 Philiph_Risk = data.GetInt("Philiph_Risk");                
-                Debug.Log("Philiph_Risk: {0}", Philiph_Risk.ToString());
                 Eileen_Risk = data.GetInt("Eileen_Risk");
-                Debug.Log("Eileen_Risk: {0}", Eileen_Risk.ToString());
                 Jaeheon_Risk = data.GetInt("Jaeheon_Risk");
-                Debug.Log("Jaeheon_Risk: {0}", Jaeheon_Risk.ToString());
                 Elena_Risk = data.GetInt("Elena_Risk");
-                Debug.Log("Elena_Risk: {0}", Elena_Risk.ToString());
                 Orange_Path = data.GetInt("Orange_Path");
-                Debug.Log("Orange_Path: {0}", Orange_Path.ToString());
                 Pluto_Risk = data.GetInt("Pluto_Risk");
-                Debug.Log("Pluto_Risk: {0}", Pluto_Risk.ToString());
                 Ensemble_Complete = data.GetInt("Ensemble_Complete");
-                Debug.Log("Ensemble_Complete: {0}", Ensemble_Complete.ToString());
                 Debug.SaveDebug();
             }
             catch(Exception ex)

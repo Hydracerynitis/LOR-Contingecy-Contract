@@ -80,7 +80,6 @@
     <Compile Include="Source Code\ContractReward\Eileen\PassiveAbility_1820005.cs" />
     <Compile Include="Source Code\ContractReward\Eileen\PassiveAbility_1820004.cs" />
     <Compile Include="Source Code\ContractReward\Eileen\PassiveAbility_1820003.cs" />
-    <Compile Include="Source Code\ContractReward\Elena\DiceCardAbility_ElenaBuffAtk.cs" />
     <Compile Include="Source Code\ContractReward\Elena\DiceCardSelfAbility_ElenaZombieEnemy.cs" />
     <Compile Include="Source Code\ContractReward\Elena\PassiveAbility_1880002.cs" />
     <Compile Include="Source Code\ContractReward\Elena\PassiveAbility_1880001.cs" />

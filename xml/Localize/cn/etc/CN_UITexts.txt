@@ -13,4 +13,5 @@
 	<text id="Eileen_Production_param2">,每一幕开始时获得2层烟气</text>
 	<text id="Eileen_Production_param3">并且额外恢复2点光芒抽2张牌</text>	
 	<text id="Zombie_name">无名躯壳</text>
+	<text id="marked_dice_desc">[昨日之约] </text>
 </localize>

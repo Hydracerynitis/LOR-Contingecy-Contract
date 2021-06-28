@@ -70,12 +70,10 @@
 		<Artwork>Pluto_Change</Artwork>
 		<Rarity>Rare</Rarity>
 		<Option>NoInventory</Option>
-		<Spec Range="Far" Cost="2"/>
+		<Spec Range="Instance" Cost="3"/>
 		<Script>Barrier</Script>
 		<ScriptDesc></ScriptDesc>
     	<BehaviourList>
-      		<Behaviour Min="6" Dice="6" Type="Atk" Detail="Hit" Motion="S2" EffectRes="" Script="" ActionScript="" Desc="" />
-      		<Behaviour Min="3" Dice="7" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
 		</BehaviourList>
 		<Chapter>7</Chapter>
 		 <Priority>0</Priority>

@@ -13,4 +13,5 @@
 	<text id="Eileen_Production_param2">, at the start of each Scene, gain 2 Smoke</text>
 	<text id="Eileen_Production_param3"> and recover 2 light and draw 2 cards</text>	
 	<text id="Zombie_name">Nameless Shell</text>
+	<text id="marked_dice_desc">[Yesterday Promise] </text>
 </localize>
