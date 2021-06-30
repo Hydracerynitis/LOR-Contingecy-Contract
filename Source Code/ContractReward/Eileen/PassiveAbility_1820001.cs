@@ -28,7 +28,7 @@ namespace ContractReward
             if (Gear[0]!=null && Gear[0].IsDead())
             {
                 BattleObjectManager.instance.UnregisterUnit(Gear[0]);
-                this.owner.TakeBreakDamage((int)(owner.breakDetail.GetDefaultBreakGauge() * 0.15));
+                this.owner.TakeBreakDamage((int)(owner.breakDetail.GetDefaultBreakGauge() * 0.2));
                 Gear[0] = null;
                 if (!trigger)
                     trigger = true;
@@ -45,7 +45,7 @@ namespace ContractReward
             if (Gear[1] != null && Gear[1].IsDead())
             {
                 BattleObjectManager.instance.UnregisterUnit(Gear[1]);
-                this.owner.TakeBreakDamage((int)(owner.breakDetail.GetDefaultBreakGauge() * 0.15),DamageType.Passive);
+                this.owner.TakeBreakDamage((int)(owner.breakDetail.GetDefaultBreakGauge() * 0.2),DamageType.Passive);
                 Gear[1] = null;
                 if (!trigger)
                     trigger = true;
