@@ -58,7 +58,6 @@ namespace Contingecy_Contract
                         Debug.Log("Conflict contract exist");
                         continue;
                     }
-                    New.level = New.BaseLevel + level;
                     Contract Old = PassiveList.Find(x => x.Type == New.Type);
                     if (Old != null)
                     {

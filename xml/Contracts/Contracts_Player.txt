@@ -16,6 +16,15 @@
 		<Faction>Player</Faction>
 		<Variation>3</Variation>
 	</Contract>
+	<Contract Type="Power_L">
+		<DescList>
+			<Desc language="cn" name="手脚乏力" desc="所有司书骰子威力减少{0}" />
+			<Desc language="en" name="Fatigue" desc="All Librarians' Dice lose {0} Power." />
+		</DescList>
+		<Faction>Player</Faction>
+		<Variation>3</Variation>
+		<Step>2</Step>
+	</Contract>
 	<Contract Type="Hp_L">
 		<DescList>
 			<Desc language="cn" name="破碎之躯" desc="所有司书血量上限减少-{0}%" />

@@ -163,19 +163,18 @@ namespace Contingecy_Contract
         }
         private void AddCard_Elena(int round)
         {
-
-            if (round % 2 != 0 && BattleObjectManager.instance.GetAliveList().Find(x => x.UnitData.unitData.EnemyUnitId==1308021)!=null)
-                this.owner.allyCardDetail.AddNewCard(703803).SetPriorityAdder(Priority.Dequeue());
-            else
-                this.owner.allyCardDetail.AddNewCard(703801).SetPriorityAdder(Priority.Dequeue());
+            this.owner.allyCardDetail.AddNewCard(703804).SetPriorityAdder(Priority.Dequeue());
+            this.owner.allyCardDetail.AddNewCard(703804).SetPriorityAdder(Priority.Dequeue());
             if (round % 3 == 2)
                 this.owner.allyCardDetail.AddNewCard(703805).SetPriorityAdder(Priority.Dequeue());
             else
                 this.owner.allyCardDetail.AddNewCard(703802).SetPriorityAdder(Priority.Dequeue());
+            if (round % 2 != 0 && BattleObjectManager.instance.GetAliveList().Find(x => x.UnitData.unitData.EnemyUnitId == 1308021) != null)
+                this.owner.allyCardDetail.AddNewCard(703803).SetPriorityAdder(Priority.Dequeue());
+            else
+                this.owner.allyCardDetail.AddNewCard(703801).SetPriorityAdder(Priority.Dequeue());
             for (; this.owner.allyCardDetail.GetHand().Count < this.owner.Book.GetSpeedDiceRule(this.owner).diceNum;)
                 this.owner.allyCardDetail.AddNewCard(703801).SetPriorityAdder(Priority.Dequeue());
-            this.owner.allyCardDetail.AddNewCard(703804).SetPriorityAdder(Priority.Dequeue());
-            this.owner.allyCardDetail.AddNewCard(703804).SetPriorityAdder(Priority.Dequeue());
             foreach (BattleDiceCardModel card in this.owner.allyCardDetail.GetHand())
                 card.SetCostToZero();
         }

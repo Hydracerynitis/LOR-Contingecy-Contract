@@ -16,6 +16,15 @@
 		<Faction>Enemy</Faction>
 		<Variation>4</Variation>
 	</Contract>
+	<Contract Type="Power">
+		<DescList>
+			<Desc language="cn" name="强力压制" desc="所有来宾骰子威力提升{0}" />
+			<Desc language="en" name="Powerful" desc="All Guests' Dice gain {0} Power." />
+		</DescList>
+		<Faction>Enemy</Faction>
+		<Variation>3</Variation>
+		<Step>2</Step>
+	</Contract>
 	<Contract Type="Hp">
 		<DescList>
 			<Desc language="cn" name="手术强化" desc="所有来宾最大血量提升{0}%" />

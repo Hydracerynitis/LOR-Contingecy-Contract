@@ -41,7 +41,7 @@ namespace Contingecy_Contract
                     instance.Init(Model);
                     string level = string.Empty;
                     if (contract.Variation > 0)
-                        level = (contract.level - contract.BaseLevel).ToString();
+                        level = ((int)((contract.level - contract.BaseLevel)/contract.Step)).ToString();
                     instance.name = Singleton<PassiveDescXmlList>.Instance.GetName(20210302) + contract.GetDesc(TextDataModel.CurrentLanguage).name+" "+level;
                     instance.desc = string.Format(contract.GetDesc(TextDataModel.CurrentLanguage).desc,instance.GetFormatParam);
                     if (contract.level <=2)
@@ -91,7 +91,7 @@ namespace Contingecy_Contract
                 {
                     string level = string.Empty;
                     if (contract.Variation > 0)
-                        level = (contract.level - contract.BaseLevel).ToString();
+                        level = ((int)((contract.level - contract.BaseLevel) / contract.Step)).ToString();
                     stage.name = Singleton<PassiveDescXmlList>.Instance.GetName(20210302) + contract.GetDesc(TextDataModel.CurrentLanguage).name + " " + level;
                     stage.desc = string.Format(contract.GetDesc(TextDataModel.CurrentLanguage).desc, stage.GetFormatParam);
                     if (contract.level <= 2)

@@ -41,6 +41,19 @@ namespace Contingecy_Contract
             }
         }
     }
+    public class ContingecyContract_Power : ContingecyContract
+    {
+        public ContingecyContract_Power(int level)
+        {
+            this.Level = (int)(level/2);
+        }
+        public override string[] GetFormatParam => new string[] { Level.ToString() };
+        public override ContractType Type => ContractType.Passive;
+        public override void BeforeRollDice(BattleDiceBehavior behavior)
+        {
+            behavior.ApplyDiceStatBonus(new DiceStatBonus() { power = Level });
+        }
+    }
     public class ContingecyContract_Hp : ContingecyContract
     {
         public ContingecyContract_Hp(int level)
