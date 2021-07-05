@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Source Code\ChallengeProgress.cs" />
+    <Compile Include="Source Code\ContractList_Tanya.cs" />
     <Compile Include="Source Code\ContractList_Eileen.cs" />
     <Compile Include="Source Code\ContractList_Stage.cs" />
     <Compile Include="Source Code\ContractModification.cs" />
@@ -140,6 +141,10 @@
     <Compile Include="Source Code\ContractReward\Pluto\PassiveAbility_1890001.cs" />
     <Compile Include="Source Code\ContractReward\Pluto\PassiveAbility_1890002.cs" />
     <Compile Include="Source Code\ContractReward\Pluto\PassiveAbility_1890003.cs" />
+    <Compile Include="Source Code\ContractReward\Tanya\DiceCardSelfAbility_TanyaCoolDown.cs" />
+    <Compile Include="Source Code\ContractReward\Tanya\PassiveAbility_1860003.cs" />
+    <Compile Include="Source Code\ContractReward\Tanya\PassiveAbility_1860002.cs" />
+    <Compile Include="Source Code\ContractReward\Tanya\PassiveAbility_1860001.cs" />
     <Compile Include="Source Code\Debug.cs" />
     <Compile Include="Source Code\ContractList_Shi.cs" />
     <Compile Include="Source Code\ContractList_Player.cs" />

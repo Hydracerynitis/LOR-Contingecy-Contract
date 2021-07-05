@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Xml;
 using GameSave;
+using ContractReward;
 using System.Diagnostics;
 using UI;
 using LOR_DiceSystem;
@@ -14,6 +15,7 @@ using UnityEngine.UI;
 using System.IO;
 using HarmonyLib;
 using System.Threading.Tasks;
+using System.Reflection.Emit;
 
 namespace Contingecy_Contract
 {
@@ -215,6 +217,28 @@ namespace Contingecy_Contract
             {
                 Debug.Error("HP_" + Patch16.Name, ex);
             }
+            MethodInfo Method17 = typeof(StageController).GetMethod("StartAction",AccessTools.all);
+            MethodInfo Patch17 = typeof(Harmony_Patch).GetMethod("StageController_StartAction");
+            try
+            {
+                harmony.Patch(Method17, new HarmonyMethod(Patch17), null, null, null);
+                Debug.Log("Patch: {0} succeed", Patch17.Name);
+            }
+            catch (Exception ex)
+            {
+                Debug.Error("HP_" + Patch17.Name, ex);
+            }
+            //MethodInfo Method18 = typeof(BehaviourAction_TanyaSpecialAtk).GetMethod("GetMovingAction", AccessTools.all);
+            //MethodInfo Patch18 = typeof(Harmony_Patch).GetMethod("BehaviourAction_TanyaSpecialAtk_GetMovingAction");
+            //try
+            //{
+                //harmony.Patch(Method18, null, null, new HarmonyMethod(Patch18), null);
+                //Debug.Log("Patch: {0} succeed", Patch18.Name);
+            //}
+            //catch (Exception ex)
+            //{
+                //Debug.Error("HP_" + Patch18.Name, ex);
+            //}
         }
         public static void StageNameXmlList_GetName(ref string __result,int id)
         {
@@ -373,6 +397,58 @@ namespace Contingecy_Contract
                 __result=__result.Insert(0, TextDataModel.GetText("marked_dice_desc"));
                 Debug.Log(behaviour.Detail.ToString()+" "+behaviour.Min.ToString()+"-"+behaviour.Dice.ToString());
             }
+        }
+        public static bool StageController_StartAction(BattlePlayingCardDataInUnitModel card)
+        {
+            if (card.target.passiveDetail.HasPassive<PassiveAbility_1860001>())
+            {
+                BattlePlayingCardDataInUnitModel retaliate= ((PassiveAbility_1860001)card.target.passiveDetail.PassiveList.Find(x => x is PassiveAbility_1860001)).Retaliate(card);
+                if (retaliate == null)
+                    return true;
+                Singleton<StageController>.Instance.sp(card, (retaliate));
+                return false;
+            }
+            else if (card.target.passiveDetail.HasPassive<ContingecyContract_Tanya_Solo>())
+            {
+                BattlePlayingCardDataInUnitModel retaliate = ((ContingecyContract_Tanya_Solo)card.target.passiveDetail.PassiveList.Find(x => x is ContingecyContract_Tanya_Solo)).Retaliate(card);
+                if (retaliate == null)
+                    return true;
+                Singleton<StageController>.Instance.sp(card, (retaliate));
+                return false;
+            }
+            return true;
+        }
+        public static IEnumerable<CodeInstruction>  BehaviourAction_TanyaSpecialAtk_GetMovingAction(IEnumerable<CodeInstruction> instructions, ILGenerator generator)
+        {
+            int InsertIndex = -1;
+            Label label = generator.DefineLabel();
+            List<CodeInstruction> codeInstructionList = new List<CodeInstruction>(instructions);
+            for (int index = 0; index < codeInstructionList.Count; ++index)
+            {
+                if (InsertIndex==-1)
+                {
+                    if (codeInstructionList[index].opcode == OpCodes.Bne_Un)
+                    {
+                        InsertIndex = index - 26;              
+                        ((List<Label>)codeInstructionList[index + 1].labels).Add(label);
+                    }
+                }
+            }
+            if (InsertIndex == -1)
+                Debug.Log("Not Found");
+            else
+            {
+                codeInstructionList.Insert(InsertIndex, new CodeInstruction(OpCodes.Beq_S, label));
+                codeInstructionList.Insert(InsertIndex, new CodeInstruction(OpCodes.Ldc_I4, 18600000));
+                codeInstructionList.Insert(InsertIndex, new CodeInstruction(OpCodes.Ldfld, typeof(ItemXmlData).GetField("id",AccessTools.all)));
+                codeInstructionList.Insert(InsertIndex, new CodeInstruction(OpCodes.Callvirt, typeof(BookModel).GetMethod("get_ClassInfo", AccessTools.all)));
+                codeInstructionList.Insert(InsertIndex, new CodeInstruction(OpCodes.Callvirt,typeof(BattleUnitModel).GetMethod("get_customBook", AccessTools.all)));
+                codeInstructionList.Insert(InsertIndex, new CodeInstruction(OpCodes.Beq_S, label));
+                codeInstructionList.Insert(InsertIndex, new CodeInstruction(OpCodes.Ldc_I4, 18600000));
+                codeInstructionList.Insert(InsertIndex, new CodeInstruction(OpCodes.Callvirt, typeof(BookModel).GetMethod("GetBookClassInfoId", AccessTools.all)));
+                codeInstructionList.Insert(InsertIndex, new CodeInstruction(OpCodes.Callvirt,typeof(BattleUnitModel).GetMethod("get_Book", AccessTools.all)));
+            }        
+            return (IEnumerable<CodeInstruction>)codeInstructionList;
         }
         public static bool CheckDuel(int stageId)
         {

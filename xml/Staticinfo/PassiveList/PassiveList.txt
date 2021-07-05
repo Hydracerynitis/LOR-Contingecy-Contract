@@ -70,6 +70,23 @@
     		<CanGivePassive>false</CanGivePassive>
 		<Cost>6</Cost>
   	</Passive>
+	<!-- 塔尼亚-->
+	<Passive ID="1860001">
+		<Rarity>Unique</Rarity>
+    		<CanGivePassive>false</CanGivePassive>
+		<InnerType>1</InnerType>
+		<Cost>6</Cost>
+  	</Passive>
+	<Passive ID="1860002">
+		<Rarity>Rare</Rarity>
+    		<CanGivePassive>false</CanGivePassive>
+		<Cost>8</Cost>
+  	</Passive>
+	<Passive ID="1860003">
+		<Rarity>Rare</Rarity>
+    		<CanGivePassive>false</CanGivePassive>
+		<Cost>4</Cost>
+  	</Passive>
 	<!-- 在宪-->
 	<Passive ID="1870001">
 		<Rarity>Unique</Rarity>

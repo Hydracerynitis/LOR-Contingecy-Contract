@@ -15,8 +15,8 @@ OverHeat will only change Stagger Resisteance to {0}; Increase Outgoing damage b
 	<Contract Type="Philip_Silence">
 		<DescList>
 			<Desc language="cn" name="静默无言" desc="哭泣之子速度骰+1，攻击{0}激进并且最大血量和混乱抗性提高{1}%" />
-			<Desc language="en" name="Unspeaking" desc="Increase Unspeaking Childs' speed dice by 1;
-Attack pattern become {0} aggressive; Increase Max HP and Max Stagger Resist by {1}%" />
+			<Desc language="en" name="Unspeaking" desc="Increase Unspeaking Childs' speed dice by 1,Attack pattern become {0} aggressive; 
+Increase Max HP and Max Stagger Resist by {1}%" />
 		</DescList>
 		<Faction>Enemy</Faction>
 		<Variation>3</Variation>
@@ -70,6 +70,44 @@ Whenever alive Gear Worshipper exist, Damage inflicted to Eileen will be transfe
 		<Faction>Enemy</Faction>
 		<BaseLevel>4</BaseLevel>
 		<Enemy>1302021</Enemy>
+	</Contract>
+	<Contract Type="Tanya_Solo">
+		<DescList>
+			<Desc language="cn" name="巅峰之力" desc="移除所有书页的反击骰子，被单方面攻击时以“拳打”，“脚踢”，“狼之猛袭”，“恐吓”其中一个回击；
+拼点时{0}." />
+			<Desc language="en" name="Pinnical Strength" desc="Remove Counter Dice from all Combat Pages. 
+Upon being targeted one side attack, Use one of “Fistcuffs”,“Kick and Stomp”,“Lupine Onslaught”,“Intimidate” to clash with it.;
+On Clash {0}." />
+		</DescList>
+		<Faction>Enemy</Faction>
+		<Variation>3</Variation>
+		<BaseLevel>1</BaseLevel>
+		<Conflict>Tanya_Brawl</Conflict>
+		<Enemy>1306011</Enemy>
+	</Contract>
+	<Contract Type="Tanya_Brawl">
+		<DescList>
+			<Desc language="cn" name="一人成军" desc="速度骰+2,攻击方式变得{0}激进，减少{1}%承受的伤害和混乱伤害.
+一幕内使用书页攻击同一司书4次会让塔尼娅“看破”该司书的攻击;下一幕与其拼点时该司书书页的所有骰子都会被无效化." />
+			<Desc language="en" name="One Man Army" desc="Gain 2 Speed Dice, Attack pattern become {0} aggressive; Reduce incoming Damage and Stagger Damage by {1}%;
+If Tanya use Combat Page against same Librarian 4 times in one Scene, she will “see through” such librarian's attack;
+In the next Scene, upon clash Tanya will nullify all dice from such librarian's Combat Pages." />
+		</DescList>
+		<Faction>Enemy</Faction>
+		<Variation>3</Variation>
+		<BaseLevel>1</BaseLevel>
+		<Conflict>Tanya_Solo</Conflict>
+		<Enemy>1306011</Enemy>
+	</Contract>
+	<Contract Type="Tanya">
+		<DescList>
+			<Desc language="cn" name="中提琴的浓暗" desc="热身完毕会再次触发一次，此次触发之后每一幕结束时塔尼亚恢复10%最大生命值且无法陷入混乱" />
+			<Desc language="en" name="Dark Viola" desc="Time for round Two can be triggered again. 
+After this, Tanya recover HP equal to 10% of Max HP at the end of each Scene, and cannot be Staggered" />
+		</DescList>
+		<Faction>Enemy</Faction>
+		<BaseLevel>4</BaseLevel>
+		<Enemy>1306011</Enemy>
 	</Contract>
 	<Contract Type="Jaeheon_Thread">
 		<DescList>

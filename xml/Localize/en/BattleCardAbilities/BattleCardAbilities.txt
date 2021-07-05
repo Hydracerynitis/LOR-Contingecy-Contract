@@ -65,6 +65,11 @@
 	<BattleCardAbility ID="MeatGearSmoke">
 		<Desc>[On Play] Gain 2 smoke.</Desc>
   	</BattleCardAbility>
+	<!--塔尼亚-->
+  	<BattleCardAbility ID="TanyaCoolDown">
+    		<Desc>This page is used against all enemies.(Except used due to Brawl)</Desc>
+			<Desc>This card can be used at most use once per 4 Scene </Desc>
+  	</BattleCardAbility>
 	<!--在宪 & 安洁莉卡-->
   	<BattleCardAbility ID="QuickPuppet_Special">
     		<Desc>If Speed is 5 or higher, all dice on this page gain +1 Power</Desc>

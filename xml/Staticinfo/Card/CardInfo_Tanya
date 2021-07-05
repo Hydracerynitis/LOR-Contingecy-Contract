@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Card ID="18600001">
+		<Name>拳打</Name>
+		<Artwork>Tanya6</Artwork>
+		<Rarity>Common</Rarity>
+		<Option>NoInventory</Option>
+		<Spec Range="Near" Cost="2"/>
+		<Script>energy4</Script>
+		<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+            <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Tanya_Z" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Tanya_Z" Script="forbidReuseDice" ActionScript="" Desc="" />
+            <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Tanya_Z" Script="damage3atk" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		 <Priority>0</Priority>
+	</Card>
+    <Card ID="18600002">
+		<Name>脚踢</Name>
+		<Artwork>Tanya3</Artwork>
+		<Rarity>Common</Rarity>
+		<Option>NoInventory</Option>
+		<Spec Range="Near" Cost="3"/>
+		<Script></Script>
+		<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+            <Behaviour Min="6" Dice="10" Type="Atk" Detail="Slash" Motion="J" EffectRes="Tanya_J" Script="damage3atk" ActionScript="" Desc="" />
+            <Behaviour Min="6" Dice="10" Type="Atk" Detail="Hit" Motion="H" EffectRes="Tanya_H" Script="paralysis1atk" ActionScript="" Desc="" />
+            <Behaviour Min="6" Dice="9" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		 <Priority>0</Priority>
+	</Card>
+    <Card ID="18600003">
+		<Name>超速</Name>
+		<Artwork>Tanya1</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Option>NoInventory</Option>
+		<Spec Range="Near" Cost="4"/>
+		<Script>tanyaSpeed</Script>
+		<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+            <Behaviour Min="3" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="3" Dice="6" Type="Atk" Detail="Hit" Motion="J" EffectRes="Tanya_J" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="3" Dice="6" Type="Atk" Detail="Hit" Motion="H" EffectRes="Tanya_H" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+	    <Priority>0</Priority>
+	</Card>
+    <Card ID="18600004">
+		<Name>恐吓</Name>
+		<Artwork>Tanya2</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Option>NoInventory</Option>
+		<Spec Range="Near" Cost="2"/>
+		<Script></Script>
+		<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+            <Behaviour Min="5" Dice="7" Type="Atk" Detail="Hit" Motion="J" EffectRes="Tanya_J" Script="strength1atk" ActionScript="" Desc="" />
+            <Behaviour Min="5" Dice="7" Type="Atk" Detail="Hit" Motion="H" EffectRes="Tanya_H" Script="strength1atk" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+	    <Priority>0</Priority>
+	</Card>
+    <Card ID="18600005">
+		<Name>狼之猛袭</Name>
+		<Artwork>Tanya5</Artwork>
+		<Rarity>Rare</Rarity>
+		<Option>NoInventory</Option>
+		<Spec Range="Near" Cost="2"/>
+		<Script>negatePower</Script>
+		<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+            <Behaviour Min="5" Dice="9" Type="Atk" Detail="Slash" Motion="J" EffectRes="Tanya_J" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="6" Dice="10" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="Tanya_J" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+	    <Priority>0</Priority>
+	</Card>
+    <Card ID="18600006">
+		<Name>痛殴</Name>
+		<Artwork>Tanya4</Artwork>
+		<Rarity>Unique</Rarity>
+		<Option>NoInventory</Option>
+		<Spec Range="Near" Cost="5" Affection="TeamNear" />
+		<Script>TanyaCoolDown</Script>
+		<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+            <Behaviour Min="29" Dice="35" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="damage5atk" ActionScript="TanyaSpecialAtk" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+	    <Priority>0</Priority>
+	</Card>
+</DiceCardXmlRoot>

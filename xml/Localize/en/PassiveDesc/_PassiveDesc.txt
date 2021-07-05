@@ -66,6 +66,21 @@ At the end of Scene when one of the Gear Worshipper die two scene before, summon
 		<Desc>Smoke' amplifies outgoing damage instead of incoming damage on this character.
 Gain three special Combat Page that can be used to benifit self. Replenish them after all three are used.</Desc>
 	</PassiveDesc>
+	<!--塔尼亚-->
+	<PassiveDesc ID="1860001">
+		<Name>Brawl</Name> 
+		<Desc>This character can't get bonus Speed Dice from High Emotion Level.
+Upon being targeted one side attack, Use a random Page in hand to clash with it.</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1860002">
+		<Name>Time for Round Two</Name> 
+		<Desc>When HP drops to 1, fully recover HP and Stagger Resist, and purge all status ailments. HP cannot reach 0 before this occurs. (Once per Reception)
+Afterwards, add a copy of "Beatdown" to the deck and gain 2 Strength and Endurance for the rest of the Act.</Desc>
+	</PassiveDesc>
+  	<PassiveDesc ID="1860003">
+    	<Name>Hour of the Wolf</Name>
+   		<Desc>At the start of the Scene, if there are enemies untargetable, purge 'Untargetable' effects and give that had those effects 3 Protection and Stagger Protection instead.</Desc>
+  	</PassiveDesc>
 	<!--在宪-->
 	<PassiveDesc ID="1870001">
 		<Name>On-site Sewing</Name> 

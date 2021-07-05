@@ -69,6 +69,11 @@
 	<BattleCardAbility ID="MeatGearSmoke">
 		<Desc>[装备时] 获得2层烟气</Desc>
   	</BattleCardAbility>
+	<!--塔尼亚-->
+  	<BattleCardAbility ID="TanyaCoolDown">
+    		<Desc>本书页将对所有敌方角色分别使用1次(除被群殴法则触发)</Desc>
+			<Desc>该书页4幕内最多使用1次</Desc>
+  	</BattleCardAbility>
 	<!--在宪 & 安洁莉卡-->
   	<BattleCardAbility ID="QuickPuppet_Special">
     		<Desc>若自身速度不低于5点则使本书页的所有骰子威力+1</Desc>

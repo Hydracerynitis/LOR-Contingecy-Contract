@@ -1,212 +1,345 @@
 All Guests：
 Sharpened Blade 1   Risk Level 1   Code: Damage1
 Increase all Guests' outgoing Damage by 25%
+
 Sharpened Blade 2   Risk Level 2   Code: Damage2
 Increase all Guests' outgoing Damage by 50%
+
 Sharpened Blade 3   Risk Level 3   Code: Damage3
 Increase all Guests' outgoing Damage by 75%
+
 Sharpened Blade 4   Risk Level 4   Code: Damage4
 Increase all Guests' outgoing Damage by 100%
+
 Concussing Strike 1   Risk Level 1   Code: BreakDamage1
 Increase all Guests' outgoing Stagger Damage by 25%
+
 Concussing Strike 2   Risk Level 2   Code: BreakDamage2
 Increase all Guests' outgoing Stagger Damage by 50%
+
 Concussing Strike 3   Risk Level 3   Code: BreakDamage3
 Increase all Guests' outgoing Stagger Damage by 75%
+
 Concussing Strike 4   Risk Level 4   Code: BreakDamage4
 Increase all Guests' outgoing Stagger Damage by 100%
+
+Powerful 1      Risk Level 2        Code:Power1
+All Guests' Dice gain 1 Power.
+
+Powerful 2      Risk Level 4        Code:Power2
+All Guests' Dice gain 2 Power.
+
+Powerful 3      Risk Level 6        Code:Power3
+All Guests' Dice gain 3 Power.
+
 Surgery Enhancement 1   Risk Level 1   Code: Hp1
 Increase all Guests' Max HP by 25%
+
 Surgery Enhancement 2   Risk Level 2   Code: Hp2
 Increase all Guests' Max HP by 50%
+
 Surgery Enhancement 3   Risk Level 3   Code: Hp3
 Increase all Guests' Max HP by 75%
+
 Surgery Enhancement 4   Risk Level 4   Code: Hp4
 Increase all Guests' Max HP by 100%
+
 Experienced Combatant 1   Risk Level 1   Code: Bp1
 Increase all Guests' Max Stagger Resist by 25%
+
 Experienced Combatant 2   Risk Level 2   Code: Bp2
 Increase all Guests' Max Stagger Resist by 50%
+
 Experienced Combatant 3   Risk Level 3   Code: Bp3
 Increase all Guests' Max Stagger Resist by 75%
+
 Experienced Combatant 4   Risk Level 4   Code: Bp4
 Increase all Guests' Max Stagger Resist by 100%
+
 Unflappable    Risk Level 5   Code: NoBreak
 For all Guests, Becoming Staggered does not temporarily change the character's resistances.
+
 
 All Librarian：
 Poor Maintaince 1   Risk Level 1   Code: Damage_L1
 Reduce all Librarians' outgoing damage by 20%
+
 Poor Maintaince 2   Risk Level 2   Code: Damage_L2
 Reduce all Librarians' outgoing damage by 40%
+
 Poor Maintaince 3   Risk Level 3   Code: Damage_L3
 Reduce all Librarians' outgoing damage by 60%
+
 Absentminded 1   Risk Level 1   Code: BreakDamage_L1
 Reduce all Librarians' outgoing Stagger damage by 20%
+
 Absentminded 2   Risk Level 2   Code: BreakDamage_L2
 Reduce all Librarians' outgoing Stagger damage by 40%
+
 Absentminded 3   Risk Level 3   Code: BreakDamage_L3
 Reduce all Librarians' outgoing Stagger damage by 60%
+
+Fatigue 1      Risk Level 2        Code:Power_L1
+All Librarians' Dice lose 1 Power.
+
+Fatigue 2      Risk Level 4        Code:Power_L2
+All Librarians' Dice lose 2 Power.
+
+Fatigue 3      Risk Level 6        Code:Power_L3
+All Librarians' Dice lose 3 Power.
+
 Frangible 1   Risk Level 1   Code: Hp_L1
 Reduce all Librarians' Max HP by 20%
+
 Frangible 2   Risk Level 2   Code: Hp_L2
 Reduce all Librarians' Max HP by 40%
+
 Frangible 3   Risk Level 3   Code: Hp_L3
 Reduce all Librarians' Max HP by 60%
+
 Panic attack 1   Risk Level 1   Code: Bp_L1
 Reduce all Librarians' Max Stagger Resist by 20%
+
 Panic attack 2   Risk Level 2   Code: Bp_L2
 Reduce all Librarians' Max Stagger Resist by 40%
+
 Panic attack 3   Risk Level 3   Code: Bp_L3
 Reduce all Librarians' Max Stagger Resist by 60%
+
 Engulfed by Darkness 1   Risk Level 3   Code: Darkness1
 At the start of any act, all Librarian have 3 Light
+
 Engulfed by Darkness 2   Risk Level 4   Code: Darkness2
 At the start of any act, all Librarian have 2 Light
+
 Engulfed by Darkness 3   Risk Level 5   Code: Darkness3
 At the start of any act, all Librarian have 1 Light
+
 Engulfed by Darkness 4   Risk Level 6   Code: Darkness4
 At the start of any act, all Librarian have 0 Light
+
 
 Recpetion：(Contracts in this categories require the original recption reach their limitation to be actived)
 REINFORCE!      Risk Level 4    Code: Duplicate
 Add one extra wave consist of copy of random wave
 Limitation: None
+
 Last Stand      Risk Level 4    Code: Last
 Only one floor of librarian can be involed in reception"
 Limitation: The original reception didn't limit only one floor of Libarain can be involed.
+
 Ambush 1         Risk Level 4    Code: LowFloor1 
 Random 5 Floor of library is unavailabe for this reception
 Limitation: At most 4 floors is unavailabe in the original recption.
+
 Ambush 2         Risk Level 6    Code: LowFloor2 
 Random 9 Floor of library is unavailabe for this reception
 Limitation: At most 8 floors is unavailabe in the original recption.
+
 Oversleep       Risk Level 4    Code: LowPeople
 Reduce number of Maximun Available Librarians by 1
 Limitation: There is a wave that allows at least 2 librarians into battle in original reception, 
 
+
 Shi Association Section 2:
 Past's Glory 1   Risk Level 2   Confict with The Backbone   Code: Yujin1
 At her first appearance, Yujin recover 25% of Max HP. Increase the Minimun value of first die of Boundry of Death by 1
+
 Past's Glory 2   Risk Level 3   Confict with The Backbone   Code: Yujin2
 At her first appearance, Yujin recover 50% of Max HP. Increase the Minimun value of first die of Boundry of Death by 2
+
 Past's Glory 3   Risk Level 4   Confict with The Backbone   Code: Yujin3
 At her first appearance, Yujin recover 75% of Max HP. Increase the Minimun value of first die of Boundry of Death by 3
+
 The Backbone 1   Risk Level 2   Confict with Past's Glory    Code: ValTem1
 Increase Max HP and Stagger Resist of Tenma and Valentin by 25%; Speed of Tenma won't be lower than 3;
 On win clash using a Combat Page with one non-Counter die, Valentin Destroy targets next 1 dices
+
 The Backbone 2   Risk Level 3   Confict with Past's Glory    Code: ValTem2
 Increase Max HP and Stagger Resist of Tenma and Valentin by 50%; Speed of Tenma won't be lower than 5;
 On win clash using a Combat Page with one non-Counter die, Valentin Destroy targets next 2 dices
+
 The Backbone 3   Risk Level 4   Confict with Past's Glory    Code: ValTem3
 Increase Max HP and Stagger Resist of Tenma and Valentin by 75%; Speed of Tenma won't be lower than 7;
 On win clash using a Combat Page with one non-Counter die, Valentin Destroy targets next 3 dices
+
 
 The Crying Children (Reverbration):
 Immolation 1   Risk Level 2   Conflict with Unspeaking   Code: Philip_Burn1
 Increase Philip's Max Stagger Resist by 50%; OverHeat will only change Stagger Resisteance to Weak; 
 Increase Outgoing damage by 3 when OverHeat
+
 Immolation 2   Risk Level 3   Conflict with Unspeaking   Code: Philip_Burn2
 Increase Philip's Max Stagger Resist by 50%; OverHeat will only change Stagger Resisteance to Normal; 
 Increase Outgoing damage by 5 when OverHeat
+
 Immolation 3   Risk Level 4   Conflict with Unspeaking   Code: Philip_Burn3
 Increase Philip's Max Stagger Resist by 50%; OverHeat will only change Stagger Resisteance to Endured; 
 Increase Outgoing damage by 7 when OverHeat
+
 Unspeaking 1   Risk Level 2   Conflict with Immolation     Code: Philip_Silence1
 Increase Unspeaking Childs' speed dice by 1; Attack pattern become more aggressive; 
 Increase Max HP and Max Stagger Resist by 20%
+
 Unspeaking 2   Risk Level 3   Conflict with Immolation     Code: Philip_Silence2
 Increase Unspeaking Childs' speed dice by 1; Attack pattern become much more aggressive; 
 Increase Max HP and Max Stagger Resist by 40%
+
 Unspeaking 3   Risk Level 4   Conflict with Immolation     Code: Philip_Silence3
 Increase Unspeaking Childs' speed dice by 1; Attack pattern become extremely much more aggressive; 
 Increase Max HP and Max Stagger Resist by 60%
+
 Weighty Cello    Risk Level 4   Code: Philip
 Philip's Attack Pattern becomes more aggressive.
+
 
 The Church of Gears:
 Frantic Faith 1  Risk Level 2    Code: Eileen_Production1
 Increase Eileen's Max Hp by 50%;
 Gear Worshipper gain 1 Speed dice, Max Light +2.
+
 Frantic Faith 2  Risk Level 3    Code: Eileen_Production2
 Increase Eileen's Max Hp by 75%;
 Gear Worshipper gain 1 Speed dice, Max Light +2, at the start of each Scene, gain 2 Smoke.
+
 Frantic Faith 3  Risk Level 4    Code: Eileen_Production3
 Increase Eileen's Max Hp by 100%;
 Gear Worshipper gain 1 Speed dice, Max Light +2, at the start of each Scene, gain 2 Smoke and recover 2 light and draw 2 cards.
+
 Body Guard 1     Risk Level 2   Code: Eileen_BodyGuard1
 Increase Gear Whorshipper's Max HP and Max Stagger Resist by 50%;
 Increase the Maximun value of second die of “Thought Gear: Brainwash” by 0; 
 Whenever alive Gear Worshipper exist, Damage inflicted to Eileen will be transferred to alive Gear Worshipper.
+
 Body Guard 2     Risk Level 3   Code: Eileen_BodyGuard2
 Increase Gear Whorshipper's Max HP and Max Stagger Resist by 75%;
 Increase the Maximun value of second die of “Thought Gear: Brainwash” by 3; 
 Whenever alive Gear Worshipper exist, Damage inflicted to Eileen will be transferred to alive Gear Worshipper.
+
 Body Guard 3     Risk Level 4   Code: Eileen_BodyGuard3
 Increase Gear Whorshipper's Max HP and Max Stagger Resist by 100%;
 Increase the Maximun value of second die of “Thought Gear: Brainwash” by 6; 
 Whenever alive Gear Worshipper exist, Damage inflicted to Eileen will be transferred to alive Gear Worshipper.
+
 Sharp Harp      Risk Level 4    Code: Eileen
+Gear Worshipper gain unique deck of Combat Pages.
+
+
+L’heure du Loup: 
+Pinnical Strength 1   Risk Level 2    Code: Tanya_Solo1
+Remove Counter Dice from all Combat Pages. 
+Upon being targeted one side attack, Use one of “Fistcuffs”,“Kick and Stomp”,“Lupine Onslaught”,“Intimidate” to clash with it.;
+On Clash all Offensive Dice Gain 2 Power after First Scene.
+
+Pinnical Strength 2   Risk Level 3    Code: Tanya_Solo2
+Remove Counter Dice from all Combat Pages. 
+Upon being targeted one side attack, Use one of “Fistcuffs”,“Kick and Stomp”,“Lupine Onslaught”,“Intimidate” to clash with it.;
+On Clash all Offensive Dice Gain 2 Power after First Scene, all Offensive Dice gain extra 2 Power after reached Emotion Level 3.
+
+Pinnical Strength 3  Risk Level 4    Code: Tanya_Solo3
+Remove Counter Dice from all Combat Pages. 
+Upon being targeted one side attack, Use one of “Fistcuffs”,“Kick and Stomp”,“Lupine Onslaught”,“Intimidate” to clash with it.;
+On Clash all Offensive Dice Gain 2 Power after First Scene, all Offensive Dice gain extra 2 Power after reached Emotion Level 3,
+all Offensive Dice gain extra 2 Power after reached Emotion Level 5.
+
+One Man Army 1      Risk Level 2    Code: Tanya_Brawl1
+Gain 2 Speed Dice, Attack pattern become more aggressive; Reduce incoming Damage and Stagger Damage by 20%;
+If Tanya use Combat Page against same Librarian 4 times in one Scene, she will “see through” such librarian's attack;
+In the next Scene, upon clash Tanya will nullify all dice from such librarian's Combat Pages.
+
+One Man Army 2      Risk Level 3    Code: Tanya_Brawl2
+Gain 2 Speed Dice, Attack pattern become much more aggressive; Reduce incoming Damage and Stagger Damage by 30%;
+If Tanya use Combat Page against same Librarian 4 times in one Scene, she will “see through” such librarian's attack;
+In the next Scene, upon clash Tanya will nullify all dice from such librarian's Combat Pages.
+
+One Man Army 3      Risk Level 4    Code: Tanya_Brawl3
+Gain 2 Speed Dice, Attack pattern become extremely much more aggressive; Reduce incoming Damage and Stagger Damage by 40%;
+If Tanya use Combat Page against same Librarian 4 times in one Scene, she will “see through” such librarian's attack;
+In the next Scene, upon clash Tanya will nullify all dice from such librarian's Combat Pages.
+
+Dark Viola      Risk Level 4    Code: Tanya
+Time for round Two can be triggered again. 
+After this, Tanya recover HP equal to 10% of Max HP at the end of each Scene, and cannot be Staggered.
 
 The Puppeteer:
 Puppet Performance 1   Risk Level 2   Conflict with Strings Dexterity   Code: Jaeheon_Thread1
 Boost Jae-heon's Counter dices' Power by 1; Immune to Damage and Stagger Damage as long as other alive ally exist; 
 Increase Puppet Strings stack by 0 when it's first applied to Puppets.
+
 Puppet Performance 2   Risk Level 3   Conflict with Strings Dexterity   Code: Jaeheon_Thread2
 Boost Jae-heon's Counter dices' Power by 2; Immune to Damage and Stagger Damage as long as other alive ally exist; 
 Increase Puppet Strings stack by 1 when it's first applied to Puppets.
+
 Puppet Performance 3   Risk Level 4   Conflict with Strings Dexterity   Code: Jaeheon_Thread3
 Boost Jae-heon's Counter dices' Power by 3; Immune to Damage and Stagger Damage as long as other alive ally exist; 
 Increase Puppet Strings stack by 2 when it's first applied to Puppets.
+
 Strings Dexterity 1   Risk Level 2   Conflict with Puppet Performance  Code: Jaeheon_Puppet1
 3 Scene after Puppets lose Puppet Strings, Jae-heon will apply new Puppet Strings to them;
 Increase Speed dice of Puppets with Puppet Strings by 1; Increase Jae-heon's Max Stagger Resist by 40%.
+
 Strings Dexterity 2   Risk Level 3   Conflict with Puppet Performance  Code: Jaeheon_Puppet2
 2 Scene after Puppets lose Puppet Strings, Jae-heon will apply new Puppet Strings to them;
 Increase Speed dice of Puppets with Puppet Strings by 1; Increase Jae-heon's Max Stagger Resist by 70%.
+
 Strings Dexterity 3   Risk Level 4   Conflict with Puppet Performance  Code: Jaeheon_Puppet3
 1 Scene after Puppets lose Puppet Strings, Jae-heon will apply new Puppet Strings to them;
 Increase Speed dice of Puppets with Puppet Strings by 1; Increase Jae-heon's Max Stagger Resist by 100%.
+
 Shrill Second Violin    Risk Level 4   Code: Jaeheon
 Jae-heon's Attack Pattern becomes more aggressive.
+
 
 The Blood-red Moon:
 Scorching Cross 1   Risk Level 2   Conflict with Feast  Code: Elena_Cross1
 Upon hit 3 times by The Vermilion Cross will gain 1 Scorched in the next Scene
 (Being Hit by The Vermilion Cross will reduce the stack by 1 and make her attack other random Librarian with damage boosed by 0%)
+
 Scorching Cross 2   Risk Level 3   Conflict with Feast  Code: Elena_Cross2
 Upon hit 3 times by The Vermilion Cross will gain 2 Scorched in the next Scene
 (Being Hit by The Vermilion Cross will reduce the stack by 1 and make her attack other random Librarian with damage boosed by 25%)
+
 Scorching Cross 3   Risk Level 4   Conflict with Feast  Code: Elena_Cross3
 Upon hit 3 times by The Vermilion Cross will gain 3 Scorched in the next Scene
 (Being Hit by The Vermilion Cross will reduce the stack by 1 and make her attack other random Librarian with damage boosed by 50%)
+
 Feast 1   Risk Level 2   Conflict with Scorching Cross  Code: Elena_Zombie1
 Elena will use Feast against Librarian with 20% Max HP or lower, turning them into Nameless Shell that will attack other Librarians;
 Increase Elena's Max HP by 20%.
+
 Feast 2   Risk Level 3   Conflict with Scorching Cross  Code: Elena_Zombie2
 Elena will use Feast against Librarian with 25% Max HP or lower, turning them into Nameless Shell that will attack other Librarians;
 Increase Elena's Max HP by 40%.
+
 Feast 3   Risk Level 4   Conflict with Scorching Cross  Code: Elena_Zombie3
 Elena will use Feast against Librarian with 30% Max HP or lower, turning them into Nameless Shell that will attack other Librarians;
 Increase Elena's Max HP by 60%.
+
 Introspective First Violin    Risk Level 4   Code: Elena
 The Vermilion Cross and Elena's Attack Pattern becomes more aggressive.
+
 
 Yesterday's Promise:
 Indifference 1   Risk Level 2   Conflict with Crashing Barrier  Code: Pluto_Shadow1
 Increase Shades' Max HP and Stagger Resist by 50%; Boost dice's Power against the Libarain copied from by 1.
+
 Indifference 2   Risk Level 3   Conflict with Crashing Barrier  Code: Pluto_Shadow2
 Increase Shades' Max HP and Stagger Resist by 65%; Boost dice's Power against the Libarain copied from by 2.
+
 Indifference 3   Risk Level 4   Conflict with Crashing Barrier  Code: Pluto_Shadow3
+
 Increase Shades' Max HP and Stagger Resist by 80%; Boost dice's Power against the Libarain copied from by 3.
 Crashing Barrier 1   Risk Level 2   Conflict with Indifference  Code: Pluto_Barrier1
 Librarian sent to Sealing Barrier take damage equal to 5% Max HP; Increase Pluto's Max HP by 100%; 
 Increase Max Stagger Resist Librarian sent to Sealing Barrier by 30%.
+
 Crashing Barrier 2   Risk Level 3   Conflict with Indifference  Code: Pluto_Barrier2
 Librarian sent to Sealing Barrier take damage equal to 10% Max HP; Increase Pluto's Max HP by 100%; 
 Increase Max Stagger Resist Librarian sent to Sealing Barrier by 40%.
+
 Crashing Barrier 3   Risk Level 4   Conflict with Indifference  Code: Pluto_Barrier3
 Librarian sent to Sealing Barrier take damage equal to 15% Max HP; Increase Pluto's Max HP by 100%; 
 Increase Max Stagger Resist Librarian sent to Sealing Barrier by 50%.
+
 Austere Pipe Organ    Risk Level 4   Code: Pluto
 Release a new Random Contract per 3 Scene.

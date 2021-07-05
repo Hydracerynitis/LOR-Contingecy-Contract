@@ -88,6 +88,25 @@
 		<BattleCardDesc ID="18200008">
 			<LocalizedName>Meat Gear: Spin</LocalizedName>
 		</BattleCardDesc>
+		<!--塔尼亚-->
+		<BattleCardDesc ID="18600001">
+			<LocalizedName>Fisticuffs</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18600002">
+			<LocalizedName>Kicks and Stomps</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18600003">
+			<LocalizedName>Overspeed</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18600004">
+			<LocalizedName>Intimidate</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18600005">
+			<LocalizedName>Lupine Onslaught</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18600006">
+			<LocalizedName>Beatdown</LocalizedName>
+		</BattleCardDesc>
 		<!--在宪 & 安洁莉卡-->
 		<BattleCardDesc ID="18700001">
 			<LocalizedName>Puppetry</LocalizedName>

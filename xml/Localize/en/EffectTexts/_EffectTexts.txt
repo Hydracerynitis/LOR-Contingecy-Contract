@@ -29,5 +29,11 @@
 			<Name>Scorched</Name>
 			<Desc>Being Hit by The Vermilion Cross will reduce the stack by 1 and make her attack other random Librarian with damage boosed by {0}%</Desc>
 		</BattleEffectText>
+		<BattleEffectText ID="TanyaMaster">
+			<Name>One Man Army</Name>
+			<Desc>If Tanya use Combat Page against same Librarian 4 times in one Scene, she will “see through” such librarian's attack;
+In the next Scene, upon clash Tanya will nullify all dice from such librarian's Combat Pages.
+Librarian has been seen through in this Scene are: {0}</Desc>
+		</BattleEffectText>
 	</effectTextList>
 </BattleEffectTextRoot>

@@ -32,6 +32,14 @@
 			</TextList>
 			<PassiveList />
 		</BookDesc>
+		<BookDesc BookID="18600000">
+      		<BookName>Tanya’s lively Page</BookName>
+      		<TextList>
+        		<Desc>Fighting for survival is a natural thing. Even now, we’re all in battle. There’re more people born than folks dying of natural causes, and the living struggle in their own positions every day. A fight to protect, and to avoid falling behind. Maybe it’s all ‘cause there just ain’t enough seats for the ever-growing population of humans to take? Sure, extra jobs and stuff could be made in the future, but that’s nothing more than a hopeful estimate that might not happen until it’s too late for you. The world we live in right now is what matters. There’s got to be a way to weed out the unfit without straining all of us. And that’s when strength plays its part.</Desc>
+        		<Desc>I don’t get why you vilify this. Aren’t we all doing the same thing, directly or not? We elbow our way past others so we can survive, and the losers are knocked outta the race. You say this is fair, but say no to physical conflicts, to “respect life” or whatevs? Then lemme ask: what’s the reason to respect life? Do you think you’re respecting life right now?</Desc>
+      			</TextList>
+			<PassiveList />
+		</BookDesc>
 		<BookDesc BookID="18700000">
 			<BookName>Jae-heon's Eloquent Page</BookName>
 			<TextList>

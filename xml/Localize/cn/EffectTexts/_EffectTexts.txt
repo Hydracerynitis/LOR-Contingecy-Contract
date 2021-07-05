@@ -29,5 +29,10 @@
 			<Name>烧印</Name>
 			<Desc>被朱红十字攻击会消耗一层并使其对其他司书额外攻击,此次伤害提升{0}%</Desc>
 		</BattleEffectText>
+		<BattleEffectText ID="TanyaMaster">
+			<Name>一人成军</Name>
+			<Desc>一幕内使用书页攻击同一司书4次会让塔尼娅“看破”该司书的攻击;下一幕与其拼点时该司书书页的所有骰子都会被无效化.
+这一幕内被看破的司书有: {0}</Desc>
+		</BattleEffectText>
 	</effectTextList>
 </BattleEffectTextRoot>

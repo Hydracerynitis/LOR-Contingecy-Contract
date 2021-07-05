@@ -64,6 +64,7 @@
     		<Name>艾琳</Name>
    		 <TextId>18200000</TextId>
     		<Category>DeckFixed</Category>
+			<RangeType>Range</RangeType>
     		<EquipEffect>
       			<HP>150</HP>
       			<Break>80</Break>
@@ -116,6 +117,35 @@
     		<Rarity>Unique</Rarity>
     		<CharacterSkin>GearsUnit</CharacterSkin>
 	</Book>
+	<Book ID="18600000">
+		<Name>塔尼亚</Name>
+		<TextId>18600000</TextId>
+    		<Category>DeckFixed</Category>
+    		<EquipEffect>
+      			<HP>150</HP>
+      			<Break>160</Break>
+      			<SpeedMin>3</SpeedMin>
+      			<Speed>9</Speed>
+      			<SResist>Normal</SResist>
+      			<PResist>Endure</PResist>
+      			<HResist>Normal</HResist>
+      			<SBResist>Normal</SBResist>
+      			<PBResist>Endure</PBResist>
+      			<HBResist>Normal</HBResist>
+      			<StartPlayPoint>4</StartPlayPoint>
+      			<MaxPlayPoint>4</MaxPlayPoint>
+      			<Passive>1800000</Passive>
+      			<Passive>1300001</Passive>
+      			<Passive>1860001</Passive>
+      			<Passive>1860002</Passive>
+      			<Passive>1860003</Passive>
+    		</EquipEffect>
+    		<BookIcon>ContingencyReward</BookIcon>
+    		<Chapter>7</Chapter>
+    		<Episode>1800000</Episode>
+    		<Rarity>Unique</Rarity>
+    		<CharacterSkin>Tanya</CharacterSkin>
+ 	 </Book>
   	<Book ID="18700000">
     		<Name>在宪</Name>
    		 <TextId>18700000</TextId>

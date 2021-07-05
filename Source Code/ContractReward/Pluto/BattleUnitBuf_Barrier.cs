@@ -34,8 +34,93 @@ namespace ContractReward
             component.Init(owner.view);
             owner.view.speedDiceSetterUI.DeselectAll();
             owner.view.charAppearance.ChangeMotion(ActionDetail.Damaged);
-            owner.OnRoundStartOnlyUI();
-            owner.RollSpeedDice();
+            owner.view.speedDiceSetterUI.BlockDiceAll(true);
+            owner.view.speedDiceSetterUI.BreakDiceAll(true);
+            List<BattleUnitModel> actionableEnemyList = BattleObjectManager.instance.GetAliveList_opponent(owner.faction).FindAll(x => x.passiveDetail.IsActionable() && x.bufListDetail.IsActionable());
+            for (int index1 = 0; index1 < actionableEnemyList.Count; ++index1)
+            {
+                BattleUnitModel actor = actionableEnemyList[index1];
+                if (actor.turnState != BattleUnitTurnState.BREAK)
+                    actor.turnState = BattleUnitTurnState.WAIT_CARD;
+                try
+                {
+                    for (int index2 = 0; index2 < actor.speedDiceResult.Count; ++index2)
+                    {
+                        if (!actor.speedDiceResult[index2].breaked && index2 < actor.cardSlotDetail.cardAry.Count)
+                        {
+                            BattlePlayingCardDataInUnitModel cardDataInUnitModel = actor.cardSlotDetail.cardAry[index2];
+                            if (cardDataInUnitModel != null && cardDataInUnitModel.card != null)
+                            {
+                                if (cardDataInUnitModel.card.GetSpec().Ranged == CardRange.FarArea || cardDataInUnitModel.card.GetSpec().Ranged == CardRange.FarAreaEach)
+                                {
+                                    if (cardDataInUnitModel.subTargets.Exists((Predicate<BattlePlayingCardDataInUnitModel.SubTarget>)(x => x.target == owner)))
+                                        cardDataInUnitModel.subTargets.RemoveAll((Predicate<BattlePlayingCardDataInUnitModel.SubTarget>)(x => x.target == owner));
+                                    else if (cardDataInUnitModel.target == owner)
+                                    {
+                                        if (cardDataInUnitModel.subTargets.Count > 0)
+                                        {
+                                            BattlePlayingCardDataInUnitModel.SubTarget subTarget = RandomUtil.SelectOne<BattlePlayingCardDataInUnitModel.SubTarget>(cardDataInUnitModel.subTargets);
+                                            cardDataInUnitModel.target = subTarget.target;
+                                            cardDataInUnitModel.targetSlotOrder = subTarget.targetSlotOrder;
+                                            cardDataInUnitModel.earlyTarget = subTarget.target;
+                                            cardDataInUnitModel.earlyTargetOrder = subTarget.targetSlotOrder;
+                                        }
+                                        else
+                                        {
+                                            actor.allyCardDetail.ReturnCardToHand(actor.cardSlotDetail.cardAry[index2].card);
+                                            actor.cardSlotDetail.cardAry[index2] = (BattlePlayingCardDataInUnitModel)null;
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    if (cardDataInUnitModel.subTargets.Exists((Predicate<BattlePlayingCardDataInUnitModel.SubTarget>)(x => x.target == owner)))
+                                        cardDataInUnitModel.subTargets.RemoveAll((Predicate<BattlePlayingCardDataInUnitModel.SubTarget>)(x => x.target == owner));
+                                    if (cardDataInUnitModel.target == owner)
+                                    {
+                                        BattleUnitModel targetByCard = BattleObjectManager.instance.GetTargetByCard(actor, cardDataInUnitModel.card, index2, actor.TeamKill());
+                                        if (targetByCard != null)
+                                        {
+                                            int targetSlot = UnityEngine.Random.Range(0, targetByCard.speedDiceResult.Count);
+                                            int num = actor.ChangeTargetSlot(cardDataInUnitModel.card, targetByCard, index2, targetSlot, actor.TeamKill());
+                                            cardDataInUnitModel.target = targetByCard;
+                                            cardDataInUnitModel.targetSlotOrder = num;
+                                            cardDataInUnitModel.earlyTarget = targetByCard;
+                                            cardDataInUnitModel.earlyTargetOrder = num;
+                                        }
+                                        else
+                                        {
+                                            actor.allyCardDetail.ReturnCardToHand(actor.cardSlotDetail.cardAry[index2].card);
+                                            actor.cardSlotDetail.cardAry[index2] = (BattlePlayingCardDataInUnitModel)null;
+                                        }
+                                    }
+                                    else if (cardDataInUnitModel.earlyTarget == owner)
+                                    {
+                                        BattleUnitModel targetByCard = BattleObjectManager.instance.GetTargetByCard(actor, cardDataInUnitModel.card, index2, actor.TeamKill());
+                                        if (targetByCard != null)
+                                        {
+                                            int targetSlot = UnityEngine.Random.Range(0, targetByCard.speedDiceResult.Count);
+                                            int num = actor.ChangeTargetSlot(cardDataInUnitModel.card, targetByCard, index2, targetSlot, actor.TeamKill());
+                                            cardDataInUnitModel.earlyTarget = targetByCard;
+                                            cardDataInUnitModel.earlyTargetOrder = num;
+                                        }
+                                        else
+                                        {
+                                            cardDataInUnitModel.earlyTarget = cardDataInUnitModel.target;
+                                            cardDataInUnitModel.earlyTargetOrder = cardDataInUnitModel.targetSlotOrder;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Contingecy_Contract.Debug.Error("target change error",ex);
+                }
+            }
+            SingletonBehavior<BattleManagerUI>.Instance.ui_TargetArrow.UpdateTargetList();
         }
         public override void OnRoundEndTheLast()
         {
