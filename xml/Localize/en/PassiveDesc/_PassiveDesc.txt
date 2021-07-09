@@ -70,7 +70,7 @@ Gain three special Combat Page that can be used to benifit self. Replenish them 
 	<PassiveDesc ID="1860001">
 		<Name>Brawl</Name> 
 		<Desc>This character can't get bonus Speed Dice from High Emotion Level.
-Upon being targeted one side attack, Use a random Page in hand to clash with it.</Desc>
+Upon being targeted one side attack, Use a leftmost Page in hand to clash with it.</Desc>
 	</PassiveDesc>
 	<PassiveDesc ID="1860002">
 		<Name>Time for Round Two</Name> 

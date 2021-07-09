@@ -12,9 +12,7 @@ namespace ContractReward
         public override void OnStartBattle()
         {
             base.OnStartBattle();
-            List<BattlePlayingCardDataInUnitModel> cardArray = this.owner.cardSlotDetail.cardAry;
-            if (cardArray == null || cardArray.Count <= 0)
-                return;
+            List<BattlePlayingCardDataInUnitModel> cardArray = this.owner.cardSlotDetail.cardAry.FindAll(x=> x!=null);
             List<BattlePlayingCardDataInUnitModel> cards = cardArray.FindAll(x => x.card.GetID() == 18810001 || x.card.GetID() == 18810002 || x.card.GetID() == 18810003);
             if (cards.Count <= 0)
                 return;

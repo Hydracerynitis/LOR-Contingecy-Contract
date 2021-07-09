@@ -71,7 +71,7 @@
 	<PassiveDesc ID="1860001">
 		<Name>群殴法则</Name> 
 		<Desc>该角色无法在情感4级时获得额外的速度骰子。
-被单方面攻击时使用手牌里随机一张书页回击</Desc>
+被单方面攻击时使用手牌里最左边的书页回击</Desc>
 	</PassiveDesc>
 	<PassiveDesc ID="1860002">
 		<Name>热身完毕</Name> 

@@ -112,7 +112,7 @@
         <Rarity>Common</Rarity>
 		<Option>NoInventory</Option>
         <Spec Range="Near" Cost="2" />
-        <Script>energy1</Script>
+        <Script>energy2</Script>
         <ScriptDesc></ScriptDesc>
         <BehaviourList>
             <Behaviour Min="7" Dice="10" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="Orange_H" Script="burn2atk" ActionScript="" Desc="" />
@@ -128,7 +128,7 @@
         <Rarity>Common</Rarity>
 		<Option>NoInventory</Option>
         <Spec Range="Near" Cost="2" />
-        <Script>energy1</Script>
+        <Script>energy2</Script>
         <ScriptDesc></ScriptDesc>
         <BehaviourList>
             <Behaviour Min="10" Dice="16" Type="Atk" Detail="Hit" Motion="H" EffectRes="Orange_H" Script="burn1atk" ActionScript="" Desc="" />
@@ -143,7 +143,7 @@
         <Rarity>Common</Rarity>
 		<Option>NoInventory</Option>
         <Spec Range="Near" Cost="2" />
-        <Script>energy1</Script>
+        <Script>energy2</Script>
         <ScriptDesc></ScriptDesc>
         <BehaviourList>
             <Behaviour Min="7" Dice="9" Type="Def" Detail="Guard" Motion="G" EffectRes="Orange_G" Script="" ActionScript="" Desc="" />
