@@ -13,9 +13,9 @@ namespace ContractReward
         {
             if (_activate)
                 return true;
-            else if (this.owner.UnitData.floorBattleData.param3 == 0 && this.owner.hp - dmg <= 1)
+            else if (this.owner.UnitData.floorBattleData.param1 == 0 && this.owner.hp - dmg <= 1)
             {
-                this.owner.UnitData.floorBattleData.param3 = 1;
+                this.owner.UnitData.floorBattleData.param1 = 1;
                 _activate = true;
                 return true;
             }           
@@ -34,7 +34,7 @@ namespace ContractReward
                 this.owner.bufListDetail.RemoveBufAll(BufPositiveType.Negative);
                 _activate = false;
             }
-            if (this.owner.UnitData.floorBattleData.param3==1)
+            if (this.owner.UnitData.floorBattleData.param1==1)
             {
                 if (this.owner.allyCardDetail.GetAllDeck().Find(x => x.GetID() == 18600006) == null)
                     this.owner.allyCardDetail.AddNewCardToDeck(18600006);

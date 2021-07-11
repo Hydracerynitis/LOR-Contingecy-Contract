@@ -228,16 +228,49 @@ namespace Contingecy_Contract
             {
                 Debug.Error("HP_" + Patch17.Name, ex);
             }
+            MethodInfo Method18 = typeof(BattleUnitBuf_Resistance).GetMethod("get_keywordId", AccessTools.all);
+            MethodInfo Patch18 = typeof(Harmony_Patch).GetMethod("BattleUnitBuf_Resistance_get_keywordId");
+            try
+            {
+                harmony.Patch(Method18, null, new HarmonyMethod(Patch18), null, null);
+                Debug.Log("Patch: {0} succeed", Patch18.Name);
+            }
+            catch (Exception ex)
+            {
+                Debug.Error("HP_" + Patch18.Name, ex);
+            }
+            MethodInfo Method19 = typeof(DiceCardSelfAbility_elenaMinionStrong).GetMethod("OnSucceedAttack", new Type[] { });
+            MethodInfo Patch19 = typeof(Harmony_Patch).GetMethod("DiceCardSelfAbility_elenaMinionStrong_OnSucceedAttack");
+            try
+            {
+                harmony.Patch(Method19, null, new HarmonyMethod(Patch19), null, null);
+                Debug.Log("Patch: {0} succeed", Patch19.Name);
+            }
+            catch (Exception ex)
+            {
+                Debug.Error("HP_" + Patch19.Name, ex);
+            }
+            MethodInfo Method20 = typeof(DiceCardSelfAbility_greta_trample).GetMethod("OnSucceedAttack", new Type[] { });
+            MethodInfo Patch20 = typeof(Harmony_Patch).GetMethod("DiceCardSelfAbility_greta_trample_OnSucceedAttack");
+            try
+            {
+                harmony.Patch(Method20, null, new HarmonyMethod(Patch20), null, null);
+                Debug.Log("Patch: {0} succeed", Patch20.Name);
+            }
+            catch (Exception ex)
+            {
+                Debug.Error("HP_" + Patch20.Name, ex);
+            }
             //MethodInfo Method18 = typeof(BehaviourAction_TanyaSpecialAtk).GetMethod("GetMovingAction", AccessTools.all);
             //MethodInfo Patch18 = typeof(Harmony_Patch).GetMethod("BehaviourAction_TanyaSpecialAtk_GetMovingAction");
             //try
             //{
-                //harmony.Patch(Method18, null, null, new HarmonyMethod(Patch18), null);
-                //Debug.Log("Patch: {0} succeed", Patch18.Name);
+            //harmony.Patch(Method18, null, null, new HarmonyMethod(Patch18), null);
+            //Debug.Log("Patch: {0} succeed", Patch18.Name);
             //}
             //catch (Exception ex)
             //{
-                //Debug.Error("HP_" + Patch18.Name, ex);
+            //Debug.Error("HP_" + Patch18.Name, ex);
             //}
         }
         public static void StageNameXmlList_GetName(ref string __result,int id)
@@ -417,6 +450,20 @@ namespace Contingecy_Contract
                 return false;
             }
             return true;
+        }
+        public static void BattleUnitBuf_Resistance_get_keywordId(ref string __result,BattleUnitModel ____owner)
+        {
+            if (____owner != null && ____owner.Book != null && ____owner.Book.GetBookClassInfoId() == 18300000)
+                __result = "Resistance";
+
+        }
+        public static void DiceCardSelfAbility_greta_trample_OnSucceedAttack(DiceCardSelfAbility_greta_trample __instance)
+        {
+            __instance.card.target.bufListDetail.AddBuf(new BattleUnitBuf_Greta_Trampled());
+        }
+        public static void DiceCardSelfAbility_elenaMinionStrong_OnSucceedAttack(DiceCardSelfAbility_elenaMinionStrong __instance)
+        {
+            __instance.card.target.bufListDetail.AddBuf(new DiceCardSelfAbility_elenaMinionStrong.BattleUnitBuf_elenaStrongOnce());
         }
         public static IEnumerable<CodeInstruction>  BehaviourAction_TanyaSpecialAtk_GetMovingAction(IEnumerable<CodeInstruction> instructions, ILGenerator generator)
         {

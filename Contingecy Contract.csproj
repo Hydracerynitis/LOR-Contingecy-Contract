@@ -70,6 +70,7 @@
     <Compile Include="Source Code\ContractList_Pluto.cs" />
     <Compile Include="Source Code\ContractList_Jaeheon.cs" />
     <Compile Include="Source Code\ContractList_Philip.cs" />
+    <Compile Include="Source Code\ContractReward\DiceCardSelfAbility_energy3.cs" />
     <Compile Include="Source Code\ContractReward\DiceCardSelfAbility_AoeCoolDown.cs" />
     <Compile Include="Source Code\ContractReward\DiceCardAbility_invalid.cs" />
     <Compile Include="Source Code\ContractReward\Eileen\BattleUnitBuf_ZealLimit.cs" />
@@ -87,8 +88,16 @@
     <Compile Include="Source Code\ContractReward\Elena\DiceCardAbility_ElenaExecute.cs" />
     <Compile Include="Source Code\ContractReward\Elena\DiceCardSelfAbility_ElenaZombie.cs" />
     <Compile Include="Source Code\ContractReward\Elena\DiceCardSelfAbility_ElenaBuff.cs" />
-    <Compile Include="Source Code\ContractReward\Fix\DiceCardSelfAbility_elenaMinionStrong.cs" />
     <Compile Include="Source Code\ContractReward\Fix\PassiveAbility_1302013.cs" />
+    <Compile Include="Source Code\ContractReward\Greta\BattleUnitBuf_FreshMeat.cs" />
+    <Compile Include="Source Code\ContractReward\Greta\DiceCardAbility_GretaTrample.cs" />
+    <Compile Include="Source Code\ContractReward\Greta\DiceCardSelfAbility_GretaMeatMeal.cs" />
+    <Compile Include="Source Code\ContractReward\Greta\DiceCardSelfAbility_GretaMeatCut.cs" />
+    <Compile Include="Source Code\ContractReward\Greta\DiceCardSelfAbility_GretaCut.cs" />
+    <Compile Include="Source Code\ContractReward\Greta\DiceCardSelfAbility_GretaCatch.cs" />
+    <Compile Include="Source Code\ContractReward\Greta\PassiveAbility_1830003.cs" />
+    <Compile Include="Source Code\ContractReward\Greta\PassiveAbility_1830002.cs" />
+    <Compile Include="Source Code\ContractReward\Greta\PassiveAbility_1830001.cs" />
     <Compile Include="Source Code\ContractReward\Jaeheon\BattleUnitBuf_AgelicaPuppet.cs" />
     <Compile Include="Source Code\ContractReward\Jaeheon\BattleUnitBuf_AttackTarget.cs" />
     <Compile Include="Source Code\ContractReward\Orange\DiceCardSelfAbility_AllyCounter.cs" />
@@ -122,7 +131,6 @@
     <Compile Include="Source Code\ContractReward\Jaeheon\DiceCardSelfAbility_ReconnectAngelica.cs" />
     <Compile Include="Source Code\ContractReward\Jaeheon\DiceCardSelfAbility_ReviveAngelica.cs" />
     <Compile Include="Source Code\ContractReward\Philiph\DiceCardSelfAbility_SelfBurn2.cs" />
-    <Compile Include="Source Code\ContractReward\Fix\DiceCardSelfAbility_vibrateActivate.cs" />
     <Compile Include="Source Code\ContractReward\PassiveAbility_1800000.cs" />
     <Compile Include="Source Code\ContractReward\Argalia\PassiveAbility_1800001.cs" />
     <Compile Include="Source Code\ContractReward\Argalia\PassiveAbility_1800002.cs" />

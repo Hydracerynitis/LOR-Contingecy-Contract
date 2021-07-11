@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <BattleCardAbilityDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	  <BattleCardAbility ID="vibrateActivate">
-    		<Desc>[On Use] If Speed is equal to target's Vibration, all dice on this page gain +4 Power</Desc>
+	<BattleCardAbility ID="energy3">
+    		<Desc>[On Use] Recover 3 Light</Desc>
   	</BattleCardAbility>
 	<!--阿尔加利亚-->
 	  <BattleCardAbility ID="PerfectResonanceActivate">
@@ -64,6 +64,61 @@
   	</BattleCardAbility>
 	<BattleCardAbility ID="MeatGearSmoke">
 		<Desc>[On Play] Gain 2 smoke.</Desc>
+  	</BattleCardAbility>
+	<!--格蕾塔-->
+  	<BattleCardAbility ID="greta_weakGuardPw">
+    		<Desc>[On Clash Win] Inflict 1 Bleed next Scene</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="greta_weakGuardCounterPw">
+    		<Desc>[On Clash Win] Gain 1 Strength next Scene</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="greta_strongGuard">
+    		<Desc>Greta loses 1 Resilience whenever she loses a clash using this page</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="greta_strongGuardPw">
+    		<Desc>[On Clash Win] Inflict 2 Bleed next Scene</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="greta_stun">
+    		<Desc>If target has bleed, dice on this page gain +2 Power</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="greta_stunAtk">
+    		<Desc>[On Hit] Inflict 3 Bind and Paralysis next Scene</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="greta_stunPw">
+    		<Desc>[On Clash Win] Inflict 1 Bleed next Scene</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="GretaCut">
+    		<Desc>At the start of each Scene if [Fresh Meat] exist, upgrade itself</Desc>
+    		<Desc>[On Use] Recover 3 Light</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="greta_seasoningAtk">
+    		<Desc>[On Hit] Inflict 1 Bleed and Fragile next Scene</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="greta_tasteAtk">
+    		<Desc>[On Hit] Recover 8 HP; if target has Bleed, boost damage by +10</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="greta_tastePw">
+    		<Desc>[On Clash Win] Inflict 2 Bleed next Scene</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="greta_trample">
+    		<Desc>Targets all other characters. If target has Bleed, the first die gains +2 Power</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="GretaTrample">
+    		<Desc>[On Hit] Recover 4 HP; recycled against a random enemy that didn't target this page</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="greta_tramplePw">
+    		<Desc>[On Clash Win] Inflict 2 Bleed next Scene</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="GretaCatch">
+    		<Desc>[On Use] Cancel target's action and turn them into Fresh Meat</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="GretaMeatCut">
+    		<Desc>Can only target on Fresh Meat</Desc>
+    		<Desc>[On Use] Restore 3 Light</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="GretaMeatMeal">
+    		<Desc>Can only target on Fresh Meat</Desc>
+    		<Desc>At the start of each Scene set cost of this card to current Light</Desc>
   	</BattleCardAbility>
 	<!--塔尼亚-->
   	<BattleCardAbility ID="TanyaCoolDown">

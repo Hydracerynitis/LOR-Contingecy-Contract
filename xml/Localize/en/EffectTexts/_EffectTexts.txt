@@ -35,5 +35,10 @@
 In the next Scene, upon clash Tanya will nullify all dice from such librarian's Combat Pages.
 Librarian has been seen through in this Scene are: {0}</Desc>
 		</BattleEffectText>
+		<BattleEffectText ID="GretaMeat">
+			<Name>Fresh Meat</Name>
+			<Desc>Can't act. Upon being hit enemies will recover HP equal to damage dealt.
+Change resistance to Noraml. Can at most take damage equal to 10% of their Max HP and no Stagger Damage.</Desc>
+		</BattleEffectText>
 	</effectTextList>
 </BattleEffectTextRoot>

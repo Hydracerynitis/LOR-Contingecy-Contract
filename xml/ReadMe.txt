@@ -28,6 +28,8 @@ Pluto's Solemn Page ---- Complete Yesterday's Promise reception with Risk Level 
 Conductor Argalia's Page ---- Complete all The Reverbration Ensemble Challenge. 
 (Currently only The Crying Children, The Church of Gear, The Puppeteer, The Blood-Red Moon, Yesterday's Promise)
 
+Currently not complitable with Mizuki & PattyHoswell's Liu Zhuque Qishi Battalion
+
 Credit for elder404 for producing SummonLibrarian.dll tool.
 Credit for steam user OO for extracting Vermilion Cross Steam Workshop Skin. 
 HaveFun

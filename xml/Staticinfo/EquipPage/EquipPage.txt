@@ -59,7 +59,7 @@
     		<Episode>1800000</Episode>
     		<Rarity>Unique</Rarity>
     		<CharacterSkin>Blue_Philip</CharacterSkin>
- 	 </Book>
+	</Book>
   	<Book ID="18200000">
     		<Name>艾琳</Name>
    		 <TextId>18200000</TextId>
@@ -116,6 +116,36 @@
     		<Episode>1800000</Episode>
     		<Rarity>Unique</Rarity>
     		<CharacterSkin>GearsUnit</CharacterSkin>
+	</Book>
+	<Book ID="18300000">
+    		<Name>格蕾塔</Name>
+   		 	<TextId>18300000</TextId>
+    		<Category>DeckFixed</Category>
+    		<EquipEffect>
+      			<HP>200</HP>
+      			<Break>100</Break>
+      			<SpeedMin>2</SpeedMin>
+      			<Speed>5</Speed>
+      			<SResist>Endure</SResist>
+      			<PResist>Endure</PResist>
+      			<HResist>Endure</HResist>
+      			<SBResist>Endure</SBResist>
+      			<PBResist>Endure</PBResist>
+      			<HBResist>Endure</HBResist>
+      			<StartPlayPoint>4</StartPlayPoint>
+      			<MaxPlayPoint>4</MaxPlayPoint>   
+	   			<Passive>10008</Passive>
+      			<Passive>1800000</Passive>
+      			<Passive>1300001</Passive>
+      			<Passive>1830001</Passive>
+      			<Passive>1830002</Passive>
+      			<Passive>1830003</Passive>
+    		</EquipEffect>
+    		<BookIcon>ContingencyReward</BookIcon>
+    		<Chapter>7</Chapter>
+    		<Episode>1800000</Episode>
+    		<Rarity>Unique</Rarity>
+    		<CharacterSkin>Blue_Greta</CharacterSkin>
 	</Book>
 	<Book ID="18600000">
 		<Name>塔尼亚</Name>

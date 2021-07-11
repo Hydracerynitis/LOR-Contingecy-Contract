@@ -25,6 +25,9 @@ namespace Contingecy_Contract
                 case (70002):
                     Harmony_Patch.Progess.Eileen_Risk = 1;
                     break;
+                case (70003):
+                    Harmony_Patch.Progess.Greta_Risk = 1;
+                    break;
                 case (70006):
                     Harmony_Patch.Progess.Tanya_Risk = 1;
                     break;
@@ -72,6 +75,10 @@ namespace Contingecy_Contract
             if (Harmony_Patch.Progess.Eileen_Risk == 1)
             {
                 GiveEquipBook(18200000);
+            }
+            if (Harmony_Patch.Progess.Greta_Risk == 1)
+            {
+                GiveEquipBook(18300000);
             }
             if (Harmony_Patch.Progess.Tanya_Risk == 1)
             {

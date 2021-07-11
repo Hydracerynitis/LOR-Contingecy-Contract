@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <BattleCardAbilityDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	  <BattleCardAbility ID="vibrateActivate">
-    		<Desc>[使用时]若自身速度与目标[震颤]层数相等则使本书页的所有骰子威力+4</Desc>
-  	</BattleCardAbility>
-	<!--章节奖励-->
-  	<BattleCardAbility ID="Canard0">
-    		<Desc>[每一幕都会变形成全新的卡]</Desc>
+	<BattleCardAbility ID="energy3">
+    		<Desc>[使用时]恢复3点光芒</Desc>
   	</BattleCardAbility>
 	<!--阿尔加利亚-->
 	  <BattleCardAbility ID="PerfectResonanceActivate">
@@ -68,6 +64,62 @@
   	</BattleCardAbility>
 	<BattleCardAbility ID="MeatGearSmoke">
 		<Desc>[装备时] 获得2层烟气</Desc>
+  	</BattleCardAbility>
+	<!--格蕾塔-->
+  	<BattleCardAbility ID="greta_weakGuardPw">
+    		<Desc>[拼点胜利]下一幕中对目标施加1层[流血]</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="greta_weakGuardCounterPw">
+    		<Desc>[拼点胜利]下一幕中使自身获得1层[强壮]</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="greta_strongGuard">
+    		<Desc>拼点失败时使失去1层[抵御]</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="greta_strongGuardPw">
+    		<Desc>[拼点胜利]下一幕中对目标施加2层[流血]</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="greta_stun">
+    		<Desc>若目标处于[流血]状态则使本书页的所有骰子威力+2</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="greta_stunAtk">
+    		<Desc>[命中时]下一幕中对目标施加3层[束缚]与[麻痹]</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="greta_stunPw">
+    		<Desc>[拼点胜利]下一幕中对目标施加1层[流血]</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="GretaCut">
+    		<Desc>每一幕开始时若场上有[大肉]则会升级</Desc>
+    		<Desc>[使用时]恢复3点光芒</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="greta_seasoningAtk">
+    		<Desc>[命中时]下一幕中对目标施加1层[流血]与[易损]</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="greta_tasteAtk">
+    		<Desc>[命中时]恢复8点体力且若目标处于[流血]状态则伤害+10</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="greta_tastePw">
+    		<Desc>[拼点胜利]下一幕中对目标施加2层[流血]</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="greta_trample">
+		<Desc>将除自身外的其余角色指定为攻击目标
+若目标处于[流血]状态则使第一颗骰子威力+2</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="GretaTrample">
+    		<Desc>[命中时]恢复4点体力并随机对1名未被攻击的敌方角色再次使用本书页</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="greta_tramplePw">
+    		<Desc>[拼点胜利]下一幕中对目标施加2层[流血]</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="GretaCatch">
+    		<Desc>[使用时]摧毁目标当前书页的所有骰子并将其变为[大肉]</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="GretaMeatCut">
+    		<Desc>只能把[大肉]指定为目标</Desc>
+    		<Desc>[使用时]恢复3点光芒</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="GretaMeatMeal">
+    		<Desc>只能把[大肉]指定为目标</Desc>
+    		<Desc>每一幕开始时将费用设定为[当前光芒]</Desc>
   	</BattleCardAbility>
 	<!--塔尼亚-->
   	<BattleCardAbility ID="TanyaCoolDown">

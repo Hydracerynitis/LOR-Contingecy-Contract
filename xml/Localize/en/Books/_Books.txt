@@ -32,6 +32,15 @@
 			</TextList>
 			<PassiveList />
 		</BookDesc>
+		<BookDesc BookID="18300000">
+			<BookName>Greta’s Confident Page</BookName>
+			<TextList>
+ 				<Desc>It’s an era where humans are dominated by the act of consumption! When you’re hungry you get annoyed, and when starvation touches your raw nerve, you turn violent. That’s how humans are. And people who eat the same food will naturally grow similar. So the high and mighty beings that wanna rule over you demand ya to eat the “correct” stuff! When something’s “correct”, there’s gotta be something that’s “incorrect”. Incorrect food. It’s gotta mean humans eating humans, don’tcha think?</Desc>
+        		<Desc>Why do people think that eating is natural, but then draw the line at eating their fellow man? Who decided it so, and why! Is it because human life is precious? That’s a flawed statement! What makes the lives of animals less precious? We’re not aboutta go down a boring philosophical riddle about the weight of life, now. If humans clearly have more value over animals ‘cause we’re the apex predators, then there shouldn’t be any problem with a pack of humans that rise above the rest and prey on others.</Desc>
+        		<Desc>We’ve got two options! First: don’t eat anything. Hey, I’m not suggesting that we all starve to death. Your body is taught to eat! So what if you changed that habit? Maybe instead of food, your empty innards could be filled with possibilities of some other kind? If you ain’t a fan of that, then there’s the second option: eat anything! Just trace the smell of the blood, and stuff what you find in your mouth as your brain tells you to.</Desc>
+			</TextList>
+			<PassiveList />
+		</BookDesc>
 		<BookDesc BookID="18600000">
       		<BookName>Tanya’s lively Page</BookName>
       		<TextList>

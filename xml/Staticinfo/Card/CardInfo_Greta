@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Card ID="18300001">
+		<Name>抽筋</Name>
+		<Artwork>Greta_Cut</Artwork>
+		<Rarity>Common</Rarity>
+		<Option>NoInventory</Option>
+		<Spec Range="Near" Cost="0"/>
+		<Script>energy2</Script>
+		<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+            <Behaviour Min="4" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="Greta_G" Script="greta_weakGuardPw" ActionScript="" Desc="" />
+            <Behaviour Min="4" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="Greta_G" Script="greta_weakGuardPw" ActionScript="" Desc="" />
+            <Behaviour Min="3" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="Greta_G" Script="greta_weakGuardCounterPw" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		 <Priority>0</Priority>
+	</Card>
+    <Card ID="18300002">
+		<Name>抽筋</Name>
+		<Artwork>Greta_Cut</Artwork>
+		<Rarity>Common</Rarity>
+		<Option>NoInventory</Option>
+		<Spec Range="Near" Cost="2"/>
+		<Script>greta_strongGuard</Script>
+		<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+            <Behaviour Min="6" Dice="10" Type="Def" Detail="Guard" Motion="G" EffectRes="Greta_G" Script="greta_strongGuardPw" ActionScript="" Desc="" />
+            <Behaviour Min="6" Dice="10" Type="Def" Detail="Guard" Motion="G" EffectRes="Greta_G" Script="greta_strongGuardPw" ActionScript="" Desc="" />
+            <Behaviour Min="6" Dice="10" Type="Def" Detail="Guard" Motion="G" EffectRes="Greta_G" Script="greta_strongGuardPw" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		 <Priority>0</Priority>
+	</Card>
+    <Card ID="18300003">
+		<Name>击晕</Name>
+		<Artwork>Greta_Salt</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Option>NoInventory</Option>
+		<Spec Range="Near" Cost="3"/>
+		<Script>greta_stun</Script>
+		<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+            <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="Z" EffectRes="Greta_Z" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="8" Dice="17" Type="Atk" Detail="Hit" Motion="Z" EffectRes="Greta_Z" Script="greta_stunAtk" ActionScript="" Desc="" />
+            <Behaviour Min="4" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="Greta_G" Script="greta_stunPw" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		 <Priority>0</Priority>
+	</Card>
+    <Card ID="18300004">
+		<Name>调味</Name>
+		<Artwork>Greta_Salt</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Option>NoInventory</Option>
+		<Spec Range="Near" Cost="1"/>
+		<Script>GretaCut</Script>
+		<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+            <Behaviour Min="5" Dice="8" Type="Atk" Detail="Hit" Motion="H" EffectRes="Greta_H" Script="greta_seasoningAtk" ActionScript="" Desc="" />
+            <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="H" EffectRes="Greta_H" Script="greta_seasoningAtk" ActionScript="" Desc="" />
+            <Behaviour Min="3" Dice="7" Type="Standby" Detail="Hit" Motion="H" EffectRes="Greta_H" Script="greta_seasoningAtk" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		 <Priority>0</Priority>
+	</Card>
+    <Card ID="18300005">
+		<Name>剁碎</Name>
+		<Artwork>Greta_Cut</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Option>NoInventory</Option>
+		<Spec Range="Near" Cost="3"/>
+		<Script></Script>
+		<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+            <Behaviour Min="5" Dice="9" Type="Atk" Detail="Penetrate" Motion="J" EffectRes="Greta_J" Script="bleeding1atk" ActionScript="" Desc="" />
+            <Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="J" EffectRes="Greta_J" Script="bleeding1atk" ActionScript="" Desc="" />
+            <Behaviour Min="6" Dice="8" Type="Atk" Detail="Penetrate" Motion="J" EffectRes="Greta_J" Script="bleeding1atk" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		 <Priority>0</Priority>
+	</Card>
+    <Card ID="18300006">
+		<Name>试味</Name>
+		<Artwork>Greta_Taste</Artwork>
+		<Rarity>Rare</Rarity>
+		<Option>NoInventory</Option>
+		<Spec Range="Near" Cost="4"/>
+		<Script></Script>
+		<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+            <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="H" EffectRes="Greta_H" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="7" Dice="16" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="greta_tasteAtk" ActionScript="Greta_Bite" Desc="" />
+            <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="Greta_G" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="4" Dice="9" Type="Standby" Detail="Guard" Motion="G" EffectRes="Greta_G" Script="greta_tastePw" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		 <Priority>0</Priority>
+	</Card>
+    <Card ID="18300007">
+		<Name>品鉴</Name>
+		<Artwork>Greta_Taste</Artwork>
+		<Rarity>Rare</Rarity>
+		<Option>NoInventory</Option>
+		<Spec Range="Near" Cost="2"/>
+		<Script>greta_trample</Script>
+		<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+            <Behaviour Min="6" Dice="9" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="GretaTrample" ActionScript="Greta_Bite" Desc="" />
+            <Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="Greta_G" Script="greta_tramplePw" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		 <Priority>0</Priority>
+	</Card>
+    <Card ID="18300011">
+		<Name>生擒</Name>
+		<Artwork>Greta_Catch</Artwork>
+		<Rarity>Unique</Rarity>
+		<Option>ExhaustOnUse</Option>
+		<Spec Range="Far" Cost="3"/>
+		<Script>GretaCatch</Script>
+		<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+            <Behaviour Min="1" Dice="1" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="" ActionScript="Greta_HammerThrow" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		 <Priority>0</Priority>
+	</Card>
+    <Card ID="18300012">
+		<Name>舂捣</Name>
+		<Artwork>Greta_Cut</Artwork>
+		<Rarity>Unique</Rarity>
+		<Option>NoInventory</Option>
+		<Spec Range="Near" Cost="1"/>
+		<Script>GretaMeatCut</Script>
+		<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+            <Behaviour Min="6" Dice="8" Type="Atk" Detail="Penetrate" Motion="J" EffectRes="Greta_J" Script="greta_seasoningAtk" ActionScript="" Desc="" />
+            <Behaviour Min="6" Dice="8" Type="Atk" Detail="Penetrate" Motion="J" EffectRes="Greta_J" Script="greta_seasoningAtk" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		 <Priority>0</Priority>
+	</Card>
+    <Card ID="18300013">
+		<Name>开饭</Name>
+		<Artwork>Greta_Eat</Artwork>
+		<Rarity>Unique</Rarity>
+		<Option>Personal</Option>
+		<Spec Range="Near" Cost="0"/>
+		<Script>GretaMeatMeal</Script>
+		<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+            <Behaviour Min="100" Dice="100" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		 <Priority>0</Priority>
+	</Card>
+</DiceCardXmlRoot>

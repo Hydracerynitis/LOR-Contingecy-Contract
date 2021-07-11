@@ -66,6 +66,22 @@ At the end of Scene when one of the Gear Worshipper die two scene before, summon
 		<Desc>Smoke' amplifies outgoing damage instead of incoming damage on this character.
 Gain three special Combat Page that can be used to benifit self. Replenish them after all three are used.</Desc>
 	</PassiveDesc>
+	<!--格蕾塔-->
+	<PassiveDesc ID="1830001">
+		<Name>Regenerative Cells</Name> 
+		<Desc>At the start of the act, gain 10 Resilience. Every 5 Scenes, purge all status ailments on self and gain 5 Resilience.</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1830002">
+		<Name>Unstoppable Viciousness</Name> 
+		<Desc>Gain 3 Protection each Scene. Take +3 additional damage from attacks while afflicted with Bleed.
+Cannot be Staggered. When Stagger Resist falls to 0, loses 100 Hp instead and gains 1 Strength next Scene.</Desc>
+	</PassiveDesc>
+  	<PassiveDesc ID="1830003">
+    	<Name>Feast and Furious</Name>
+   		<Desc>At the Start of the Act, shuffle a copies of "Into the Sack You Go!" into you Deck.
+Use it to turn an enemy into Fresh Meat, immobolize him until the end of the next Scene. Allies attack Fresh Meat will recover HP equal to damage dealt.
+Fresh Meat change resistance to Noraml but can at most take damage equal to 10% of their Max HP and no Stagger Damage.</Desc>
+  	</PassiveDesc>
 	<!--塔尼亚-->
 	<PassiveDesc ID="1860001">
 		<Name>Brawl</Name> 

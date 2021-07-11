@@ -88,6 +88,37 @@
 		<BattleCardDesc ID="18200008">
 			<LocalizedName>Meat Gear: Spin</LocalizedName>
 		</BattleCardDesc>
+		<!--格蕾塔-->
+		<BattleCardDesc ID="18300001">
+			<LocalizedName>Slap and Fold</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18300002">
+			<LocalizedName>Settle in Steam</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18300003">
+			<LocalizedName>Break an Egg</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18300004">
+			<LocalizedName>Season the Meat</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18300005">
+			<LocalizedName>Mince</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18300006">
+			<LocalizedName>Trial Smack</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18300007">
+			<LocalizedName>Taste Test</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18300011">
+			<LocalizedName>Into the Sack You Go!</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18300012">
+			<LocalizedName>Mash</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18300013">
+			<LocalizedName>Mealtime</LocalizedName>
+		</BattleCardDesc>
 		<!--塔尼亚-->
 		<BattleCardDesc ID="18600001">
 			<LocalizedName>Fisticuffs</LocalizedName>

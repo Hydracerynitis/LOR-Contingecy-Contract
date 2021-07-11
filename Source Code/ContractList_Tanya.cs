@@ -33,7 +33,7 @@ namespace Contingecy_Contract
             base.OnDrawCard();
             foreach (BattleDiceCardModel card in this.owner.allyCardDetail.GetAllDeck())
             {
-                card.ResetToOriginalData();
+                card.CopySelf();
                 DiceCardXmlInfo info = card.XmlData.Copy();
                 info.DiceBehaviourList.RemoveAll(x => x.Type == BehaviourType.Standby);
                 typeof(BattleDiceCardModel).GetField("_xmlData", AccessTools.all).SetValue(card, info);

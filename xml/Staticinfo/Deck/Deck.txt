@@ -72,6 +72,17 @@
 		<Card>615004</Card>
     	<Card>704003</Card>
   	</Deck>
+	<Deck ID="18300000">
+		<Card>18300001</Card>
+		<Card>18300002</Card>
+		<Card>18300003</Card>
+		<Card>18300004</Card>
+		<Card>18300004</Card>
+		<Card>18300005</Card>
+		<Card>18300005</Card>
+		<Card>18300006</Card>
+		<Card>18300007</Card>
+	</Deck>
 	<Deck ID="18600000">
 		<Card>18600001</Card>
 		<Card>18600001</Card>

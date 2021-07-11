@@ -34,5 +34,10 @@
 			<Desc>一幕内使用书页攻击同一司书4次会让塔尼娅“看破”该司书的攻击;下一幕与其拼点时该司书书页的所有骰子都会被无效化.
 这一幕内被看破的司书有: {0}</Desc>
 		</BattleEffectText>
+		<BattleEffectText ID="GretaMeat">
+			<Name>大肉</Name>
+			<Desc>无法行动. 友方单位攻击大肉会恢复等同于造成伤害的生命值.
+变成大肉的敌方单位全部抗性改成普通，但至多承受10%最大生命值的伤害并且不承受混乱伤害。</Desc>
+		</BattleEffectText>
 	</effectTextList>
 </BattleEffectTextRoot>

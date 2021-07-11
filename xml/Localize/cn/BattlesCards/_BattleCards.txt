@@ -101,6 +101,37 @@
 		<BattleCardDesc ID="18200008">
 			<LocalizedName>血肉齿轮: 转动</LocalizedName>
 		</BattleCardDesc>
+		<!--格蕾塔-->
+		<BattleCardDesc ID="18300001">
+			<LocalizedName>抽筋</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18300002">
+			<LocalizedName>焖透</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18300003">
+			<LocalizedName>击晕</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18300004">
+			<LocalizedName>调味</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18300005">
+			<LocalizedName>剁碎</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18300006">
+			<LocalizedName>试味</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18300007">
+			<LocalizedName>品鉴</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18300011">
+			<LocalizedName>生擒</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18300012">
+			<LocalizedName>舂捣</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18300013">
+			<LocalizedName>开饭</LocalizedName>
+		</BattleCardDesc>
 		<!--塔尼亚-->
 		<BattleCardDesc ID="18600001">
 			<LocalizedName>拳打</LocalizedName>
