@@ -13,7 +13,7 @@ namespace Contingecy_Contract
     {
         public ContingecyContract_Jaeheon_Thread(int level)
         {
-            Level = level - 1;
+            Level = level;
         }
         public override ContractType Type => ContractType.Special;
         public override string[] GetFormatParam => new string[] { Level.ToString(), (Level - 1).ToString() };
@@ -58,7 +58,7 @@ namespace Contingecy_Contract
     {
         public ContingecyContract_Jaeheon_Puppet(int level)
         {
-            Level = level - 1;
+            Level = level;
             waitThreads = new List<WaitThread>();
         }
         private List<WaitThread> waitThreads;

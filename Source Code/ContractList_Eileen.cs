@@ -11,7 +11,7 @@ namespace Contingecy_Contract
     {
         public ContingecyContract_Eileen_Production(int level)
         {
-            Level = level - 1;
+            Level = level;
         }
         public override ContractType Type => ContractType.Special;
         public override string[] GetFormatParam => new string[] { (25 + Level * 25).ToString(), GetParam() };
@@ -54,7 +54,7 @@ namespace Contingecy_Contract
     {
         public ContingecyContract_Eileen_BodyGuard(int level)
         {
-            Level = level - 1;
+            Level = level;
         }
         public override ContractType Type => ContractType.Special;
         public override string[] GetFormatParam => new string[] { (25 + Level * 25).ToString(), (Math.Max(0, -3 + 3 * Level)).ToString() };

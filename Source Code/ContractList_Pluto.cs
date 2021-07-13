@@ -14,7 +14,7 @@ namespace Contingecy_Contract
     {
         public ContingecyContract_Pluto_Shadow(int level)
         {
-            Level = level - 1;
+            Level = level;
         }
         public override ContractType Type => ContractType.Special;
         private PassiveAbility_1309021 copypassive;
@@ -46,7 +46,7 @@ namespace Contingecy_Contract
     {
         public ContingecyContract_Pluto_Barrier(int level)
         {
-            Level = level - 1;
+            Level = level;
         }
         public override ContractType Type => ContractType.Special;
         public override string[] GetFormatParam => new string[] { (5*Level).ToString(), (20 + level * 10).ToString() };

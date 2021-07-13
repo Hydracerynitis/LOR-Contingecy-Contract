@@ -1,6 +1,7 @@
 Inspired by the system of Contingency Contract in Arknights (or Heat in Hades). 
 I add a system that you can add multiple Modifiers upon Guest and Librarian. 
-Each Modifier (or Contract) will increase the Risk Level. 
+Each Modifier (or Contract) will increase the Risk Level, which can be increased by Risk Bonus provided by some contracts.
+        Total Risk Level = Sum of Risk Level of all contracts * ( 1 + Sum of Risk Bonus of all contracts )
 When Player complete a stage with enough risk level (12), they will be rewarded with Powerful Equip Page.
 
 For player eager for more difficult endgame challenge. 

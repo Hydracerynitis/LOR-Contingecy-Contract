@@ -14,7 +14,7 @@ namespace Contingecy_Contract
     {
         public ContingecyContract_Philip_Burn(int level)
         {
-            this.Level = level - 1;
+            this.Level = level;
         }
         public override ContractType Type => ContractType.Special;
         public override string[] GetFormatParam => new string[] {TextDataModel.GetText(Param1),(1 + 2 * Level).ToString() };
@@ -102,7 +102,7 @@ namespace Contingecy_Contract
     {
         public ContingecyContract_Philip_Silence(int level)
         {
-            this.Level = level - 1;
+            this.Level = level;
         }
         public override ContractType Type => ContractType.Special;
         public override string[] GetFormatParam => new string[] { AttackPatternText,(20 * Level).ToString() };
@@ -146,7 +146,7 @@ namespace Contingecy_Contract
         private int pattern;
         public ContingecyContract_Philip(int level)
         {
-            this.Level = level ;
+            this.Level = level;
         }
         public override void Init(BattleUnitModel self)
         {

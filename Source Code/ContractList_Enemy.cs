@@ -45,7 +45,7 @@ namespace Contingecy_Contract
     {
         public ContingecyContract_Power(int level)
         {
-            this.Level = (int)(level/2);
+            this.Level = level;
         }
         public override string[] GetFormatParam => new string[] { Level.ToString() };
         public override ContractType Type => ContractType.Passive;
@@ -88,5 +88,13 @@ namespace Contingecy_Contract
         }
         public override ContractType Type => ContractType.Passive;
         public override bool DontChangeResistByBreak() => true;
-    }   
+    }
+    public class ContingecyContract_NoDebuff : ContingecyContract
+    {
+        public ContingecyContract_NoDebuff(int level)
+        {
+            this.Level = level;
+        }
+        public override ContractType Type => ContractType.Buff;
+    }
 }

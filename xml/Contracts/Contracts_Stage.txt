@@ -15,6 +15,7 @@
 			<Desc language="en" name="Last Stand" desc="Only one floor of librarian can be involed in reception" />
 		</DescList>
 		<ContractType>Stage</ContractType>
+		<Conflict>LowFloor</Conflict>
 		<Faction>Player</Faction>
 		<BaseLevel>4</BaseLevel>
 	</Contract>
@@ -25,6 +26,7 @@
 		</DescList>
 		<ContractType>Stage</ContractType>
 		<Faction>Player</Faction>
+		<Conflict>Last</Conflict>
 		<Variation>2</Variation>
 		<Step>2</Step>
 		<BaseLevel>2</BaseLevel>

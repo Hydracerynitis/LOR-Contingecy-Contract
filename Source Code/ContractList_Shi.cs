@@ -14,7 +14,7 @@ namespace Contingecy_Contract
     {
         public ContingecyContract_Yujin(int level)
         {
-            this.Level = level - 1;
+            this.Level = level;
         }
         public override string[] GetFormatParam => new string[] { (25*Level).ToString(),Level.ToString()};
         public override ContractType Type => ContractType.Special;
@@ -38,7 +38,7 @@ namespace Contingecy_Contract
     {
         public ContingecyContract_ValTem(int level)
         {
-            this.Level = level - 1;
+            this.Level = level;
         }
         public override ContractType Type => ContractType.Special;
         public override string[] GetFormatParam => new string[] { (20*Level).ToString(),(1+2*Level).ToString(),Level.ToString()};

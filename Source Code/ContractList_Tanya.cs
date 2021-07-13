@@ -13,7 +13,7 @@ namespace Contingecy_Contract
     {
         public ContingecyContract_Tanya_Solo(int level)
         {
-            Level = level - 1;
+            Level = level;
         }
         public override ContractType Type => ContractType.Special;
         public override string[] GetFormatParam => new string[] { GetParam()};
@@ -94,7 +94,7 @@ namespace Contingecy_Contract
         
         public ContingecyContract_Tanya_Brawl(int level)
         {
-            Level = level - 1;
+            Level = level;
         }
         public override void Init(BattleUnitModel self)
         {

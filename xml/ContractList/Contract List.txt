@@ -23,13 +23,13 @@ Increase all Guests' outgoing Stagger Damage by 75%
 Concussing Strike 4   Risk Level 4   Code: BreakDamage4
 Increase all Guests' outgoing Stagger Damage by 100%
 
-Powerful 1      Risk Level 2        Code:Power1
+Powerful 1      Risk Level 1    Risk Bonus 10%        Code:Power1
 All Guests' Dice gain 1 Power.
 
-Powerful 2      Risk Level 4        Code:Power2
+Powerful 2      Risk Level 2    Risk Bonus 30%        Code:Power2
 All Guests' Dice gain 2 Power.
 
-Powerful 3      Risk Level 6        Code:Power3
+Powerful 3      Risk Level 3    Risk Bonus 50%        Code:Power3
 All Guests' Dice gain 3 Power.
 
 Surgery Enhancement 1   Risk Level 1   Code: Hp1
@@ -59,6 +59,8 @@ Increase all Guests' Max Stagger Resist by 100%
 Unflappable    Risk Level 5   Code: NoBreak
 For all Guests, Becoming Staggered does not temporarily change the character's resistances.
 
+Purity      Risk Level 2    Code: NoDebuff
+All Guests are immune to status ailment
 
 All Librarian：
 Poor Maintaince 1   Risk Level 1   Code: Damage_L1
@@ -79,13 +81,13 @@ Reduce all Librarians' outgoing Stagger damage by 40%
 Absentminded 3   Risk Level 3   Code: BreakDamage_L3
 Reduce all Librarians' outgoing Stagger damage by 60%
 
-Fatigue 1      Risk Level 2        Code:Power_L1
+Fatigue 1      Risk Level 1     Risk Bonus 10%        Code:Power_L1
 All Librarians' Dice lose 1 Power.
 
-Fatigue 2      Risk Level 4        Code:Power_L2
+Fatigue 2      Risk Level 2     Risk Bonus 30%        Code:Power_L2
 All Librarians' Dice lose 2 Power.
 
-Fatigue 3      Risk Level 6        Code:Power_L3
+Fatigue 3      Risk Level 3     Risk Bonus 50%        Code:Power_L3
 All Librarians' Dice lose 3 Power.
 
 Frangible 1   Risk Level 1   Code: Hp_L1
@@ -106,17 +108,20 @@ Reduce all Librarians' Max Stagger Resist by 40%
 Panic attack 3   Risk Level 3   Code: Bp_L3
 Reduce all Librarians' Max Stagger Resist by 60%
 
-Engulfed by Darkness 1   Risk Level 3   Code: Darkness1
+Engulfed by Darkness 1   Risk Level 1   Risk Bonus 5%   Code: Darkness1
 At the start of any act, all Librarian have 3 Light
 
-Engulfed by Darkness 2   Risk Level 4   Code: Darkness2
+Engulfed by Darkness 2   Risk Level 1   Risk Bonus 20%   Code: Darkness2
 At the start of any act, all Librarian have 2 Light
 
-Engulfed by Darkness 3   Risk Level 5   Code: Darkness3
+Engulfed by Darkness 3   Risk Level 1   Risk Bonus 35%   Code: Darkness3
 At the start of any act, all Librarian have 1 Light
 
-Engulfed by Darkness 4   Risk Level 6   Code: Darkness4
+Engulfed by Darkness 4   Risk Level 1   Risk Bonus 50%   Code: Darkness4
 At the start of any act, all Librarian have 0 Light
+
+Selfish     Risk Level 2    Risk Bonus 50%      Code:NoBuff
+All Librarians are immune to postivie status
 
 
 Recpetion：(Contracts in this categories require the original recption reach their limitation to be actived)

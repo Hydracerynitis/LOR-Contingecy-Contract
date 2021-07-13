@@ -15,6 +15,7 @@ namespace Contingecy_Contract
             Inition.Add(Model);
             List<ContingecyContract> Contracts = new List<ContingecyContract>();
             List<ContingecyContract> BuffContracts = new List<ContingecyContract>();
+            List<ContingecyContract> SpecialContracts = new List<ContingecyContract>();
             List<ContingecyContract> StageContracts = new List<ContingecyContract>();
             foreach (Contract contract in Singleton<ContractLoader>.Instance.GetPassiveList())
             {
@@ -41,24 +42,24 @@ namespace Contingecy_Contract
                     instance.Init(Model);
                     string level = string.Empty;
                     if (contract.Variation > 0)
-                        level = ((int)((contract.level - contract.BaseLevel)/contract.Step)).ToString();
+                        level = contract.level.ToString();
                     instance.name = Singleton<PassiveDescXmlList>.Instance.GetName(20210302) + contract.GetDesc(TextDataModel.CurrentLanguage).name+" "+level;
                     instance.desc = string.Format(contract.GetDesc(TextDataModel.CurrentLanguage).desc,instance.GetFormatParam);
-                    if (contract.level <=2)
-                        instance.rare = Rarity.Uncommon;
-                    if (contract.level == 3)
-                        instance.rare = Rarity.Rare;
-                    if (contract.level >= 4)
-                        instance.rare = Rarity.Unique;                 
-                    if (instance.Type == ContractType.Buff || instance.Type == ContractType.Special)
+                    instance.rare = Rarity.Unique;                 
+                    if (instance.Type == ContractType.Buff)
                     {
                         BuffContracts.Add(instance);
                         Debug.Log("Instance of {0} is added to Buff List for {1}", type.Name, Model.UnitData.unitData.name);
                     }
-                    else
+                    else if(instance.Type==ContractType.Passive)
                     {
                         Contracts.Add(instance);
                         Debug.Log("Instance of {0} is added to Passive List for {1}", type.Name, Model.UnitData.unitData.name);
+                    }
+                    else if (instance.Type == ContractType.Special)
+                    {
+                        SpecialContracts.Add(instance);
+                        Debug.Log("Instance of {0} is added to Special List for {1}", type.Name, Model.UnitData.unitData.name);
                     }
                 }
             }
@@ -91,23 +92,21 @@ namespace Contingecy_Contract
                 {
                     string level = string.Empty;
                     if (contract.Variation > 0)
-                        level = ((int)((contract.level - contract.BaseLevel) / contract.Step)).ToString();
+                        level = contract.level.ToString();
                     stage.name = Singleton<PassiveDescXmlList>.Instance.GetName(20210302) + contract.GetDesc(TextDataModel.CurrentLanguage).name + " " + level;
                     stage.desc = string.Format(contract.GetDesc(TextDataModel.CurrentLanguage).desc, stage.GetFormatParam);
-                    if (contract.level <= 2)
-                        stage.rare = Rarity.Uncommon;
-                    if (contract.level == 3)
-                        stage.rare = Rarity.Rare;
-                    if (contract.level >= 4)
-                        stage.rare = Rarity.Unique;
+                    stage.rare = Rarity.Unique;
                     StageContracts.Add(stage);
                 }
             }
             List<PassiveAbilityBase> passiveList = Model.passiveDetail.PassiveList;
             passiveList.AddRange(Contracts);
             passiveList.AddRange(BuffContracts);
+            passiveList.AddRange(SpecialContracts);
             passiveList.AddRange(StageContracts);
             typeof(BattleUnitPassiveDetail).GetField("_passiveList", AccessTools.all).SetValue((object)Model.passiveDetail, (object)passiveList);
+            Contracts.AddRange(SpecialContracts);
+            BuffContracts.AddRange(SpecialContracts);
             foreach (PassiveAbilityBase contract in Contracts)
             {
                 try
@@ -163,6 +162,14 @@ namespace Contingecy_Contract
         {
             Contracts = new List<ContingecyContract>();
             Contracts.AddRange(list);
+        }
+        public override bool IsImmune(BufPositiveType posType)
+        {
+            if (posType == BufPositiveType.Negative && Contracts.Exists(x => x is ContingecyContract_NoDebuff))
+                return true;
+            if (posType == BufPositiveType.Positive && Contracts.Exists(x => x is ContingecyContract_NoBuff))
+                return true;
+            return base.IsImmune(posType);
         }
         public override StatBonus GetStatBonus()
         {

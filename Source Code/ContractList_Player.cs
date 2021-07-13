@@ -45,7 +45,7 @@ namespace Contingecy_Contract
     {
         public ContingecyContract_Power_L(int level)
         {
-            this.Level = (int)(level / 2);
+            this.Level = level;
         }
         public override string[] GetFormatParam => new string[] { Level.ToString() };
         public override ContractType Type => ContractType.Passive;
@@ -84,14 +84,14 @@ namespace Contingecy_Contract
     {
         public ContingecyContract_Darkness(int level)
         {
-            this.Level = 6 - level;
+            this.Level = level;
         }
         public override ContractType Type => ContractType.Passive;
-        public override string[] GetFormatParam => new string[] { (Level).ToString() };
+        public override string[] GetFormatParam => new string[] { (4-Level).ToString() };
         public override void OnWaveStart()
         {
             this.owner.cardSlotDetail.LosePlayPoint(this.owner.cardSlotDetail.PlayPoint);
-            this.owner.cardSlotDetail.RecoverPlayPoint(Level);
+            this.owner.cardSlotDetail.RecoverPlayPoint(4-Level);
             this.owner.cardSlotDetail.SetRecoverPoint(0);
         }
         public override void OnRoundEnd()
@@ -100,5 +100,13 @@ namespace Contingecy_Contract
             if (Singleton<StageController>.Instance.RoundTurn == 1)
                 this.owner.cardSlotDetail.SetRecoverPointDefault();
         }
+    }
+    public class ContingecyContract_NoBuff : ContingecyContract
+    {
+        public ContingecyContract_NoBuff(int level)
+        {
+            this.Level = level;
+        }
+        public override ContractType Type => ContractType.Buff;
     }
 }

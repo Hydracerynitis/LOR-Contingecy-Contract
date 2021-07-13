@@ -56,12 +56,18 @@ namespace Contingecy_Contract
         public int BaseLevel = 0;
         [XmlElement("Step")]
         public int Step = 1;
+        [XmlElement("BonusBase")]
+        public int BonusBaseLevel = 0;
+        [XmlElement("BonusStep")]
+        public int BonusStep = 0;
         [XmlElement("Enemy")]
         public List<int> Enemy = new List<int>();
         [XmlElement("Conflict")]
         public List<string> Conflict=new List<string>();
         [XmlIgnore]
         public int level = -1;
+        public int Level = 0;
+        public int Bonus = 0;
         public StageModifier modifier;
         public ContractDesc GetDesc(string language)
         {
@@ -78,6 +84,8 @@ namespace Contingecy_Contract
                 BaseLevel = BaseLevel,
                 Faction = Faction,
                 Step = Step,
+                BonusBaseLevel=BonusBaseLevel,
+                BonusStep=BonusStep,
                 Enemy = new List<int>(),
                 Conflict = new List<string>()
             };

@@ -23,7 +23,7 @@
 		</DescList>
 		<Faction>Enemy</Faction>
 		<Variation>3</Variation>
-		<Step>2</Step>
+		<BonusBase>50</BonusBase>
 	</Contract>
 	<Contract Type="Hp">
 		<DescList>
@@ -48,5 +48,13 @@
 		</DescList>
 		<Faction>Enemy</Faction>
 		<BaseLevel>5</BaseLevel>
+	</Contract>
+	<Contract Type="NoDebuff">
+		<DescList>
+			<Desc language="cn" name="净化" desc="所有来宾免疫负面效果加成" />
+			<Desc language="en" name="Purity" desc="All Guests are immune to status ailment" />
+		</DescList>
+		<Faction>Enemy</Faction>
+		<BaseLevel>2</BaseLevel>
 	</Contract>
 </ContractList>

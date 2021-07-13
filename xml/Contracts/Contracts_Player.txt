@@ -23,7 +23,8 @@
 		</DescList>
 		<Faction>Player</Faction>
 		<Variation>3</Variation>
-		<Step>2</Step>
+		<BonusBase>-10</BonusBase>
+		<BonusStep>20</BonusStep>
 	</Contract>
 	<Contract Type="Hp_L">
 		<DescList>
@@ -48,6 +49,18 @@
 		</DescList>
 		<Faction>Player</Faction>
 		<Variation>4</Variation>
+		<BaseLevel>1</BaseLevel>
+		<Step>0</Step>
+		<BonusBase>-10</BonusBase>
+		<BonusStep>15</BonusStep>
+	</Contract>
+	<Contract Type="NoBuff">
+		<DescList>
+			<Desc language="cn" name="自私" desc="所有司书免疫正面效果加成" />
+			<Desc language="en" name="Selfish" desc="All Librarians are immune to postivie status" />
+		</DescList>
+		<Faction>Player</Faction>
 		<BaseLevel>2</BaseLevel>
+		<BonusBase>50</BonusBase>
 	</Contract>
 </ContractList>

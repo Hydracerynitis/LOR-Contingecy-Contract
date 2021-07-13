@@ -55,7 +55,7 @@ namespace Contingecy_Contract
     {
         public StageModifier_LowFloor(int Level)
         {
-            this.Level = Level <= 4 ? 1 : 2;
+            this.Level = Level;
         }
         public override bool IsValid(StageClassInfo info)
         {
@@ -86,7 +86,7 @@ namespace Contingecy_Contract
     {
         public ContingecyContract_LowFloor(int level)
         {
-            this.Level = level<=4? 1: 2;
+            this.Level = level;
         }
         public override string[] GetFormatParam => Level==1? new string[] {"5"} : new string[] { "9"};
     }

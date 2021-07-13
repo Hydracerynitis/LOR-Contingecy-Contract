@@ -16,7 +16,7 @@ namespace Contingecy_Contract
         private bool ExtraHit;
         public ContingecyContract_Elena_Cross(int level)
         {
-            Level = level - 1;
+            Level = level;
             extrahit = new List<BattlePlayingCardDataInUnitModel>();
         }
         public override ContractType Type => ContractType.Special;
@@ -91,7 +91,7 @@ namespace Contingecy_Contract
     {
         public ContingecyContract_Elena_Zombie(int level)
         {
-            Level = level - 1;
+            Level = level;
         }
         public override ContractType Type => ContractType.Special;
         public override string[] GetFormatParam => new string[] { ( 15+ 5*Level).ToString(), (Level * 20).ToString() };

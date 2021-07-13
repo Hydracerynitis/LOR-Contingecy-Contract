@@ -19,7 +19,7 @@ namespace Contingecy_Contract
             PassiveList = new List<Contract>();
             StageList = new List<Contract>();
             Debug.PathDebug("/ContractLoader.txt", PathType.File);
-            Debug.Log("Start Loading Contract");
+            Debug.Log("----- Start Loading Contract -----");
             foreach (string readAllLine in File.ReadAllLines(Harmony_Patch.ModPath + "/ContractLoader.txt"))
             {
                 int level = 0;
@@ -47,7 +47,9 @@ namespace Contingecy_Contract
                     Debug.Log("{0}'s level excceed {0}'s maximun level", str);
                     continue;
                 }
-                New.level = New.BaseLevel + level*New.Step;
+                New.level = level;
+                New.Level = New.BaseLevel + level*New.Step;
+                New.Bonus = New.BonusBaseLevel + level * New.BonusStep;
                 string name = New.Type;
                 if (New.Variation > 0)
                     name=string.Format("{0} {1}",name,level);
@@ -107,7 +109,7 @@ namespace Contingecy_Contract
                 }
 
             }
-            Debug.Log("End Loading Contract");
+            Debug.Log("----- End Loading Contract -----");
         }
         public bool CheckActivate(Contract contract, StageClassInfo info)
         {
@@ -146,13 +148,17 @@ namespace Contingecy_Contract
         public int GetLevel(int id)
         {
             int i = 0;
+            int b = 0;
             StageClassInfo info = Singleton<StageClassInfoList>.Instance.GetData(id);
             if (PassiveList.Count > 0)
             {
                 foreach (Contract contract in PassiveList)
                 {
-                    if (CheckActivate(contract,info))
-                        i += contract.level;
+                    if (CheckActivate(contract, info))
+                    {
+                        i += contract.Level;
+                        b += contract.Bonus;
+                    }
                     continue;
                 }
             }
@@ -161,11 +167,16 @@ namespace Contingecy_Contract
                 foreach (Contract contract in StageList)
                 {
                     if (CheckActivate(contract, info))
-                        i += contract.level;
+                    {
+                        i += contract.Level;
+                        b += contract.Bonus;
+                    }
                     continue;
                 }
             }
-            return i;
+            Debug.Log("Base Level: {0}", i.ToString());
+            Debug.Log("Base Bonus: {0}", b.ToString());
+            return (int) Math.Floor(i*(1+b*0.01));
         }      
         public List<Contract> GetPassiveList()
         {
