@@ -199,29 +199,29 @@ Philip's Attack Pattern becomes more aggressive.
 
 
 The Church of Gears:
-Frantic Faith 1  Risk Level 2    Code: Eileen_Production1
+Frantic Faith 1  Risk Level 2   Conflict with Body Guard   Code: Eileen_Production1
 Increase Eileen's Max Hp by 50%;
 Gear Worshipper gain 1 Speed dice, Max Light +2.
 
-Frantic Faith 2  Risk Level 3    Code: Eileen_Production2
+Frantic Faith 2  Risk Level 3    Conflict with Body Guard    Code: Eileen_Production2
 Increase Eileen's Max Hp by 75%;
 Gear Worshipper gain 1 Speed dice, Max Light +2, at the start of each Scene, gain 2 Smoke.
 
-Frantic Faith 3  Risk Level 4    Code: Eileen_Production3
+Frantic Faith 3  Risk Level 4   Conflict with Body Guard    Code: Eileen_Production3
 Increase Eileen's Max Hp by 100%;
 Gear Worshipper gain 1 Speed dice, Max Light +2, at the start of each Scene, gain 2 Smoke and recover 2 light and draw 2 cards.
 
-Body Guard 1     Risk Level 2   Code: Eileen_BodyGuard1
+Body Guard 1     Risk Level 2   Conflict with Frantic Faith   Code: Eileen_BodyGuard1
 Increase Gear Whorshipper's Max HP and Max Stagger Resist by 50%;
 Increase the Maximun value of second die of “Thought Gear: Brainwash” by 0; 
 Whenever alive Gear Worshipper exist, Damage inflicted to Eileen will be transferred to alive Gear Worshipper.
 
-Body Guard 2     Risk Level 3   Code: Eileen_BodyGuard2
+Body Guard 2     Risk Level 3   Conflict with Frantic Faith   Code: Eileen_BodyGuard2
 Increase Gear Whorshipper's Max HP and Max Stagger Resist by 75%;
 Increase the Maximun value of second die of “Thought Gear: Brainwash” by 3; 
 Whenever alive Gear Worshipper exist, Damage inflicted to Eileen will be transferred to alive Gear Worshipper.
 
-Body Guard 3     Risk Level 4   Code: Eileen_BodyGuard3
+Body Guard 3     Risk Level 4   Conflict with Frantic Faith   Code: Eileen_BodyGuard3
 Increase Gear Whorshipper's Max HP and Max Stagger Resist by 100%;
 Increase the Maximun value of second die of “Thought Gear: Brainwash” by 6; 
 Whenever alive Gear Worshipper exist, Damage inflicted to Eileen will be transferred to alive Gear Worshipper.
@@ -230,34 +230,67 @@ Sharp Harp      Risk Level 4    Code: Eileen
 Gear Worshipper gain unique deck of Combat Pages.
 
 
+The Eighth Chef:
+Season and Spice 1      Risk Level 2  Conflict with Mince and Mash    Code: Greta_Salt1
+On Clash Win inflict 1 Paralyzed/Fragile/Bind randomly;Increase Inflicting Bleeding Stack by 1; 
+Librarian being put to Staggered or into a sack will be inflicted permantly 1 Feeble and Disarmed (Stackable); 
+Prioritize Librarian without status ailment and use “Mealtime” to Fresh Meat immediately.
+
+Season and Spice 2      Risk Level 3  Conflict with Mince and Mash    Code: Greta_Salt2
+On Clash Win inflict 1 Paralyzed/Fragile/Bind randomly;Increase Inflicting Bleeding Stack by 2; 
+Librarian being put to Staggered or into a sack will be inflicted permantly 2 Feeble and Disarmed (Stackable); 
+Prioritize Librarian without status ailment and use “Mealtime” to Fresh Meat immediately.
+
+Season and Spice 3      Risk Level 4  Conflict with Mince and Mash    Code: Greta_Salt3
+On Clash Win inflict 1 Paralyzed/Fragile/Bind randomly;Increase Inflicting Bleeding Stack by 3; 
+Librarian being put to Staggered or into a sack will be inflicted permantly 3 Feeble and Disarmed (Stackable); 
+Prioritize Librarian without status ailment and use “Mealtime” to Fresh Meat immediately.
+
+Mince and Mash 1        Risk Levl 2    Conflict with Season and Spice   Code: Greta_Feast1
+In first Phase, HP does not go below 50% and If HP drops to 60% or lower, proceeds to the next phase instead; 
+When using “Into the Sack you go!”, use it to 0 more librarins; Increase Hp recovered from Fresh Meat by 50%.
+
+Mince and Mash 2        Risk Levl 3    Conflict with Season and Spice   Code: Greta_Feast2
+In first Phase, HP does not go below 50% and If HP drops to 60% or lower, proceeds to the next phase instead; 
+When using “Into the Sack you go!”, use it to 1 more librarins; Increase Hp recovered from Fresh Meat by 100%.
+
+Mince and Mash 3        Risk Levl 4    Conflict with Season and Spice   Code: Greta_Feast3
+In first Phase, HP does not go below 50% and If HP drops to 60% or lower, proceeds to the next phase instead; 
+When using “Into the Sack you go!”, use it to 2 more librarins; Increase Hp recovered from Fresh Meat by 200%.
+
+Menacing Percussion     Risk Level 4    Code: Greta
+At the Start of the Act, Gain 100 Resistance instead;
+at the start of each three Scene, If this character has no Resistance, Gain 50 Resistance and Purge all status ailment instead.
+
+
 L’heure du Loup: 
-Pinnical Strength 1   Risk Level 2    Code: Tanya_Solo1
+Pinnical Strength 1   Risk Level 2  Conflict with One Man Army    Code: Tanya_Solo1
 Remove Counter Dice from all Combat Pages. 
 Upon being targeted one side attack, Use one of “Fistcuffs”,“Kick and Stomp”,“Lupine Onslaught”,“Intimidate” to clash with it.;
 On Clash all Offensive Dice Gain 2 Power after First Scene.
 
-Pinnical Strength 2   Risk Level 3    Code: Tanya_Solo2
+Pinnical Strength 2   Risk Level 3  Conflict with One Man Army   Code: Tanya_Solo2
 Remove Counter Dice from all Combat Pages. 
 Upon being targeted one side attack, Use one of “Fistcuffs”,“Kick and Stomp”,“Lupine Onslaught”,“Intimidate” to clash with it.;
 On Clash all Offensive Dice Gain 2 Power after First Scene, all Offensive Dice gain extra 2 Power after reached Emotion Level 3.
 
-Pinnical Strength 3  Risk Level 4    Code: Tanya_Solo3
+Pinnical Strength 3  Risk Level 4   Conflict with One Man Army   Code: Tanya_Solo3
 Remove Counter Dice from all Combat Pages. 
 Upon being targeted one side attack, Use one of “Fistcuffs”,“Kick and Stomp”,“Lupine Onslaught”,“Intimidate” to clash with it.;
 On Clash all Offensive Dice Gain 2 Power after First Scene, all Offensive Dice gain extra 2 Power after reached Emotion Level 3,
 all Offensive Dice gain extra 2 Power after reached Emotion Level 5.
 
-One Man Army 1      Risk Level 2    Code: Tanya_Brawl1
+One Man Army 1      Risk Level 2     Conflict with Pinnical Strength      Code: Tanya_Brawl1
 Gain 2 Speed Dice, Attack pattern become more aggressive; Reduce incoming Damage and Stagger Damage by 20%;
 If Tanya use Combat Page against same Librarian 4 times in one Scene, she will “see through” such librarian's attack;
 In the next Scene, upon clash Tanya will nullify all dice from such librarian's Combat Pages.
 
-One Man Army 2      Risk Level 3    Code: Tanya_Brawl2
+One Man Army 2      Risk Level 3    Conflict with Pinnical Strength  Code: Tanya_Brawl2
 Gain 2 Speed Dice, Attack pattern become much more aggressive; Reduce incoming Damage and Stagger Damage by 30%;
 If Tanya use Combat Page against same Librarian 4 times in one Scene, she will “see through” such librarian's attack;
 In the next Scene, upon clash Tanya will nullify all dice from such librarian's Combat Pages.
 
-One Man Army 3      Risk Level 4    Code: Tanya_Brawl3
+One Man Army 3      Risk Level 4    Conflict with Pinnical Strength  Code: Tanya_Brawl3
 Gain 2 Speed Dice, Attack pattern become extremely much more aggressive; Reduce incoming Damage and Stagger Damage by 40%;
 If Tanya use Combat Page against same Librarian 4 times in one Scene, she will “see through” such librarian's attack;
 In the next Scene, upon clash Tanya will nullify all dice from such librarian's Combat Pages.

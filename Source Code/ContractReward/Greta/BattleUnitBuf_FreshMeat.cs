@@ -11,7 +11,7 @@ namespace ContractReward
     {
         private double damage;
         private double threshold;
-        protected override string keywordIconId => "Greta_Meat";
+        protected override string keywordIconId => "Greta_Meat_Librarian";
         protected override string keywordId => "GretaMeat";
         public override bool IsActionable() => false;
         public override AtkResist GetResistHP(AtkResist origin, BehaviourDetail detail) => AtkResist.Normal;

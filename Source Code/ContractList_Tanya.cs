@@ -77,7 +77,8 @@ namespace Contingecy_Contract
     {
         private PassiveAbility_1306011 TanyaPassive;
         private Queue<int> Priority;
-        private int Ultimate_interval => Level >= 3 ? 3 : 4; 
+        private int Ultimate_interval => Level >= 3 ? 3 : 4;
+        public override ContractType Type => ContractType.Special;
         private int TanyaPhase => (int)typeof(PassiveAbility_1306011).GetField("_phase", AccessTools.all).GetValue(TanyaPassive);
         public override string[] GetFormatParam => new string[] { GetParam(),(10 + 10 * Level).ToString() };
         private string GetParam()
@@ -247,6 +248,7 @@ namespace Contingecy_Contract
         private int activate = 0;
         private bool _nextPhase;
         private int TanyaPhase => (int)typeof(PassiveAbility_1306011).GetField("_phase", AccessTools.all).GetValue(TanyaPassive);
+        public override ContractType Type => ContractType.Special;
         public ContingecyContract_Tanya(int level)
         {
             Level = level;

@@ -131,8 +131,9 @@ namespace Contingecy_Contract
             }
             UIs.Add(TextDataModel.GetText("ui_popup_getequippage", (object)Singleton<BookDescXmlList>.Instance.GetBookName(bookid),(object)difference));
         }
-        public static bool EnsembleComplete => Harmony_Patch.Progess.Philiph_Risk == 1 && Harmony_Patch.Progess.Eileen_Risk == 1 && Harmony_Patch.Progess.Tanya_Risk == 1 && 
-                                                Harmony_Patch.Progess.Jaeheon_Risk == 1  && Harmony_Patch.Progess.Elena_Risk == 1 && Harmony_Patch.Progess.Pluto_Risk == 1;
+        public static bool EnsembleComplete => Harmony_Patch.Progess.Philiph_Risk == 1 && Harmony_Patch.Progess.Eileen_Risk == 1 && Harmony_Patch.Progess.Greta_Risk ==1 &&
+                                                Harmony_Patch.Progess.Tanya_Risk == 1 && Harmony_Patch.Progess.Jaeheon_Risk == 1 && Harmony_Patch.Progess.Elena_Risk == 1 &&
+                                                 Harmony_Patch.Progess.Pluto_Risk == 1;
         public static List<(string, int)> OrangeCrossCondition => new List<(string, int)>() { ("Elena_Cross", 4), ("Elena", 4), ("Damage", 4) };
     }
 }

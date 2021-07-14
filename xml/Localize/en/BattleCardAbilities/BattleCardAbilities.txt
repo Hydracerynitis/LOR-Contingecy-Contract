@@ -120,6 +120,9 @@
     		<Desc>Can only target on Fresh Meat</Desc>
     		<Desc>At the start of each Scene set cost of this card to current Light</Desc>
   	</BattleCardAbility>
+	<BattleCardAbility ID="greta_mealAtk">
+    		<Desc>[On Hit] Recover 20 HP; If Target is Fresh Meat, Kill target.</Desc>
+  	</BattleCardAbility>
 	<!--塔尼亚-->
   	<BattleCardAbility ID="TanyaCoolDown">
     		<Desc>This page is used against all enemies.(Except used due to Brawl)</Desc>

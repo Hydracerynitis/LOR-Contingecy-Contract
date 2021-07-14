@@ -121,6 +121,9 @@
     		<Desc>只能把[大肉]指定为目标</Desc>
     		<Desc>每一幕开始时将费用设定为[当前光芒]</Desc>
   	</BattleCardAbility>
+	<BattleCardAbility ID="greta_mealAtk">
+    		<Desc>[命中时]恢复20点体力;若目标是[大肉],击杀目标.</Desc>
+  	</BattleCardAbility>
 	<!--塔尼亚-->
   	<BattleCardAbility ID="TanyaCoolDown">
     		<Desc>本书页将对所有敌方角色分别使用1次(除被群殴法则触发)</Desc>

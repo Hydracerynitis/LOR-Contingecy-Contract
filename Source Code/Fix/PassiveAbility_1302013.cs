@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ContractReward
+namespace Contingecy_Contract
 {
     public class PassiveAbility_1302013: PassiveAbilityBase
     {

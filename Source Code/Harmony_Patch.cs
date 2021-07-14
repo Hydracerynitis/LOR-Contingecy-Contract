@@ -261,6 +261,39 @@ namespace Contingecy_Contract
             {
                 Debug.Error("HP_" + Patch20.Name, ex);
             }
+            MethodInfo Method21 = typeof(BattleUnitBuf_Greta_Meat_Librarian).GetMethod("OnBreakState", AccessTools.all);
+            MethodInfo Patch21 = typeof(Harmony_Patch).GetMethod("BattleUnitBuf_Greta_Meat_Librarian_OnBreakState");
+            try
+            {
+                harmony.Patch(Method21, null, new HarmonyMethod(Patch21), null, null);
+                Debug.Log("Patch: {0} succeed", Patch21.Name);
+            }
+            catch (Exception ex)
+            {
+                Debug.Error("HP_" + Patch21.Name, ex);
+            }
+            MethodInfo Method22 = typeof(BattleUnitBuf_Greta_Meat_Librarian).GetMethod("OnDie", AccessTools.all);
+            MethodInfo Patch22 = typeof(Harmony_Patch).GetMethod("BattleUnitBuf_Greta_Meat_Librarian_OnDie");
+            try
+            {
+                harmony.Patch(Method22, new HarmonyMethod(Patch22),null , null, null);
+                Debug.Log("Patch: {0} succeed", Patch22.Name);
+            }
+            catch (Exception ex)
+            {
+                Debug.Error("HP_" + Patch22.Name, ex);
+            }
+            MethodInfo Method23 = typeof(BattleUnitBuf_Greta_Meat).GetMethod("OnTakeDamageByAttack", AccessTools.all);
+            MethodInfo Patch23 = typeof(Harmony_Patch).GetMethod("BattleUnitBuf_Greta_Meat_OnTakeDamageByAttack");
+            try
+            {
+                harmony.Patch(Method23, new HarmonyMethod(Patch23), null, null, null);
+                Debug.Log("Patch: {0} succeed", Patch22.Name);
+            }
+            catch (Exception ex)
+            {
+                Debug.Error("HP_" + Patch23.Name, ex);
+            }
             //MethodInfo Method18 = typeof(BehaviourAction_TanyaSpecialAtk).GetMethod("GetMovingAction", AccessTools.all);
             //MethodInfo Patch18 = typeof(Harmony_Patch).GetMethod("BehaviourAction_TanyaSpecialAtk_GetMovingAction");
             //try
@@ -419,7 +452,7 @@ namespace Contingecy_Contract
                 BattleUnitBuf_Jaeheon_PuppetThread jaeheonPuppetThread = new BattleUnitBuf_Jaeheon_PuppetThread();
                 jaeheonPuppetThread.Init(owner);
                 jaeheonPuppetThread.stack = num;
-                owner.bufListDetail.AddBuf((BattleUnitBuf)jaeheonPuppetThread);
+                owner.bufListDetail.AddBuf(jaeheonPuppetThread);
             }
             return false;
         }
@@ -464,6 +497,47 @@ namespace Contingecy_Contract
         public static void DiceCardSelfAbility_elenaMinionStrong_OnSucceedAttack(DiceCardSelfAbility_elenaMinionStrong __instance)
         {
             __instance.card.target.bufListDetail.AddBuf(new DiceCardSelfAbility_elenaMinionStrong.BattleUnitBuf_elenaStrongOnce());
+        }
+        public static void BattleUnitBuf_Greta_Meat_Librarian_OnBreakState(ref float ___hp,BattleUnitModel ____origin, BattleUnitModel ____owner)
+        {
+            if (____origin == null)
+                return;
+            double ratio = ____owner.hp / ____owner.MaxHp;
+            double hp = ____origin.hp - (1-ratio) * ____origin.MaxHp;
+            ___hp = Mathf.Max(1f, (float)hp);
+        }
+        public static bool BattleUnitBuf_Greta_Meat_Librarian_OnDie(ref BattleUnitModel ____origin, BattleUnitModel ____owner, float ___hp)
+        {
+            if (____origin == null)
+                return false;
+            if (____owner.breakDetail.IsBreakLifeZero())
+            {
+                ____origin.SetHp((int)___hp);
+                ____origin.breakDetail.RecoverBreakLife(____origin.MaxBreakLife);
+                ____origin.breakDetail.nextTurnBreak = false;
+                ____origin.turnState = BattleUnitTurnState.WAIT_CARD;
+                ____origin.breakDetail.breakGauge = 0;
+                ____origin.breakDetail.RecoverBreak(Mathf.RoundToInt((float)____origin.breakDetail.GetDefaultBreakGauge() * 0.75f));
+                ____origin.view.EnableView(true);
+                ____origin.Extinct(false);
+            }
+            else
+                ____origin.Die();
+            return false;
+        }
+        public static bool BattleUnitBuf_Greta_Meat_OnTakeDamageByAttack(BattleDiceBehavior atkDice)
+        {
+            BattleUnitModel owner = atkDice?.owner;
+            if (owner == null || owner.faction != Faction.Enemy || owner.UnitData.unitData.EnemyUnitId != 1303011)
+                return false;
+            double heal = 8;
+            if (owner.passiveDetail.PassiveList.Find(x => x is ContingecyContract_Greta_Feast) is ContingecyContract_Greta_Feast Feast)
+                heal *= (1 + 0.5 * Math.Pow(2, Feast.Level - 1));
+            owner.RecoverHP((int)heal);
+            string str = "Creature/MustSee_Scream";
+            string src = (double)RandomUtil.valueForProb >= 0.5 ? str + "2" : str + "1";
+            owner.battleCardResultLog?.SetCreatureEffectSound(src);
+            return false;
         }
         public static IEnumerable<CodeInstruction>  BehaviourAction_TanyaSpecialAtk_GetMovingAction(IEnumerable<CodeInstruction> instructions, ILGenerator generator)
         {

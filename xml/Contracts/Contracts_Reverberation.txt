@@ -34,6 +34,43 @@ Increase Max HP and Max Stagger Resist by {1}%" />
 		<BaseLevel>4</BaseLevel>
 		<Enemy>1301011</Enemy>
 	</Contract>
+	<Contract Type="Greta_Salt">
+		<DescList>
+			<Desc language="cn" name="八香五料" desc="拼点胜利时对目标随机施加1层麻痹/易损/束缚;施加流血层数+{0};
+陷入混乱或者被生擒的司书会被永久施加{1}层虚弱,破绽(可叠加);优先攻击没有负面状态的司书并会立刻对大肉使用开饭." />
+			<Desc language="en" name="Season and Spice" desc="On Clash Win inflict 1 Paralyzed/Fragile/Bind randomly;Increase Inflicted Bleeding Stack by {0}; 
+Librarian being put to Staggered or into a sack will be inflicted permantly {1} Feeble and Disarmed (Stackable); 
+Prioritize Librarian without status ailment and use “Mealtime” to Fresh Meat immediately." />
+		</DescList>
+		<Faction>Enemy</Faction>
+		<Variation>3</Variation>
+		<BaseLevel>1</BaseLevel>
+		<Conflict>Greta_Feast</Conflict>
+		<Enemy>1303011</Enemy>
+	</Contract>
+	<Contract Type="Greta_Feast">
+		<DescList>
+			<Desc language="cn" name="除腥去脏" desc="第一阶段体力改为无法低于50%并且若体力低于60%就进入下一阶段.
+使用生擒时会额外对{0}个司书使用生擒;从大肉获得的治疗提高{1}%." />
+			<Desc language="en" name="Mince and Mash" desc="In first Phase, HP does not go below 50% and If HP drops to 60% or lower, proceeds to the next phase instead; 
+When using “Into the Sack you go!”, use it to {0} more librarins; Increase Hp recovered from Fresh Meat by {1}%." />
+		</DescList>
+		<Faction>Enemy</Faction>
+		<Variation>3</Variation>
+		<BaseLevel>1</BaseLevel>
+		<Conflict>Greta_Salt</Conflict>
+		<Enemy>1303011</Enemy>
+	</Contract>
+	<Contract Type="Greta">
+		<DescList>
+			<Desc language="cn" name="鼓的震慑" desc="舞台开启时改为获得100层抵御,改为每三幕开始时若该角色抵御层数为0则清空所有负面状态并获得50层抵御" />
+			<Desc language="en" name="Menacing Percussion" desc="At the Start of the Act, Gain 100 Resistance instead;
+at the start of each three Scene, If this character has no Resistance, Gain 50 Resistance and Purge all status ailment instead." />
+		</DescList>
+		<Faction>Enemy</Faction>
+		<BaseLevel>4</BaseLevel>
+		<Enemy>1303011</Enemy>
+	</Contract>
 	<Contract Type="Eileen_Production">
 		<DescList>
 			<Desc language="cn" name="宗教狂潮" desc="艾琳血量提升{0}%，齿轮信徒{1}。" />

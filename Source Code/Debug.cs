@@ -37,6 +37,13 @@ namespace Contingecy_Contract
             PathDebug("/Debug", PathType.Directory);
             File.AppendAllText(Harmony_Patch.ModPath + "/Debug/" + type + "Error.txt", Log+"\n'");
         }
+        public static void FileLog(string name, string message, params string[] Params)
+        {
+            if (!File.Exists(Harmony_Patch.ModPath + "/Debug/" + name + ".txt"))
+                File.WriteAllText(Harmony_Patch.ModPath + "/Debug/" + name + ".txt", string.Format(message, Params) + "\n");
+            else
+                File.AppendAllText(Harmony_Patch.ModPath + "/Debug/" + name + ".txt", string.Format(message, Params) + "\n");
+        }
         public static void PathDebug(string path,PathType type)
         {
             if (type == PathType.Directory)

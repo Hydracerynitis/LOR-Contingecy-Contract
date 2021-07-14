@@ -7,7 +7,7 @@ using System.Text;
 using LOR_DiceSystem;
 using System.Threading.Tasks;
 
-namespace ContractReward
+namespace Contingecy_Contract
 {
     public class DiceCardSelfAbility_Jaeheon_AreaDt : DiceCardSelfAbilityBase
     {
@@ -25,7 +25,7 @@ namespace ContractReward
                         BattleUnitBuf_Jaeheon_PuppetThread jaeheonPuppetThread = new BattleUnitBuf_Jaeheon_PuppetThread();
                         jaeheonPuppetThread.Init(alive);
                         jaeheonPuppetThread.stack = 1;
-                        alive.bufListDetail.AddReadyBuf((BattleUnitBuf)jaeheonPuppetThread);
+                        alive.bufListDetail.AddReadyBuf(jaeheonPuppetThread);
                         continue;
                     default:
                         continue;
