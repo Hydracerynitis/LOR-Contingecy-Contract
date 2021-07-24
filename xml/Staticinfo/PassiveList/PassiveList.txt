@@ -86,6 +86,27 @@
     		<CanGivePassive>false</CanGivePassive>
 		<Cost>6</Cost>
   	</Passive>
+	<!-- 不来梅-->
+	<Passive ID="1840001">
+		<Rarity>Unique</Rarity>
+    		<CanGivePassive>false</CanGivePassive>
+		<Cost>6</Cost>
+  	</Passive>
+	<Passive ID="1840002">
+		<Rarity>Unique</Rarity>
+    		<CanGivePassive>false</CanGivePassive>
+		<Cost>6</Cost>
+  	</Passive>
+	<Passive ID="1840003">
+		<Rarity>Unique</Rarity>
+    		<CanGivePassive>false</CanGivePassive>
+		<Cost>4</Cost>
+  	</Passive>
+	<Passive ID="1840004">
+		<Rarity>Unique</Rarity>
+    		<CanGivePassive>false</CanGivePassive>
+		<Cost>2</Cost>
+  	</Passive>
 	<!-- 塔尼亚-->
 	<Passive ID="1830001">
 		<Rarity>Unique</Rarity>

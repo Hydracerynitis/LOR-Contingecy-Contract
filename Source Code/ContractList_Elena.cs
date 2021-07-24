@@ -19,6 +19,7 @@ namespace Contingecy_Contract
             Level = level;
             extrahit = new List<BattlePlayingCardDataInUnitModel>();
         }
+        public static bool CheckEnemyId(int EnemyId) => EnemyId == 1308021;
         public override ContractType Type => ContractType.Special;
         public override string[] GetFormatParam => new string[] { Level.ToString(),((Level - 1)*25).ToString() };
         private readonly List<BattlePlayingCardDataInUnitModel> extrahit;

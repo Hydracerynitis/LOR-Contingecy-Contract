@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <StageXmlRoot> 
-<Stage id="1800000">
+<Stage id="1800001">
     <Name>푸른잔향 1차</Name>
     <Wave>
       <Formation>31</Formation>
@@ -10,6 +10,18 @@
     </Wave>
     <FloorNum>10</FloorNum>
     <Chapter>1</Chapter>
+    <StoryType>ContingencyReward</StoryType>
+  </Stage>
+<Stage id="1800007">
+    <Name>푸른잔향 1차</Name>
+    <Wave>
+      <Formation>31</Formation>
+      <AvailableUnit>46</AvailableUnit>
+      <FormationType>AscendingOrder</FormationType>
+      <Unit>1310011</Unit>
+    </Wave>
+    <FloorNum>10</FloorNum>
+    <Chapter>7</Chapter>
     <StoryType>ContingencyReward</StoryType>
   </Stage>
 </StageXmlRoot> 

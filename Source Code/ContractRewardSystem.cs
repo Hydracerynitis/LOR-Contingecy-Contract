@@ -28,6 +28,9 @@ namespace Contingecy_Contract
                 case (70003):
                     Harmony_Patch.Progess.Greta_Risk = 1;
                     break;
+                case (70004):
+                    Harmony_Patch.Progess.Bremen_Risk = 1;
+                    break;
                 case (70006):
                     Harmony_Patch.Progess.Tanya_Risk = 1;
                     break;
@@ -80,6 +83,10 @@ namespace Contingecy_Contract
             {
                 GiveEquipBook(18300000);
             }
+            if (Harmony_Patch.Progess.Bremen_Risk == 1)
+            {
+                GiveEquipBook(18400000);
+            }
             if (Harmony_Patch.Progess.Tanya_Risk == 1)
             {
                 GiveEquipBook(18600000);
@@ -120,7 +127,7 @@ namespace Contingecy_Contract
         }
         public void GiveEquipBook(int bookid)
         {
-            List<BookModel> all = Singleton<BookInventoryModel>.Instance.GetBookListAll().FindAll((Predicate<BookModel>)(x => x.ClassInfo.id == bookid));
+            List<BookModel> all = Singleton<BookInventoryModel>.Instance.GetBookListAll().FindAll(x => x.ClassInfo.id == bookid);
             BookXmlInfo data2 = Singleton<BookXmlList>.Instance.GetData(bookid);
             if (data2 == null || all.Count >= data2.Limit)
                 return;
@@ -132,8 +139,8 @@ namespace Contingecy_Contract
             UIs.Add(TextDataModel.GetText("ui_popup_getequippage", (object)Singleton<BookDescXmlList>.Instance.GetBookName(bookid),(object)difference));
         }
         public static bool EnsembleComplete => Harmony_Patch.Progess.Philiph_Risk == 1 && Harmony_Patch.Progess.Eileen_Risk == 1 && Harmony_Patch.Progess.Greta_Risk ==1 &&
-                                                Harmony_Patch.Progess.Tanya_Risk == 1 && Harmony_Patch.Progess.Jaeheon_Risk == 1 && Harmony_Patch.Progess.Elena_Risk == 1 &&
-                                                 Harmony_Patch.Progess.Pluto_Risk == 1;
+                                                  Harmony_Patch.Progess.Bremen_Risk == 1 &&  Harmony_Patch.Progess.Tanya_Risk == 1 && Harmony_Patch.Progess.Jaeheon_Risk == 1
+                                                 && Harmony_Patch.Progess.Elena_Risk == 1 && Harmony_Patch.Progess.Pluto_Risk == 1;
         public static List<(string, int)> OrangeCrossCondition => new List<(string, int)>() { ("Elena_Cross", 4), ("Elena", 4), ("Damage", 4) };
     }
 }

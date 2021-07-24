@@ -83,6 +83,17 @@
 		<Card>18300006</Card>
 		<Card>18300007</Card>
 	</Deck>
+	<Deck ID="18400000">
+		<Card>18400001</Card>
+		<Card>18400001</Card>
+		<Card>18400002</Card>
+		<Card>18400002</Card>
+		<Card>18400003</Card>
+		<Card>18400003</Card>
+		<Card>18400004</Card>
+		<Card>18400004</Card>
+		<Card>18400005</Card>
+	</Deck>
 	<Deck ID="18600000">
 		<Card>18600001</Card>
 		<Card>18600001</Card>

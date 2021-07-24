@@ -123,6 +123,38 @@
 	<BattleCardAbility ID="greta_mealAtk">
     		<Desc>[On Hit] Recover 20 HP; If Target is Fresh Meat, Kill target.</Desc>
   	</BattleCardAbility>
+	<!--不来梅-->
+  	<BattleCardAbility ID="bremen_boom">
+    		<Desc>[Combat Start] Give 2 Strength, Endurance, Haste, and Protection to a random ally; inflict 2 Feeble, Disarm, Bind, and Fragile to target</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="bremen_chorus">
+    		<Desc>[Combat Start] Inflict 10 Fragile and 5 Paralysis to manually set target next Scene</Desc>
+    		<Desc>At the next Scene, all attack resistance become "Fatal"</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="bremen_doghead1">
+    		<Desc>[Combat Start] Inflict 2 Feeble this Scene</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="bremen_doghead1pw">
+    		<Desc>[On Clash Win] Inflict 1 Feeble to a random enemy next Scene</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="bremen_doghead2atk">
+    		<Desc>[On Hit] Inflict 2 Bind and Disarm next Scene</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="bremen_chickenhead1">
+    		<Desc>[Can Target Ally;][Combat Start] If target is an ally, give 2 Strength this Scene</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="bremen_chickenhead1pw">
+    		<Desc>[On Clash Win] Give 1 Strength to a random ally next Scene</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="bremen_chickenhead2">
+    		<Desc>[Combat Start] Give 1 Strength to all allies</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="bremen_donkeyhead1atk">
+    		<Desc>[On Hit] Give 'Tagged' next Scene</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="bremen_donkeyhead2atk">
+    		<Desc>[On Hit] Inflict 1 Paralysis next Scene</Desc>
+  	</BattleCardAbility>
 	<!--塔尼亚-->
   	<BattleCardAbility ID="TanyaCoolDown">
     		<Desc>This page is used against all enemies.(Except used due to Brawl)</Desc>

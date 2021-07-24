@@ -124,6 +124,38 @@
 	<BattleCardAbility ID="greta_mealAtk">
     		<Desc>[命中时]恢复20点体力;若目标是[大肉],击杀目标.</Desc>
   	</BattleCardAbility>
+	<!--不来梅-->
+  	<BattleCardAbility ID="bremen_boom">
+    		<Desc>[战斗开始]这一幕中随机使1名我方角色获得2层[强壮][忍耐][迅捷]与[守护]随机对1名敌方角色施加2层[虚弱][破绽][束缚]与[易损]</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="bremen_chorus">
+    		<Desc>[战斗开始]下一幕中对首选目标施加10层[易损]与[麻痹]</Desc>
+    		<Desc>下一幕所有攻击抗性改为[致命]</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="bremen_doghead1">
+    		<Desc>[战斗开始]这一幕中对目标施加2层[虚弱]</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="bremen_doghead1pw">
+    		<Desc>[拼点胜利]下一幕中随机对1名敌方角色施加1层[虚弱]</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="bremen_doghead2atk">
+    		<Desc>[命中时]下一幕中对目标施加2层[束缚]与[破绽]</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="bremen_chickenhead1">
+    		<Desc>[战斗开始]若目标为我方角色则使其获得2层[强壮]</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="bremen_chickenhead1pw">
+    		<Desc>[拼点胜利]下一幕中随机使1名我方角色获得1层[强壮]</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="bremen_chickenhead2">
+    		<Desc>[战斗开始]这一幕中使所有我方角色获得1层[强壮]</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="bremen_donkeyhead1atk">
+    		<Desc>[命中时]下一幕中对目标施加[感召]</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="bremen_donkeyhead2atk">
+    		<Desc>[命中时]下一幕中对目标施加1层[麻痹]</Desc>
+  	</BattleCardAbility>
 	<!--塔尼亚-->
   	<BattleCardAbility ID="TanyaCoolDown">
     		<Desc>本书页将对所有敌方角色分别使用1次(除被群殴法则触发)</Desc>

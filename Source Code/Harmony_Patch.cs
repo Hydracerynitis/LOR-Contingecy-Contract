@@ -1,4 +1,6 @@
 ﻿using System;
+using UI;
+using LOR_BattleUnit_UI;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +8,6 @@ using System.Xml;
 using GameSave;
 using ContractReward;
 using System.Diagnostics;
-using UI;
 using LOR_DiceSystem;
 using System.Reflection;
 using System.Xml.Serialization;
@@ -288,22 +289,33 @@ namespace Contingecy_Contract
             try
             {
                 harmony.Patch(Method23, new HarmonyMethod(Patch23), null, null, null);
-                Debug.Log("Patch: {0} succeed", Patch22.Name);
+                Debug.Log("Patch: {0} succeed", Patch23.Name);
             }
             catch (Exception ex)
             {
                 Debug.Error("HP_" + Patch23.Name, ex);
             }
-            //MethodInfo Method18 = typeof(BehaviourAction_TanyaSpecialAtk).GetMethod("GetMovingAction", AccessTools.all);
-            //MethodInfo Patch18 = typeof(Harmony_Patch).GetMethod("BehaviourAction_TanyaSpecialAtk_GetMovingAction");
+            MethodInfo Method24 = typeof(BattleUnitModel).GetMethod("CheckCardAvailable", AccessTools.all);
+            MethodInfo Patch24 = typeof(Harmony_Patch).GetMethod("BattleUnitModel_CheckCardAvailable");
+            try
+            {
+                harmony.Patch(Method24, null, new HarmonyMethod(Patch24), null, null);
+                Debug.Log("Patch: {0} succeed", Patch24.Name);
+            }
+            catch (Exception ex)
+            {
+                Debug.Error("HP_" + Patch24.Name, ex);
+            }
+            //MethodInfo Method25 = typeof(BehaviourAction_TanyaSpecialAtk).GetMethod("GetMovingAction", AccessTools.all);
+            //MethodInfo Patch25 = typeof(Harmony_Patch).GetMethod("BehaviourAction_TanyaSpecialAtk_GetMovingAction");
             //try
             //{
-            //harmony.Patch(Method18, null, null, new HarmonyMethod(Patch18), null);
+            //harmony.Patch(Method25, null, null, new HarmonyMethod(Patch25), null);
             //Debug.Log("Patch: {0} succeed", Patch18.Name);
             //}
             //catch (Exception ex)
             //{
-            //Debug.Error("HP_" + Patch18.Name, ex);
+            //Debug.Error("HP_" + Patch25.Name, ex);
             //}
         }
         public static void StageNameXmlList_GetName(ref string __result,int id)
@@ -402,6 +414,15 @@ namespace Contingecy_Contract
             }
             UnitBookId.Clear();
             return true;
+        }
+        public static void BattleUnitModel_CheckCardAvailable(ref bool __result,BattleUnitModel __instance)
+        {
+            if (__result && SingletonBehavior<BattleManagerUI>.Instance.selectedAllyDice != null)
+            {
+                int index = (int)typeof(SpeedDiceUI).GetField("_speedDiceIndex", AccessTools.all).GetValue(SingletonBehavior<BattleManagerUI>.Instance.selectedAllyDice);
+                if (!__instance.speedDiceResult[index].isControlable)
+                    __result = false;
+            }
         }
         public static bool BattleUnitBuf_Philip_OverHeat_Init(BattleUnitModel owner, BattleUnitBuf_Philip_OverHeat __instance)
         {
@@ -550,8 +571,8 @@ namespace Contingecy_Contract
                 {
                     if (codeInstructionList[index].opcode == OpCodes.Bne_Un)
                     {
-                        InsertIndex = index - 26;              
-                        ((List<Label>)codeInstructionList[index + 1].labels).Add(label);
+                        InsertIndex = index - 5;              
+                        (codeInstructionList[index + 1].labels).Add(label);
                     }
                 }
             }

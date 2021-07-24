@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Card ID="18400001">
+    		<Name>强劲之音</Name>
+    		<Artwork>Bremen_Strong</Artwork>
+    		<Rarity>Common</Rarity>
+		    <Option>NoInventory</Option>
+    		<Spec Range="Near" Cost="2" />
+    		<Script></Script>
+    		<ScriptDesc></ScriptDesc>
+    		<BehaviourList>
+                <Behaviour Min="5" Dice="7" Type="Atk" Detail="Hit" Motion="J" EffectRes="Blue_Bremen_J" Script="ally2strength1atk" />
+                <Behaviour Min="5" Dice="7" Type="Atk" Detail="Slash" Motion="Z" EffectRes="Blue_Bremen_Z" Script="ally2recover3atk" />
+    		</BehaviourList>
+    		<Chapter>7</Chapter>
+    		<Priority>0</Priority>
+  	</Card>
+  	<Card ID="18400002">
+    		<Name>永恒残音</Name>
+    		<Artwork>Bremen_Strong</Artwork>
+    		<Rarity>Rare</Rarity>
+		    <Option>NoInventory</Option>
+    		<Spec Range="Near" Cost="2" />
+    		<Script>ally2strength1thisRound</Script>
+    		<ScriptDesc></ScriptDesc>
+    		<BehaviourList>
+      			<Behaviour Min="5" Dice="7" Type="Atk" Detail="Slash" Motion="Z" EffectRes="Blue_Bremen_Z" Script="" Desc="" />
+                <Behaviour Min="4" Dice="5" Type="Def" Detail="Guard" Motion="G" EffectRes="Blue_Bremen_G" Script="" Desc="" />
+                <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="Blue_Bremen_J" Script="" Desc="" />
+    		</BehaviourList>
+    		<Chapter>7</Chapter>
+    		<Priority>0</Priority>
+  	</Card>
+  	<Card ID="18400003">
+    		<Name>至暗圣地</Name>
+    		<Artwork>Bremen_Strong</Artwork>
+    		<Rarity>Uncommon</Rarity>
+		    <Option>NoInventory</Option>
+    		<Spec Range="Near" Cost="3" />
+    		<Script>enemy1weak1thisRound</Script>
+    		<ScriptDesc></ScriptDesc>
+    		<BehaviourList>
+			        <Behaviour Min="4" Dice="6" Type="Atk" Detail="Hit" Motion="Z" EffectRes="Blue_Bremen_Z" Script="" Desc="" />
+                    <Behaviour Min="8" Dice="12" Type="Atk" Detail="Hit" Motion="H" EffectRes="Blue_Bremen_H" Script="" Desc="" />
+                    <Behaviour Min="3" Dice="5" Type="Def" Detail="Guard" Motion="G" EffectRes="Blue_Bremen_G" Script="" Desc="" />
+    		</BehaviourList>
+    		<Chapter>7</Chapter>
+    		<Priority>0</Priority>
+  	</Card>
+  	<Card ID="18400004">
+    		<Name>爆炸旋律</Name>
+    		<Artwork>Bremen_Strong</Artwork>
+    		<Rarity>Rare</Rarity>
+		    <Option>NoInventory</Option>
+    		<Spec Range="Near" Cost="3" />
+    		<Script>enemy2weak1thisRound</Script>
+    		<ScriptDesc></ScriptDesc>
+    		<BehaviourList>
+                <Behaviour Min="9" Dice="18" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="bremen_special_atk" Desc="" />
+    		</BehaviourList>
+    		<Chapter>7</Chapter>
+    		<Priority>0</Priority>
+  	</Card>
+  	<Card ID="18400005">
+    		<Name>合奏</Name>
+    		<Artwork>Bremen_Sing</Artwork>
+    		<Rarity>Rare</Rarity>
+		    <Option>NoInventory</Option>
+    		<Spec Range="Near" Cost="5" />
+    		<Script>bremen_boom</Script>
+    		<ScriptDesc></ScriptDesc>
+    		<BehaviourList>
+                <Behaviour Min="5" Dice="9" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="bremen_special_atk" Desc="" />
+                <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="bremen_special_atk" Desc="" />
+                <Behaviour Min="4" Dice="7" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="bremen_special_atk" Desc="" />
+    		</BehaviourList>
+    		<Chapter>7</Chapter>
+    		<Priority>0</Priority>
+  	</Card>
+  	<Card ID="18400006">
+    		<Name>顶点大合奏</Name>
+    		<Artwork>Bremen_Strong</Artwork>3
+    		<Rarity>Unique</Rarity>
+		    <Option>NoInventory</Option>
+            <Option>ExhaustOnUse</Option>
+            <Spec Range="FarAreaEach" Cost="5" Affection="Team"/>
+    		<Script>bremen_chorus</Script>
+    		<ScriptDesc></ScriptDesc>
+    		<BehaviourList>
+                <Behaviour Min="5" Dice="10" Type="Atk" Detail="Hit" Motion="S2" EffectRes="" Script="bremen_chorus_atk" ActionScript="BremenAreaAtk" Desc="" />
+                <Behaviour Min="5" Dice="10" Type="Atk" Detail="Hit" Motion="S2" EffectRes="" Script="bremen_chorus_atk" ActionScript="BremenAreaAtk" Desc="" />
+    		</BehaviourList>
+    		<Chapter>7</Chapter>
+    		<Priority>0</Priority>
+  	</Card>
+  	<Card ID="18400011">
+    		<Name>汪汪汪！！</Name>
+    		<Artwork>Bremen_Dog</Artwork>
+    		<Rarity>Uncommon</Rarity>
+		    <Option>NoInventory</Option>
+    		<Spec Range="Near" Cost="0" />
+    		<Script>bremen_doghead1</Script>
+    		<ScriptDesc></ScriptDesc>
+    		<BehaviourList>
+      			<Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="Blue_Bremen_G" Script="" ActionScript="" Desc="" />
+                <Behaviour Min="7" Dice="10" Type="Atk" Detail="Slash" Motion="Z" EffectRes="Blue_Bremen_Z" Script="" ActionScript="" Desc="" />
+                <Behaviour Min="4" Dice="9" Type="Standby" Detail="Guard" Motion="G" EffectRes="Blue_Bremen_G" Script="bremen_doghead1pw" ActionScript="" Desc="" />
+    		</BehaviourList>
+    		<Chapter>7</Chapter>
+    		<Priority>0</Priority>
+  	</Card>
+  	<Card ID="18400012">
+    		<Name>汪汪！汪汪~！！！</Name>
+    		<Artwork>Bremen_Dog</Artwork>
+    		<Rarity>Common</Rarity>
+		    <Option>NoInventory</Option>
+    		<Spec Range="Near" Cost="0" />
+    		<Script></Script>
+    		<ScriptDesc></ScriptDesc>
+    		<BehaviourList>
+      			<Behaviour Min="5" Dice="9" Type="Atk" Detail="Slash" Motion="Z" EffectRes="Blue_Bremen_Z" Script="bremen_doghead2atk" ActionScript="" Desc="" />
+                <Behaviour Min="5" Dice="9" Type="Atk" Detail="Slash" Motion="Z" EffectRes="Blue_Bremen_Z" Script="bremen_doghead2atk" ActionScript="" Desc="" /> 
+    		</BehaviourList>
+    		<Chapter>7</Chapter>
+    		<Priority>0</Priority>
+  	</Card>
+  	<Card ID="18400021">
+    		<Name>咯咯咯！！！</Name>
+    		<Artwork>Bremen_Chicken</Artwork>
+    		<Rarity>Rare</Rarity>
+		    <Option>Personal</Option>
+    		<Spec Range="Near" Cost="0" />
+    		<Script>bremen_chickenhead1</Script>
+    		<ScriptDesc></ScriptDesc>
+    		<BehaviourList>
+ 			    <Behaviour Min="6" Dice="10" Type="Standby" Detail="Penetrate" Motion="F" EffectRes="" Script="bremen_chickenhead1pw" ActionScript="" Desc="" />
+                <Behaviour Min="6" Dice="10" Type="Standby" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+    		</BehaviourList>
+    		<Chapter>7</Chapter>
+    		<Priority>0</Priority>
+  	</Card>
+  	<Card ID="18400022">
+    		<Name>喔喔喔~！！！</Name>
+    		<Artwork>Bremen_Chicken</Artwork>
+    		<Rarity>Rare</Rarity>
+    		<Spec Range="Near" Cost="0" />
+    		<Script>bremen_chickenhead2</Script>
+    		<ScriptDesc></ScriptDesc>
+    		<BehaviourList>
+      			<Behaviour Min="7" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+                <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="" ActionScript="" Desc="" />
+                <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="" ActionScript="" Desc="" />
+    		</BehaviourList>
+    		<Chapter>7</Chapter>
+    		<Priority>0</Priority>
+  	</Card>
+  	<Card ID="18400031">
+    		<Name>呜嘤嘤嘤嘤嘤！！！</Name>
+    		<Artwork>Bremen_Donki</Artwork>
+    		<Rarity>Unique</Rarity>
+    		<Spec Range="Near" Cost="0" />
+    		<Script></Script>
+    		<ScriptDesc></ScriptDesc>
+    		<BehaviourList>
+      			<Behaviour Min="12" Dice="12" Type="Atk" Detail="Hit" Motion="J" EffectRes="Blue_Bremen_J" Script="bremen_donkeyhead1atk" ActionScript="" Desc="" />
+                <Behaviour Min="4" Dice="7" Type="Standby" Detail="Hit" Motion="H" EffectRes="Blue_Bremen_H" Script="" ActionScript="" Desc="" />
+                <Behaviour Min="4" Dice="7" Type="Standby" Detail="Hit" Motion="H" EffectRes="Blue_Bremen_H" Script="" ActionScript="" Desc="" />
+    		</BehaviourList>
+    		<Chapter>7</Chapter>
+    		<Priority>0</Priority>
+  	</Card>
+  	<Card ID="18400032">
+    		<Name>咴咴咴~！！！</Name>
+    		<Artwork>Bremen_Donki</Artwork>
+    		<Rarity>Uncommon</Rarity>
+    		<Spec Range="Near" Cost="0" />
+    		<Script></Script>
+    		<ScriptDesc></ScriptDesc>
+    		<BehaviourList>
+      			<Behaviour Min="6" Dice="9" Type="Atk" Detail="Hit" Motion="J" EffectRes="Blue_Bremen_J" Script="bremen_donkeyhead2atk" ActionScript="" Desc="" />
+                <Behaviour Min="6" Dice="9" Type="Atk" Detail="Hit" Motion="J" EffectRes="Blue_Bremen_J" Script="bremen_donkeyhead2atk" ActionScript="" Desc="" />
+                <Behaviour Min="6" Dice="9" Type="Atk" Detail="Hit" Motion="J" EffectRes="Blue_Bremen_J" Script="" ActionScript="" Desc="" />
+    		</BehaviourList>
+    		<Chapter>7</Chapter>
+    		<Priority>0</Priority>
+  	</Card>
+</DiceCardXmlRoot>

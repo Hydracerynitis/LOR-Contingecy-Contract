@@ -60,8 +60,8 @@ namespace Contingecy_Contract
         public int BonusBaseLevel = 0;
         [XmlElement("BonusStep")]
         public int BonusStep = 0;
-        [XmlElement("Enemy")]
-        public List<int> Enemy = new List<int>();
+        [XmlElement("Stage")]
+        public int Stageid = -1;
         [XmlElement("Conflict")]
         public List<string> Conflict=new List<string>();
         [XmlIgnore]
@@ -71,7 +71,7 @@ namespace Contingecy_Contract
         public StageModifier modifier;
         public ContractDesc GetDesc(string language)
         {
-            return this.desc.Find((Predicate<ContractDesc>)(x => x.language == language));
+            return this.desc.Find(x => x.language == language);
         }
         public Contract Copy()
         {
@@ -86,12 +86,11 @@ namespace Contingecy_Contract
                 Step = Step,
                 BonusBaseLevel=BonusBaseLevel,
                 BonusStep=BonusStep,
-                Enemy = new List<int>(),
+                Stageid=Stageid,
                 Conflict = new List<string>()
             };
             foreach (ContractDesc desc in desc)
                 copy.desc.Add(desc.Copy());
-            copy.Enemy.AddRange(Enemy);
             copy.Conflict.AddRange(Conflict);
             return copy;
         }

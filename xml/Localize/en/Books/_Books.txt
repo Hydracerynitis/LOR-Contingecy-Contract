@@ -41,6 +41,12 @@
 			</TextList>
 			<PassiveList />
 		</BookDesc>
+    	<BookDesc BookID="18400000">
+      		<BookName>The Page of Heehaw, Woof and Doodle-doo</BookName>
+      		<TextList>
+        		<Desc>Let’s go on an adventure—a world that changes with every step. The me that changes after each step I take. My eyes dazzled by colorful light, I pursue pleasures that I don’t have. Don’t scold us because you can’t understand our pursuit. You just happen to be one of the many who feel joy from common things. We—on the other hand—don’t see any colors in those. You’re the ones drenched in nasty pleasures. We’re simply looking for what we lack. But complete satisfaction will never come; it’ll only sink deeper in the raging thirst. We will spend our days in yet grander debauchery. We’re happy, though. We can wet ourselves in new colors every day, unlike the rest of you.</Desc>
+      		</TextList>
+    	</BookDesc>
 		<BookDesc BookID="18600000">
       		<BookName>Tanya’s lively Page</BookName>
       		<TextList>

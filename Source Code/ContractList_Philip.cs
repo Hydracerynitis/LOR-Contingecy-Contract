@@ -16,6 +16,7 @@ namespace Contingecy_Contract
         {
             this.Level = level;
         }
+        public static bool CheckEnemyId(int EnemyId) => EnemyId == 1301011;
         public override ContractType Type => ContractType.Special;
         public override string[] GetFormatParam => new string[] {TextDataModel.GetText(Param1),(1 + 2 * Level).ToString() };
         private string Param1
@@ -50,7 +51,7 @@ namespace Contingecy_Contract
             public override void Init(BattleUnitModel owner)
             {
                 base.Init(owner);
-                if (owner.passiveDetail.PassiveList.Find((Predicate<PassiveAbilityBase>)(x => x is PassiveAbility_1301014)) != null)
+                if (owner.passiveDetail.PassiveList.Find(x => x is PassiveAbility_1301014) != null)
                     return;
                 this._effect = SingletonBehavior<DiceEffectManager>.Instance.CreateCreatureEffect("Philip/Philip_Aura_Body", 1f, owner.view, owner.view);
             }
@@ -104,21 +105,17 @@ namespace Contingecy_Contract
         {
             this.Level = level;
         }
+        public static bool CheckEnemyId(int EnemyId) => EnemyId == 1301021;
         public override ContractType Type => ContractType.Special;
         public override string[] GetFormatParam => new string[] { AttackPatternText,(20 * Level).ToString() };
         private string AttackPatternText => TextDataModel.GetText("Philip_Silence_param"+Level.ToString());
-        private bool IsCrying() => this.owner.UnitData.unitData.EnemyUnitId == 1301021;
         public override int SpeedDiceNumAdder()
         {
-            if(!IsCrying())
-                return base.SpeedDiceNumAdder();
             return 1;
         }
         public override void OnRoundStart()
         {
             base.OnRoundStart();
-            if (!IsCrying())
-                return;
             int num = this.owner.Book.GetSpeedDiceRule(this.owner).Roll(this.owner).Count - 3;
             this.owner.allyCardDetail.ExhaustAllCards();
             this.owner.allyCardDetail.AddNewCard(703121).SetCurrentCost(0);
@@ -134,8 +131,6 @@ namespace Contingecy_Contract
         }
         public override StatBonus GetStatBonus(BattleUnitModel owner)
         {
-            if (!IsCrying())
-                return base.GetStatBonus(owner);
             return new StatBonus() { hpRate=20*Level,breakRate=20*Level};
         }
     }
@@ -144,6 +139,8 @@ namespace Contingecy_Contract
         private Queue<int> Priority;
         private int phase;
         private int pattern;
+        public static bool CheckEnemyId(int EnemyId) => EnemyId == 1301011;
+        public override ContractType Type => ContractType.Special;
         public ContingecyContract_Philip(int level)
         {
             this.Level = level;
@@ -151,11 +148,11 @@ namespace Contingecy_Contract
         public override void Init(BattleUnitModel self)
         {
             base.Init(self);
-            if (self.passiveDetail.PassiveList.Exists((Predicate<PassiveAbilityBase>)(x => x is PassiveAbility_1301012)))
+            if (self.passiveDetail.PassiveList.Exists(x => x is PassiveAbility_1301012))
                 phase = 1;
-            if (self.passiveDetail.PassiveList.Exists((Predicate<PassiveAbilityBase>)(x => x is PassiveAbility_1301013)))
+            if (self.passiveDetail.PassiveList.Exists(x => x is PassiveAbility_1301013))
                 phase = 2;
-            if (self.passiveDetail.PassiveList.Exists((Predicate<PassiveAbilityBase>)(x => x is PassiveAbility_1301014)))
+            if (self.passiveDetail.PassiveList.Exists(x => x is PassiveAbility_1301014))
                 phase = 3;
             pattern = 0;
         }

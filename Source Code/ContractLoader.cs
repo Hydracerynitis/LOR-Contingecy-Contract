@@ -115,21 +115,8 @@ namespace Contingecy_Contract
         {
             if (PassiveList.Contains(contract))
             {
-                if (contract.Enemy.Count > 0)
-                {
-                    List<int> enemy = new List<int>();
-                    enemy.AddRange(contract.Enemy);
-                    foreach (StageWaveInfo wave in info.waveList)
-                    {
-                        if (wave.enemyUnitIdList.Exists((Predicate<int>)(x => enemy.Contains(x))))
-                        {
-                            enemy.RemoveAll(x => wave.enemyUnitIdList.Contains(x));
-                        }
-                    }
-                    if (enemy.Count == 0)
-                        return true;
+                if (contract.Stageid != -1 && info.id != contract.Stageid)
                     return false;
-                }
                 return true;
             }
             if (StageList.Contains(contract))

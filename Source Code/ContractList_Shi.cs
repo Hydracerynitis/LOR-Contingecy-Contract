@@ -16,11 +16,12 @@ namespace Contingecy_Contract
         {
             this.Level = level;
         }
+        public static bool CheckEnemyId(int EnemyId) => EnemyId == 40001;
         public override string[] GetFormatParam => new string[] { (25*Level).ToString(),Level.ToString()};
         public override ContractType Type => ContractType.Special;
         public override void BeforeRollDice(BattleDiceBehavior behavior)
         {
-            if (behavior.abilityList.Exists((Predicate<DiceCardAbilityBase>)(x => x is DiceCardAbility_yujin)))
+            if (behavior.abilityList.Exists(x => x is DiceCardAbility_yujin))
             {
                 behavior.ApplyDiceStatBonus(new DiceStatBonus() { min = Level });
             }
@@ -40,13 +41,14 @@ namespace Contingecy_Contract
         {
             this.Level = level;
         }
+        public static bool CheckEnemyId(int EnemyId) => EnemyId == 40002 || EnemyId ==40003;
         public override ContractType Type => ContractType.Special;
         public override string[] GetFormatParam => new string[] { (20*Level).ToString(),(1+2*Level).ToString(),Level.ToString()};
         private bool IsVal() => this.owner.UnitData.unitData.EnemyUnitId == 40002;
         public override void OnWinParrying(BattleDiceBehavior behavior)
         {
             base.OnWinParrying(behavior);
-            if (IsVal() && behavior.card.GetOriginalDiceBehaviorList().FindAll((Predicate<DiceBehaviour>)(x => x.Type != BehaviourType.Standby)).Count == 1)
+            if (IsVal() && behavior.card.GetOriginalDiceBehaviorList().FindAll(x => x.Type != BehaviourType.Standby).Count == 1)
             {
                 for (int i = 0; i < Level; i++)
                     behavior.TargetDice.card.DestroyDice(DiceMatch.NextDice);

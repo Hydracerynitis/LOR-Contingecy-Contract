@@ -82,6 +82,26 @@ Cannot be Staggered. When Stagger Resist falls to 0, loses 100 Hp instead and ga
 Use it to turn an enemy into Fresh Meat, immobolize him until the end of the next Scene. Allies attack Fresh Meat will recover HP equal to damage dealt.
 Fresh Meat change resistance to Noraml but can at most take damage equal to 10% of their Max HP and no Stagger Damage.</Desc>
   	</PassiveDesc>
+	<!-- 不来梅-->
+	<PassiveDesc ID="1840001">
+		<Name>Triarchy</Name> 
+		<Desc>Speed Dice +1。
+Every Scene, one head becomes active. Each head uses different Combat Pages.</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1840002">
+		<Name>Uncontrollable Performance</Name> 
+		<Desc>When Staggered, the Speed die that belongs to the currently active head will break, and the character will recover from Stagger next Scene.
+When all heads are destroyed, recover all heads and add one copy of "Chorus at the Climax" to hand.</Desc>
+	</PassiveDesc>
+  	<PassiveDesc ID="1840003">
+    	<Name>Improvisation</Name>
+   		<Desc>At the start of each Scene, set cost of one random card in Hand to 0. If reached Emotion Level 4, set cost of one extra card in hand to 0.
+This Character's Maximun Light is not affected by Emotion Level</Desc>
+  	</PassiveDesc>
+  	<PassiveDesc ID="1840004">
+    	<Name>Woof ruff! Doodly-doo? Heehaw~!</Name>
+   		<Desc>On a successful Blunt attack, deal 1-2 bonus Stagger damage.After a successful Blunt attack, inflict 1 Fragile to a random enemy next Scene (once per Scene)</Desc>
+  	</PassiveDesc>
 	<!--塔尼亚-->
 	<PassiveDesc ID="1860001">
 		<Name>Brawl</Name> 

@@ -40,5 +40,17 @@ Librarian has been seen through in this Scene are: {0}</Desc>
 			<Desc>Can't act. Upon being hit enemies will recover HP equal to damage dealt.
 Change resistance to Noraml. Can at most take damage equal to 10% of their Max HP and no Stagger Damage.</Desc>
 		</BattleEffectText>
+		<BattleEffectText ID="HeadDonkey">
+			<Name>Heehaw’s Hour to Shine</Name>
+			<Desc>Heehaw's Combat Page will be played on the Last Speed die.</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="HeadDog">
+			<Name>Woof’s Warmup Performance</Name>
+			<Desc>Woof's Combat Page will be played on the Last Speed die.</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="HeadChicken">
+			<Name>Doodle-doo’s Cocky Session</Name>
+			<Desc>Doodle-doo's Combat Page will be played on the Last Speed die.</Desc>
+		</BattleEffectText>
 	</effectTextList>
 </BattleEffectTextRoot>

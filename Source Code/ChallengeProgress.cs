@@ -12,6 +12,7 @@ namespace Contingecy_Contract
         public int Philiph_Risk;
         public int Eileen_Risk;
         public int Greta_Risk;
+        public int Bremen_Risk;
         public int Tanya_Risk;
         public int Jaeheon_Risk;
         public int Elena_Risk;
@@ -23,6 +24,8 @@ namespace Contingecy_Contract
             SaveData save = new SaveData();
             save.AddData("Philiph_Risk", new SaveData(Philiph_Risk));
             save.AddData("Eileen_Risk", new SaveData(Eileen_Risk));
+            save.AddData("Greta_Risk", new SaveData(Greta_Risk));
+            save.AddData("Bremen_Risk", new SaveData(Bremen_Risk));
             save.AddData("Tanya_Risk", new SaveData(Tanya_Risk));
             save.AddData("Jaeheon_Risk", new SaveData(Jaeheon_Risk));
             save.AddData(" Elena_Risk", new SaveData(Elena_Risk));
@@ -40,6 +43,7 @@ namespace Contingecy_Contract
                     Philiph_Risk = 0;
                     Eileen_Risk = 0;
                     Greta_Risk = 0;
+                    Bremen_Risk = 0;
                     Tanya_Risk = 0;
                     Jaeheon_Risk = 0;
                     Elena_Risk = 0;
@@ -51,6 +55,7 @@ namespace Contingecy_Contract
                 Philiph_Risk = data.GetInt("Philiph_Risk");                
                 Eileen_Risk = data.GetInt("Eileen_Risk");
                 Greta_Risk = data.GetInt("Greta_Risk");
+                Bremen_Risk = data.GetInt("Bremen_Risk");
                 Tanya_Risk = data.GetInt("Tanya_Risk");
                 Jaeheon_Risk = data.GetInt("Jaeheon_Risk");
                 Elena_Risk = data.GetInt("Elena_Risk");

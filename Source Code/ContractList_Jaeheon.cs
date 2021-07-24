@@ -15,6 +15,7 @@ namespace Contingecy_Contract
         {
             Level = level;
         }
+        public static bool CheckEnemyId(int EnemyId) => EnemyId == 1307011;
         public override ContractType Type => ContractType.Special;
         public override string[] GetFormatParam => new string[] { Level.ToString(), (Level - 1).ToString() };
         public override bool isInvincibleHp => BattleObjectManager.instance.GetAliveList(this.owner.faction).Count > 1;
@@ -40,7 +41,7 @@ namespace Contingecy_Contract
                     puppetId = 1307051;
                     break;
             }
-            BattleUnitModel owner = BattleObjectManager.instance.GetAliveList(this.owner.faction).Find((Predicate<BattleUnitModel>)(x => x.UnitData.unitData.EnemyUnitId == puppetId));
+            BattleUnitModel owner = BattleObjectManager.instance.GetAliveList(this.owner.faction).Find(x => x.UnitData.unitData.EnemyUnitId == puppetId);
             if (owner == null)
                 return;
             BattleUnitBuf thread = owner.bufListDetail.GetActivatedBuf(KeywordBuf.JaeheonPuppetThread);
@@ -115,13 +116,13 @@ namespace Contingecy_Contract
                 waitThread.waitRound -= 1;
                 if (waitThread.waitRound == 0)
                 {
-                    BattleUnitModel owner = BattleObjectManager.instance.GetAliveList(this.owner.faction).Find((Predicate<BattleUnitModel>)(x => x.UnitData.unitData.EnemyUnitId == waitThread.unitID));
+                    BattleUnitModel owner = BattleObjectManager.instance.GetAliveList(this.owner.faction).Find(x => x.UnitData.unitData.EnemyUnitId == waitThread.unitID);
                     if (owner == null)
                         return;
                     BattleUnitBuf_Jaeheon_PuppetThread jaeheonPuppetThread = new BattleUnitBuf_Jaeheon_PuppetThread();
                     jaeheonPuppetThread.Init(owner);
                     jaeheonPuppetThread.stack = 2;
-                    owner.bufListDetail.AddBuf((BattleUnitBuf)jaeheonPuppetThread);
+                    owner.bufListDetail.AddBuf(jaeheonPuppetThread);
                 }
             }
             waitThreads.RemoveAll(x => x.waitRound == 0);
@@ -159,6 +160,7 @@ namespace Contingecy_Contract
         {
             this.Level = level;
         }
+        public static bool CheckEnemyId(int EnemyId) => EnemyId == 1307011;
         public override ContractType Type => ContractType.Special;
         public override void OnRoundStart()
         {

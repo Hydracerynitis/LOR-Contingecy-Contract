@@ -24,9 +24,9 @@ namespace Contingecy_Contract
                     Debug.Log("{0}'s faction doesn't match {1}'s", contract.Type, Model.UnitData.unitData.name);
                     continue;
                 }
-                if (contract.Enemy.Count > 0 && !contract.Enemy.Contains(Model.UnitData.unitData.EnemyUnitId))
+                if(contract.Stageid!=-1 && Singleton<StageController>.Instance.GetStageModel().ClassInfo.id != contract.Stageid)
                 {
-                    Debug.Log("{0} isn't for {1}", contract.Type, Model.UnitData.unitData.EnemyUnitId.ToString());
+                    Debug.Log("{0} isn't for stage {1}", contract.Type, Singleton<StageController>.Instance.GetStageModel().ClassInfo.id.ToString());
                     continue;
                 }
                 System.Type type = System.Type.GetType("Contingecy_Contract.ContingecyContract_" + contract.Type);
@@ -36,6 +36,11 @@ namespace Contingecy_Contract
                     continue;
                 }
                 Debug.Log("Instance of {0} is found for {1}", type.Name, Model.UnitData.unitData.name);
+                if(type.GetMethod("CheckEnemyId",AccessTools.all)!=null && !(bool)type.GetMethod("CheckEnemyId", AccessTools.all).Invoke(type,new object[] { Model.UnitData.unitData.EnemyUnitId }))
+                {
+                    Debug.Log("Instance of {0} is not found for {1}", type.Name, Model.UnitData.unitData.EnemyUnitId.ToString());
+                    continue;
+                }
                 if (Activator.CreateInstance(type, new object[] { contract.level }) is ContingecyContract instance)
                 {
                     Debug.Log("Instance of {0}  is created for {1}", type.Name, Model.UnitData.unitData.name);
@@ -68,11 +73,6 @@ namespace Contingecy_Contract
                 if (contract.Faction != Model.faction)
                 {
                     Debug.Log("{0}'s faction doesn't match {1}'s", contract.Type, Model.UnitData.unitData.name);
-                    continue;
-                }
-                if (contract.Enemy.Count > 0 && !contract.Enemy.Contains(Model.UnitData.unitData.EnemyUnitId))
-                {
-                    Debug.Log("{0} isn't for {1}", contract.Type, Model.UnitData.unitData.EnemyUnitId.ToString());
                     continue;
                 }
                 StageClassInfo original = Singleton<StageClassInfoList>.Instance.GetData(Singleton<StageController>.Instance.GetStageModel().ClassInfo.id);
@@ -194,6 +194,6 @@ namespace Contingecy_Contract
         public virtual ContractType Type => ContractType.None;
         public virtual DiceStatBonus GetDicestatBonus(BattleDiceBehavior behavior) => new DiceStatBonus();
         public virtual StatBonus GetStatBonus(BattleUnitModel owner) => new StatBonus();
-        public virtual string[] GetFormatParam => new string[0];
+        public virtual string[] GetFormatParam => Array.Empty<string>();
     }
 }

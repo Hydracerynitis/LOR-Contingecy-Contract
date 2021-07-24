@@ -26,7 +26,7 @@
     		</EquipEffect>
     		<BookIcon>ContingencyReward</BookIcon>
     		<Chapter>7</Chapter>
-    		<Episode>1800000</Episode>
+    		<Episode>1800007</Episode>
     		<Rarity>Unique</Rarity>
     		<CharacterSkin>Argalia2</CharacterSkin>
  	 </Book>
@@ -56,7 +56,7 @@
     		</EquipEffect>
     		<BookIcon>ContingencyReward</BookIcon>
     		<Chapter>7</Chapter>
-    		<Episode>1800000</Episode>
+    		<Episode>1800007</Episode>
     		<Rarity>Unique</Rarity>
     		<CharacterSkin>Blue_Philip</CharacterSkin>
 	</Book>
@@ -85,7 +85,7 @@
     		</EquipEffect>
     		<BookIcon>ContingencyReward</BookIcon>
     		<Chapter>7</Chapter>
-    		<Episode>1800000</Episode>
+    		<Episode>1800007</Episode>
     		<Rarity>Unique</Rarity>
     		<CharacterSkin>Eileen</CharacterSkin>
 	</Book>
@@ -113,7 +113,7 @@
     		</EquipEffect>
     		<BookIcon>ContingencyReward</BookIcon>
     		<Chapter>7</Chapter>
-    		<Episode>1800000</Episode>
+    		<Episode>1800007</Episode>
     		<Rarity>Unique</Rarity>
     		<CharacterSkin>GearsUnit</CharacterSkin>
 	</Book>
@@ -143,9 +143,39 @@
     		</EquipEffect>
     		<BookIcon>ContingencyReward</BookIcon>
     		<Chapter>7</Chapter>
-    		<Episode>1800000</Episode>
+    		<Episode>1800007</Episode>
     		<Rarity>Unique</Rarity>
     		<CharacterSkin>Blue_Greta</CharacterSkin>
+	</Book>
+	<Book ID="18400000">
+    		<Name>不来梅</Name>
+   		 	<TextId>18400000</TextId>
+    		<Category>DeckFixed</Category>
+    		<EquipEffect>
+      			<HP>300</HP>
+      			<Break>30</Break>
+      			<SpeedMin>2</SpeedMin>
+      			<Speed>7</Speed>
+      			<SResist>Resist</SResist>
+      			<PResist>Resist</PResist>
+      			<HResist>Resist</HResist>
+      			<SBResist>Normal</SBResist>
+      			<PBResist>Normal</PBResist>
+      			<HBResist>Normal</HBResist>
+      			<StartPlayPoint>5</StartPlayPoint>
+      			<MaxPlayPoint>5</MaxPlayPoint>
+      			<Passive>1800000</Passive>   
+      			<Passive>1300001</Passive>
+      			<Passive>1840001</Passive>
+      			<Passive>1840002</Passive>
+      			<Passive>1840003</Passive>
+      			<Passive>1840004</Passive>
+    		</EquipEffect>
+    		<BookIcon>ContingencyReward</BookIcon>
+    		<Chapter>7</Chapter>
+    		<Episode>1800007</Episode>
+    		<Rarity>Unique</Rarity>
+    		<CharacterSkin>Blue_Bremen</CharacterSkin>
 	</Book>
 	<Book ID="18600000">
 		<Name>塔尼亚</Name>
@@ -172,7 +202,7 @@
     		</EquipEffect>
     		<BookIcon>ContingencyReward</BookIcon>
     		<Chapter>7</Chapter>
-    		<Episode>1800000</Episode>
+    		<Episode>1800007</Episode>
     		<Rarity>Unique</Rarity>
     		<CharacterSkin>Tanya</CharacterSkin>
  	 </Book>
@@ -202,7 +232,7 @@
     		</EquipEffect>
     		<BookIcon>ContingencyReward</BookIcon>
     		<Chapter>7</Chapter>
-    		<Episode>1800000</Episode>
+    		<Episode>1800007</Episode>
     		<Rarity>Unique</Rarity>
     		<CharacterSkin>Jaeheon</CharacterSkin>
  	 </Book>
@@ -231,7 +261,7 @@
     		</EquipEffect>
     		<BookIcon>ContingencyReward</BookIcon>
     		<Chapter>7</Chapter>
-    		<Episode>1800000</Episode>
+    		<Episode>1800007</Episode>
     		<Rarity>Rare</Rarity>
     		<CharacterSkin>AngelicaPuppet</CharacterSkin>
  	 </Book>
@@ -260,7 +290,7 @@
     	</EquipEffect>
     	<BookIcon>ContingencyReward</BookIcon>
     	<Chapter>7</Chapter>
-    	<Episode>1800000</Episode>
+    	<Episode>1800007</Episode>
     	<Rarity>Unique</Rarity>
     	<CharacterSkin>Elena</CharacterSkin>
  	</Book>
@@ -288,7 +318,7 @@
     	</EquipEffect>
     	<BookIcon>ContingencyReward</BookIcon>
     	<Chapter>7</Chapter>
-    	<Episode>1800000</Episode>
+    	<Episode>1800007</Episode>
     	<Rarity>Unique</Rarity>
     	<CharacterSkin>Custom_OrangeCross</CharacterSkin>
   	</Book>
@@ -318,7 +348,7 @@
     		</EquipEffect>
     		<BookIcon>ContingencyReward</BookIcon>
     		<Chapter>7</Chapter>
-    		<Episode>1800000</Episode>
+    		<Episode>1800007</Episode>
     		<Rarity>Unique</Rarity>
     		<CharacterSkin>Pluto</CharacterSkin>
  	 </Book>

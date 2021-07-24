@@ -86,6 +86,8 @@ namespace Contingecy_Contract
         {
             Level = level;
         }
+        public override ContractType Type => ContractType.Special;
+        public static bool CheckEnemyId(int EnemyId) => EnemyId == 1302021;
         public override void Init(BattleUnitModel self)
         {
             base.Init(self);

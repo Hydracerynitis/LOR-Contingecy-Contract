@@ -10,7 +10,7 @@ Increase the Minimun value of first die of “Boundry of Death” by {1}" />
 		<Variation>3</Variation>
 		<BaseLevel>1</BaseLevel>
 		<Conflict>ValTem</Conflict>
-		<Enemy>40001</Enemy>
+		<Stage>40001</Stage>
 	</Contract>
 	<Contract Type="ValTem">
 		<DescList>
@@ -23,7 +23,6 @@ Speed of Tenma won't be lower than {1}; On win clash using a Combat Page with on
 		<Variation>3</Variation>
 		<BaseLevel>1</BaseLevel>
 		<Conflict>Yujin</Conflict>
-		<Enemy>40002</Enemy>
-		<Enemy>40003</Enemy>
+		<Stage>40001</Stage>
 	</Contract>
 </ContractList>

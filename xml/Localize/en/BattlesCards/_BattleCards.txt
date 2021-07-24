@@ -119,6 +119,43 @@
 		<BattleCardDesc ID="18300013">
 			<LocalizedName>Mealtime</LocalizedName>
 		</BattleCardDesc>
+		<!--不来梅-->
+		<BattleCardDesc ID="18400001">
+			<LocalizedName>Powerful Tendon Chords</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18400002">
+			<LocalizedName>Everlasting Melody</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18400003">
+			<LocalizedName>Dark Shrine to Music</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18400004">
+			<LocalizedName>Explosive Tempo</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18400005">
+			<LocalizedName>Trio</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18400006">
+			<LocalizedName>Chorus at the Climax</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18400011">
+			<LocalizedName>Rarf RARF RARF!!</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18400012">
+			<LocalizedName>Barkruff! BARK~!!!</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18400021">
+			<LocalizedName>Cockadoodledoo~!!!!</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18400022">
+			<LocalizedName>NEIIIGHHIHIHH!!!</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18400031">
+			<LocalizedName>NEIIIGHHIHIHH!!!</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18400032">
+			<LocalizedName>Neiiigh~!!!</LocalizedName>
+		</BattleCardDesc>
 		<!--塔尼亚-->
 		<BattleCardDesc ID="18600001">
 			<LocalizedName>Fisticuffs</LocalizedName>

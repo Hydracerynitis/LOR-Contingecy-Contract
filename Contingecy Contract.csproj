@@ -71,6 +71,10 @@
     <Compile Include="Source Code\ContractList_Pluto.cs" />
     <Compile Include="Source Code\ContractList_Jaeheon.cs" />
     <Compile Include="Source Code\ContractList_Philip.cs" />
+    <Compile Include="Source Code\ContractReward\Bremen\PassiveAbility_1840004.cs" />
+    <Compile Include="Source Code\ContractReward\Bremen\PassiveAbility_1840003.cs" />
+    <Compile Include="Source Code\ContractReward\Bremen\PassiveAbility_1840002.cs" />
+    <Compile Include="Source Code\ContractReward\Bremen\PassiveAbility_1840001.cs" />
     <Compile Include="Source Code\ContractReward\DiceCardSelfAbility_energy3.cs" />
     <Compile Include="Source Code\ContractReward\DiceCardSelfAbility_AoeCoolDown.cs" />
     <Compile Include="Source Code\ContractReward\DiceCardAbility_invalid.cs" />
