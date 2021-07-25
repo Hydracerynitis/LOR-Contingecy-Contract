@@ -263,6 +263,38 @@ At the Start of the Act, Gain 100 Resistance instead;
 at the start of each three Scene, If this character has no Resistance, Gain 50 Resistance and Purge all status ailment instead.
 
 
+The Musicians of Bremen:
+Immerse Performance 1 Risk Level 2      Conflict with Influence with Passion    Code: Bremen_Self1
+Speed Dice +1 and attack pattern becom more aggre.
+Chorus at the Climax's effect will be applied to all targets and inflict extra 2 Bind next Scene.
+
+Immerse Performance 2 Risk Level 3     Conflict with Influence with Passion    Code: Bremen_Self2
+Speed Dice +2 and attack pattern becom more aggre.
+Chorus at the Climax's effect will be applied to all targets and inflict extra 2 Bind Disarm next Scene.
+
+Immerse Performance 3 Risk Level 4      Conflict with Influence with Passion    Code: Bremen_Self3
+Speed Dice +3 and attack pattern becom more aggre.
+Chorus at the Climax's effect will be applied to all targets and inflict extra 2 Bind Disarm Feeble next Scene.
+
+Influence with Passion 1      Risk Level 2    Confict with  Immerse Performance  Code: Bremen_Group1
+Allies except Bremen will be revived with Bremen's Emotion Level 2 Scene after their death as long as Bremen is alive.
+Allies except Bremen gain 3 copy of "Everlasting Melody".
+and when gaining Strength, Endurance, Haste, or Protection through Combat Pages give the same status effect to a random other ally (At most 1 times per Scene).
+
+Influence with Passion 2      Risk Level 3    Confict with  Immerse Performance  Code: Bremen_Group2
+Allies except Bremen will be revived with Bremen's Emotion Level 2 Scene after their death as long as Bremen is alive.
+Allies except Bremen gain 3 copy of "Everlasting Melody", 3 copy of "Dark Shrine for Music".
+and when gaining Strength, Endurance, Haste, or Protection through Combat Pages give the same status effect to a random other ally (At most 2 times per Scene).
+
+Influence with Passion 3      Risk Level 4    Confict with  Immerse Performance  Code: Bremen_Group3
+Allies except Bremen will be revived with Bremen's Emotion Level 2 Scene after their death as long as Bremen is alive.
+Allies except Bremen gain 3 copy of "Everlasting Melody", 3 copy of "Dark Shrine for Music", 1 copy of "Trio".
+and when gaining Strength, Endurance, Haste, or Protection through Combat Pages give the same status effect to a random other ally (At most 3 times per Scene).
+
+Horn, Tuba and Trombone     Risk Level 4     Code: Bremen
+Increase Max Stagger Resist to 200, Ignore ”Untargetable“ effect while using Melee Page. Take at most 15% of Max HP in one Scene.
+
+
 L’heure du Loup: 
 Pinnical Strength 1   Risk Level 2  Conflict with One Man Army    Code: Tanya_Solo1
 Remove Counter Dice from all Combat Pages. 

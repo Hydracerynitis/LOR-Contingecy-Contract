@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Source Code\ChallengeProgress.cs" />
+    <Compile Include="Source Code\ContractList_Bremen.cs" />
     <Compile Include="Source Code\ContractList_Greta.cs" />
     <Compile Include="Source Code\ContractList_Tanya.cs" />
     <Compile Include="Source Code\ContractList_Eileen.cs" />

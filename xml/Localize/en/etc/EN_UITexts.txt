@@ -15,6 +15,12 @@
 	<text id="Tanya_Solo_param1">all Offensive Dice Gain 2 Power after First Scene</text>
 	<text id="Tanya_Solo_param2">, all Offensive Dice gain extra 2 Power after reached Emotion Level 3</text>
 	<text id="Tanya_Solo_param3">, all Offensive Dice gain extra 2 Power after reached Emotion Level 5</text>
+	<text id="Bremen_Self_param1">Bind</text>
+	<text id="Bremen_Self_param2"> Disarm</text>
+	<text id="Bremen_Self_param3"> Feeble</text>
+	<text id="Bremen_Group_param1">3 "Everlasting Melody",</text>
+	<text id="Bremen_Group_param2">3 "Dark Shrine to Music",</text>
+	<text id="Bremen_Group_param3">1 "Trio"</text>
 	<text id="Tanya_Brawl_none">None</text>	
 	<text id="Zombie_name">Nameless Shell</text>
 	<text id="marked_dice_desc">[Yesterday Promise] </text>

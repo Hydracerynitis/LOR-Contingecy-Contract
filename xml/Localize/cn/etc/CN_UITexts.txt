@@ -15,6 +15,12 @@
 	<text id="Tanya_Solo_param1">第一幕后所有进攻骰威力+2</text>
 	<text id="Tanya_Solo_param2">,达到情感3时进攻骰威力额外+2</text>
 	<text id="Tanya_Solo_param3">,达到情感5时进攻骰威力额外+2</text>
+	<text id="Bremen_Self_param1">束缚</text>
+	<text id="Bremen_Self_param2">破绽</text>
+	<text id="Bremen_Self_param3">虚弱</text>
+	<text id="Bremen_Group_param1">3张永恒残音</text>
+	<text id="Bremen_Group_param2">3张至暗圣地</text>
+	<text id="Bremen_Group_param3">1张合唱</text>
 	<text id="Tanya_Brawl_none">无</text>
 	<text id="Zombie_name">无名躯壳</text>
 	<text id="marked_dice_desc">[昨日之约] </text>

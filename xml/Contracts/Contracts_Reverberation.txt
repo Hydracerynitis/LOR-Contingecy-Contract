@@ -102,26 +102,41 @@ When using “Into the Sack you go!”, use it to {0} more librarins; Increase H
 at the start of each three Scene, If this character has no Resistance, Gain 50 Resistance and Purge all status ailment instead." />
 		</DescList>
 		<Faction>Enemy</Faction>
-		<BaseLevel>4</BaseLevel>
+		<Variation>3</Variation>
+		<BaseLevel>1</BaseLevel>
 		<Stage>70003</Stage>
+	</Contract>
+	<Contract Type="Bremen_Self">
+		<DescList>
+			<Desc language="cn" name="沉浸演出" desc="速度骰+{0}并且攻击方式更加激进.
+顶点大合奏的书页效果扩展到所有目标并且下一幕额外施加2层{1}." />
+			<Desc language="en" name="Immerse Performance" desc="Speed Dice +{0} and attack pattern becom more aggre.
+Chorus at the Climax's effect will be applied to all targets and inflict extra 2 {1} next Scene." />
+		</DescList>
+		<Faction>Enemy</Faction>
+		<Variation>3</Variation>
+		<BaseLevel>1</BaseLevel>
+		<Conflict>Greta_Group</Conflict>
+		<Stage>70004</Stage>
 	</Contract>
 	<Contract Type="Bremen_Group">
 		<DescList>
 			<Desc language="cn" name="激情感染" desc="不来梅存活时,除不来梅外友方单位死亡后第2幕会复活,复活单位的情感等级提升至不来梅情感等级.
 除不来梅其他友方单位获得{0}并且使用书页获得“强壮”,“忍耐”,“敏捷”,“守护”时使随机友方单位获得相同效果(每一幕至多触发{1}次)" />
 			<Desc language="en" name="Influence with Passion" desc="Allies except Bremen will be revived with Bremen's Emotion Level 2 Scene after their death as long as Bremen is alive.
-Allies except Bremen " />
+Allies except Bremen gain {0} and when gaining Strength, Endurance, Haste, or Protection through Combat Pages give the same status effect to a random other ally (At most {1} times per Scene)." />
 		</DescList>
 		<Faction>Enemy</Faction>
-		<BaseLevel>4</BaseLevel>
+		<Variation>3</Variation>
+		<BaseLevel>1</BaseLevel>
 		<Conflict>Greta_Self</Conflict>
 		<Stage>70004</Stage>
 	</Contract>
 	<Contract Type="Bremen">
 		<DescList>
-			<Desc language="cn" name="圆号,大号与长号" desc="提升混乱抗性至200,使用近战书页时可以无视”不可指定为目标“的效果。第一阶段时一幕内最多承受20%最大血量的伤害" />
-			<Desc language="en" name="Horn, Tuba and Trombone." desc="Increase Max Stagger Resist to 200, Ignore ”Untargetable“ effect while using Melee Page.
-In first phase take at most 20% of Max HP in one Scene. " />
+			<Desc language="cn" name="圆号,大号与长号" desc="提升混乱抗性至200,使用近战书页时可以无视”不可指定为目标“的效果。一幕内最多承受15%最大血量的伤害" />
+			<Desc language="en" name="Horn, Tuba and Trombone" desc="Increase Max Stagger Resist to 200, Ignore ”Untargetable“ effect while using Melee Page.
+Take at most 15% of Max HP in one Scene. " />
 		</DescList>
 		<Faction>Enemy</Faction>
 		<BaseLevel>4</BaseLevel>

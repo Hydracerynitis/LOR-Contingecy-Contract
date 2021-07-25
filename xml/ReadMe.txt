@@ -21,6 +21,7 @@ Risk Level 12 Reward List:
 Philip's Sonorous Page ---- Complete The Crying Children reception with Risk Level 12 or more.
 Eileen's Glittering Page ---- Complete The Church of Gear reception with Risk Level 12 or more.
 Greta's Confident Page ---- Complete The Eighth Chef reception with Risk Level 12 or more.
+The Page of Heehaw, Woof and Doodle-doo ---- Complete The Musicians of Bremen reception with Risk Level 12 or more.
 Tanya's Lively Page ---- Complete L’heure du Loup reception with Risk Level 12 or more.
 Jae-heon's Eloquent Page ---- Complete The Puppeteer reception with Risk Level 12 or more.
 Elena's Sensuous Page ---- Complete The Blood-Red Moon reception with Risk Level 12 or more.
@@ -28,7 +29,7 @@ Dim Vermilion's Page ---- Complete a reception with Risk Level 12 or more
                         while "Sharpened Blade 4","Scorching Cross 3","Introspective First Violin" are active.
 Pluto's Solemn Page ---- Complete Yesterday's Promise reception with Risk Level 12 or more.
 Conductor Argalia's Page ---- Complete all The Reverbration Ensemble Challenge. 
-(Currently only The Crying Children, The Church of Gear, The Eighth Chef, 
+(Currently only The Crying Children, The Church of Gear, The Eighth Chef,The Musicians of Bremen 
 L’heure du Loup, The Puppeteer, The Blood-Red Moon, Yesterday's Promise)
 
 Currently not complitable with Mizuki & PattyHoswell's Liu Zhuque Qishi Battalion
