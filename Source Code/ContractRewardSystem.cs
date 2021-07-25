@@ -118,7 +118,7 @@ namespace Contingecy_Contract
                 Contract contract = contracts.Find(x => x.Type == condition.Item1);
                 if (contract != null)
                 {
-                    if (Singleton<ContractLoader>.Instance.CheckActivate(contract,info) && contract.level >= condition.Item2)
+                    if (Singleton<ContractLoader>.Instance.CheckActivate(contract,info) && contract.Level >= condition.Item2)
                         continue;
                 }
                 return false;

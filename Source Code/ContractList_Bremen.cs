@@ -51,7 +51,6 @@ namespace Contingecy_Contract
             base.OnRoundEndTheLast();
             if (passive.destroyed)
             {
-                Debug.FileLog("Bremen", "ProcessTransfer");
                 owner.passiveDetail.AddPassive(new ContingecyContract_Bremen_Self_2(Level));
                 owner.passiveDetail.DestroyPassive(this);
             }
