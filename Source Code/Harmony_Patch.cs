@@ -46,7 +46,7 @@ namespace Contingecy_Contract
             MethodInfo Patch1 = typeof(Harmony_Patch).GetMethod("StageNameXmlList_GetName");
             try
             {
-                harmony.Patch(Method1, null, new HarmonyMethod(Patch1), null, null);
+                harmony.Patch(Method1, null, new HarmonyMethod(Patch1), null, null,null);
                 Debug.Log("Patch: {0} succeed",Patch1.Name);
             }
             catch(Exception ex)
@@ -57,7 +57,7 @@ namespace Contingecy_Contract
             MethodInfo Patch2 = typeof(Harmony_Patch).GetMethod("StageController_RoundStartPhase_System");
             try
             {
-                harmony.Patch(Method2, new HarmonyMethod(Patch2),null , null, null);
+                harmony.Patch(Method2, new HarmonyMethod(Patch2),null , null, null, null);
                 Debug.Log("Patch: {0} succeed", Patch2.Name);
             }
             catch (Exception ex)
@@ -68,7 +68,7 @@ namespace Contingecy_Contract
             MethodInfo Patch3 = typeof(Harmony_Patch).GetMethod("StageController_InitStageByInvitation");
             try
             {
-                harmony.Patch(Method3, new HarmonyMethod(Patch3),null , null, null);
+                harmony.Patch(Method3, new HarmonyMethod(Patch3),null , null, null, null);
                 Debug.Log("Patch: {0} succeed", Patch3.Name);
             }
             catch (Exception ex)
@@ -79,7 +79,7 @@ namespace Contingecy_Contract
             MethodInfo Patch4 = typeof(Harmony_Patch).GetMethod("StageController_InitStageByEndContentsStage");
             try
             {
-                harmony.Patch(Method4, new HarmonyMethod(Patch4), null, null, null);
+                harmony.Patch(Method4, new HarmonyMethod(Patch4), null, null, null, null);
                 Debug.Log("Patch: {0} succeed", Patch4.Name);
             }
             catch (Exception ex)
@@ -90,7 +90,7 @@ namespace Contingecy_Contract
             MethodInfo Patch5 = typeof(Harmony_Patch).GetMethod("StageController_EndBattlePhase");
             try
             {
-                harmony.Patch(Method5, new HarmonyMethod(Patch5), null, null, null);
+                harmony.Patch(Method5, new HarmonyMethod(Patch5), null, null, null, null);
                 Debug.Log("Patch: {0} succeed", Patch5.Name);
             }
             catch (Exception ex)
@@ -101,7 +101,7 @@ namespace Contingecy_Contract
             MethodInfo Patch6 = typeof(Harmony_Patch).GetMethod("StageController_GameOver");
             try
             {
-                harmony.Patch(Method6, null, new HarmonyMethod(Patch6), null, null);
+                harmony.Patch(Method6, null, new HarmonyMethod(Patch6), null, null, null);
                 Debug.Log("Patch: {0} succeed", Patch6.Name);
             }
             catch (Exception ex)
@@ -112,7 +112,7 @@ namespace Contingecy_Contract
             MethodInfo Patch7 = typeof(Harmony_Patch).GetMethod("LibraryModel_OnClearStage");
             try
             {
-                harmony.Patch(Method7, null, new HarmonyMethod(Patch7), null, null);
+                harmony.Patch(Method7, null, new HarmonyMethod(Patch7), null, null, null);
                 Debug.Log("Patch: {0} succeed", Patch7.Name);
             }
             catch (Exception ex)
@@ -123,7 +123,7 @@ namespace Contingecy_Contract
             MethodInfo Patch8 = typeof(Harmony_Patch).GetMethod("BattleUnitBuf_Philip_OverHeat_Init");
             try
             {
-                harmony.Patch(Method8, new HarmonyMethod(Patch8),null, null, null);
+                harmony.Patch(Method8, new HarmonyMethod(Patch8),null, null, null, null);
                 Debug.Log("Patch: {0} succeed", Patch8.Name);
             }
             catch (Exception ex)
@@ -134,7 +134,7 @@ namespace Contingecy_Contract
             MethodInfo Patch9 = typeof(Harmony_Patch).GetMethod("BattleObjectManager_Clear");
             try
             {
-                harmony.Patch(Method9, new HarmonyMethod(Patch9), null, null, null);
+                harmony.Patch(Method9, new HarmonyMethod(Patch9), null, null, null, null);
                 Debug.Log("Patch: {0} succeed", Patch9.Name);
             }
             catch (Exception ex)
@@ -145,7 +145,7 @@ namespace Contingecy_Contract
             MethodInfo Patch10 = typeof(Harmony_Patch).GetMethod("PassiveAbility_1307012_AddThread");
             try
             {
-                harmony.Patch(Method10, new HarmonyMethod(Patch10), null, null, null);
+                harmony.Patch(Method10, new HarmonyMethod(Patch10), null, null, null, null);
                 Debug.Log("Patch: {0} succeed", Patch10.Name);
             }
             catch (Exception ex)
@@ -156,7 +156,7 @@ namespace Contingecy_Contract
             MethodInfo Patch11 = typeof(Harmony_Patch).GetMethod("StageController_InitStageByCreature");
             try
             {
-                harmony.Patch(Method11, null , new HarmonyMethod(Patch11), null, null);
+                harmony.Patch(Method11, null , new HarmonyMethod(Patch11), null, null, null);
                 Debug.Log("Patch: {0} succeed", Patch11.Name);
             }
             catch (Exception ex)
@@ -167,7 +167,7 @@ namespace Contingecy_Contract
             MethodInfo Patch12 = typeof(Harmony_Patch).GetMethod("StageController_InitCommon");
             try
             {
-                harmony.Patch(Method12, new HarmonyMethod(Patch12),null , null, null);
+                harmony.Patch(Method12, new HarmonyMethod(Patch12),null , null, null, null);
                 Debug.Log("Patch: {0} succeed", Patch12.Name);
             }
             catch (Exception ex)
@@ -178,7 +178,7 @@ namespace Contingecy_Contract
             MethodInfo Patch13 = typeof(Harmony_Patch).GetMethod("BookModel_GetThumbPath");
             try
             {
-                harmony.Patch(Method13,null , new HarmonyMethod(Patch13), null, null);
+                harmony.Patch(Method13,null , new HarmonyMethod(Patch13), null, null, null);
                 Debug.Log("Patch: {0} succeed", Patch13.Name);
             }
             catch (Exception ex)
@@ -189,7 +189,7 @@ namespace Contingecy_Contract
             MethodInfo Patch14 = typeof(Harmony_Patch).GetMethod("PlayHistoryModel_LoadFromSaveData");
             try
             {
-                harmony.Patch(Method14, null, new HarmonyMethod(Patch14), null, null);
+                harmony.Patch(Method14, null, new HarmonyMethod(Patch14), null, null, null);
                 Debug.Log("Patch: {0} succeed", Patch14.Name);
             }
             catch (Exception ex)
@@ -200,7 +200,7 @@ namespace Contingecy_Contract
             MethodInfo Patch15 = typeof(Harmony_Patch).GetMethod("PlayHistoryModel_GetSaveData");
             try
             {
-                harmony.Patch(Method15, null, new HarmonyMethod(Patch15), null, null);
+                harmony.Patch(Method15, null, new HarmonyMethod(Patch15), null, null, null);
                 Debug.Log("Patch: {0} succeed", Patch15.Name);
             }
             catch (Exception ex)
@@ -211,7 +211,7 @@ namespace Contingecy_Contract
             MethodInfo Patch16 = typeof(Harmony_Patch).GetMethod("BattleCardAbilityDescXmlList_GetAbilityDesc");
             try
             {
-                harmony.Patch(Method16, null, new HarmonyMethod(Patch16), null, null);
+                harmony.Patch(Method16, null, new HarmonyMethod(Patch16), null, null, null);
                 Debug.Log("Patch: {0} succeed", Patch16.Name);
             }
             catch (Exception ex)
@@ -222,7 +222,7 @@ namespace Contingecy_Contract
             MethodInfo Patch17 = typeof(Harmony_Patch).GetMethod("StageController_StartAction");
             try
             {
-                harmony.Patch(Method17, new HarmonyMethod(Patch17), null, null, null);
+                harmony.Patch(Method17, new HarmonyMethod(Patch17), null, null, null, null);
                 Debug.Log("Patch: {0} succeed", Patch17.Name);
             }
             catch (Exception ex)
@@ -233,7 +233,7 @@ namespace Contingecy_Contract
             MethodInfo Patch18 = typeof(Harmony_Patch).GetMethod("BattleUnitBuf_Resistance_get_keywordId");
             try
             {
-                harmony.Patch(Method18, null, new HarmonyMethod(Patch18), null, null);
+                harmony.Patch(Method18, null, new HarmonyMethod(Patch18), null, null, null);
                 Debug.Log("Patch: {0} succeed", Patch18.Name);
             }
             catch (Exception ex)
@@ -244,7 +244,7 @@ namespace Contingecy_Contract
             MethodInfo Patch19 = typeof(Harmony_Patch).GetMethod("DiceCardSelfAbility_elenaMinionStrong_OnSucceedAttack");
             try
             {
-                harmony.Patch(Method19, null, new HarmonyMethod(Patch19), null, null);
+                harmony.Patch(Method19, null, new HarmonyMethod(Patch19), null, null, null);
                 Debug.Log("Patch: {0} succeed", Patch19.Name);
             }
             catch (Exception ex)
@@ -255,7 +255,7 @@ namespace Contingecy_Contract
             MethodInfo Patch20 = typeof(Harmony_Patch).GetMethod("DiceCardSelfAbility_greta_trample_OnSucceedAttack");
             try
             {
-                harmony.Patch(Method20, null, new HarmonyMethod(Patch20), null, null);
+                harmony.Patch(Method20, null, new HarmonyMethod(Patch20), null, null, null);
                 Debug.Log("Patch: {0} succeed", Patch20.Name);
             }
             catch (Exception ex)
@@ -266,7 +266,7 @@ namespace Contingecy_Contract
             MethodInfo Patch21 = typeof(Harmony_Patch).GetMethod("BattleUnitBuf_Greta_Meat_Librarian_OnBreakState");
             try
             {
-                harmony.Patch(Method21, null, new HarmonyMethod(Patch21), null, null);
+                harmony.Patch(Method21, null, new HarmonyMethod(Patch21), null, null, null);
                 Debug.Log("Patch: {0} succeed", Patch21.Name);
             }
             catch (Exception ex)
@@ -277,7 +277,7 @@ namespace Contingecy_Contract
             MethodInfo Patch22 = typeof(Harmony_Patch).GetMethod("BattleUnitBuf_Greta_Meat_Librarian_OnDie");
             try
             {
-                harmony.Patch(Method22, new HarmonyMethod(Patch22),null , null, null);
+                harmony.Patch(Method22, new HarmonyMethod(Patch22),null , null, null, null);
                 Debug.Log("Patch: {0} succeed", Patch22.Name);
             }
             catch (Exception ex)
@@ -288,7 +288,7 @@ namespace Contingecy_Contract
             MethodInfo Patch23 = typeof(Harmony_Patch).GetMethod("BattleUnitBuf_Greta_Meat_OnTakeDamageByAttack");
             try
             {
-                harmony.Patch(Method23, new HarmonyMethod(Patch23), null, null, null);
+                harmony.Patch(Method23, new HarmonyMethod(Patch23), null, null, null, null);
                 Debug.Log("Patch: {0} succeed", Patch23.Name);
             }
             catch (Exception ex)
@@ -299,24 +299,13 @@ namespace Contingecy_Contract
             MethodInfo Patch24 = typeof(Harmony_Patch).GetMethod("BattleUnitModel_CheckCardAvailable");
             try
             {
-                harmony.Patch(Method24, null, new HarmonyMethod(Patch24), null, null);
+                harmony.Patch(Method24, null, new HarmonyMethod(Patch24), null, null, null);
                 Debug.Log("Patch: {0} succeed", Patch24.Name);
             }
             catch (Exception ex)
             {
                 Debug.Error("HP_" + Patch24.Name, ex);
             }
-            //MethodInfo Method25 = typeof(BehaviourAction_TanyaSpecialAtk).GetMethod("GetMovingAction", AccessTools.all);
-            //MethodInfo Patch25 = typeof(Harmony_Patch).GetMethod("BehaviourAction_TanyaSpecialAtk_GetMovingAction");
-            //try
-            //{
-            //harmony.Patch(Method25, null, null, new HarmonyMethod(Patch25), null);
-            //Debug.Log("Patch: {0} succeed", Patch18.Name);
-            //}
-            //catch (Exception ex)
-            //{
-            //Debug.Error("HP_" + Patch25.Name, ex);
-            //}
         }
         public static void StageNameXmlList_GetName(ref string __result,int id)
         {
@@ -559,38 +548,6 @@ namespace Contingecy_Contract
             string src = (double)RandomUtil.valueForProb >= 0.5 ? str + "2" : str + "1";
             owner.battleCardResultLog?.SetCreatureEffectSound(src);
             return false;
-        }
-        public static IEnumerable<CodeInstruction>  BehaviourAction_TanyaSpecialAtk_GetMovingAction(IEnumerable<CodeInstruction> instructions, ILGenerator generator)
-        {
-            int InsertIndex = -1;
-            Label label = generator.DefineLabel();
-            List<CodeInstruction> codeInstructionList = new List<CodeInstruction>(instructions);
-            for (int index = 0; index < codeInstructionList.Count; ++index)
-            {
-                if (InsertIndex==-1)
-                {
-                    if (codeInstructionList[index].opcode == OpCodes.Bne_Un)
-                    {
-                        InsertIndex = index - 5;              
-                        (codeInstructionList[index + 1].labels).Add(label);
-                    }
-                }
-            }
-            if (InsertIndex == -1)
-                Debug.Log("Not Found");
-            else
-            {
-                codeInstructionList.Insert(InsertIndex, new CodeInstruction(OpCodes.Beq_S, label));
-                codeInstructionList.Insert(InsertIndex, new CodeInstruction(OpCodes.Ldc_I4, 18600000));
-                codeInstructionList.Insert(InsertIndex, new CodeInstruction(OpCodes.Ldfld, typeof(ItemXmlData).GetField("id",AccessTools.all)));
-                codeInstructionList.Insert(InsertIndex, new CodeInstruction(OpCodes.Callvirt, typeof(BookModel).GetMethod("get_ClassInfo", AccessTools.all)));
-                codeInstructionList.Insert(InsertIndex, new CodeInstruction(OpCodes.Callvirt,typeof(BattleUnitModel).GetMethod("get_customBook", AccessTools.all)));
-                codeInstructionList.Insert(InsertIndex, new CodeInstruction(OpCodes.Beq_S, label));
-                codeInstructionList.Insert(InsertIndex, new CodeInstruction(OpCodes.Ldc_I4, 18600000));
-                codeInstructionList.Insert(InsertIndex, new CodeInstruction(OpCodes.Callvirt, typeof(BookModel).GetMethod("GetBookClassInfoId", AccessTools.all)));
-                codeInstructionList.Insert(InsertIndex, new CodeInstruction(OpCodes.Callvirt,typeof(BattleUnitModel).GetMethod("get_Book", AccessTools.all)));
-            }        
-            return (IEnumerable<CodeInstruction>)codeInstructionList;
         }
         public static bool CheckDuel(int stageId)
         {

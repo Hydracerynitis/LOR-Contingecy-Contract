@@ -17,7 +17,7 @@ namespace ContractReward
         {
             base.OnSucceedAttack(behavior);
             BattleUnitModel target = behavior?.card?.target;
-            if (target == null || behavior.Detail != BehaviourDetail.Hit)
+            if (target == null || behavior.Detail != BehaviourDetail.Hit || BattleObjectManager.instance.GetAliveList_opponent(owner.faction).Count<=0)
                 return;
             target.TakeBreakDamage(RandomUtil.Range(1,2), DamageType.Passive, this.owner);
             if (!_thisRoundActivated)

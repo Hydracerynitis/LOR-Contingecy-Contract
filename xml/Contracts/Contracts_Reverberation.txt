@@ -116,7 +116,7 @@ Chorus at the Climax's effect will be applied to all targets and inflict extra 2
 		<Faction>Enemy</Faction>
 		<Variation>3</Variation>
 		<BaseLevel>1</BaseLevel>
-		<Conflict>Greta_Group</Conflict>
+		<Conflict>Bremen_Group</Conflict>
 		<Stage>70004</Stage>
 	</Contract>
 	<Contract Type="Bremen_Group">
@@ -129,7 +129,7 @@ Allies except Bremen gain {0} and when gaining Strength, Endurance, Haste, or Pr
 		<Faction>Enemy</Faction>
 		<Variation>3</Variation>
 		<BaseLevel>1</BaseLevel>
-		<Conflict>Greta_Self</Conflict>
+		<Conflict>Bremen_Self</Conflict>
 		<Stage>70004</Stage>
 	</Contract>
 	<Contract Type="Bremen">
