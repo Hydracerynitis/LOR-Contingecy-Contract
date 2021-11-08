@@ -6,6 +6,7 @@ using System.Reflection;
 using System.Text;
 using LOR_DiceSystem;
 using System.Threading.Tasks;
+using BaseMod;
 
 namespace ContractReward
 {
@@ -25,7 +26,7 @@ namespace ContractReward
                 self.ResetToOriginalData();
             else
             {
-                DiceCardXmlInfo xml = ItemXmlDataList.instance.GetCardItem(18300004);
+                DiceCardXmlInfo xml = ItemXmlDataList.instance.GetCardItem(Tools.MakeLorId(18300004));
                 typeof(BattleDiceCardModel).GetField("_xmlData", AccessTools.all).SetValue(self, xml);
             }
             typeof(BattleDiceCardModel).GetField("_script", AccessTools.all).SetValue(self, self.CreateDiceCardSelfAbilityScript());

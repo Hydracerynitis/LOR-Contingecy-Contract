@@ -7,6 +7,7 @@ using System.Reflection;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BaseMod;
 
 namespace ContractReward
 {
@@ -18,12 +19,12 @@ namespace ContractReward
         public override void OnWaveStart()
         {
             base.OnWaveStart();
-            this.owner.personalEgoDetail.AddCard(18700101);
+            this.owner.personalEgoDetail.AddCard(Tools.MakeLorId(18700101));
             Angelica = null;
             Active = this.owner.allyCardDetail;
             Passive = new BattleAllyCardDetail(this.owner);
             List<DiceCardXmlInfo> list = new List<DiceCardXmlInfo>();
-            foreach (int i in Singleton<DeckXmlList>.Instance.GetData(18700001).cardIdList)
+            foreach (LorId i in Singleton<DeckXmlList>.Instance.GetData(Tools.MakeLorId(18700001)).cardIdList)
                 list.Add(ItemXmlDataList.instance.GetCardItem(i));
             Passive.Init(list);
         }
@@ -31,7 +32,7 @@ namespace ContractReward
         {
             List<BattleUnitModel> Dead = BattleObjectManager.instance.GetFriendlyAllList(this.owner.faction).FindAll((Predicate<BattleUnitModel>)(x =>x.IsDead()==true));
             Angelica = RandomUtil.SelectOne<BattleUnitModel>(Dead);
-            BookModel puppet=new BookModel(Singleton<BookXmlList>.Instance.GetData(18710000));
+            BookModel puppet=new BookModel(Singleton<BookXmlList>.Instance.GetData(Tools.MakeLorId(18710000)));
             Contingecy_Contract.Harmony_Patch.UnitBookId.Add(Angelica, Angelica.Book.GetBookClassInfoId());
             Angelica.Book.SetHp(puppet.HP);
             Angelica.Book.SetBp(puppet.Break);
@@ -44,7 +45,8 @@ namespace ContractReward
             Angelica.Book.SetResistBP(BehaviourDetail.Penetrate, puppet.GetResistBP(BehaviourDetail.Penetrate));
             Angelica.Book.SetResistBP(BehaviourDetail.Hit, puppet.GetResistBP(BehaviourDetail.Hit));
             Angelica.Book.GetType().GetField("_maxPlayPoint", AccessTools.all).SetValue(Angelica.Book, puppet.GetMaxPlayPoint());
-            Angelica.Book.ClassInfo.id = puppet.GetBookClassInfoId();
+            Angelica.Book.ClassInfo._id = puppet.GetBookClassInfoId().id;
+            Angelica.Book.ClassInfo.workshopID= puppet.GetBookClassInfoId().packageId;
             Angelica.view.ChangeSkin(puppet.GetCharacterName());
             Angelica.view.ChangeHeight(250);
             Angelica.formation = Singleton<StageController>.Instance.GetCurrentStageFloorModel().GetFormationPosition(Angelica.index);
@@ -53,7 +55,7 @@ namespace ContractReward
             Angelica.cardSlotDetail.RecoverPlayPoint(Angelica.cardSlotDetail.GetMaxPlayPoint());
             Angelica.Revive(Angelica.Book.HP);
             List<DiceCardXmlInfo> Decklist = new List<DiceCardXmlInfo>();
-            foreach (int i in Singleton<DeckXmlList>.Instance.GetData(18710000).cardIdList)
+            foreach (LorId i in Singleton<DeckXmlList>.Instance.GetData(Tools.MakeLorId(18710000)).cardIdList)
                 Decklist.Add(ItemXmlDataList.instance.GetCardItem(i));
             Angelica.allyCardDetail.Init(Decklist);
             Angelica.allyCardDetail.DrawCards(8);
@@ -84,7 +86,7 @@ namespace ContractReward
                 SingletonBehavior<UICharacterRenderer>.Instance.SetCharacter(battleUnitModel.UnitData.unitData, num++,renderRealtime: true);
             RandomUtil.SelectOne<BattleUnitModel>(BattleObjectManager.instance.GetAliveList_opponent(this.owner.faction)).bufListDetail.AddBuf(new BattleUnitBuf_AttackTarget());
             BattleObjectManager.instance.InitUI();
-            this.owner.personalEgoDetail.AddCard(18700103);
+            this.owner.personalEgoDetail.AddCard(Tools.MakeLorId(18700103));
             Active = this.owner.allyCardDetail;
             this.owner.allyCardDetail = Passive;
             this.owner.allyCardDetail.DrawCards(8);
@@ -97,8 +99,8 @@ namespace ContractReward
         }
         public void ReturnToActive()
         {
-            this.owner.personalEgoDetail.AddCard(18700102);
-            this.owner.personalEgoDetail.RemoveCard(18700103);
+            this.owner.personalEgoDetail.AddCard(Tools.MakeLorId(18700102));
+            this.owner.personalEgoDetail.RemoveCard(Tools.MakeLorId(18700103));
             Passive = this.owner.allyCardDetail;
             this.owner.allyCardDetail = Active;
             this.owner.allyCardDetail.DrawCards(7);
@@ -114,7 +116,7 @@ namespace ContractReward
             Angelica.OnRoundStartOnlyUI();
             Angelica.RollSpeedDice();
             Angelica.view.charAppearance.ChangeMotion(ActionDetail.Default);
-            this.owner.personalEgoDetail.AddCard(18700103);
+            this.owner.personalEgoDetail.AddCard(Tools.MakeLorId(18700103));
             Active = this.owner.allyCardDetail;
             this.owner.allyCardDetail = Passive;
             this.owner.allyCardDetail.DrawCards(8);

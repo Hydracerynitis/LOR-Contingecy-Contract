@@ -16,7 +16,7 @@ namespace Contingecy_Contract
         {
             this.Level = level;
         }
-        public static bool CheckEnemyId(int EnemyId) => EnemyId == 40001;
+        public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 40001;
         public override string[] GetFormatParam => new string[] { (25*Level).ToString(),Level.ToString()};
         public override ContractType Type => ContractType.Special;
         public override void BeforeRollDice(BattleDiceBehavior behavior)
@@ -41,7 +41,7 @@ namespace Contingecy_Contract
         {
             this.Level = level;
         }
-        public static bool CheckEnemyId(int EnemyId) => EnemyId == 40002 || EnemyId ==40003;
+        public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 40002 || EnemyId ==40003;
         public override ContractType Type => ContractType.Special;
         public override string[] GetFormatParam => new string[] { (20*Level).ToString(),(1+2*Level).ToString(),Level.ToString()};
         private bool IsVal() => this.owner.UnitData.unitData.EnemyUnitId == 40002;

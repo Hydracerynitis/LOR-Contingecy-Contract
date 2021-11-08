@@ -1,4 +1,5 @@
-﻿using LOR_DiceSystem;
+﻿using BaseMod;
+using LOR_DiceSystem;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,8 +16,8 @@ namespace ContractReward
         public PassiveAbility_1810003(BattleUnitModel unit)
         {
             this.owner = unit;
-            this.name = Singleton<PassiveDescXmlList>.Instance.GetName(1810003);
-            this.desc = Singleton<PassiveDescXmlList>.Instance.GetDesc(1810003);
+            this.name = Singleton<PassiveDescXmlList>.Instance.GetName(Tools.MakeLorId(1810003));
+            this.desc = Singleton<PassiveDescXmlList>.Instance.GetDesc(Tools.MakeLorId(1810003));
             this.rare = Rarity.Unique;
         }
         public override void OnRoundStartAfter()
@@ -24,7 +25,7 @@ namespace ContractReward
             base.OnRoundStartAfter();
             BattleUnitBuf_burnDown battleUnitBufBurnDown = new BattleUnitBuf_burnDown();
             battleUnitBufBurnDown.stack = 1;
-            this.owner.bufListDetail.AddBuf((BattleUnitBuf)battleUnitBufBurnDown);
+            this.owner.bufListDetail.AddBuf(battleUnitBufBurnDown);
         }
         public override AtkResist GetResistHP(AtkResist origin, BehaviourDetail detail)
         {

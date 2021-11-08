@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BaseMod;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,8 +12,8 @@ namespace ContractReward
         public PassiveAbility_1870102(BattleUnitModel unit)
         {
             this.owner = unit;
-            this.name = Singleton<PassiveDescXmlList>.Instance.GetName(1870102);
-            this.desc = Singleton<PassiveDescXmlList>.Instance.GetDesc(1870102);
+            this.name = Singleton<PassiveDescXmlList>.Instance.GetName(Tools.MakeLorId(1870102));
+            this.desc = Singleton<PassiveDescXmlList>.Instance.GetDesc(Tools.MakeLorId(1870102));
             this.rare = Rarity.Rare;
         }
         public override void OnBattleEnd_alive()
@@ -39,6 +40,6 @@ namespace ContractReward
             base.OnKill(target);
             RandomUtil.SelectOne<BattleUnitModel>(BattleObjectManager.instance.GetAliveList_opponent(this.owner.faction)).bufListDetail.AddBuf(new BattleUnitBuf_AttackTarget());
         }
-        private bool HasPuppet() => this.owner.bufListDetail.GetActivatedBufList().Find((Predicate<BattleUnitBuf>)(x => x is BattleUnitBuf_AngelicaPuppet)) != null;
+        private bool HasPuppet() => this.owner.bufListDetail.GetActivatedBufList().Find(x => x is BattleUnitBuf_AngelicaPuppet) != null;
     }
 }

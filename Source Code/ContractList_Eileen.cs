@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using BaseMod;
 using LOR_DiceSystem;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,7 @@ namespace Contingecy_Contract
                 s += TextDataModel.GetText("Eileen_Production_param3");
             return s;
         }
+        private bool init =false;
         private bool IsEileen => owner.UnitData.unitData.EnemyUnitId == 1302011;
         public override StatBonus GetStatBonus(BattleUnitModel owner)
         {
@@ -40,7 +42,11 @@ namespace Contingecy_Contract
             base.OnRoundStart();
             if (IsEileen || Level < 1)
                 return;
-            this.owner.cardSlotDetail.RecoverPlayPoint(MaxPlayPointAdder());
+            if (!init)
+            {
+                this.owner.cardSlotDetail.RecoverPlayPoint(MaxPlayPointAdder());
+                init = true;
+            }
             if (Level < 2)
                 return;
             this.owner.bufListDetail.AddKeywordBufThisRoundByEtc(KeywordBuf.Smoke, 2);
@@ -87,12 +93,12 @@ namespace Contingecy_Contract
             Level = level;
         }
         public override ContractType Type => ContractType.Special;
-        public static bool CheckEnemyId(int EnemyId) => EnemyId == 1302021;
+        public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1302021;
         public override void Init(BattleUnitModel self)
         {
             base.Init(self);
             List<DiceCardXmlInfo> Decklist = new List<DiceCardXmlInfo>();
-            foreach (int i in Singleton<DeckXmlList>.Instance.GetData(18220000).cardIdList)
+            foreach (LorId i in Singleton<DeckXmlList>.Instance.GetData(Tools.MakeLorId(18220000)).cardIdList)
                 Decklist.Add(ItemXmlDataList.instance.GetCardItem(i));
             self.allyCardDetail.Init(Decklist);
             self.allyCardDetail.DrawCards(8);

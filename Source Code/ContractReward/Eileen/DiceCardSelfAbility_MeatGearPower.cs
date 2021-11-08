@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BaseMod;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,7 @@ namespace ContractReward
         {
             unit.bufListDetail.AddBuf(new BattleUnitBuf_ZealLimit());
             unit.bufListDetail.AddKeywordBufThisRoundByCard(KeywordBuf.AllPowerUp,1);
-            unit.personalEgoDetail.RemoveCard(18200006);
+            unit.personalEgoDetail.RemoveCard(Tools.MakeLorId(18200006));
             base.OnUseInstance(unit, self, targetUnit);
         }
     }

@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Contingecy_Contract
+namespace Fix
 {
-    public class PassiveAbility_1302013: PassiveAbilityBase
+    public class PassiveAbility_1302013_New: PassiveAbilityBase
     {
         public EileenPhase currentEileenPhase = EileenPhase.None;
         public bool beliverdeath;

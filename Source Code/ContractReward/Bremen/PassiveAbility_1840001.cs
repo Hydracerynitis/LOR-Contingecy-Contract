@@ -6,6 +6,7 @@ using UnityEngine;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BaseMod;
 
 namespace ContractReward
 {
@@ -30,6 +31,7 @@ namespace ContractReward
             if (cardId == -1)
                 return;
             SingletonBehavior<BattleManagerUI>.Instance.ui_unitListInfoSummary.UpdateCharacterProfile(owner, owner.faction, owner.hp, owner.breakDetail.breakGauge);
+            LorId newId = Tools.MakeLorId(cardId);
             BattleDiceCardModel card = this.owner.allyCardDetail.AddTempCard(cardId);
             if (target != null)
             {
@@ -91,7 +93,7 @@ namespace ContractReward
                 {
                     Util.LoadPrefab("Battle/CreatureEffect/Bremen/Bremen_Filter", SingletonBehavior<BattleSceneRoot>.Instance.transform);
                     AvailableHead = new List<Head>() { Head.Donkey, Head.Chicken, Head.Dog };
-                    owner.allyCardDetail.AddNewCard(18400006);
+                    owner.allyCardDetail.AddNewCard(Tools.MakeLorId(18400006));
                 }
             }
         }

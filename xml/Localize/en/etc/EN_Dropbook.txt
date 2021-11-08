@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<localize xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<text id="dropbook_MalkuthEnsemble">Memory--The Crying Children</text>
+	<text id="dropbook_YesodEnsemble">Memory--The Church of Gears</text>
+	<text id="dropbook_HodEnsemble">Memory--The Eighth Chef</text>
+	<text id="dropbook_NetzachEnsemble">Memory--The Musicians of Bremen</text>
+	<text id="dropbook_TipherethEnsemble">Memory--The 8 o’Clock Circus</text>
+	<text id="dropbook_GeburaEnsemble">Memory--L’heure du Loup</text>
+	<text id="dropbook_ChesedEnsemble">Memory--The Puppeteer</text>
+	<text id="dropbook_BinahEnsemble">Memory--The Blood-red Night</text>
+	<text id="dropbook_HokmaEnsemble">Memory--Yesterday’s Promise</text>
+	<text id="dropbook_KeterEnsemble">Memory--The Blue Reverberation</text>
+</localize>

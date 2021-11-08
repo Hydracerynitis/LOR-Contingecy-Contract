@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BookUseXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+	<BookUse ID="70001">
+    		<BookIcon>Malkuth_DropBook</BookIcon>
+    		<TextId>dropbook_MalkuthEnsemble</TextId>
+    		<Chapter>7</Chapter>
+  	</BookUse>
+	<BookUse ID="70002">
+    		<BookIcon>Yesod_DropBook</BookIcon>
+    		<TextId>dropbook_YesodEnsemble</TextId>
+    		<Chapter>7</Chapter>
+  	</BookUse>
+	<BookUse ID="70003">
+    		<BookIcon>Hod_DropBook</BookIcon>
+    		<TextId>dropbook_HodEnsemble</TextId>
+    		<Chapter>7</Chapter>
+  	</BookUse>
+	<BookUse ID="70004">
+    		<BookIcon>Netzach_DropBook</BookIcon>
+    		<TextId>dropbook_NetzachEnsemble</TextId>
+    		<Chapter>7</Chapter>
+  	</BookUse>
+	<BookUse ID="70005">
+    		<BookIcon>Tiphereth_DropBook</BookIcon>
+    		<TextId>dropbook_TipherethEnsemble</TextId>
+    		<Chapter>7</Chapter>
+  	</BookUse>
+	<BookUse ID="70006">
+    		<BookIcon>Gebura_DropBook</BookIcon>
+    		<TextId>dropbook_GeburaEnsemble</TextId>
+    		<Chapter>7</Chapter>
+  	</BookUse>
+	<BookUse ID="70007">
+    		<BookIcon>Chesed_DropBook</BookIcon>
+    		<TextId>dropbook_ChesedEnsemble</TextId>
+    		<Chapter>7</Chapter>
+  	</BookUse>
+	<BookUse ID="70008">
+    		<BookIcon>Binah_DropBook</BookIcon>
+    		<TextId>dropbook_BinahEnsemble</TextId>
+    		<Chapter>7</Chapter>
+  	</BookUse>
+	<BookUse ID="70009">
+    		<BookIcon>Hokma_DropBook</BookIcon>
+    		<TextId>dropbook_HokmaEnsemble</TextId>
+    		<Chapter>7</Chapter>
+  	</BookUse>
+	<BookUse ID="70010">
+    		<BookIcon>Keter_DropBook</BookIcon>
+    		<TextId>dropbook_KeterEnsemble</TextId>
+    		<Chapter>7</Chapter>
+  	</BookUse>
+</BookUseXmlRoot>

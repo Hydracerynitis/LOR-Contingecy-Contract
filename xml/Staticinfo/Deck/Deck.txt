@@ -45,32 +45,32 @@
     	<Card>18200003</Card> 
   	</Deck>
   	<Deck ID="18210000">
-    	<Card>604001</Card>
-    	<Card>604001</Card>
-    	<Card>604002</Card>
-    	<Card>604003</Card>
-    	<Card>604003</Card>
-    	<Card>604004</Card>
-    	<Card>604004</Card>
-    	<Card>604005</Card>
-    	<Card>604005</Card>
+    	<Card Pid="@origin">604001</Card>
+    	<Card Pid="@origin">604001</Card>
+    	<Card Pid="@origin">604002</Card>
+    	<Card Pid="@origin">604003</Card>
+    	<Card Pid="@origin">604003</Card>
+    	<Card Pid="@origin">604004</Card>
+    	<Card Pid="@origin">604004</Card>
+    	<Card Pid="@origin">604005</Card>
+    	<Card Pid="@origin">604005</Card>
   	</Deck>
   	<Deck ID="18220000">    	
-	  	<Card>507007</Card>
-    	<Card>507007</Card>
-    	<Card>507007</Card>
-    	<Card>604001</Card>
-		<Card>604001</Card>
-		<Card>604001</Card>
-    	<Card>604005</Card>
-    	<Card>604005</Card>
-    	<Card>604005</Card>
-		<Card>615002</Card>
-		<Card>615003</Card>
-		<Card>615004</Card>
-		<Card>615004</Card>
-		<Card>615004</Card>
-    	<Card>704003</Card>
+	  	<Card Pid="@origin">507007</Card>
+    	<Card Pid="@origin">507007</Card>
+    	<Card Pid="@origin">507007</Card>
+    	<Card Pid="@origin">604001</Card>
+		<Card Pid="@origin">604001</Card>
+		<Card Pid="@origin">604001</Card>
+    	<Card Pid="@origin">604005</Card>
+    	<Card Pid="@origin">604005</Card>
+    	<Card Pid="@origin">604005</Card>
+		<Card Pid="@origin">615002</Card>
+		<Card Pid="@origin">615003</Card>
+		<Card Pid="@origin">615004</Card>
+		<Card Pid="@origin">615004</Card>
+		<Card Pid="@origin">615004</Card>
+    	<Card Pid="@origin">704003</Card>
   	</Deck>
 	<Deck ID="18300000">
 		<Card>18300001</Card>

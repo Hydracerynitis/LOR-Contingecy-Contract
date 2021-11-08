@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BaseMod;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,8 +13,8 @@ namespace ContractReward
         {
             base.OnWaveStart();
             this.owner.bufListDetail.AddBuf(new BattleUnitBuf_Insanity());
-            this.owner.personalEgoDetail.AddCard(18000011);
-            this.owner.personalEgoDetail.AddCard(18000012);
+            this.owner.personalEgoDetail.AddCard(Tools.MakeLorId(18000011));
+            this.owner.personalEgoDetail.AddCard(Tools.MakeLorId(18000012));
         }
     }
 }

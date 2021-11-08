@@ -132,11 +132,10 @@ namespace Contingecy_Contract
             }
             return false;
         }
-        public int GetLevel(int id)
+        public int GetLevel(StageClassInfo info)
         {
             int i = 0;
             int b = 0;
-            StageClassInfo info = Singleton<StageClassInfoList>.Instance.GetData(id);
             if (PassiveList.Count > 0)
             {
                 foreach (Contract contract in PassiveList)
@@ -163,7 +162,11 @@ namespace Contingecy_Contract
             }
             Debug.Log("Base Level: {0}", i.ToString());
             Debug.Log("Base Bonus: {0}", b.ToString());
-            return (int) Math.Floor(i*(1+b*0.01));
+            return (int)Math.Floor(i * (1 + b * 0.01));
+        }
+        public int GetLevel(LorId id)
+        {
+            return GetLevel(Singleton<StageClassInfoList>.Instance.GetData(id));
         }      
         public List<Contract> GetPassiveList()
         {

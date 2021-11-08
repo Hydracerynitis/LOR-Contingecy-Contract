@@ -7,16 +7,18 @@ using System.Text;
 using LOR_DiceSystem;
 using System.Threading.Tasks;
 
-namespace Contingecy_Contract
+namespace Fix
 {
-    public class DiceCardSelfAbility_Jaeheon_AreaDt : DiceCardSelfAbilityBase
+    public class DiceCardSelfAbility_Jaeheon_AreaDt_New : DiceCardSelfAbilityBase
     {
         public override void OnUseCard()
         {
             base.OnUseCard();
             foreach (BattleUnitModel alive in BattleObjectManager.instance.GetAliveList(Faction.Enemy))
             {
-                switch (alive.UnitData.unitData.EnemyUnitId)
+                if (!alive.UnitData.unitData.EnemyUnitId.IsBasic())
+                    continue;
+                switch (alive.UnitData.unitData.EnemyUnitId.id)
                 {
                     case 1307021:
                     case 1307031:

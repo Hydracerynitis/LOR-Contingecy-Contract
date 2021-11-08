@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using BaseMod;
 using UI;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,14 +13,16 @@ namespace Contingecy_Contract
         private List<string> UIs;
         public void CheckReward(StageClassInfo info)
         {
-            if (Harmony_Patch.CheckDuel(info.id))
+            if (Harmony_Patch.CheckDuel(info.id) || Harmony_Patch.CheckPlaceHolder(info.id))
+                return;
+            if (!SupportedPid.Contains(info.id.packageId))
                 return;
             if (Singleton<ContractLoader>.Instance.GetLevel(info.id) < 12)
                 return;
             UIs = new List<string>();
-            switch (info.id)
+            switch (info.id.id)
             {
-                case (70001):
+                case 70001:
                     Harmony_Patch.Progess.Philiph_Risk = 1;
                     break;
                 case (70002):
@@ -55,8 +58,9 @@ namespace Contingecy_Contract
         {
             if (GetContractCondition(OrangeCrossCondition,info))
             {
+                if (Harmony_Patch.Progess.Orange_Path == 0)
+                    UIs.Add(TextDataModel.GetText("ui_RewardSpecial", TextDataModel.GetText("Condition_OrangeCross")));
                 Harmony_Patch.Progess.Orange_Path = 1;
-                UIs.Add(TextDataModel.GetText("ui_RewardSpecial", TextDataModel.GetText("Condition_OrangeCross")));
             }
             if (EnsembleComplete)
             {
@@ -127,17 +131,19 @@ namespace Contingecy_Contract
         }
         public void GiveEquipBook(int bookid)
         {
-            List<BookModel> all = Singleton<BookInventoryModel>.Instance.GetBookListAll().FindAll(x => x.ClassInfo.id == bookid);
-            BookXmlInfo data2 = Singleton<BookXmlList>.Instance.GetData(bookid);
+            LorId newId = Tools.MakeLorId(bookid);
+            List<BookModel> all = Singleton<BookInventoryModel>.Instance.GetBookListAll().FindAll(x => x.ClassInfo.id == newId);
+            BookXmlInfo data2 = Singleton<BookXmlList>.Instance.GetData(newId);
             if (data2 == null || all.Count >= data2.Limit)
                 return;
             int difference = data2.Limit - all.Count;
             for(int i = 0; i < difference; i++)
             {
-                Singleton<BookInventoryModel>.Instance.CreateBook(bookid);
+                Singleton<BookInventoryModel>.Instance.CreateBook(newId);
             }
-            UIs.Add(TextDataModel.GetText("ui_popup_getequippage", (object)Singleton<BookDescXmlList>.Instance.GetBookName(bookid),(object)difference));
+            UIs.Add(TextDataModel.GetText("ui_popup_getequippage", (object)Singleton<BookDescXmlList>.Instance.GetBookName(newId), (object)difference));
         }
+        public static List<string> SupportedPid = new List<string>() { ""};
         public static bool EnsembleComplete => Harmony_Patch.Progess.Philiph_Risk == 1 && Harmony_Patch.Progess.Eileen_Risk == 1 && Harmony_Patch.Progess.Greta_Risk ==1 &&
                                                   Harmony_Patch.Progess.Bremen_Risk == 1 &&  Harmony_Patch.Progess.Tanya_Risk == 1 && Harmony_Patch.Progess.Jaeheon_Risk == 1
                                                  && Harmony_Patch.Progess.Elena_Risk == 1 && Harmony_Patch.Progess.Pluto_Risk == 1;

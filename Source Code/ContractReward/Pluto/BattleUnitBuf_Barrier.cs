@@ -53,8 +53,8 @@ namespace ContractReward
                             {
                                 if (cardDataInUnitModel.card.GetSpec().Ranged == CardRange.FarArea || cardDataInUnitModel.card.GetSpec().Ranged == CardRange.FarAreaEach)
                                 {
-                                    if (cardDataInUnitModel.subTargets.Exists((Predicate<BattlePlayingCardDataInUnitModel.SubTarget>)(x => x.target == owner)))
-                                        cardDataInUnitModel.subTargets.RemoveAll((Predicate<BattlePlayingCardDataInUnitModel.SubTarget>)(x => x.target == owner));
+                                    if (cardDataInUnitModel.subTargets.Exists(x => x.target == owner))
+                                        cardDataInUnitModel.subTargets.RemoveAll(x => x.target == owner);
                                     else if (cardDataInUnitModel.target == owner)
                                     {
                                         if (cardDataInUnitModel.subTargets.Count > 0)
@@ -68,14 +68,14 @@ namespace ContractReward
                                         else
                                         {
                                             actor.allyCardDetail.ReturnCardToHand(actor.cardSlotDetail.cardAry[index2].card);
-                                            actor.cardSlotDetail.cardAry[index2] = (BattlePlayingCardDataInUnitModel)null;
+                                            actor.cardSlotDetail.cardAry[index2] = null;
                                         }
                                     }
                                 }
                                 else
                                 {
-                                    if (cardDataInUnitModel.subTargets.Exists((Predicate<BattlePlayingCardDataInUnitModel.SubTarget>)(x => x.target == owner)))
-                                        cardDataInUnitModel.subTargets.RemoveAll((Predicate<BattlePlayingCardDataInUnitModel.SubTarget>)(x => x.target == owner));
+                                    if (cardDataInUnitModel.subTargets.Exists(x => x.target == owner))
+                                        cardDataInUnitModel.subTargets.RemoveAll(x => x.target == owner);
                                     if (cardDataInUnitModel.target == owner)
                                     {
                                         BattleUnitModel targetByCard = BattleObjectManager.instance.GetTargetByCard(actor, cardDataInUnitModel.card, index2, actor.TeamKill());
@@ -91,7 +91,7 @@ namespace ContractReward
                                         else
                                         {
                                             actor.allyCardDetail.ReturnCardToHand(actor.cardSlotDetail.cardAry[index2].card);
-                                            actor.cardSlotDetail.cardAry[index2] = (BattlePlayingCardDataInUnitModel)null;
+                                            actor.cardSlotDetail.cardAry[index2] = null;
                                         }
                                     }
                                     else if (cardDataInUnitModel.earlyTarget == owner)

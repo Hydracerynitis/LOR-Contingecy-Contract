@@ -4,6 +4,7 @@ using System.Linq;
 using LOR_DiceSystem;
 using System.Text;
 using System.Threading.Tasks;
+using BaseMod;
 
 namespace ContractReward
 {
@@ -15,8 +16,8 @@ namespace ContractReward
         public PassiveAbility_1870002(BattleUnitModel unit)
         {
             this.owner = unit;
-            this.name = Singleton<PassiveDescXmlList>.Instance.GetName(1870002);
-            this.desc = Singleton<PassiveDescXmlList>.Instance.GetDesc(1870002);
+            this.name = Singleton<PassiveDescXmlList>.Instance.GetName(Tools.MakeLorId(1870002));
+            this.desc = Singleton<PassiveDescXmlList>.Instance.GetDesc(Tools.MakeLorId(1870002));
             this.rare = Rarity.Unique;
         }
         public override void BeforeRollDice(BattleDiceBehavior behavior)
@@ -39,7 +40,7 @@ namespace ContractReward
             base.OnSucceedAttack(behavior);
             if (behavior.Detail != BehaviourDetail.Hit)
                 return;
-            behavior.card.target.TakeBreakDamage(2,DamageType.Attack);
+            behavior.card.target.TakeBreakDamage(2,DamageType.Passive);
         }
     }
 }

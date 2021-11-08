@@ -5,6 +5,7 @@ using System.Text;
 using LOR_DiceSystem;
 using HarmonyLib;
 using System.Threading.Tasks;
+using BaseMod;
 
 namespace ContractReward
 {
@@ -17,7 +18,7 @@ namespace ContractReward
         {
             base.OnWaveStart();
             RestDice = new Queue<DiceBehaviour>();
-            DiceCardXmlInfo xml = ItemXmlDataList.instance.GetCardItem(18000021).Copy(true);
+            DiceCardXmlInfo xml = ItemXmlDataList.instance.GetCardItem(Tools.MakeLorId(18000021)).Copy(true);
             foreach(DiceBehaviour dice in xml.DiceBehaviourList)
             {
                 RestDice.Enqueue(dice);

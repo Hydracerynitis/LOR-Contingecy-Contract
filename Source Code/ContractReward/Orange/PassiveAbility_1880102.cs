@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BaseMod;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ namespace ContractReward
         {
             base.OnStartBattle();
             List<BattlePlayingCardDataInUnitModel> cardArray = this.owner.cardSlotDetail.cardAry.FindAll(x=> x!=null);
-            List<BattlePlayingCardDataInUnitModel> cards = cardArray.FindAll(x => x.card.GetID() == 18810001 || x.card.GetID() == 18810002 || x.card.GetID() == 18810003);
+            List<BattlePlayingCardDataInUnitModel> cards = cardArray.FindAll(x => x.card.GetID() == Tools.MakeLorId(18810001) || x.card.GetID() == Tools.MakeLorId(18810002) || x.card.GetID() == Tools.MakeLorId(18810003));
             if (cards.Count <= 0)
                 return;
             BattleUnitModel target = RandomUtil.SelectOne<BattleUnitModel>(BattleObjectManager.instance.GetAliveList_opponent(this.owner.faction).FindAll(x => x.IsTargetable(this.owner)));

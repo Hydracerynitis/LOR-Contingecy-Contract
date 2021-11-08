@@ -8,6 +8,7 @@ using System.Linq;
 using LOR_DiceSystem;
 using System.Text;
 using System.Threading.Tasks;
+using BaseMod;
 
 namespace Contingecy_Contract
 {
@@ -19,7 +20,7 @@ namespace Contingecy_Contract
             Level = level;
             extrahit = new List<BattlePlayingCardDataInUnitModel>();
         }
-        public static bool CheckEnemyId(int EnemyId) => EnemyId == 1308021;
+        public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1308021;
         public override ContractType Type => ContractType.Special;
         public override string[] GetFormatParam => new string[] { Level.ToString(),((Level - 1)*25).ToString() };
         private readonly List<BattlePlayingCardDataInUnitModel> extrahit;
@@ -118,7 +119,7 @@ namespace Contingecy_Contract
             {
                 this.owner.SetCurrentOrder(i);
                 this.owner.speedDiceResult[i].isControlable = false;
-                BattleDiceCardModel card = this.owner.allyCardDetail.AddTempCard(18800007);
+                BattleDiceCardModel card = this.owner.allyCardDetail.AddTempCard(Tools.MakeLorId(18800007));
                 BattleUnitModel target = victim[0];
                 if (target != null)
                 {

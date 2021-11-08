@@ -50,14 +50,14 @@ namespace Contingecy_Contract
             {
                 if (!Directory.Exists(Harmony_Patch.ModPath + path))
                 {
-                    File.WriteAllText(Application.dataPath + "/BaseMods/ContingecyContractModPathError.txt", Harmony_Patch.ModPath + path + " not found");
+                    File.WriteAllText(Application.dataPath + "/Mods/ContingecyContractModPathError.txt", Harmony_Patch.ModPath + path + " not found");
                 }
             }
             if (type == PathType.File)
             {
                 if (!File.Exists(Harmony_Patch.ModPath + path))
                 {
-                    File.WriteAllText(Application.dataPath + "/BaseMods/ContingecyContractModPathError.txt", Harmony_Patch.ModPath + path + " not found");
+                    File.WriteAllText(Application.dataPath + "/Mods/ContingecyContractModPathError.txt", Harmony_Patch.ModPath + path + " not found");
                 }
             }
         }

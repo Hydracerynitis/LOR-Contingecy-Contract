@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BaseMod;
 
-namespace Contingecy_Contract
+namespace Fix
 {
-    public class BehaviourAction_TanyaSpecialAtk : BehaviourActionBase
+    public class BehaviourAction_TanyaSpecialAtk_New : BehaviourActionBase
     {
         private BattleUnitModel _opponent;
         private float _airbornDelay = 0.4f;
@@ -26,7 +27,7 @@ namespace Contingecy_Contract
             if (opponent.behaviourResultData != null)
                 flag = opponent.behaviourResultData.IsFarAtk();
             BattleUnitModel model = self.view.model;
-            if ( !CheckTanya(self, 1306011) && !CheckTanya(self, 260011) && !CheckTanya(self, 18600000) || (self.result != Result.Win || flag))
+            if ( !CheckTanya(self, 1306011) && !CheckTanya(self, 260011) && !CheckTanya(self, Tools.MakeLorId(18600000)) || (self.result != Result.Win || flag))
                 return base.GetMovingAction(ref self, ref opponent);
             self.view.unitBottomStatUI.EnableCanvas(false);
             this._self = self.view.model;
@@ -117,7 +118,11 @@ namespace Contingecy_Contract
             }
             return true;
         }
-        private bool CheckTanya(RencounterManager.ActionAfterBehaviour self,int id)
+        private bool CheckTanya(RencounterManager.ActionAfterBehaviour self, int id)
+        {
+            return CheckTanya(self, new LorId(id));
+        }
+        private bool CheckTanya(RencounterManager.ActionAfterBehaviour self,LorId id)
         {
             return self.view.model.Book.GetBookClassInfoId() == id || self.view.model.customBook.ClassInfo.id == id;
         }

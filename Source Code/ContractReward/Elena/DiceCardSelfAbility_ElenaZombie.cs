@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BaseMod;
 
 namespace ContractReward
 {
@@ -52,8 +53,8 @@ namespace ContractReward
         public Zombie(BattleUnitModel unit)
         {
             this.owner = unit;
-            this.name = Singleton<PassiveDescXmlList>.Instance.GetName(1880003);
-            this.desc = Singleton<PassiveDescXmlList>.Instance.GetDesc(1880003);
+            this.name = Singleton<PassiveDescXmlList>.Instance.GetName(Tools.MakeLorId(1880003));
+            this.desc = Singleton<PassiveDescXmlList>.Instance.GetDesc(Tools.MakeLorId(1880003));
             this.rare = Rarity.Common;
         }
         public override BattleUnitModel ChangeAttackTarget(BattleDiceCardModel card, int currentSlot)

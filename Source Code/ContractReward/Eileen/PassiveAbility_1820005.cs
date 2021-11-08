@@ -5,6 +5,7 @@ using UnityEngine;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BaseMod;
 
 namespace ContractReward
 {
@@ -16,12 +17,12 @@ namespace ContractReward
             base.OnRoundStart();
             foreach(int i in IdList)
             {
-                if (this.owner.personalEgoDetail.GetHand().Exists(x => x.GetID() == i))
+                if (this.owner.personalEgoDetail.GetHand().Exists(x => x.GetID().id == i))
                     return;
             }
-            this.owner.personalEgoDetail.AddCard(18200006);
-            this.owner.personalEgoDetail.AddCard(18200007);
-            this.owner.personalEgoDetail.AddCard(18200008);
+            this.owner.personalEgoDetail.AddCard(Tools.MakeLorId(18200006));
+            this.owner.personalEgoDetail.AddCard(Tools.MakeLorId(18200007));
+            this.owner.personalEgoDetail.AddCard(Tools.MakeLorId(18200008));
         }
     }
 }

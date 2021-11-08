@@ -6,6 +6,7 @@ using System.Reflection;
 using System.Text;
 using LOR_DiceSystem;
 using System.Threading.Tasks;
+using BaseMod;
 
 namespace ContractReward
 {
@@ -17,7 +18,7 @@ namespace ContractReward
             if(BattleObjectManager.instance.GetAliveList_opponent(unit.faction).Exists(x => x.bufListDetail.HasBuf<BattleUnitBuf_FreshMeat>()))
             {
                 self.CopySelf();
-                DiceCardXmlInfo xml = ItemXmlDataList.instance.GetCardItem(18300012);
+                DiceCardXmlInfo xml = ItemXmlDataList.instance.GetCardItem(Tools.MakeLorId(18300012));
                 typeof(BattleDiceCardModel).GetField("_xmlData", AccessTools.all).SetValue(self, xml);
             }
             typeof(BattleDiceCardModel).GetField("_script", AccessTools.all).SetValue(self, self.CreateDiceCardSelfAbilityScript());

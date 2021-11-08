@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Contingecy_Contract
+namespace Fix
 {
-    public class PassiveAbility_1303012 : PassiveAbilityBase
+    public class PassiveAbility_1303012_New : PassiveAbilityBase
     {
         private int _cardCount;
         private int _patternCount;
@@ -21,7 +21,7 @@ namespace Contingecy_Contract
         }
         public override int SpeedDiceNumAdder()
         {
-            if(this.owner.passiveDetail.PassiveList.Find(x => x is ContingecyContract_Greta_Feast) is ContingecyContract_Greta_Feast Feast && this._patternCount == 2)
+            if(this.owner.passiveDetail.PassiveList.Find(x => x is Contingecy_Contract.ContingecyContract_Greta_Feast) is Contingecy_Contract.ContingecyContract_Greta_Feast Feast && this._patternCount == 2)
                 return Feast.GetSackNumAdder();
             return base.SpeedDiceNumAdder();
         }
@@ -56,7 +56,7 @@ namespace Contingecy_Contract
                 }
                 this._meat.Clear();
             }
-            if (!owner.passiveDetail.HasPassive<ContingecyContract_Greta_Feast>() && (double)this.owner.hp > 0.4 * this.owner.MaxHp)
+            if (!owner.passiveDetail.HasPassive<Contingecy_Contract.ContingecyContract_Greta_Feast>() && (double)this.owner.hp > 0.4 * this.owner.MaxHp)
                 return;
             if ((double)this.owner.hp > 0.6 * this.owner.MaxHp)
                 return;
@@ -65,7 +65,7 @@ namespace Contingecy_Contract
         }
         public override int GetMinHp()
         {
-            return this.owner.passiveDetail.HasPassive<ContingecyContract_Greta_Feast>() ? (int)(this.owner.MaxHp * 0.5) : (int)(this.owner.MaxHp * 0.3);
+            return this.owner.passiveDetail.HasPassive<Contingecy_Contract.ContingecyContract_Greta_Feast>() ? (int)(this.owner.MaxHp * 0.5) : (int)(this.owner.MaxHp * 0.3);
         }
         public override BattleUnitModel ChangeAttackTarget(
           BattleDiceCardModel card,
@@ -89,7 +89,7 @@ namespace Contingecy_Contract
                 if (alive != this.owner && alive.IsTargetable(this.owner) && alive.bufListDetail.GetActivatedBufList().Find((x => x is BattleUnitBuf_Greta_Meat)) != null)
                     return alive;
             }
-            if (this.owner.passiveDetail.HasPassive<ContingecyContract_Greta_Salt>())
+            if (this.owner.passiveDetail.HasPassive<Contingecy_Contract.ContingecyContract_Greta_Salt>())
             {
                 List<BattleUnitModel> PurpleTear = new List<BattleUnitModel>();
                 foreach (BattleUnitModel unit in BattleObjectManager.instance.GetAliveList_opponent(owner.faction))
@@ -119,7 +119,7 @@ namespace Contingecy_Contract
             }
             if (this._patternCount == 2)
                 new GameObject().AddComponent<SpriteFilter_Queenbee_Spore>().Init("EmotionCardFilter/RedHood_Filter", false, 2f);
-            if (owner.passiveDetail.HasPassive<ContingecyContract_Greta>())
+            if (owner.passiveDetail.HasPassive<Contingecy_Contract.ContingecyContract_Greta>())
             {
                 if (Singleton<StageController>.Instance.RoundTurn % 3 == 1 && (owner.bufListDetail.GetActivatedBuf(KeywordBuf.Resistance) == null || owner.bufListDetail.GetActivatedBuf(KeywordBuf.Resistance).stack == 0))
                 {
@@ -160,7 +160,7 @@ namespace Contingecy_Contract
                     if (BattleObjectManager.instance.GetAliveList(this.owner.faction).Count <= 1)
                     {
                         this.AddNewCard(703311);
-                        if(this.owner.passiveDetail.PassiveList.Find(x => x is ContingecyContract_Greta_Feast) is ContingecyContract_Greta_Feast Feast)
+                        if(this.owner.passiveDetail.PassiveList.Find(x => x is Contingecy_Contract.ContingecyContract_Greta_Feast) is Contingecy_Contract.ContingecyContract_Greta_Feast Feast)
                             for(int i=0;i<Feast.GetSackNumAdder();i++)
                                 this.AddNewCard(703319);
                         this.AddNewCard(703319);
@@ -172,21 +172,21 @@ namespace Contingecy_Contract
                 case 2:
                     this.AddNewCard(703315);
                     this.AddNewCard(703315);
-                    if (!owner.passiveDetail.HasPassive<ContingecyContract_Greta_Salt>())
+                    if (!owner.passiveDetail.HasPassive<Contingecy_Contract.ContingecyContract_Greta_Salt>())
                         this.AddNewCard(703316);
                     this.AddNewCard(703317);
                     this.AddNewCard(703314);
-                    if (owner.passiveDetail.HasPassive<ContingecyContract_Greta_Salt>())
+                    if (owner.passiveDetail.HasPassive<Contingecy_Contract.ContingecyContract_Greta_Salt>())
                         this.AddNewCard(703310);
                     break;
                 case 3:
                     this.AddNewCard(703315);
-                    if (!owner.passiveDetail.HasPassive<ContingecyContract_Greta_Salt>())
+                    if (!owner.passiveDetail.HasPassive<Contingecy_Contract.ContingecyContract_Greta_Salt>())
                         this.AddNewCard(703316);
                     this.AddNewCard(703317);
                     this.AddNewCard(703314);
                     this.AddNewCard(703314);
-                    if (owner.passiveDetail.HasPassive<ContingecyContract_Greta_Salt>())
+                    if (owner.passiveDetail.HasPassive<Contingecy_Contract.ContingecyContract_Greta_Salt>())
                         this.AddNewCard(703310);
                     break;
                 case 4:

@@ -4,6 +4,7 @@ using LOR_DiceSystem;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BaseMod;
 
 namespace ContractReward
 {
@@ -11,13 +12,13 @@ namespace ContractReward
     {
         public override void OnWaveStart()
         {
-            this.owner.allyCardDetail.AddNewCardToDeck(18300011);
-            this.owner.personalEgoDetail.AddCard(18300013);
+            this.owner.allyCardDetail.AddNewCardToDeck(Tools.MakeLorId(18300011));
+            this.owner.personalEgoDetail.AddCard(Tools.MakeLorId(18300013));
         }
         public override void OnRoundStart()
         {
             base.OnRoundStart();
-            owner.personalEgoDetail.GetHand().Find(x => x.GetID() == 18300013).SetCurrentCost(owner.cardSlotDetail.PlayPoint);
+            owner.personalEgoDetail.GetHand().Find(x => x.GetID() == Tools.MakeLorId(18300013)).SetCurrentCost(owner.cardSlotDetail.PlayPoint);
         }
         public override void OnRoundEndTheLast()
         {

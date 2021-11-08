@@ -4,6 +4,7 @@ using System.Linq;
 using LOR_DiceSystem;
 using System.Text;
 using System.Threading.Tasks;
+using BaseMod;
 
 namespace ContractReward
 {
@@ -13,8 +14,8 @@ namespace ContractReward
         public PassiveAbility_1810004(BattleUnitModel unit)
         {
             this.owner = unit;
-            this.name = Singleton<PassiveDescXmlList>.Instance.GetName(1810004);
-            this.desc = Singleton<PassiveDescXmlList>.Instance.GetDesc(1810004);
+            this.name = Singleton<PassiveDescXmlList>.Instance.GetName(Tools.MakeLorId(1810004));
+            this.desc = Singleton<PassiveDescXmlList>.Instance.GetDesc(Tools.MakeLorId(1810004));
             this.rare = Rarity.Unique;
             this._effect = SingletonBehavior<DiceEffectManager>.Instance.CreateCreatureEffect("Philip/Philip_Aura_Body", 1f, unit.view, unit.view);
         }

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using LOR_DiceSystem;
 using System.Threading.Tasks;
+using BaseMod;
 
 namespace ContractReward
 {
@@ -25,7 +26,7 @@ namespace ContractReward
         public override void OnWaveStart()
         {
             base.OnWaveStart();
-            this.owner.allyCardDetail.AddNewCardToDeck(18900005);
+            this.owner.allyCardDetail.AddNewCardToDeck(Tools.MakeLorId(18900005));
         }
     }
 }

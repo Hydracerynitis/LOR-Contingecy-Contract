@@ -15,9 +15,9 @@ namespace ContractReward
         {
             "Recover_Keyword"
         };
-        public override void BeforRollDice()
+        public override void BeforeRollDice()
         {
-            base.BeforRollDice();
+            base.BeforeRollDice();
             BattleUnitModel target = this.card.target;
             if (target == null || target.bufListDetail.GetActivatedBuf(KeywordBuf.Bleeding) == null)
                 return;

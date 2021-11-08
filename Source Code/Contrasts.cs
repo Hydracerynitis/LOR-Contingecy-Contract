@@ -69,9 +69,9 @@ namespace Contingecy_Contract
         public int Level = 0;
         public int Bonus = 0;
         public StageModifier modifier;
-        public ContractDesc GetDesc(string language)
+        public ContractDesc GetDesc()
         {
-            return this.desc.Find(x => x.language == language);
+            return this.desc.Find(x => x.language == TextDataModel.CurrentLanguage);
         }
         public Contract Copy()
         {

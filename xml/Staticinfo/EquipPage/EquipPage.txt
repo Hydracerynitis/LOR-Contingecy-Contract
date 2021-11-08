@@ -17,9 +17,9 @@
       			<HBResist>Normal</HBResist>
       			<StartPlayPoint>4</StartPlayPoint>
       			<MaxPlayPoint>4</MaxPlayPoint>
-      			<Passive>10008</Passive>
-      			<Passive>1300001</Passive>
-      			<Passive>260005</Passive>
+      			<Passive Pid="@origin">10008</Passive>
+      			<Passive Pid="@origin">1300001</Passive>
+      			<Passive Pid="@origin">260005</Passive>
       			<Passive>1800001</Passive>
       			<Passive>1800002</Passive>
       			<Passive>1800003</Passive>
@@ -47,9 +47,9 @@
       			<HBResist>Normal</HBResist>
       			<StartPlayPoint>4</StartPlayPoint>
       			<MaxPlayPoint>4</MaxPlayPoint>
-      			<Passive>10008</Passive>
+      			<Passive Pid="@origin">10008</Passive>
       			<Passive>1800000</Passive>
-      			<Passive>1300001</Passive>
+      			<Passive Pid="@origin">1300001</Passive>
       			<Passive>1810001</Passive>
       			<Passive>1810002</Passive>
       			<Passive>1810003</Passive>
@@ -78,7 +78,7 @@
       			<HBResist>Endure</HBResist>
       			<StartPlayPoint>4</StartPlayPoint>
       			<MaxPlayPoint>4</MaxPlayPoint>
-      			<Passive>1300001</Passive>
+      			<Passive Pid="@origin">1300001</Passive>
       			<Passive>1820001</Passive>
       			<Passive>1820002</Passive>
       			<Passive>1820003</Passive>
@@ -105,11 +105,11 @@
       			<PBResist>Normal</PBResist>
       			<HBResist>Endure</HBResist>
 				<AddedStartDraw>3</AddedStartDraw>
-      			<Passive Level="1">1820004</Passive>
-      			<Passive Level="1">1820005</Passive>
-      			<Passive Level="1">250014</Passive>
-      			<Passive Level="1">250114</Passive>
-      			<Passive Level="1">250214</Passive>
+      			<Passive >1820004</Passive>
+      			<Passive >1820005</Passive>
+      			<Passive Pid="@origin">250014</Passive>
+      			<Passive Pid="@origin">250114</Passive>
+      			<Passive Pid="@origin">250214</Passive>
     		</EquipEffect>
     		<BookIcon>ContingencyReward</BookIcon>
     		<Chapter>7</Chapter>
@@ -134,9 +134,9 @@
       			<HBResist>Endure</HBResist>
       			<StartPlayPoint>4</StartPlayPoint>
       			<MaxPlayPoint>4</MaxPlayPoint>   
-	   			<Passive>10008</Passive>
+	   			<Passive Pid="@origin">10008</Passive>
       			<Passive>1800000</Passive>
-      			<Passive>1300001</Passive>
+      			<Passive Pid="@origin">1300001</Passive>
       			<Passive>1830001</Passive>
       			<Passive>1830002</Passive>
       			<Passive>1830003</Passive>
@@ -165,7 +165,7 @@
       			<StartPlayPoint>5</StartPlayPoint>
       			<MaxPlayPoint>5</MaxPlayPoint>
       			<Passive>1800000</Passive>   
-      			<Passive>1300001</Passive>
+      			<Passive Pid="@origin">1300001</Passive>
       			<Passive>1840001</Passive>
       			<Passive>1840002</Passive>
       			<Passive>1840003</Passive>
@@ -195,7 +195,7 @@
       			<StartPlayPoint>4</StartPlayPoint>
       			<MaxPlayPoint>4</MaxPlayPoint>
       			<Passive>1800000</Passive>
-      			<Passive>1300001</Passive>
+      			<Passive Pid="@origin">1300001</Passive>
       			<Passive>1860001</Passive>
       			<Passive>1860002</Passive>
       			<Passive>1860003</Passive>
@@ -223,9 +223,9 @@
       			<HBResist>Endure</HBResist>
       			<StartPlayPoint>4</StartPlayPoint>
       			<MaxPlayPoint>4</MaxPlayPoint>
-      			<Passive>10008</Passive>
+      			<Passive Pid="@origin">10008</Passive>
       			<Passive>1800000</Passive>
-      			<Passive>1300001</Passive>
+      			<Passive Pid="@origin">1300001</Passive>
       			<Passive>1870001</Passive>
       			<Passive>1870002</Passive>
       			<Passive>1870004</Passive>
@@ -253,7 +253,7 @@
       			<HBResist>Endure</HBResist>
       			<StartPlayPoint>4</StartPlayPoint>
       			<MaxPlayPoint>4</MaxPlayPoint>
-      			<Passive>10001</Passive>
+      			<Passive Pid="@origin">10001</Passive>
       			<Passive>1800000</Passive>
       			<Passive>1870101</Passive>
       			<Passive>1870102</Passive>
@@ -282,9 +282,9 @@
       		<HBResist>Normal</HBResist>
       		<StartPlayPoint>4</StartPlayPoint>
       		<MaxPlayPoint>4</MaxPlayPoint>
-      		<Passive>10008</Passive>
+      		<Passive Pid="@origin">10008</Passive>
       		<Passive>1800000</Passive>
-      		<Passive>1300001</Passive>
+      		<Passive Pid="@origin">1300001</Passive>
       		<Passive>1880001</Passive>
       		<Passive>1880002</Passive>
     	</EquipEffect>
@@ -311,7 +311,7 @@
       		<HBResist>Normal</HBResist>
       		<StartPlayPoint>4</StartPlayPoint>
       		<MaxPlayPoint>4</MaxPlayPoint>
-      		<Passive>10008</Passive>
+      		<Passive Pid="@origin">10008</Passive>
       		<Passive>1800000</Passive>
 			<Passive>1880101</Passive>
 			<Passive>1880102</Passive>
@@ -339,9 +339,9 @@
       			<HBResist>Endure</HBResist>
       			<StartPlayPoint>4</StartPlayPoint>
       			<MaxPlayPoint>4</MaxPlayPoint>
-      			<Passive>10008</Passive>
+      			<Passive Pid="@origin">10008</Passive>
       			<Passive>1800000</Passive>
-      			<Passive>1300001</Passive>
+      			<Passive Pid="@origin">1300001</Passive>
       			<Passive>1890001</Passive>
       			<Passive>1890002</Passive>
       			<Passive>1890003</Passive>

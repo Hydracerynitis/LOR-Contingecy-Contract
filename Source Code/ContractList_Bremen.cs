@@ -6,6 +6,7 @@ using System.Linq;
 using LOR_DiceSystem;
 using System.Text;
 using System.Threading.Tasks;
+using BaseMod;
 
 namespace Contingecy_Contract
 {
@@ -15,7 +16,7 @@ namespace Contingecy_Contract
         {
             Level = level;
         }
-        public static bool CheckEnemyId(int EnemyId) => EnemyId == 1304011;
+        public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1304011;
         public override ContractType Type => ContractType.Special;
         public override string[] GetFormatParam => new string[] { Level.ToString(), GetParam() };
         private PassiveAbility_1304012 passive=null;
@@ -104,8 +105,8 @@ namespace Contingecy_Contract
         public override void OnCreated()
         {
             base.OnCreated();
-            name = Singleton<PassiveDescXmlList>.Instance.GetName(20210302) + Singleton<ContractXmlList>.Instance.GetContract("Bremen_Self").GetDesc(TextDataModel.CurrentLanguage).name;
-            desc = string.Format(Singleton<ContractXmlList>.Instance.GetContract("Bremen_Self").GetDesc(TextDataModel.CurrentLanguage).desc, this.GetFormatParam);
+            name = Singleton<PassiveDescXmlList>.Instance.GetName(Tools.MakeLorId(20210302)) + Singleton<ContractXmlList>.Instance.GetContract("Bremen_Self").GetDesc().name;
+            desc = string.Format(Singleton<ContractXmlList>.Instance.GetContract("Bremen_Self").GetDesc().desc, this.GetFormatParam);
             rare = Rarity.Unique;
         }
         public override void OnRoundStartAfter()
@@ -237,7 +238,7 @@ namespace Contingecy_Contract
         }
         private double accumulateDamage;
         public override ContractType Type => ContractType.Special;
-        public static bool CheckEnemyId(int EnemyId) => EnemyId == 1304011;
+        public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1304011;
         public override void Init(BattleUnitModel self)
         {
             base.Init(self);

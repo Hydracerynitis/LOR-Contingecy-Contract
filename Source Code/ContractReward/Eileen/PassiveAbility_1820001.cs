@@ -5,6 +5,7 @@ using UnityEngine;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BaseMod;
 
 namespace ContractReward
 {
@@ -65,13 +66,13 @@ namespace ContractReward
             base.OnRoundStart();
             if (trigger)
             {
-                this.owner.allyCardDetail.AddNewCard(18200004).temporary = true;
+                this.owner.allyCardDetail.AddNewCard(Tools.MakeLorId(18200004)).temporary = true;
                 trigger = false;
             }
         }
         public void InitGear(int index)
         {
-            Gear[index] = Harmony_Patch.SummonForPlayer(18210000, 18210000, "Meat Gear");
+            Gear[index] = SummonLiberation.Harmony_Patch.SummonUnit(Faction.Player,Tools.MakeLorId(18210000), Tools.MakeLorId(18210000),PlayerUnitName: "Meat Gear");
             FormationPositionXmlData xml = Singleton<StageController>.Instance.GetCurrentStageFloorModel().GetFormationPosition(owner.index)._xmlInfo;
             Gear[index].formation = new FormationPosition(xml);
             if (index==0)

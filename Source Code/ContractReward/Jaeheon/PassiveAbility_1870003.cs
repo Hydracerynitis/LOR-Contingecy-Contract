@@ -5,6 +5,7 @@ using Sound;
 using LOR_DiceSystem;
 using System.Text;
 using System.Threading.Tasks;
+using BaseMod;
 
 namespace ContractReward
 {
@@ -14,8 +15,8 @@ namespace ContractReward
         public PassiveAbility_1870003(BattleUnitModel unit,BattleUnitModel angelica)
         {
             this.owner = unit;
-            this.name = Singleton<PassiveDescXmlList>.Instance.GetName(1870003);
-            this.desc = Singleton<PassiveDescXmlList>.Instance.GetDesc(1870003);
+            this.name = Singleton<PassiveDescXmlList>.Instance.GetName(Tools.MakeLorId(1870003));
+            this.desc = Singleton<PassiveDescXmlList>.Instance.GetDesc(Tools.MakeLorId(1870003));
             this.rare = Rarity.Unique;
             Angelica = angelica;
         }

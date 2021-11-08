@@ -13,7 +13,7 @@ namespace ContractReward
     {
         public override bool OnChooseCard(BattleUnitModel owner)
         {
-            if (owner.bufListDetail.GetActivatedBufList().Find((Predicate<BattleUnitBuf>)(x => x is BattleUnitBuf_Insanity)) is BattleUnitBuf_Insanity insanity)
+            if (owner.bufListDetail.GetActivatedBufList().Find(x => x is BattleUnitBuf_Insanity) is BattleUnitBuf_Insanity insanity)
             {
                 return insanity.stack > 100;
             }
@@ -22,7 +22,7 @@ namespace ContractReward
         }
         public override void OnUseCard()
         {
-            BattleUnitBuf insanity = this.owner.bufListDetail.GetActivatedBufList().Find((Predicate<BattleUnitBuf>)(x => x is BattleUnitBuf_Insanity));
+            BattleUnitBuf insanity = this.owner.bufListDetail.GetActivatedBufList().Find(x => x is BattleUnitBuf_Insanity);
             insanity.stack -= 100;
             this.card.target.bufListDetail.AddReadyBuf(new NoPower());
         }

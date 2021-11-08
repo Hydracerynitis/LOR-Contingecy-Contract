@@ -6,6 +6,7 @@ using System.Linq;
 using LOR_DiceSystem;
 using System.Text;
 using System.Threading.Tasks;
+using BaseMod;
 
 namespace Contingecy_Contract
 {
@@ -16,7 +17,7 @@ namespace Contingecy_Contract
         {
             this.Level = level;
         }
-        public static bool CheckEnemyId(int EnemyId) => EnemyId == 1301011;
+        public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1301011;
         public override ContractType Type => ContractType.Special;
         public override string[] GetFormatParam => new string[] {TextDataModel.GetText(Param1),(1 + 2 * Level).ToString() };
         private string Param1
@@ -105,7 +106,7 @@ namespace Contingecy_Contract
         {
             this.Level = level;
         }
-        public static bool CheckEnemyId(int EnemyId) => EnemyId == 1301021;
+        public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1301021;
         public override ContractType Type => ContractType.Special;
         public override string[] GetFormatParam => new string[] { AttackPatternText,(20 * Level).ToString() };
         private string AttackPatternText => TextDataModel.GetText("Philip_Silence_param"+Level.ToString());
@@ -139,7 +140,7 @@ namespace Contingecy_Contract
         private Queue<int> Priority;
         private int phase;
         private int pattern;
-        public static bool CheckEnemyId(int EnemyId) => EnemyId == 1301011;
+        public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1301011;
         public override ContractType Type => ContractType.Special;
         public ContingecyContract_Philip(int level)
         {
@@ -230,8 +231,8 @@ namespace Contingecy_Contract
             {
                 PassiveAbilityBase contract = new ContingecyContract_Philip(Level)
                 {
-                    name = Singleton<PassiveDescXmlList>.Instance.GetName(20210302) + Singleton<ContractXmlList>.Instance.GetContract("Philip").GetDesc(TextDataModel.CurrentLanguage).name,
-                    desc = string.Format(Singleton<ContractXmlList>.Instance.GetContract("Philip").GetDesc(TextDataModel.CurrentLanguage).desc, this.GetFormatParam),
+                    name = Singleton<PassiveDescXmlList>.Instance.GetName(Tools.MakeLorId(20210302)) + Singleton<ContractXmlList>.Instance.GetContract("Philip").GetDesc().name,
+                    desc = string.Format(Singleton<ContractXmlList>.Instance.GetContract("Philip").GetDesc().desc, this.GetFormatParam),
                     rare = Rarity.Unique
                 };
                 this.owner.passiveDetail.AddPassive(contract);
@@ -241,8 +242,8 @@ namespace Contingecy_Contract
             {
                 PassiveAbilityBase contract = new ContingecyContract_Philip(Level)
                 {
-                    name = Singleton<PassiveDescXmlList>.Instance.GetName(20210302) + Singleton<ContractXmlList>.Instance.GetContract("Philip").GetDesc(TextDataModel.CurrentLanguage).name,
-                    desc = string.Format(Singleton<ContractXmlList>.Instance.GetContract("Philip").GetDesc(TextDataModel.CurrentLanguage).desc, this.GetFormatParam),
+                    name = Singleton<PassiveDescXmlList>.Instance.GetName(Tools.MakeLorId(20210302)) + Singleton<ContractXmlList>.Instance.GetContract("Philip").GetDesc().name,
+                    desc = string.Format(Singleton<ContractXmlList>.Instance.GetContract("Philip").GetDesc().desc, this.GetFormatParam),
                     rare = Rarity.Unique
                 };
                 this.owner.passiveDetail.AddPassive(contract);

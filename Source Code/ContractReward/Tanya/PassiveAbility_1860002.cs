@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BaseMod;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -36,8 +37,8 @@ namespace ContractReward
             }
             if (this.owner.UnitData.floorBattleData.param1==1)
             {
-                if (this.owner.allyCardDetail.GetAllDeck().Find(x => x.GetID() == 18600006) == null)
-                    this.owner.allyCardDetail.AddNewCardToDeck(18600006);
+                if (this.owner.allyCardDetail.GetAllDeck().Find(x => x.GetID() == Tools.MakeLorId(18600006)) == null)
+                    this.owner.allyCardDetail.AddNewCardToDeck(Tools.MakeLorId(18600006));
                 this.owner.bufListDetail.AddKeywordBufThisRoundByEtc(KeywordBuf.Strength, 2);
                 this.owner.bufListDetail.AddKeywordBufThisRoundByEtc(KeywordBuf.Endurance, 2);
             }

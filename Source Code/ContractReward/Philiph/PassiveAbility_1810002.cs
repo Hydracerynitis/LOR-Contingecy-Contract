@@ -6,6 +6,7 @@ using System.Text;
 using Sound;
 using LOR_DiceSystem;
 using System.Threading.Tasks;
+using BaseMod;
 
 namespace ContractReward
 {
@@ -21,7 +22,7 @@ namespace ContractReward
             Cold = this.owner.allyCardDetail;
             Hot = new BattleAllyCardDetail(owner);
             List<DiceCardXmlInfo> list = new List<DiceCardXmlInfo>();
-            foreach (int i in Singleton<DeckXmlList>.Instance.GetData(18100001).cardIdList)
+            foreach (LorId i in Singleton<DeckXmlList>.Instance.GetData(Tools.MakeLorId(18100001)).cardIdList)
                 list.Add(ItemXmlDataList.instance.GetCardItem(i));
             Hot.Init(list);
             this._loopSound = SingletonBehavior<SoundEffectManager>.Instance.PlayClip("Creature/Philip_StrongLoop", true);
@@ -54,7 +55,7 @@ namespace ContractReward
                     this.owner.view.ChangeSkin("Blue_Philip");
                     this.owner.view.charAppearance.ChangeMotion(ActionDetail.Default);
                     List<PassiveAbilityBase> passive = this.owner.passiveDetail.PassiveList;
-                    PassiveAbility_1810004 hot = passive.Find((Predicate<PassiveAbilityBase>)(x => x is PassiveAbility_1810004)) as PassiveAbility_1810004;
+                    PassiveAbility_1810004 hot = passive.Find(x => x is PassiveAbility_1810004) as PassiveAbility_1810004;
                     hot.Destroy();
                     PassiveAbilityBase cold = new PassiveAbility_1810003(this.owner);
                     passive.Remove(hot);
@@ -78,7 +79,7 @@ namespace ContractReward
                 this.owner.view.charAppearance.ChangeMotion(ActionDetail.S5);
                 this.owner.view.StartCoroutine(this.Transformation());
                 List<PassiveAbilityBase> passive = this.owner.passiveDetail.PassiveList;
-                PassiveAbilityBase cold = passive.Find((Predicate<PassiveAbilityBase>)(x => x is PassiveAbility_1810003));
+                PassiveAbilityBase cold = passive.Find(x => x is PassiveAbility_1810003);
                 PassiveAbilityBase hot = new PassiveAbility_1810004(this.owner);
                 passive.Remove(cold);
                 passive.Add(hot);
@@ -93,7 +94,7 @@ namespace ContractReward
         {
             if (buf.bufType != KeywordBuf.Burn)
                 return 0;
-            this.owner.battleCardResultLog?.SetPassiveAbility((PassiveAbilityBase)this);
+            this.owner.battleCardResultLog?.SetPassiveAbility(this);
             return 1;
         }
         private enum PhilipPhase

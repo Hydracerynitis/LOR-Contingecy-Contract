@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Contingecy_Contract
+namespace Fix
 {
-    public class PassiveAbility_1303013 : PassiveAbilityBase
+    public class PassiveAbility_1303013_New : PassiveAbilityBase
     {
         private int _cardCount;
         private int _patternCount;
@@ -16,7 +16,7 @@ namespace Contingecy_Contract
         private List<BattleUnitModel> _meat = new List<BattleUnitModel>();
         public override int SpeedDiceNumAdder()
         {
-            if (this.owner.passiveDetail.PassiveList.Find(x => x is ContingecyContract_Greta_Feast) is ContingecyContract_Greta_Feast Feast && this._patternCount == 1)
+            if (this.owner.passiveDetail.PassiveList.Find(x => x is Contingecy_Contract.ContingecyContract_Greta_Feast) is Contingecy_Contract.ContingecyContract_Greta_Feast Feast && this._patternCount == 1)
                 return Feast.GetSackNumAdder();
             return base.SpeedDiceNumAdder();
         }
@@ -55,7 +55,7 @@ namespace Contingecy_Contract
                 this._patternCount = 0;
             if (this._patternCount == 1)
                 new GameObject().AddComponent<SpriteFilter_Queenbee_Spore>().Init("EmotionCardFilter/RedHood_Filter", false, 2f);
-            if (owner.passiveDetail.HasPassive<ContingecyContract_Greta>())
+            if (owner.passiveDetail.HasPassive<Contingecy_Contract.ContingecyContract_Greta>())
             {
                 if (Singleton<StageController>.Instance.RoundTurn % 3 == 1 && (owner.bufListDetail.GetActivatedBuf(KeywordBuf.Resistance) == null || owner.bufListDetail.GetActivatedBuf(KeywordBuf.Resistance).stack == 0))
                 {
@@ -91,7 +91,7 @@ namespace Contingecy_Contract
                 if (alive != this.owner && alive.IsTargetable(this.owner) && alive.bufListDetail.GetActivatedBufList().Find((Predicate<BattleUnitBuf>)(x => x is BattleUnitBuf_Greta_Meat)) != null)
                     return alive;
             }
-            if (this.owner.passiveDetail.HasPassive<ContingecyContract_Greta_Salt>())
+            if (this.owner.passiveDetail.HasPassive<Contingecy_Contract.ContingecyContract_Greta_Salt>())
             {
                 List<BattleUnitModel> PurpleTear = new List<BattleUnitModel>();
                 foreach (BattleUnitModel unit in BattleObjectManager.instance.GetAliveList_opponent(owner.faction))
@@ -124,7 +124,7 @@ namespace Contingecy_Contract
                         this.AddNewCard(703313);
                     this.AddNewCard(703314);
                     this.AddNewCard(703314);
-                    if (this.owner.passiveDetail.PassiveList.Find(x => x is ContingecyContract_Greta_Feast) is ContingecyContract_Greta_Feast Feast)
+                    if (this.owner.passiveDetail.PassiveList.Find(x => x is Contingecy_Contract.ContingecyContract_Greta_Feast) is Contingecy_Contract.ContingecyContract_Greta_Feast Feast)
                         for (int i = 0; i < Feast.GetSackNumAdder(); i++)
                             this.AddNewCard(703319);
                     this.AddNewCard(703319);
@@ -132,7 +132,7 @@ namespace Contingecy_Contract
                 case 1:
                 case 2:
                     this.AddNewCard(703315);
-                    if (!owner.passiveDetail.HasPassive<ContingecyContract_Greta_Salt>())
+                    if (!owner.passiveDetail.HasPassive<Contingecy_Contract.ContingecyContract_Greta_Salt>())
                         this.AddNewCard(703316);
                     if ((double)RandomUtil.valueForProb < 0.5)
                         this.AddNewCard(703317);
@@ -140,7 +140,7 @@ namespace Contingecy_Contract
                         this.AddNewCard(703313);
                     this.AddNewCard(703314);
                     this.AddNewCard(703314);
-                    if (owner.passiveDetail.HasPassive<ContingecyContract_Greta_Salt>())
+                    if (owner.passiveDetail.HasPassive<Contingecy_Contract.ContingecyContract_Greta_Salt>())
                         this.AddNewCard(703310);
                     break;
                 case 3:

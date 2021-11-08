@@ -15,7 +15,7 @@ namespace Contingecy_Contract
         {
             Level = level;
         }
-        public static bool CheckEnemyId(int EnemyId) => EnemyId == 1307011;
+        public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1307011;
         public override ContractType Type => ContractType.Special;
         public override string[] GetFormatParam => new string[] { Level.ToString(), (Level - 1).ToString() };
         public override bool isInvincibleHp => BattleObjectManager.instance.GetAliveList(this.owner.faction).Count > 1;
@@ -65,7 +65,7 @@ namespace Contingecy_Contract
         private List<WaitThread> waitThreads;
         public override ContractType Type => ContractType.Special;
         public override string[] GetFormatParam => new string[] { (4 - Level).ToString(), (10+30*Level).ToString() };
-        private bool IsJaeheon => this.owner.UnitData.unitData.EnemyUnitId == 1307011;
+        private bool IsJaeheon => this.owner.UnitData.unitData.EnemyUnitId == new LorId(1307011);
         private bool HasThread(BattleUnitModel unit) => unit.bufListDetail.GetActivatedBuf(KeywordBuf.JaeheonPuppetThread) != null;
         public override int SpeedDiceNumAdder() => HasThread(this.owner) ? 1 : 0;
         public override void OnDrawCard()
@@ -74,7 +74,7 @@ namespace Contingecy_Contract
             if (!HasThread(this.owner))
                 return;
             this.owner.allyCardDetail.ExhaustCardInHand(GetSpecialCardId());
-            this.owner.allyCardDetail.ExhaustCardInDeck(GetSpecialCardId());
+            this.owner.allyCardDetail.ExhaustCardInDeck(new LorId(GetSpecialCardId()));
             this.owner.allyCardDetail.ReturnAllToDeck();
             this.owner.allyCardDetail.DrawCards(this.owner.allyCardDetail.maxHandCount - 2);
             BattleDiceCardModel card=this.owner.allyCardDetail.AddNewCard(GetSpecialCardId());
@@ -130,7 +130,7 @@ namespace Contingecy_Contract
         private int GetSpecialCardId()
         {
             int num = -1;
-            switch (this.owner.UnitData.unitData.EnemyUnitId)
+            switch (this.owner.UnitData.unitData.EnemyUnitId.id)
             {
                 case 1307021:
                     num = 703720;
@@ -149,7 +149,7 @@ namespace Contingecy_Contract
         }
         private class WaitThread
         {
-            public int unitID;
+            public LorId unitID;
             public int waitRound;
         }
     }
@@ -160,7 +160,7 @@ namespace Contingecy_Contract
         {
             this.Level = level;
         }
-        public static bool CheckEnemyId(int EnemyId) => EnemyId == 1307011;
+        public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1307011;
         public override ContractType Type => ContractType.Special;
         public override void OnRoundStart()
         {

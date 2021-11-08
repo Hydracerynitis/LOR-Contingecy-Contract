@@ -8,11 +8,11 @@ namespace ContractReward
 {
     class DiceCardAbility_ElenaExecute: DiceCardAbilityBase
     {
-        public override void BeforRollDice()
+        public override void BeforeRollDice()
         {
             if (behavior.card.target == null)
                 return;
-            base.BeforRollDice();
+            base.BeforeRollDice();
             if (behavior.TargetDice != null)
                 behavior.TargetDice.AddAbility(new DiceCardAbility_invalid());
             this.behavior.ApplyDiceStatBonus(new DiceStatBonus() { dmg = (int)behavior.card.target.hp });

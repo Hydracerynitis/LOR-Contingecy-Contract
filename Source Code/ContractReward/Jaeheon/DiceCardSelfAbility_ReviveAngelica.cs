@@ -13,11 +13,11 @@ namespace ContractReward
     {
         public override bool OnChooseCard(BattleUnitModel owner)
         {
-            return BattleObjectManager.instance.GetFriendlyAllList(owner.faction).Find((Predicate<BattleUnitModel>)(x => x.IsDead()==true))!=null;
+            return BattleObjectManager.instance.GetFriendlyAllList(owner.faction).Find(x => x.IsDead()==true)!=null;
         }
         public override void OnUseInstance(BattleUnitModel unit, BattleDiceCardModel self, BattleUnitModel targetUnit)
         {
-            if (unit.passiveDetail.PassiveList.Find((Predicate<PassiveAbilityBase>)(x => x is PassiveAbility_1870001)) is PassiveAbility_1870001 passive)
+            if (unit.passiveDetail.PassiveList.Find(x => x is PassiveAbility_1870001) is PassiveAbility_1870001 passive)
                 passive.Revive();
             self.exhaust=true;
             base.OnUseInstance(unit, self, targetUnit);

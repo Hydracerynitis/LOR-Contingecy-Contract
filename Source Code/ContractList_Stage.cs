@@ -19,7 +19,7 @@ namespace Contingecy_Contract
         {
             int index = UnityEngine.Random.Range(0, info.waveList.Count);
             StageWaveInfo reinforce = info.waveList[index];
-            info.waveList.Insert(index,Harmony_Patch.CopyXml(reinforce));
+            info.waveList.Insert(index,DeepCopyUtil.CopyXml(reinforce));
         }
     }
     public class ContingecyContract_Duplicate : ContingecyContract

@@ -8,9 +8,9 @@ namespace ContractReward
 {
     public class DiceCardAbility_ParryBurn : DiceCardAbilityBase
     {
-        public override void BeforRollDice()
+        public override void BeforeRollDice()
         {
-            base.BeforRollDice();
+            base.BeforeRollDice();
             if (this.behavior.IsParrying())
             {
                 this.owner.bufListDetail.AddKeywordBufByCard(KeywordBuf.Burn, 1,owner);

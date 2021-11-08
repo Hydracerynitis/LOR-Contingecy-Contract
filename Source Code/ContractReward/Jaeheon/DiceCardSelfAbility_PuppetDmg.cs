@@ -6,6 +6,7 @@ using HarmonyLib;
 using System.Text;
 using LOR_DiceSystem;
 using System.Threading.Tasks;
+using BaseMod;
 
 namespace ContractReward
 {
@@ -17,6 +18,6 @@ namespace ContractReward
             if (FindAngelica() != null)
                 FindAngelica().bufListDetail.AddKeywordBufThisRoundByCard(KeywordBuf.DmgUp,1);
         }
-        private BattleUnitModel FindAngelica() => BattleObjectManager.instance.GetAliveList(this.owner.faction).Find((Predicate<BattleUnitModel>)(x => x.Book.GetBookClassInfoId() == 18710000));
+        private BattleUnitModel FindAngelica() => BattleObjectManager.instance.GetAliveList(this.owner.faction).Find(x => x.Book.GetBookClassInfoId() == Tools.MakeLorId(18710000));
     }
 }

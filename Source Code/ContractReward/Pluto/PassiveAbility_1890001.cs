@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BaseMod;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,11 +12,11 @@ namespace ContractReward
         public override void OnWaveStart()
         {
             base.OnWaveStart();
-            this.owner.personalEgoDetail.AddCard(18900011);
-            this.owner.personalEgoDetail.AddCard(18900012);
-            this.owner.personalEgoDetail.AddCard(18900013);
-            this.owner.personalEgoDetail.AddCard(18900014);
-            this.owner.personalEgoDetail.AddCard(18900015);
+            this.owner.personalEgoDetail.AddCard(Tools.MakeLorId(18900011));
+            this.owner.personalEgoDetail.AddCard(Tools.MakeLorId(18900012));
+            this.owner.personalEgoDetail.AddCard(Tools.MakeLorId(18900013));
+            this.owner.personalEgoDetail.AddCard(Tools.MakeLorId(18900014));
+            this.owner.personalEgoDetail.AddCard(Tools.MakeLorId(18900015));
         }
     }
 }

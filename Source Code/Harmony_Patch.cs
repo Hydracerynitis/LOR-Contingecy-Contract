@@ -15,304 +15,133 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 using HarmonyLib;
+using BaseMod;
 using System.Threading.Tasks;
 using System.Reflection.Emit;
+using Mod;
+using TMPro;
 
 namespace Contingecy_Contract
 {
     public class Harmony_Patch
     {
+        public static int PatchNum;
+        public static Harmony harmony;
         public static List<DiceBehaviour> passive18900002_Makred;
         public static Dictionary<UnitBattleDataModel, int> CombaltData;
-        public static Dictionary<BattleUnitModel, int> UnitBookId;
+        public static Dictionary<BattleUnitModel, LorId> UnitBookId;
         public static Dictionary<int, int> ThumbPathDictionary;
         public static string ModPath;
         public static bool Duel;
         public static ChallengeProgress Progess;
         public Harmony_Patch()
         {
-            Harmony harmony = new Harmony("Hydracerynitis.ContingecyContract");
+            harmony = new Harmony("Hydracerynitis.ContingecyContract");
             ModPath = Path.GetDirectoryName(Uri.UnescapeDataString(new UriBuilder(Assembly.GetExecutingAssembly().CodeBase).Path));
             Debug.ModPatchDebug();
             LoadContract();
             LoadThumb();
+            Duel = false;
+            PatchNum = 0;
             Singleton<ContractLoader>.Instance.bInit=false;
             CombaltData = new Dictionary<UnitBattleDataModel, int>();
             ContractAttribution.Inition = new List<BattleUnitModel>();
-            UnitBookId = new Dictionary<BattleUnitModel, int>();
+            UnitBookId = new Dictionary<BattleUnitModel, LorId>();
             Progess = new ChallengeProgress();
             passive18900002_Makred = new List<DiceBehaviour>();
-            MethodInfo Method1 = typeof(StageNameXmlList).GetMethod("GetName", AccessTools.all);
-            MethodInfo Patch1 = typeof(Harmony_Patch).GetMethod("StageNameXmlList_GetName");
+            ModifyEnsemble();
+            MethodInfo Method1 = typeof(StageNameXmlList).GetMethod("GetName", new Type[] { typeof(int) });
+            Patch(Method1, "StageNameXmlList_GetName_int", false);
+            MethodInfo Method2 =  typeof(StageController).GetMethod("RoundStartPhase_System", AccessTools.all);
+            Patch(Method2, "StageController_RoundStartPhase_System", true);
+            MethodInfo Method3 = typeof(StageController).GetMethod("InitStageByInvitation", AccessTools.all);
+            Patch(Method3, "StageController_InitStageByInvitation", true);
+            MethodInfo Method4 = typeof(StageController).GetMethod("InitStageByEndContentsStage", AccessTools.all);
+            Patch(Method4, "StageController_InitStageByEndContentsStage", true);
+            MethodInfo Method5 = typeof(StageController).GetMethod("EndBattlePhase", AccessTools.all);
+            Patch(Method5, "StageController_EndBattlePhase", true);
+            MethodInfo Method6 = typeof(StageController).GetMethod("GameOver", AccessTools.all);
+            Patch(Method6, "StageController_GameOver", false);
+            MethodInfo Method7 = typeof(LibraryModel).GetMethod("OnClearStage", AccessTools.all);
+            Patch(Method7, "LibraryModel_OnClearStage", false);
+            MethodInfo Method8 = typeof(BattleUnitBuf_Philip_OverHeat).GetMethod("Init", AccessTools.all);
+            Patch(Method8, "BattleUnitBuf_Philip_OverHeat_Init", true);
+            MethodInfo Method9 = typeof(BattleObjectManager).GetMethod("Clear", AccessTools.all);
+            Patch(Method9, "BattleObjectManager_Clear", true);
+            MethodInfo Method10 = typeof(PassiveAbility_1307012).GetMethod("AddThread", AccessTools.all);
+            Patch(Method10, "PassiveAbility_1307012_AddThread", true);
+            MethodInfo Method11 = typeof(StageNameXmlList).GetMethod("GetName", new Type[] { typeof(StageClassInfo) });
+            Patch(Method11, "StageNameXmlList_GetName_xml", false);
+            MethodInfo Method12 = typeof(StageController).GetMethod("InitCommon", AccessTools.all);
+            Patch(Method12, "StageController_InitCommon", true);
+            MethodInfo Method14 = typeof(PlayHistoryModel).GetMethod("LoadFromSaveData", AccessTools.all);
+            Patch(Method14, "PlayHistoryModel_LoadFromSaveData", false);
+            MethodInfo Method15 = typeof(PlayHistoryModel).GetMethod("GetSaveData", AccessTools.all);
+            Patch(Method15, "PlayHistoryModel_GetSaveData", false);
+            MethodInfo Method16 = typeof(BattleCardAbilityDescXmlList).GetMethod("GetAbilityDesc", new Type[]{ typeof(DiceBehaviour)});
+            Patch(Method16, "BattleCardAbilityDescXmlList_GetAbilityDesc", false);
+            MethodInfo Method17 = typeof(StageController).GetMethod("StartAction",AccessTools.all);
+            Patch(Method17, "StageController_StartAction", true);
+            MethodInfo Method18 = typeof(BattleUnitBuf_Resistance).GetMethod("get_keywordId", AccessTools.all);
+            Patch(Method18, "BattleUnitBuf_Resistance_get_keywordId", false);
+            MethodInfo Method19 = typeof(DiceCardSelfAbility_elenaMinionStrong).GetMethod("OnSucceedAttack", new Type[] { });
+            Patch(Method19, "DiceCardSelfAbility_elenaMinionStrong_OnSucceedAttack", false);
+            MethodInfo Method20 = typeof(DiceCardSelfAbility_greta_trample).GetMethod("OnSucceedAttack", new Type[] { });
+            Patch(Method20, "DiceCardSelfAbility_greta_trample_OnSucceedAttack", false);
+            MethodInfo Method21 = typeof(BattleUnitBuf_Greta_Meat_Librarian).GetMethod("OnBreakState", AccessTools.all);
+            Patch(Method21, "BattleUnitBuf_Greta_Meat_Librarian_OnBreakState", false);
+            MethodInfo Method22 = typeof(BattleUnitBuf_Greta_Meat_Librarian).GetMethod("OnDie", AccessTools.all);
+            Patch(Method22, "BattleUnitBuf_Greta_Meat_Librarian_OnDie", true);
+            MethodInfo Method23 = typeof(BattleUnitBuf_Greta_Meat).GetMethod("OnTakeDamageByAttack", AccessTools.all);
+            Patch(Method23, "BattleUnitBuf_Greta_Meat_OnTakeDamageByAttack", true);
+            MethodInfo Method24 = typeof(BattleUnitModel).GetMethod("CheckCardAvailable", AccessTools.all);
+            Patch(Method24, "BattleUnitModel_CheckCardAvailable", false);
+            MethodInfo Method25 = typeof(AssemblyManager).GetMethod("CreateInstance_DiceCardSelfAbility", AccessTools.all);
+            Patch(Method25, "AssemblyManager_CreateInstance_DiceCardSelfAbility", false);
+            MethodInfo Method26 = typeof(AssemblyManager).GetMethod("CreateInstance_BehaviourAction", AccessTools.all);
+            Patch(Method26, "AssemblyManager_CreateInstance_BehaviourAction", false);
+            MethodInfo Method27 = typeof(AssemblyManager).GetMethod("CreateInstance_PassiveAbility", AccessTools.all);
+            Patch(Method27, "AssemblyManager_CreateInstance_PassiveAbility", false);
+            MethodInfo Method28 = typeof(DropBookInventoryModel).GetMethod("GetBookList_invitationBookList", AccessTools.all);
+            Patch(Method28, "DropBookInventoryModel_GetBookList_invitationBookList", false);
+            MethodInfo Method29 = typeof(UIInvitationDropBookSlot).GetMethod("SetData_DropBook", AccessTools.all);
+            Patch(Method29, "UIInvitationDropBookSlot_SetData_DropBook", false);
+            MethodInfo Method30 = typeof(StageController).GetMethod("CheckStoryBeforeBattle", AccessTools.all);
+            Patch(Method30, "StageController_CheckStoryBeforeBattle", true);
+        }
+        public static void Patch(MethodInfo method, string patchName, bool prefix)
+        {
+            PatchNum ++;
+            MethodInfo patch= typeof(Harmony_Patch).GetMethod(patchName);
             try
             {
-                harmony.Patch(Method1, null, new HarmonyMethod(Patch1), null, null,null);
-                Debug.Log("Patch: {0} succeed",Patch1.Name);
+                if (prefix)
+                    harmony.Patch(method, prefix: new HarmonyMethod(patch));
+                else
+                    harmony.Patch(method, postfix: new HarmonyMethod(patch));
+                Debug.Log("Patch {0}: {1} succeed", PatchNum.ToString(),patch.Name);
             }
             catch(Exception ex)
             {
-                Debug.Error("HP_" + Patch1.Name, ex);
-            }
-            MethodInfo Method2 =  typeof(StageController).GetMethod("RoundStartPhase_System", AccessTools.all);
-            MethodInfo Patch2 = typeof(Harmony_Patch).GetMethod("StageController_RoundStartPhase_System");
-            try
-            {
-                harmony.Patch(Method2, new HarmonyMethod(Patch2),null , null, null, null);
-                Debug.Log("Patch: {0} succeed", Patch2.Name);
-            }
-            catch (Exception ex)
-            {
-                Debug.Error("HP_" + Patch2.Name, ex);
-            }
-            MethodInfo Method3 = typeof(StageController).GetMethod("InitStageByInvitation", AccessTools.all);
-            MethodInfo Patch3 = typeof(Harmony_Patch).GetMethod("StageController_InitStageByInvitation");
-            try
-            {
-                harmony.Patch(Method3, new HarmonyMethod(Patch3),null , null, null, null);
-                Debug.Log("Patch: {0} succeed", Patch3.Name);
-            }
-            catch (Exception ex)
-            {
-                Debug.Error("HP_" + Patch3.Name, ex);
-            }
-            MethodInfo Method4 = typeof(StageController).GetMethod("InitStageByEndContentsStage", AccessTools.all);
-            MethodInfo Patch4 = typeof(Harmony_Patch).GetMethod("StageController_InitStageByEndContentsStage");
-            try
-            {
-                harmony.Patch(Method4, new HarmonyMethod(Patch4), null, null, null, null);
-                Debug.Log("Patch: {0} succeed", Patch4.Name);
-            }
-            catch (Exception ex)
-            {
-                Debug.Error("HP_" + Patch4.Name, ex);
-            }
-            MethodInfo Method5 = typeof(StageController).GetMethod("EndBattlePhase", AccessTools.all);
-            MethodInfo Patch5 = typeof(Harmony_Patch).GetMethod("StageController_EndBattlePhase");
-            try
-            {
-                harmony.Patch(Method5, new HarmonyMethod(Patch5), null, null, null, null);
-                Debug.Log("Patch: {0} succeed", Patch5.Name);
-            }
-            catch (Exception ex)
-            {
-                Debug.Error("HP_" + Patch5.Name, ex);
-            }
-            MethodInfo Method6 = typeof(StageController).GetMethod("GameOver", AccessTools.all);
-            MethodInfo Patch6 = typeof(Harmony_Patch).GetMethod("StageController_GameOver");
-            try
-            {
-                harmony.Patch(Method6, null, new HarmonyMethod(Patch6), null, null, null);
-                Debug.Log("Patch: {0} succeed", Patch6.Name);
-            }
-            catch (Exception ex)
-            {
-                Debug.Error("HP_" + Patch6.Name, ex);
-            }
-            MethodInfo Method7 = typeof(LibraryModel).GetMethod("OnClearStage", AccessTools.all);
-            MethodInfo Patch7 = typeof(Harmony_Patch).GetMethod("LibraryModel_OnClearStage");
-            try
-            {
-                harmony.Patch(Method7, null, new HarmonyMethod(Patch7), null, null, null);
-                Debug.Log("Patch: {0} succeed", Patch7.Name);
-            }
-            catch (Exception ex)
-            {
-                Debug.Error("HP_" + Patch7.Name, ex);
-            }
-            MethodInfo Method8 = typeof(BattleUnitBuf_Philip_OverHeat).GetMethod("Init", AccessTools.all);
-            MethodInfo Patch8 = typeof(Harmony_Patch).GetMethod("BattleUnitBuf_Philip_OverHeat_Init");
-            try
-            {
-                harmony.Patch(Method8, new HarmonyMethod(Patch8),null, null, null, null);
-                Debug.Log("Patch: {0} succeed", Patch8.Name);
-            }
-            catch (Exception ex)
-            {
-                Debug.Error("HP_" + Patch8.Name, ex);
-            }
-            MethodInfo Method9 = typeof(BattleObjectManager).GetMethod("Clear", AccessTools.all);
-            MethodInfo Patch9 = typeof(Harmony_Patch).GetMethod("BattleObjectManager_Clear");
-            try
-            {
-                harmony.Patch(Method9, new HarmonyMethod(Patch9), null, null, null, null);
-                Debug.Log("Patch: {0} succeed", Patch9.Name);
-            }
-            catch (Exception ex)
-            {
-                Debug.Error("HP_" + Patch9.Name, ex);
-            }
-            MethodInfo Method10 = typeof(PassiveAbility_1307012).GetMethod("AddThread", AccessTools.all);
-            MethodInfo Patch10 = typeof(Harmony_Patch).GetMethod("PassiveAbility_1307012_AddThread");
-            try
-            {
-                harmony.Patch(Method10, new HarmonyMethod(Patch10), null, null, null, null);
-                Debug.Log("Patch: {0} succeed", Patch10.Name);
-            }
-            catch (Exception ex)
-            {
-                Debug.Error("HP_" + Patch10.Name, ex);
-            }
-            MethodInfo Method11 = typeof(StageController).GetMethod("InitStageByCreature", AccessTools.all);
-            MethodInfo Patch11 = typeof(Harmony_Patch).GetMethod("StageController_InitStageByCreature");
-            try
-            {
-                harmony.Patch(Method11, null , new HarmonyMethod(Patch11), null, null, null);
-                Debug.Log("Patch: {0} succeed", Patch11.Name);
-            }
-            catch (Exception ex)
-            {
-                Debug.Error("HP_" + Patch11.Name, ex);
-            }
-            MethodInfo Method12 = typeof(StageController).GetMethod("InitCommon", AccessTools.all);
-            MethodInfo Patch12 = typeof(Harmony_Patch).GetMethod("StageController_InitCommon");
-            try
-            {
-                harmony.Patch(Method12, new HarmonyMethod(Patch12),null , null, null, null);
-                Debug.Log("Patch: {0} succeed", Patch12.Name);
-            }
-            catch (Exception ex)
-            {
-                Debug.Error("HP_" + Patch12.Name, ex);
-            }
-            MethodInfo Method13 = typeof(BookModel).GetMethod("GetThumbPath", AccessTools.all);
-            MethodInfo Patch13 = typeof(Harmony_Patch).GetMethod("BookModel_GetThumbPath");
-            try
-            {
-                harmony.Patch(Method13,null , new HarmonyMethod(Patch13), null, null, null);
-                Debug.Log("Patch: {0} succeed", Patch13.Name);
-            }
-            catch (Exception ex)
-            {
-                Debug.Error("HP_" + Patch13.Name, ex);
-            }
-            MethodInfo Method14 = typeof(PlayHistoryModel).GetMethod("LoadFromSaveData", AccessTools.all);
-            MethodInfo Patch14 = typeof(Harmony_Patch).GetMethod("PlayHistoryModel_LoadFromSaveData");
-            try
-            {
-                harmony.Patch(Method14, null, new HarmonyMethod(Patch14), null, null, null);
-                Debug.Log("Patch: {0} succeed", Patch14.Name);
-            }
-            catch (Exception ex)
-            {
-                Debug.Error("HP_" + Patch14.Name, ex);
-            }
-            MethodInfo Method15 = typeof(PlayHistoryModel).GetMethod("GetSaveData", AccessTools.all);
-            MethodInfo Patch15 = typeof(Harmony_Patch).GetMethod("PlayHistoryModel_GetSaveData");
-            try
-            {
-                harmony.Patch(Method15, null, new HarmonyMethod(Patch15), null, null, null);
-                Debug.Log("Patch: {0} succeed", Patch15.Name);
-            }
-            catch (Exception ex)
-            {
-                Debug.Error("HP_" + Patch15.Name, ex);
-            }
-            MethodInfo Method16 = typeof(BattleCardAbilityDescXmlList).GetMethod("GetAbilityDesc", new Type[]{ typeof(DiceBehaviour)});
-            MethodInfo Patch16 = typeof(Harmony_Patch).GetMethod("BattleCardAbilityDescXmlList_GetAbilityDesc");
-            try
-            {
-                harmony.Patch(Method16, null, new HarmonyMethod(Patch16), null, null, null);
-                Debug.Log("Patch: {0} succeed", Patch16.Name);
-            }
-            catch (Exception ex)
-            {
-                Debug.Error("HP_" + Patch16.Name, ex);
-            }
-            MethodInfo Method17 = typeof(StageController).GetMethod("StartAction",AccessTools.all);
-            MethodInfo Patch17 = typeof(Harmony_Patch).GetMethod("StageController_StartAction");
-            try
-            {
-                harmony.Patch(Method17, new HarmonyMethod(Patch17), null, null, null, null);
-                Debug.Log("Patch: {0} succeed", Patch17.Name);
-            }
-            catch (Exception ex)
-            {
-                Debug.Error("HP_" + Patch17.Name, ex);
-            }
-            MethodInfo Method18 = typeof(BattleUnitBuf_Resistance).GetMethod("get_keywordId", AccessTools.all);
-            MethodInfo Patch18 = typeof(Harmony_Patch).GetMethod("BattleUnitBuf_Resistance_get_keywordId");
-            try
-            {
-                harmony.Patch(Method18, null, new HarmonyMethod(Patch18), null, null, null);
-                Debug.Log("Patch: {0} succeed", Patch18.Name);
-            }
-            catch (Exception ex)
-            {
-                Debug.Error("HP_" + Patch18.Name, ex);
-            }
-            MethodInfo Method19 = typeof(DiceCardSelfAbility_elenaMinionStrong).GetMethod("OnSucceedAttack", new Type[] { });
-            MethodInfo Patch19 = typeof(Harmony_Patch).GetMethod("DiceCardSelfAbility_elenaMinionStrong_OnSucceedAttack");
-            try
-            {
-                harmony.Patch(Method19, null, new HarmonyMethod(Patch19), null, null, null);
-                Debug.Log("Patch: {0} succeed", Patch19.Name);
-            }
-            catch (Exception ex)
-            {
-                Debug.Error("HP_" + Patch19.Name, ex);
-            }
-            MethodInfo Method20 = typeof(DiceCardSelfAbility_greta_trample).GetMethod("OnSucceedAttack", new Type[] { });
-            MethodInfo Patch20 = typeof(Harmony_Patch).GetMethod("DiceCardSelfAbility_greta_trample_OnSucceedAttack");
-            try
-            {
-                harmony.Patch(Method20, null, new HarmonyMethod(Patch20), null, null, null);
-                Debug.Log("Patch: {0} succeed", Patch20.Name);
-            }
-            catch (Exception ex)
-            {
-                Debug.Error("HP_" + Patch20.Name, ex);
-            }
-            MethodInfo Method21 = typeof(BattleUnitBuf_Greta_Meat_Librarian).GetMethod("OnBreakState", AccessTools.all);
-            MethodInfo Patch21 = typeof(Harmony_Patch).GetMethod("BattleUnitBuf_Greta_Meat_Librarian_OnBreakState");
-            try
-            {
-                harmony.Patch(Method21, null, new HarmonyMethod(Patch21), null, null, null);
-                Debug.Log("Patch: {0} succeed", Patch21.Name);
-            }
-            catch (Exception ex)
-            {
-                Debug.Error("HP_" + Patch21.Name, ex);
-            }
-            MethodInfo Method22 = typeof(BattleUnitBuf_Greta_Meat_Librarian).GetMethod("OnDie", AccessTools.all);
-            MethodInfo Patch22 = typeof(Harmony_Patch).GetMethod("BattleUnitBuf_Greta_Meat_Librarian_OnDie");
-            try
-            {
-                harmony.Patch(Method22, new HarmonyMethod(Patch22),null , null, null, null);
-                Debug.Log("Patch: {0} succeed", Patch22.Name);
-            }
-            catch (Exception ex)
-            {
-                Debug.Error("HP_" + Patch22.Name, ex);
-            }
-            MethodInfo Method23 = typeof(BattleUnitBuf_Greta_Meat).GetMethod("OnTakeDamageByAttack", AccessTools.all);
-            MethodInfo Patch23 = typeof(Harmony_Patch).GetMethod("BattleUnitBuf_Greta_Meat_OnTakeDamageByAttack");
-            try
-            {
-                harmony.Patch(Method23, new HarmonyMethod(Patch23), null, null, null, null);
-                Debug.Log("Patch: {0} succeed", Patch23.Name);
-            }
-            catch (Exception ex)
-            {
-                Debug.Error("HP_" + Patch23.Name, ex);
-            }
-            MethodInfo Method24 = typeof(BattleUnitModel).GetMethod("CheckCardAvailable", AccessTools.all);
-            MethodInfo Patch24 = typeof(Harmony_Patch).GetMethod("BattleUnitModel_CheckCardAvailable");
-            try
-            {
-                harmony.Patch(Method24, null, new HarmonyMethod(Patch24), null, null, null);
-                Debug.Log("Patch: {0} succeed", Patch24.Name);
-            }
-            catch (Exception ex)
-            {
-                Debug.Error("HP_" + Patch24.Name, ex);
+                Debug.Error(PatchNum.ToString() + " :HP_" + patch.Name, ex);
             }
         }
-        public static void StageNameXmlList_GetName(ref string __result,int id)
+        public static void StageNameXmlList_GetName_int(ref string __result,int id)
         {
-            if (CheckDuel(id) || id== 1800000)
+            LorId newId = new LorId(id);
+            if (CheckDuel(newId) || CheckPlaceHolder(newId))
                 return;
-            Singleton<ContractLoader>.Instance.Init();
-            __result = TextDataModel.GetText("ui_ContingecyLevel", (object)Singleton<ContractLoader>.Instance.GetLevel(id), (object)__result);
+            if(Singleton<StageController>.Instance.battleState==StageController.BattleState.None)
+                Singleton<ContractLoader>.Instance.Init();
+            __result = TextDataModel.GetText("ui_ContingecyLevel", (object)Singleton<ContractLoader>.Instance.GetLevel(newId), (object)__result);
+        }
+        public static void StageNameXmlList_GetName_xml(ref string __result, StageClassInfo stageInfo)
+        {
+            if (CheckDuel(stageInfo.id) || CheckPlaceHolder(stageInfo.id))
+                return;
+            if (Singleton<StageController>.Instance.battleState == StageController.BattleState.None)
+                Singleton<ContractLoader>.Instance.Init();
+            __result = TextDataModel.GetText("ui_ContingecyLevel", (object)Singleton<ContractLoader>.Instance.GetLevel(stageInfo), (object)__result);
         }
         public static bool StageController_RoundStartPhase_System()
         {
@@ -330,7 +159,7 @@ namespace Contingecy_Contract
         {
             Duel = false;
             if (CheckDuel(stage.id))
-                Duel = true;      
+                Duel = true;
         }
         public static void StageController_InitStageByEndContentsStage(StageClassInfo stage)
         {
@@ -338,14 +167,11 @@ namespace Contingecy_Contract
             if (CheckDuel(stage.id))
                 Duel = true;
         }
-        public static void StageController_InitStageByCreature()
-        {
-        }
         public static void StageController_InitCommon(ref StageClassInfo stage)
         {
             if (Duel)
                 return;
-            stage = CopyXml(stage);
+            stage = DeepCopyUtil.CopyXml(stage);
             ContractModification.Init(stage);
         }
         public static bool StageController_EndBattlePhase()
@@ -371,15 +197,12 @@ namespace Contingecy_Contract
         {
             CombaltData.Clear();
         }
-        public static void LibraryModel_OnClearStage(int stageId)
+        public static void LibraryModel_OnClearStage(LorId stageId)
         {
             StageClassInfo info=Singleton<StageClassInfoList>.Instance.GetData(stageId);
             Singleton<ContractRewardSystem>.Instance.CheckReward(info);
-        }
-        public static void BookModel_GetThumbPath(ref string __result,BookXmlInfo ____classInfo)
-        {
-            if(ThumbPathDictionary.ContainsKey(____classInfo.id))
-                __result= "Sprites/Books/Thumb/" + ThumbPathDictionary[____classInfo.id].ToString();
+            if (LibraryModel.Instance.PlayHistory.Clear_EndcontentsAllStage == 1 && stageId == 70010)
+                LibraryModel.Instance.PlayHistory.Start_TheBlueReverberationPrimaryBattle = 0;
         }
         public static void PlayHistoryModel_LoadFromSaveData(SaveData data)
         {
@@ -399,7 +222,11 @@ namespace Contingecy_Contract
                 unit.Book.SetSpeedDiceMin(unit.Book.ClassInfo.EquipEffect.SpeedMin);
                 unit.Book.GetType().GetField("_maxPlayPoint", AccessTools.all).SetValue(unit.Book, unit.Book.ClassInfo.EquipEffect.MaxPlayPoint);
                 if (UnitBookId.ContainsKey(unit))
-                    unit.Book.ClassInfo.id = UnitBookId[unit];
+                {
+                    unit.Book.ClassInfo._id = UnitBookId[unit].id;
+                    unit.Book.ClassInfo.workshopID = UnitBookId[unit].packageId;
+                }
+
             }
             UnitBookId.Clear();
             return true;
@@ -498,7 +325,6 @@ namespace Contingecy_Contract
         {
             if (____owner != null && ____owner.Book != null && ____owner.Book.GetBookClassInfoId() == 18300000)
                 __result = "Resistance";
-
         }
         public static void DiceCardSelfAbility_greta_trample_OnSucceedAttack(DiceCardSelfAbility_greta_trample __instance)
         {
@@ -549,9 +375,75 @@ namespace Contingecy_Contract
             owner.battleCardResultLog?.SetCreatureEffectSound(src);
             return false;
         }
-        public static bool CheckDuel(int stageId)
+        public static void AssemblyManager_CreateInstance_DiceCardSelfAbility(ref DiceCardSelfAbilityBase __result)
+        {
+            if (__result is DiceCardSelfAbility_Jaeheon_AreaDt)
+                __result = new Fix.DiceCardSelfAbility_Jaeheon_AreaDt_New();
+        }
+        public static void AssemblyManager_CreateInstance_BehaviourAction(ref BehaviourActionBase __result)
+        {
+            if (__result is BehaviourAction_TanyaSpecialAtk)
+                __result = new Fix.BehaviourAction_TanyaSpecialAtk_New();
+        }
+        public static void AssemblyManager_CreateInstance_PassiveAbility(ref PassiveAbilityBase __result)
+        {
+            if (__result is PassiveAbility_1302013)
+                __result = new Fix.PassiveAbility_1302013_New();
+            else if (__result is PassiveAbility_1303012)
+                __result = new Fix.PassiveAbility_1303012_New();
+            else if (__result is PassiveAbility_1303013)
+                __result = new Fix.PassiveAbility_1303013_New();
+        }
+        public static void DropBookInventoryModel_GetBookList_invitationBookList(ref List<LorId> __result)
+        {
+            if (LibraryModel.Instance.PlayHistory.Clear_EndcontentsAllStage == 1)
+            {
+                __result.Add(Tools.MakeLorId(70001));
+                __result.Add(Tools.MakeLorId(70002));
+                __result.Add(Tools.MakeLorId(70003));
+                __result.Add(Tools.MakeLorId(70004));
+                __result.Add(Tools.MakeLorId(70005));
+                __result.Add(Tools.MakeLorId(70006));
+                __result.Add(Tools.MakeLorId(70007));
+                __result.Add(Tools.MakeLorId(70008));
+                __result.Add(Tools.MakeLorId(70009));
+                __result.Add(Tools.MakeLorId(70010));
+            }
+        }
+        public static void UIInvitationDropBookSlot_SetData_DropBook(ref TextMeshProUGUI ___txt_bookNum, LorId bookId)
+        {
+            if (Singleton<DropBookInventoryModel>.Instance.GetBookCount(bookId) == 0)
+                ___txt_bookNum.text = "∞";
+        }
+        public static void ModifyEnsemble()
+        {
+            List<StageClassInfo> Ensemble = Singleton<StageClassInfoList>.Instance.GetAllDataList().FindAll(x => x.id.IsBasic() && x.id.id >= 70001 && x.id.id <= 70010);
+            foreach (StageClassInfo info in Ensemble)
+            {
+                if (info.invitationInfo.combine != StageCombineType.BookRecipe)
+                {
+                    info.invitationInfo.needsBooks.Add(Tools.MakeLorId(info.id.id));
+                    Singleton<StageClassInfoList>.Instance.recipeCondList.Add(info);
+                }
+            }
+        }
+        public static bool StageController_CheckStoryBeforeBattle(ref bool __result)
+        {
+            LorId id = Singleton<StageController>.Instance.GetStageModel().ClassInfo.id;
+            if (id.IsBasic() && id.id >= 70001 && id.id <= 70010 && LibraryModel.Instance.PlayHistory.Clear_EndcontentsAllStage == 1 && LibraryModel.Instance.PlayHistory.Start_TheBlueReverberationPrimaryBattle == 0)
+            {
+                __result = false;
+                return false;
+            }
+            return true;
+        }
+        public static bool CheckDuel(LorId stageId)
         {
             return stageId == 60002 || stageId == 70010 || stageId == 60007;
+        }
+        public static bool CheckPlaceHolder(LorId stageId)
+        {
+            return stageId == Tools.MakeLorId(1800000) || stageId == Tools.MakeLorId(1800007);
         }
         public static void LoadContract()
         {
@@ -570,7 +462,7 @@ namespace Contingecy_Contract
                     }
                     catch (Exception ex)
                     {
-                        Debug.Error("XMl", ex);
+                        Debug.Error("XML", ex);
                     }
                 }
             }
@@ -600,95 +492,6 @@ namespace Contingecy_Contract
                     Debug.Error("ThumbLoadError", ex);
                 }
             }
-        }
-        public static StageClassInfo CopyXml(StageClassInfo info)
-        {
-            StageClassInfo output = new StageClassInfo
-            {
-                id = info.id,
-                waveList = new List<StageWaveInfo>(),
-                stageType = info.stageType,
-                mapInfo = new List<string>(),
-                floorNum = info.floorNum,
-                chapter = info.chapter,
-                invitationInfo = CopyXml(info.invitationInfo),
-                extraCondition = CopyXml(info.extraCondition),
-                storyList = new List<StageStoryInfo>(),
-                isChapterLast = info.isChapterLast,
-                _storyType = info._storyType,
-                isStageFixedNormal = info.isStageFixedNormal,
-                floorOnlyList = new List<SephirahType>(),
-                exceptFloorList = new List<SephirahType>(),
-                rewardList = new List<BookDropItemInfo>()
-            };
-            foreach (StageWaveInfo wave in info.waveList)
-                output.waveList.Add(CopyXml(wave));
-            output.mapInfo.AddRange(info.mapInfo);
-            foreach (StageStoryInfo story in info.storyList)
-                output.storyList.Add(CopyXml(story));
-            output.floorOnlyList.AddRange(info.floorOnlyList);
-            output.exceptFloorList.AddRange(info.exceptFloorList);
-            foreach (BookDropItemInfo reward in info.rewardList)
-                output.rewardList.Add(CopyXml(reward));
-            return output;
-        }
-        public static StageWaveInfo CopyXml(StageWaveInfo info)
-        {
-            StageWaveInfo output = new StageWaveInfo
-            {
-                enemyUnitIdList = new List<int>(),
-                formationId = info.formationId,
-                formationType = info.formationType,
-                availableNumber = info.availableNumber,
-                aggroScript = info.aggroScript,
-                managerScript = info.managerScript
-            };
-            output.enemyUnitIdList.AddRange(info.enemyUnitIdList);
-            return output;
-        }
-        public static StageInvitationInfo CopyXml(StageInvitationInfo info)
-        {
-            StageInvitationInfo output = new StageInvitationInfo
-            {
-                combine = info.combine,
-                needsBooks = new List<int>(),
-                bookNum = info.bookNum,
-                bookValue = info.bookValue
-            };
-            output.needsBooks.AddRange(info.needsBooks);
-            return output;
-        }
-        public static StageExtraCondition CopyXml(StageExtraCondition info)
-        {
-            StageExtraCondition output = new StageExtraCondition
-            {
-                needClearStageList = new List<int>(),
-                needLevel = info.needLevel
-            };
-            output.needClearStageList.AddRange(info.needClearStageList);
-            return output;
-        }
-        public static StageStoryInfo CopyXml(StageStoryInfo info)
-        {
-            StageStoryInfo output = new StageStoryInfo
-            {
-                cond = info.cond,
-                story = info.story,
-                valid = info.valid,
-                chapter = info.chapter,
-                group = info.group,
-                episode = info.episode
-            };
-            return output;
-        }
-        public static BookDropItemInfo CopyXml(BookDropItemInfo info)
-        {
-            BookDropItemInfo output = new BookDropItemInfo
-            {
-                id = info.id,
-                itemType = info.itemType
-            };
-            return output;
         }
     }
 }

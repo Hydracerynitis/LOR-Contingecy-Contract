@@ -4,6 +4,7 @@ using LOR_DiceSystem;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BaseMod;
 
 namespace ContractReward
 {
@@ -12,8 +13,8 @@ namespace ContractReward
         public PassiveAbility_1870101(BattleUnitModel unit)
         {
             this.owner = unit;
-            this.name = Singleton<PassiveDescXmlList>.Instance.GetName(1870101);
-            this.desc = Singleton<PassiveDescXmlList>.Instance.GetDesc(1870101);
+            this.name = Singleton<PassiveDescXmlList>.Instance.GetName(Tools.MakeLorId(1870101));
+            this.desc = Singleton<PassiveDescXmlList>.Instance.GetDesc(Tools.MakeLorId(1870101));
             this.rare = Rarity.Rare;
         }
         public override void BeforeRollDice(BattleDiceBehavior behavior)
