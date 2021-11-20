@@ -199,4 +199,9 @@
     		<CanGivePassive>false</CanGivePassive>
 		<Cost>4</Cost>
   	</Passive>
+	<Passive ID="1890004">
+		<Rarity>Unique</Rarity>
+    		<CanGivePassive>false</CanGivePassive>
+		<Cost>5</Cost>
+  	</Passive>
 </PassiveXmlRoot>

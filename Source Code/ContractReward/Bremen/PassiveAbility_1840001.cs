@@ -32,7 +32,7 @@ namespace ContractReward
                 return;
             SingletonBehavior<BattleManagerUI>.Instance.ui_unitListInfoSummary.UpdateCharacterProfile(owner, owner.faction, owner.hp, owner.breakDetail.breakGauge);
             LorId newId = Tools.MakeLorId(cardId);
-            BattleDiceCardModel card = this.owner.allyCardDetail.AddTempCard(cardId);
+            BattleDiceCardModel card = this.owner.allyCardDetail.AddTempCard(newId);
             if (target != null)
             {
                 int targetSlot = UnityEngine.Random.Range(0, target.speedDiceResult.Count);

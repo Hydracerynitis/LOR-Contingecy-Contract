@@ -12,12 +12,10 @@ namespace Contingecy_Contract
     public class ContractLoader: Singleton<ContractLoader>
     {
         public bool bInit;
-        private List<Contract> PassiveList;
-        private List<Contract> StageList;
+        private List<Contract> PassiveList = new List<Contract>();
+        private List<Contract> StageList = new List<Contract>();
         public void Init()
         {
-            PassiveList = new List<Contract>();
-            StageList = new List<Contract>();
             Debug.PathDebug("/ContractLoader.txt", PathType.File);
             Debug.Log("----- Start Loading Contract -----");
             foreach (string readAllLine in File.ReadAllLines(Harmony_Patch.ModPath + "/ContractLoader.txt"))

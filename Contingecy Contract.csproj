@@ -98,6 +98,7 @@
     <Compile Include="Source Code\ContractReward\Elena\DiceCardAbility_ElenaExecute.cs" />
     <Compile Include="Source Code\ContractReward\Elena\DiceCardSelfAbility_ElenaZombie.cs" />
     <Compile Include="Source Code\ContractReward\Elena\DiceCardSelfAbility_ElenaBuff.cs" />
+    <Compile Include="Source Code\ContractReward\Pluto\PassiveAbility_1890004.cs" />
     <Compile Include="Source Code\DeepCopyUtil.cs" />
     <Compile Include="Source Code\Fix\BehaviourAction_TanyaSpecialAtk.cs" />
     <Compile Include="Source Code\Fix\PassiveAbility_1303013.cs" />

@@ -18,5 +18,11 @@ namespace ContractReward
             this.owner.personalEgoDetail.AddCard(Tools.MakeLorId(18900014));
             this.owner.personalEgoDetail.AddCard(Tools.MakeLorId(18900015));
         }
+        public override void OnDrawCard()
+        {
+            base.OnDrawCard();
+            if (owner.allyCardDetail.GetHand().Count <= 4)
+                owner.allyCardDetail.DrawCards(1);
+        }
     }
 }

@@ -108,6 +108,8 @@ namespace Contingecy_Contract
             Patch(Method29, "UIInvitationDropBookSlot_SetData_DropBook", false);
             MethodInfo Method30 = typeof(StageController).GetMethod("CheckStoryBeforeBattle", AccessTools.all);
             Patch(Method30, "StageController_CheckStoryBeforeBattle", true);
+            MethodInfo Method31 = typeof(DiceBehaviour).GetMethod("Copy", AccessTools.all);
+            Patch(Method31, "DiceBehaviour_Copy", false);
         }
         public static void Patch(MethodInfo method, string patchName, bool prefix)
         {
@@ -128,20 +130,26 @@ namespace Contingecy_Contract
         }
         public static void StageNameXmlList_GetName_int(ref string __result,int id)
         {
-            LorId newId = new LorId(id);
-            if (CheckDuel(newId) || CheckPlaceHolder(newId))
-                return;
-            if(Singleton<StageController>.Instance.battleState==StageController.BattleState.None)
-                Singleton<ContractLoader>.Instance.Init();
-            __result = TextDataModel.GetText("ui_ContingecyLevel", (object)Singleton<ContractLoader>.Instance.GetLevel(newId), (object)__result);
+            if(UI.UIController.Instance.CurrentUIPhase==UIPhase.Invitation || UI.UIController.Instance.CurrentUIPhase == UIPhase.BattleSetting || UI.UIController.Instance.CurrentUIPhase==UIPhase.DUMMY)
+            {
+                LorId newId = new LorId(id);
+                if (CheckDuel(newId) || CheckPlaceHolder(newId))
+                    return;
+                if (Singleton<StageController>.Instance.battleState == StageController.BattleState.None)
+                    Singleton<ContractLoader>.Instance.Init();
+                __result = TextDataModel.GetText("ui_ContingecyLevel", (object)Singleton<ContractLoader>.Instance.GetLevel(newId), (object)__result);
+            }
         }
         public static void StageNameXmlList_GetName_xml(ref string __result, StageClassInfo stageInfo)
         {
-            if (CheckDuel(stageInfo.id) || CheckPlaceHolder(stageInfo.id))
-                return;
-            if (Singleton<StageController>.Instance.battleState == StageController.BattleState.None)
-                Singleton<ContractLoader>.Instance.Init();
-            __result = TextDataModel.GetText("ui_ContingecyLevel", (object)Singleton<ContractLoader>.Instance.GetLevel(stageInfo), (object)__result);
+            if (UI.UIController.Instance.CurrentUIPhase == UIPhase.Invitation || UI.UIController.Instance.CurrentUIPhase == UIPhase.BattleSetting || UI.UIController.Instance.CurrentUIPhase == UIPhase.DUMMY)
+            {
+                if (CheckDuel(stageInfo.id) || CheckPlaceHolder(stageInfo.id))
+                    return;
+                if (Singleton<StageController>.Instance.battleState == StageController.BattleState.None)
+                    Singleton<ContractLoader>.Instance.Init();
+                __result = TextDataModel.GetText("ui_ContingecyLevel", (object)Singleton<ContractLoader>.Instance.GetLevel(stageInfo), (object)__result);
+            }
         }
         public static bool StageController_RoundStartPhase_System()
         {
@@ -415,18 +423,6 @@ namespace Contingecy_Contract
             if (Singleton<DropBookInventoryModel>.Instance.GetBookCount(bookId) == 0)
                 ___txt_bookNum.text = "∞";
         }
-        public static void ModifyEnsemble()
-        {
-            List<StageClassInfo> Ensemble = Singleton<StageClassInfoList>.Instance.GetAllDataList().FindAll(x => x.id.IsBasic() && x.id.id >= 70001 && x.id.id <= 70010);
-            foreach (StageClassInfo info in Ensemble)
-            {
-                if (info.invitationInfo.combine != StageCombineType.BookRecipe)
-                {
-                    info.invitationInfo.needsBooks.Add(Tools.MakeLorId(info.id.id));
-                    Singleton<StageClassInfoList>.Instance.recipeCondList.Add(info);
-                }
-            }
-        }
         public static bool StageController_CheckStoryBeforeBattle(ref bool __result)
         {
             LorId id = Singleton<StageController>.Instance.GetStageModel().ClassInfo.id;
@@ -436,6 +432,24 @@ namespace Contingecy_Contract
                 return false;
             }
             return true;
+        }
+        public static void DiceBehaviour_Copy(DiceBehaviour __instance, DiceBehaviour __result)
+        {
+            if(passive18900002_Makred.Contains(__instance))
+                passive18900002_Makred.Add(__result);
+        }
+        public static void ModifyEnsemble()
+        {
+            List<StageClassInfo> Ensemble = Singleton<StageClassInfoList>.Instance.GetAllDataList().FindAll(x => x.id.IsBasic() && x.id.id >= 70001 && x.id.id <= 70010);
+            foreach (StageClassInfo info in Ensemble)
+            {
+                if (info.invitationInfo.combine != StageCombineType.BookRecipe)
+                {
+                    info.invitationInfo.combine = StageCombineType.BookRecipe;
+                    info.invitationInfo.needsBooks.Add(Tools.MakeLorId(info.id.id));
+                    Singleton<StageClassInfoList>.Instance.recipeCondList.Add(info);
+                }
+            }
         }
         public static bool CheckDuel(LorId stageId)
         {

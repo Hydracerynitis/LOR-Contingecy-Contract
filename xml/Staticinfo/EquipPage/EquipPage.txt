@@ -327,8 +327,8 @@
    		 <TextId>18900000</TextId>
     		<Category>DeckFixed</Category>
     		<EquipEffect>
-      			<HP>100</HP>
-      			<Break>200</Break>
+      			<HP>150</HP>
+      			<Break>225</Break>
       			<SpeedMin>2</SpeedMin>
       			<Speed>7</Speed>
       			<SResist>Normal</SResist>
@@ -340,9 +340,9 @@
       			<StartPlayPoint>4</StartPlayPoint>
       			<MaxPlayPoint>4</MaxPlayPoint>
       			<Passive Pid="@origin">10008</Passive>
-      			<Passive>1800000</Passive>
       			<Passive Pid="@origin">1300001</Passive>
       			<Passive>1890001</Passive>
+      			<Passive>1890004</Passive>
       			<Passive>1890002</Passive>
       			<Passive>1890003</Passive>
     		</EquipEffect>
