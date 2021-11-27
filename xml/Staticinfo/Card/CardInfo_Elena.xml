@@ -106,6 +106,19 @@
         <Chapter>7</Chapter>
         <Priority>0</Priority>
     </Card>
+	<Card ID="18800008">
+		<Name>清纯血液</Name>
+		<Artwork>Elena1</Artwork>
+		<Rarity>Rare</Rarity>
+    	<Option>Personal</Option>
+		<Spec Range="Instance" Cost="2"/>
+		<Script>SacrificeHp</Script>
+    	<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+    	</BehaviourList>
+    	<Chapter>7</Chapter>
+    	<Priority>0</Priority>
+	</Card>
     <Card ID="18810001">
         <Name>十字剑斩</Name>
         <Artwork>Orange1</Artwork>

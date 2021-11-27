@@ -90,6 +90,7 @@
 	<Passive ID="1840001">
 		<Rarity>Unique</Rarity>
     		<CanGivePassive>false</CanGivePassive>
+			<InnerType>1</InnerType>
 		<Cost>6</Cost>
   	</Passive>
 	<Passive ID="1840002">
@@ -172,6 +173,11 @@
     		<CanGivePassive>false</CanGivePassive>
 		<Cost>6</Cost>
   	</Passive>
+	<Passive ID="1880004">
+		<Rarity>Unique</Rarity>
+    		<CanGivePassive>false</CanGivePassive>
+		<Cost>4</Cost>
+  	</Passive>
 	<!-- 朱红十字-->
 	<Passive ID="1880101">
 		<Rarity>Unique</Rarity>
@@ -179,6 +185,11 @@
 		<Cost>6</Cost>
   	</Passive>
 	<Passive ID="1880102">
+		<Rarity>Unique</Rarity>
+    		<CanGivePassive>false</CanGivePassive>
+		<Cost>6</Cost>
+  	</Passive>
+	<Passive ID="1880103">
 		<Rarity>Unique</Rarity>
     		<CanGivePassive>false</CanGivePassive>
 		<Cost>6</Cost>

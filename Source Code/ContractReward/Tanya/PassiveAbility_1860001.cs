@@ -12,7 +12,7 @@ namespace ContractReward
         public override int SpeedDiceNumAdder()
         {
             int num1 = 0;
-            int num2 = this.owner.emotionDetail.SpeedDiceNumAdder();
+            int num2 = owner.emotionDetail.SpeedDiceNumAdder();
             if (num2 > 0)
                 num1 = -num2;
             return num1;
@@ -27,17 +27,17 @@ namespace ContractReward
         {
             if (owner.IsBreakLifeZero())
                 return null;
-            List<BattleDiceCardModel> hand = this.owner.allyCardDetail.GetHand().FindAll(x => x.GetCost() <= this.owner.cardSlotDetail.PlayPoint - this.owner.cardSlotDetail.ReservedPlayPoint && CheckRange(x.XmlData.Spec.Ranged));
+            List<BattleDiceCardModel> hand = this.owner.allyCardDetail.GetHand().FindAll(x => x.GetCost() <= owner.cardSlotDetail.PlayPoint - owner.cardSlotDetail.ReservedPlayPoint && CheckRange(x.XmlData.Spec.Ranged));
             if (hand.Count <= 0)
                 return null;
-            BattleDiceCardModel card = hand[0];
+            BattleDiceCardModel card = hand[-1];
             owner.allyCardDetail.UseCard(card);
             owner.allyCardDetail.SpendCard(card);
             owner.cardSlotDetail.ReserveCost(card.GetCost());
             owner.cardSlotDetail.SpendCost(card.GetCost());
             BattlePlayingCardDataInUnitModel retaliate = new BattlePlayingCardDataInUnitModel()
             {
-                owner = this.owner,
+                owner = owner,
                 card = card,
                 cardAbility = card.CreateDiceCardSelfAbilityScript(),
                 target = attackerCard.owner,

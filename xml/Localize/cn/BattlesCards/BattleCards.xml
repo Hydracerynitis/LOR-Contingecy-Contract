@@ -261,6 +261,9 @@
 		<BattleCardDesc ID="18800007">
 			<LocalizedName>血管盛宴</LocalizedName>
 		</BattleCardDesc>
+		<BattleCardDesc ID="18800008">
+			<LocalizedName>纯净血液</LocalizedName>
+		</BattleCardDesc>
 		<!--朱红十字-->
 		<BattleCardDesc ID="18810001">
 			<LocalizedName>十字剑斩</LocalizedName>

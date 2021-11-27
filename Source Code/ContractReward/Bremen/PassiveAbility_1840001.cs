@@ -15,29 +15,26 @@ namespace ContractReward
         private List<Head> AvailableHead = new List<Head>() { Head.Donkey, Head.Chicken, Head.Dog};
         private Head currentHead = Head.Chicken;
         public override int SpeedDiceNumAdder() => 1;
-        public override bool AllowTargetChanging(BattleUnitModel attacker, int myCardSlotIdx)
-        {
-            return myCardSlotIdx != this.owner.speedDiceCount - 1;
-        }
+        public override bool AllowTargetChanging(BattleUnitModel attacker, int myCardSlotIdx) => myCardSlotIdx != owner.speedDiceCount - 1;
         public override void OnAfterRollSpeedDice()
         {
-            int index = this.owner.speedDiceCount-1;
-            this.owner.SetCurrentOrder(index);
-            this.owner.speedDiceResult[index].isControlable = false;
+            int index = owner.speedDiceCount-1;
+            owner.SetCurrentOrder(index);
+            owner.speedDiceResult[index].isControlable = false;
             do
                 currentHead = GetHead(currentHead);
             while (!AvailableHead.Contains(currentHead));
             int cardId = GetCard(out BattleUnitModel target);
             if (cardId == -1)
                 return;
-            SingletonBehavior<BattleManagerUI>.Instance.ui_unitListInfoSummary.UpdateCharacterProfile(owner, owner.faction, owner.hp, owner.breakDetail.breakGauge);
             LorId newId = Tools.MakeLorId(cardId);
-            BattleDiceCardModel card = this.owner.allyCardDetail.AddTempCard(newId);
+            BattleDiceCardModel card = owner.allyCardDetail.AddTempCard(newId);
             if (target != null)
             {
                 int targetSlot = UnityEngine.Random.Range(0, target.speedDiceResult.Count);
-                this.owner.cardSlotDetail.AddCard(card, target, targetSlot);
+                owner.cardSlotDetail.AddCard(card, target, targetSlot);
             }
+            SingletonBehavior<BattleManagerUI>.Instance.ui_unitListInfoSummary.UpdateCharacterProfile(owner, owner.faction, owner.hp, owner.breakDetail.breakGauge);
             SingletonBehavior<BattleManagerUI>.Instance.ui_TargetArrow.UpdateTargetList();
         }
         private Head GetHead(Head head)

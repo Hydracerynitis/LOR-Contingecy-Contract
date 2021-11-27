@@ -287,6 +287,7 @@
       		<Passive Pid="@origin">1300001</Passive>
       		<Passive>1880001</Passive>
       		<Passive>1880002</Passive>
+      		<Passive>1880004</Passive>
     	</EquipEffect>
     	<BookIcon>ContingencyReward</BookIcon>
     	<Chapter>7</Chapter>
@@ -315,12 +316,13 @@
       		<Passive>1800000</Passive>
 			<Passive>1880101</Passive>
 			<Passive>1880102</Passive>
+			<Passive>1880103</Passive>
     	</EquipEffect>
     	<BookIcon>ContingencyReward</BookIcon>
     	<Chapter>7</Chapter>
     	<Episode>1800007</Episode>
     	<Rarity>Unique</Rarity>
-    	<CharacterSkin>Custom_OrangeCross</CharacterSkin>
+    	<CharacterSkin>OrangeCross</CharacterSkin>
   	</Book>
   	<Book ID="18900000">
     		<Name>普鲁托</Name>

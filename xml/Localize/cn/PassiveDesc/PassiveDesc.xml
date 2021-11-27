@@ -109,7 +109,7 @@
 	<PassiveDesc ID="1860001">
 		<Name>群殴法则</Name> 
 		<Desc>该角色无法在情感4级时获得额外的速度骰子。
-被单方面攻击时使用手牌里最左边的书页回击</Desc>
+被单方面攻击时使用手牌里最右边的书页回击</Desc>
 	</PassiveDesc>
 	<PassiveDesc ID="1860002">
 		<Name>热身完毕</Name> 
@@ -170,6 +170,10 @@
 		<Name>空虚的躯壳</Name> 
 		<Desc>优先攻击其他友方单位，若无其他友方单位则自动消散</Desc>
 	</PassiveDesc>
+	<PassiveDesc ID="1880004">
+		<Name>血魔之血</Name> 
+		<Desc>获得一张交换自身25%最大生命值的血量使一名友方单位获得一半损失血量的伤害</Desc>
+	</PassiveDesc>
 	<!--朱红十字-->
 	<PassiveDesc ID="1880101">
 		<Name>焦黑躯壳/炽热十字</Name> 
@@ -178,6 +182,10 @@
 	<PassiveDesc ID="1880102">
 		<Name>沉重兵装/狂乱扫荡</Name> 
 		<Desc>速度-3/每一幕内一张使用过的“十字挥舞”,“震撼冲击”,“焦热兵装”会被再次使用</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1880103">
+		<Name>干涸血管</Name> 
+		<Desc>该单位会恢复双倍生命值</Desc>
 	</PassiveDesc>
 	<!--普鲁托-->
 	<PassiveDesc ID="1890001">

@@ -220,6 +220,10 @@
     	<Desc>使目标下一幕起恢复所有血量和混乱抗性并转向攻击其友方单位</Desc>
     	<Desc>若无目标的其他友方单位则自动消散</Desc>
   	</BattleCardAbility>
+  	<BattleCardAbility ID="SacrificeHp">
+    	<Desc>需要至少25%最大生命值装备</Desc>
+    	<Desc>[装备时] 失去25%最大生命值,</Desc>
+  	</BattleCardAbility>
 	<!-- 朱红十字-->
 	<BattleCardAbility ID="AllyCounter">
     	<Desc>[战斗开始]使目标获得该书页所有骰子的复制</Desc>

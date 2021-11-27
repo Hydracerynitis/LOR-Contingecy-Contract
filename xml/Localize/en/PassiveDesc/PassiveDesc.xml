@@ -106,7 +106,7 @@ This Character's Maximun Light is not affected by Emotion Level</Desc>
 	<PassiveDesc ID="1860001">
 		<Name>Brawl</Name> 
 		<Desc>This character can't get bonus Speed Dice from High Emotion Level.
-Upon being targeted one side attack, Use a leftmost Page in hand to clash with it.</Desc>
+Upon being targeted one side attack, Use the rightmost Page in hand to clash with it.</Desc>
 	</PassiveDesc>
 	<PassiveDesc ID="1860002">
 		<Name>Time for Round Two</Name> 
@@ -169,6 +169,10 @@ Offensive Dices gain 1 Power with 25% Max HP lost (Max. 3)</Desc>
 		<Name>Nameless Shell</Name> 
 		<Desc>Uncontrollable, attack other allies. Vanish when there are no other allies.</Desc>
 	</PassiveDesc>
+	<PassiveDesc ID="1880004">
+		<Name>Blood of Bloodfiend</Name> 
+		<Desc>Gain a copy of "Pure Blood", Losing 25% Max Hp on play in exchange of healing half of the amount of lost hp</Desc>
+	</PassiveDesc>
 	<!--朱红十字-->
 	<PassiveDesc ID="1880101">
 		<Name>Scorched Body / Heated Cross</Name> 
@@ -177,6 +181,10 @@ Offensive Dices gain 1 Power with 25% Max HP lost (Max. 3)</Desc>
 	<PassiveDesc ID="1880102">
 		<Name>Heavy Weaponry / Rampage</Name> 
 		<Desc>Lose 3 Speed / one of used "Cross Blade","Shockwave","Heated Weapon" will be used again.</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1880103">
+		<Name>Drained Cardiovascular</Name> 
+		<Desc>This Characet will recover twice amount of health</Desc>
 	</PassiveDesc>
 	<!--普鲁托-->
 	<PassiveDesc ID="1890001">

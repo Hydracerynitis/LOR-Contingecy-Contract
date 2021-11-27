@@ -16,6 +16,8 @@ namespace Contingecy_Contract
         private List<Contract> StageList = new List<Contract>();
         public void Init()
         {
+            PassiveList.Clear();
+            StageList.Clear();
             Debug.PathDebug("/ContractLoader.txt", PathType.File);
             Debug.Log("----- Start Loading Contract -----");
             foreach (string readAllLine in File.ReadAllLines(Harmony_Patch.ModPath + "/ContractLoader.txt"))

@@ -30,7 +30,9 @@ namespace Contingecy_Contract
         public static List<DiceBehaviour> passive18900002_Makred;
         public static Dictionary<UnitBattleDataModel, int> CombaltData;
         public static Dictionary<BattleUnitModel, LorId> UnitBookId;
-        public static Dictionary<int, int> ThumbPathDictionary;
+        public static Dictionary<LorId, int> ThumbPathDictionary;
+        public static Dictionary<LorId, Sprite> NonThumbSprite;
+        public static List<LorId> NonHeadEquipPage;
         public static string ModPath;
         public static bool Duel;
         public static ChallengeProgress Progess;
@@ -38,17 +40,20 @@ namespace Contingecy_Contract
         {
             harmony = new Harmony("Hydracerynitis.ContingecyContract");
             ModPath = Path.GetDirectoryName(Uri.UnescapeDataString(new UriBuilder(Assembly.GetExecutingAssembly().CodeBase).Path));
-            Debug.ModPatchDebug();
-            LoadContract();
-            LoadThumb();
             Duel = false;
             PatchNum = 0;
-            Singleton<ContractLoader>.Instance.bInit=false;
+            Singleton<ContractLoader>.Instance.bInit = false;
             CombaltData = new Dictionary<UnitBattleDataModel, int>();
             ContractAttribution.Inition = new List<BattleUnitModel>();
             UnitBookId = new Dictionary<BattleUnitModel, LorId>();
             Progess = new ChallengeProgress();
             passive18900002_Makred = new List<DiceBehaviour>();
+            ThumbPathDictionary = new Dictionary<LorId, int>();
+            NonHeadEquipPage = new List<LorId>() { Tools.MakeLorId(18810000) };
+            NonThumbSprite = new Dictionary<LorId, Sprite>() { { Tools.MakeLorId(18810000),null } };
+            Debug.ModPatchDebug();
+            LoadContract();
+            LoadThumb();
             ModifyEnsemble();
             MethodInfo Method1 = typeof(StageNameXmlList).GetMethod("GetName", new Type[] { typeof(int) });
             Patch(Method1, "StageNameXmlList_GetName_int", false);
@@ -74,42 +79,52 @@ namespace Contingecy_Contract
             Patch(Method11, "StageNameXmlList_GetName_xml", false);
             MethodInfo Method12 = typeof(StageController).GetMethod("InitCommon", AccessTools.all);
             Patch(Method12, "StageController_InitCommon", true);
-            MethodInfo Method14 = typeof(PlayHistoryModel).GetMethod("LoadFromSaveData", AccessTools.all);
-            Patch(Method14, "PlayHistoryModel_LoadFromSaveData", false);
-            MethodInfo Method15 = typeof(PlayHistoryModel).GetMethod("GetSaveData", AccessTools.all);
-            Patch(Method15, "PlayHistoryModel_GetSaveData", false);
-            MethodInfo Method16 = typeof(BattleCardAbilityDescXmlList).GetMethod("GetAbilityDesc", new Type[]{ typeof(DiceBehaviour)});
-            Patch(Method16, "BattleCardAbilityDescXmlList_GetAbilityDesc", false);
-            MethodInfo Method17 = typeof(StageController).GetMethod("StartAction",AccessTools.all);
-            Patch(Method17, "StageController_StartAction", true);
-            MethodInfo Method18 = typeof(BattleUnitBuf_Resistance).GetMethod("get_keywordId", AccessTools.all);
-            Patch(Method18, "BattleUnitBuf_Resistance_get_keywordId", false);
-            MethodInfo Method19 = typeof(DiceCardSelfAbility_elenaMinionStrong).GetMethod("OnSucceedAttack", new Type[] { });
-            Patch(Method19, "DiceCardSelfAbility_elenaMinionStrong_OnSucceedAttack", false);
-            MethodInfo Method20 = typeof(DiceCardSelfAbility_greta_trample).GetMethod("OnSucceedAttack", new Type[] { });
-            Patch(Method20, "DiceCardSelfAbility_greta_trample_OnSucceedAttack", false);
-            MethodInfo Method21 = typeof(BattleUnitBuf_Greta_Meat_Librarian).GetMethod("OnBreakState", AccessTools.all);
-            Patch(Method21, "BattleUnitBuf_Greta_Meat_Librarian_OnBreakState", false);
-            MethodInfo Method22 = typeof(BattleUnitBuf_Greta_Meat_Librarian).GetMethod("OnDie", AccessTools.all);
-            Patch(Method22, "BattleUnitBuf_Greta_Meat_Librarian_OnDie", true);
-            MethodInfo Method23 = typeof(BattleUnitBuf_Greta_Meat).GetMethod("OnTakeDamageByAttack", AccessTools.all);
-            Patch(Method23, "BattleUnitBuf_Greta_Meat_OnTakeDamageByAttack", true);
-            MethodInfo Method24 = typeof(BattleUnitModel).GetMethod("CheckCardAvailable", AccessTools.all);
-            Patch(Method24, "BattleUnitModel_CheckCardAvailable", false);
-            MethodInfo Method25 = typeof(AssemblyManager).GetMethod("CreateInstance_DiceCardSelfAbility", AccessTools.all);
-            Patch(Method25, "AssemblyManager_CreateInstance_DiceCardSelfAbility", false);
-            MethodInfo Method26 = typeof(AssemblyManager).GetMethod("CreateInstance_BehaviourAction", AccessTools.all);
-            Patch(Method26, "AssemblyManager_CreateInstance_BehaviourAction", false);
-            MethodInfo Method27 = typeof(AssemblyManager).GetMethod("CreateInstance_PassiveAbility", AccessTools.all);
-            Patch(Method27, "AssemblyManager_CreateInstance_PassiveAbility", false);
-            MethodInfo Method28 = typeof(DropBookInventoryModel).GetMethod("GetBookList_invitationBookList", AccessTools.all);
-            Patch(Method28, "DropBookInventoryModel_GetBookList_invitationBookList", false);
-            MethodInfo Method29 = typeof(UIInvitationDropBookSlot).GetMethod("SetData_DropBook", AccessTools.all);
-            Patch(Method29, "UIInvitationDropBookSlot_SetData_DropBook", false);
-            MethodInfo Method30 = typeof(StageController).GetMethod("CheckStoryBeforeBattle", AccessTools.all);
-            Patch(Method30, "StageController_CheckStoryBeforeBattle", true);
-            MethodInfo Method31 = typeof(DiceBehaviour).GetMethod("Copy", AccessTools.all);
-            Patch(Method31, "DiceBehaviour_Copy", false);
+            MethodInfo Method13 = typeof(PlayHistoryModel).GetMethod("LoadFromSaveData", AccessTools.all);
+            Patch(Method13, "PlayHistoryModel_LoadFromSaveData", false);
+            MethodInfo Method14 = typeof(PlayHistoryModel).GetMethod("GetSaveData", AccessTools.all);
+            Patch(Method14, "PlayHistoryModel_GetSaveData", false);
+            MethodInfo Method15 = typeof(BattleCardAbilityDescXmlList).GetMethod("GetAbilityDesc", new Type[]{ typeof(DiceBehaviour)});
+            Patch(Method15, "BattleCardAbilityDescXmlList_GetAbilityDesc", false);
+            MethodInfo Method16 = typeof(StageController).GetMethod("StartAction",AccessTools.all);
+            Patch(Method16, "StageController_StartAction", true);
+            MethodInfo Method17 = typeof(BattleUnitBuf_Resistance).GetMethod("get_keywordId", AccessTools.all);
+            Patch(Method17, "BattleUnitBuf_Resistance_get_keywordId", false);
+            MethodInfo Method18 = typeof(DiceCardSelfAbility_elenaMinionStrong).GetMethod("OnSucceedAttack", new Type[] { });
+            Patch(Method18, "DiceCardSelfAbility_elenaMinionStrong_OnSucceedAttack", false);
+            MethodInfo Method19 = typeof(DiceCardSelfAbility_greta_trample).GetMethod("OnSucceedAttack", new Type[] { });
+            Patch(Method19, "DiceCardSelfAbility_greta_trample_OnSucceedAttack", false);
+            MethodInfo Method20 = typeof(BattleUnitBuf_Greta_Meat_Librarian).GetMethod("OnBreakState", AccessTools.all);
+            Patch(Method20, "BattleUnitBuf_Greta_Meat_Librarian_OnBreakState", false);
+            MethodInfo Method21 = typeof(BattleUnitBuf_Greta_Meat_Librarian).GetMethod("OnDie", AccessTools.all);
+            Patch(Method21, "BattleUnitBuf_Greta_Meat_Librarian_OnDie", true);
+            MethodInfo Method22 = typeof(BattleUnitBuf_Greta_Meat).GetMethod("OnTakeDamageByAttack", AccessTools.all);
+            Patch(Method22, "BattleUnitBuf_Greta_Meat_OnTakeDamageByAttack", true);
+            MethodInfo Method23 = typeof(BattleUnitModel).GetMethod("CheckCardAvailable", AccessTools.all);
+            Patch(Method23, "BattleUnitModel_CheckCardAvailable", false);
+            MethodInfo Method24 = typeof(AssemblyManager).GetMethod("CreateInstance_DiceCardSelfAbility", AccessTools.all);
+            Patch(Method24, "AssemblyManager_CreateInstance_DiceCardSelfAbility", false);
+            MethodInfo Method25 = typeof(AssemblyManager).GetMethod("CreateInstance_BehaviourAction", AccessTools.all);
+            Patch(Method25, "AssemblyManager_CreateInstance_BehaviourAction", false);
+            MethodInfo Method26 = typeof(AssemblyManager).GetMethod("CreateInstance_PassiveAbility", AccessTools.all);
+            Patch(Method26, "AssemblyManager_CreateInstance_PassiveAbility", false);
+            MethodInfo Method27 = typeof(DropBookInventoryModel).GetMethod("GetBookList_invitationBookList", AccessTools.all);
+            Patch(Method27, "DropBookInventoryModel_GetBookList_invitationBookList", false);
+            MethodInfo Method28 = typeof(UIInvitationDropBookSlot).GetMethod("SetData_DropBook", AccessTools.all);
+            Patch(Method28, "UIInvitationDropBookSlot_SetData_DropBook", false);
+            MethodInfo Method29 = typeof(StageController).GetMethod("CheckStoryBeforeBattle", AccessTools.all);
+            Patch(Method29, "StageController_CheckStoryBeforeBattle", true);
+            MethodInfo Method30 = typeof(DiceBehaviour).GetMethod("Copy", AccessTools.all);
+            Patch(Method30, "DiceBehaviour_Copy", false);
+            MethodInfo Method31 = typeof(BattleUnitModel).GetMethod("RecoverHP", AccessTools.all);
+            Patch(Method31, "BattleUnitModel_RecoverHP", true);
+            MethodInfo Method32 = typeof(BookModel).GetMethod("GetThumbSprite", AccessTools.all);
+            Patch(Method32, "BookModel_GetThumbSprite", false);
+            MethodInfo Method33 = typeof(BookXmlInfo).GetMethod("GetThumbSprite", AccessTools.all);
+            Patch(Method33, "BookXmlInfo_GetThumbSprite", false);
+            MethodInfo Method34 = typeof(UICharacterRenderer).GetMethod("SetCharacter", AccessTools.all);
+            Patch(Method34, "UICharacterRenderer_SetCharacter", false);
+            MethodInfo Method35 = typeof(SdCharacterUtil).GetMethod("CreateSkin", AccessTools.all);
+            Patch(Method35, "SdCharacterUtil_CreateSkin", false);
         }
         public static void Patch(MethodInfo method, string patchName, bool prefix)
         {
@@ -127,6 +142,15 @@ namespace Contingecy_Contract
             {
                 Debug.Error(PatchNum.ToString() + " :HP_" + patch.Name, ex);
             }
+        }
+        public static bool HasMethod(Type type, string methodName)
+        {
+            foreach (MemberInfo method in type.GetMethods())
+            {
+                if (method.Name == methodName)
+                    return true;
+            }
+            return false;
         }
         public static void StageNameXmlList_GetName_int(ref string __result,int id)
         {
@@ -331,7 +355,7 @@ namespace Contingecy_Contract
         }
         public static void BattleUnitBuf_Resistance_get_keywordId(ref string __result,BattleUnitModel ____owner)
         {
-            if (____owner != null && ____owner.Book != null && ____owner.Book.GetBookClassInfoId() == 18300000)
+            if (____owner != null && ____owner.Book != null && ____owner.Book.GetBookClassInfoId() == Tools.MakeLorId(18300000))
                 __result = "Resistance";
         }
         public static void DiceCardSelfAbility_greta_trample_OnSucceedAttack(DiceCardSelfAbility_greta_trample __instance)
@@ -438,6 +462,132 @@ namespace Contingecy_Contract
             if(passive18900002_Makred.Contains(__instance))
                 passive18900002_Makred.Add(__result);
         }
+        public static void BattleUnitModel_RecoverHP(BattleUnitModel __instance, ref int v)
+        {
+            foreach (PassiveAbilityBase passive in __instance.passiveDetail.PassiveList)
+            {
+                if (HasMethod(passive.GetType(), "GetRecoveryBonus"))
+                {
+                    try
+                    {
+                        v += (int)passive.GetType().GetMethod("GetRecoveryBonus").Invoke(passive, new object[1] { v });
+                    }
+                    catch (Exception ex)
+                    {
+                        Debug.Error("RecoveryBug", ex);
+                    }
+                }
+            }
+        }
+        public static void BookModel_GetThumbSprite(ref Sprite __result, BookModel __instance)
+        {
+            if (ThumbPathDictionary.ContainsKey(__instance.GetBookClassInfoId())) 
+                __result= Resources.Load<Sprite>("Sprites/Books/Thumb/" + ThumbPathDictionary[__instance.GetBookClassInfoId()]);
+            else if(NonThumbSprite.ContainsKey(__instance.GetBookClassInfoId()))
+            {
+                if (NonThumbSprite[__instance.GetBookClassInfoId()] != null)
+                    __result = NonThumbSprite[__instance.GetBookClassInfoId()];
+                else
+                {
+                    try
+                    {
+                        GameObject prefab = Singleton<AssetBundleManagerRemake>.Instance.LoadCharacterPrefab(__instance.GetOriginalCharcterName(), "_N", out string resourcename);
+                        if (prefab == null)
+                            return;
+                        CharacterAppearance character = prefab.GetComponent<CharacterAppearance>();
+                        CharacterMotion Default = character.GetCharacterMotion(ActionDetail.Default);
+                        if (Default == null)
+                            return;
+                        SpriteSet Body = Default.motionSpriteSet.Find(x => x.sprType == CharacterAppearanceType.Body);
+                        if (Body != null)
+                        {
+                            NonThumbSprite[__instance.GetBookClassInfoId()] = Default.motionSpriteSet.Find(x => x.sprType == CharacterAppearanceType.Body).sprRenderer.sprite;
+                            __result = NonThumbSprite[__instance.GetBookClassInfoId()];
+                        }
+
+                    }
+                    catch(Exception ex)
+                    {
+                        Debug.Error("PrefabThumbe", ex);
+                    }
+                }
+            }
+
+        }
+        public static void BookXmlInfo_GetThumbSprite(ref Sprite __result, BookXmlInfo __instance)
+        {
+            if (ThumbPathDictionary.ContainsKey(__instance.id))
+                __result = Resources.Load<Sprite>("Sprites/Books/Thumb/" + ThumbPathDictionary[__instance.id]);
+            else if (NonThumbSprite.ContainsKey(__instance.id))
+            {
+                if (NonThumbSprite[__instance.id] != null)
+                    __result = NonThumbSprite[__instance.id];
+                else
+                {
+                    try
+                    {
+                        GameObject prefab = Singleton<AssetBundleManagerRemake>.Instance.LoadCharacterPrefab(__instance.GetCharacterSkin(), "_N", out string resourcename);
+                        if (prefab == null)
+                            return;
+                        CharacterAppearance character = prefab.GetComponent<CharacterAppearance>();
+                        CharacterMotion Default = character.GetCharacterMotion(ActionDetail.Default);
+                        if (Default == null)
+                            return;
+                        SpriteSet Body = Default.motionSpriteSet.Find(x => x.sprType == CharacterAppearanceType.Body);
+                        if (Body != null)
+                        {
+                            NonThumbSprite[__instance.id] = Default.motionSpriteSet.Find(x => x.sprType == CharacterAppearanceType.Body).sprRenderer.sprite;
+                            __result = NonThumbSprite[__instance.id];
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        Debug.Error("PrefabThumbe", ex);
+                    }
+                }
+            }
+
+        }
+        public static void UICharacterRenderer_SetCharacter(UnitDataModel unit, int index)
+        {
+            if (NonHeadEquipPage.Contains(unit.bookItem.GetBookClassInfoId()))
+            {
+                UICharacter character = SingletonBehavior<UICharacterRenderer>.Instance.characterList[index];
+                CustomizedAppearance appearance = typeof(CharacterAppearance).GetField("_customAppearance", AccessTools.all).GetValue(character.unitAppearance) as CustomizedAppearance;
+                if (appearance != null)
+                {
+                    foreach (SpriteRenderer allSprite in appearance.allSpriteList)
+                    {
+                        SpriteMask spriteMask = allSprite.GetComponent<SpriteMask>();
+                        if (spriteMask != null)
+                            character.unitAppearance.maskControl.maskList.Remove(spriteMask);
+                    }
+                    if (appearance.gameObject != null)
+                        UnityEngine.Object.Destroy(appearance.gameObject);
+                    typeof(CharacterAppearance).GetField("_customAppearance", AccessTools.all).SetValue(character.unitAppearance,null);
+                }
+            }
+        }
+        public static void SdCharacterUtil_CreateSkin(UnitDataModel unit, CharacterAppearance __result)
+        {
+            if (NonHeadEquipPage.Contains(unit.bookItem.GetBookClassInfoId()))
+            {
+                CustomizedAppearance appearance = typeof(CharacterAppearance).GetField("_customAppearance", AccessTools.all).GetValue(__result) as CustomizedAppearance;
+                if (appearance != null)
+                {
+                    foreach (SpriteRenderer allSprite in appearance.allSpriteList)
+                    {
+                        SpriteMask spriteMask = allSprite.GetComponent<SpriteMask>();
+                        if (spriteMask != null)
+                            __result.maskControl.maskList.Remove(spriteMask);
+                    }
+                    if (appearance.gameObject != null)
+                        UnityEngine.Object.Destroy(appearance.gameObject);
+                    typeof(CharacterAppearance).GetField("_customAppearance", AccessTools.all).SetValue(__result, null);
+                }
+            }
+        }
         public static void ModifyEnsemble()
         {
             List<StageClassInfo> Ensemble = Singleton<StageClassInfoList>.Instance.GetAllDataList().FindAll(x => x.id.IsBasic() && x.id.id >= 70001 && x.id.id <= 70010);
@@ -461,7 +611,7 @@ namespace Contingecy_Contract
         }
         public static void LoadContract()
         {
-            ThumbPathDictionary = new Dictionary<int, int>();
+
             Debug.PathDebug("/Contracts", PathType.Directory);
             Debug.XmlFileDebug("/Contracts");
             Singleton<ContractXmlList>.Instance.Init();
@@ -498,7 +648,7 @@ namespace Contingecy_Contract
                             str = node.Attributes.GetNamedItem("id").InnerText;
                         int key = Int32.Parse(str);
                         int value = Int32.Parse(node.InnerText);
-                        ThumbPathDictionary[key] = value;
+                        ThumbPathDictionary[Tools.MakeLorId(key)] = value;
                     }
                 }
                 catch (Exception ex)

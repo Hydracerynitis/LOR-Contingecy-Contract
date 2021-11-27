@@ -252,6 +252,9 @@
 		<BattleCardDesc ID="18800007">
 			<LocalizedName>Feast</LocalizedName>
 		</BattleCardDesc>
+		<BattleCardDesc ID="18800008">
+			<LocalizedName>Pure Blood</LocalizedName>
+		</BattleCardDesc>
 		<!--朱红十字-->
 		<BattleCardDesc ID="18810001">
 			<LocalizedName>Cross Blade</LocalizedName>

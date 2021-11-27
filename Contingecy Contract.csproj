@@ -59,6 +59,10 @@
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.UI.dll</HintPath>
@@ -92,12 +96,15 @@
     <Compile Include="Source Code\ContractReward\Eileen\PassiveAbility_1820005.cs" />
     <Compile Include="Source Code\ContractReward\Eileen\PassiveAbility_1820004.cs" />
     <Compile Include="Source Code\ContractReward\Eileen\PassiveAbility_1820003.cs" />
+    <Compile Include="Source Code\ContractReward\Elena\DiceCardSelfAbility_SacrificeHp.cs" />
     <Compile Include="Source Code\ContractReward\Elena\DiceCardSelfAbility_ElenaZombieEnemy.cs" />
+    <Compile Include="Source Code\ContractReward\Elena\PassiveAbility_1880004.cs" />
     <Compile Include="Source Code\ContractReward\Elena\PassiveAbility_1880002.cs" />
     <Compile Include="Source Code\ContractReward\Elena\PassiveAbility_1880001.cs" />
     <Compile Include="Source Code\ContractReward\Elena\DiceCardAbility_ElenaExecute.cs" />
     <Compile Include="Source Code\ContractReward\Elena\DiceCardSelfAbility_ElenaZombie.cs" />
     <Compile Include="Source Code\ContractReward\Elena\DiceCardSelfAbility_ElenaBuff.cs" />
+    <Compile Include="Source Code\ContractReward\Orange\PassiveAbility_1880103.cs" />
     <Compile Include="Source Code\ContractReward\Pluto\PassiveAbility_1890004.cs" />
     <Compile Include="Source Code\DeepCopyUtil.cs" />
     <Compile Include="Source Code\Fix\BehaviourAction_TanyaSpecialAtk.cs" />
