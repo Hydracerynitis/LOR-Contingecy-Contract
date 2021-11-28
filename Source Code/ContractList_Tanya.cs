@@ -39,6 +39,11 @@ namespace Contingecy_Contract
                 typeof(BattleDiceCardModel).GetField("_xmlData", AccessTools.all).SetValue(card, info);
             }
         }
+        public override void OnEndBattle(BattlePlayingCardDataInUnitModel curCard)
+        {
+            if (owner.cardSlotDetail.keepCard.cardBehaviorQueue.Count > 0)
+                owner.cardSlotDetail.keepCard.Reset();
+        }
         public BattlePlayingCardDataInUnitModel Retaliate(BattlePlayingCardDataInUnitModel attackerCard)
         {
             if (owner.IsBreakLifeZero())
@@ -47,7 +52,7 @@ namespace Contingecy_Contract
             BattleDiceCardModel card = BattleDiceCardModel.CreatePlayingCard(ItemXmlDataList.instance.GetCardItem(cardId));
             BattlePlayingCardDataInUnitModel retaliate = new BattlePlayingCardDataInUnitModel()
             {
-                owner = this.owner,
+                owner = owner,
                 card = card,
                 cardAbility = card.CreateDiceCardSelfAbilityScript(),
                 target = attackerCard.owner,
@@ -56,7 +61,7 @@ namespace Contingecy_Contract
             };
             if (retaliate.cardAbility != null)
                 retaliate.cardAbility.card = retaliate;
-            retaliate.ResetCardQueue();
+            retaliate.ResetCardQueueWithoutStandby();
             return retaliate;
         }
         public override void OnStartParrying(BattlePlayingCardDataInUnitModel card)

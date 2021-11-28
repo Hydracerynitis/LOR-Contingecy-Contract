@@ -17,20 +17,19 @@ namespace ContractReward
                 num1 = -num2;
             return num1;
         }
-        public override void OnEndParrying()
+        public override void OnEndBattle(BattlePlayingCardDataInUnitModel curCard)
         {
-            base.OnEndParrying();
-            if(this.owner.cardSlotDetail.keepCard.cardBehaviorQueue.Count>0)
-                this.owner.cardSlotDetail.keepCard.Reset();
+            if (owner.cardSlotDetail.keepCard.cardBehaviorQueue.Count > 0)
+                owner.cardSlotDetail.keepCard.Reset();
         }
         public BattlePlayingCardDataInUnitModel Retaliate(BattlePlayingCardDataInUnitModel attackerCard)
         {
             if (owner.IsBreakLifeZero())
                 return null;
-            List<BattleDiceCardModel> hand = this.owner.allyCardDetail.GetHand().FindAll(x => x.GetCost() <= owner.cardSlotDetail.PlayPoint - owner.cardSlotDetail.ReservedPlayPoint && CheckRange(x.XmlData.Spec.Ranged));
+            List<BattleDiceCardModel> hand = owner.allyCardDetail.GetHand().FindAll(x => x.GetCost() <= owner.cardSlotDetail.PlayPoint - owner.cardSlotDetail.ReservedPlayPoint && CheckRange(x.XmlData.Spec.Ranged));
             if (hand.Count <= 0)
                 return null;
-            BattleDiceCardModel card = hand[-1];
+            BattleDiceCardModel card = hand[hand.Count-1];
             owner.allyCardDetail.UseCard(card);
             owner.allyCardDetail.SpendCard(card);
             owner.cardSlotDetail.ReserveCost(card.GetCost());
@@ -46,7 +45,7 @@ namespace ContractReward
             };
             if (retaliate.cardAbility != null)
                 retaliate.cardAbility.card = retaliate;
-            retaliate.ResetCardQueue();
+            retaliate.ResetCardQueueWithoutStandby();
             return retaliate;
         }
         private bool CheckRange(CardRange range)

@@ -11,6 +11,7 @@ namespace Contingecy_Contract
 {
     public class ContractXmlList : Singleton<ContractXmlList>
     {
+        public static List<NewContract> JsonList = new List<NewContract>();
         private readonly Dictionary<string, Contract> XmlList = new Dictionary<string, Contract>();
         public void Init()
         {
@@ -33,6 +34,36 @@ namespace Contingecy_Contract
                 return XmlList[Type].Copy();
             return null;
         }
+    }
+    public class ContractBluePrintList
+    {
+        public List<ContractBluePrint> CCs = new List<ContractBluePrint>();
+    }
+    public class ContractBluePrint
+    {
+        public string Type;
+        public List<ContractDesc> desc;
+        public ContractXmlType contractType = ContractXmlType.Passive;
+        public Faction Faction;
+        public int Variation = 0;
+        public int BaseLevel = 0;
+        public int Step = 1;
+        public int BonusBaseLevel = 0;
+        public int BonusStep = 0;
+        public int Stageid = -1;
+        public List<string> Conflict = new List<string>();
+    }
+    public class NewContract
+    {
+        public string Type;
+        public int Variant;
+        public List<ContractDesc> desc = new List<ContractDesc>();
+        public ContractXmlType contractType = ContractXmlType.Passive;
+        public Faction Faction;
+        public int Level = 0;
+        public int Bonus = 1;
+        public int Stageid = -1;
+        public List<string> Conflict = new List<string>();
     }
     public class ContractList
     {

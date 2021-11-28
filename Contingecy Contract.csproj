@@ -40,6 +40,13 @@
     <Reference Include="BaseMod">
       <HintPath>D:\SteamLibrary\steamapps\workshop\content\1256670\2603522001\Assemblies\BaseMod.dll</HintPath>
     </Reference>
+    <Reference Include="CCGUI">
+      <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Mods\ContingencyContract\CCGUI.dll</HintPath>
+    </Reference>
+    <Reference Include="MyJsonTool, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Library of Ruina custom\参考dll\CCGUI\MyJsonTool.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
