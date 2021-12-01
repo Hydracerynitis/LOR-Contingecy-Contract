@@ -2,6 +2,7 @@
 using System.IO;
 using UnityEngine;
 using System.Reflection;
+using BaseMod;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -60,15 +61,6 @@ namespace Contingecy_Contract
                     File.WriteAllText(Application.dataPath + "/Mods/ContingecyContractModPathError.txt", Harmony_Patch.ModPath + path + " not found");
                 }
             }
-        }
-        public static void SaveDebug()
-        {
-            File.WriteAllText(Harmony_Patch.ModPath + "/Debug/Save.txt", "");
-            FieldInfo[] values = typeof(ChallengeProgress).GetFields();
-            for (int i= 0; i < values.Length; i++)
-            {
-                File.AppendAllText(Harmony_Patch.ModPath + "/Debug/Save.txt", values[i].Name+" "+values[i].GetValue(Harmony_Patch.Progess)+"\n");
-            }           
         }
     }
     public enum PathType

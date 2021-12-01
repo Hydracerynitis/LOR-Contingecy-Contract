@@ -1,0 +1,130 @@
+{
+    "CCs":[
+        {
+            "Type":"Damage_L",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"保养不佳",
+                    "desc":"所有司书造成伤害-{0}%"
+                },
+                {
+                    "language":"en",
+                    "name":"Poor Maintaince",
+                    "desc":"Reduce all Librarians' outgoing damage by {0}%"
+                }
+            ],
+            "Faction":1,
+            "Variation":3
+        },
+        {
+            "Type":"BreakDamage_L",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"恍惚失神",
+                    "desc":"所有司书造成混乱伤害-{0}%"
+                },
+                {
+                    "language":"en",
+                    "name":"Absentminded",
+                    "desc":"Reduce all Librarians' outgoing Stagger damage by {0}%"
+                }
+            ],
+            "Faction":1,
+            "Variation":3
+        },
+        {
+            "Type":"Power_L",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"手脚乏力",
+                    "desc":"所有司书骰子威力减少{0}"
+                },
+                {
+                    "language":"en",
+                    "name":"Fatigue",
+                    "desc":"All Librarians' Dice lose {0} Power."
+                }
+            ],
+            "Faction":1,
+            "Variation":3,
+            "BonusBaseLevel":-10,
+            "BonusStep":20
+        },
+        {
+            "Type":"Hp_L",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"破碎之躯",
+                    "desc":"所有司书血量上限减少-{0}%"
+                },
+                {
+                    "language":"en",
+                    "name":"Frangible",
+                    "desc":"Reduce all Librarians' Max HP by {0}%"
+                }
+            ],
+            "Faction":1,
+            "Variation":3
+        },
+        {
+            "Type":"Bp_L",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"惊慌失措",
+                    "desc":"所有司书混乱抗性上限减少-{0}%"
+                },
+                {
+                    "language":"en",
+                    "name":"Panic attack",
+                    "desc":"Reduce all Librarians' Max Stagger Resist by {0}%"
+                }
+            ],
+            "Faction":1,
+            "Variation":3
+        },
+        {
+            "Type":"Darkness",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"陷入漆黑",
+                    "desc":"所有司书舞台开启时只有{0}点光芒"
+                },
+                {
+                    "language":"en",
+                    "name":"Engulfed by Darkness",
+                    "desc":"At the start of any act, all Librarian have {0} Light"
+                }
+            ],
+            "Faction":1,
+            "Variation":4,
+            "BaseLevel":1,
+            "Step":0,
+            "BonusBaseLevel":-10,
+            "BonusStep":15
+        },
+        {
+            "Type":"NoBuff",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"自私",
+                    "desc":"所有司书免疫正面效果加成"
+                },
+                {
+                    "language":"en",
+                    "name":"Selfish",
+                    "desc":"All Librarians are immune to postivie status"
+                }
+            ],
+            "Faction":1,
+            "BaseLevel":2,
+            "BonusBaseLevel":50
+        }
+    ]
+}

@@ -23,34 +23,22 @@ namespace Contingecy_Contract
 {
     public class Harmony_Patch
     {
-        public static bool UIInit;
-        public static int PatchNum;
+        public static HashSet<int> ClearList = new HashSet<int>();
+        public static List<Contract> JsonList = new List<Contract>();
+/*        public static bool UIInit = false;*/
+        public static int PatchNum = 0;
         public static Harmony harmony;
-        public static List<DiceBehaviour> passive18900002_Makred;
-        public static Dictionary<UnitBattleDataModel, int> CombaltData;
-        public static Dictionary<BattleUnitModel, LorId> UnitBookId;
-        public static Dictionary<LorId, int> ThumbPathDictionary;
-        public static Dictionary<LorId, Sprite> NonThumbSprite;
-        public static List<LorId> NonHeadEquipPage;
+        public static List<DiceBehaviour> passive18900002_Makred = new List<DiceBehaviour>();
+        public static Dictionary<UnitBattleDataModel, int> CombaltData = new Dictionary<UnitBattleDataModel, int>();
+        public static Dictionary<BattleUnitModel, LorId> UnitBookId = new Dictionary<BattleUnitModel, LorId>();
+        public static Dictionary<LorId, int> ThumbPathDictionary = new Dictionary<LorId, int>();
+        public static Dictionary<LorId, Sprite> NonThumbSprite = new Dictionary<LorId, Sprite>();
         public static string ModPath;
-        public static bool Duel;
-        public static ChallengeProgress Progess;
+        public static bool Duel = false;
         public Harmony_Patch()
         {
             harmony = new Harmony("Hydracerynitis.ContingecyContract");
             ModPath = Path.GetDirectoryName(Uri.UnescapeDataString(new UriBuilder(Assembly.GetExecutingAssembly().CodeBase).Path));
-            Duel = false;
-            UIInit = false;
-            PatchNum = 0;
-            Singleton<ContractLoader>.Instance.bInit = false;
-            CombaltData = new Dictionary<UnitBattleDataModel, int>();
-            ContractAttribution.Inition = new List<BattleUnitModel>();
-            UnitBookId = new Dictionary<BattleUnitModel, LorId>();
-            Progess = new ChallengeProgress();
-            passive18900002_Makred = new List<DiceBehaviour>();
-            ThumbPathDictionary = new Dictionary<LorId, int>();
-            NonHeadEquipPage = new List<LorId>();
-            NonThumbSprite = new Dictionary<LorId, Sprite>();
             Debug.ModPatchDebug();
             LoadContract();
             LoadThumb();
@@ -81,8 +69,8 @@ namespace Contingecy_Contract
             Patch(Method12, "StageController_InitCommon", true);
             MethodInfo Method13 = typeof(PlayHistoryModel).GetMethod("LoadFromSaveData", AccessTools.all);
             Patch(Method13, "PlayHistoryModel_LoadFromSaveData", false);
-            MethodInfo Method14 = typeof(PlayHistoryModel).GetMethod("GetSaveData", AccessTools.all);
-            Patch(Method14, "PlayHistoryModel_GetSaveData", false);
+/*            MethodInfo Method14 = typeof(PlayHistoryModel).GetMethod("GetSaveData", AccessTools.all);
+            Patch(Method14, "PlayHistoryModel_GetSaveData", false);*/
             MethodInfo Method15 = typeof(BattleCardAbilityDescXmlList).GetMethod("GetAbilityDesc", new Type[]{ typeof(DiceBehaviour)});
             Patch(Method15, "BattleCardAbilityDescXmlList_GetAbilityDesc", false);
             MethodInfo Method16 = typeof(StageController).GetMethod("StartAction",AccessTools.all);
@@ -125,8 +113,8 @@ namespace Contingecy_Contract
             Patch(Method34, "UICharacterRenderer_SetCharacter", false);
             MethodInfo Method35 = typeof(SdCharacterUtil).GetMethod("CreateSkin", AccessTools.all);
             Patch(Method35, "SdCharacterUtil_CreateSkin", false);
-            MethodInfo Method36 = typeof(UI.UIController).GetMethod("Initialize", AccessTools.all);
-            Patch(Method36, "UI_UIController_Initialize", false);
+/*            MethodInfo Method36 = typeof(UI.UIController).GetMethod("Initialize", AccessTools.all);
+            Patch(Method36, "UI_UIController_Initialize", false);*/
         }
         public static void Patch(MethodInfo method, string patchName, bool prefix)
         {
@@ -240,11 +228,36 @@ namespace Contingecy_Contract
         }
         public static void PlayHistoryModel_LoadFromSaveData(SaveData data)
         {
-            Progess.LoadFromSaveData(data.GetData("ContingecyContract_ChallengeProgress"));
-        }
-        public static void PlayHistoryModel_GetSaveData(ref SaveData __result)
-        {
-            __result.AddData("ContingecyContract_ChallengeProgress", Progess.GetSaveData());
+            List<int> bmSave = Tools.Load<List<int>>("ContingecyContract_Save");
+            if (bmSave != null && bmSave.Count>0)
+            {
+                bmSave.ForEach(x => ClearList.Add(x));
+                return;
+            }
+            SaveData save=data.GetData("ContingecyContract_ChallengeProgress");
+            if (save == null)
+                return;
+            if (save.GetInt("Philiph_Risk") >= 1)
+                ClearList.Add(18100000);
+            if (save.GetInt("Eileen_Risk") >= 1)
+                ClearList.Add(18200000);
+            if (save.GetInt("Greta_Risk") >= 1)
+                ClearList.Add(18300000);
+            if (save.GetInt("Bremen_Risk") >= 1)
+                ClearList.Add(18400000);
+            if (save.GetInt("Tanya_Risk") >= 1)
+                ClearList.Add(18600000);
+            if (save.GetInt("Jaeheon_Risk") >= 1)
+                ClearList.Add(18700000);
+            if (save.GetInt("Elena_Risk") >= 1)
+                ClearList.Add(18800000);
+            if (save.GetInt("Orange_Path") >= 1)
+                ClearList.Add(18810000);
+            if (save.GetInt("Pluto_Risk") >= 1)
+                ClearList.Add(18900000);
+            if (save.GetInt("Ensemble_Complete") >= 1)
+                ClearList.Add(18000000);
+            new List<int>(ClearList).Save<List<int>>("ContingecyContract_Save");
         }
         public static bool BattleObjectManager_Clear()
         {
@@ -555,7 +568,7 @@ namespace Contingecy_Contract
         }
         public static void UICharacterRenderer_SetCharacter(UnitDataModel unit, int index)
         {
-            if (NonHeadEquipPage.Contains(unit.bookItem.GetBookClassInfoId()))
+            if (unit.GetCustomBookItemData() != null && NonHeadEquipPage.Exists(x => unit.GetCustomBookItemData().GetBookClassInfoId() == Tools.MakeLorId(x)) || NonHeadEquipPage.Exists(x => unit.bookItem.GetBookClassInfoId()==Tools.MakeLorId(x)) && unit.GetCustomBookItemData() == null)
             {
                 UICharacter character = SingletonBehavior<UICharacterRenderer>.Instance.characterList[index];
                 CustomizedAppearance appearance = typeof(CharacterAppearance).GetField("_customAppearance", AccessTools.all).GetValue(character.unitAppearance) as CustomizedAppearance;
@@ -575,7 +588,7 @@ namespace Contingecy_Contract
         }
         public static void SdCharacterUtil_CreateSkin(UnitDataModel unit, CharacterAppearance __result)
         {
-            if (NonHeadEquipPage.Contains(unit.bookItem.GetBookClassInfoId()))
+            if (unit.GetCustomBookItemData()!=null && NonHeadEquipPage.Exists(x => unit.GetCustomBookItemData().GetBookClassInfoId() == Tools.MakeLorId(x)) || NonHeadEquipPage.Exists(x => unit.bookItem.GetBookClassInfoId() == Tools.MakeLorId(x)) && unit.GetCustomBookItemData() == null)
             {
                 CustomizedAppearance appearance = typeof(CharacterAppearance).GetField("_customAppearance", AccessTools.all).GetValue(__result) as CustomizedAppearance;
                 if (appearance != null)
@@ -592,15 +605,14 @@ namespace Contingecy_Contract
                 }
             }
         }
-        public static void UI_UIController_Initialize()
+/*        public static void UI_UIController_Initialize()
         {
             if (!UIInit)
             {
                 UI.UIController.Instance.gameObject.AddComponent<CCGUI.CCGUI>();
                 UIInit = true;
             }
-
-        }
+        }*/
         public static void ModifyEnsemble()
         {
             List<StageClassInfo> Ensemble = Singleton<StageClassInfoList>.Instance.GetAllDataList().FindAll(x => x.id.IsBasic() && x.id.id >= 70001 && x.id.id <= 70010);
@@ -627,25 +639,7 @@ namespace Contingecy_Contract
 
             Debug.PathDebug("/Contracts", PathType.Directory);
             Debug.XmlFileDebug("/Contracts");
-            Debug.PathDebug("/ContractJsonTest", PathType.Directory);
-            Debug.XmlFileDebug("/ContractJsonTest");
-            Singleton<ContractXmlList>.Instance.Init();
             foreach (FileInfo file in new DirectoryInfo(ModPath + "/Contracts").GetFiles())
-            {            
-                using (StringReader stringReader = new StringReader(File.ReadAllText(file.FullName)))
-                {
-                    try
-                    {
-                        ContractList List = (ContractList)new XmlSerializer(typeof(ContractList)).Deserialize((TextReader)stringReader);
-                        Singleton<ContractXmlList>.Instance.Add(List.ContractsList);
-                    }
-                    catch (Exception ex)
-                    {
-                        Debug.Error("XML", ex);
-                    }
-                }
-            }
-            foreach (FileInfo file in new DirectoryInfo(ModPath + "/ContractJsonTest").GetFiles())
             {
                 try
                 {
@@ -653,19 +647,23 @@ namespace Contingecy_Contract
                     foreach (ContractBluePrint bluePrint in list.CCs)
                     {
                         System.Type type = System.Type.GetType("Contingecy_Contract.ContingecyContract_" + bluePrint.Type);
-                        if (type == (System.Type)null)
+                        if (type == null)
                             continue;
                         if (bluePrint.Variation <= 0)
-                            ContractXmlList.JsonList.Add(new NewContract() { Type = bluePrint.Type, Variant = 0, desc = bluePrint.desc, contractType = bluePrint.contractType, Faction = bluePrint.Faction, Level = bluePrint.BaseLevel, Bonus = bluePrint.BonusBaseLevel, Stageid = bluePrint.Stageid, Conflict = bluePrint.Conflict });
+                        {
+                            JsonList.Add(new Contract() { Type = bluePrint.Type, Variant = 0, desc = bluePrint.desc, contractType = bluePrint.contractType, Faction = bluePrint.Faction, Level = bluePrint.BaseLevel, Bonus = bluePrint.BonusBaseLevel, Stageid = bluePrint.Stageid, Conflict = bluePrint.Conflict });
+                            Debug.Log("XML: {0} Added", bluePrint.Type);
+                        }
                         else
                         {
                             ContingecyContract contract = Activator.CreateInstance(type, new object[] { 0 }) as ContingecyContract;
                             for (int i = 1; i <= bluePrint.Variation; i++)
                             {
                                 contract.Level = i;
-                                NewContract item = new NewContract() { Type = bluePrint.Type, Variant = i, contractType = bluePrint.contractType, Faction = bluePrint.Faction, Level = bluePrint.BaseLevel + i * bluePrint.Step, Bonus = bluePrint.BonusBaseLevel + i * bluePrint.BonusBaseLevel, Stageid = bluePrint.Stageid, Conflict = bluePrint.Conflict };
-                                bluePrint.desc.ForEach(x => item.desc.Add(new ContractDesc() { language = x.language, name = x.name + i.ToString(), desc = string.Format(x.desc, contract.GetFormatParam) }));
-                                ContractXmlList.JsonList.Add(item);
+                                Contract item = new Contract() { Type = bluePrint.Type, Variant = i, contractType = bluePrint.contractType, Faction = bluePrint.Faction, Level = bluePrint.BaseLevel + i * bluePrint.Step, Bonus = bluePrint.BonusBaseLevel + i * bluePrint.BonusStep, Stageid = bluePrint.Stageid, Conflict = bluePrint.Conflict };
+                                bluePrint.desc.ForEach(x => item.desc.Add(new ContractDesc() { language = x.language, name = x.name + " " + i.ToString(), desc = string.Format(x.desc, contract.GetFormatParam) }));
+                                JsonList.Add(item);
+                                Debug.Log("XML: {0} Added", item.Id);
                             }
                         }
                     }
@@ -675,7 +673,7 @@ namespace Contingecy_Contract
                     Debug.Error("JSON", ex);
                 }
             }
-            try
+/*            try
             {
                 foreach (NewContract bluePrint in ContractXmlList.JsonList)
                 {
@@ -685,7 +683,7 @@ namespace Contingecy_Contract
             catch (Exception ex)
             {
                 Debug.Error("ToJSOn", ex);
-            }
+            }*/
         }
         public static void LoadThumb()
         {
@@ -706,7 +704,6 @@ namespace Contingecy_Contract
                         if (node.InnerText == "null")
                         {
                             NonThumbSprite[Tools.MakeLorId(key)] = null;
-                            NonHeadEquipPage.Add(Tools.MakeLorId(key));
                             continue;
                         }
                         int value = Int32.Parse(node.InnerText);
@@ -719,5 +716,6 @@ namespace Contingecy_Contract
                 }
             }
         }
+        public static List<int> NonHeadEquipPage = new List<int>() { 18810000 };
     }
 }

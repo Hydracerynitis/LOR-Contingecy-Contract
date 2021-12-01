@@ -231,8 +231,8 @@ namespace Contingecy_Contract
             {
                 PassiveAbilityBase contract = new ContingecyContract_Philip(Level)
                 {
-                    name = Singleton<PassiveDescXmlList>.Instance.GetName(Tools.MakeLorId(20210302)) + Singleton<ContractXmlList>.Instance.GetContract("Philip").GetDesc().name,
-                    desc = string.Format(Singleton<ContractXmlList>.Instance.GetContract("Philip").GetDesc().desc, this.GetFormatParam),
+                    name = name,
+                    desc = desc,
                     rare = Rarity.Unique
                 };
                 this.owner.passiveDetail.AddPassive(contract);
@@ -242,12 +242,12 @@ namespace Contingecy_Contract
             {
                 PassiveAbilityBase contract = new ContingecyContract_Philip(Level)
                 {
-                    name = Singleton<PassiveDescXmlList>.Instance.GetName(Tools.MakeLorId(20210302)) + Singleton<ContractXmlList>.Instance.GetContract("Philip").GetDesc().name,
-                    desc = string.Format(Singleton<ContractXmlList>.Instance.GetContract("Philip").GetDesc().desc, this.GetFormatParam),
+                    name = name,
+                    desc = desc,
                     rare = Rarity.Unique
                 };
-                this.owner.passiveDetail.AddPassive(contract);
-                this.owner.passiveDetail.DestroyPassive(this);
+                owner.passiveDetail.AddPassive(contract);
+                owner.passiveDetail.DestroyPassive(this);
             }
         }
         public override void OnRoundStartAfter()
@@ -256,7 +256,7 @@ namespace Contingecy_Contract
             Priority = new Queue<int>();
             for (int x = 90; x > 0; x -= 10)
                 Priority.Enqueue(x);
-            int num = this.owner.Book.GetSpeedDiceRule(this.owner).Roll(this.owner).Count - 4;
+            int num = this.owner.Book.GetSpeedDiceRule(owner).Roll(owner).Count - 4;
             if (phase == 2)
                 num += 1;
             if (phase == 3)

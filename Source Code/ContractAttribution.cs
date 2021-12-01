@@ -10,7 +10,7 @@ namespace Contingecy_Contract
 {
     public class ContractAttribution
     {
-        public static List<BattleUnitModel> Inition;
+        public static List<BattleUnitModel> Inition = new List<BattleUnitModel>();
         public static void Init(BattleUnitModel Model)
         {
             Inition.Add(Model);
@@ -38,7 +38,7 @@ namespace Contingecy_Contract
                 }
                 Debug.Log("Instance of {0} is found for {1}", type.Name, Model.UnitData.unitData.name);
 
-                if (Activator.CreateInstance(type, new object[] { contract.level }) is ContingecyContract instance)
+                if (Activator.CreateInstance(type, new object[] { contract.Variant }) is ContingecyContract instance)
                 {
                     Debug.Log("Instance of {0}  is created for {1}", type.Name, Model.UnitData.unitData.name);
                     if(!instance.CheckEnemyId(Model.UnitData.unitData.EnemyUnitId))
@@ -47,11 +47,8 @@ namespace Contingecy_Contract
                         continue;
                     }
                     instance.Init(Model);
-                    string level = string.Empty;
-                    if (contract.Variation > 0)
-                        level = contract.level.ToString();
-                    instance.name = Singleton<PassiveDescXmlList>.Instance.GetName(Tools.MakeLorId(20210302)) + contract.GetDesc().name+" "+level;
-                    instance.desc = string.Format(contract.GetDesc().desc,instance.GetFormatParam);
+                    instance.name = Singleton<PassiveDescXmlList>.Instance.GetName(Tools.MakeLorId(20210302)) + contract.GetDesc().name;
+                    instance.desc = contract.GetDesc().desc;
                     instance.rare = Rarity.Unique;                 
                     if (instance.Type == ContractType.Buff)
                     {
@@ -90,13 +87,10 @@ namespace Contingecy_Contract
                     continue;
                 }
                 Debug.Log("Instance of {0} is found for {1}", type.Name, Model.UnitData.unitData.name);
-                if (Activator.CreateInstance(type, new object[] { contract.level }) is ContingecyContract stage)
+                if (Activator.CreateInstance(type, new object[] { contract.Variant }) is ContingecyContract stage)
                 {
-                    string level = string.Empty;
-                    if (contract.Variation > 0)
-                        level = contract.level.ToString();
-                    stage.name = Singleton<PassiveDescXmlList>.Instance.GetName(Tools.MakeLorId(20210302)) + contract.GetDesc().name + " " + level;
-                    stage.desc = string.Format(contract.GetDesc().desc, stage.GetFormatParam);
+                    stage.name = Singleton<PassiveDescXmlList>.Instance.GetName(Tools.MakeLorId(20210302)) + contract.GetDesc().name;
+                    stage.desc = contract.GetDesc().desc;
                     stage.rare = Rarity.Unique;
                     StageContracts.Add(stage);
                 }

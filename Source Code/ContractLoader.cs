@@ -11,7 +11,6 @@ namespace Contingecy_Contract
 {
     public class ContractLoader: Singleton<ContractLoader>
     {
-        public bool bInit;
         private List<Contract> PassiveList = new List<Contract>();
         private List<Contract> StageList = new List<Contract>();
         public void Init()
@@ -22,37 +21,16 @@ namespace Contingecy_Contract
             Debug.Log("----- Start Loading Contract -----");
             foreach (string readAllLine in File.ReadAllLines(Harmony_Patch.ModPath + "/ContractLoader.txt"))
             {
-                int level = 0;
                 string str = readAllLine.Trim();
                 if (str == "")
                     continue;
-                if (char.IsDigit(str[str.Length - 1]))
-                {
-                    level = int.Parse(str.Substring(str.Length - 1));
-                    str = str.Substring(0, str.Length - 1);
-                }
-                Contract New = Singleton<ContractXmlList>.Instance.GetContract(str);
+                Contract New = Harmony_Patch.JsonList.Find(x => x.Id==str);
                 if (New == null)
                 {
                     Debug.Log("{0} is not found",str);
                     continue;
                 }
-                if(New.Variation>0 && level == 0)
-                {
-                    Debug.Log("{0}'s level can't be 0",str);
-                    continue;
-                }
-                if (level > New.Variation)
-                {
-                    Debug.Log("{0}'s level excceed {0}'s maximun level", str);
-                    continue;
-                }
-                New.level = level;
-                New.Level = New.BaseLevel + level*New.Step;
-                New.Bonus = New.BonusBaseLevel + level * New.BonusStep;
                 string name = New.Type;
-                if (New.Variation > 0)
-                    name=string.Format("{0} {1}",name,level);
                 if (New.contractType == ContractXmlType.Passive)
                 {
                     if (PassiveList.Find(x => x.Conflict.Contains(New.Type)) != null)
@@ -63,7 +41,7 @@ namespace Contingecy_Contract
                     Contract Old = PassiveList.Find(x => x.Type == New.Type);
                     if (Old != null)
                     {
-                        if (Old.level > New.level)
+                        if (Old.Variant > New.Variant)
                         {
                             Debug.Log("Larger level of {0} exist", str);
                             continue;
@@ -86,7 +64,7 @@ namespace Contingecy_Contract
                     Contract Old = StageList.Find(x => x.Type == New.Type);
                     if (Old != null)
                     {
-                        if (Old.level > New.level)
+                        if (Old.Variant > New.Variant)
                         {
                             Debug.Log("Larger level of {0} exist", str);
                             continue;
@@ -103,7 +81,7 @@ namespace Contingecy_Contract
                         continue;
                     }
                     Debug.Log(type.Name+ " is found");
-                    New.modifier = (StageModifier)Activator.CreateInstance(type, new object[] { New.level });
+                    New.modifier = (StageModifier)Activator.CreateInstance(type, new object[] { New.Variant });
                     StageList.Add(New);
                     Debug.Log("Contract {0} Added to Stage", name);
                 }

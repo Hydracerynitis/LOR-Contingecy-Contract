@@ -1,0 +1,80 @@
+{
+    "CCs":[
+        {
+            "Type":"Duplicate",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"呼叫增援",
+                    "desc":"额外接待随机一波来宾的复制"
+                },
+                {
+                    "language":"en",
+                    "name":"REINFORCE!",
+                    "desc":"Add one extra wave consist of copy of random wave"
+                }
+            ],
+            "contractType":1,
+            "Faction":0,
+            "BaseLevel":4
+        },
+        {
+            "Type":"Last",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"最后防线",
+                    "desc":"只能上一层司书接待"
+                },
+                {
+                    "language":"en",
+                    "name":"Last Stand",
+                    "desc":"Only one floor of librarian can be involed in reception"
+                }
+            ],
+            "contractType":1,
+            "Faction":1,
+            "BaseLevel":4,
+            "Conflict":["LowFloor"]
+        },
+        {
+            "Type":"LowFloor",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"午夜突袭",
+                    "desc":"图书馆随机{0}个楼层无法接待"
+                },
+                {
+                    "language":"en",
+                    "name":"Ambush",
+                    "desc":"Random {0} Floors of library is unavailabe for this reception"
+                }
+            ],
+            "contractType":1,
+            "Faction":1,
+            "Variation":2,
+            "Step":2,
+            "BaseLevel":2,
+            "Conflict":["Last"]
+        },
+        {
+            "Type":"LowPeople",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"瞌睡虫",
+                    "desc":"最多可接待的司书-1"
+                },
+                {
+                    "language":"en",
+                    "name":"Oversleep",
+                    "desc":"Reduce number of Maximun Available Librarians by 1"
+                }
+            ],
+            "contractType":1,
+            "Faction":1,
+            "BaseLevel":4
+        }
+    ]
+}

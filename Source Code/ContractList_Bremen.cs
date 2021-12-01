@@ -52,7 +52,7 @@ namespace Contingecy_Contract
             base.OnRoundEndTheLast();
             if (passive.destroyed)
             {
-                owner.passiveDetail.AddPassive(new ContingecyContract_Bremen_Self_2(Level));
+                owner.passiveDetail.AddPassive(new ContingecyContract_Bremen_Self_2(Level, name,desc));
                 owner.passiveDetail.DestroyPassive(this);
             }
         }
@@ -82,9 +82,11 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_Bremen_Self_2 : ContingecyContract
     {
-        public ContingecyContract_Bremen_Self_2(int level)
+        public ContingecyContract_Bremen_Self_2(int level,string Name, string Desc)
         {
             Level = level;
+            name = Name;
+            desc = Desc;
         }
         public override string[] GetFormatParam => new string[] { Level.ToString(), GetParam() };
         private string GetParam()
@@ -101,13 +103,6 @@ namespace Contingecy_Contract
         public override int SpeedDiceNumAdder()
         {
             return Level;
-        }
-        public override void OnCreated()
-        {
-            base.OnCreated();
-            name = Singleton<PassiveDescXmlList>.Instance.GetName(Tools.MakeLorId(20210302)) + Singleton<ContractXmlList>.Instance.GetContract("Bremen_Self").GetDesc().name;
-            desc = string.Format(Singleton<ContractXmlList>.Instance.GetContract("Bremen_Self").GetDesc().desc, this.GetFormatParam);
-            rare = Rarity.Unique;
         }
         public override void OnRoundStartAfter()
         {

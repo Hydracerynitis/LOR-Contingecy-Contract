@@ -1,0 +1,125 @@
+{
+    "CCs":[
+        {
+            "Type":"Damage",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"研磨锋刃",
+                    "desc":"所有来宾造成伤害+{0}%"
+                },
+                {
+                    "language":"en",
+                    "name":"Sharpened Blade",
+                    "desc":"Increase all Guests' outgoing Damage by {0}%"
+                }
+            ],
+            "Faction":0,
+            "Variation":4
+        },
+        {
+            "Type":"BreakDamage",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"震荡猛击",
+                    "desc":"所有来宾造成混乱伤害+{0}%"
+                },
+                {
+                    "language":"en",
+                    "name":"Concussing Strike",
+                    "desc":"Increase all Guests' outgoing Stagger Damage by {0}%"
+                }
+            ],
+            "Faction":0,
+            "Variation":4
+        },
+        {
+            "Type":"Power",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"强力压制",
+                    "desc":"所有来宾骰子威力提升{0}"
+                },
+                {
+                    "language":"en",
+                    "name":"Powerful",
+                    "desc":"All Guests' Dice gain {0} Power."
+                }
+            ],
+            "Faction":0,
+            "Variation":3,
+            "BonusBaseLevel":-10,
+            "BonusStep":20
+        },
+        {
+            "Type":"Hp",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"手术强化",
+                    "desc":"所有来宾最大血量提升{0}%"
+                },
+                {
+                    "language":"en",
+                    "name":"Surgery Enhancement",
+                    "desc":"Increase all Guests' Max HP by {0}%"
+                }
+            ],
+            "Faction":0,
+            "Variation":4
+        },
+        {
+            "Type":"Bp",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"身经百战",
+                    "desc":"所有来宾最大混乱抗性提升{0}%"
+                },
+                {
+                    "language":"en",
+                    "name":"Experienced Combatant",
+                    "desc":"Increase all Guests' Max Stagger Resist by {0}%"
+                }
+            ],
+            "Faction":0,
+            "Variation":4
+        },
+        {
+            "Type":"NoBreak",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"临危不乱",
+                    "desc":"所有来宾陷入混乱时不改变伤害抗性"
+                },
+                {
+                    "language":"en",
+                    "name":"Unflappable",
+                    "desc":"For all Guests, Becoming Staggered does not temporarily change the character's resistances."
+                }
+            ],
+            "Faction":0,
+            "BaseLevel":5
+        },
+        {
+            "Type":"NoDebuff",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"净化",
+                    "desc":"所有来宾免疫负面效果加成"
+                },
+                {
+                    "language":"en",
+                    "name":"Purity",
+                    "desc":"All Guests are immune to status ailment."
+                }
+            ],
+            "Faction":0,
+            "BaseLevel":2
+        }
+    ]
+}

@@ -23,94 +23,64 @@ namespace Contingecy_Contract
             switch (info.id.id)
             {
                 case 70001:
-                    Harmony_Patch.Progess.Philiph_Risk = 1;
+                    Harmony_Patch.ClearList.Add(18100000);
                     break;
                 case (70002):
-                    Harmony_Patch.Progess.Eileen_Risk = 1;
+                    Harmony_Patch.ClearList.Add(18200000);
                     break;
                 case (70003):
-                    Harmony_Patch.Progess.Greta_Risk = 1;
+                    Harmony_Patch.ClearList.Add(18300000);
                     break;
                 case (70004):
-                    Harmony_Patch.Progess.Bremen_Risk = 1;
+                    Harmony_Patch.ClearList.Add(18400000);
                     break;
                 case (70006):
-                    Harmony_Patch.Progess.Tanya_Risk = 1;
+                    Harmony_Patch.ClearList.Add(18600000);
                     break;
                 case (70007):
-                    Harmony_Patch.Progess.Jaeheon_Risk = 1;
+                    Harmony_Patch.ClearList.Add(18700000);
                     break;
                 case (70008):
-                    Harmony_Patch.Progess.Elena_Risk = 1;
+                    Harmony_Patch.ClearList.Add(18800000);
                     break;
                 case (70009):
-                    Harmony_Patch.Progess.Pluto_Risk = 1;
+                    Harmony_Patch.ClearList.Add(18900000);
                     break;
             }
             UIs.Add(TextDataModel.GetText("ui_RewardStage", Singleton<StageNameXmlList>.Instance.GetName(info.id)));
             CheckSpecialCondition(info);
             CheckRewardAchieved();
-            Debug.SaveDebug();
             if (UIs.Count > 0)
-                UIAlarmPopup.instance.SetAlarmText(string.Join("\n", UIs));
+            {
+                string uis = string.Join("\n", UIs.GetRange(0, Math.Min(UIs.Count, 4)));
+                if (UIs.Count > 4)
+                    uis += TextDataModel.GetText("ui_MoreEquipPage");
+                UIAlarmPopup.instance.SetAlarmText(uis);
+            }
+
         }
         public void CheckSpecialCondition(StageClassInfo info)
         {
-            if (GetContractCondition(OrangeCrossCondition,info))
-            {
-                if (Harmony_Patch.Progess.Orange_Path == 0)
-                    UIs.Add(TextDataModel.GetText("ui_RewardSpecial", TextDataModel.GetText("Condition_OrangeCross")));
-                Harmony_Patch.Progess.Orange_Path = 1;
-            }
+            if (GetContractCondition(OrangeCrossCondition, info))
+                Harmony_Patch.ClearList.Add(18810000);
             if (EnsembleComplete)
-            {
-                if(Harmony_Patch.Progess.Ensemble_Complete==0)
-                    UIs.Add(TextDataModel.GetText("ui_RewardSpecial", TextDataModel.GetText("Condition_Ensemble")));
-                Harmony_Patch.Progess.Ensemble_Complete = 1;
-            }
+                Harmony_Patch.ClearList.Add(18000000);
         }
         public void CheckRewardAchieved()
         {
-            if (Harmony_Patch.Progess.Ensemble_Complete == 1)
+            HashSet<int> Inventory = new HashSet<int>();
+            foreach(BookModel book in Singleton<BookInventoryModel>.Instance.GetBookListAll().FindAll(x => x.GetBookClassInfoId().packageId== "ContingencyConract"))
             {
-                GiveEquipBook(18000000);
+                int id = book.GetBookClassInfoId().id;
+                Inventory.Add(id);
+                if (!Harmony_Patch.ClearList.Contains(id))
+                    Harmony_Patch.ClearList.Add(id);
             }
-            if (Harmony_Patch.Progess.Philiph_Risk == 1)
-            {
-                GiveEquipBook(18100000);
-            }
-            if (Harmony_Patch.Progess.Eileen_Risk == 1)
-            {
-                GiveEquipBook(18200000);
-            }
-            if (Harmony_Patch.Progess.Greta_Risk == 1)
-            {
-                GiveEquipBook(18300000);
-            }
-            if (Harmony_Patch.Progess.Bremen_Risk == 1)
-            {
-                GiveEquipBook(18400000);
-            }
-            if (Harmony_Patch.Progess.Tanya_Risk == 1)
-            {
-                GiveEquipBook(18600000);
-            }
-            if (Harmony_Patch.Progess.Jaeheon_Risk == 1)
-            {
-                GiveEquipBook(18700000);
-            }
-            if (Harmony_Patch.Progess.Elena_Risk == 1)
-            {
-                GiveEquipBook(18800000);
-            }
-            if (Harmony_Patch.Progess.Orange_Path == 1)
-            {
-                GiveEquipBook(18810000);
-            }
-            if (Harmony_Patch.Progess.Pluto_Risk == 1)
-            {
-                GiveEquipBook(18900000);
-            }
+            new List<int>(Harmony_Patch.ClearList).Save<List<int>>("ContingecyContract_Save");
+            HashSet<int> ExceptWith = new HashSet<int>(Harmony_Patch.ClearList);
+            ExceptWith.ExceptWith(Inventory);
+            foreach (int i in ExceptWith)
+                GiveEquipBook(i);
         }
         public bool GetContractCondition(List<(string, int)> Condition,StageClassInfo info)
         {
@@ -144,9 +114,16 @@ namespace Contingecy_Contract
             UIs.Add(TextDataModel.GetText("ui_popup_getequippage", (object)Singleton<BookDescXmlList>.Instance.GetBookName(newId), (object)difference));
         }
         public static List<string> SupportedPid = new List<string>() { ""};
-        public static bool EnsembleComplete => Harmony_Patch.Progess.Philiph_Risk == 1 && Harmony_Patch.Progess.Eileen_Risk == 1 && Harmony_Patch.Progess.Greta_Risk ==1 &&
-                                                  Harmony_Patch.Progess.Bremen_Risk == 1 &&  Harmony_Patch.Progess.Tanya_Risk == 1 && Harmony_Patch.Progess.Jaeheon_Risk == 1
-                                                 && Harmony_Patch.Progess.Elena_Risk == 1 && Harmony_Patch.Progess.Pluto_Risk == 1;
+        public static bool EnsembleComplete
+        {
+            get
+            {
+                HashSet<int> Test = new HashSet<int>() { 18100000, 18200000, 18300000, 18400000, 18600000, 18700000, 18800000, 18900000 };
+                Test.ExceptWith(Harmony_Patch.ClearList);
+                return Test.Count <= 0;
+            }
+        }
+
         public static List<(string, int)> OrangeCrossCondition => new List<(string, int)>() { ("Elena_Cross", 4), ("Elena", 4), ("Damage", 4) };
     }
 }
