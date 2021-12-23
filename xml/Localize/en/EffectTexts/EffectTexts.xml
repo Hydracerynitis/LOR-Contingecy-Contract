@@ -52,5 +52,9 @@ Change resistance to Noraml. Can at most take damage equal to 10% of their Max H
 			<Name>Doodle-doo’s Cocky Session</Name>
 			<Desc>Doodle-doo's Combat Page will be played on the Last Speed die.</Desc>
 		</BattleEffectText>
+		<BattleEffectText ID="TrollIndicator">
+			<Name>A little Trolling</Name>
+			<Desc>At the end of this Scene, the librarian with most damage dealt will be stupified.</Desc>
+		</BattleEffectText>
 	</effectTextList>
 </BattleEffectTextRoot>

@@ -15,7 +15,6 @@ namespace Contingecy_Contract
         {
             this.Level = level;
         }
-        public override ContractType Type => ContractType.Passive;
         public override string[] GetFormatParam => new string[] { (20*Level).ToString()};
         public override void BeforeRollDice(BattleDiceBehavior behavior)
         {
@@ -31,7 +30,6 @@ namespace Contingecy_Contract
         {
             this.Level = level;
         }
-        public override ContractType Type => ContractType.Passive;
         public override string[] GetFormatParam => new string[] { (20 * Level).ToString() };
         public override void BeforeRollDice(BattleDiceBehavior behavior)
         {
@@ -48,7 +46,6 @@ namespace Contingecy_Contract
             this.Level = level;
         }
         public override string[] GetFormatParam => new string[] { Level.ToString() };
-        public override ContractType Type => ContractType.Passive;
         public override void BeforeRollDice(BattleDiceBehavior behavior)
         {
             behavior.ApplyDiceStatBonus(new DiceStatBonus() { power = -Level });
@@ -86,7 +83,6 @@ namespace Contingecy_Contract
         {
             this.Level = level;
         }
-        public override ContractType Type => ContractType.Passive;
         public override string[] GetFormatParam => new string[] { (4-Level).ToString() };
         public override void OnWaveStart()
         {
@@ -108,5 +104,32 @@ namespace Contingecy_Contract
             this.Level = level;
         }
         public override ContractType Type => ContractType.Buff;
+    }
+    public class ContingecyContract_NoEGO: ContingecyContract
+    {
+        public ContingecyContract_NoEGO(int level)
+        {
+            Level = level;
+        }
+        public override ContractType Type => ContractType.Buff;
+    }
+    public class ContingecyContract_NoEmotion : ContingecyContract
+    {
+        public ContingecyContract_NoEmotion(int level)
+        {
+            Level = level;
+        }
+        public override string[] GetFormatParam => new string[] { GetParam()};
+        private string GetParam()
+        {
+            string s = "";
+            if (Level >= 1)
+                s += TextDataModel.GetText("NoEmotion_param1");
+            if (Level >= 2)
+                s += TextDataModel.GetText("NoEmotion_param2");
+            if (Level >= 3)
+                s += TextDataModel.GetText("NoEmotion_param3");
+            return s;
+        }
     }
 }

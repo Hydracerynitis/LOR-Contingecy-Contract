@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <localize xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<text id="ui_ContingecyLevel">{0}级危机--{1}</text>
-	<text id="ui_RewardStage">恭喜你打过{0}关卡的12级危机合约挑战</text>
+	<text id="ui_RewardStage">恭喜你打过{0}关卡的16级危机合约挑战</text>
 	<text id="ui_popup_getequippage">获得{1}张核心书页-“{0}”</text>
 	<text id="ui_MoreEquipPage">以及更多核心书页</text>
 	<text id="Philip_Silence_param1">比较</text>
@@ -19,6 +19,15 @@
 	<text id="Bremen_Group_param1">3张永恒残音</text>
 	<text id="Bremen_Group_param2">3张至暗圣地</text>
 	<text id="Bremen_Group_param3">1张合唱</text>
+	<text id="Oswald_Debut_param1">利刃先生战斗书页数值提升</text>
+	<text id="Oswald_Debut_param2">利刃先生战斗书页数值提升,美人鱼小姐速度骰+2且进攻方式更加激进</text>
+	<text id="Oswald_Debut_param3">利刃先生战斗书页数值提升,速度骰+1且进攻方式更加激进;美人鱼小姐速度骰+2且进攻方式非常激进</text>
+	<text id="Oswald_Troll_param1">骰子威力提升2点</text>
+	<text id="Oswald_Troll_param2">,造成伤害和混乱伤害提升50%</text>
+	<text id="Oswald_Troll_param3">,额外获得2个速度骰并且每一幕开始时抽2张牌</text>
+	<text id="NoEmotion_param1">3阶</text>
+	<text id="NoEmotion_param2">,2阶</text>
+	<text id="NoEmotion_param3">和1阶</text>
 	<text id="Tanya_Brawl_none">无</text>
 	<text id="Zombie_name">无名躯壳</text>
 	<text id="marked_dice_desc">[昨日之约] </text>

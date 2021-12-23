@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <localize xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<text id="ui_ContingecyLevel">Risk Level {0} : {1}</text>
-	<text id="ui_RewardStage">Congrats for completing Risk 12 Level Challenge of {0}</text>
+	<text id="ui_RewardStage">Congrats for completing Risk 16 Level Challenge of {0}</text>
 	<text id="ui_MoreEquipPage"> and more Equip Pages</text>
 	<text id="ui_popup_getequippage">Gain {1} Equip Page: “{0}”</text>
 	<text id="Philip_Silence_param1">more</text>
@@ -19,6 +19,15 @@
 	<text id="Bremen_Group_param1">3 "Everlasting Melody",</text>
 	<text id="Bremen_Group_param2">3 "Dark Shrine to Music",</text>
 	<text id="Bremen_Group_param3">1 "Trio"</text>
+	<text id="Oswald_Debut_param1">Mr. Knife's combnat pages are enhanced</text>
+	<text id="Oswald_Debut_param2">Mr. Knife's combnat pages are enhanced;  Ms. Mermaid gain 2 Speed Dice and becomes more aggressive</text>
+	<text id="Oswald_Debut_param3">Mr. Knife's combnat pages are enhanced, gain 1 Speed Dice and becomes more aggressive; Ms. Mermaid gain 2 Speed Dice and becomes much more aggressive</text>
+	<text id="Oswald_Troll_param1">Dice gain 2 Power</text>
+	<text id="Oswald_Troll_param2">, Deal 50% more Damage and Stagger Damage</text>
+	<text id="Oswald_Troll_param3">, Gain 2 Speed Dice, Draw 2 more card at the Start of the Scene</text>
+	<text id="NoEmotion_param1">Tier 3</text>
+	<text id="NoEmotion_param2">, Tier 2</text>
+	<text id="NoEmotion_param3">, and Tier 1</text>
 	<text id="Tanya_Brawl_none">None</text>	
 	<text id="Zombie_name">Nameless Shell</text>
 	<text id="marked_dice_desc">[Yesterday Promise] </text>

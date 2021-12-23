@@ -51,5 +51,9 @@
 			<Name>咕哦的演奏时间</Name>
 			<Desc>最后的速度骰子将使用“咕哦”的战斗书页。</Desc>
 		</BattleEffectText>
+		<BattleEffectText ID="TrollIndicator">
+			<Name>A little Trolling</Name>
+			<Desc>这一幕结束时,造成伤害最多的司书将会被迷惑</Desc>
+		</BattleEffectText>
 	</effectTextList>
 </BattleEffectTextRoot>

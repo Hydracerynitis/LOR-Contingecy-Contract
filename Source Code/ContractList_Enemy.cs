@@ -16,7 +16,6 @@ namespace Contingecy_Contract
             this.Level = level;
         }
         public override string[] GetFormatParam => new string[] { (25*Level).ToString()};
-        public override ContractType Type => ContractType.Passive;
         public override void BeforeRollDice(BattleDiceBehavior behavior)
         {
             if (IsAttackDice(behavior.Detail))
@@ -32,7 +31,6 @@ namespace Contingecy_Contract
             this.Level = level;
         }
         public override string[] GetFormatParam => new string[] { (25 * Level).ToString() };
-        public override ContractType Type => ContractType.Passive;
         public override void BeforeRollDice(BattleDiceBehavior behavior)
         {
             if (IsAttackDice(behavior.Detail))
@@ -48,7 +46,6 @@ namespace Contingecy_Contract
             this.Level = level;
         }
         public override string[] GetFormatParam => new string[] { Level.ToString() };
-        public override ContractType Type => ContractType.Passive;
         public override void BeforeRollDice(BattleDiceBehavior behavior)
         {
             behavior.ApplyDiceStatBonus(new DiceStatBonus() { power = Level });
@@ -86,7 +83,6 @@ namespace Contingecy_Contract
         {
             this.Level = level;
         }
-        public override ContractType Type => ContractType.Passive;
         public override bool DontChangeResistByBreak() => true;
     }
     public class ContingecyContract_NoDebuff : ContingecyContract
@@ -96,5 +92,30 @@ namespace Contingecy_Contract
             this.Level = level;
         }
         public override ContractType Type => ContractType.Buff;
+    }
+    public class ContingecyContract_Quick: ContingecyContract
+    {
+        public ContingecyContract_Quick(int level)
+        {
+            Level = level;
+        }
+        public override int GetSpeedDiceAdder(int speedDiceResult)
+        {
+            return 10000;
+        }
+    }
+    public class ContingecyContract_Angry: ContingecyContract
+    {
+        public ContingecyContract_Angry(int level)
+        {
+            Level = level;
+        }
+        public override string[] GetFormatParam => new string[] { Level.ToString(), Level.ToString() };
+        public override void Init(BattleUnitModel self)
+        {
+            if(self.emotionDetail.EmotionLevel<Level)
+                self.emotionDetail.SetEmotionLevel(Level);
+            base.Init(self);
+        }
     }
 }

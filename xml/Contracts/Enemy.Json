@@ -120,6 +120,40 @@
             ],
             "Faction":0,
             "BaseLevel":2
+        },
+        {
+            "Type":"Quick",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"急速进军",
+                    "desc":"所有来宾速度骰子数值设为无限大"
+                },
+                {
+                    "language":"en",
+                    "name":"Speedy Assault",
+                    "desc":"Speed values of the dices of all Guests change to the maximum possible value."
+                }
+            ],
+            "Faction":0,
+            "BaseLevel":3
+        },
+        {
+            "Type":"Angry",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"激昂",
+                    "desc":"所有来宾情感等级若低于{0}级则直接提升至{1}级"
+                },
+                {
+                    "language":"en",
+                    "name":"Excited",
+                    "desc":"All Guests' Emotion Level are set to {0} if their Emotion Level are lower than {1}"
+                }
+            ],
+            "Faction":0,
+            "Variation":3
         }
     ]
 }

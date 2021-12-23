@@ -25,7 +25,7 @@ namespace Contingecy_Contract
     {
         public static HashSet<int> ClearList = new HashSet<int>();
         public static List<Contract> JsonList = new List<Contract>();
-/*        public static bool UIInit = false;*/
+        public static bool UIInit = false;
         public static int PatchNum = 0;
         public static Harmony harmony;
         public static List<DiceBehaviour> passive18900002_Makred = new List<DiceBehaviour>();
@@ -43,6 +43,7 @@ namespace Contingecy_Contract
             LoadContract();
             LoadThumb();
             ModifyEnsemble();
+            Singleton<ContractLoader>.Instance.Init();
             MethodInfo Method1 = typeof(StageNameXmlList).GetMethod("GetName", new Type[] { typeof(int) });
             Patch(Method1, "StageNameXmlList_GetName_int", false);
             MethodInfo Method2 =  typeof(StageController).GetMethod("RoundStartPhase_System", AccessTools.all);
@@ -69,8 +70,8 @@ namespace Contingecy_Contract
             Patch(Method12, "StageController_InitCommon", true);
             MethodInfo Method13 = typeof(PlayHistoryModel).GetMethod("LoadFromSaveData", AccessTools.all);
             Patch(Method13, "PlayHistoryModel_LoadFromSaveData", false);
-/*            MethodInfo Method14 = typeof(PlayHistoryModel).GetMethod("GetSaveData", AccessTools.all);
-            Patch(Method14, "PlayHistoryModel_GetSaveData", false);*/
+            MethodInfo Method14 = typeof(PassiveAbility_1305012).GetMethod("SetCard", AccessTools.all);
+            Patch(Method14, "PassiveAbility_1305012_SetCard", false);
             MethodInfo Method15 = typeof(BattleCardAbilityDescXmlList).GetMethod("GetAbilityDesc", new Type[]{ typeof(DiceBehaviour)});
             Patch(Method15, "BattleCardAbilityDescXmlList_GetAbilityDesc", false);
             MethodInfo Method16 = typeof(StageController).GetMethod("StartAction",AccessTools.all);
@@ -113,8 +114,12 @@ namespace Contingecy_Contract
             Patch(Method34, "UICharacterRenderer_SetCharacter", false);
             MethodInfo Method35 = typeof(SdCharacterUtil).GetMethod("CreateSkin", AccessTools.all);
             Patch(Method35, "SdCharacterUtil_CreateSkin", false);
-/*            MethodInfo Method36 = typeof(UI.UIController).GetMethod("Initialize", AccessTools.all);
-            Patch(Method36, "UI_UIController_Initialize", false);*/
+            MethodInfo Method36 = typeof(UI.UIController).GetMethod("Initialize", AccessTools.all);
+            Patch(Method36, "UI_UIController_Initialize", false);
+            MethodInfo Method37 = typeof(EmotionCardXmlList).GetMethod("GetDataList", new Type[] { typeof(SephirahType), typeof(int), typeof(int) });
+            Patch(Method37, "EmotionCardXmlList_GetDataList", false);
+            MethodInfo Method38 = typeof(PassiveAbility_240008).GetMethod("OnRoundStart", AccessTools.all);
+            Patch(Method38, "PassiveAbility_240008_OnRoundStart", false);
         }
         public static void Patch(MethodInfo method, string patchName, bool prefix)
         {
@@ -605,14 +610,42 @@ namespace Contingecy_Contract
                 }
             }
         }
-/*        public static void UI_UIController_Initialize()
+        public static void UI_UIController_Initialize()
         {
             if (!UIInit)
             {
-                UI.UIController.Instance.gameObject.AddComponent<CCGUI.CCGUI>();
+                UI.UIController.Instance.gameObject.AddComponent<ContingecyContractGUI>();
                 UIInit = true;
             }
-        }*/
+        }
+        public static void PassiveAbility_1305012_SetCard(PassiveAbility_1305012 __instance)
+        {
+            if (__instance.Owner.passiveDetail.HasPassive<ContingecyContract_Oswald_Troll>() && __instance.cardPhase == PassiveAbility_1305012.CardPhase.DO_DAZE)
+            {
+                __instance.Owner.allyCardDetail.ExhaustAllCards();
+                typeof(PassiveAbility_1305012).GetMethod("SetCardPatterNormal", AccessTools.all).Invoke(__instance, new object[] { });
+                int num = __instance.Owner.emotionDetail.SpeedDiceNumAdder() + __instance.Owner.emotionDetail.GetSpeedDiceAdder(0);
+                if (num <= 0)
+                    return;
+                for (int index = 0; index < num; ++index)
+                    __instance.Owner.allyCardDetail.AddNewCard(703501).SetPriorityAdder(0);
+                __instance.cardPhase = PassiveAbility_1305012.CardPhase.DO_DAZE;
+                __instance.Owner.bufListDetail.AddBuf(new ContingecyContract_Oswald_Troll.TrollIndicator());
+            }
+        }
+        public static void EmotionCardXmlList_GetDataList(List<EmotionCardXmlInfo> __result, int floorLevel)
+        {
+            if (Singleton<ContractLoader>.Instance.GetPassiveList().Find(x => x.Type == "NoEmotion") is Contract NoEmotion && floorLevel >= 4 - NoEmotion.Variant)
+                __result.Clear();
+        }
+        public static void PassiveAbility_240008_OnRoundStart(PassiveAbility_240008 __instance)
+        {
+            int num = __instance.Owner.emotionDetail.SpeedDiceNumAdder() + __instance.Owner.emotionDetail.GetSpeedDiceAdder(0);
+            if (num <= 0)
+                return;
+            for (int index = 0; index < num; ++index)
+                __instance.Owner.allyCardDetail.AddNewCard(503002).SetPriorityAdder(0);
+        }
         public static void ModifyEnsemble()
         {
             List<StageClassInfo> Ensemble = Singleton<StageClassInfoList>.Instance.GetAllDataList().FindAll(x => x.id.IsBasic() && x.id.id >= 70001 && x.id.id <= 70010);

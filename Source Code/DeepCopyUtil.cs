@@ -1,6 +1,7 @@
-﻿using System;
+﻿using LOR_DiceSystem;
+using System;
 using System.Collections.Generic;
-using System.Linq;
+using HarmonyLib;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -112,6 +113,18 @@ namespace Contingecy_Contract
                 xmlId=info.xmlId
             };
             return output;
+        }
+        public static void EnhanceCard(BattleDiceCardModel card, int min = 0, int dice = 0, bool ignoreStandby=false)
+        {
+            DiceCardXmlInfo xml = card.XmlData.Copy(true);
+            foreach (DiceBehaviour Dice in xml.DiceBehaviourList)
+            {
+                if (ignoreStandby && Dice.Type == BehaviourType.Standby)
+                    continue;
+                Dice.Dice += dice;
+                Dice.Min += min;
+            }
+            typeof(BattleDiceCardModel).GetField("_xmlData", AccessTools.all).SetValue(card, xml);
         }
     }
 }

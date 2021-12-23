@@ -233,6 +233,65 @@
             "Stageid":70004
         },
         {
+            "Type":"Oswald_Debut",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"新人亮相",
+                    "desc":"{0}."
+                },
+                {
+                    "language":"en",
+                    "name":"Newcommers' Debut",
+                    "desc":"{0}."
+                }
+            ],
+            "Faction":0,
+            "Variation":3,
+            "BaseLevel":1,
+            "Conflict":["Oswald_Troll"],
+            "Stageid":70005
+        },
+        {
+            "Type":"Oswald_Troll",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"We do a little Trolling",
+                    "desc":"奥斯瓦尔德改为幕开始时使造成伤害最多的司书陷入迷惑;若场上无非迷惑的司书存活则接待失败.\n陷入迷惑的司书{0}."
+                },
+                {
+                    "language":"en",
+                    "name":"We do a little Trolling",
+                    "desc":"Oswald will render Librarian with most damage dealt stupified instead; Reception will conclude if no non-stupified librarian exists.\nStupified Librarian {0}."
+                }
+            ],
+            "Faction":0,
+            "Variation":3,
+            "BaseLevel":1,
+            "Conflict":["Oswald_Debut"],
+            "Stageid":70005
+        },
+        {
+            "Type":"Oswald",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"老友重逢",
+                    "desc":"额外出现“艾玛与诺亚”且其战斗书页数值大幅提升."
+                },
+                {
+                    "language":"en",
+                    "name":"With an Old Pal",
+                    "desc":"“Emma &amp; Noah” will appear and its combat pages' dice are enhanced."
+                }
+            ],
+            "Faction":0,
+            "BaseLevel":4,
+            "contractType":1,
+            "Stageid":70005
+        },
+        {
             "Type":"Tanya_Solo",
             "desc":[
                 {

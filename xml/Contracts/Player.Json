@@ -125,6 +125,44 @@
             "Faction":1,
             "BaseLevel":2,
             "BonusBaseLevel":50
+        },
+        {
+            "Type":"NoEGO",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"自卑",
+                    "desc":"所有司书无法使用EGO书页"
+                },
+                {
+                    "language":"en",
+                    "name":"Self-abased",
+                    "desc":"All Librarians can no longer use EGO pages."
+                }
+            ],
+            "Faction":1,
+            "BaseLevel":2
+        },
+        {
+            "Type":"NoEmotion",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"冷漠",
+                    "desc":"所有司书无法获取本楼层{0}异想体书页"
+                },
+                {
+                    "language":"en",
+                    "name":"Unconcerned",
+                    "desc":"All Librarians are no longer susceptible to {0} Abnormalities Card"
+                }
+            ],
+            "Faction":1,
+            "Variation":3,
+            "BaseLevel":2,
+            "Step":0,
+            "BonusBaseLevel":-30,
+            "BonusStep":30
         }
     ]
 }

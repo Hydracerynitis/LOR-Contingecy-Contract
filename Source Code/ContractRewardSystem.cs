@@ -17,7 +17,7 @@ namespace Contingecy_Contract
                 return;
             if (!SupportedPid.Contains(info.id.packageId))
                 return;
-            if (Singleton<ContractLoader>.Instance.GetLevel(info.id) < 12)
+            if (Singleton<ContractLoader>.Instance.GetLevel(info.id) < 16)
                 return;
             UIs = new List<string>();
             switch (info.id.id)
