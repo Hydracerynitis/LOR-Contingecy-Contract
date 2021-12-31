@@ -16,7 +16,7 @@
   	</BattleCardAbility>
 	  <BattleCardAbility ID="AllVibrate">
     		<Desc>[使用时]将所有敌方单位[震颤]层数设为4</Desc>
-    		<Desc>该书页3幕内最多使用1次</Desc>
+    		<Desc>该书页4幕内最多使用1次</Desc>
   	</BattleCardAbility>
 	<!--菲利普-->
   	<BattleCardAbility ID="SelfBurn2">
@@ -155,6 +155,39 @@
   	</BattleCardAbility>
   	<BattleCardAbility ID="bremen_donkeyhead2atk">
     		<Desc>[命中时]下一幕中对目标施加1层[麻痹]</Desc>
+  	</BattleCardAbility>
+	<!--奥斯瓦尔德-->
+	<BattleCardAbility ID="Oswald_energy3">
+    		<Desc>[脸贴脸~] 恢复3点光芒</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="oswald_recoverhp5pw">
+    		<Desc>[我比你大~]恢复5点体力</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="Oswald_firstplquickendu">
+    		<Desc>[做得好哟~]若最后一颗骰子拼点失败则下一幕中使目标获得1层[忍耐]与[迅捷]</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="oswald_poweruplast1pw">
+    		<Desc>[我比你大~]使自身当前书页的最后一颗骰子威力+1</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="oswald_seal1atk">
+    		<Desc>[糊你一脸！]下一幕中[封印]目标1颗速度骰子</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="Oswald_firstplstr">
+    		<Desc>[做得好哟~]若第一颗骰子拼点失败则下一幕中使目标获得1层[强壮]</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="oswald_destroyallatk">
+    		<Desc>[我比你大~]摧毁目标当前书页的所有骰子</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="Oswald_allpl">
+    		<Desc>[做得好哟~]若所有骰子全部拼点失败则为目标恢复2点光芒</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="Oswald_area">
+    		<Desc>[大家都来玩呀！][脸贴脸~]下一幕中使目标随机获得2层[易损]/[破绽]/[虚弱]/[守护]/[强壮]/[忍耐]</Desc>
+			<Desc>该书页4幕内最多使用1次</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="Oswald_daze">
+    		<Desc>[塞上去~]使目标友方单位陷入混乱并在下一幕中陷入[迷惑]</Desc>
+			<Desc>该书页仅可在场上没有“迷惑”的友方单位存活时使用.</Desc>
   	</BattleCardAbility>
 	<!--塔尼亚-->
   	<BattleCardAbility ID="TanyaCoolDown">

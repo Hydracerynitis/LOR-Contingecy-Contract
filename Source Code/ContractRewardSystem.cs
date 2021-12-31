@@ -34,6 +34,9 @@ namespace Contingecy_Contract
                 case (70004):
                     Harmony_Patch.ClearList.Add(18400000);
                     break;
+                case (70005):
+                    Harmony_Patch.ClearList.Add(18500000);
+                    break;
                 case (70006):
                     Harmony_Patch.ClearList.Add(18600000);
                     break;

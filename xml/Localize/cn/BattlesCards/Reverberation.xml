@@ -165,6 +165,28 @@
 		<BattleCardDesc ID="18400032">
 			<LocalizedName>咴咴咴~！！！</LocalizedName>
 		</BattleCardDesc>
+		<!--奥斯瓦尔德-->
+		<BattleCardDesc ID="18500001">
+			<LocalizedName>一起哈皮~</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500002">
+			<LocalizedName>会吓一跳吗！？&lt;color="red"&gt;♥&lt;/color&gt;</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500003">
+			<LocalizedName>嘭！~嘭！！♠</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500004">
+			<LocalizedName>接好喽~！♣</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500005">
+			<LocalizedName>蹦过去吧？&lt;color="red"&gt;◆&lt;/color&gt;</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500006">
+			<LocalizedName>高潮！！！</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500007">
+			<LocalizedName>我需要你哟~？</LocalizedName>
+		</BattleCardDesc>
 		<!--塔尼亚-->
 		<BattleCardDesc ID="18600001">
 			<LocalizedName>拳打</LocalizedName>

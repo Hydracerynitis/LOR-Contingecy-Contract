@@ -177,6 +177,36 @@
     		<Rarity>Unique</Rarity>
     		<CharacterSkin>Blue_Bremen</CharacterSkin>
 	</Book>
+	<Book ID="18500000">
+    		<Name>奥斯瓦尔德</Name>
+   		 	<TextId>18500000</TextId>
+    		<Category>DeckFixed</Category>
+    		<EquipEffect>
+      			<HP>200</HP>
+      			<Break>120</Break>
+      			<SpeedMin>2</SpeedMin>
+      			<Speed>5</Speed>
+				<SResist>Endure</SResist>
+				<PResist>Endure</PResist>
+				<HResist>Endure</HResist>
+				<SBResist>Resist</SBResist>
+				<PBResist>Resist</PBResist>
+				<HBResist>Resist</HBResist>
+      			<StartPlayPoint>4</StartPlayPoint>
+      			<MaxPlayPoint>4</MaxPlayPoint>
+				<Passive Pid="@origin">10008</Passive>
+      			<Passive>1800000</Passive>   
+      			<Passive Pid="@origin">1300001</Passive>
+      			<Passive>1850001</Passive>
+      			<Passive>1850002</Passive>
+      			<Passive>1850003</Passive>
+    		</EquipEffect>
+    		<BookIcon>ContingencyReward</BookIcon>
+    		<Chapter>7</Chapter>
+    		<Episode>1800007</Episode>
+    		<Rarity>Unique</Rarity>
+    		<CharacterSkin>Oswald</CharacterSkin>
+	</Book>
 	<Book ID="18600000">
 		<Name>塔尼亚</Name>
 		<TextId>18600000</TextId>

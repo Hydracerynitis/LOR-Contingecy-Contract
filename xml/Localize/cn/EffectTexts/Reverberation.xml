@@ -55,5 +55,11 @@
 			<Name>A little Trolling</Name>
 			<Desc>这一幕结束时,造成伤害最多的司书将会被迷惑</Desc>
 		</BattleEffectText>
+		<BattleEffectText ID="LibrarianDaze">
+			<Name>迷惑</Name>
+			<Desc>2幕之内，无法控制
+拼点失败时失去5%的混乱抗性
+若陷入混乱，则解除此状态并在下一幕开始时恢复所有混乱抗性</Desc>
+		</BattleEffectText>
 	</effectTextList>
 </BattleEffectTextRoot>

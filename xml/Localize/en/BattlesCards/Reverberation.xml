@@ -156,6 +156,28 @@
 		<BattleCardDesc ID="18400032">
 			<LocalizedName>Neiiigh~!!!</LocalizedName>
 		</BattleCardDesc>
+		<!--奥斯瓦尔德-->
+		<BattleCardDesc ID="18500001">
+			<LocalizedName>Let’s Have Some Fun~</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500002">
+			<LocalizedName>Ready for a Surprise?!&lt;color="red"&gt;♥&lt;/color&gt;</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500003">
+			<LocalizedName>Pow~! Kablammo!!♣</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500004">
+			<LocalizedName>Here, Catch~!♣</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500005">
+			<LocalizedName>Shall We Somersault These?&lt;color="red"&gt;◆&lt;/color&gt;</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500006">
+			<LocalizedName>CLIMAX!!!</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500007">
+			<LocalizedName>We Need You, You Know~?</LocalizedName>
+		</BattleCardDesc>
 		<!--塔尼亚-->
 		<BattleCardDesc ID="18600001">
 			<LocalizedName>Fisticuffs</LocalizedName>

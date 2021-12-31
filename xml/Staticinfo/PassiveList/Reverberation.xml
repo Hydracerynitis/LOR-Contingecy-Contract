@@ -108,6 +108,22 @@
     		<CanGivePassive>false</CanGivePassive>
 		<Cost>2</Cost>
   	</Passive>
+	<!--奥斯瓦尔德-->
+		<Passive ID="1850001">
+		<Rarity>Unique</Rarity>
+    		<CanGivePassive>false</CanGivePassive>
+		<Cost>4</Cost>
+  	</Passive>
+	<Passive ID="1850002">
+		<Rarity>Unique</Rarity>
+    		<CanGivePassive>false</CanGivePassive>
+		<Cost>6</Cost>
+  	</Passive>
+	<Passive ID="1850003">
+		<Rarity>Unique</Rarity>
+    		<CanGivePassive>false</CanGivePassive>
+		<Cost>4</Cost>
+  	</Passive>
 	<!-- 塔尼亚-->
 	<Passive ID="1860001">
 		<Rarity>Unique</Rarity>

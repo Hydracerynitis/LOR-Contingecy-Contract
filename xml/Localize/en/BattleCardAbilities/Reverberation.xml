@@ -16,7 +16,7 @@
   	</BattleCardAbility>
 	  <BattleCardAbility ID="AllVibrate">
     		<Desc>[On Use] Set all enemies' [Virbrate] stack to 4</Desc>
-    		<Desc>This card can be used at most use once per 4 Scene</Desc>
+    		<Desc>This page can be used at most use once per 4 Scene</Desc>
   	</BattleCardAbility>
 	<!--菲利普-->
   	<BattleCardAbility ID="SelfBurn2">
@@ -155,10 +155,43 @@
   	<BattleCardAbility ID="bremen_donkeyhead2atk">
     		<Desc>[On Hit] Inflict 1 Paralysis next Scene</Desc>
   	</BattleCardAbility>
+	<!--奥斯瓦尔德-->
+	<BattleCardAbility ID="Oswald_energy3">
+    		<Desc>[When We Meet~] Recover 3 Light</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="oswald_recoverhp5pw">
+    		<Desc>[On Clash Win] Recover 5 HP</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="Oswald_firstplquickendu">
+    		<Desc>[Good Job~] If the last die on this page loses in a clash, the opponent gains 1 Haste and Endurance next Scene</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="oswald_poweruplast1pw">
+    		<Desc>[On Clash Win] Last die gains +1 Power</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="oswald_seal1atk">
+    		<Desc>[On Hit] Seal a Speed die of target next Scene</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="Oswald_firstplstr">
+    		<Desc>[Well Done~] If the first die on this page loses in a clash, the opponent gains 1 Strength next Scene</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="oswald_destroyallatk">
+    		<Desc>[On Clash Win] Destroy all dice on target's page</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="Oswald_allpl">
+    		<Desc>[Nice Work~] If all dice on this page lose in a clash, the opponent restores 2 Light</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="Oswald_area">
+    		<Desc>[ALL OF YOU;][ONCE I BEGIN] Inflict one of the following statuses to targets at random: 2 Fragile, 2 Disarm, 2 Feeble, 2 Protection, 2 Strength, 2 Endurance</Desc>
+			<Desc>This page can be used at most use once per 4 Scene/Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="Oswald_daze">
+    		<Desc>[Take it On~] Stagger target ally; Target ally is Stupefied next Scene</Desc>
+			<Desc>The Page can only be played when no stupified ally exist.</Desc>
+  	</BattleCardAbility>
 	<!--塔尼亚-->
   	<BattleCardAbility ID="TanyaCoolDown">
     		<Desc>This page is used against all enemies.(Except used due to Brawl)</Desc>
-			<Desc>This card can be used at most use once per 4 Scene </Desc>
+			<Desc>This page can be used at most use once per 4 Scene</Desc>
   	</BattleCardAbility>
 	<!--在宪 & 安洁莉卡-->
   	<BattleCardAbility ID="QuickPuppet_Special">
@@ -172,7 +205,7 @@
   	</BattleCardAbility>
   	<BattleCardAbility ID="AllPuppetControl">
     		<Desc>[On Use] Give Temporary Puppet String to all other allies next Scene</Desc>
-    		<Desc>This card can be used at most use once per 4 Scene </Desc>
+    		<Desc>This page can be used at most use once per 4 Scene </Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="Jaeheon_AreaBind">
     		<Desc>[On Hit] Inflict 1 Bind next Scene</Desc>
@@ -208,7 +241,7 @@
 		<Desc>Can point ally as target</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="AoeCoolDown">
-		<Desc>This card can be used at most use once per 4 Scene</Desc>
+		<Desc>This page can be used at most use once per 4 Scene</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="ElenaZombie">
     	<Desc>Recover all Health and Stagger Resist in Next Scene and start attack allies</Desc>
@@ -235,7 +268,7 @@
 	<BattleCardAbility ID="PlutoAoe">
     		<Desc>[On Use]Boost dices' damage according to numbers of enemies targeted</Desc>
     		<Desc>Less target greated the boost</Desc>
-    		<Desc>This card can be used at most use once per 4 Scene</Desc>
+    		<Desc>This page can be used at most use once per 4 Scene</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="PlutoContract1">
     		<Desc>[On Play] Activate Contract of Liberty for targeted ally</Desc>
