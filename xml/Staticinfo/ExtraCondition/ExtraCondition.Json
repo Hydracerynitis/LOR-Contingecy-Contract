@@ -1,0 +1,13 @@
+{
+    "RCs":[
+        {
+            "Stageid":70008,
+            "Condition":[
+                {"Type":"Elena_Cross","Variation":3},
+                {"Type":"Elena","Variation":0},
+                {"Type":"Damage","Variation":4}
+            ],
+            "RewardId":18810000
+        }
+    ]
+}

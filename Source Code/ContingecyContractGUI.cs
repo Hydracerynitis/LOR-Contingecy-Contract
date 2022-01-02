@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace Contingecy_Contract
 {
-    public class ContingecyContractGUI: MonoBehaviour
+    public class ContingecyContractGUI : MonoBehaviour
     {
         public bool GUIbool;
         public int Level;
@@ -34,49 +34,47 @@ namespace Contingecy_Contract
         {
             if (UI.UIController.Instance.CurrentUIPhase == UIPhase.Invitation || UI.UIController.Instance.CurrentUIPhase == UIPhase.Sephirah || !UIPopupWindow.IsOpened())
             {
-                if (!Input.GetKeyDown(KeyCode.F9))
+                if (!( Input.GetKeyDown(KeyCode.F9) || ( GUIbool && Input.GetKeyDown(KeyCode.Escape) ) ) )
                 {
-                    if (GUIbool && Input.GetKeyDown(KeyCode.Escape))
-                        GUIbool = false;
-                    /*                    if (GUIbool && Input.GetKeyDown(KeyCode.Return))
-                                        {
-
-                                            GUIbool = false;
-                                        }*/
                     return;
                 }
                 if (GUIbool)
-                {
-                    Debug.Log("Saving");
-                    File.WriteAllText(Harmony_Patch.ModPath + "/ContractLoader.txt", "");
-                    foreach (Contract cc in ContractList)
-                        File.AppendAllText(Harmony_Patch.ModPath + "/ContractLoader.txt", cc.Id + "\n");
-                    Debug.Log("SaveComplete");
-                }
+                    OnClose();
                 else
-                {
-                    language = TextDataModel.CurrentLanguage;
-                    ContractList.Clear();
-                    foreach (Contract cc in Harmony_Patch.JsonList)
-                    {
-                        cc.isConflict = false;
-                        cc.isOn = false;
-                    }
-                    foreach (Contract cc in Singleton<ContractLoader>.Instance.GetPassiveList())
-                        SetCC(cc.Id, cc.Type);
-                    foreach (Contract cc in Singleton<ContractLoader>.Instance.GetStageList())
-                        SetCC(cc.Id, cc.Type);
-                    nowlevel.Clear();
-                    lastDesc = "";
-                    Itemname = string.Empty;
-                    Level = GetLevel();
-                }
-                GUIbool = !GUIbool;       
+                    OnOpen();
+                GUIbool = !GUIbool;
             }
             else
                 GUIbool = false;
         }
+        private void OnOpen()
+        {
 
+            language = TextDataModel.CurrentLanguage;
+            ContractList.Clear();
+            foreach (Contract cc in StaticDataManager.JsonList)
+            {
+                cc.isConflict = false;
+                cc.isOn = false;
+            }
+            foreach (Contract cc in Singleton<ContractLoader>.Instance.GetPassiveList())
+                SetCC(cc.Id, cc.Type);
+            foreach (Contract cc in Singleton<ContractLoader>.Instance.GetStageList())
+                SetCC(cc.Id, cc.Type);
+            nowlevel.Clear();
+            lastDesc = "";
+            Itemname = string.Empty;
+            Level = GetLevel();
+        }
+        private void OnClose()
+        {
+            Debug.Log("Saving");
+            File.WriteAllText(Harmony_Patch.ModPath + "/ContractLoader.txt", "");
+            foreach (Contract cc in ContractList)
+                File.AppendAllText(Harmony_Patch.ModPath + "/ContractLoader.txt", cc.Id + "\n");
+            Debug.Log("SaveComplete");
+            Singleton<ContractLoader>.Instance.Init();
+        }
         private void OnGUI()
         {
             if (GUIbool)
@@ -266,9 +264,9 @@ namespace Contingecy_Contract
         {
             List<Contract> Filtered;
             if (nowlevel.Count <= 0)
-                Filtered = new List<Contract>(Harmony_Patch.JsonList);
+                Filtered = new List<Contract>(StaticDataManager.JsonList);
             else
-                Filtered = Harmony_Patch.JsonList.FindAll(x => x.Level > 4 ? nowlevel.Contains(4) : nowlevel.Contains(x.Level));
+                Filtered = StaticDataManager.JsonList.FindAll(x => x.Level > 4 ? nowlevel.Contains(4) : nowlevel.Contains(x.Level));
             if (!string.IsNullOrEmpty(Itemname))
                 Filtered = Filtered.FindAll(x => x.Id.Contains(Itemname) || x.GetDesc().name.Contains(Itemname));
             return Filtered;
@@ -282,14 +280,14 @@ namespace Contingecy_Contract
         }
         public void SetCC(string name, string type)
         {
-            Contract cc = Harmony_Patch.JsonList.Find(x => x.Id == name);
+            Contract cc = StaticDataManager.JsonList.Find(x => x.Id == name);
             cc.isOn = !cc.isOn;
             cc.isConflict = false;
             if (cc.isOn)
                 ContractList.Add(cc);
             else
                 ContractList.Remove(cc);
-            List<Contract> all = Harmony_Patch.JsonList.FindAll(y => y.Type == type || cc.Conflict.Contains(y.Type));
+            List<Contract> all = StaticDataManager.JsonList.FindAll(y => y.Type == type || cc.Conflict.Contains(y.Type));
             for (int index = 0; index < all.Count; ++index)
             {
                 if (all[index].Id != name)

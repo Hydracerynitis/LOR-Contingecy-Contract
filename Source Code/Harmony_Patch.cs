@@ -2,21 +2,13 @@
 using UI;
 using LOR_BattleUnit_UI;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Xml;
 using GameSave;
-using ContractReward;
-using System.Diagnostics;
 using LOR_DiceSystem;
 using System.Reflection;
-using System.Xml.Serialization;
 using UnityEngine;
-using UnityEngine.UI;
 using System.IO;
 using HarmonyLib;
 using BaseMod;
-using MyJsonTool;
 using TMPro;
 
 namespace Contingecy_Contract
@@ -24,15 +16,13 @@ namespace Contingecy_Contract
     public class Harmony_Patch
     {
         public static HashSet<int> ClearList = new HashSet<int>();
-        public static List<Contract> JsonList = new List<Contract>();
+
         public static bool UIInit = false;
         public static int PatchNum = 0;
         public static Harmony harmony;
         public static List<DiceBehaviour> passive18900002_Makred = new List<DiceBehaviour>();
         public static Dictionary<UnitBattleDataModel, int> CombaltData = new Dictionary<UnitBattleDataModel, int>();
         public static Dictionary<BattleUnitModel, LorId> UnitBookId = new Dictionary<BattleUnitModel, LorId>();
-        public static Dictionary<LorId, int> ThumbPathDictionary = new Dictionary<LorId, int>();
-        public static Dictionary<LorId, Sprite> NonThumbSprite = new Dictionary<LorId, Sprite>();
         public static string ModPath;
         public static bool Duel = false;
         public Harmony_Patch()
@@ -40,8 +30,7 @@ namespace Contingecy_Contract
             harmony = new Harmony("Hydracerynitis.ContingecyContract");
             ModPath = Path.GetDirectoryName(Uri.UnescapeDataString(new UriBuilder(Assembly.GetExecutingAssembly().CodeBase).Path));
             Debug.ModPatchDebug();
-            LoadContract();
-            LoadThumb();
+            StaticDataManager.LoadStaticData();
             ModifyEnsemble();
             Singleton<ContractLoader>.Instance.Init();
             MethodInfo Method1 = typeof(StageNameXmlList).GetMethod("GetName", new Type[] { typeof(int) });
@@ -72,8 +61,8 @@ namespace Contingecy_Contract
             Patch(Method13, "PlayHistoryModel_LoadFromSaveData", false);
             MethodInfo Method14 = typeof(PassiveAbility_1305012).GetMethod("SetCard", AccessTools.all);
             Patch(Method14, "PassiveAbility_1305012_SetCard", false);
-            MethodInfo Method15 = typeof(BattleCardAbilityDescXmlList).GetMethod("GetAbilityDesc", new Type[]{ typeof(DiceBehaviour)});
-            Patch(Method15, "BattleCardAbilityDescXmlList_GetAbilityDesc", false);
+            MethodInfo Method15 = typeof(BattleDiceCard_BehaviourDescUI).GetMethod("SetBehaviourInfo", AccessTools.all);
+            Patch(Method15, "BattleDiceCard_BehaviourDescUI_SetBehaviourInfo", false);
             MethodInfo Method16 = typeof(StageController).GetMethod("StartAction",AccessTools.all);
             Patch(Method16, "StageController_StartAction", true);
             MethodInfo Method17 = typeof(BattleUnitBuf_Resistance).GetMethod("get_keywordId", AccessTools.all);
@@ -345,11 +334,11 @@ namespace Contingecy_Contract
             }
             return false;
         }
-        public static void BattleCardAbilityDescXmlList_GetAbilityDesc(ref string __result,DiceBehaviour behaviour)
+        public static void BattleDiceCard_BehaviourDescUI_SetBehaviourInfo(BattleDiceCard_BehaviourDescUI __instance,DiceBehaviour behaviour)
         {
             if (passive18900002_Makred.Contains(behaviour))
             {
-                __result=__result.Insert(0, TextDataModel.GetText("marked_dice_desc"));
+                __instance.txt_ability.text= __instance.txt_ability.text.Insert(0, TextUtil.TransformConditionKeyword(TextDataModel.GetText("marked_dice_desc")));
                 Debug.Log(behaviour.Detail.ToString()+" "+behaviour.Min.ToString()+"-"+behaviour.Dice.ToString());
             }
         }
@@ -503,12 +492,12 @@ namespace Contingecy_Contract
         }
         public static void BookModel_GetThumbSprite(ref Sprite __result, BookModel __instance)
         {
-            if (ThumbPathDictionary.ContainsKey(__instance.GetBookClassInfoId())) 
-                __result= Resources.Load<Sprite>("Sprites/Books/Thumb/" + ThumbPathDictionary[__instance.GetBookClassInfoId()]);
-            else if(NonThumbSprite.ContainsKey(__instance.GetBookClassInfoId()))
+            if (StaticDataManager.ThumbPathDictionary.ContainsKey(__instance.GetBookClassInfoId())) 
+                __result= Resources.Load<Sprite>("Sprites/Books/Thumb/" + StaticDataManager.ThumbPathDictionary[__instance.GetBookClassInfoId()]);
+            else if(StaticDataManager.NonThumbSprite.ContainsKey(__instance.GetBookClassInfoId()))
             {
-                if (NonThumbSprite[__instance.GetBookClassInfoId()] != null)
-                    __result = NonThumbSprite[__instance.GetBookClassInfoId()];
+                if (StaticDataManager.NonThumbSprite[__instance.GetBookClassInfoId()] != null)
+                    __result = StaticDataManager.NonThumbSprite[__instance.GetBookClassInfoId()];
                 else
                 {
                     try
@@ -523,8 +512,8 @@ namespace Contingecy_Contract
                         SpriteSet Body = Default.motionSpriteSet.Find(x => x.sprType == CharacterAppearanceType.Body);
                         if (Body != null)
                         {
-                            NonThumbSprite[__instance.GetBookClassInfoId()] = Default.motionSpriteSet.Find(x => x.sprType == CharacterAppearanceType.Body).sprRenderer.sprite;
-                            __result = NonThumbSprite[__instance.GetBookClassInfoId()];
+                            StaticDataManager.NonThumbSprite[__instance.GetBookClassInfoId()] = Default.motionSpriteSet.Find(x => x.sprType == CharacterAppearanceType.Body).sprRenderer.sprite;
+                            __result = StaticDataManager.NonThumbSprite[__instance.GetBookClassInfoId()];
                         }
 
                     }
@@ -538,12 +527,12 @@ namespace Contingecy_Contract
         }
         public static void BookXmlInfo_GetThumbSprite(ref Sprite __result, BookXmlInfo __instance)
         {
-            if (ThumbPathDictionary.ContainsKey(__instance.id))
-                __result = Resources.Load<Sprite>("Sprites/Books/Thumb/" + ThumbPathDictionary[__instance.id]);
-            else if (NonThumbSprite.ContainsKey(__instance.id))
+            if (StaticDataManager.ThumbPathDictionary.ContainsKey(__instance.id))
+                __result = Resources.Load<Sprite>("Sprites/Books/Thumb/" + StaticDataManager.ThumbPathDictionary[__instance.id]);
+            else if (StaticDataManager.NonThumbSprite.ContainsKey(__instance.id))
             {
-                if (NonThumbSprite[__instance.id] != null)
-                    __result = NonThumbSprite[__instance.id];
+                if (StaticDataManager.NonThumbSprite[__instance.id] != null)
+                    __result = StaticDataManager.NonThumbSprite[__instance.id];
                 else
                 {
                     try
@@ -558,8 +547,8 @@ namespace Contingecy_Contract
                         SpriteSet Body = Default.motionSpriteSet.Find(x => x.sprType == CharacterAppearanceType.Body);
                         if (Body != null)
                         {
-                            NonThumbSprite[__instance.id] = Default.motionSpriteSet.Find(x => x.sprType == CharacterAppearanceType.Body).sprRenderer.sprite;
-                            __result = NonThumbSprite[__instance.id];
+                            StaticDataManager.NonThumbSprite[__instance.id] = Default.motionSpriteSet.Find(x => x.sprType == CharacterAppearanceType.Body).sprRenderer.sprite;
+                            __result = StaticDataManager.NonThumbSprite[__instance.id];
                         }
 
                     }
@@ -667,88 +656,7 @@ namespace Contingecy_Contract
         {
             return stageId == Tools.MakeLorId(1800000) || stageId == Tools.MakeLorId(1800007);
         }
-        public static void LoadContract()
-        {
 
-            Debug.PathDebug("/Contracts", PathType.Directory);
-            Debug.XmlFileDebug("/Contracts");
-            foreach (FileInfo file in new DirectoryInfo(ModPath + "/Contracts").GetFiles())
-            {
-                try
-                {
-                    ContractBluePrintList list = File.ReadAllText(file.FullName).ToObject<ContractBluePrintList>();
-                    foreach (ContractBluePrint bluePrint in list.CCs)
-                    {
-                        System.Type type = System.Type.GetType("Contingecy_Contract.ContingecyContract_" + bluePrint.Type);
-                        if (type == null)
-                            continue;
-                        if (bluePrint.Variation <= 0)
-                        {
-                            JsonList.Add(new Contract() { Type = bluePrint.Type, Variant = 0, desc = bluePrint.desc, contractType = bluePrint.contractType, Faction = bluePrint.Faction, Level = bluePrint.BaseLevel, Bonus = bluePrint.BonusBaseLevel, Stageid = bluePrint.Stageid, Conflict = bluePrint.Conflict });
-                            Debug.Log("XML: {0} Added", bluePrint.Type);
-                        }
-                        else
-                        {
-                            ContingecyContract contract = Activator.CreateInstance(type, new object[] { 0 }) as ContingecyContract;
-                            for (int i = 1; i <= bluePrint.Variation; i++)
-                            {
-                                contract.Level = i;
-                                Contract item = new Contract() { Type = bluePrint.Type, Variant = i, contractType = bluePrint.contractType, Faction = bluePrint.Faction, Level = bluePrint.BaseLevel + i * bluePrint.Step, Bonus = bluePrint.BonusBaseLevel + i * bluePrint.BonusStep, Stageid = bluePrint.Stageid, Conflict = bluePrint.Conflict };
-                                bluePrint.desc.ForEach(x => item.desc.Add(new ContractDesc() { language = x.language, name = x.name + " " + i.ToString(), desc = string.Format(x.desc, contract.GetFormatParam) }));
-                                JsonList.Add(item);
-                                Debug.Log("XML: {0} Added", item.Id);
-                            }
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Debug.Error("JSON", ex);
-                }
-            }
-/*            try
-            {
-                foreach (NewContract bluePrint in ContractXmlList.JsonList)
-                {
-                    Debug.ErrorLog("JsonItem", bluePrint.ToJson<NewContract>());
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.Error("ToJSOn", ex);
-            }*/
-        }
-        public static void LoadThumb()
-        {
-            Debug.PathDebug("/Staticinfo/ThumbPath", PathType.Directory);
-            Debug.XmlFileDebug("/Staticinfo/ThumbPath");
-            foreach (FileInfo file in new DirectoryInfo(ModPath + "/Staticinfo/ThumbPath").GetFiles())
-            {
-                try
-                {
-                    XmlDocument xml = new XmlDocument();
-                    xml.LoadXml(File.ReadAllText(file.FullName));
-                    foreach (XmlNode node in xml.SelectNodes("ThumbPath/Path"))
-                    {
-                        string str = string.Empty;
-                        if (node.Attributes.GetNamedItem("id") != null)
-                            str = node.Attributes.GetNamedItem("id").InnerText;
-                        int key = Int32.Parse(str);
-                        if (node.InnerText == "null")
-                        {
-                            NonThumbSprite[Tools.MakeLorId(key)] = null;
-                            continue;
-                        }
-                        int value = Int32.Parse(node.InnerText);
-                        ThumbPathDictionary[Tools.MakeLorId(key)] = value;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Debug.Error("ThumbLoadError", ex);
-                }
-            }
-        }
         public static List<int> NonHeadEquipPage = new List<int>() { 18810000 };
     }
 }

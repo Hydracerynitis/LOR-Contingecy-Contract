@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RewardList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Reward id="70001">18100000</Reward>
+	<Reward id="70002">18200000</Reward>
+	<Reward id="70003">18300000</Reward>
+	<Reward id="70004">18400000</Reward>
+	<Reward id="70005">18500000</Reward>
+	<Reward id="70006">18600000</Reward>
+	<Reward id="70007">18700000</Reward>
+    <Reward id="70008">18800000</Reward>
+    <Reward id="70009">18900000</Reward>
+	<!--<Reward Pid="" id="70009">18900000</Path>-->
+</RewardList>

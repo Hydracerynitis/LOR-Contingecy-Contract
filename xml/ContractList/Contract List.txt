@@ -62,6 +62,20 @@ For all Guests, Becoming Staggered does not temporarily change the character's r
 Purity      Risk Level 2    Code: NoDebuff
 All Guests are immune to status ailment
 
+Speedy Assault  Risk Level 3    Code: Quick
+Speed values of the dices of all Guests change to the maximum possible value.
+
+Angry 1      Risk Level 1    Code: Angry1
+All Guests' Emotion Level are set to 1 if their Emotion Level are lower than 1
+
+Angry 2      Risk Level 2    Code: Angry2
+All Guests' Emotion Level are set to 2 if their Emotion Level are lower than 2
+
+Angry 3      Risk Level 3    Code: Angry3
+All Guests' Emotion Level are set to 3 if their Emotion Level are lower than 3
+
+
+
 All Librarian：
 Poor Maintaince 1   Risk Level 1   Code: Damage_L1
 Reduce all Librarians' outgoing damage by 20%
@@ -120,14 +134,27 @@ At the start of any act, all Librarian have 1 Light
 Engulfed by Darkness 4   Risk Level 1   Risk Bonus 50%   Code: Darkness4
 At the start of any act, all Librarian have 0 Light
 
-Selfish     Risk Level 2    Risk Bonus 50%      Code:NoBuff
+Selfish     Risk Level 2    Risk Bonus 50%      Code: NoBuff
 All Librarians are immune to postivie status
+
+Self-abased     Risk Level 2        Code: NoEGO
+All Librarians can no longer use EGO pages.
+
+Unconcerned 1     Risk Level 2        Code: NoEmotion1
+All Librarians are no longer susceptible to Tier 3 Abnormalities Card.
+
+Unconcerned 2     Risk Level 2        Code: NoEmotion2
+All Librarians are no longer susceptible to Tier 3, Tier 2 Abnormalities Card.
+
+Unconcerned 3     Risk Level 2        Code: NoEmotion3
+All Librarians are no longer susceptible to Tier 3, Tier 2, and Tier 1 Abnormalities Card.
+
 
 
 Recpetion：(Contracts in this categories require the original recption reach their limitation to be actived)
 REINFORCE!      Risk Level 4    Code: Duplicate
 Add one extra wave consist of copy of random wave
-Limitation: None
+Limitation: Reception other than Abnoramlity Rematches.
 
 Last Stand      Risk Level 4    Code: Last
 Only one floor of librarian can be involed in reception"
@@ -146,27 +173,29 @@ Reduce number of Maximun Available Librarians by 1
 Limitation: There is a wave that allows at least 2 librarians into battle in original reception, 
 
 
+
 Shi Association Section 2:
-Past's Glory 1   Risk Level 2   Confict with The Backbone   Code: Yujin1
+Past's Glory 1   Risk Level 2   Confict with The Backbone   Code: Shi_Yujin1
 At her first appearance, Yujin recover 25% of Max HP. Increase the Minimun value of first die of Boundry of Death by 1
 
-Past's Glory 2   Risk Level 3   Confict with The Backbone   Code: Yujin2
+Past's Glory 2   Risk Level 3   Confict with The Backbone   Code: Shi_Yujin2
 At her first appearance, Yujin recover 50% of Max HP. Increase the Minimun value of first die of Boundry of Death by 2
 
-Past's Glory 3   Risk Level 4   Confict with The Backbone   Code: Yujin3
+Past's Glory 3   Risk Level 4   Confict with The Backbone   Code: Shi_Yujin3
 At her first appearance, Yujin recover 75% of Max HP. Increase the Minimun value of first die of Boundry of Death by 3
 
-The Backbone 1   Risk Level 2   Confict with Past's Glory    Code: ValTem1
+The Backbone 1   Risk Level 2   Confict with Past's Glory    Code: Shi_ValTem1
 Increase Max HP and Stagger Resist of Tenma and Valentin by 25%; Speed of Tenma won't be lower than 3;
 On win clash using a Combat Page with one non-Counter die, Valentin Destroy targets next 1 dices
 
-The Backbone 2   Risk Level 3   Confict with Past's Glory    Code: ValTem2
+The Backbone 2   Risk Level 3   Confict with Past's Glory    Code: Shi_ValTem2
 Increase Max HP and Stagger Resist of Tenma and Valentin by 50%; Speed of Tenma won't be lower than 5;
 On win clash using a Combat Page with one non-Counter die, Valentin Destroy targets next 2 dices
 
-The Backbone 3   Risk Level 4   Confict with Past's Glory    Code: ValTem3
+The Backbone 3   Risk Level 4   Confict with Past's Glory    Code: Shi_ValTem3
 Increase Max HP and Stagger Resist of Tenma and Valentin by 75%; Speed of Tenma won't be lower than 7;
 On win clash using a Combat Page with one non-Counter die, Valentin Destroy targets next 3 dices
+
 
 
 The Crying Children (Reverbration):
@@ -196,6 +225,7 @@ Increase Max HP and Max Stagger Resist by 60%
 
 Weighty Cello    Risk Level 4   Code: Philip
 Philip's Attack Pattern becomes more aggressive.
+
 
 
 The Church of Gears:
@@ -228,6 +258,7 @@ Whenever alive Gear Worshipper exist, Damage inflicted to Eileen will be transfe
 
 Sharp Harp      Risk Level 4    Code: Eileen
 Gear Worshipper gain unique deck of Combat Pages.
+
 
 
 The Eighth Chef:
@@ -263,6 +294,7 @@ At the Start of the Act, Gain 100 Resistance instead;
 at the start of each three Scene, If this character has no Resistance, Gain 50 Resistance and Purge all status ailment instead.
 
 
+
 The Musicians of Bremen:
 Immerse Performance 1 Risk Level 2      Conflict with Influence with Passion    Code: Bremen_Self1
 Speed Dice +1 and attack pattern becom more aggre.
@@ -293,6 +325,34 @@ and when gaining Strength, Endurance, Haste, or Protection through Combat Pages 
 
 Horn, Tuba and Trombone     Risk Level 4     Code: Bremen
 Increase Max Stagger Resist to 200, Ignore ”Untargetable“ effect while using Melee Page. Take at most 15% of Max HP in one Scene.
+
+
+
+The 8 o’Clock Circus:
+Newcommers' Debut 1   Risk Level 2  Conflict with We do a little Trolling    Code: Oswald_Debut1
+Mr. Knife's combnat pages are enhanced
+
+Newcommers' Debut 2   Risk Level 3  Conflict with We do a little Trolling   Code: Oswald_Debut2
+Mr. Knife's combnat pages are enhanced;  Ms. Mermaid gain 2 Speed Dice and becomes more aggressive
+
+Newcommers' Debut 3  Risk Level 4   Conflict with We do a little Trolling   Code: Oswald_Debut3
+Mr. Knife's combnat pages are enhanced, gain 1 Speed Dice and becomes more aggressive; Ms. Mermaid gain 2 Speed Dice and becomes much more aggressive
+
+We do a little Trolling 1      Risk Level 2     Conflict with Newcommers' Debut      Code: Oswald_Troll1
+Oswald will render Librarian with most damage dealt stupified instead; Reception will conclude if no non-stupified librarian exists.
+Stupified Librarian Dice gain 2 Power.
+
+We do a little Trolling 2      Risk Level 3    Conflict with Newcommers' Debut  Code: Oswald_Troll2
+Oswald will render Librarian with most damage dealt stupified instead; Reception will conclude if no non-stupified librarian exists.
+Stupified Librarian Dice gain 2 Power, Deal 50% more Damage and Stagger Damage.
+
+We do a little Trolling 3      Risk Level 4    Conflict with Newcommers' Debut  Code: Oswald_Troll3
+Oswald will render Librarian with most damage dealt stupified instead; Reception will conclude if no non-stupified librarian exists.
+Stupified Librarian Dice gain 2 Power, Deal 50% more Damage and Stagger Damage, Gain 2 Speed Dice, Draw 2 more card at the Start of the Scene.
+
+Throaty Clarinet      Risk Level 4    Code: Oswald
+“Emma & Noah” will appear and its combat pages' dice are enhanced.
+
 
 
 L’heure du Loup: 
@@ -331,6 +391,8 @@ Dark Viola      Risk Level 4    Code: Tanya
 Time for round Two can be triggered again. 
 After this, Tanya recover HP equal to 10% of Max HP at the end of each Scene, and cannot be Staggered.
 
+
+
 The Puppeteer:
 Puppet Performance 1   Risk Level 2   Conflict with Strings Dexterity   Code: Jaeheon_Thread1
 Boost Jae-heon's Counter dices' Power by 1; Immune to Damage and Stagger Damage as long as other alive ally exist; 
@@ -360,6 +422,7 @@ Shrill Second Violin    Risk Level 4   Code: Jaeheon
 Jae-heon's Attack Pattern becomes more aggressive.
 
 
+
 The Blood-red Moon:
 Scorching Cross 1   Risk Level 2   Conflict with Feast  Code: Elena_Cross1
 Upon hit 3 times by The Vermilion Cross will gain 1 Scorched in the next Scene
@@ -387,6 +450,7 @@ Increase Elena's Max HP by 60%.
 
 Introspective First Violin    Risk Level 4   Code: Elena
 The Vermilion Cross and Elena's Attack Pattern becomes more aggressive.
+
 
 
 Yesterday's Promise:

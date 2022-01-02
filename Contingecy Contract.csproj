@@ -214,6 +214,7 @@
     <Compile Include="Source Code\Contrasts.cs" />
     <Compile Include="Source Code\Harmony_Patch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Source Code\StaticDataManager.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

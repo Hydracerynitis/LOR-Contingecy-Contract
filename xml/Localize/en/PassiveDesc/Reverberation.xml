@@ -110,11 +110,11 @@ This Character's Maximun Light is not affected by Emotion Level</Desc>
   	<PassiveDesc ID="1850002">
     	<Name>We Could Use a Helping Hand, Actually~?</Name>
    		<Desc>Gain a copy of "We Need You, You Know~? that can only be used when there are no stupidfied ally.
-At the start of the Scene: give 1 Strength, 1 Endurance, and 3 Protection to the Stupefied ally. When the ally is Staggered: take 30 Stagger damage at the end of the Scene.</Desc>
+At the start of the Scene: give 2 Strength, 2 Endurance, and 3 Protection to the Stupefied ally. When the ally is Staggered: take 30 Stagger damage at the end of the Scene.</Desc>
   	</PassiveDesc>
   	<PassiveDesc ID="1850003">
     	<Name>Collaborative Performance</Name>
-		<Desc>Whenever [Good Job~], [Well Done~], [Nice Work~] is triggered, shared the triggered effect with a random ally.</Desc>
+		<Desc>Whenever [Good Job~], [Well Done~], [Nice Work~] is triggered, shared the triggered effect with two random ally.</Desc>
   	</PassiveDesc>
 	<!--塔尼亚-->
 	<PassiveDesc ID="1860001">

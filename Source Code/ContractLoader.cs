@@ -24,7 +24,7 @@ namespace Contingecy_Contract
                 string str = readAllLine.Trim();
                 if (str == "")
                     continue;
-                Contract New = Harmony_Patch.JsonList.Find(x => x.Id==str);
+                Contract New = StaticDataManager.JsonList.Find(x => x.Id==str);
                 if (New == null)
                 {
                     Debug.Log("{0} is not found",str);

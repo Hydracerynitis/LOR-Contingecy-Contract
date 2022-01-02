@@ -42,6 +42,11 @@ namespace Contingecy_Contract
                 owner.allyCardDetail.AddNewCard(703523).SetPriorityAdder(Priority.Dequeue());
                 owner.allyCardDetail.AddNewCard(703522).SetPriorityAdder(Priority.Dequeue());
                 owner.allyCardDetail.AddNewCard(703521).SetPriorityAdder(Priority.Dequeue());
+                int num = owner.emotionDetail.SpeedDiceNumAdder() + owner.emotionDetail.GetSpeedDiceAdder(0);
+                if (num <= 0)
+                    return;
+                for (int index = 0; index < num; ++index)
+                    owner.allyCardDetail.AddNewCard(703524).SetPriorityAdder(Priority.Dequeue());
             }
             else if(!IsMermaid && Level >= 3)
             {
@@ -52,6 +57,11 @@ namespace Contingecy_Contract
                     owner.allyCardDetail.AddNewCard(703513).SetPriorityAdder(Priority.Dequeue());
                 owner.allyCardDetail.AddNewCard(703512).SetPriorityAdder(Priority.Dequeue());
                 owner.allyCardDetail.AddNewCard(703511).SetPriorityAdder(Priority.Dequeue());
+                int num = owner.emotionDetail.SpeedDiceNumAdder() + owner.emotionDetail.GetSpeedDiceAdder(0);
+                if (num <= 0)
+                    return;
+                for (int index = 0; index < num; ++index)
+                    owner.allyCardDetail.AddNewCard(703511).SetPriorityAdder(Priority.Dequeue());
             }
             if (IsMermaid)
                 return;
@@ -127,7 +137,7 @@ namespace Contingecy_Contract
                         candicate.Add(pair.Key);
                 }
                 if (candicate.Count >= 0)
-                    RandomUtil.SelectOne<BattleUnitModel>(candicate).bufListDetail.AddBuf(new Trolling(Level));
+                    RandomUtil.SelectOne(candicate).bufListDetail.AddBuf(new Trolling(Level));
             }          
         }
         public class TrollIndicator: BattleUnitBuf

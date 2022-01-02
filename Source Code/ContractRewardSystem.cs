@@ -20,37 +20,10 @@ namespace Contingecy_Contract
             if (Singleton<ContractLoader>.Instance.GetLevel(info.id) < 16)
                 return;
             UIs = new List<string>();
-            switch (info.id.id)
-            {
-                case 70001:
-                    Harmony_Patch.ClearList.Add(18100000);
-                    break;
-                case (70002):
-                    Harmony_Patch.ClearList.Add(18200000);
-                    break;
-                case (70003):
-                    Harmony_Patch.ClearList.Add(18300000);
-                    break;
-                case (70004):
-                    Harmony_Patch.ClearList.Add(18400000);
-                    break;
-                case (70005):
-                    Harmony_Patch.ClearList.Add(18500000);
-                    break;
-                case (70006):
-                    Harmony_Patch.ClearList.Add(18600000);
-                    break;
-                case (70007):
-                    Harmony_Patch.ClearList.Add(18700000);
-                    break;
-                case (70008):
-                    Harmony_Patch.ClearList.Add(18800000);
-                    break;
-                case (70009):
-                    Harmony_Patch.ClearList.Add(18900000);
-                    break;
-            }
+            if (StaticDataManager.RewardDic.ContainsKey(info.id))
+                Harmony_Patch.ClearList.Add(StaticDataManager.RewardDic[info.id]);
             UIs.Add(TextDataModel.GetText("ui_RewardStage", Singleton<StageNameXmlList>.Instance.GetName(info.id)));
+            GetContractCondition(info);
             CheckSpecialCondition(info);
             CheckRewardAchieved();
             if (UIs.Count > 0)
@@ -60,12 +33,10 @@ namespace Contingecy_Contract
                     uis += TextDataModel.GetText("ui_MoreEquipPage");
                 UIAlarmPopup.instance.SetAlarmText(uis);
             }
-
         }
         public void CheckSpecialCondition(StageClassInfo info)
         {
-            if (GetContractCondition(OrangeCrossCondition, info))
-                Harmony_Patch.ClearList.Add(18810000);
+                //Harmony_Patch.ClearList.Add(18810000);
             if (EnsembleComplete)
                 Harmony_Patch.ClearList.Add(18000000);
         }
@@ -85,22 +56,29 @@ namespace Contingecy_Contract
             foreach (int i in ExceptWith)
                 GiveEquipBook(i);
         }
-        public bool GetContractCondition(List<(string, int)> Condition,StageClassInfo info)
+        public void GetContractCondition(StageClassInfo info)
         {
-            List<Contract> contracts = new List<Contract>();
-            contracts.AddRange(Singleton<ContractLoader>.Instance.GetPassiveList());
-            contracts.AddRange(Singleton<ContractLoader>.Instance.GetStageList());
-            foreach ((string,int) condition in Condition)
+            foreach(RewardConfition RC in StaticDataManager.ExtraCondition)
             {
-                Contract contract = contracts.Find(x => x.Type == condition.Item1);
-                if (contract != null)
+                if (info.id != RC.Id)
+                    continue;
+                List<Contract> contracts = new List<Contract>();
+                contracts.AddRange(Singleton<ContractLoader>.Instance.GetPassiveList());
+                contracts.AddRange(Singleton<ContractLoader>.Instance.GetStageList());
+                bool pass = true;
+                foreach (ContractCondition condition in RC.Condition)
                 {
-                    if (Singleton<ContractLoader>.Instance.CheckActivate(contract,info) && contract.Level >= condition.Item2)
-                        continue;
+                    Contract contract = contracts.Find(x => x.Type == condition.Type);
+                    if (contract != null)
+                    {
+                        if (Singleton<ContractLoader>.Instance.CheckActivate(contract, info) && contract.Variant >= condition.Variation)
+                            continue;
+                    }
+                    pass = false;
                 }
-                return false;
+                if(pass)
+                    Harmony_Patch.ClearList.Add(RC.RewardId);
             }
-            return true;
         }
         public void GiveEquipBook(int bookid)
         {
@@ -121,13 +99,28 @@ namespace Contingecy_Contract
         {
             get
             {
-                HashSet<int> Test = new HashSet<int>() { 18100000, 18200000, 18300000, 18400000, 18600000, 18700000, 18800000, 18900000 };
+                HashSet<int> Test = new HashSet<int>() { 18100000, 18200000, 18300000, 18400000, 18500000, 18600000, 18700000, 18800000, 18900000 };
                 Test.ExceptWith(Harmony_Patch.ClearList);
                 return Test.Count <= 0;
             }
         }
-
-        public static List<(string, int)> OrangeCrossCondition => new List<(string, int)>() { ("Elena_Cross", 4), ("Elena", 4), ("Damage", 4) };
+    }
+    public class RewardConditionList
+    {
+        public List<RewardConfition> RCs;
+    }
+    public class RewardConfition
+    {
+        public string Pid = "";
+        public int Stageid;
+        public List<ContractCondition> Condition = new List<ContractCondition>();
+        public int RewardId;
+        public LorId Id => new LorId(Pid, Stageid);
+    }
+    public class ContractCondition
+    {
+        public string Type;
+        public int Variation;
     }
 }
 //废案：给章节战斗书页的奖励

@@ -8,11 +8,14 @@ namespace ContractReward
 {
     public class DiceCardSelfAbility_Oswald_firstplquickendu : DiceCardSelfAbilityBase
     {
-        private int loseCount=0;
+        private int count = 0;
+        public override void BeforeRollDice(BattleDiceBehavior behavior)
+        {
+            count++;
+        }
         public override void OnLoseParrying()
         {
-            ++this.loseCount;
-            if (this.loseCount < 3)
+            if(count<3)
                 return;
             BattleUnitModel target = this.card?.target;
             if (target == null)
@@ -21,11 +24,16 @@ namespace ContractReward
             target.bufListDetail.AddKeywordBufByCard(KeywordBuf.Endurance, 1, this.owner);
             if (owner.passiveDetail.HasPassive<PassiveAbility_1850003>())
             {
-                BattleUnitModel ally = RandomUtil.SelectOne(BattleObjectManager.instance.GetAliveList(owner.faction));
-                if (ally == null)
-                    return;
-                ally.bufListDetail.AddKeywordBufByCard(KeywordBuf.Quickness, 1, this.owner);
-                ally.bufListDetail.AddKeywordBufByCard(KeywordBuf.Endurance, 1, this.owner);
+                List<BattleUnitModel> ally = BattleObjectManager.instance.GetAliveList(owner.faction);
+                for (int i = 0; i < 2 && ally.Count > 0; i++)
+                {
+                    BattleUnitModel unit = RandomUtil.SelectOne(ally);
+                    ally.Remove(unit);
+                    if (ally == null)
+                        continue;
+                    unit.bufListDetail.AddKeywordBufByCard(KeywordBuf.Quickness, 1, this.owner);
+                    unit.bufListDetail.AddKeywordBufByCard(KeywordBuf.Endurance, 1, this.owner);
+                }
             }
         }
     }

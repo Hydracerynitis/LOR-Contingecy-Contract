@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 namespace Contingecy_Contract
 {
     //死协会
-    public class ContingecyContract_Yujin : ContingecyContract
+    public class ContingecyContract_Shi_Yujin : ContingecyContract
     {
-        public ContingecyContract_Yujin(int level)
+        public ContingecyContract_Shi_Yujin(int level)
         {
             this.Level = level;
         }
@@ -35,9 +35,9 @@ namespace Contingecy_Contract
             base.OnWaveStart();
         }
     }
-    public class ContingecyContract_ValTem : ContingecyContract
+    public class ContingecyContract_Shi_ValTem : ContingecyContract
     {
-        public ContingecyContract_ValTem(int level)
+        public ContingecyContract_Shi_ValTem(int level)
         {
             this.Level = level;
         }

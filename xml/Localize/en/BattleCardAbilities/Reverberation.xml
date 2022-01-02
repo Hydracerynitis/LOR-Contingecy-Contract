@@ -182,7 +182,7 @@
   	</BattleCardAbility>
 	<BattleCardAbility ID="Oswald_area">
     		<Desc>[ALL OF YOU;][ONCE I BEGIN] Inflict one of the following statuses to targets at random: 2 Fragile, 2 Disarm, 2 Feeble, 2 Protection, 2 Strength, 2 Endurance</Desc>
-			<Desc>This page can be used at most use once per 4 Scene/Desc>
+			<Desc>This page can be used at most use once per 4 Scene</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="Oswald_daze">
     		<Desc>[Take it On~] Stagger target ally; Target ally is Stupefied next Scene</Desc>

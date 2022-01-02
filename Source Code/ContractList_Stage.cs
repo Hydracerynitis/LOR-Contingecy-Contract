@@ -21,6 +21,10 @@ namespace Contingecy_Contract
             StageWaveInfo reinforce = info.waveList[index];
             info.waveList.Insert(index,DeepCopyUtil.CopyXml(reinforce));
         }
+        public override bool IsValid(StageClassInfo info)
+        {
+            return info.stageType == StageType.Invitation;
+        }
     }
     public class ContingecyContract_Duplicate : ContingecyContract
     {

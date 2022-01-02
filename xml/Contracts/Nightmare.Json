@@ -1,7 +1,7 @@
 {
     "CCs":[
         {
-            "Type":"Yujin",
+            "Type":"Shi_Yujin",
             "desc":[
                 {
                     "language":"cn",
@@ -21,7 +21,7 @@
             "Stageid":40001
         },
         {
-            "Type":"ValTem",
+            "Type":"Shi_ValTem",
             "desc":[
                 {
                     "language":"cn",

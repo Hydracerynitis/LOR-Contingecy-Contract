@@ -52,8 +52,8 @@ namespace ContractReward
                     this._bRecoveredBreak = true;
                     this._owner.view.charAppearance.ChangeMotion(ActionDetail.Standing);
                 }
-                this._owner.bufListDetail.AddKeywordBufThisRoundByEtc(KeywordBuf.Strength, 1, this._owner);
-                this._owner.bufListDetail.AddKeywordBufThisRoundByEtc(KeywordBuf.Endurance, 1, this._owner);
+                this._owner.bufListDetail.AddKeywordBufThisRoundByEtc(KeywordBuf.Strength, 2, this._owner);
+                this._owner.bufListDetail.AddKeywordBufThisRoundByEtc(KeywordBuf.Endurance, 2, this._owner);
                 this._owner.bufListDetail.AddKeywordBufThisRoundByEtc(KeywordBuf.Protection, 3, this._owner);
                 this._owner.cardSlotDetail.RecoverPlayPoint(3);
             }
