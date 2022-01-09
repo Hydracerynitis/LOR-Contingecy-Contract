@@ -15,7 +15,7 @@ namespace Contingecy_Contract
         {
             this.Level = level;
         }
-        public override string[] GetFormatParam => new string[] { (25*Level).ToString()};
+        public override string[] GetFormatParam(string language) => new string[] { (25*Level).ToString()};
         public override void BeforeRollDice(BattleDiceBehavior behavior)
         {
             if (IsAttackDice(behavior.Detail))
@@ -30,7 +30,7 @@ namespace Contingecy_Contract
         {
             this.Level = level;
         }
-        public override string[] GetFormatParam => new string[] { (25 * Level).ToString() };
+        public override string[] GetFormatParam(string language) => new string[] { (25 * Level).ToString() };
         public override void BeforeRollDice(BattleDiceBehavior behavior)
         {
             if (IsAttackDice(behavior.Detail))
@@ -45,7 +45,7 @@ namespace Contingecy_Contract
         {
             this.Level = level;
         }
-        public override string[] GetFormatParam => new string[] { Level.ToString() };
+        public override string[] GetFormatParam(string language) => new string[] { Level.ToString() };
         public override void BeforeRollDice(BattleDiceBehavior behavior)
         {
             behavior.ApplyDiceStatBonus(new DiceStatBonus() { power = Level });
@@ -57,7 +57,7 @@ namespace Contingecy_Contract
         {
             this.Level = level;
         }
-        public override string[] GetFormatParam => new string[] { (25 * Level).ToString() };
+        public override string[] GetFormatParam(string language) => new string[] { (25 * Level).ToString() };
         public override ContractType Type => ContractType.Buff;
         public override StatBonus GetStatBonus(BattleUnitModel owner)
         {
@@ -70,7 +70,7 @@ namespace Contingecy_Contract
         {
             this.Level = level;
         }
-        public override string[] GetFormatParam => new string[] { (25 * Level).ToString() };
+        public override string[] GetFormatParam(string language) => new string[] { (25 * Level).ToString() };
         public override ContractType Type => ContractType.Buff;
         public override StatBonus GetStatBonus(BattleUnitModel owner)
         {
@@ -110,7 +110,7 @@ namespace Contingecy_Contract
         {
             Level = level;
         }
-        public override string[] GetFormatParam => new string[] { Level.ToString(), Level.ToString() };
+        public override string[] GetFormatParam(string language) => new string[] { Level.ToString(), Level.ToString() };
         public override void Init(BattleUnitModel self)
         {
             if(self.emotionDetail.EmotionLevel<Level)

@@ -18,8 +18,10 @@ namespace Contingecy_Contract
         public static Dictionary<LorId, Sprite> NonThumbSprite = new Dictionary<LorId, Sprite>();
         public static Dictionary<LorId, int> RewardDic = new Dictionary<LorId, int>();
         public static List<RewardConfition> ExtraCondition=new List<RewardConfition>();
+        public static Dictionary<(string, string), string> ContractParam = new Dictionary<(string, string), string>();
         public static void LoadStaticData()
         {
+            LoadContractParam();
             LoadContract();
             LoadThumb();
             LoadReward();
@@ -52,7 +54,7 @@ namespace Contingecy_Contract
                             {
                                 contract.Level = i;
                                 Contract item = new Contract() { Type = bluePrint.Type, Variant = i, contractType = bluePrint.contractType, Faction = bluePrint.Faction, Level = bluePrint.BaseLevel + i * bluePrint.Step, Bonus = bluePrint.BonusBaseLevel + i * bluePrint.BonusStep, Stageid = bluePrint.Stageid, Conflict = bluePrint.Conflict };
-                                bluePrint.desc.ForEach(x => item.desc.Add(new ContractDesc() { language = x.language, name = x.name + " " + i.ToString(), desc = string.Format(x.desc, contract.GetFormatParam) }));
+                                bluePrint.desc.ForEach(x => item.desc.Add(new ContractDesc() { language = x.language, name = x.name + " " + i.ToString(), desc = string.Format(x.desc, contract.GetFormatParam(x.language)) }));
                                 JsonList.Add(item);
                                 Debug.Log("XML: {0} Added", item.Id);
                             }
@@ -150,6 +152,24 @@ namespace Contingecy_Contract
                 catch (Exception ex)
                 {
                     Debug.Error("RewardCondition", ex);
+                }
+            }
+        }
+        public static void LoadContractParam()
+        {
+            Debug.PathDebug("/Contracts/ContractParams", PathType.Directory);
+            Debug.XmlFileDebug("/Contracts/ContractParams");
+            foreach (FileInfo file in new DirectoryInfo(Harmony_Patch.ModPath + "/Contracts/ContractParams").GetFiles())
+            {
+                try
+                {
+                    ParamList list = File.ReadAllText(file.FullName).ToObject<ParamList>();
+                    foreach(Params p in list.Ps)
+                        p.Desc.ForEach(x => ContractParam.Add((p.Id, x.Language), x.Content));
+                }
+                catch (Exception ex)
+                {
+                    Debug.Error("ContractParam", ex);
                 }
             }
         }

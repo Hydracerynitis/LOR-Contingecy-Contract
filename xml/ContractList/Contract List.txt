@@ -359,17 +359,17 @@ L’heure du Loup:
 Pinnical Strength 1   Risk Level 2  Conflict with One Man Army    Code: Tanya_Solo1
 Remove Counter Dice from all Combat Pages. 
 Upon being targeted one side attack, Use one of “Fistcuffs”,“Kick and Stomp”,“Lupine Onslaught”,“Intimidate” to clash with it.;
-On Clash all Offensive Dice Gain 2 Power after First Scene.
+On Clash all Offensive Dice Gain 4 Power after First Scene.
 
 Pinnical Strength 2   Risk Level 3  Conflict with One Man Army   Code: Tanya_Solo2
 Remove Counter Dice from all Combat Pages. 
 Upon being targeted one side attack, Use one of “Fistcuffs”,“Kick and Stomp”,“Lupine Onslaught”,“Intimidate” to clash with it.;
-On Clash all Offensive Dice Gain 2 Power after First Scene, all Offensive Dice gain extra 2 Power after reached Emotion Level 3.
+On Clash all Offensive Dice Gain 4 Power after First Scene, all Offensive Dice gain extra 3 Power after reached Emotion Level 3.
 
 Pinnical Strength 3  Risk Level 4   Conflict with One Man Army   Code: Tanya_Solo3
 Remove Counter Dice from all Combat Pages. 
 Upon being targeted one side attack, Use one of “Fistcuffs”,“Kick and Stomp”,“Lupine Onslaught”,“Intimidate” to clash with it.;
-On Clash all Offensive Dice Gain 2 Power after First Scene, all Offensive Dice gain extra 2 Power after reached Emotion Level 3,
+On Clash all Offensive Dice Gain 4 Power after First Scene, all Offensive Dice gain extra 3 Power after reached Emotion Level 3,
 all Offensive Dice gain extra 2 Power after reached Emotion Level 5.
 
 One Man Army 1      Risk Level 2     Conflict with Pinnical Strength      Code: Tanya_Brawl1

@@ -167,7 +167,7 @@
                 {
                     "language":"en",
                     "name":"Menacing Percussion",
-                    "desc":"At the Start of the Act, Gain 100 Resistance instead;\nat the start of each three Scene, If this character has no Resistance, Gain 50 Resistance and Purge all status ailment."
+                    "desc":"At the Start of the Act, Gain 100 Resistance instead;\nAt the start of every third Scene, If this character has no Resistance, Gain 50 Resistance\n and Purge all status ailment."
                 }
             ],
             "Faction":0,
@@ -205,7 +205,7 @@
                 {
                     "language":"en",
                     "name":"Influence with Passion",
-                    "desc":"Allies except Bremen will be revived with Bremen's Emotion Level 2 Scene after their death as long as Bremen is alive.\nAllies except Bremen gain {0} and when gaining Strength, Endurance, Haste, or Protection through Combat Pages give the same status effect to a random other ally (At most {1} times per Scene)."
+                    "desc":"Allies except Bremen will be revived with Bremen's Emotion Level 2 Scene after their death as long as Bremen is alive.\nAllies except Bremen gain {0}.\nWhen gaining Strength, Endurance, Haste, or Protection through Combat Pages,\ngive the same status effect to a random other ally\n(At most {1} times per Scene)."
                 }
             ],
             "Faction":0,
@@ -263,7 +263,7 @@
                 {
                     "language":"en",
                     "name":"We do a little Trolling",
-                    "desc":"Oswald will render Librarian with most damage dealt stupified instead; Reception will conclude if no non-stupified librarian exists.\nStupified Librarian {0}."
+                    "desc":"Oswald will render Librarian with most damage dealt stupified instead;\nReception will conclude if no non-stupified librarian exists.\nStupified Librarian {0}."
                 }
             ],
             "Faction":0,
@@ -302,7 +302,7 @@
                 {
                     "language":"en",
                     "name":"Pinnical Strength",
-                    "desc":"Remove Counter Dice from all Combat Pages.\nUpon being targeted one side attack, Use one of “Fistcuffs”,“Kick and Stomp”,“Lupine Onslaught”,“Intimidate” to clash with it.;\nOn Clash {0}."
+                    "desc":"Remove Counter Dice from all Combat Pages.\nUpon being targeted one side attack, Use “Fistcuffs”,“Kick and Stomp”,“Lupine Onslaught” or “Intimidate” to clash with it.;\n{0}."
                 }
             ],
             "Faction":0,
@@ -322,7 +322,7 @@
                 {
                     "language":"en",
                     "name":"One Man Army",
-                    "desc":"Gain 2 Speed Dice, Attack pattern become {0} aggressive; Reduce incoming Damage and Stagger Damage by {1}%;\nIf Tanya use Combat Page against same Librarian 4 times in one Scene, she will “see through” such librarian's attack;\nIn the next Scene, upon clash Tanya will nullify all dice from such librarian's Combat Pages."
+                    "desc":"Gain 2 Speed Dice, Attack pattern become {0} aggressive;\nReduce incoming Damage and Stagger Damage by {1}%;\nIf Tanya use Combat Page against same Librarian 4 times in one Scene, she will “see through” such librarian's attack;\nIn the next Scene, upon clash Tanya will nullify all dice from such librarian's Combat Pages."
                 }
             ],
             "Faction":0,
@@ -360,7 +360,7 @@
                 {
                     "language":"en",
                     "name":"Puppet Performance",
-                    "desc":"Boost Jae-heon's Counter dices' Power by {0};\nImmune to Damage and Stagger Damage as long as other alive ally exist; Increase Puppet Strings stack by {1} when it's first applied to Puppets."
+                    "desc":"Boost Jae-heon's Counter dices' Power by {0};\nImmune to Damage and Stagger Damage as long as other alive ally exist;\nIncrease Puppet Strings stack by {1} when it's first applied to Puppets."
                 }
             ],
             "Faction":0,
@@ -418,7 +418,7 @@
                 {
                     "language":"en",
                     "name":"Scorching Cross",
-                    "desc":"Upon hit 3 times by The Vermilion Cross will gain {0} Scorched in the next Scene\n(Being Hit by The Vermilion Cross will reduce the stack by 1 and make her attack other random Librarian with damage boosed by {1}%)."
+                    "desc":"Upon hit 3 times by The Vermilion Cross will gain {0} Scorched in the next Scene\n(Upon Hit by The Vermilion Cross will reduce the stack by 1\n And make her attack other random Librarian with damage boosed by {1}%)."
                 }
             ],
             "Faction":0,
@@ -438,7 +438,7 @@
                 {
                     "language":"en",
                     "name":"Feast",
-                    "desc":"Elena will use Feast against Librarian with {0}% Max HP or lower, turning them into Nameless Shell that will attack other Librarians;\nIncrease Elena's Max HP by {1}%."
+                    "desc":"Elena will use Feast against Librarian with {0}% Max HP or lower,\nturning them into Nameless Shell that will attack other Librarians;\nIncrease Elena's Max HP by {1}%."
                 }
             ],
             "Faction":0,

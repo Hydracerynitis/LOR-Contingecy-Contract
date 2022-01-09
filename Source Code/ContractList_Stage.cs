@@ -92,7 +92,7 @@ namespace Contingecy_Contract
         {
             this.Level = level;
         }
-        public override string[] GetFormatParam => Level==1? new string[] {"5"} : new string[] { "9"};
+        public override string[] GetFormatParam(string language) => Level==1? new string[] {"5"} : new string[] { "9"};
     }
     public class StageModifier_LowPeople: StageModifier
     {

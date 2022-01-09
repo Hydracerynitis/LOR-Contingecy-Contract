@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PassiveDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<PassiveDesc ID="20210302">
+		<Name>Contingency Contract:</Name> 
+		<Desc></Desc>
+	</PassiveDesc>
+	<!--奖励通用-->
+	<PassiveDesc ID="1800000">
+		<Name>Perfect Extraction</Name> 
+		<Desc>At the Start of the Scene, draw cards until there are 7 combat cards in the character's hand.</Desc>
+	</PassiveDesc>
+	<!--阿尔加利亚-->
+	<PassiveDesc ID="1800001">
+		<Name>Perfect Resonance</Name> 
+		<Desc>Whenever "Resonance" is activated, recover 3 Light and draw 2 cards.</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1800002">
+		<Name>The Requiem</Name> 
+		<Desc>At the start of each act add a copy of "Tempestuous Danza" into hand. Activate "Resonance" 5 times will upgrade the card.</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1800003">
+		<Name>Frantic Performance</Name> 
+		<Desc>Gain 1 Frantic after inflicting or recieving damage equal to 2% of Max HP. Can spend Frantic to use Powerful Combat Pages.</Desc>
+	</PassiveDesc>
+	<!--菲利普 -->
+	<PassiveDesc ID="1810001">
+		<Name>Tempered Passion</Name> 
+		<Desc>Whenever the Emotion Level rises, inflict 3 Burn to all characters, including self.
+Gain Power by half the current Emotion Level (Rounded down)</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1810002">
+		<Name>Searing Sword</Name> 
+		<Desc>When inflicting Burn using Combat Pages, apply +1 additional stack.
+If the character has 10 or more Burn at the start of the Scene, change to much more aggressive deck; otherwise, change to more perservative deck.</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1810003">
+		<Name>Cooled Heart</Name> 
+		<Desc>Reduce damaged taken due to Burn by 10. Become more endure to damage.</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1810004">
+		<Name>Sizzling Heart</Name> 
+		<Desc>Inflict 2 Burn to target on hit, and inflict 2 Burn to attacker when hit.
+Become more vulnerable to damage.</Desc>
+	</PassiveDesc>
+	<!--艾琳-->
+	<PassiveDesc ID="1820001">
+		<Name>Meat Gear: Production</Name> 
+		<Desc>At the start of the Act, Summon and Commond 2 Gear Worshipper unit. Gear Worshippers have independent deck and stats.
+Take Stagger Damage equal to 15% of Max Stagger Resist when one of the Gear Worshipper die.
+At the end of Scene when one of the Gear Worshipper die two scene before, summon a new Gear Worshipper unit. </Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1820002">
+		<Name>Thought Gear: Predict</Name> 
+		<Desc>Once per Scene, respond to a one-sided attack with an Evade die [Roll: 5-10]. (Not played in clashes where both characters use a Combat Page) </Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1820003">
+		<Name>Meat Gear: Demise</Name> 
+		<Desc>On the Scene after which a Gear Worshipper dies, uses the Combat Page 'Thought Gear: Brainwash'.</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1820004">
+		<Name>Meat Gear: Role</Name> 
+		<Desc>This character can't get bonus Speed Dice from High Emotion Level.</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1820005">
+		<Name>Zeal of the Believers</Name> 
+		<Desc>Smoke' amplifies outgoing damage instead of incoming damage on this character.
+Gain three special Combat Page that can be used to benifit self. Replenish them after all three are used.</Desc>
+	</PassiveDesc>
+	<!--格蕾塔-->
+	<PassiveDesc ID="1830001">
+		<Name>Regenerative Cells</Name> 
+		<Desc>At the start of the act, gain 10 Resilience. Every 5 Scenes, purge all status ailments on self and gain 5 Resilience.</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1830002">
+		<Name>Unstoppable Viciousness</Name> 
+		<Desc>Gain 3 Protection each Scene. Take +3 additional damage from attacks while afflicted with Bleed.
+Cannot be Staggered. When Stagger Resist falls to 0, loses 100 Hp instead and gains 1 Strength next Scene.</Desc>
+	</PassiveDesc>
+  	<PassiveDesc ID="1830003">
+    	<Name>Feast and Furious</Name>
+   		<Desc>At the Start of the Act, shuffle a copies of "Into the Sack You Go!" into you Deck.
+Use it to turn an enemy into Fresh Meat, immobolize him until the end of the next Scene. Allies attack Fresh Meat will recover HP equal to damage dealt.
+Fresh Meat change resistance to Noraml but can at most take damage equal to 10% of their Max HP and no Stagger Damage.</Desc>
+  	</PassiveDesc>
+	<!-- 不来梅-->
+	<PassiveDesc ID="1840001">
+		<Name>Triarchy</Name> 
+		<Desc>Speed Dice +1。
+Every Scene, one head becomes active. Each head uses different Combat Pages.</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1840002">
+		<Name>Uncontrollable Performance</Name> 
+		<Desc>When Staggered, the Speed die that belongs to the currently active head will break, and the character will recover from Stagger next Scene.
+When all heads are destroyed, recover all heads and add one copy of "Chorus at the Climax" to hand.</Desc>
+	</PassiveDesc>
+  	<PassiveDesc ID="1840003">
+    	<Name>Improvisation</Name>
+   		<Desc>At the start of each Scene, set cost of one random card in Hand to 0. If reached Emotion Level 4, set cost of one extra card in hand to 0.
+This Character's Maximun Light is not affected by Emotion Level</Desc>
+  	</PassiveDesc>
+  	<PassiveDesc ID="1840004">
+    	<Name>Woof ruff! Doodly-doo? Heehaw~!</Name>
+   		<Desc>On a successful Blunt attack, deal 1-2 bonus Stagger damage.After a successful Blunt attack, inflict 1 Fragile to a random enemy next Scene (once per Scene)</Desc>
+  	</PassiveDesc>
+	<!--奥斯瓦尔德-->
+  	<PassiveDesc ID="1850001">
+    	<Name>There’s No Time for Staggering Struts!</Name>
+   		<Desc>Takes half as much Stagger damage from attacks and deflects. Take 30 Stagger Damage whenever an ally die.</Desc>
+  	</PassiveDesc>
+  	<PassiveDesc ID="1850002">
+    	<Name>We Could Use a Helping Hand, Actually~?</Name>
+   		<Desc>Gain a copy of "We Need You, You Know~? that can only be used when there are no stupidfied ally.
+At the start of the Scene: give 2 Strength, 2 Endurance, and 3 Protection to the Stupefied ally. When the ally is Staggered: take 30 Stagger damage at the end of the Scene.</Desc>
+  	</PassiveDesc>
+  	<PassiveDesc ID="1850003">
+    	<Name>Collaborative Performance</Name>
+		<Desc>Whenever [Good Job~], [Well Done~], [Nice Work~] is triggered, shared the triggered effect with two random ally.</Desc>
+  	</PassiveDesc>
+	<!--塔尼亚-->
+	<PassiveDesc ID="1860001">
+		<Name>Brawl</Name> 
+		<Desc>This character can't get bonus Speed Dice from High Emotion Level.
+Upon being targeted one side attack, Use the rightmost Page in hand to clash with it.</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1860002">
+		<Name>Time for Round Two</Name> 
+		<Desc>When HP drops to 1, fully recover HP and Stagger Resist, and purge all status ailments. HP cannot reach 0 before this occurs. (Once per Reception)
+Afterwards, add a copy of "Beatdown" to the deck and gain 2 Strength and Endurance for the rest of the Act.</Desc>
+	</PassiveDesc>
+  	<PassiveDesc ID="1860003">
+    	<Name>Hour of the Wolf</Name>
+   		<Desc>At the start of the Scene, if there are enemies untargetable, purge 'Untargetable' effects and give that had those effects 3 Protection and Stagger Protection instead.</Desc>
+  	</PassiveDesc>
+	<!--在宪-->
+	<PassiveDesc ID="1870001">
+		<Name>On-site Sewing</Name> 
+		<Desc>Gain a copy of "On-site Sewing" that can only be used when there is a dead ally.
+Effect is Reive a random dead ally in the form of Puppet Angelica and start to control it.</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1870002">
+		<Name>The Puppeteer</Name> 
+		<Desc>Boost Blunt dices' Power by 1. On hit by Blunt dices inflict 2 Stagger damage.
+Increase Stagger Damage by 1 if the value of speed dice is greater than 5.</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1870003">
+		<Name>Puppet Performance</Name> 
+		<Desc>Boost Counter dices' Power by 1. On Parry Lose, Puppet Angelica take 8 Stagger Damage.
+Can use a copy of 3 Cost "Recoonect" to make Puppet Angelica regain Puppet Strings.</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1870004">
+		<Name>Protective Puppetry</Name> 
+		<Desc>At the start of the Scene, gain Protection and Stagger Protection by the numbers of other allies.</Desc>
+	</PassiveDesc>
+	<!--安洁莉卡-->
+	<PassiveDesc ID="1870101">
+		<Name>Gigigigigig</Name> 
+		<Desc>Boost Blunt dices' Power by 1. On hit by Blunt dices inflict 2 Stagger damage.
+Increase Stagger Damage by 1 if the value of speed dice is greater than 5.</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1870102">
+		<Name>Ghghghghghghghgh…</Name> 
+		<Desc>Immortal as long as Jae-heon is alive.
+At the start of each Scene, gain 1 Strength, Endure, Haste if has Puppet Strings.
+Can only attack enemy with Red Mark.</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1870103">
+		<Name>Creeeeak…</Name> 
+		<Desc>Can not act if doesn't have Puppet Strings.
+When staggered or Jae-heon staggered, lose Puppet Strings status.
+When Jae-heon die, die.</Desc>
+	</PassiveDesc>
+	<!--伊莲娜-->
+	<PassiveDesc ID="1880001">
+		<Name>Gnawing Hunger</Name> 
+		<Desc>On hit recover amount Hp equal to 2% Max HP
+Offensive Dices gain 1 Power with 25% Max HP lost (Max. 3)</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1880002">
+		<Name>Feast</Name> 
+		<Desc>Gain a copy of "Feast", turning enemy with 25% Max HP or less into Nameless Shell that attack its other ally.</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1880003">
+		<Name>Nameless Shell</Name> 
+		<Desc>Uncontrollable, attack other allies. Vanish when there are no other allies.</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1880004">
+		<Name>Blood of Bloodfiend</Name> 
+		<Desc>Gain a copy of "Pure Blood", Losing 25% Max Hp on play in exchange of healing half of the amount of lost hp</Desc>
+	</PassiveDesc>
+	<!--朱红十字-->
+	<PassiveDesc ID="1880101">
+		<Name>Scorched Body / Heated Cross</Name> 
+		<Desc>At the Start of each Scene, Lose HP equal to 10% of Max HP to self/ All Dice gain 2 Power.</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1880102">
+		<Name>Heavy Weaponry / Rampage</Name> 
+		<Desc>Lose 3 Speed / one of used "Cross Blade","Shockwave","Heated Weapon" will be used again.</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1880103">
+		<Name>Drained Cardiovascular</Name> 
+		<Desc>This Characet will recover twice amount of health</Desc>
+	</PassiveDesc>
+	<!--普鲁托-->
+	<PassiveDesc ID="1890001">
+		<Name>Contracts</Name> 
+		<Desc>Gain copy of 5 contracts. Point to ally to activate it for them or Point to enemy to activate it for self.
+At the start of each Scene, Draw 1 Card.</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1890002">
+		<Name>Yesterday's Promise</Name> 
+		<Desc>Half Combat Pages on enemies' Speed Dice has one die marked at each Scene. 
+Upon Clash with marked die, Add a single-use copy of enemy's Page to the hand. If Achieve Clash Win, the copy's cost set to 0.</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1890003">
+		<Name>Sealing Barrier</Name> 
+		<Desc>In every Scene, Immune damage from one types of attack when not staggered.
+At the start of Act, add a copy of "Hex: Seal" to the deck.</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1890004">
+		<Name>Indifference</Name> 
+		<Desc>Dice from pages not in the original deck gain 1-2 Power.</Desc>
+	</PassiveDesc>
+</PassiveDescRoot>

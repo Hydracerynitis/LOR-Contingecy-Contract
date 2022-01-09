@@ -16,7 +16,7 @@ namespace ContractReward
         {
             base.OnStartBattle();
             if (FindAngelica() != null)
-                FindAngelica().bufListDetail.AddKeywordBufThisRoundByCard(KeywordBuf.DmgUp,1);
+                FindAngelica().bufListDetail.AddKeywordBufThisRoundByCard(KeywordBuf.DmgUp,2);
         }
         private BattleUnitModel FindAngelica() => BattleObjectManager.instance.GetAliveList(this.owner.faction).Find(x => x.Book.GetBookClassInfoId() == Tools.MakeLorId(18710000));
     }

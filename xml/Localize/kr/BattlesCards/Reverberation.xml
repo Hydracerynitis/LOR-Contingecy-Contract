@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleCardDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	 <cardDescList>
+		<!--阿尔加利亚-->
+		<BattleCardDesc ID="18000001">
+			<LocalizedName>Preludio</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18000002">
+			<LocalizedName>Assolo</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18000003">
+			<LocalizedName>Dissonance</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18000004">
+			<LocalizedName>Scythe Slash</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18000005">
+			<LocalizedName>Unhinged Melodia</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18000006">
+			<LocalizedName>Sequential Blitz</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18000007">
+			<LocalizedName>Resonate</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18000011">
+			<LocalizedName>Trails of Blue</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18000012">
+			<LocalizedName>Final Impromptu</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18000021">
+			<LocalizedName>Tempestuous Danza</LocalizedName>
+		</BattleCardDesc>
+		<!--菲利普-->
+		<BattleCardDesc ID="18100001">
+			<LocalizedName>Waned Eventide</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18100002">
+			<LocalizedName>Conflicting Emotions</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18100003">
+			<LocalizedName>Despairingly Stigmatize</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18100004">
+			<LocalizedName>Searing Resolution</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18100005">
+			<LocalizedName>Fierce Spirit</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18100011">
+			<LocalizedName>Restrain</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18100012">
+			<LocalizedName>Wound of Sorrow</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18100013">
+			<LocalizedName>Combusting Courage</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18100014">
+			<LocalizedName>Rekindled Strike</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18100015">
+			<LocalizedName>Scorching Desperation</LocalizedName>
+		</BattleCardDesc>
+		<!--艾琳-->
+		<BattleCardDesc ID="18200001">
+			<LocalizedName>Thought Gear: Accelerate</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18200002">
+			<LocalizedName>Thought Gear: Preach</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18200003">
+			<LocalizedName>Thought Gear: Propagate</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18200004">
+			<LocalizedName>Thought Gear: Brainwash</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18200005">
+			<LocalizedName>Thought Gear: Prediction</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18200006">
+			<LocalizedName>Meat Gear: Enhance</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18200007">
+			<LocalizedName>Meat Gear: Repair</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18200008">
+			<LocalizedName>Meat Gear: Spin</LocalizedName>
+		</BattleCardDesc>
+		<!--格蕾塔-->
+		<BattleCardDesc ID="18300001">
+			<LocalizedName>Slap and Fold</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18300002">
+			<LocalizedName>Settle in Steam</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18300003">
+			<LocalizedName>Break an Egg</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18300004">
+			<LocalizedName>Season the Meat</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18300005">
+			<LocalizedName>Mince</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18300006">
+			<LocalizedName>Trial Smack</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18300007">
+			<LocalizedName>Taste Test</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18300011">
+			<LocalizedName>Into the Sack You Go!</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18300012">
+			<LocalizedName>Mash</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18300013">
+			<LocalizedName>Mealtime</LocalizedName>
+		</BattleCardDesc>
+		<!--不来梅-->
+		<BattleCardDesc ID="18400001">
+			<LocalizedName>Powerful Tendon Chords</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18400002">
+			<LocalizedName>Everlasting Melody</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18400003">
+			<LocalizedName>Dark Shrine to Music</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18400004">
+			<LocalizedName>Explosive Tempo</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18400005">
+			<LocalizedName>Trio</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18400006">
+			<LocalizedName>Chorus at the Climax</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18400011">
+			<LocalizedName>Rarf RARF RARF!!</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18400012">
+			<LocalizedName>Barkruff! BARK~!!!</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18400021">
+			<LocalizedName>Cockadoodledoo~!!!!</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18400022">
+			<LocalizedName>NEIIIGHHIHIHH!!!</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18400031">
+			<LocalizedName>NEIIIGHHIHIHH!!!</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18400032">
+			<LocalizedName>Neiiigh~!!!</LocalizedName>
+		</BattleCardDesc>
+		<!--奥斯瓦尔德-->
+		<BattleCardDesc ID="18500001">
+			<LocalizedName>Let’s Have Some Fun~</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500002">
+			<LocalizedName>Ready for a Surprise?!&lt;color="red"&gt;♥&lt;/color&gt;</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500003">
+			<LocalizedName>Pow~! Kablammo!!♣</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500004">
+			<LocalizedName>Here, Catch~!♣</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500005">
+			<LocalizedName>Shall We Somersault These?&lt;color="red"&gt;◆&lt;/color&gt;</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500006">
+			<LocalizedName>CLIMAX!!!</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500007">
+			<LocalizedName>We Need You, You Know~?</LocalizedName>
+		</BattleCardDesc>
+		<!--塔尼亚-->
+		<BattleCardDesc ID="18600001">
+			<LocalizedName>Fisticuffs</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18600002">
+			<LocalizedName>Kicks and Stomps</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18600003">
+			<LocalizedName>Overspeed</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18600004">
+			<LocalizedName>Intimidate</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18600005">
+			<LocalizedName>Lupine Onslaught</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18600006">
+			<LocalizedName>Beatdown</LocalizedName>
+		</BattleCardDesc>
+		<!--在宪 & 安洁莉卡-->
+		<BattleCardDesc ID="18700001">
+			<LocalizedName>Puppetry</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18700002">
+			<LocalizedName>Puppetry</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18700003">
+			<LocalizedName>Puppetry</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18700004">
+			<LocalizedName>Puppetry</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18700011">
+			<LocalizedName>Drawing the Strings Taut</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18700012">
+			<LocalizedName>Shove</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18700013">
+			<LocalizedName>Cripple</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18700021">
+			<LocalizedName>Not a Chance</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18700022">
+			<LocalizedName>Tugging Strings</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18700023">
+			<LocalizedName>Thin Strings</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18700024">
+			<LocalizedName>Durable Strings</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18700025">
+			<LocalizedName>Unique Strings</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18700031">
+			<LocalizedName>Grgh..</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18700032">
+			<LocalizedName>Gh..Gigi..Gig</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18700033">
+			<LocalizedName>Uu…Ghghgh…</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18700101">
+			<LocalizedName>On-site Sewing</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18700102">
+			<LocalizedName>Recoonect</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18700103">
+			<LocalizedName>Assailing Pulls</LocalizedName>
+		</BattleCardDesc>
+		<!--伊莲娜-->
+		<BattleCardDesc ID="18800001">
+			<LocalizedName>Sanguine Nails</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18800002">
+			<LocalizedName>Siphon</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18800003">
+			<LocalizedName>Circulation</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18800004">
+			<LocalizedName>Inject</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18800005">
+			<LocalizedName>Bloodspreading</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18800006">
+			<LocalizedName>Feast</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18800007">
+			<LocalizedName>Feast</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18800008">
+			<LocalizedName>Pure Blood</LocalizedName>
+		</BattleCardDesc>
+		<!--朱红十字-->
+		<BattleCardDesc ID="18810001">
+			<LocalizedName>Cross Blade</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18810002">
+			<LocalizedName>Shockwave</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18810003">
+			<LocalizedName>Heated Weapon</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18810004">
+			<LocalizedName>Rampageous Strike</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18810005">
+			<LocalizedName>Obstruct</LocalizedName>
+		</BattleCardDesc>
+		<!--普鲁托-->
+		<BattleCardDesc ID="18900001">
+			<LocalizedName>Magic: Deflection</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18900002">
+			<LocalizedName>Magic: Missile</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18900003">
+			<LocalizedName>Magic: Onslaught</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18900004">
+			<LocalizedName>Magic: Safeguard</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18900005">
+			<LocalizedName>Hex: Seal</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18900006">
+			<LocalizedName>Deluge of Brachial Quietuses</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18900011">
+			<LocalizedName>Contract of Liberty</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18900012">
+			<LocalizedName>Contract of Amplification</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18900013">
+			<LocalizedName>Contract of Swiftness</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18900014">
+			<LocalizedName>Contract of Might</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18900015">
+			<LocalizedName>Contract of Light</LocalizedName>
+		</BattleCardDesc>
+ 	</cardDescList>
+</BattleCardDescRoot>

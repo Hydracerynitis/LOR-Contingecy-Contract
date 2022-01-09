@@ -16,16 +16,16 @@ namespace Contingecy_Contract
             Level = level;
         }
         public override ContractType Type => ContractType.Special;
-        public override string[] GetFormatParam => new string[] { GetParam()};
-        private string GetParam()
+        public override string[] GetFormatParam(string language) => new string[] { GetParam(language)};
+        private string GetParam(string language)
         {
             string s = "";
             if (Level >= 1)
-                s += TextDataModel.GetText("Tanya_Solo_param1");
+                s += StaticDataManager.ContractParam[("Tanya_Solo_param1", language)];
             if (Level >= 2)
-                s += TextDataModel.GetText("Tanya_Solo_param2");
+                s += StaticDataManager.ContractParam[("Tanya_Solo_param2", language)];
             if (Level >= 3)
-                s += TextDataModel.GetText("Tanya_Solo_param3");
+                s += StaticDataManager.ContractParam[("Tanya_Solo_param3", language)];
             return s;
         }
         public override void OnDrawCard()
@@ -69,10 +69,10 @@ namespace Contingecy_Contract
             base.OnStartParrying(card);
             if (Level < 1 || Singleton<StageController>.Instance.RoundTurn<=1)
                 return;
-            card.ApplyDiceStatBonus(DiceMatch.AllAttackDice,new DiceStatBonus() { power = 2 });
+            card.ApplyDiceStatBonus(DiceMatch.AllAttackDice,new DiceStatBonus() { power = 4 });
             if (Level < 2 || owner.emotionDetail.EmotionLevel<3)
                 return;
-            card.ApplyDiceStatBonus(DiceMatch.AllAttackDice, new DiceStatBonus() { power = 2 });
+            card.ApplyDiceStatBonus(DiceMatch.AllAttackDice, new DiceStatBonus() { power = 3 });
             if (Level < 3 || owner.emotionDetail.EmotionLevel < 5)
                 return;
             card.ApplyDiceStatBonus(DiceMatch.AllAttackDice, new DiceStatBonus() { power = 2 });
@@ -85,16 +85,16 @@ namespace Contingecy_Contract
         private int Ultimate_interval => Level >= 3 ? 3 : 4;
         public override ContractType Type => ContractType.Special;
         private int TanyaPhase => (int)typeof(PassiveAbility_1306011).GetField("_phase", AccessTools.all).GetValue(TanyaPassive);
-        public override string[] GetFormatParam => new string[] { GetParam(),(10 + 10 * Level).ToString() };
-        private string GetParam()
+        public override string[] GetFormatParam(string language) => new string[] { GetParam(language), (10 + 10 * Level).ToString() };
+        private string GetParam(string language)
         {
             string s = "";
             if (Level >= 1)
-                s = TextDataModel.GetText("Philip_Silence_param1");
+                s = StaticDataManager.ContractParam[("Philip_Silence_param1", language)];
             if (Level >= 2)
-                s = TextDataModel.GetText("Philip_Silence_param2");
+                s = StaticDataManager.ContractParam[("Philip_Silence_param2", language)];
             if (Level >= 3)
-                s = TextDataModel.GetText("Philip_Silence_param3");
+                s = StaticDataManager.ContractParam[("Philip_Silence_param3", language)];
             return s;
         }
         

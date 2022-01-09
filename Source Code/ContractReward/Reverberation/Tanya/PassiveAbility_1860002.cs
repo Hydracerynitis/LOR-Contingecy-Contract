@@ -29,7 +29,7 @@ namespace ContractReward
             {
                 this.owner.RecoverBreakLife(1);
                 this.owner.ResetBreakGauge();
-                this.owner.breakDetail.nextTurnBreak = false;
+                this.owner.turnState = BattleUnitTurnState.WAIT_CARD;
                 this.owner.view.charAppearance.ChangeMotion(ActionDetail.Default);
                 this.owner.SetHp(this.owner.MaxHp);
                 this.owner.bufListDetail.RemoveBufAll(BufPositiveType.Negative);
