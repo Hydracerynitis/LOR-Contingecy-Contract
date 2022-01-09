@@ -361,7 +361,7 @@
     		<EquipEffect>
       			<HP>150</HP>
       			<Break>225</Break>
-      			<SpeedMin>2</SpeedMin>
+      			<SpeedMin>4</SpeedMin>
       			<Speed>7</Speed>
       			<SResist>Normal</SResist>
       			<PResist>Normal</PResist>

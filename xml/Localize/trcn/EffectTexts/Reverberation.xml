@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleEffectTextRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<effectTextList>
+		<BattleEffectText ID="Insanity">
+			<Name>狂乱</Name>
+			<Desc>每造成或承受2%自身最大血量的伤害便提升一点层数</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="NullifyPowerAll">
+			<Name>封锁威力</Name>
+			<Desc>无视骰子威力增减</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="Mark">
+			<Name>红靶</Name>
+			<Desc>被安洁莉卡傀儡司书指定攻击</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="AngelicaPuppet">
+			<Name>操纵</Name>
+			<Desc>速度骰+1，该司书可以自由活动</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="TemporyPuppet">
+			<Name>临时操纵</Name>
+			<Desc>这一幕内无法死亡，速度骰+1</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="Barrier">
+			<Name>封锁结界</Name>
+			<Desc>无法行动无法被指定</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="CrossBurn">
+			<Name>烧印</Name>
+			<Desc>被朱红十字攻击会消耗一层并使其对其他司书额外攻击,此次伤害提升{0}%</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="TanyaMaster">
+			<Name>一人成军</Name>
+			<Desc>一幕内使用书页攻击同一司书4次会让塔尼娅“看破”该司书的攻击;下一幕与其拼点时该司书书页的所有骰子都会被无效化.
+这一幕内被看破的司书有: {0}</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="GretaMeat">
+			<Name>大肉</Name>
+			<Desc>无法行动. 友方单位攻击大肉会恢复等同于造成伤害的生命值.
+变成大肉的敌方单位全部抗性改成普通，但至多承受10%最大生命值的伤害并且不承受混乱伤害。</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="HeadDonkey">
+			<Name>嘿吼的演奏时间</Name>
+			<Desc>最后的速度骰子将使用“嘿吼”的战斗书页。</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="HeadDog">
+			<Name>汪呜的演奏时间</Name>
+			<Desc>最后的速度骰子将使用“汪呜”的战斗书页。</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="HeadChicken">
+			<Name>咕哦的演奏时间</Name>
+			<Desc>最后的速度骰子将使用“咕哦”的战斗书页。</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="TrollIndicator">
+			<Name>A little Trolling</Name>
+			<Desc>这一幕结束时,造成伤害最多的司书将会被迷惑</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="LibrarianDaze">
+			<Name>迷惑</Name>
+			<Desc>2幕之内，无法控制
+拼点失败时失去5%的混乱抗性
+若陷入混乱，则解除此状态并在下一幕开始时恢复所有混乱抗性</Desc>
+		</BattleEffectText>
+	</effectTextList>
+</BattleEffectTextRoot>

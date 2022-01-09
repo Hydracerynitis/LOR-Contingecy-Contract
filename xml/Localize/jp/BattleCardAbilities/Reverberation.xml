@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleCardAbilityDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<BattleCardAbility ID="energy3">
+    		<Desc>[On Use] Recover 3 Light</Desc>
+  	</BattleCardAbility>
+	<!--阿尔加利亚-->
+	  <BattleCardAbility ID="PerfectResonanceActivate">
+    		<Desc>[On Use] If Speed is equal to target's Vibration, all dice on this page gain +2 Power</Desc>
+  	</BattleCardAbility>
+	  <BattleCardAbility ID="Insane1">
+    		<Desc>Spend 100 Frantic to Use</Desc>
+    		<Desc>[On Use] Since next Scene, target's dices are not affected by Power gain or loss</Desc>
+  	</BattleCardAbility>
+	 <BattleCardAbility ID="Insane2">
+    		<Desc>Spend 100 Frantic to Use</Desc>
+  	</BattleCardAbility>
+	  <BattleCardAbility ID="AllVibrate">
+    		<Desc>[On Use] Set all enemies' [Virbrate] stack to 4</Desc>
+    		<Desc>This page can be used at most use once per 4 Scene</Desc>
+  	</BattleCardAbility>
+	<!--菲利普-->
+  	<BattleCardAbility ID="SelfBurn2">
+    		<Desc>[On Use] Inflict 2 [Burn] to self</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="philip_emotion_pw">
+    		<Desc>[On Clash Win] Inflict 1 Burn to each other</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="ParryBurn">
+    		<Desc>[On Clash] Inflict 1 Burn to each other</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="philip_stigma_atk">
+    		<Desc>[On Hit] Gain 3 Negative Emotion Coins</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="philip_heat_atk1">
+    		<Desc>[On Hit] Inflict 1 Burn</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="philip_heat_atk2">
+    		<Desc>[On Hit] Inflict 2 Burn</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="philip_restrict_pw">
+    		<Desc>[On Clash Win] Inflict 1 Burn to each other</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="philip_restrict_atk">
+    		<Desc>[On Hit] Inflict 2 Feeble, Disarm, and Bind next Scene</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="BurnPowerUp">
+    		<Desc>[On Use] All dice of this page gain 2 Power if target has more than 10 Burn </Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="LoseBurn">
+    		<Desc>[On Use] Reduce self's Burn stack by 5</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="BurnCostDown">
+    		<Desc>[On Use] if target has more than 10 Burn, set costs of 2 random cards from hand to 0 (Reset after Use)</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="philip_area_atk">
+    		<Desc>[On Hit] Inflict 3 Burn</Desc>
+  	</BattleCardAbility>
+	<!--艾琳-->
+	<BattleCardAbility ID="MeatGearPower">
+		<Desc>[On Play] For the duration of the Scene, all dice gain 1 Power.</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="MeatGearHeal">
+		<Desc>[On Play] Recover 10 Hp and 10 Stagger Resist.</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="MeatGearSmoke">
+		<Desc>[On Play] Gain 2 smoke.</Desc>
+  	</BattleCardAbility>
+	<!--格蕾塔-->
+  	<BattleCardAbility ID="greta_weakGuardPw">
+    		<Desc>[On Clash Win] Inflict 1 Bleed next Scene</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="greta_weakGuardCounterPw">
+    		<Desc>[On Clash Win] Gain 1 Strength next Scene</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="greta_strongGuard">
+    		<Desc>Greta loses 1 Resilience whenever she loses a clash using this page</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="greta_strongGuardPw">
+    		<Desc>[On Clash Win] Inflict 2 Bleed next Scene</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="greta_stun">
+    		<Desc>If target has bleed, dice on this page gain +2 Power</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="greta_stunAtk">
+    		<Desc>[On Hit] Inflict 3 Bind and Paralysis next Scene</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="greta_stunPw">
+    		<Desc>[On Clash Win] Inflict 1 Bleed next Scene</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="GretaCut">
+    		<Desc>At the start of each Scene if [Fresh Meat] exist, upgrade itself</Desc>
+    		<Desc>[On Use] Recover 3 Light</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="greta_seasoningAtk">
+    		<Desc>[On Hit] Inflict 1 Bleed and Fragile next Scene</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="greta_tasteAtk">
+    		<Desc>[On Hit] Recover 8 HP; if target has Bleed, boost damage by +10</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="greta_tastePw">
+    		<Desc>[On Clash Win] Inflict 2 Bleed next Scene</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="greta_trample">
+    		<Desc>Targets all other characters. If target has Bleed, the first die gains +2 Power</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="GretaTrample">
+    		<Desc>[On Hit] Recover 4 HP; recycled against a random enemy that didn't target this page</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="greta_tramplePw">
+    		<Desc>[On Clash Win] Inflict 2 Bleed next Scene</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="GretaCatch">
+    		<Desc>[On Use] Cancel target's action and turn them into Fresh Meat</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="GretaMeatCut">
+    		<Desc>Can only target on Fresh Meat</Desc>
+    		<Desc>[On Use] Restore 3 Light</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="GretaMeatMeal">
+    		<Desc>Can only target on Fresh Meat</Desc>
+    		<Desc>At the start of each Scene set cost of this card to current Light</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="greta_mealAtk">
+    		<Desc>[On Hit] Recover 20 HP; If Target is Fresh Meat, Kill target.</Desc>
+  	</BattleCardAbility>
+	<!--不来梅-->
+  	<BattleCardAbility ID="bremen_boom">
+    		<Desc>[Combat Start] Give 2 Strength, Endurance, Haste, and Protection to a random ally; inflict 2 Feeble, Disarm, Bind, and Fragile to target</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="bremen_chorus">
+    		<Desc>[Combat Start] Inflict 10 Fragile and 5 Paralysis to manually set target next Scene</Desc>
+    		<Desc>At the next Scene, all attack resistance become "Fatal"</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="bremen_doghead1">
+    		<Desc>[Combat Start] Inflict 2 Feeble this Scene</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="bremen_doghead1pw">
+    		<Desc>[On Clash Win] Inflict 1 Feeble to a random enemy next Scene</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="bremen_doghead2atk">
+    		<Desc>[On Hit] Inflict 2 Bind and Disarm next Scene</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="bremen_chickenhead1">
+    		<Desc>[Can Target Ally;][Combat Start] If target is an ally, give 2 Strength this Scene</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="bremen_chickenhead1pw">
+    		<Desc>[On Clash Win] Give 1 Strength to a random ally next Scene</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="bremen_chickenhead2">
+    		<Desc>[Combat Start] Give 1 Strength to all allies</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="bremen_donkeyhead1atk">
+    		<Desc>[On Hit] Give 'Tagged' next Scene</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="bremen_donkeyhead2atk">
+    		<Desc>[On Hit] Inflict 1 Paralysis next Scene</Desc>
+  	</BattleCardAbility>
+	<!--奥斯瓦尔德-->
+	<BattleCardAbility ID="Oswald_energy3">
+    		<Desc>[When We Meet~] Recover 3 Light</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="oswald_recoverhp5pw">
+    		<Desc>[On Clash Win] Recover 5 HP</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="Oswald_firstplquickendu">
+    		<Desc>[Good Job~] If the last die on this page loses in a clash, the opponent gains 1 Haste and Endurance next Scene</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="oswald_poweruplast1pw">
+    		<Desc>[On Clash Win] Last die gains +1 Power</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="oswald_seal1atk">
+    		<Desc>[On Hit] Seal a Speed die of target next Scene</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="Oswald_firstplstr">
+    		<Desc>[Well Done~] If the first die on this page loses in a clash, the opponent gains 1 Strength next Scene</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="oswald_destroyallatk">
+    		<Desc>[On Clash Win] Destroy all dice on target's page</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="Oswald_allpl">
+    		<Desc>[Nice Work~] If all dice on this page lose in a clash, the opponent restores 2 Light</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="Oswald_area">
+    		<Desc>[ALL OF YOU;][ONCE I BEGIN] Inflict one of the following statuses to targets at random: 2 Fragile, 2 Disarm, 2 Feeble, 2 Protection, 2 Strength, 2 Endurance</Desc>
+			<Desc>This page can be used at most use once per 4 Scene</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="Oswald_daze">
+    		<Desc>[Take it On~] Stagger target ally; Target ally is Stupefied next Scene</Desc>
+			<Desc>The Page can only be played when no stupified ally exist.</Desc>
+  	</BattleCardAbility>
+	<!--塔尼亚-->
+  	<BattleCardAbility ID="TanyaCoolDown">
+    		<Desc>This page is used against all enemies.(Except used due to Brawl)</Desc>
+			<Desc>This page can be used at most use once per 4 Scene</Desc>
+  	</BattleCardAbility>
+	<!--在宪 & 安洁莉卡-->
+  	<BattleCardAbility ID="QuickPuppet_Special">
+    		<Desc>If Speed is 5 or higher, all dice on this page gain +1 Power</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="AngelicaPuppet_Special">
+    		<Desc>If Speed is 5 or higher, all dice on this page gain +2 Power</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="break4atk">
+    		<Desc>[On Hit] Deal 4 Stagger damage</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="AllPuppetControl">
+    		<Desc>[On Use] Give Temporary Puppet String to all other allies next Scene</Desc>
+    		<Desc>This page can be used at most use once per 4 Scene </Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="Jaeheon_AreaBind">
+    		<Desc>[On Hit] Inflict 1 Bind next Scene</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="PuppetProtect">
+    		<Desc>[Combat Start] Give Puppet Angelica 2 [Protection] [Stagger Protection]</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="PuppetDmg">
+    		<Desc>[Combat Start] Give Puppet Angelica 2 [Damage Up]</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="PuppetPower">
+    		<Desc>[Combat Start] Give Puppet Angelica 1 [Strength] [Endurance]</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="PuppetHeal">
+    		<Desc>[Combat Start] Puppet Angelica recover 15 Stagger Resist</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="AngelicaPuppet_Wheels">
+    		<Desc>[On Clash Win] Destroy opponent's next die</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="ReviveAngelica">
+    		<Desc>This card can be only used when there is a dead ally</Desc>
+    		<Desc>[On Play]Reive a random dead ally in the form of Puppet Angelica</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="ReconnectAngelica">
+    		<Desc>[On Play] make Puppet Angelica regain [Puppet Strings]</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="AttackTarget">
+    		<Desc>[On Play] Change the Enemy with Red Mark to target</Desc>
+  	</BattleCardAbility>
+	<!--伊莲娜-->
+  	<BattleCardAbility ID="ElenaBuff">
+    	<Desc>[Combat Start] give target 2 [Strength] [Endurance]</Desc>
+		<Desc>Can point ally as target</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="AoeCoolDown">
+		<Desc>This page can be used at most use once per 4 Scene</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="ElenaZombie">
+    	<Desc>Recover all Health and Stagger Resist in Next Scene and start attack allies</Desc>
+    	<Desc>target will vanish if it has not alive allies</Desc>
+		<Desc>Can only target enemy with 25% Max HP or less</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="ElenaZombieEnemy">
+    	<Desc>Recover all Health and Stagger Resist in Next Scene and start attack allies</Desc>
+    	<Desc>target will vanish if it has not alive allies</Desc>
+  	</BattleCardAbility>
+  	<BattleCardAbility ID="SacrificeHp">
+    	<Desc>Required at least 25% Max Hp to play.</Desc>
+    	<Desc>[On Play] Losing 25% of Max Hp, and heal target ally half of the amount of lost hp</Desc>
+  	</BattleCardAbility>
+	<!-- 朱红十字-->
+	<BattleCardAbility ID="AllyCounter">
+    	<Desc>[Combat Start] target gain all counter dices in this page.</Desc>
+		<Desc>Only point ally as target.</Desc>
+  	</BattleCardAbility>
+	<!--普鲁托-->
+	<BattleCardAbility ID="Barrier">
+    		<Desc>[On Play] Seal target into [Sealing Barrier] for the duration of the Scene.</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="PlutoAoe">
+    		<Desc>[On Use]Boost dices' damage according to numbers of enemies targeted</Desc>
+    		<Desc>Less target greated the boost</Desc>
+    		<Desc>This page can be used at most use once per 4 Scene</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="PlutoContract1">
+    		<Desc>[On Play] Activate Contract of Liberty for targeted ally</Desc>
+    		<Desc>if target is enemy then activate for self</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="PlutoContract2">
+    		<Desc>[On Play] Activate Contract of Amplification for targeted ally</Desc>
+    		<Desc>if target is enemy then activate for self</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="PlutoContract3">
+    		<Desc>[On Play] Activate Contract of Swiftness for targeted ally</Desc>
+    		<Desc>if target is enemy then activate for self</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="PlutoContract4">
+    		<Desc>[On Play] Activate Contract of Might for targeted ally</Desc>
+    		<Desc>if target is enemy then activate for self</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="PlutoContract5">
+    		<Desc>[On Play] Activate Contract of Light for targeted ally</Desc>
+    		<Desc>if target is enemy then activate for self</Desc>
+  	</BattleCardAbility>
+</BattleCardAbilityDescRoot>

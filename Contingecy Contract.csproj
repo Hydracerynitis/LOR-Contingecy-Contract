@@ -40,9 +40,6 @@
     <Reference Include="BaseMod">
       <HintPath>D:\SteamLibrary\steamapps\workshop\content\1256670\2603522001\Assemblies\BaseMod.dll</HintPath>
     </Reference>
-    <Reference Include="CCGUI">
-      <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Mods\ContingencyContract\CCGUI.dll</HintPath>
-    </Reference>
     <Reference Include="MyJsonTool, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>D:\Library of Ruina custom\参考dll\CCGUI\MyJsonTool.dll</HintPath>
@@ -97,6 +94,8 @@
     <Compile Include="Source Code\ContractReward\Reverberation\Oswald\PassiveAbility_1850002.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Oswald\PassiveAbility_1850001.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Oswald\PassiveAbility_1850003.cs" />
+    <Compile Include="Source Code\ExtraCondition.cs" />
+    <Compile Include="Source Code\Param.cs" />
     <Compile Include="Source Code\Reverberation\ContractList_Bremen.cs" />
     <Compile Include="Source Code\Reverberation\ContractList_Greta.cs" />
     <Compile Include="Source Code\Reverberation\ContractList_Oswald.cs" />
@@ -113,7 +112,7 @@
     <Compile Include="Source Code\ContractReward\Reverberation\Bremen\PassiveAbility_1840002.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Bremen\PassiveAbility_1840001.cs" />
     <Compile Include="Source Code\ContractReward\DiceCardSelfAbility_energy3.cs" />
-    <Compile Include="Source Code\ContractReward\DiceCardSelfAbility_AoeCoolDown.cs" />
+    <Compile Include="Source Code\ContractReward\Reverberation\DiceCardSelfAbility_AoeCoolDown.cs" />
     <Compile Include="Source Code\ContractReward\DiceCardAbility_invalid.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Eileen\BattleUnitBuf_ZealLimit.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Eileen\DiceCardSelfAbility_MeatGearSmoke.cs" />
@@ -182,7 +181,7 @@
     <Compile Include="Source Code\ContractReward\Reverberation\Jaeheon\DiceCardSelfAbility_ReconnectAngelica.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Jaeheon\DiceCardSelfAbility_ReviveAngelica.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Philiph\DiceCardSelfAbility_SelfBurn2.cs" />
-    <Compile Include="Source Code\ContractReward\PassiveAbility_1800000.cs" />
+    <Compile Include="Source Code\ContractReward\Reverberation\PassiveAbility_1800000.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Argalia\PassiveAbility_1800001.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Argalia\PassiveAbility_1800002.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Argalia\PassiveAbility_1800003.cs" />

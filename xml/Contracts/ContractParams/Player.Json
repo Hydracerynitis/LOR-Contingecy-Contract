@@ -1,0 +1,25 @@
+{
+    "Ps":[
+        {
+            "Id":"NoEmotion_param1",
+            "Desc":[
+                {"Language":"cn","Content":"3阶"},
+                {"Language":"en","Content":"Tier 3"}
+            ]
+        },
+        {
+            "Id":"NoEmotion_param2",
+            "Desc":[
+                {"Language":"cn","Content":",2阶"},
+                {"Language":"en","Content":", Tier 2"}
+            ]
+        },
+        {
+            "Id":"NoEmotion_param3",
+            "Desc":[
+                {"Language":"cn","Content":"和1阶"},
+                {"Language":"en","Content":", and Tier 1"}
+            ]
+        }
+    ]
+}

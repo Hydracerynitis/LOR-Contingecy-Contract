@@ -22,7 +22,7 @@ namespace Contingecy_Contract
         }
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1308021;
         public override ContractType Type => ContractType.Special;
-        public override string[] GetFormatParam => new string[] { Level.ToString(),((Level - 1)*25).ToString() };
+        public override string[] GetFormatParam(string language) => new string[] { Level.ToString(),((Level - 1)*25).ToString() };
         private readonly List<BattlePlayingCardDataInUnitModel> extrahit;
         public override void OnRoundStart()
         {
@@ -96,7 +96,7 @@ namespace Contingecy_Contract
             Level = level;
         }
         public override ContractType Type => ContractType.Special;
-        public override string[] GetFormatParam => new string[] { ( 15+ 5*Level).ToString(), (Level * 20).ToString() };
+        public override string[] GetFormatParam(string language) => new string[] { ( 15+ 5*Level).ToString(), (Level * 20).ToString() };
         public override int SpeedDiceNumAdder() => IsElena? this.GetVictimList().Count: 0;
         private bool IsElena => this.owner.UnitData.unitData.EnemyUnitId == 1308011;
         private List<BattleUnitModel> GetVictimList()

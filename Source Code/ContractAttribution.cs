@@ -207,6 +207,6 @@ namespace Contingecy_Contract
         public virtual DiceStatBonus GetDicestatBonus(BattleDiceBehavior behavior) => new DiceStatBonus();
         public virtual bool CheckEnemyId(LorId EnemyId) => true;
         public virtual StatBonus GetStatBonus(BattleUnitModel owner) => new StatBonus();
-        public virtual string[] GetFormatParam => Array.Empty<string>();
+        public virtual string[] GetFormatParam(string language) => Array.Empty<string>();
     }
 }

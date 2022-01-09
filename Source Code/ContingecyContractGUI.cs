@@ -19,7 +19,6 @@ namespace Contingecy_Contract
         private Rect windowRect;
         private Rect CCDescRect;
         private Rect CCItemTableRect;
-        private Rect CCConfirmRect;
         private Vector2 _Position;
         public List<int> nowlevel = new List<int>();
         public List<Contract> ContractList = new List<Contract>();
@@ -49,8 +48,7 @@ namespace Contingecy_Contract
         }
         private void OnOpen()
         {
-
-            language = TextDataModel.CurrentLanguage;
+            language = TextDataModel.CurrentLanguage.EndsWith("cn") ? "cn": "en";
             ContractList.Clear();
             foreach (Contract cc in StaticDataManager.JsonList)
             {
@@ -92,15 +90,14 @@ namespace Contingecy_Contract
         }
         private void ComputeRect()
         {
-            int num1 = Math.Min(Screen.width, 1050);
+            int num1 = Math.Min(Screen.width, 1100);
             int num2 = Math.Min(Screen.height, 700);
             windowRect = new Rect(Mathf.RoundToInt((Screen.width - num1) / 2f), Mathf.RoundToInt((Screen.height - num2) / 2f), num1, (float)num2);
             CCTitleRect = windowRect;
             CCTitleRect.position = Vector2.zero;
-            CCTableRect = new Rect(0.0f, 60f, 1050f, 60f);;
-            CCItemTableRect = new Rect(0.0f, 180f, 1050f, 360f);
-            CCDescRect = new Rect(0.0f, 550f, 1050f, 90f);
-            CCConfirmRect = new Rect(0f, 640f, 1050f, 60f);
+            CCTableRect = new Rect(0.0f, 120f, 1100f, 60f);;
+            CCItemTableRect = new Rect(0.0f, 180f, 1100f, 360f);
+            CCDescRect = new Rect(0.0f, 550f, 1100f, 150f);
         }
         private void CCTitle(Rect HeaderTitleRect)
         {
@@ -114,7 +111,7 @@ namespace Contingecy_Contract
                 wordWrap = true,
                 alignment = TextAnchor.MiddleCenter,
                 fontSize = 20,
-                margin = new RectOffset(0, 0, 10, 0)
+                margin = new RectOffset(10, 10, 10, 0)
             };
             GUILayout.BeginHorizontal();
             GUILayout.BeginArea(HeaderTitleRect);
@@ -214,7 +211,7 @@ namespace Contingecy_Contract
             _Position = GUILayout.BeginScrollView(_Position, false, false, GUILayout.Width(1050f), GUILayout.Height(360f));
             GUILayout.BeginHorizontal(new GUIStyle()
             {
-                alignment = TextAnchor.UpperLeft
+                alignment = TextAnchor.UpperCenter
             });
             int num1 = 0;
             int num2 = 17;

@@ -46,6 +46,8 @@ namespace Contingecy_Contract
         {
             if (desc.Find(x => x.language == TextDataModel.CurrentLanguage) is ContractDesc Desc)
                 return Desc;
+            else if(TextDataModel.CurrentLanguage=="trcn")
+                return desc.Find(x => x.language == "cn");
             else
                 return desc.Find(x => x.language == "en");
         }

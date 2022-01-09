@@ -31,7 +31,7 @@
                 {
                     "language":"en",
                     "name":"The Backbone",
-                    "desc":"Increase Max HP and Stagger Resist of Tenma and Valentin by {0}%.\nSpeed of Tenma won't be lower than {1}; On win clash using a Combat Page with one non-Counter die, Valentin Destroy targets next {2} dices"
+                    "desc":"Increase Max HP and Stagger Resist of Tenma and Valentin by {0}%.\nSpeed of Tenma won't be lower than {1};\nOn win clash using a Combat Page with one non-Counter die, Valentin Destroy targets next {2} dices"
                 }
             ],
             "Faction":0,

@@ -19,7 +19,7 @@ namespace Contingecy_Contract
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1309021;
         public override ContractType Type => ContractType.Special;
         private PassiveAbility_1309021 copypassive;
-        public override string[] GetFormatParam => new string[] { (35 + 15 * Level).ToString(), Level.ToString() };
+        public override string[] GetFormatParam(string language) => new string[] { (35 + 15 * Level).ToString(), Level.ToString() };
         public override void Init(BattleUnitModel self)
         {
             base.Init(self);
@@ -51,7 +51,7 @@ namespace Contingecy_Contract
         }
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1309011;
         public override ContractType Type => ContractType.Special;
-        public override string[] GetFormatParam => new string[] { (5*Level).ToString(), (20 + Level * 10).ToString() };
+        public override string[] GetFormatParam(string language) => new string[] { (5*Level).ToString(), (20 + Level * 10).ToString() };
         public override StatBonus GetStatBonus(BattleUnitModel owner)
         {
             return new StatBonus() { hpRate=100};

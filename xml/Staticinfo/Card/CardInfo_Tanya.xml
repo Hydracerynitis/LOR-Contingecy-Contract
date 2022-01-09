@@ -5,8 +5,8 @@
 		<Artwork>Tanya6</Artwork>
 		<Rarity>Common</Rarity>
 		<Option>NoInventory</Option>
-		<Spec Range="Near" Cost="2"/>
-		<Script>energy4</Script>
+		<Spec Range="Near" Cost="1"/>
+		<Script>energy3</Script>
 		<ScriptDesc></ScriptDesc>
     	<BehaviourList>
             <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Tanya_Z" Script="" ActionScript="" Desc="" />
@@ -88,7 +88,7 @@
 		<Script>TanyaCoolDown</Script>
 		<ScriptDesc></ScriptDesc>
     	<BehaviourList>
-            <Behaviour Min="29" Dice="35" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="damage5atk" ActionScript="TanyaSpecialAtk" Desc="" />
+            <Behaviour Min="29" Dice="35" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="damage5atk" ActionScript="TanyaSpecialAtk_New" Desc="" />
 		</BehaviourList>
 		<Chapter>7</Chapter>
 	    <Priority>0</Priority>

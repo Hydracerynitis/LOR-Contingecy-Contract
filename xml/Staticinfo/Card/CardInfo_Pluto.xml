@@ -70,7 +70,7 @@
 		<Artwork>Pluto_Change</Artwork>
 		<Rarity>Rare</Rarity>
 		<Option>NoInventory</Option>
-		<Spec Range="Instance" Cost="3"/>
+		<Spec Range="Instance" Cost="2"/>
 		<Script>Barrier</Script>
 		<ScriptDesc></ScriptDesc>
     	<BehaviourList>

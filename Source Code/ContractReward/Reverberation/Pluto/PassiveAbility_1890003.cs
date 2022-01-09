@@ -26,7 +26,7 @@ namespace ContractReward
         public override void OnWaveStart()
         {
             base.OnWaveStart();
-            this.owner.allyCardDetail.AddNewCardToDeck(Tools.MakeLorId(18900005));
+            this.owner.allyCardDetail.AddNewCard(Tools.MakeLorId(18900005));
         }
     }
 }

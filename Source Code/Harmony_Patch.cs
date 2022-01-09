@@ -10,6 +10,7 @@ using System.IO;
 using HarmonyLib;
 using BaseMod;
 using TMPro;
+using LOR_XML;
 
 namespace Contingecy_Contract
 {
@@ -28,7 +29,7 @@ namespace Contingecy_Contract
         public Harmony_Patch()
         {
             harmony = new Harmony("Hydracerynitis.ContingecyContract");
-            ModPath = Path.GetDirectoryName(Uri.UnescapeDataString(new UriBuilder(Assembly.GetExecutingAssembly().CodeBase).Path));
+            ModPath = Path.GetDirectoryName( Uri.UnescapeDataString(new UriBuilder(Assembly.GetExecutingAssembly().CodeBase).Path));
             Debug.ModPatchDebug();
             StaticDataManager.LoadStaticData();
             ModifyEnsemble();
@@ -81,8 +82,8 @@ namespace Contingecy_Contract
             Patch(Method23, "BattleUnitModel_CheckCardAvailable", false);
             MethodInfo Method24 = typeof(AssemblyManager).GetMethod("CreateInstance_DiceCardSelfAbility", AccessTools.all);
             Patch(Method24, "AssemblyManager_CreateInstance_DiceCardSelfAbility", false);
-            MethodInfo Method25 = typeof(AssemblyManager).GetMethod("CreateInstance_BehaviourAction", AccessTools.all);
-            Patch(Method25, "AssemblyManager_CreateInstance_BehaviourAction", false);
+/*            MethodInfo Method25 = typeof(AssemblyManager).GetMethod("CreateInstance_BehaviourAction", AccessTools.all);
+            Patch(Method25, "AssemblyManager_CreateInstance_BehaviourAction", false);*/
             MethodInfo Method26 = typeof(AssemblyManager).GetMethod("CreateInstance_PassiveAbility", AccessTools.all);
             Patch(Method26, "AssemblyManager_CreateInstance_PassiveAbility", false);
             MethodInfo Method27 = typeof(DropBookInventoryModel).GetMethod("GetBookList_invitationBookList", AccessTools.all);
@@ -219,9 +220,19 @@ namespace Contingecy_Contract
             Singleton<ContractRewardSystem>.Instance.CheckReward(info);
             if (LibraryModel.Instance.PlayHistory.Clear_EndcontentsAllStage == 1 && stageId == 70010)
                 LibraryModel.Instance.PlayHistory.Start_TheBlueReverberationPrimaryBattle = 0;
+            if(stageId.id >= 70001 && stageId.id <= 70010)
+            {
+                LatestDataModel data1 = new LatestDataModel();
+                Singleton<SaveManager>.Instance.LoadLatestData(data1);
+                data1.LatestStorychapter = 7;
+                data1.LatestStorygroup = 4;
+                data1.LatestStoryepisode = 1;
+                Singleton<SaveManager>.Instance.SaveLatestData(data1);
+            }
         }
         public static void PlayHistoryModel_LoadFromSaveData(SaveData data)
         {
+            ModifyLocalize();
             List<int> bmSave = Tools.Load<List<int>>("ContingecyContract_Save");
             if (bmSave != null && bmSave.Count>0)
             {
@@ -422,11 +433,6 @@ namespace Contingecy_Contract
         {
             if (__result is DiceCardSelfAbility_Jaeheon_AreaDt)
                 __result = new Fix.DiceCardSelfAbility_Jaeheon_AreaDt_New();
-        }
-        public static void AssemblyManager_CreateInstance_BehaviourAction(ref BehaviourActionBase __result)
-        {
-            if (__result is BehaviourAction_TanyaSpecialAtk)
-                __result = new Fix.BehaviourAction_TanyaSpecialAtk_New();
         }
         public static void AssemblyManager_CreateInstance_PassiveAbility(ref PassiveAbilityBase __result)
         {
@@ -633,7 +639,7 @@ namespace Contingecy_Contract
             if (num <= 0)
                 return;
             for (int index = 0; index < num; ++index)
-                __instance.Owner.allyCardDetail.AddNewCard(503002).SetPriorityAdder(0);
+                __instance.Owner.allyCardDetail.AddNewCard(503002).SetCostToZero();
         }
         public static void ModifyEnsemble()
         {
@@ -647,6 +653,12 @@ namespace Contingecy_Contract
                     Singleton<StageClassInfoList>.Instance.recipeCondList.Add(info);
                 }
             }
+        }
+        public static void ModifyLocalize()
+        {
+            Dictionary<LorId, PassiveDesc> _dictionary = typeof(PassiveDescXmlList).GetField("_dictionary", AccessTools.all).GetValue(Singleton<PassiveDescXmlList>.Instance) as Dictionary<LorId, PassiveDesc>;
+            if(_dictionary.ContainsKey(Tools.MakeLorId(1)))
+                _dictionary[new LorId(1302017)].desc = _dictionary[Tools.MakeLorId(1)].desc;
         }
         public static bool CheckDuel(LorId stageId)
         {
