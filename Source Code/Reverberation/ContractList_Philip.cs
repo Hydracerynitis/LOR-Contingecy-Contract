@@ -18,7 +18,6 @@ namespace Contingecy_Contract
             this.Level = level;
         }
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1301011;
-        public override ContractType Type => ContractType.Special;
         public override string[] GetFormatParam(string language) => new string[] {TextDataModel.GetText(Param1),(1 + 2 * Level).ToString() };
         private string Param1
         {
@@ -107,9 +106,7 @@ namespace Contingecy_Contract
             this.Level = level;
         }
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1301021;
-        public override ContractType Type => ContractType.Special;
-        public override string[] GetFormatParam(string language) => new string[] { AttackPatternText,(20 * Level).ToString() };
-        private string AttackPatternText => TextDataModel.GetText("Philip_Silence_param"+Level.ToString());
+        public override string[] GetFormatParam(string language) => new string[] { StaticDataManager.GetParam("Philip_Silence_param" + Level.ToString(), language), (20 * Level).ToString() };
         public override int SpeedDiceNumAdder()
         {
             return 1;
@@ -141,7 +138,6 @@ namespace Contingecy_Contract
         private int phase;
         private int pattern;
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1301011;
-        public override ContractType Type => ContractType.Special;
         public ContingecyContract_Philip(int level)
         {
             this.Level = level;

@@ -110,6 +110,8 @@ namespace Contingecy_Contract
             Patch(Method37, "EmotionCardXmlList_GetDataList", false);
             MethodInfo Method38 = typeof(PassiveAbility_240008).GetMethod("OnRoundStart", AccessTools.all);
             Patch(Method38, "PassiveAbility_240008_OnRoundStart", false);
+            MethodInfo Method39 = typeof(EnemyTeamStageManager_BlackSilence).GetMethod("OnWaveStart", AccessTools.all);
+            Patch(Method39, "EnemyTeamStageManager_BlackSilence_OnWaveStart", true);
         }
         public static void Patch(MethodInfo method, string patchName, bool prefix)
         {
@@ -157,7 +159,7 @@ namespace Contingecy_Contract
                     return;
                 if (Singleton<StageController>.Instance.battleState == StageController.BattleState.None)
                     Singleton<ContractLoader>.Instance.Init();
-                __result = TextDataModel.GetText("ui_ContingecyLevel", (object)Singleton<ContractLoader>.Instance.GetLevel(stageInfo), (object)__result);
+                __result = TextDataModel.GetText("ui_ContingecyLevel", (object)Singleton<ContractLoader>.Instance.GetLevel(stageInfo.id), (object)__result);
             }
         }
         public static bool StageController_RoundStartPhase_System()
@@ -433,6 +435,12 @@ namespace Contingecy_Contract
         {
             if (__result is DiceCardSelfAbility_Jaeheon_AreaDt)
                 __result = new Fix.DiceCardSelfAbility_Jaeheon_AreaDt_New();
+            else if (ContractLoader.Instance.GetPassiveList().Exists(x => x.Type == "Roland3rd_Unity") && __result is DiceCardSelfAbility_atkcombo_allas)
+                __result = new Fix.DiceCardSelfAbility_atkcombo_allas_New();
+            else if (ContractLoader.Instance.GetPassiveList().Exists(x => x.Type == "Roland3rd_Unity") && __result is DiceCardSelfAbility_atkcombo_logic)
+                __result = new Fix.DiceCardSelfAbility_atkcombo_logic_New();
+            else if (ContractLoader.Instance.GetPassiveList().Exists(x => x.Type == "Roland3rd_Unity") && __result is DiceCardSelfAbility_atkcombo_zelkova)
+                __result = new Fix.DiceCardSelfAbility_atkcombo_zelkova_New();
         }
         public static void AssemblyManager_CreateInstance_PassiveAbility(ref PassiveAbilityBase __result)
         {
@@ -442,6 +450,10 @@ namespace Contingecy_Contract
                 __result = new Fix.PassiveAbility_1303012_New();
             else if (__result is PassiveAbility_1303013)
                 __result = new Fix.PassiveAbility_1303013_New();
+            else if (ContractLoader.Instance.GetPassiveList().Exists(x => x.Type=="Roland1st") && __result is PassiveAbility_170003)
+                __result = new Fix.PassiveAbility_170003_New();
+            else if (ContractLoader.Instance.GetPassiveList().Exists(x => x.Type == "Roland4th_BlackSilence") && __result is PassiveAbility_170301)
+                __result = new Fix.PassiveAbility_170301_New();
         }
         public static void DropBookInventoryModel_GetBookList_invitationBookList(ref List<LorId> __result)
         {
@@ -628,9 +640,9 @@ namespace Contingecy_Contract
                 __instance.Owner.bufListDetail.AddBuf(new ContingecyContract_Oswald_Troll.TrollIndicator());
             }
         }
-        public static void EmotionCardXmlList_GetDataList(List<EmotionCardXmlInfo> __result, int floorLevel)
+        public static void EmotionCardXmlList_GetDataList(List<EmotionCardXmlInfo> __result, int emotionLevel)
         {
-            if (Singleton<ContractLoader>.Instance.GetPassiveList().Find(x => x.Type == "NoEmotion") is Contract NoEmotion && floorLevel >= 4 - NoEmotion.Variant)
+            if (Singleton<ContractLoader>.Instance.GetPassiveList().Find(x => x.Type == "NoEmotion") is Contract NoEmotion && emotionLevel >= 4 - NoEmotion.Variant)
                 __result.Clear();
         }
         public static void PassiveAbility_240008_OnRoundStart(PassiveAbility_240008 __instance)
@@ -640,6 +652,13 @@ namespace Contingecy_Contract
                 return;
             for (int index = 0; index < num; ++index)
                 __instance.Owner.allyCardDetail.AddNewCard(503002).SetCostToZero();
+        }
+        public static void EnemyTeamStageManager_BlackSilence_OnWaveStart(EnemyTeamStageManager_BlackSilence __instance)
+        {
+            if(ContractLoader.Instance.GetStageList().Exists(x => x.Type == "Roland"))
+            {
+                typeof(EnemyTeamStageManager_BlackSilence).GetMethod("set_curPhase", AccessTools.all).Invoke(__instance, new object[] { EnemyTeamStageManager_BlackSilence.Phase.FOURTH });
+            }
         }
         public static void ModifyEnsemble()
         {

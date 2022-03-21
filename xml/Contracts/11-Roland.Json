@@ -1,0 +1,261 @@
+{
+    "CCs":[
+        {
+            "Type":"Roland1st_Furioso",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"Furioso",
+                    "desc":"速战速决3改为速战速决Furioso,其效果为\"{0}\"。\n罗兰在第一阶段攻击方式进攻方式{1}激进且第6颗速度骰子所用书页中的所有骰子威力+2,每四幕会额外使用1张Furioso"
+                },
+                {
+                    "language":"en",
+                    "name":"Furioso",
+                    "desc":"Speed Ⅲ is upgraded to Speed Furioso with effect of \"{0}\".\nIn the first phase Roland's Attack Pattern become {1} aggressive,\n and all dice on the page selected in the sixth Speed dice slot gain +2 Power.\nUse an additional Furiose every 4 Scene."
+                }
+            ],
+            "Faction":0,
+            "Variation":3,
+            "BaseLevel":1,
+            "Conflict":["Roland1st_Durandal","Roland"],
+            "Stageid":60003
+        },
+        {
+            "Type":"Roland1st_Durandal",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"查理曼圣剑",
+                    "desc":"罗兰在第一阶段{0}.后发制敌将额外触发一次"
+                },
+                {
+                    "language":"en",
+                    "name":"The Sacred Sword of Charlemagne",
+                    "desc":"Roland in the first phase will {0}.\nRetaliate trigger twice."
+                }
+            ],
+            "Faction":0,
+            "Variation":3,
+            "BaseLevel":1,
+            "Conflict":["Roland1st_Furioso","Roland"],
+            "Stageid":60003
+        },
+        {
+            "Type":"Roland1st",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"一码归一码",
+                    "desc":"复仇恨意改为\"拼点胜利恢复10点混乱抗性\"。\n罗兰在第一阶段最大生命值提升至700"
+                },
+                {
+                    "language":"en",
+                    "name":"That’s that, and this is this",
+                    "desc":"Clenched Grudge has ability \"Recover 10 Stagger Resist on hit\" instead.\nRoland's MaxHp change to 700 in the first phase."
+                }
+            ],
+            "Faction":0,
+            "BaseLevel":4,
+            "Conflict":["Roland"],
+            "Stageid":60003
+        },
+        {
+            "Type":"Roland2nd_Smoke",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"浓烟弥漫",
+                    "desc":"\"浓烟\"效果改为\"击中处于“浓烟”状态下的目标时伤害+{0}\n被拥有“浓烟”的目标击中或施加负面状态时所受伤害-{1}\"\n烟气衍生物额外多个1个速度骰,最大生命值和最大混乱抗性提升{2}%.\n所有骰子无法被摧毁"
+                },
+                {
+                    "language":"en",
+                    "name":"Haze Mist",
+                    "desc":"Wielder of Suffocating Haze has ability \"When attacking, if target has Suffocating Haze, deal +{0} damage.\nWhen hit, if attacker has Suffocating Haze, take {1} less damage.\" instead.\nSmoldering Byproduct gain 1 Speed Dice, Maximun Hp and Stagger Resist increased by {2}%.\nAll Dice can't be destroyed."
+                }
+            ],
+            "Faction":0,
+            "Variation":3,
+            "BaseLevel":1,
+            "Conflict":["Roland2nd_Secret","Roland"],
+            "Stageid":60003
+        },
+        {
+            "Type":"Roland2nd_Secret",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"Qui Garde Un Secret",
+                    "desc":"司书击杀烟气衍生物会立刻损失{0}%最大混乱抗性。\n罗兰在第二阶段混乱抗性提升至500并额外获得2个速度骰。\n烟气衍生物书页数值提升"
+                },
+                {
+                    "language":"en",
+                    "name":"Qui Garde Un Secret",
+                    "desc":"Librarian lose {0}% Max Stagger Resist upon killing a Smoldering Byproduct.\nRoland's Max Stagger Resist change to 500 in the Phase 2 and gain 2 Speed Dice.\nEnhance Smoldering Byproduct's Combat Pages."
+                }
+            ],
+            "Faction":0,
+            "Variation":3,
+            "BaseLevel":1,
+            "Conflict":["Roland2nd_Smoke","Roland"],
+            "Stageid":60003
+        },
+        {
+            "Type":"Roland2nd",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"烟霾之战",
+                    "desc":"在第二阶段所有司书每幕开始时获得3层浓烟\n在第二阶段下罗兰和烟气衍生物脆弱伤害抗性改为耐性，致命伤害抗性改为抵抗,战斗书页数值提升1点"
+                },
+                {
+                    "language":"en",
+                    "name":"The Smoke War",
+                    "desc":"In second phase, all Librarians gain 3 Suffocating Haze at the start of each Scene.\nthe 'Weak/Fatal' resistances of Roland and Smoldering Byproduct change to 'Endured/Ineffective'.\nUplift dice values of Combat Pages by 1."
+                }
+            ],
+            "Faction":0,
+            "BaseLevel":4,
+            "Conflict":["Roland"],
+            "Stageid":60003
+        },
+        {
+            "Type":"Roland3rd_Unity",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"协同进军",
+                    "desc":"在第三阶段下如果罗兰和安吉丽卡使用关联书页攻击同一单位, 罗兰会获得所有安吉丽卡的骰子，安洁莉卡也获得罗兰的反击骰子.\n罗兰和安洁莉卡将会额外使用{0}张书页"
+                },
+                {
+                    "language":"en",
+                    "name":"Wife in Arm",
+                    "desc":"In thrid phase, when Roland and Angelica using Combo pages attacking same character,\n Roland will gain all dices from Angelica's Pages while Angelica gain counter dices from Rolands' pages.\nRoland and Angelica will use {0} more pages."
+                }
+            ],
+            "Faction":0,
+            "Variation":3,
+            "BaseLevel":1,
+            "Conflict":["Roland3rd_Waltz","Roland"],
+            "Stageid":60003
+        },
+        {
+            "Type":"Roland3rd_Waltz",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"黑白圆舞曲",
+                    "desc":"罗兰和安吉丽卡投掷骰子时会对目标施加1层漆黑或者雪白侵蚀\n两个侵蚀都会这一幕结束时造成等同于层数的伤害和混乱伤害并且层数-1,\n若一个单位同时拥有两种侵蚀且层数差距不超过{0}时不承受来自两个侵蚀的伤害"
+                },
+                {
+                    "language":"en",
+                    "name":"Waltz in Black and White",
+                    "desc":"Roland and Angelica will inflict 1 Dark or White Corrasion to enemy on rolling a die.\nBoth Corrasion deal 1 Damage and Stagger Damage per stack at the End of the Scene and Subtract 1 stack,\nIf a character has both Corrasion and the difference between their stacks is less than {0},\nhe will take no Damage and Stagger Damage from them"
+                }
+            ],
+            "Faction":0,
+            "Variation":3,
+            "BaseLevel":1,
+            "Conflict":["Roland3rd_Unity","Roland"],
+            "Stageid":60003
+        },
+        {
+            "Type":"Roland3rd",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"瞬息而散",
+                    "desc":"获得任意气息的司书将在下2幕内无法再次获得任何气息.\n安洁莉卡将会每一幕开始时对随机未获得气息的司书施加标记"
+                },
+                {
+                    "language":"en",
+                    "name":"Blink of Scent",
+                    "desc":"Librarian can only gain either Energy once for 3 Scene.\nAngelica will leave 'Dark Mark' to the libriarian still able to gain Energy at the start of each Scene."
+                }
+            ],
+            "Faction":0,
+            "BaseLevel":4,
+            "Conflict":["Roland"],
+            "Stageid":60003
+        },
+        {
+            "Type":"Roland4th_BlackSilence",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"追忆: 漆黑静默",
+                    "desc":"在第四阶段罗兰最大生命值{0},混乱抗性{1}，会提前一幕使用范围杀伤书页Furioso"
+                },
+                {
+                    "language":"en",
+                    "name":"Memory: The Black Silence",
+                    "desc":"In fourth phase, Roland's Max Hp increased by {0}, Max Stagger Resist increased by {1}, will use Mass Attack Page Furioso one Scene in advance."
+                }
+            ],
+            "Faction":0,
+            "Variation":3,
+            "BaseLevel":1,
+            "Conflict":["Roland4th_Servant"],
+            "Stageid":60003
+        },
+        {
+            "Type":"Roland4th_Servant",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"追忆: 九阶收尾人",
+                    "desc":"在第五阶段所有昔日残影最大血量和混乱抗性提升100%，并且获得能力{0}"
+                },
+                {
+                    "language":"en",
+                    "name":"Memory: Grade 9 Fixer",
+                    "desc":"In the fifth phase, increase Max Hp and Max Stagger Resist all Image of the Bygones by 100%,\n and gain Ability {0}"
+                }
+            ],
+            "Faction":0,
+            "Variation":3,
+            "BaseLevel":1,
+            "Conflict":["Roland4th_BlackSilence"],
+            "Stageid":60003
+        },
+        {
+            "Type":"Roland4th",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"追忆: 失落天使",
+                    "desc":"从第四阶段起罗兰获得被动\"匹夫之勇\",\"您的盾牌\",\"黎明之火\",\"适应\",\"星星之火\",\n\"现死之眼\",\"十二收尾人\",\"概率变动\",\"苍蓝残响\"的效果"
+                },
+                {
+                    "language":"en",
+                    "name":"Memory: Gone Angels",
+                    "desc":"Since the fourth phase, Roland gain Passive Ability \"Half-baked Courage\", \"Your Shield\",\n\"Light of Daybreak\",\"Adaptation\", \"Force of a Wildfire\", \"Eye of Death\",\n\"The Twelve Fixers\", \"Manipulator of Odds\" and \"The Blue Reverberation\""
+                }
+            ],
+            "Faction":0,
+            "BaseLevel":4,
+            "Stageid":60003
+        },
+        {
+            "Type":"Roland",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"图穷匕现",
+                    "desc":"漆黑静默接待将从第四阶段开始"
+                },
+                {
+                    "language":"en",
+                    "name":"End of the Line",
+                    "desc":"The Black Slence Recpetion will start at the fourth Phase"
+                }
+            ],
+            "Faction":0,
+            "BaseLevel":6,
+            "contractType":1,
+            "Conflict":["Roland1st_Furioso","Roland1st_Durandal","Roland1st",
+                        "Roland2nd_Smoke","Roland2nd_Secret","Roland2nd",
+                        "Roland3rd_Unity","Roland3rd_Waltz","Roland3rd"],
+            "Stageid":60003
+        }
+    ]
+}

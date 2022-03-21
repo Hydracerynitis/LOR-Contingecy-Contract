@@ -86,6 +86,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Source Code\ContingecyContractGUI.cs" />
+    <Compile Include="Source Code\Fix\DiceCardSelfAbility_atkcombo_zelkova_New.cs" />
+    <Compile Include="Source Code\Fix\DiceCardSelfAbility_atkcombo_allas_New.cs" />
+    <Compile Include="Source Code\Fix\DiceCardSelfAbility_atkcombo_logic_New.cs" />
+    <Compile Include="Source Code\Fix\PassiveAbility_1302013_New.cs" />
+    <Compile Include="Source Code\Fix\PassiveAbility_170301_New.cs" />
+    <Compile Include="Source Code\Impurity\ContractList_Roland.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Oswald\DiceCardSelfAbility_Oswald_allpl.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Oswald\DiceCardSelfAbility_Oswald_daze.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Oswald\DiceCardSelfAbility_Oswald_area.cs" />
@@ -96,12 +102,13 @@
     <Compile Include="Source Code\ContractReward\Reverberation\Oswald\PassiveAbility_1850003.cs" />
     <Compile Include="Source Code\ExtraCondition.cs" />
     <Compile Include="Source Code\Param.cs" />
+    <Compile Include="Source Code\Plague\ContractList_LoveTown.cs" />
     <Compile Include="Source Code\Reverberation\ContractList_Bremen.cs" />
     <Compile Include="Source Code\Reverberation\ContractList_Greta.cs" />
     <Compile Include="Source Code\Reverberation\ContractList_Oswald.cs" />
     <Compile Include="Source Code\Reverberation\ContractList_Tanya.cs" />
     <Compile Include="Source Code\Reverberation\ContractList_Eileen.cs" />
-    <Compile Include="Source Code\ContractList_Stage.cs" />
+    <Compile Include="Source Code\General\ContractList_Stage.cs" />
     <Compile Include="Source Code\ContractModification.cs" />
     <Compile Include="Source Code\Reverberation\ContractList_Elena.cs" />
     <Compile Include="Source Code\Reverberation\ContractList_Pluto.cs" />
@@ -135,10 +142,10 @@
     <Compile Include="Source Code\ContractReward\Reverberation\Oswald\DiceCardSelfAbility_Oswald_energy3.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Pluto\PassiveAbility_1890004.cs" />
     <Compile Include="Source Code\DeepCopyUtil.cs" />
-    <Compile Include="Source Code\Fix\BehaviourAction_TanyaSpecialAtk.cs" />
-    <Compile Include="Source Code\Fix\PassiveAbility_1303013.cs" />
-    <Compile Include="Source Code\Fix\PassiveAbility_1303012.cs" />
-    <Compile Include="Source Code\Fix\PassiveAbility_1302013.cs" />
+    <Compile Include="Source Code\Fix\BehaviourAction_TanyaSpecialAtk_New.cs" />
+    <Compile Include="Source Code\Fix\PassiveAbility_1303013_New.cs" />
+    <Compile Include="Source Code\Fix\PassiveAbility_1303012_New.cs" />
+    <Compile Include="Source Code\Fix\PassiveAbility_170003_New.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Greta\BattleUnitBuf_FreshMeat.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Greta\DiceCardAbility_GretaTrample.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Greta\DiceCardSelfAbility_GretaMeatMeal.cs" />
@@ -164,7 +171,7 @@
     <Compile Include="Source Code\ContractReward\Reverberation\Philiph\DiceCardSelfAbility_BurnPowerUp.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Argalia\DiceCardSelfAbility_Insane1.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Argalia\DiceCardSelfAbility_Insane2.cs" />
-    <Compile Include="Source Code\Fix\DiceCardSelfAbility_Jaeheon_AreaDt.cs" />
+    <Compile Include="Source Code\Fix\DiceCardSelfAbility_Jaeheon_AreaDt_New.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Philiph\DiceCardSelfAbility_LoseBurn.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Argalia\DiceCardSelfAbility_PerfectResonance.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Argalia\DiceCardSelfAbility_PerfectResonanceActivate.cs" />
@@ -204,11 +211,11 @@
     <Compile Include="Source Code\ContractReward\Reverberation\Tanya\PassiveAbility_1860002.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Tanya\PassiveAbility_1860001.cs" />
     <Compile Include="Source Code\Debug.cs" />
-    <Compile Include="Source Code\ContractList_Shi.cs" />
-    <Compile Include="Source Code\ContractList_Player.cs" />
+    <Compile Include="Source Code\Nightmare\ContractList_Shi.cs" />
+    <Compile Include="Source Code\General\ContractList_Player.cs" />
     <Compile Include="Source Code\ContractRewardSystem.cs" />
     <Compile Include="Source Code\ContractAttribution.cs" />
-    <Compile Include="Source Code\ContractList_Enemy.cs" />
+    <Compile Include="Source Code\General\ContractList_Enemy.cs" />
     <Compile Include="Source Code\ContractLoader.cs" />
     <Compile Include="Source Code\Contrasts.cs" />
     <Compile Include="Source Code\Harmony_Patch.cs" />

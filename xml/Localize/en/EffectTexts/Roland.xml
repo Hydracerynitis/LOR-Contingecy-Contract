@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleEffectTextRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<effectTextList>
+		<BattleEffectText ID="BlackDecay">
+			<Name>Dark Coorasion</Name>
+			<Desc></Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="WhiteDecay">
+			<Name>White Corrasion</Name>
+			<Desc></Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="ForbidEnergy">
+			<Name>Blink of Scent</Name>
+			<Desc>Can't get either Energy for {0} Scene.</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="Servent_Hammer">
+			<Name>Hammer and Nail</Name>
+			<Desc>Upon a successful Pierce attack, inflict 2 'Nail' to the target.
+Blunt attack will remove all stacks 'Nail' on the target, deal 5 damage for each stack removed this way.</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="Servent_Guilt">
+			<Name>Guilt</Name>
+			<Desc>Add a copy of "Guilt" to all enemies' hand.
+Reduce incoming damage from enemy with "Guilt" on hand by the cost of "Guilt".</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="Servent_Blizzard">
+			<Name>Blizzard</Name>
+			<Desc>inflict Stun on a random Actionable enemy.</Desc>
+		</BattleEffectText>
+	</effectTextList>
+</BattleEffectTextRoot>

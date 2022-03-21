@@ -1,0 +1,22 @@
+{
+    "CCs":[
+        {
+            "Type":"LoveTown",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"不想再疼",
+                    "desc":"所有敌人获得“适应”(被击中时使这一幕内来自同一类型的所受伤害减少2点(最多4))\n汤玛丽的“适应”最大减伤量提升至10并且在每一幕结束时使承受次数最多的伤害类型抗性改为抵抗"
+                },
+                {
+                    "language":"en",
+                    "name":"Don‘t need pain",
+                    "desc":"All enemies gain ability \"Adaptation\"\n(Upon hit for the rest of the Scene, reduce incoming damage of same type by 2 (Max 4))\nTomerry's \"Adaptation\" have Max. Reduction increase to 10\nand change the damage type endured most to Resist at the end of each Scene"
+                }
+            ],
+            "Faction":0,
+            "BaseLevel":4,
+            "Stageid":30005
+        }
+    ]
+}

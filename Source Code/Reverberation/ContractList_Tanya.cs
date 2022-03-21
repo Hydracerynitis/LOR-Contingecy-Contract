@@ -15,17 +15,16 @@ namespace Contingecy_Contract
         {
             Level = level;
         }
-        public override ContractType Type => ContractType.Special;
         public override string[] GetFormatParam(string language) => new string[] { GetParam(language)};
         private string GetParam(string language)
         {
             string s = "";
             if (Level >= 1)
-                s += StaticDataManager.ContractParam[("Tanya_Solo_param1", language)];
+                s += StaticDataManager.GetParam("Tanya_Solo_param1", language);
             if (Level >= 2)
-                s += StaticDataManager.ContractParam[("Tanya_Solo_param2", language)];
+                s += StaticDataManager.GetParam("Tanya_Solo_param2", language);
             if (Level >= 3)
-                s += StaticDataManager.ContractParam[("Tanya_Solo_param3", language)];
+                s += StaticDataManager.GetParam("Tanya_Solo_param3", language);
             return s;
         }
         public override void OnDrawCard()
@@ -83,18 +82,17 @@ namespace Contingecy_Contract
         private PassiveAbility_1306011 TanyaPassive;
         private Queue<int> Priority;
         private int Ultimate_interval => Level >= 3 ? 3 : 4;
-        public override ContractType Type => ContractType.Special;
         private int TanyaPhase => (int)typeof(PassiveAbility_1306011).GetField("_phase", AccessTools.all).GetValue(TanyaPassive);
         public override string[] GetFormatParam(string language) => new string[] { GetParam(language), (10 + 10 * Level).ToString() };
         private string GetParam(string language)
         {
             string s = "";
             if (Level >= 1)
-                s = StaticDataManager.ContractParam[("Philip_Silence_param1", language)];
+                s = StaticDataManager.GetParam("Philip_Silence_param1", language);
             if (Level >= 2)
-                s = StaticDataManager.ContractParam[("Philip_Silence_param2", language)];
+                s = StaticDataManager.GetParam("Philip_Silence_param2", language);
             if (Level >= 3)
-                s = StaticDataManager.ContractParam[("Philip_Silence_param3", language)];
+                s = StaticDataManager.GetParam("Philip_Silence_param3", language);
             return s;
         }
         
@@ -253,7 +251,6 @@ namespace Contingecy_Contract
         private int activate = 0;
         private bool _nextPhase;
         private int TanyaPhase => (int)typeof(PassiveAbility_1306011).GetField("_phase", AccessTools.all).GetValue(TanyaPassive);
-        public override ContractType Type => ContractType.Special;
         public ContingecyContract_Tanya(int level)
         {
             Level = level;

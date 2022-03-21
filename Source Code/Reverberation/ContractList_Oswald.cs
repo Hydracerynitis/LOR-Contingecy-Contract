@@ -16,7 +16,7 @@ namespace Contingecy_Contract
         {
             this.Level = level;
         }
-        public override string[] GetFormatParam(string language) => new string[] {  StaticDataManager.ContractParam[("Oswald_Debut_param" + Level.ToString(),language)] };
+        public override string[] GetFormatParam(string language) => new string[] {  StaticDataManager.GetParam("Oswald_Debut_param" + Level.ToString(),language) };
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId==1305021 || EnemyId==1305031;
         private bool IsMermaid => owner.UnitData.unitData.EnemyUnitId == 1305031;
         public override int SpeedDiceNumAdder()
@@ -101,11 +101,11 @@ namespace Contingecy_Contract
         {
             string s = "";
             if (Level >= 1)
-                s += StaticDataManager.ContractParam[("Oswald_Troll_param1", langugae)];
+                s += StaticDataManager.GetParam("Oswald_Troll_param1", langugae);
             if (Level >= 2)
-                s += StaticDataManager.ContractParam[("Oswald_Troll_param2", langugae)];
+                s += StaticDataManager.GetParam("Oswald_Troll_param2", langugae);
             if (Level >= 3)
-                s += StaticDataManager.ContractParam[("Oswald_Troll_param3", langugae)];
+                s += StaticDataManager.GetParam("Oswald_Troll_param3", langugae);
             return s;
         }
         public override void OnRoundEnd()

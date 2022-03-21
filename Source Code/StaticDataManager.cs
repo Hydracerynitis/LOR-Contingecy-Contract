@@ -173,5 +173,13 @@ namespace Contingecy_Contract
                 }
             }
         }
+        public static string GetParam(string ID, string Language)
+        {
+            if (Language == "en" || Language == "kr" || Language == "jp")
+                return ContractParam[(ID, "en")];
+            else if (Language == "cn" || Language == "trcn")
+                return ContractParam[(ID, "cn")];
+            return "";
+        }
     }
 }

@@ -15,7 +15,6 @@ namespace Contingecy_Contract
         }
         private Dictionary<BattleUnitModel, int> Salted;
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1303011;
-        public override ContractType Type => ContractType.Special;
         public override string[] GetFormatParam(string language) => new string[] {Level.ToString(),Level.ToString() };
         public override void OnWinParrying(BattleDiceBehavior behavior)
         {
@@ -62,7 +61,6 @@ namespace Contingecy_Contract
             this.Level = Level;
         }
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1303011;
-        public override ContractType Type => ContractType.Special;
         public override string[] GetFormatParam(string language) => new string[] { (Level-1).ToString(),(50*(int)(Math.Pow(2,Level-1))).ToString()};
         public int GetSackNumAdder() => BattleObjectManager.instance.GetAliveList(owner.faction).Count == 1 ? Level - 1 : 0;
     }
@@ -73,7 +71,6 @@ namespace Contingecy_Contract
             this.Level = Level;
         }
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1303011;
-        public override ContractType Type => ContractType.Special;
         public override void OnWaveStart()
         {
             base.OnWaveStart();

@@ -5,4 +5,8 @@
         <Desc>体力无法低于70%/30%
 若体力减至70%/30%则进入下一阶段</Desc>
     </PassiveDesc>
+    <PassiveDesc ID="2">
+        <Name>复仇决意</Name>
+        <Desc>拼点胜利恢复10点混乱抗性</Desc>
+    </PassiveDesc>
 </PassiveDescRoot>

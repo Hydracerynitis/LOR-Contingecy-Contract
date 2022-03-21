@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleCardAbilityDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!--追忆：九阶收尾人-->
+	  <BattleCardAbility ID="BlackSilence_Guilt">
+    		<Desc>每与带有'罪恶感'的单位取得1次拼点胜利便使得本书页费用-1</Desc>
+  	</BattleCardAbility>
+</BattleCardAbilityDescRoot>

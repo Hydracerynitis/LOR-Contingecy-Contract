@@ -11,7 +11,7 @@ namespace ContractReward
     public class BattleUnitBuf_Barrier: BattleUnitBuf
     {
         private GameObject _auraEffect;
-        protected override string keywordId => "Barrier";
+        protected override string keywordId => "CC_Barrier";
         protected override string keywordIconId => "Pluto_Barrier";
         public override bool IsActionable() => false;
         public override bool IsTargetable() => false;

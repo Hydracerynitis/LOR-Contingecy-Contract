@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleEffectTextRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<effectTextList>
+		<BattleEffectText ID="BlackDecay">
+			<Name>漆黑侵蚀</Name>
+			<Desc></Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="WhiteDecay">
+			<Name>雪白侵蚀</Name>
+			<Desc></Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="ForbidEnergy">
+			<Name>瞬息而散</Name>
+			<Desc>无法再次获得气息，持续{0}幕</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="Servent_Hammer">
+			<Name>钉与锤</Name>
+			<Desc>穿刺骰子命中时施加2层“钉”
+打击骰子命中时清空目标“钉”层数,每清除1层便对目标造成5点伤害</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="Servent_Guilt">
+			<Name>罪恶感</Name>
+			<Desc>将一张“罪恶感”置入所有敌人手上
+被带有“罪恶感”的敌人攻击时减少“罪恶感”费用的伤害</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="Servent_Blizzard">
+			<Name>雪暴</Name>
+			<Desc>对随机一位可行动的敌人施加眩晕</Desc>
+		</BattleEffectText>
+	</effectTextList>
+</BattleEffectTextRoot>

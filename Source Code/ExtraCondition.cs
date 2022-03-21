@@ -14,7 +14,7 @@ namespace Contingecy_Contract
     {
         public string Pid = "";
         public int Stageid;
-        public List<ContractCondition> Condition = new List<ContractCondition>();
+        public List<List<ContractCondition>> Condition = new List<List<ContractCondition>>();
         public int RewardId;
         public LorId Id => new LorId(Pid, Stageid);
     }

@@ -5,6 +5,11 @@
 	<text id="ui_popup_getequippage">获得{1}张核心书页-“{0}”</text>
 	<text id="ui_MoreEquipPage">以及更多核心书页</text>
 	<text id="Tanya_Brawl_none">无</text>
+	<text id="Speed_Furioso">速战速决 Furioso</text>
+	<text id="Enhance_HeavySmoke_Passive">击中处于“浓烟”状态下的目标时伤害+{0}
+被拥有“浓烟”的目标击中或施加负面状态时所受伤害-{1}</text>
 	<text id="Zombie_name">无名躯壳</text>
+	<text id="WaltzDecay_text">这一幕结束时造成{0}伤害和混乱伤害并且层数-1
+若一个单位同时拥有两种侵蚀且层数差距不超过{1}时不承受来自两个侵蚀的伤害</text>
 	<text id="marked_dice_desc">[昨日之约] </text>
 </localize>

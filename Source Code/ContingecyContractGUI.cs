@@ -96,7 +96,7 @@ namespace Contingecy_Contract
             CCTitleRect = windowRect;
             CCTitleRect.position = Vector2.zero;
             CCTableRect = new Rect(0.0f, 120f, 1100f, 60f);;
-            CCItemTableRect = new Rect(0.0f, 180f, 1100f, 360f);
+            CCItemTableRect = new Rect(25.0f, 190f, 1075f, 370f);
             CCDescRect = new Rect(0.0f, 550f, 1100f, 150f);
         }
         private void CCTitle(Rect HeaderTitleRect)

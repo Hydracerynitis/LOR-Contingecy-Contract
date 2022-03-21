@@ -126,5 +126,13 @@ namespace Contingecy_Contract
             }
             typeof(BattleDiceCardModel).GetField("_xmlData", AccessTools.all).SetValue(card, xml);
         }
+        public static void EnhanceCard(int index, BattleDiceCardModel card, int min = 0, int dice = 0)
+        {
+            DiceCardXmlInfo xml = card.XmlData.Copy(true);
+            DiceBehaviour Dice = xml.DiceBehaviourList[index];
+            Dice.Dice += dice;
+            Dice.Min += min;
+            typeof(BattleDiceCardModel).GetField("_xmlData", AccessTools.all).SetValue(card, xml);
+        }
     }
 }

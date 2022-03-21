@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<PassiveDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <PassiveDesc ID="1">
-        <Name>信徒的威望</Name>
-        <Desc>体力无法低于70%/30%
-若体力减至70%/30%则进入下一阶段</Desc>
-    </PassiveDesc>
-</PassiveDescRoot>

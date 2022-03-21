@@ -21,7 +21,7 @@
 			<Name>Temporary Puppet Strings</Name>
 			<Desc>Gain 1 Speed dice, Immortal for the duraction of this Scene.</Desc>
 		</BattleEffectText>
-		<BattleEffectText ID="Barrier">
+		<BattleEffectText ID="CC_Barrier">
 			<Name>Sealing Barrier</Name>
 			<Desc>Can not act, Untargetable.</Desc>
 		</BattleEffectText>

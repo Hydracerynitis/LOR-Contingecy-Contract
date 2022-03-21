@@ -21,7 +21,7 @@
 			<Name>临时操纵</Name>
 			<Desc>这一幕内无法死亡，速度骰+1</Desc>
 		</BattleEffectText>
-		<BattleEffectText ID="Barrier">
+		<BattleEffectText ID="CC_Barrier">
 			<Name>封锁结界</Name>
 			<Desc>无法行动无法被指定</Desc>
 		</BattleEffectText>

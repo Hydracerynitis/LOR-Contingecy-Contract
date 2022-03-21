@@ -4,4 +4,8 @@
         <Name>Faith of the Believers</Name>
         <Desc>When Eileen's HP reaches 70%, it will not drop below that threshold until the phase shifts; the same occurs at 30% After Eileen's HP reaches a threshold, the battle will progress to the next phase.</Desc>
     </PassiveDesc>
+    <PassiveDesc ID="2">
+        <Name>Clenched Grudge</Name>
+        <Desc>Recover 10 Stagger Resist on hit</Desc>
+    </PassiveDesc>
 </PassiveDescRoot>

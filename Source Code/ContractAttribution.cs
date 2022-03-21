@@ -15,8 +15,6 @@ namespace Contingecy_Contract
         {
             Inition.Add(Model);
             List<ContingecyContract> Contracts = new List<ContingecyContract>();
-            List<ContingecyContract> BuffContracts = new List<ContingecyContract>();
-            List<ContingecyContract> SpecialContracts = new List<ContingecyContract>();
             foreach (Contract contract in Singleton<ContractLoader>.Instance.GetPassiveList())
             {
                 if (contract.Faction != Model.faction)
@@ -48,22 +46,8 @@ namespace Contingecy_Contract
                     instance.Init(Model);
                     instance.name = Singleton<PassiveDescXmlList>.Instance.GetName(Tools.MakeLorId(20210302)) + contract.GetDesc().name;
                     instance.desc = contract.GetDesc().desc;
-                    instance.rare = Rarity.Unique;                 
-                    if (instance.Type == ContractType.Buff)
-                    {
-                        BuffContracts.Add(instance);
-                        Debug.Log("Instance of {0} is added to Buff List for {1}", type.Name, Model.UnitData.unitData.name);
-                    }
-                    else if(instance.Type == ContractType.Passive)
-                    {
-                        Contracts.Add(instance);
-                        Debug.Log("Instance of {0} is added to Passive List for {1}", type.Name, Model.UnitData.unitData.name);
-                    }
-                    else if (instance.Type == ContractType.Special)
-                    {
-                        SpecialContracts.Add(instance);
-                        Debug.Log("Instance of {0} is added to Special List for {1}", type.Name, Model.UnitData.unitData.name);
-                    }
+                    instance.rare = Rarity.Unique;
+                    Contracts.Add(instance);
                 }
             }
             foreach(Contract contract in Singleton<ContractLoader>.Instance.GetStageList())
@@ -92,30 +76,12 @@ namespace Contingecy_Contract
                     stage.name = Singleton<PassiveDescXmlList>.Instance.GetName(Tools.MakeLorId(20210302)) + contract.GetDesc().name;
                     stage.desc = contract.GetDesc().desc;
                     stage.rare = Rarity.Unique;
-                    if (stage.Type == ContractType.Buff)
-                    {
-                        BuffContracts.Add(stage);
-                        Debug.Log("Instance of {0} is added to Buff List for {1}", type.Name, Model.UnitData.unitData.name);
-                    }
-                    else if (stage.Type == ContractType.Passive)
-                    {
-                        Contracts.Add(stage);
-                        Debug.Log("Instance of {0} is added to Passive List for {1}", type.Name, Model.UnitData.unitData.name);
-                    }
-                    else if (stage.Type == ContractType.Special)
-                    {
-                        SpecialContracts.Add(stage);
-                        Debug.Log("Instance of {0} is added to Special List for {1}", type.Name, Model.UnitData.unitData.name);
-                    }
+                    Contracts.Add(stage);
                 }
             }
             List<PassiveAbilityBase> passiveList = Model.passiveDetail.PassiveList;
             passiveList.AddRange(Contracts);
-            passiveList.AddRange(BuffContracts);
-            passiveList.AddRange(SpecialContracts);
             typeof(BattleUnitPassiveDetail).GetField("_passiveList", AccessTools.all).SetValue((object)Model.passiveDetail, (object)passiveList);
-            Contracts.AddRange(SpecialContracts);
-            BuffContracts.AddRange(SpecialContracts);
             foreach (PassiveAbilityBase contract in Contracts)
             {
                 try
@@ -127,9 +93,9 @@ namespace Contingecy_Contract
 
                 }
             }
-            if (BuffContracts.Count > 0)
+            if (Contracts.Count > 0)
             {
-                Model.bufListDetail.AddBuf(new ContractStatBonus(BuffContracts));
+                Model.bufListDetail.AddBuf(new ContractStatBonus(Contracts));
                 if (Harmony_Patch.CombaltData.ContainsKey(Model.UnitData))
                 {
                     Model.SetHp(Harmony_Patch.CombaltData[Model.UnitData]);
@@ -203,7 +169,6 @@ namespace Contingecy_Contract
     public class ContingecyContract : PassiveAbilityBase
     {
         public int Level;
-        public virtual ContractType Type => ContractType.Passive;
         public virtual DiceStatBonus GetDicestatBonus(BattleDiceBehavior behavior) => new DiceStatBonus();
         public virtual bool CheckEnemyId(LorId EnemyId) => true;
         public virtual StatBonus GetStatBonus(BattleUnitModel owner) => new StatBonus();

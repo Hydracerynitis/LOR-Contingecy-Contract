@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleCardDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	 <cardDescList>
+		<!--追忆：九阶收尾人-->
+		<BattleCardDesc ID="1">
+			<LocalizedName>Guilt</LocalizedName>
+		</BattleCardDesc>
+ 	</cardDescList>
+</BattleCardDescRoot>

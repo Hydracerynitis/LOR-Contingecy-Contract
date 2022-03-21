@@ -17,7 +17,6 @@ namespace Contingecy_Contract
             Level = level;
         }
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1304011;
-        public override ContractType Type => ContractType.Special;
         public override string[] GetFormatParam(string language) => new string[] { Level.ToString(), GetParam(language) };
         private PassiveAbility_1304012 passive=null;
         public override void Init(BattleUnitModel self)
@@ -60,11 +59,11 @@ namespace Contingecy_Contract
         {
             string s = "";
             if (Level >= 1)
-                s += StaticDataManager.ContractParam[("Bremen_Self_param1", language)];
+                s += StaticDataManager.GetParam("Bremen_Self_param1", language);
             if (Level >= 2)
-                s += StaticDataManager.ContractParam[("Bremen_Self_param2", language)];
+                s += StaticDataManager.GetParam("Bremen_Self_param2", language);
             if (Level >= 3)
-                s += StaticDataManager.ContractParam[("Bremen_Self_param3", language)];
+                s += StaticDataManager.GetParam("Bremen_Self_param3", language);
             return s;
         }
 
@@ -93,11 +92,11 @@ namespace Contingecy_Contract
         {
             string s = "";
             if (Level >= 1)
-                s += StaticDataManager.ContractParam[("Bremen_Self_param1", language)]; 
+                s += StaticDataManager.GetParam("Bremen_Self_param1", language); 
             if (Level >= 2)
-                s += StaticDataManager.ContractParam[("Bremen_Self_param2", language)];
+                s += StaticDataManager.GetParam("Bremen_Self_param2", language);
             if (Level >= 3)
-                s += StaticDataManager.ContractParam[("Bremen_Self_param3", language)];
+                s += StaticDataManager.GetParam("Bremen_Self_param3", language);
             return s;
         }
         public override int SpeedDiceNumAdder()
@@ -148,7 +147,6 @@ namespace Contingecy_Contract
         {
             Level = level;
         }
-        public override ContractType Type => ContractType.Special;
         private bool isBremen => owner.UnitData.unitData.EnemyUnitId == 1304011;
         private List<BattleUnitModel> dead = new List<BattleUnitModel>();
         private int count;
@@ -157,11 +155,11 @@ namespace Contingecy_Contract
         {
             string s = "";
             if (Level >= 1)
-                s += StaticDataManager.ContractParam[("Bremen_Group_param1", language)];
+                s += StaticDataManager.GetParam("Bremen_Group_param1", language);
             if (Level >= 2)
-                s += StaticDataManager.ContractParam[("Bremen_Group_param2", language)];
+                s += StaticDataManager.GetParam("Bremen_Group_param2", language);
             if (Level >= 3)
-                s += StaticDataManager.ContractParam[("Bremen_Group_param3", language)];
+                s += StaticDataManager.GetParam("Bremen_Group_param3", language);
             return s;
         }
         public override void Init(BattleUnitModel self)
@@ -232,7 +230,6 @@ namespace Contingecy_Contract
             Level = level;
         }
         private double accumulateDamage;
-        public override ContractType Type => ContractType.Special;
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1304011;
         public override void Init(BattleUnitModel self)
         {

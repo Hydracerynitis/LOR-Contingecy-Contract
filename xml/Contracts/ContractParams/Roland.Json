@@ -1,0 +1,67 @@
+{
+    "Ps":[
+        {
+            "Id":"Roland1st_Furioso_param1",
+            "Desc":[
+                {"Language":"cn","Content":"速度骰子+2 情感等级达到3级后额外+1(唯一被动)"},
+                {"Language":"en","Content":"Speed Dice Slot +2. Gain an additional Speed die at Emotion Level 3."}
+            ]
+        },
+        {
+            "Id":"Roland1st_Furioso_param2",
+            "Desc":[
+                {"Language":"cn","Content":"速度骰子+3(唯一被动)"},
+                {"Language":"en","Content":"Speed Dice Slot +3."}
+            ]
+        },
+        {
+            "Id":"Roland1st_Furioso_param3",
+            "Desc":[
+                {"Language":"cn","Content":"速度骰子+4, 其数量不随情感等级提升而增加(唯一被动)"},
+                {"Language":"en","Content":"Speed Dice Slot +4.\nDoes not gain Speed dice from Emotion Level bonuses."}
+            ]
+        },
+        {
+            "Id":"Roland1st_Durandal_param1",
+            "Desc":[
+                {"Language":"cn","Content":"每一幕额外使用一张杜兰特尔"},
+                {"Language":"en","Content":"use 1 more Durandal per Scene"}
+            ]
+        },
+        {
+            "Id":"Roland1st_Durandal_param2",
+            "Desc":[
+                {"Language":"cn","Content":",从书页获得的强壮层数+1."},
+                {"Language":"en","Content":"\n,When gaining Strength using Combat Pages, gain +1 additional stack."}
+            ]
+        },
+        {
+            "Id":"Roland1st_Durandal_param3",
+            "Desc":[
+                {"Language":"cn","Content":"\n杜兰特尔所有骰子基础值+2"},
+                {"Language":"en","Content":"\ndice from Durandal increase their vanilla value by 2"}
+            ]
+        },
+        {
+            "Id":"Roland4th_Servant_param1",
+            "Desc":[
+                {"Language":"cn","Content":"\"钉与锤\""},
+                {"Language":"en","Content":"\"Hammer and Nail\""}
+            ]
+        },
+        {
+            "Id":"Roland4th_Servant_param2",
+            "Desc":[
+                {"Language":"cn","Content":",\"罪恶感\""},
+                {"Language":"en","Content":",\"Guilt\""}
+            ]
+        },
+        {
+            "Id":"Roland4th_Servant_param3",
+            "Desc":[
+                {"Language":"cn","Content":"和\"雪暴\""},
+                {"Language":"en","Content":"and\"Blizzard\""}
+            ]
+        }
+    ]
+}

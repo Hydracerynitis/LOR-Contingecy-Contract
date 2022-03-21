@@ -143,10 +143,10 @@ All Librarians can no longer use EGO pages.
 Unconcerned 1     Risk Level 2        Code: NoEmotion1
 All Librarians are no longer susceptible to Tier 3 Abnormalities Card.
 
-Unconcerned 2     Risk Level 2        Code: NoEmotion2
+Unconcerned 2     Risk Level 2   Risk Bonus 30%     Code: NoEmotion2
 All Librarians are no longer susceptible to Tier 3, Tier 2 Abnormalities Card.
 
-Unconcerned 3     Risk Level 2        Code: NoEmotion3
+Unconcerned 3     Risk Level 2   Risk Bonus 60%    Code: NoEmotion3
 All Librarians are no longer susceptible to Tier 3, Tier 2, and Tier 1 Abnormalities Card.
 
 

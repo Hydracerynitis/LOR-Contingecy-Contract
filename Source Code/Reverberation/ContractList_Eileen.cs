@@ -14,17 +14,16 @@ namespace Contingecy_Contract
         {
             Level = level;
         }
-        public override ContractType Type => ContractType.Special;
         public override string[] GetFormatParam(string language) => new string[] { (25 + Level * 25).ToString(), GetParam(language) };
         private string GetParam(string language)
         {
             string s = "";
             if (Level >= 1)
-                s += StaticDataManager.ContractParam[("Eileen_Production_param1", language)];
+                s += StaticDataManager.GetParam("Eileen_Production_param1", language);
             if (Level >= 2)
-                s += StaticDataManager.ContractParam[("Eileen_Production_param2", language)];
+                s += StaticDataManager.GetParam("Eileen_Production_param2", language);
             if(Level >=3)
-                s += StaticDataManager.ContractParam[("Eileen_Production_param3", language)];
+                s += StaticDataManager.GetParam("Eileen_Production_param3", language);
             return s;
         }
         private bool init =false;
@@ -62,7 +61,6 @@ namespace Contingecy_Contract
         {
             Level = level;
         }
-        public override ContractType Type => ContractType.Special;
         public override string[] GetFormatParam(string language) => new string[] { (25 + Level * 25).ToString(), (Math.Max(0, -3 + 3 * Level)).ToString() };
         private bool IsEileen => owner.UnitData.unitData.EnemyUnitId == 1302011;
         public override StatBonus GetStatBonus(BattleUnitModel owner)
@@ -92,7 +90,6 @@ namespace Contingecy_Contract
         {
             Level = level;
         }
-        public override ContractType Type => ContractType.Special;
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1302021;
         public override void Init(BattleUnitModel self)
         {

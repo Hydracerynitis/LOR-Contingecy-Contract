@@ -17,7 +17,6 @@ namespace Contingecy_Contract
             Level = level;
         }
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1309021;
-        public override ContractType Type => ContractType.Special;
         private PassiveAbility_1309021 copypassive;
         public override string[] GetFormatParam(string language) => new string[] { (35 + 15 * Level).ToString(), Level.ToString() };
         public override void Init(BattleUnitModel self)
@@ -50,7 +49,6 @@ namespace Contingecy_Contract
             Level = level;
         }
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1309011;
-        public override ContractType Type => ContractType.Special;
         public override string[] GetFormatParam(string language) => new string[] { (5*Level).ToString(), (20 + Level * 10).ToString() };
         public override StatBonus GetStatBonus(BattleUnitModel owner)
         {
@@ -95,7 +93,6 @@ namespace Contingecy_Contract
             this.Level = level;
         }
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1309011;
-        public override ContractType Type => ContractType.Special;
         public override int SpeedDiceNumAdder() => Activate? 1 : 0;
         private bool Activate => (Singleton<StageController>.Instance.RoundTurn - 1) % 3 == 0;
         public override void OnRoundStart()

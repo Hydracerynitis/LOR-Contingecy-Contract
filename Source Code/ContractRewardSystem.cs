@@ -66,15 +66,23 @@ namespace Contingecy_Contract
                 contracts.AddRange(Singleton<ContractLoader>.Instance.GetPassiveList());
                 contracts.AddRange(Singleton<ContractLoader>.Instance.GetStageList());
                 bool pass = true;
-                foreach (ContractCondition condition in RC.Condition)
+                foreach (List<ContractCondition> conditions in RC.Condition)
                 {
-                    Contract contract = contracts.Find(x => x.Type == condition.Type);
-                    if (contract != null)
+                    bool check= false;
+                    foreach(ContractCondition condition in conditions)
                     {
-                        if (Singleton<ContractLoader>.Instance.CheckActivate(contract, info) && contract.Variant >= condition.Variation)
-                            continue;
+                        Contract contract = contracts.Find(x => x.Type == condition.Type);
+                        if (contract != null)
+                        {
+                            if (Singleton<ContractLoader>.Instance.CheckActivate(contract, info) && contract.Variant >= condition.Variation)
+                            {
+                                check = true;
+                                break;
+                            }                         
+                        }
                     }
-                    pass = false;
+                    if(!check)
+                        pass = false;
                 }
                 if(pass)
                     Harmony_Patch.ClearList.Add(RC.RewardId);
