@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -63,6 +64,10 @@
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.IMGUIModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
@@ -86,11 +91,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Source Code\ContingecyContractGUI.cs" />
+    <Compile Include="Source Code\ContractReward\Roland\PassiveAbility_1700000.cs" />
     <Compile Include="Source Code\Fix\DiceCardSelfAbility_atkcombo_zelkova_New.cs" />
     <Compile Include="Source Code\Fix\DiceCardSelfAbility_atkcombo_allas_New.cs" />
     <Compile Include="Source Code\Fix\DiceCardSelfAbility_atkcombo_logic_New.cs" />
     <Compile Include="Source Code\Fix\PassiveAbility_1302013_New.cs" />
     <Compile Include="Source Code\Fix\PassiveAbility_170301_New.cs" />
+    <Compile Include="Source Code\HarmonyPatch\HarmonyPatch_RolandReward.cs" />
+    <Compile Include="Source Code\HarmonyPatch\HarmonyPatch_UI.cs" />
     <Compile Include="Source Code\Impurity\ContractList_Roland.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Oswald\DiceCardSelfAbility_Oswald_allpl.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Oswald\DiceCardSelfAbility_Oswald_daze.cs" />
@@ -221,7 +229,8 @@
     <Compile Include="Source Code\Harmony_Patch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Source Code\StaticDataManager.cs" />
+    <PackageReference Include="Krafs.Publicizer" Version="1.0.2" />
+    <Publicize Include="Assembly-CSharp" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

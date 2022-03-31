@@ -9,8 +9,8 @@ namespace ContractReward
     public class BattleUnitBuf_AngelicaPuppet: BattleUnitBuf
     {
         private readonly BattleUnitModel Jaehoen;
-        protected override string keywordId => Jaehoen!=null? "AngelicaPuppet" : "TemporyPuppet";
-        protected override string keywordIconId => "Jaeheon_PuppetThread";
+        public override string keywordId => Jaehoen!=null? "AngelicaPuppet" : "TemporyPuppet";
+        public override string keywordIconId => "Jaeheon_PuppetThread";
         public BattleUnitBuf_AngelicaPuppet(BattleUnitModel unit=null)
         {
             Jaehoen = unit;

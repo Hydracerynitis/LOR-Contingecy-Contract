@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PassiveDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <PassiveDesc ID="1700000">
+        <Name>Perfect Extraction -- Roland</Name>
+        <Desc>&lt;color=#FF0000&gt;Unable to utilize Emotion Card and EGO from the Library. Any attempt to apply emotion card will result in wasting said emotion card.&lt;/color&gt;</Desc>
+    </PassiveDesc>
+</PassiveDescRoot>

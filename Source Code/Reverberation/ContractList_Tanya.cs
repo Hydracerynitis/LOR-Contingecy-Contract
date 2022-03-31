@@ -188,8 +188,8 @@ namespace Contingecy_Contract
             {
                 Level = level;
             }
-            protected override string keywordId => "TanyaMaster";
-            protected override string keywordIconId => "Wolf_Claw";
+            public override string keywordId => "TanyaMaster";
+            public override string keywordIconId => "Wolf_Claw";
             public override int GetDamageReductionRate() => 10 + 10 * Level;
             public override int GetBreakDamageReductionRate() => 10 + 10 * Level;
             public override string bufActivatedText => Singleton<BattleEffectTextsXmlList>.Instance.GetEffectTextDesc(this.keywordId, (object)this.GetAdditionalString());

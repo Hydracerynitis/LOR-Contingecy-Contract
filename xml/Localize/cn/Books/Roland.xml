@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BookDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<bookDescList>
+		<BookDesc BookID="17000001">
+			<BookName>漆黑静默</BookName>
+			<TextList>
+ 				<Desc>正是为了这一刻我才能够坚持到现在……为了将我的痛苦……
+不，我是为了将我的痛苦加倍奉还而来的。</Desc>
+				<Desc>我并不认为自己在这之后能够夺回幸福……
+最后恐怕只会留下名为空虚的后悔，一无所剩吧。</Desc>
+				<Desc>但总好过一直被心中郁结着的情感压迫得难以呼吸，不是吗？
+我只希望能够有一瞬重新坦然呼吸的机会。</Desc>
+				<Desc>你们也都有各自想要守护的事物吧。不必犹豫，放马过来。
+又有什么能比彼此的期望重合的瞬间更加丑恶与痛苦的事物呢？</Desc>
+				<Desc>安吉拉。我定会为你带来远超于我的痛苦与损失……
+……不错。让我们开始吧。</Desc>
+			</TextList>
+			<PassiveList />
+		</BookDesc>
+	</bookDescList>
+</BookDescRoot>

@@ -556,8 +556,8 @@ namespace Contingecy_Contract
             public BlackWaltz(int level) : base(level)
             {
             }
-            protected override string keywordIconId => "BlackEnergy";
-            protected override string keywordId => "BlackDecay";
+            public override string keywordIconId => "BlackEnergy";
+            public override string keywordId => "BlackDecay";
             public static void AddBuff(BattleUnitModel unit, int level)
             {
                 if(unit.bufListDetail.GetActivatedBufList().Find(x => x is BlackWaltz) is BlackWaltz black)
@@ -574,8 +574,8 @@ namespace Contingecy_Contract
             public WhiteWaltz(int level) : base(level)
             {
             }
-            protected override string keywordIconId => "WhiteEnergy";
-            protected override string keywordId => "WhiteDecay";
+            public override string keywordIconId => "WhiteEnergy";
+            public override string keywordId => "WhiteDecay";
             public static void AddBuff(BattleUnitModel unit, int level)
             {
                 if (unit.bufListDetail.GetActivatedBufList().Find(x => x is WhiteWaltz) is WhiteWaltz white)
@@ -620,8 +620,8 @@ namespace Contingecy_Contract
         }
         public class ForbidEnergy: BattleUnitBuf
         {
-            protected override string keywordId => "ForbidEnergy";
-            protected override string keywordIconId => "ForbidRecovery";
+            public override string keywordId => "ForbidEnergy";
+            public override string keywordIconId => "ForbidRecovery";
             public override void Init(BattleUnitModel owner)
             {
                 base.Init(owner);
@@ -692,8 +692,8 @@ namespace Contingecy_Contract
         }
         public class Nail: BattleUnitBuf
         {
-            protected override string keywordId => "Servent_Hammer";
-            protected override string keywordIconId => "KeterFinal_SilenceGirl_Nail";
+            public override string keywordId => "Servent_Hammer";
+            public override string keywordIconId => "KeterFinal_SilenceGirl_Nail";
             public override void OnSuccessAttack(BattleDiceBehavior behavior)
             {
                 if (behavior.Detail != BehaviourDetail.Penetrate)
@@ -709,8 +709,8 @@ namespace Contingecy_Contract
         }
         public class Guilt : BattleUnitBuf
         {
-            protected override string keywordId => "Servent_Guilt";
-            protected override string keywordIconId => "KeterFinal_SilenceGirl_Gaze_Attacked";
+            public override string keywordId => "Servent_Guilt";
+            public override string keywordIconId => "KeterFinal_SilenceGirl_Gaze_Attacked";
             public override void Init(BattleUnitModel owner)
             {
                 base.Init(owner);
@@ -748,8 +748,8 @@ namespace Contingecy_Contract
         }
         public class Blizzard : BattleUnitBuf
         {
-            protected override string keywordId => "Servent_Blizzard";
-            protected override string keywordIconId => "SnowQueen_Stun";
+            public override string keywordId => "Servent_Blizzard";
+            public override string keywordIconId => "SnowQueen_Stun";
             public override void Init(BattleUnitModel owner)
             {
                 base.Init(owner);
