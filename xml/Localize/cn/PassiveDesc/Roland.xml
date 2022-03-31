@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PassiveDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <PassiveDesc ID="1700000">
+        <Name>完美提取--罗兰</Name>
+        <Desc>&lt;color=#FF0000&gt;无法获取图书馆的情感卡和ego,尝试为其应用情感卡将会浪费该情感卡&lt;/color&gt;</Desc>
+    </PassiveDesc>
+</PassiveDescRoot>

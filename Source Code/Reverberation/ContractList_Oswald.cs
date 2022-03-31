@@ -142,8 +142,8 @@ namespace Contingecy_Contract
         }
         public class TrollIndicator: BattleUnitBuf
         {
-            protected override string keywordId => "TrollIndicator";
-            protected override string keywordIconId => "Oswald_Daze";
+            public override string keywordId => "TrollIndicator";
+            public override string keywordIconId => "Oswald_Daze";
             public override void Init(BattleUnitModel owner)
             {
                 base.Init(owner);
@@ -162,7 +162,7 @@ namespace Contingecy_Contract
             private SoundEffectPlayer _attractLoopSound;
             private int Level;
             public override bool IsControllable => false;
-            protected override string keywordId => "Oswald_Daze";
+            public override string keywordId => "Oswald_Daze";
             public override int SpeedDiceNumAdder()
             {
                 return Level>=3? 2:0;

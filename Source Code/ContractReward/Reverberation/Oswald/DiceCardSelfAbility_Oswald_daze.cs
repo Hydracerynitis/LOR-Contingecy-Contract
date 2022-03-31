@@ -33,8 +33,8 @@ namespace ContractReward
         {
             private bool _bRecoveredBreak;
             public override bool IsControllable => false;
-            protected override string keywordId => "LibrarianDaze";
-            protected override string keywordIconId => "Oswald_Daze";
+            public override string keywordId => "LibrarianDaze";
+            public override string keywordIconId => "Oswald_Daze";
             public override void Init(BattleUnitModel owner)
             {
                 base.Init(owner);

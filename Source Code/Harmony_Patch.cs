@@ -11,6 +11,7 @@ using HarmonyLib;
 using BaseMod;
 using TMPro;
 using LOR_XML;
+using ContractReward;
 
 namespace Contingecy_Contract
 {
@@ -82,8 +83,6 @@ namespace Contingecy_Contract
             Patch(Method23, "BattleUnitModel_CheckCardAvailable", false);
             MethodInfo Method24 = typeof(AssemblyManager).GetMethod("CreateInstance_DiceCardSelfAbility", AccessTools.all);
             Patch(Method24, "AssemblyManager_CreateInstance_DiceCardSelfAbility", false);
-/*            MethodInfo Method25 = typeof(AssemblyManager).GetMethod("CreateInstance_BehaviourAction", AccessTools.all);
-            Patch(Method25, "AssemblyManager_CreateInstance_BehaviourAction", false);*/
             MethodInfo Method26 = typeof(AssemblyManager).GetMethod("CreateInstance_PassiveAbility", AccessTools.all);
             Patch(Method26, "AssemblyManager_CreateInstance_PassiveAbility", false);
             MethodInfo Method27 = typeof(DropBookInventoryModel).GetMethod("GetBookList_invitationBookList", AccessTools.all);
@@ -112,6 +111,7 @@ namespace Contingecy_Contract
             Patch(Method38, "PassiveAbility_240008_OnRoundStart", false);
             MethodInfo Method39 = typeof(EnemyTeamStageManager_BlackSilence).GetMethod("OnWaveStart", AccessTools.all);
             Patch(Method39, "EnemyTeamStageManager_BlackSilence_OnWaveStart", true);
+            harmony.PatchAll(typeof(HarmonyPatch_UI));
         }
         public static void Patch(MethodInfo method, string patchName, bool prefix)
         {
@@ -510,9 +510,9 @@ namespace Contingecy_Contract
         }
         public static void BookModel_GetThumbSprite(ref Sprite __result, BookModel __instance)
         {
-            if (StaticDataManager.ThumbPathDictionary.ContainsKey(__instance.GetBookClassInfoId())) 
-                __result= Resources.Load<Sprite>("Sprites/Books/Thumb/" + StaticDataManager.ThumbPathDictionary[__instance.GetBookClassInfoId()]);
-            else if(StaticDataManager.NonThumbSprite.ContainsKey(__instance.GetBookClassInfoId()))
+            if (StaticDataManager.ThumbPathDictionary.ContainsKey(__instance.GetBookClassInfoId())) ;
+            //__result = Resources.Load<Sprite>("Sprites/Books/Thumb/" + StaticDataManager.ThumbPathDictionary[__instance.GetBookClassInfoId()]);
+            else if (StaticDataManager.NonThumbSprite.ContainsKey(__instance.GetBookClassInfoId()))
             {
                 if (StaticDataManager.NonThumbSprite[__instance.GetBookClassInfoId()] != null)
                     __result = StaticDataManager.NonThumbSprite[__instance.GetBookClassInfoId()];
@@ -535,7 +535,7 @@ namespace Contingecy_Contract
                         }
 
                     }
-                    catch(Exception ex)
+                    catch (Exception ex)
                     {
                         Debug.Error("PrefabThumbe", ex);
                     }
@@ -545,8 +545,8 @@ namespace Contingecy_Contract
         }
         public static void BookXmlInfo_GetThumbSprite(ref Sprite __result, BookXmlInfo __instance)
         {
-            if (StaticDataManager.ThumbPathDictionary.ContainsKey(__instance.id))
-                __result = Resources.Load<Sprite>("Sprites/Books/Thumb/" + StaticDataManager.ThumbPathDictionary[__instance.id]);
+            if (StaticDataManager.ThumbPathDictionary.ContainsKey(__instance.id)) ;
+            //__result = Resources.Load<Sprite>("Sprites/Books/Thumb/" + StaticDataManager.ThumbPathDictionary[__instance.id]);
             else if (StaticDataManager.NonThumbSprite.ContainsKey(__instance.id))
             {
                 if (StaticDataManager.NonThumbSprite[__instance.id] != null)
@@ -645,6 +645,7 @@ namespace Contingecy_Contract
             if (Singleton<ContractLoader>.Instance.GetPassiveList().Find(x => x.Type == "NoEmotion") is Contract NoEmotion && emotionLevel >= 4 - NoEmotion.Variant)
                 __result.Clear();
         }
+        
         public static void PassiveAbility_240008_OnRoundStart(PassiveAbility_240008 __instance)
         {
             int num = __instance.Owner.emotionDetail.SpeedDiceNumAdder() + __instance.Owner.emotionDetail.GetSpeedDiceAdder(0);
@@ -660,6 +661,8 @@ namespace Contingecy_Contract
                 typeof(EnemyTeamStageManager_BlackSilence).GetMethod("set_curPhase", AccessTools.all).Invoke(__instance, new object[] { EnemyTeamStageManager_BlackSilence.Phase.FOURTH });
             }
         }
+        
+        public static bool IsRoland(UnitDataModel __instance) => __instance.OwnerSephirah == SephirahType.Keter && __instance.isSephirah;
         public static void ModifyEnsemble()
         {
             List<StageClassInfo> Ensemble = Singleton<StageClassInfoList>.Instance.GetAllDataList().FindAll(x => x.id.IsBasic() && x.id.id >= 70001 && x.id.id <= 70010);

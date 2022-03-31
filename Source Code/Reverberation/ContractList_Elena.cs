@@ -77,8 +77,8 @@ namespace Contingecy_Contract
         {
             private readonly int Level;
             public int Hit;
-            protected override string keywordId => "CrossBurn";
-            protected override string keywordIconId => "Wolf_Scar";
+            public override string keywordId => "CrossBurn";
+            public override string keywordIconId => "Wolf_Scar";
             public override int paramInBufDesc => (Level - 1) * 25;
             public CrossBurn(int level)
             {

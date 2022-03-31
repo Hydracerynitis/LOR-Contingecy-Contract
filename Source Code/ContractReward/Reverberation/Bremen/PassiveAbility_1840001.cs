@@ -102,18 +102,18 @@ namespace ContractReward
         }
         private class HeadChicken: BattleUnitBuf_Bremen_Head
         {
-            protected override string keywordIconId => "Bremen_Head_Chicken";
-            protected override string keywordId => "HeadChicken";
+            public override string keywordIconId => "Bremen_Head_Chicken";
+            public override string keywordId => "HeadChicken";
         }
         private class HeadDonkey : BattleUnitBuf_Bremen_Head
         {
-            protected override string keywordIconId => "Bremen_Head_Donkey";
-            protected override string keywordId => "HeadDonkey";
+            public override string keywordIconId => "Bremen_Head_Donkey";
+            public override string keywordId => "HeadDonkey";
         }
         private class HeadDog: BattleUnitBuf_Bremen_Head
         {
-            protected override string keywordIconId => "Bremen_Head_Dog";
-            protected override string keywordId => "HeadDog";
+            public override string keywordIconId => "Bremen_Head_Dog";
+            public override string keywordId => "HeadDog";
         }
     }
 }

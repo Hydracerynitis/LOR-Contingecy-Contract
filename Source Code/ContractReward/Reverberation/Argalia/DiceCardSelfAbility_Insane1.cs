@@ -28,8 +28,8 @@ namespace ContractReward
         }
         public class NoPower : BattleUnitBuf
         {
-            protected override string keywordId => "NullifyPowerAll";
-            protected override string keywordIconId => "NullifyPower";
+            public override string keywordId => "NullifyPowerAll";
+            public override string keywordIconId => "NullifyPower";
             public override void Init(BattleUnitModel owner)
             {
                 base.Init(owner);

@@ -10,8 +10,8 @@ namespace ContractReward
     {
         private int accumulated;
         private int gauge => (int)(this._owner.MaxHp * 0.02);
-        protected override string keywordId => "Insanity";
-        protected override string keywordIconId => "Orchestra_Enthusiastic";
+        public override string keywordId => "Insanity";
+        public override string keywordIconId => "Orchestra_Enthusiastic";
         public override void Init(BattleUnitModel owner)
         {
             base.Init(owner);

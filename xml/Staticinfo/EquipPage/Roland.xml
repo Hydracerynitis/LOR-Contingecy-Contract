@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<BookXmlRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  	<Book ID="17000001">
+    		<Name>漆黑静默</Name>
+   		 <TextId>17000001</TextId>
+    		<Category>DeckFixed</Category>
+    		<EquipEffect>
+      			<HP>150</HP>
+      			<Break>70</Break>
+      			<SpeedMin>2</SpeedMin>
+      			<Speed>7</Speed>
+      			<SResist>Normal</SResist>
+                <PResist>Normal</PResist>
+                <HResist>Endure</HResist> 
+                <SBResist>Normal</SBResist>
+                <PBResist>Normal</PBResist>
+                <HBResist>Endure</HBResist>
+      			<StartPlayPoint>4</StartPlayPoint>
+      			<MaxPlayPoint>4</MaxPlayPoint>
+      			<Passive Pid="@origin">10004</Passive>
+                <Passive>1700000</Passive>
+                <Passive Pid="@origin">170002</Passive>
+                <Passive Pid="@origin">170003</Passive>
+                <Passive Pid="@origin">170004</Passive>
+      			<Passive Pid="@origin">10013</Passive>
+                <Passive Pid="@origin">250002</Passive>
+    		</EquipEffect>
+    		<BookIcon>ContingencyReward</BookIcon>
+    		<Chapter>7</Chapter>
+    		<Episode>1800007</Episode>
+    		<Rarity>Unique</Rarity>
+    		<CharacterSkin>BlackSilenceMask</CharacterSkin>
+ 	 </Book>
+</BookXmlRoot>

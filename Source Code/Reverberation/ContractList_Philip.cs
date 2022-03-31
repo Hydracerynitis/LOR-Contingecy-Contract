@@ -43,7 +43,7 @@ namespace Contingecy_Contract
         {
             private Battle.CreatureEffect.CreatureEffect _effect;
             private readonly int level;
-            protected override string keywordId => "Philip_OverHit";
+            public override string keywordId => "Philip_OverHit";
             public OverHeat_cc(int Level)
             {
                 this.level = Level;

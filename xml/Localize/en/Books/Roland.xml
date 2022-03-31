@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BookDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<bookDescList>
+		<BookDesc BookID="17000001">
+			<BookName>The Black Silence</BookName>
+			<TextList>
+ 				<Desc>I could put up with it all just for this moment…
+I’ve come this far so I can make her suffer the same… No, to bring her even more pain than what I’ve suffered.</Desc>
+				<Desc>I don’t exactly believe there’s happiness waiting for me at the end of this…
+There’d only be empty regret. I’d get nothing out of it.</Desc>
+				<Desc>But that’s still better than suffocating under these emotions that couldn’t be let out, isn’t it?
+I just want to be able to breathe for a second.</Desc>
+				<Desc>You’ve got your causes to fight for. Don’t hold back.
+Few things could be more agonizing and detestable than finding a common ground between each other’s goals.</Desc>
+				<Desc>Angela. Your pain and loss will be much greater than mine…
+…Alright. Let’s get started.</Desc>
+			</TextList>
+			<PassiveList />
+		</BookDesc>
+	</bookDescList>
+</BookDescRoot>
