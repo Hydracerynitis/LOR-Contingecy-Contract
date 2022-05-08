@@ -27,5 +27,15 @@ Reduce incoming damage from enemy with "Guilt" on hand by the cost of "Guilt".</
 			<Name>Blizzard</Name>
 			<Desc>inflict Stun on a random Actionable enemy.</Desc>
 		</BattleEffectText>
+		<BattleEffectText ID="CC_SpiritLink">
+			<Name>Soul Link</Name>
+			<Desc>Stagger Resist does not go below 1.
+Reduce one stack if both characters lose a clash with the same enemy in the same Scene.
+When stack reach 0, both charactes lose 25% Max Stagger Resist and inflic 4 Paralysis.</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="Combo_Keyword">
+			<Name>Tag Team X： Y</Name>
+			<Desc>On Use Pgae,, trigger effect Y if ally using Page X (Tag Teammate) exist.</Desc>
+		</BattleEffectText>
 	</effectTextList>
 </BattleEffectTextRoot>

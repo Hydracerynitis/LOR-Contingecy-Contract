@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Contingecy_Contract
 {
-    public class ContingecyContract_Tanya_Solo : ContingecyContract
+    public class ContingecyContract_Tanya_Solo : ContingecyContract, Retaliater
     {
         public ContingecyContract_Tanya_Solo(int level)
         {

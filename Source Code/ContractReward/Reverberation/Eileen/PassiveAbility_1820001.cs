@@ -72,7 +72,7 @@ namespace ContractReward
         }
         public void InitGear(int index)
         {
-            Gear[index] = SummonLiberation.Harmony_Patch.SummonUnit(Faction.Player,Tools.MakeLorId(18210000), Tools.MakeLorId(18210000),PlayerUnitName: "Meat Gear");
+            Gear[index] = SummonLiberation.Harmony_Patch.SummonUnit(Faction.Player,Tools.MakeLorId(18210000), Tools.MakeLorId(18210000),PlayerUnitName: CharactersNameXmlList.Instance.GetName(222));
             FormationPositionXmlData xml = Singleton<StageController>.Instance.GetCurrentStageFloorModel().GetFormationPosition(owner.index)._xmlInfo;
             Gear[index].formation = new FormationPosition(xml);
             if (index==0)

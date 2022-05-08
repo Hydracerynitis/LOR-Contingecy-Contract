@@ -15,6 +15,7 @@ using ContractReward;
 
 namespace Contingecy_Contract
 {
+
     public class Harmony_Patch
     {
         public static HashSet<int> ClearList = new HashSet<int>();
@@ -87,8 +88,6 @@ namespace Contingecy_Contract
             Patch(Method26, "AssemblyManager_CreateInstance_PassiveAbility", false);
             MethodInfo Method27 = typeof(DropBookInventoryModel).GetMethod("GetBookList_invitationBookList", AccessTools.all);
             Patch(Method27, "DropBookInventoryModel_GetBookList_invitationBookList", false);
-            MethodInfo Method28 = typeof(UIInvitationDropBookSlot).GetMethod("SetData_DropBook", AccessTools.all);
-            Patch(Method28, "UIInvitationDropBookSlot_SetData_DropBook", false);
             MethodInfo Method29 = typeof(StageController).GetMethod("CheckStoryBeforeBattle", AccessTools.all);
             Patch(Method29, "StageController_CheckStoryBeforeBattle", true);
             MethodInfo Method30 = typeof(DiceBehaviour).GetMethod("Copy", AccessTools.all);
@@ -111,7 +110,10 @@ namespace Contingecy_Contract
             Patch(Method38, "PassiveAbility_240008_OnRoundStart", false);
             MethodInfo Method39 = typeof(EnemyTeamStageManager_BlackSilence).GetMethod("OnWaveStart", AccessTools.all);
             Patch(Method39, "EnemyTeamStageManager_BlackSilence_OnWaveStart", true);
-            harmony.PatchAll(typeof(HarmonyPatch_UI));
+            harmony.PatchAll(typeof(HP_System));
+            harmony.PatchAll(typeof(HP_UI));
+            harmony.PatchAll(typeof(HP_RolandReward));
+            harmony.PatchAll(typeof(HP_Effect));
         }
         public static void Patch(MethodInfo method, string patchName, bool prefix)
         {
@@ -129,15 +131,6 @@ namespace Contingecy_Contract
             {
                 Debug.Error(PatchNum.ToString() + " :HP_" + patch.Name, ex);
             }
-        }
-        public static bool HasMethod(Type type, string methodName)
-        {
-            foreach (MemberInfo method in type.GetMethods())
-            {
-                if (method.Name == methodName)
-                    return true;
-            }
-            return false;
         }
         public static void StageNameXmlList_GetName_int(ref string __result,int id)
         {
@@ -274,7 +267,7 @@ namespace Contingecy_Contract
                 unit.Book.SetBp(unit.Book.ClassInfo.EquipEffect.Break);
                 unit.Book.SetSpeedDiceMax(unit.Book.ClassInfo.EquipEffect.Speed);
                 unit.Book.SetSpeedDiceMin(unit.Book.ClassInfo.EquipEffect.SpeedMin);
-                unit.Book.GetType().GetField("_maxPlayPoint", AccessTools.all).SetValue(unit.Book, unit.Book.ClassInfo.EquipEffect.MaxPlayPoint);
+                unit.Book._maxPlayPoint= unit.Book.ClassInfo.EquipEffect.MaxPlayPoint;
                 if (UnitBookId.ContainsKey(unit))
                 {
                     unit.Book.ClassInfo._id = UnitBookId[unit].id;
@@ -360,17 +353,8 @@ namespace Contingecy_Contract
             BattlePlayingCardDataInUnitModel retaliate = null;
             foreach (PassiveAbilityBase passive in card.target.passiveDetail.PassiveList)
             {
-                if (HasMethod(passive.GetType(), "Retaliate"))
-                {
-                    try
-                    {
-                        retaliate = (BattlePlayingCardDataInUnitModel)passive.GetType().GetMethod("Retaliate").Invoke(passive, new object[1] { card });
-                    }
-                    catch (Exception ex)
-                    {
-                        Debug.Error("RetaliateBug", ex);
-                    }
-                }
+                if (passive is Retaliater)
+                    retaliate = (passive as Retaliater).Retaliate(card);
             }
             if (retaliate == null)
                 return true;
@@ -450,7 +434,7 @@ namespace Contingecy_Contract
                 __result = new Fix.PassiveAbility_1303012_New();
             else if (__result is PassiveAbility_1303013)
                 __result = new Fix.PassiveAbility_1303013_New();
-            else if (ContractLoader.Instance.GetPassiveList().Exists(x => x.Type=="Roland1st") && __result is PassiveAbility_170003)
+            else if (ContractLoader.Instance.GetPassiveList().Exists(x => x.Type=="Roland1st") && __result is PassiveAbility_170003 && !(__result is PassiveAbility_1700013))
                 __result = new Fix.PassiveAbility_170003_New();
             else if (ContractLoader.Instance.GetPassiveList().Exists(x => x.Type == "Roland4th_BlackSilence") && __result is PassiveAbility_170301)
                 __result = new Fix.PassiveAbility_170301_New();
@@ -471,11 +455,6 @@ namespace Contingecy_Contract
                 __result.Add(Tools.MakeLorId(70010));
             }
         }
-        public static void UIInvitationDropBookSlot_SetData_DropBook(ref TextMeshProUGUI ___txt_bookNum, LorId bookId)
-        {
-            if (Singleton<DropBookInventoryModel>.Instance.GetBookCount(bookId) == 0)
-                ___txt_bookNum.text = "∞";
-        }
         public static bool StageController_CheckStoryBeforeBattle(ref bool __result)
         {
             LorId id = Singleton<StageController>.Instance.GetStageModel().ClassInfo.id;
@@ -495,24 +474,13 @@ namespace Contingecy_Contract
         {
             foreach (PassiveAbilityBase passive in __instance.passiveDetail.PassiveList)
             {
-                if (HasMethod(passive.GetType(), "GetRecoveryBonus"))
-                {
-                    try
-                    {
-                        v += (int)passive.GetType().GetMethod("GetRecoveryBonus").Invoke(passive, new object[1] { v });
-                    }
-                    catch (Exception ex)
-                    {
-                        Debug.Error("RecoveryBug", ex);
-                    }
-                }
+                if (passive is GetRecovery)
+                    v += (passive as GetRecovery).GetRecoveryBonus(v);
             }
         }
         public static void BookModel_GetThumbSprite(ref Sprite __result, BookModel __instance)
         {
-            if (StaticDataManager.ThumbPathDictionary.ContainsKey(__instance.GetBookClassInfoId())) ;
-            //__result = Resources.Load<Sprite>("Sprites/Books/Thumb/" + StaticDataManager.ThumbPathDictionary[__instance.GetBookClassInfoId()]);
-            else if (StaticDataManager.NonThumbSprite.ContainsKey(__instance.GetBookClassInfoId()))
+            if (StaticDataManager.NonThumbSprite.ContainsKey(__instance.GetBookClassInfoId()))
             {
                 if (StaticDataManager.NonThumbSprite[__instance.GetBookClassInfoId()] != null)
                     __result = StaticDataManager.NonThumbSprite[__instance.GetBookClassInfoId()];
@@ -545,9 +513,7 @@ namespace Contingecy_Contract
         }
         public static void BookXmlInfo_GetThumbSprite(ref Sprite __result, BookXmlInfo __instance)
         {
-            if (StaticDataManager.ThumbPathDictionary.ContainsKey(__instance.id)) ;
-            //__result = Resources.Load<Sprite>("Sprites/Books/Thumb/" + StaticDataManager.ThumbPathDictionary[__instance.id]);
-            else if (StaticDataManager.NonThumbSprite.ContainsKey(__instance.id))
+            if (StaticDataManager.NonThumbSprite.ContainsKey(__instance.id))
             {
                 if (StaticDataManager.NonThumbSprite[__instance.id] != null)
                     __result = StaticDataManager.NonThumbSprite[__instance.id];
@@ -661,7 +627,6 @@ namespace Contingecy_Contract
                 typeof(EnemyTeamStageManager_BlackSilence).GetMethod("set_curPhase", AccessTools.all).Invoke(__instance, new object[] { EnemyTeamStageManager_BlackSilence.Phase.FOURTH });
             }
         }
-        
         public static bool IsRoland(UnitDataModel __instance) => __instance.OwnerSephirah == SephirahType.Keter && __instance.isSephirah;
         public static void ModifyEnsemble()
         {
@@ -690,7 +655,7 @@ namespace Contingecy_Contract
         {
             return stageId == Tools.MakeLorId(1800000) || stageId == Tools.MakeLorId(1800007);
         }
-
-        public static List<int> NonHeadEquipPage = new List<int>() { 18810000 };
+        public static List<int> NoThumbPage=new List<int>() { 18810000, 17000002, 17000003, 17000004 };
+        public static List<int> NonHeadEquipPage = new List<int>() { 18810000};
     }
 }

@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using HarmonyLib;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Contingecy_Contract
@@ -112,6 +111,14 @@ namespace Contingecy_Contract
                 pid=info.pid,
                 xmlId=info.xmlId
             };
+            return output;
+        }
+        public static FormationPositionXmlData CopyVector(FormationPositionXmlData info)
+        {
+            XmlVector2 vector = info.vector;
+            FormationPositionXmlData output = new FormationPositionXmlData();
+            XmlVector2 v = new XmlVector2() { x = vector.x, y = vector.y };
+            output.vector= v;
             return output;
         }
         public static void EnhanceCard(BattleDiceCardModel card, int min = 0, int dice = 0, bool ignoreStandby=false)

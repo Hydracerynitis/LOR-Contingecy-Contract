@@ -4,6 +4,7 @@
         <Name>一起哈皮~</Name>
         <Artwork>Oswald_Show</Artwork>
         <Rarity>Common</Rarity>
+        <Option>NoInventory</Option>
         <Keyword></Keyword>
         <Spec Range="Near" Cost="1" />
         <Script>Oswald_energy3</Script>
@@ -20,7 +21,7 @@
         <Name>会吓一跳吗！？&lt;color="red"&gt;♥&lt;/color&gt;</Name>
         <Artwork>Oswald_Atk</Artwork>
         <Rarity>Rare</Rarity>
-        <Keyword></Keyword>
+        <Option>NoInventory</Option>
         <Spec Range="Near" Cost="1" />
         <Script>Oswald_energy3</Script>
         <ScriptDesc></ScriptDesc>
@@ -36,7 +37,7 @@
     <Name>嘭！~嘭！！♠</Name>
     <Artwork>Oswald_Atk</Artwork>
     <Rarity>Rare</Rarity>
-    <Keyword></Keyword>
+    <Option>NoInventory</Option>
     <Spec Range="Near" Cost="2" />
     <Script>Oswald_firstplquickendu</Script>
     <ScriptDesc></ScriptDesc>
@@ -52,7 +53,7 @@
     <Name>接好喽~！♣</Name>
     <Artwork>Oswald_Atk</Artwork>
     <Rarity>Rare</Rarity>
-    <Keyword></Keyword>
+    <Option>NoInventory</Option>
     <Spec Range="Near" Cost="2" />
     <Script>Oswald_firstplstr</Script>
     <ScriptDesc></ScriptDesc>
@@ -67,7 +68,7 @@
     <Name>蹦过去吧？&lt;color="red"&gt;◆&lt;/color&gt;</Name>
     <Artwork>Oswald_Atk</Artwork>
     <Rarity>Rare</Rarity>
-    <Keyword></Keyword>
+    <Option>NoInventory</Option>
     <Spec Range="Far" Cost="3" />
     <Script>Oswald_allpl</Script>
     <ScriptDesc></ScriptDesc>
@@ -83,7 +84,7 @@
     <Name>高潮！！！</Name>
     <Artwork>Oswald_Strong</Artwork>
     <Rarity>Unique</Rarity>
-    <Keyword></Keyword>
+    <Option>NoInventory</Option>
     <Spec Range="FarArea" Cost="5" Affection="Team"/>
     <Script>Oswald_area</Script>
     <ScriptDesc></ScriptDesc>

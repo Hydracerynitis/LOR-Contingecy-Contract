@@ -8,6 +8,32 @@
                 [{"Type":"Damage","Variation":4}]
             ],
             "RewardId":18810000
+        },
+        {
+            "Stageid":60003,
+            "Condition":[
+                [{"Type":"Roland1st_Furioso","Variation":3},{"Type":"Roland1st_Durandal","Variation":3}],
+                [{"Type":"Roland2nd_Smoke","Variation":3},{"Type":"Roland2nd_Secret","Variation":3}],
+                [{"Type":"Roland1st","Variation":0},{"Type":"Roland2nd","Variation":0}]
+            ],
+            "RewardId":17000002
+        },
+        {
+            "Stageid":60003,
+            "Condition":[
+                [{"Type":"Roland3rd_Waltz","Variation":3},{"Type":"Roland3rd_Unity","Variation":3}],
+                [{"Type":"Roland4th_BlackSilence","Variation":3},{"Type":"Roland4th_Servant","Variation":3}],
+                [{"Type":"Roland3rd","Variation":0},{"Type":"Roland4th","Variation":0}]
+            ],
+            "RewardId":17000003
+        },
+        {
+            "Stageid":60003,
+            "Condition":[
+                [{"Type":"Roland","Variation":0}],
+                [{"Type":"Last","Variation":0}]
+            ],
+            "RewardId":17000004
         }
     ]
 }

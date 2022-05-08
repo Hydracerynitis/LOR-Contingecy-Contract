@@ -17,5 +17,111 @@ Few things could be more agonizing and detestable than finding a common ground b
 			</TextList>
 			<PassiveList />
 		</BookDesc>
+		<BookDesc BookID="17000002">
+			<BookName>The Seedy Giant</BookName>
+			<TextList>
+ 				<Desc>The past isn’t all that different from now… Nothing ever changes… The same kinds of tragedies happen time and time again…
+Everyone knows that it’s wrong… But they can’t stop it from repeating…
+How many people do you think are sacrificed for the convenience and happiness of others…?</Desc>
+				<Desc>The City’s prosperity is fueled by the lives of others… And its people stick their heads below the parapet and carry on…
+There’s no other way to survive in this damned place…
+We all know that it’s pointless to reflect on ourselves and think things over…</Desc>
+				<Desc>You wouldn’t want to care… You’d want to turn a blind eye!
+Because that’s none of your business… Right. That’s none of your business.
+Because your life would be a bit more comfortable if you just closed your eyes and turned away…</Desc>
+				<Desc>They give no ear to the pain of other people… Taking care of themselves is already hard enough…
+I hate this City for forcing us to be like this…
+And I’m horrified and disgusted at myself for partaking in its filthy business…</Desc>
+				<Desc>But—that’s that, and this is this…
+I can’t just sit and watch as my happiness goes down the drain…
+My life is far from a clean one, but still… I hadn’t done anything to earn anyone’s grudge…</Desc>
+			</TextList>
+			<PassiveList />
+		</BookDesc>
+		<BookDesc BookID="17000003">
+			<BookName>The Black Servant</BookName>
+			<TextList>
+ 				<Desc>What I cannot do is own her heart.
+Instead, my graceful love stole my heart and left me with lone hardship.
+I can’t help but love the pain which fills the void of solitude.</Desc>
+				<Desc>Because I could look ahead thanks to you.
+But now, the wonderful scenery we used to watch together lay behind me…
+In this instant, I look back again. My eyes fixated on the most painful yet beautiful moments.</Desc>
+				<Desc>Those moments I can only view from afar, as I can’t dare approach them.
+As I cleared the filth obstructing my view, it piled up on the path to the way forward…
+I don’t think I can face the growing mountain in front of me squarely.</Desc>
+				<Desc>If I tried to confront it…
+I might be buried under mounds of resentment and suffering from others.
+I’m not sad about it, though. I don’t think it’s a shame that I can’t move on.</Desc>
+				<Desc>To leave you behind in the past and move forward alone would be my greatest pain.
+I had only one option, then. To be able to gaze at paradise forever…
+I should move all which blocks that sight out of the way.</Desc>
+			</TextList>
+			<PassiveList />
+		</BookDesc>
+		<BookDesc BookID="17000103">
+			<BookName>The White Guard</BookName>
+			<TextList>
+ 				<Desc>Look
+One by one
+The pages remind me you'll always be a villain
+For you,angels have fallen
+Now they're gone
+See? Now they're gone
+Forever gone
+From the hell that served as my one and only home
+Though it may hurt today
+Tomorrow I'll be heading my way</Desc>
+				<Desc>I tried, I tried
+What did we expect?
+My dearest friend
+Tell me when we shall make it end</Desc>
+				<Desc>So let me take your hand
+Like one of those madmen
+Tip tappity tappity tap
+Dance our last dance
+Sing
+Ta talila lulilatu
+Spinning vinyl opera
+(Lascia ch'io pianga) Longing for this moment
+(mia cruda sorte,)Brewing all this hatred
+(e che sospiri) So I have a reason
+(la libertà.) Reason to see you dead</Desc>
+				<Desc>Don't you worry
+I saved a spot for you in recycle bin
+Your neighbouring addresses point to the books you burned</Desc>
+				<Desc>Stop now, One by one
+Your desires convince me you've always been a human
+For you, the shelves have fallen
+Now they're gone
+See? Now they're gone
+Forever gone
+From the stage that allowed us our one and only dreams
+What's more to say?
+Pain always catches up to those who chooses to stay
+Though it may hurt today
+Tomorrow I'll be heading my way</Desc>
+			</TextList>
 	</bookDescList>
+	<BookDesc BookID="17000004">
+			<BookName>The Lunatic</BookName>
+			<TextList>
+ 				<Desc>If I beheaded my nightmare, I might feel good for a moment.
+I had been bearing with this shit until now to experience this small victory…
+If I were to gouge out this pain, would I be able to accept that it’s over?</Desc>
+				<Desc>If I neglected this choice I’ve been given, wouldn’t it… find a way to me in some other form eventually?
+I thought it’d all be over once I could accomplish this dream of vengeance.
+I had a reason I couldn’t give up… I told myself that this was for me…</Desc>
+				<Desc>That it’s only fair for me to destroy this place for taking the one I cherished away.
+Even if no one understood me… At least I would be able to understand myself.
+Deeper into the darkest depths. Fate made my heart cruel.</Desc>
+				<Desc>The paradise I only got to step in once… What did I do for it to be stolen from me so ruthlessly?
+Time stood still for me ever since that day. All I can see now is the life of the past, shrouded in darkness.
+But if I forgave everything…</Desc>
+				<Desc>If I decided to live down my past now, I felt I might have nowhere to stand.
+And I felt I might have to let go of all these precious memories of it.
+That’s what really scares me, Angelica.</Desc>
+			</TextList>
+			<PassiveList />
+		</BookDesc>
 </BookDescRoot>

@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using LOR_DiceSystem;
+using Contingecy_Contract;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ContractReward
 {
-    public class PassiveAbility_1860001 : PassiveAbilityBase
+    public class PassiveAbility_1860001 : PassiveAbilityBase, Retaliater
     {
         public override int SpeedDiceNumAdder()
         {
@@ -26,7 +27,7 @@ namespace ContractReward
         {
             if (owner.IsBreakLifeZero())
                 return null;
-            List<BattleDiceCardModel> hand = owner.allyCardDetail.GetHand().FindAll(x => x.GetCost() <= owner.cardSlotDetail.PlayPoint - owner.cardSlotDetail.ReservedPlayPoint && CheckRange(x.XmlData.Spec.Ranged));
+            List<BattleDiceCardModel> hand = owner.allyCardDetail.GetHand().FindAll(x => x.GetCost() <= owner.cardSlotDetail.PlayPoint - owner.cardSlotDetail.ReservedPlayPoint && CheckRange(x.XmlData.Spec.Ranged) && x.XmlData.Spec.affection!=CardAffection.TeamNear);
             if (hand.Count <= 0)
                 return null;
             BattleDiceCardModel card = hand[hand.Count-1];

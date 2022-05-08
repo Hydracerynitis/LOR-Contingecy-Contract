@@ -76,14 +76,19 @@ namespace Contingecy_Contract
                         {
                             if (Singleton<ContractLoader>.Instance.CheckActivate(contract, info) && contract.Variant >= condition.Variation)
                             {
+                                Debug.Log("Condition for {0} of contract {1} variantion {2} test True", RC.RewardId.ToString(), condition.Type, condition.Variation.ToString());
                                 check = true;
                                 break;
                             }                         
                         }
+                        Debug.Log("Condition for {0} of contract {1} variantion {2} test False", RC.RewardId.ToString(),condition.Type,condition.Variation.ToString());
                     }
-                    if(!check)
+                    if (!check)
+                    {
                         pass = false;
+                    }                 
                 }
+                Debug.Log("Condition for {0} test {1}", RC.RewardId.ToString(), pass.ToString());
                 if(pass)
                     Harmony_Patch.ClearList.Add(RC.RewardId);
             }

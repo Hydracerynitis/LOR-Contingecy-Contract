@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Card ID="17000031">
+		<Name>警戒姿态</Name>
+		<Artwork>Roland3Phase_RolandAtk</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Option>NoInventory</Option>
+		<Spec Range="Near" Cost="2" />
+		<Script>Vigilant1</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="5" Dice="9" Type="Atk" Detail="Slash" Motion="H" EffectRes="BS3DurandalHit_H" Script="bleeding4atk" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="BS3_G" Script="paralysis1pw" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="6" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="BS3DurandalPene_Z" Script="bleeding2atk" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="BS3_G" Script="ally2recover3atkfordef" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+  	</Card>
+	  <Card ID="17000032">
+		<Name>警戒姿态</Name>
+		<Artwork>Roland3Phase_RolandAtk</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Option>NoInventory</Option>
+		<Spec Range="Near" Cost="2" />
+		<Script>Vigilant2</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="6" Dice="9" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="BS3DurandalPene_Z" Script="strength1pw" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="BS3DurandalUp_J" Script="damage5atk" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="BS3_G" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+  	</Card>
+	  <Card ID="17000033">
+		<Name>怒火中烧</Name>
+		<Artwork>Roland3Phase_RolandLonely</Artwork>
+		<Rarity>Rare</Rarity>
+		<Option>NoInventory</Option>
+		<Spec Range="Near" Cost="1" />
+		<Script>energy3</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="4" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="quickness1pw" ActionScript="" Desc="" />
+			<Behaviour Min="5" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="BS3_G" Script="quickness1pw" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="BS3DurandalPene_Z" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+  	</Card>
+	<Card ID="17000034">
+		<Name>狂乱奔袭</Name>
+		<Artwork>Roland3Phase_RolandLonely</Artwork>
+		<Rarity>Rare</Rarity>
+		<Option>NoInventory</Option>
+		<Spec Range="Near" Cost="3" />
+		<Script>powerup2highspeed</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="BS3DurandalPene_Z" Script="vul1bleed1atk" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="H" EffectRes="BS3DurandalHit_H" Script="vul1bleed1atk" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="S1" EffectRes="BS3DurandalDown_S1" Script="vul1bleed1atk" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+  	</Card>
+	<Card ID="17000131">
+		<Name>漆黑华尔兹</Name>
+		<Artwork>Roland3Phase_CrossAtk</Artwork>
+		<Rarity>Unique</Rarity>
+		<Spec Range="Near" Cost="4" />
+		<Script>RolandCombo</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="8" Dice="14" Type="Atk" Detail="Slash" Motion="J" EffectRes="BS3DurandalUp_J" Script="bs3combodestroy" ActionScript="RolandCombo" Desc="" />
+			<Behaviour Min="3" Dice="7" Type="Atk" Detail="Slash" Motion="H" EffectRes="BS3DurandalHit_H" Script="" ActionScript="RolandCombo" Desc="" />
+			<Behaviour Min="7" Dice="10" Type="Atk" Detail="Hit" Motion="S1" EffectRes="BS3DurandalDown_S1" Script="allstr1endu1atk" ActionScript="RolandCombo" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+  	</Card>
+	<Card ID="17000132">
+		<Name>漆黑之束</Name>
+		<Artwork>Roland3Phase_BlackAura</Artwork>
+		<Rarity>Rare</Rarity>
+		<Spec Range="Near" Cost="1" />
+		<Script>RolandAura</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="4" Dice="8" Type="Standby" Detail="Slash" Motion="J" EffectRes="BS3DurandalUp_J" Script="dmg3pw" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="8" Type="Standby" Detail="Slash" Motion="S1" EffectRes="BS3DurandalDown_S1" Script="dmg3pw" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="7" Type="Standby" Detail="Slash" Motion="J" EffectRes="BS3DurandalUp_J" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+  	</Card>
+	  <Card ID="17000133">
+		<Name>混乱之束</Name>
+		<Artwork>Roland3Phase_MixAura</Artwork>
+		<Rarity>Unique</Rarity>
+		<Spec Range="Near" Cost="2" />
+		<Script>GainSL</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="5" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="quickness1pw" ActionScript="" Desc="" />
+			<Behaviour Min="5" Dice="8" Type="Atk" Detail="Slash" Motion="S1" EffectRes="BS3DurandalDown_S1" Script="" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="7" Type="Atk" Detail="Slash" Motion="H" EffectRes="BS3DurandalHit_H" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+  	</Card>
+	  <Card ID="17000134">
+		<Name>掩护-榉树工坊</Name>
+		<Artwork>Roland3Phase_RolandAtk</Artwork>
+    	<Rarity>Rare</Rarity>
+		<Spec Range="Near" Cost="0" />
+		<Script>RolandZelkova</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="3" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="BS3DurandalUp_J" Script="recoverBreak5atk" ActionScript="" Desc="" />
+			<Behaviour Min="3" Dice="8" Type="Atk" Detail="Slash" Motion="H" EffectRes="BS3DurandalHit_H" Script="recoverBreak5atk" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+  	</Card>
+	  <Card ID="17000135">
+		<Name>掩护-阿拉斯工坊</Name>
+		<Artwork>Roland3Phase_RolandAtk</Artwork>
+		<Rarity>Rare</Rarity>
+		<Spec Range="Near" Cost="2" />
+		<Script>RolandAllas</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="BS3DurandalPene_Z" Script="weak1atk" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="BS3DurandalPene_Z" Script="weak1atk" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+  	</Card>
+	  <Card ID="17000136">
+		<Name>掩护-逻辑工坊</Name>
+		<Artwork>Roland3Phase_RolandAtk</Artwork>
+    	<Rarity>Rare</Rarity>
+    	<Spec Range="Near" Cost="3" />
+    	<Script>RolandLogic</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="7" Dice="11" Type="Atk" Detail="Hit" Motion="S1" EffectRes="BS3DurandalDown_S1" Script="bind1paralysis1atk" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="BS3_G" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+  	</Card>
+		<Card ID="17000231">
+		<Name>纯白圆舞曲</Name>
+		<Artwork>Roland3Phase_CrossAtk</Artwork>
+		<Rarity>Unique</Rarity>
+		<Spec Range="Near" Cost="4" />
+		<Script>AngelicaCombo</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="6" Dice="9" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="bs3combodestroy" ActionScript="AngelicaCombo" Desc="" />
+			<Behaviour Min="6" Dice="9" Type="Atk" Detail="Slash" Motion="H" EffectRes="" Script="dmg4break4atk" ActionScript="AngelicaCombo" Desc="" />
+			<Behaviour Min="8" Dice="12" Type="Atk" Detail="Slash" Motion="Z" EffectRes="" Script="dmg10break10atk" ActionScript="AngelicaCombo" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+  	</Card>
+	<Card ID="17000232">
+		<Name>纯白之束</Name>
+		<Artwork>Roland3Phase_WhiteAura</Artwork>
+		<Rarity>Rare</Rarity>
+		<Spec Range="Near" Cost="2" />
+		<Script>AngelicaAura</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="6" Dice="10" Type="Standby" Detail="Hit" Motion="H" EffectRes="AngelicaAxe_H" Script="break3pw" ActionScript="" Desc="" />
+			<Behaviour Min="6" Dice="10" Type="Standby" Detail="Hit" Motion="H" EffectRes="AngelicaAxe_H" Script="break3pw" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+  	</Card>
+	  <Card ID="17000233">
+		<Name>混乱之束</Name>
+		<Artwork>Roland3Phase_MixAura</Artwork>
+		<Rarity>Unique</Rarity>
+		<Spec Range="Near" Cost="0" />
+		<Script>GainSL</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="6" Dice="9" Type="Atk" Detail="Hit" Motion="H" EffectRes="AngelicaAxe_H" Script="loselink1plbe" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="Angelica_G" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+  	</Card>
+	  <Card ID="17000234">
+		<Name>突击-榉树工坊</Name>
+		<Artwork>Roland3Phase_AngelicaAxe</Artwork>
+    	<Rarity>Common</Rarity>
+		<Spec Range="Near" Cost="0" />
+		<Script>AngelicaZelkova</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="H" EffectRes="AngelicaAxe_H" Script="bleeding3atk" ActionScript="" Desc="" />
+			<Behaviour Min="3" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="AngelicaMace_J" Script="break5atk" ActionScript="" Desc="" />      
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+  	</Card>
+	  <Card ID="17000235">
+		<Name>突击-阿拉斯工坊</Name>
+		<Artwork>Roland3Phase_AngelicaLance</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Spec Range="Near" Cost="2" />
+		<Script>AngelicaAllas</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="5" Dice="9" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="AngelicaLance_Z" Script="strength1atkMostHp" ActionScript="" Desc="" />
+			<Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="AngelicaLance_Z" Script="protection2atkMostHp" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+  	</Card>
+	  <Card ID="17000236">
+		<Name>突击-逻辑工坊</Name>
+		<Artwork>Roland3Phase_AngelicaLance</Artwork>
+    	<Rarity>Uncommon</Rarity>
+    	<Spec Range="Far" Cost="3" />
+    	<Script>AngelicaLogic</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="7" Dice="11" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="Angelica_F" Script="bind1paralysis1atk" ActionScript="" Desc="" />
+			<Behaviour Min="7" Dice="11" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="Angelica_F" Script="bind1paralysis1atk" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+  	</Card>
+	<Card ID="17000331">
+		<Name>共舞</Name>
+		<Artwork>Roland3Phase_CrossAtk</Artwork>
+		<Rarity>Unique</Rarity>
+    	<Option>Personal</Option>
+		<Spec Range="Instance" Cost="0"/>
+		<Script>DanceTogether</Script>
+    	<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+    	</BehaviourList>
+    	<Chapter>7</Chapter>
+    	<Priority>0</Priority>
+	</Card> 
+</DiceCardXmlRoot>

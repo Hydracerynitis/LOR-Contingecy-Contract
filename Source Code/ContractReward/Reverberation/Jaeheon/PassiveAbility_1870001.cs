@@ -6,7 +6,6 @@ using UI;
 using System.Reflection;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using BaseMod;
 
 namespace ContractReward
@@ -30,7 +29,7 @@ namespace ContractReward
         }
         public void Revive()
         {
-            List<BattleUnitModel> Dead = BattleObjectManager.instance.GetFriendlyAllList(this.owner.faction).FindAll((Predicate<BattleUnitModel>)(x =>x.IsDead()==true));
+            List<BattleUnitModel> Dead = BattleObjectManager.instance.GetFriendlyAllList(this.owner.faction).FindAll(x =>x.IsDead()==true);
             Angelica = RandomUtil.SelectOne<BattleUnitModel>(Dead);
             BookModel puppet=new BookModel(Singleton<BookXmlList>.Instance.GetData(Tools.MakeLorId(18710000)));
             Contingecy_Contract.Harmony_Patch.UnitBookId.Add(Angelica, Angelica.Book.GetBookClassInfoId());
@@ -44,7 +43,7 @@ namespace ContractReward
             Angelica.Book.SetResistBP(BehaviourDetail.Slash, puppet.GetResistBP(BehaviourDetail.Slash));
             Angelica.Book.SetResistBP(BehaviourDetail.Penetrate, puppet.GetResistBP(BehaviourDetail.Penetrate));
             Angelica.Book.SetResistBP(BehaviourDetail.Hit, puppet.GetResistBP(BehaviourDetail.Hit));
-            Angelica.Book.GetType().GetField("_maxPlayPoint", AccessTools.all).SetValue(Angelica.Book, puppet.GetMaxPlayPoint());
+            Angelica.Book._maxPlayPoint = puppet.GetMaxPlayPoint();
             Angelica.Book.ClassInfo._id = puppet.GetBookClassInfoId().id;
             Angelica.Book.ClassInfo.workshopID= puppet.GetBookClassInfoId().packageId;
             Angelica.view.ChangeSkin(puppet.GetCharacterName());

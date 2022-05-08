@@ -13,9 +13,9 @@ namespace Contingecy_Contract
 {
     public class StaticDataManager
     {
+        public static Dictionary<string, GameObject> VanilaGameObject=new Dictionary<string, GameObject>();
         public static List<Contract> JsonList = new List<Contract>();
-        public static Dictionary<LorId, int> ThumbPathDictionary = new Dictionary<LorId, int>();
-        public static Dictionary<LorId, Sprite> NonThumbSprite = new Dictionary<LorId, Sprite>();
+        public static Dictionary<LorId , Sprite> NonThumbSprite = new Dictionary<LorId, Sprite>();
         public static Dictionary<LorId, int> RewardDic = new Dictionary<LorId, int>();
         public static List<RewardConfition> ExtraCondition=new List<RewardConfition>();
         public static Dictionary<(string, string), string> ContractParam = new Dictionary<(string, string), string>();
@@ -23,9 +23,10 @@ namespace Contingecy_Contract
         {
             LoadContractParam();
             LoadContract();
-            LoadThumb();
+            InitNonThumbDic();
             LoadReward();
             LoadExtraCondition();
+            LoadGameObject();
         }
         public static void LoadContract()
         {
@@ -66,48 +67,11 @@ namespace Contingecy_Contract
                     Debug.Error("JSON", ex);
                 }
             }
-            /*            try
-                        {
-                            foreach (NewContract bluePrint in ContractXmlList.JsonList)
-                            {
-                                Debug.ErrorLog("JsonItem", bluePrint.ToJson<NewContract>());
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            Debug.Error("ToJSOn", ex);
-                        }*/
         }
-        public static void LoadThumb()
+        public static void InitNonThumbDic()
         {
-            Debug.PathDebug("/Staticinfo/ThumbPath", PathType.Directory);
-            Debug.XmlFileDebug("/Staticinfo/ThumbPath");
-            foreach (FileInfo file in new DirectoryInfo(Harmony_Patch.ModPath + "/Staticinfo/ThumbPath").GetFiles())
-            {
-                try
-                {
-                    XmlDocument xml = new XmlDocument();
-                    xml.LoadXml(File.ReadAllText(file.FullName));
-                    foreach (XmlNode node in xml.SelectNodes("ThumbPath/Path"))
-                    {
-                        string str = string.Empty;
-                        if (node.Attributes.GetNamedItem("id") != null)
-                            str = node.Attributes.GetNamedItem("id").InnerText;
-                        int key = Int32.Parse(str);
-                        if (node.InnerText == "null")
-                        {
-                            NonThumbSprite[Tools.MakeLorId(key)] = null;
-                            continue;
-                        }
-                        int value = Int32.Parse(node.InnerText);
-                        ThumbPathDictionary[Tools.MakeLorId(key)] = value;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Debug.Error("ThumbLoadError", ex);
-                }
-            }
+            foreach (int i in Harmony_Patch.NoThumbPage)
+                NonThumbSprite.Add(Tools.MakeLorId(i), null);
         }
         public static void LoadReward()
         {
@@ -172,6 +136,11 @@ namespace Contingecy_Contract
                     Debug.Error("ContractParam", ex);
                 }
             }
+        }
+        public static void LoadGameObject()
+        {
+            GameObject BSA = Resources.Load<GameObject>("Prefabs/InvitationMaps/InvitationMap_BlackSilence4");
+            VanilaGameObject.Add("BlackSilence4Aura", ((BlackSilence4thMapManager)BSA.GetComponent<MapManager>()).areaAuraEffect);
         }
         public static string GetParam(string ID, string Language)
         {

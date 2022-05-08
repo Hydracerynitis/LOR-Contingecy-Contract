@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleCardDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	 <cardDescList>
+	 	<BattleCardDesc ID="17000021">
+			<LocalizedName>震骇猛击</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000022">
+			<LocalizedName>大卸八块</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000023">
+			<LocalizedName>巨尾横扫</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000024">
+			<LocalizedName>血肉凝结</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000025">
+			<LocalizedName>毒烟爆喷</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000026">
+			<LocalizedName>尖刺地狱</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000031">
+			<LocalizedName>警戒姿态</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000032">
+			<LocalizedName>警戒姿态</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000033">
+			<LocalizedName>怒火中烧</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000034">
+			<LocalizedName>狂乱奔袭</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000131">
+			<LocalizedName>漆黑华尔兹</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000132">
+			<LocalizedName>漆黑之束</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000133">
+			<LocalizedName>混乱之束</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000134">
+			<LocalizedName>掩护-榉树工坊</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000135">
+			<LocalizedName>掩护-阿拉斯工坊</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000136">
+			<LocalizedName>掩护-逻辑工坊</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000231">
+			<LocalizedName>纯白圆舞曲</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000232">
+			<LocalizedName>纯白之束</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000233">
+			<LocalizedName>混乱之束</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000234">
+			<LocalizedName>突击-榉树工坊</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000235">
+			<LocalizedName>突击-阿拉斯工坊</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000236">
+			<LocalizedName>突击-逻辑工坊</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000331">
+			<LocalizedName>共舞</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000040">
+			<LocalizedName>Fruioso</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000041">
+			<LocalizedName>阿拉斯工坊</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000042">
+			<LocalizedName>轮盘重工</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000043">
+			<LocalizedName>桦树工坊</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000044">
+			<LocalizedName>老男孩工坊</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000045">
+			<LocalizedName>墨工坊</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000046">
+			<LocalizedName>琅琊工坊</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000047">
+			<LocalizedName>卡莉斯塔工坊</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000048">
+			<LocalizedName>逻辑工坊</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000049">
+			<LocalizedName>杜兰特尔</LocalizedName>
+		</BattleCardDesc>
+ 	</cardDescList>
+</BattleCardDescRoot>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleCardDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	 <cardDescList>
+	 	<BattleCardDesc ID="17000021">
+			<LocalizedName>Swing</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000022">
+			<LocalizedName>Bite of Flesh</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000023">
+			<LocalizedName>Tail Swipe</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000024">
+			<LocalizedName>Amalgamated Sinews</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000025">
+			<LocalizedName>Spiky Tendrils</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000026">
+			<LocalizedName>Spew Smoke</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000031">
+			<LocalizedName>Vigilant Stand</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000032">
+			<LocalizedName>Vigilant Stand</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000033">
+			<LocalizedName>Fury</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000034">
+			<LocalizedName>Frenzy</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000131">
+			<LocalizedName>Waltz in Black</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000132">
+			<LocalizedName>Dark Bond</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000133">
+			<LocalizedName>Unstable Bond</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000134">
+			<LocalizedName>Flank: Zelkova Workshop</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000135">
+			<LocalizedName>Flank: Allas Workshop</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000136">
+			<LocalizedName>Flank: Atelier Logique</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000231">
+			<LocalizedName>Waltz in White</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000232">
+			<LocalizedName>Ashen Bond</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000233">
+			<LocalizedName>Unstable Bond</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000234">
+			<LocalizedName>Charge: Zelkova Workshop</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000235">
+			<LocalizedName>Charge: Allas Workshop</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000236">
+			<LocalizedName>Charge: Atelier Logique</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000331">
+			<LocalizedName>Invitation</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000040">
+			<LocalizedName>Fruioso</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000041">
+			<LocalizedName>Allas Workshop</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000042">
+			<LocalizedName>Wheels Industry</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000043">
+			<LocalizedName>Zelkova Workshop</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000044">
+			<LocalizedName>Old Boys Workshop</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000045">
+			<LocalizedName>Mook Workshop</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000046">
+			<LocalizedName>Ranga Workshop</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000047">
+			<LocalizedName>Atelier Crystal</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000048">
+			<LocalizedName>Atelier Logique</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000049">
+			<LocalizedName>Durandal</LocalizedName>
+		</BattleCardDesc>
+ 	</cardDescList>
+</BattleCardDescRoot>

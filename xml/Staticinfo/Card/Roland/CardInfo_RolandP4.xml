@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Card ID="17000040">
+        <Name>Fruioso</Name>
+        <Artwork>Roland3Phase_RolandFury</Artwork>
+        <Rarity>Unique</Rarity>
+        <Spec Range="FarAreaEach" Cost="4" Affection="Team"/>
+        <Option>Personal</Option>
+        <Script>MadFurioso</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="5" Dice="7" Type="Atk" Detail="Slash" Motion="N" EffectRes="" Script="" ActionScript="MadFurioso" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="17000041">
+        <Name>阿拉斯工坊</Name>
+        <Artwork>Roland1</Artwork>
+        <Rarity>Uncommon</Rarity>
+        <Option>ExhaustOnUse</Option>
+        <Option>NoInventory</Option>
+        <Spec Range="Near" Cost="2" />
+        <Script>cardPowerDown2target</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="5" Dice="9" Type="Atk" Detail="Penetrate" Motion="S11" EffectRes="BlackSilence_4th_Lance_S11" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="S11" EffectRes="BlackSilence_4th_Lance_S11" Script="" ActionScript="" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="17000042">
+        <Name>轮盘重工</Name>
+        <Artwork>Roland2</Artwork>
+        <Rarity>Rare</Rarity>
+        <Option>NoInventory</Option>
+        <Option>ExhaustOnUse</Option>
+        <Spec Range="Near" Cost="4" />
+        <Script></Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="14" Dice="24" Type="Atk" Detail="Hit" Motion="S7" EffectRes="BlackSilence_4th_GreatSword_S7" Script="clockEgoDice" ActionScript="" Desc="" />
+            <Behaviour Min="5" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="17000043">
+        <Name>桦树工坊</Name>
+        <Artwork>Roland3</Artwork>
+        <Rarity>Common</Rarity>
+        <Option>NoInventory</Option>
+        <Option>ExhaustOnUse</Option>
+        <Spec Range="Near" Cost="0" />
+        <Script>rolandDrawUtil</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="S5" EffectRes="BlackSilence_4th_MaceAxe_S5" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="3" Dice="8" Type="Atk" Detail="Hit" Motion="S5" EffectRes="BlackSilence_4th_MaceAxe_S5" Script="" ActionScript="" Desc="" />      
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="17000044">
+        <Name>老男孩工坊</Name>
+        <Artwork>Roland4</Artwork>
+        <Rarity>Common</Rarity>
+        <Option>NoInventory</Option>
+        <Option>ExhaustOnUse</Option>
+        <Spec Range="Near" Cost="1" />
+        <Script>energy3AndDraw1</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="5" Dice="9" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="S6" EffectRes="BlackSilence_4th_Hammer_S6" Script="recoverBreak5atk" ActionScript="" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="17000045">
+        <Name>墨工坊</Name>
+        <Artwork>Roland5</Artwork>
+        <Rarity>Uncommon</Rarity>
+        <Option>NoInventory</Option>
+        <Option>ExhaustOnUse</Option>
+        <Spec Range="Near" Cost="2" />
+        <Script>energy3AndDraw1</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="8" Dice="15" Type="Atk" Detail="Slash" Motion="S2" EffectRes="BlackSilence_4th_LongSword_S2" Script="damage3atk" ActionScript="dawnAction" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="17000046">
+        <Name>琅琊工坊</Name>
+        <Artwork>Roland6</Artwork>
+        <Rarity>Common</Rarity>
+        <Option>NoInventory</Option>
+        <Option>ExhaustOnUse</Option>
+        <Spec Range="Near" Cost="0" />
+        <Script>fixedCost</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="S3" EffectRes="BlackSilence_4th_Gauntlet_S3" Script="" ActionScript="BlackSilence_Gauntlet1" Desc="" />
+            <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="S3" EffectRes="BlackSilence_4th_Gauntlet_S3" Script="" ActionScript="BlackSilence_Gauntlet2" Desc="" />
+            <Behaviour Min="3" Dice="7" Type="Atk" Detail="Slash" Motion="S4" EffectRes="BlackSilence_4th_ShortSword_S4" Script="bleeding2atk" ActionScript="BlackSilence_ShortSword" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="17000047">
+        <Name>卡莉斯塔工坊</Name>
+        <Artwork>Roland7</Artwork>
+        <Rarity>Uncommon</Rarity>
+        <Option>NoInventory</Option>
+        <Option>ExhaustOnUse</Option>
+        <Spec Range="Near" Cost="3" />
+        <Script></Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="8" Dice="11" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="7" Dice="11" Type="Atk" Detail="Slash" Motion="S9" EffectRes="BlackSilence_4th_DualWield1_S9" Script="" ActionScript="BlackSilence_DualWield1" Desc="" />
+            <Behaviour Min="7" Dice="11" Type="Atk" Detail="Slash" Motion="S10" EffectRes="BlackSilence_4th_DualWield1_S10" Script="" ActionScript="BlackSilence_DualWield2" Desc="" />
+            <Behaviour Min="4" Dice="8" Type="Standby" Detail="Slash" Motion="S10" EffectRes="BlackSilence_4th_DualWield1_S10" Script="" ActionScript="BlackSilence_DualWield1" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="17000048">
+        <Name>逻辑工坊</Name>
+        <Artwork>Roland8</Artwork>
+        <Rarity>Uncommon</Rarity>
+        <Option>NoInventory</Option>
+        <Option>ExhaustOnUse</Option>
+        <Spec Range="Far" Cost="2" />
+        <Script></Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="BlackSilence_4th_Revolver_S1" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="BlackSilence_4th_Revolver_S1" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="7" Dice="12" Type="Atk" Detail="Hit" Motion="S8" EffectRes="BlackSilence_4th_Shotgun_S8" Script="" ActionScript="" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="17000049">
+        <Name>杜兰特尔</Name>
+        <Artwork>Roland9</Artwork>
+        <Rarity>Rare</Rarity>
+        <Option>NoInventory</Option>
+        <Option>ExhaustOnUse</Option>
+        <Spec Range="Near" Cost="2" />
+        <Script></Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="5" Dice="9" Type="Atk" Detail="Slash" Motion="S9" EffectRes="BlackSilence_4th_DualWield1_S9" Script="strength1atk" ActionScript="" Desc="" />
+            <Behaviour Min="5" Dice="9" Type="Atk" Detail="Slash" Motion="S10" EffectRes="BlackSilence_4th_DualWield2_S10" Script="strength1atk" ActionScript="" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+</DiceCardXmlRoot>

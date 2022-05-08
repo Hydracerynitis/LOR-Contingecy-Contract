@@ -1,7 +1,75 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <PassiveDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <PassiveDesc ID="1700000">
+    <PassiveDesc ID="1700001">
+        <Name>Perfect Extraction -- Roland</Name>
+        <Desc>&lt;color=#FF0000&gt;Unable to utilize Emotion Card and EGO from the Library. Any attempt to apply emotion card will result in wasting said emotion card.&lt;/color&gt;
+Can only be equiped by Roland.</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1700002">
         <Name>Perfect Extraction -- Roland</Name>
         <Desc>&lt;color=#FF0000&gt;Unable to utilize Emotion Card and EGO from the Library. Any attempt to apply emotion card will result in wasting said emotion card.&lt;/color&gt;</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1700011">
+        <Name>Balck Silence</Name>
+        <Desc>Draw 2 additional pages at the start of the Act. Can use exclusive Page "Furioso"
+All dice on every third Combat Page used gain +2 Power.</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1700012">
+        <Name>Retaliate</Name>
+        <Desc>Gain 2 dice (Slash, 4-8) at combat start.</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1700013">
+        <Name>Clenched Grudge</Name>
+        <Desc>Recover 5 Stagger Resist on hit; lose 8 Stagger Resist on clash lose.</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1700014">
+        <Name>Perception-blocking Mask</Name>
+        <Desc>A Speed die with the lowest Speed becomes untargetable.</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1700021">
+        <Name>The Hatching Dead</Name>
+        <Desc>Whenever another characer is defeated, spawn a Smoldering Byproduct to replace it next Scene. 
+At the start of each Scene, inflict 1 Suffocating Haze.</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1700022">
+        <Name>Alien and Horrifying</Name>
+        <Desc>At the start of each Act, draw 2 cards.
+On clash, make enemy lose 20% of their current Stagger Resist.</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1700023">
+        <Name>Juggernaut</Name>
+        <Desc>At the start of combat of each third Scene, use an Individual Mass Attack Page targeting all other units.
+(Penetrate 4-12 [On Hit] Inflict 3 Bleed in the next Scene.)</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1700024">
+        <Name>Wielder of Suffocating Haze</Name>
+        <Desc>When attacking, if target has Suffocating Haze, deal +2 damage.
+When hit, if attacker has Suffocating Haze, take 2 less damage.</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1700031">
+        <Name>Last Dance</Name>
+        <Desc>Gain Page that make other ally synchronize with "The White Guard".
+Synchronization will change both decks into those focusing on Unite and gain 4 Soul Link.</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1700032">
+        <Name>Dark Mark</Name>
+        <Desc>Dice of Pages against enemy with "Dark Mark" gain 2 Power.</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1700033">
+        <Name>Dearly Parting</Name>
+        <Desc>When The White Guard die, become staggerd and increase outgoing Damage and Stagger Damage by 100% for the rest of the Act.</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1701030">
+        <Name>Request Target</Name>
+        <Desc>Dice of Pages against enemy with lowest HP gain 1 Power.</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1701031">
+        <Name>Dark Mark</Name>
+        <Desc>Leave a 'Dark Mark' on the character that engaged this character last every Scene.</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1701032">
+        <Name>Dearly Parting</Name>
+        <Desc>When The Black Servant die, end synchronization.
+Gain 2 Strength, Endurance the Scene after the end of synchronization.</Desc>
     </PassiveDesc>
 </PassiveDescRoot>

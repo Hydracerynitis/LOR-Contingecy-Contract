@@ -11,4 +11,59 @@
 		<Card Pid="@origin">702008</Card>
 		<Card Pid="@origin">702009</Card>
 	</Deck>
+	<Deck ID="17000002">
+		<Card>17000021</Card>
+		<Card>17000021</Card>
+		<Card>17000022</Card>
+		<Card>17000022</Card>
+		<Card>17000023</Card>
+		<Card>17000023</Card>
+		<Card>17000024</Card>
+		<Card>17000024</Card>
+		<Card>17000025</Card>
+	</Deck>
+	<Deck ID="17000003">
+		<Card>17000031</Card>
+		<Card>17000031</Card>
+		<Card>17000032</Card>
+		<Card>17000032</Card>
+		<Card>17000033</Card>
+		<Card>17000033</Card>
+		<Card>17000034</Card>
+		<Card>17000034</Card>
+		<Card>17000034</Card>
+	</Deck>
+	<Deck ID="17000103">
+		<Card>17000231</Card>
+		<Card>17000232</Card>
+		<Card>17000232</Card>
+		<Card>17000233</Card>
+		<Card>17000234</Card>
+		<Card>17000234</Card>
+		<Card>17000235</Card>
+		<Card>17000235</Card>
+		<Card>17000236</Card>
+	</Deck>
+	<Deck ID="17000203">
+		<Card>17000131</Card>
+		<Card>17000132</Card>
+		<Card>17000132</Card>
+		<Card>17000133</Card>
+		<Card>17000134</Card>
+		<Card>17000134</Card>
+		<Card>17000135</Card>
+		<Card>17000135</Card>
+		<Card>17000136</Card>
+	</Deck>
+	<Deck ID="17000004">
+		<Card>17000041</Card>
+		<Card>17000042</Card>
+		<Card>17000043</Card>
+		<Card>17000044</Card>
+		<Card>17000045</Card>
+		<Card>17000046</Card>
+		<Card>17000047</Card>
+		<Card>17000048</Card>
+		<Card>17000049</Card>
+	</Deck>
 </DeckXmlRoot>

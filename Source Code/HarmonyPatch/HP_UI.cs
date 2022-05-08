@@ -6,18 +6,20 @@ using TMPro;
 using UC = UI.UIController;
 using BaseMod;
 using UnityEngine.UI;
+using ContractReward;
 
 namespace Contingecy_Contract
 {
     [HarmonyPatch]
-    public class HarmonyPatch_UI
+    public class HP_UI
     {
+        static Color grey= new Color(0.75f, 0.75f, 0.75f);
         [HarmonyPatch(typeof(UISettingInvenEquipPageSlot), nameof(UISettingInvenEquipPageSlot.SetOperatingPanel))]
         [HarmonyPostfix]
         static void UISettingInvenEquipPageSlot_SetOperatingPanel_Pre(BookModel ____bookDataModel, UICustomGraphicObject ___button_Equip, TextMeshProUGUI ___txt_equipButton, Image ___img_equipbuttonIcon)
         {
             UnitDataModel currentUnit = UC.Instance.CurrentUnit;
-            if (____bookDataModel != null && ____bookDataModel.ClassInfo.id == Tools.MakeLorId(17000001))
+            if (____bookDataModel != null && (____bookDataModel.ClassInfo.id == Tools.MakeLorId(17000001) || ____bookDataModel.ClassInfo.id == Tools.MakeLorId(17000004)))
             {
                 if (Harmony_Patch.IsRoland(currentUnit))
                 {
@@ -40,7 +42,7 @@ namespace Contingecy_Contract
         static void UISettingInvenEquipPageLeftSlot_SetOperatingPanel_Pre(BookModel ____bookDataModel, UICustomGraphicObject ___button_Equip, TextMeshProUGUI ___txt_equipButton, Image ___img_equipbuttonIcon)
         {
             UnitDataModel currentUnit = UC.Instance.CurrentUnit;
-            if (____bookDataModel != null && ____bookDataModel.ClassInfo.id == Tools.MakeLorId(17000001))
+            if (____bookDataModel != null && (____bookDataModel.ClassInfo.id == Tools.MakeLorId(17000001) || ____bookDataModel.ClassInfo.id == Tools.MakeLorId(17000004)))
             {
                 if (Harmony_Patch.IsRoland(currentUnit))
                 {
@@ -63,7 +65,7 @@ namespace Contingecy_Contract
         static void UIInvenEquipPageSlot_SetOperatingPanel_Pre(BookModel ____bookDataModel, UICustomGraphicObject ___button_Equip, TextMeshProUGUI ___txt_equipButton, Image ___img_equipbuttonIcon)
         {
             UnitDataModel currentUnit = UC.Instance.CurrentUnit;
-            if (____bookDataModel != null && ____bookDataModel.ClassInfo.id == Tools.MakeLorId(17000001))
+            if (____bookDataModel != null && (____bookDataModel.ClassInfo.id == Tools.MakeLorId(17000001) || ____bookDataModel.ClassInfo.id == Tools.MakeLorId(17000004)))
             {
                 if (Harmony_Patch.IsRoland(currentUnit))
                 {
@@ -86,7 +88,7 @@ namespace Contingecy_Contract
         static void UIInvenLeftEquipPageSlot_SetOperatingPanel_Pre(BookModel ____bookDataModel, UICustomGraphicObject ___button_Equip, TextMeshProUGUI ___txt_equipButton, Image ___img_equipbuttonIcon)
         {
             UnitDataModel currentUnit = UC.Instance.CurrentUnit;
-            if (____bookDataModel != null && ____bookDataModel.ClassInfo.id == Tools.MakeLorId(17000001))
+            if (____bookDataModel != null && (____bookDataModel.ClassInfo.id == Tools.MakeLorId(17000001) || ____bookDataModel.ClassInfo.id == Tools.MakeLorId(17000004)))
             {
                 if (Harmony_Patch.IsRoland(currentUnit))
                 {
@@ -102,6 +104,42 @@ namespace Contingecy_Contract
                     ___txt_equipButton.text = TextDataModel.GetText(id1);
                     ___img_equipbuttonIcon.color = UIColorManager.Manager.GetUIColor(UIColor.Disabled);
                 }
+            }
+        }
+        [HarmonyPatch(typeof(BattleUnitInfoManagerUI),nameof(BattleUnitInfoManagerUI.DisplayDlg))]
+        [HarmonyPrefix]
+        static bool BattleUnitInfoManagerUI_DisplayDlg_Pre(ref string str, BattleUnitModel unit)
+        {
+            if (unit.passiveDetail.HasPassive<PassiveAbility_1700000>())
+                str = "..............";
+            return true;
+        }
+        [HarmonyPatch(typeof(BattleDiceCardUI), nameof(BattleDiceCardUI.SetCard))]
+        [HarmonyPostfix]
+        static void BattleDiceCardUI_SetCard(BattleDiceCardUI __instance)
+        {
+            if(__instance.CardModel!=null && __instance.CardModel.GetID().id >= 17000040 && __instance.CardModel.GetID().id <= 17000049 && __instance.CardModel.GetID().packageId== "ContingencyConract")
+            {
+                __instance.colorFrame = grey;
+                __instance.colorLineardodge= grey;
+                __instance.colorLineardodge_deactive = __instance.colorLineardodge;
+                __instance.colorLineardodge_deactive.a = 0;
+                __instance.SetFrameColor(__instance.colorFrame);
+                __instance.SetLinearDodgeColor(__instance.colorLineardodge);
+                __instance.img_artwork.color = grey;
+            }
+        }
+        [HarmonyPatch(typeof(UIOriginCardSlot), nameof(UIOriginCardSlot.SetData))]
+        [HarmonyPostfix]
+        static void UIOriginCardSlot_SetData(UIOriginCardSlot __instance)
+        {
+            if (__instance.CardModel != null && __instance.CardModel.GetID().id >= 17000040 && __instance.CardModel.GetID().id <= 17000049 && __instance.CardModel.GetID().packageId == "ContingencyConract")
+            {
+                __instance.colorFrame = grey;
+                __instance.colorLineardodge = grey;
+                __instance.SetFrameColor(__instance.colorFrame);
+                __instance.SetLinearDodgeColor(__instance.colorLineardodge);
+                __instance.img_Artwork.color = grey;
             }
         }
     } 

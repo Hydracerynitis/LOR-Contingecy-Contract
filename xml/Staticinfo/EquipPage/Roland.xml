@@ -6,7 +6,7 @@
     		<Category>DeckFixed</Category>
     		<EquipEffect>
       			<HP>150</HP>
-      			<Break>70</Break>
+      			<Break>90</Break>
       			<SpeedMin>2</SpeedMin>
       			<Speed>7</Speed>
       			<SResist>Normal</SResist>
@@ -18,11 +18,11 @@
       			<StartPlayPoint>4</StartPlayPoint>
       			<MaxPlayPoint>4</MaxPlayPoint>
       			<Passive Pid="@origin">10004</Passive>
-                <Passive>1700000</Passive>
-                <Passive Pid="@origin">170002</Passive>
-                <Passive Pid="@origin">170003</Passive>
-                <Passive Pid="@origin">170004</Passive>
-      			<Passive Pid="@origin">10013</Passive>
+                <Passive>1700001</Passive>
+      			<Passive>1700011</Passive>
+				<Passive>1700012</Passive>
+				<Passive>1700013</Passive>
+				<Passive>1700014</Passive>
                 <Passive Pid="@origin">250002</Passive>
     		</EquipEffect>
     		<BookIcon>ContingencyReward</BookIcon>
@@ -30,5 +30,122 @@
     		<Episode>1800007</Episode>
     		<Rarity>Unique</Rarity>
     		<CharacterSkin>BlackSilenceMask</CharacterSkin>
+ 	 </Book>
+	<Book ID="17000002">
+    		<Name>肮脏巨兽</Name>
+   		 <TextId>17000002</TextId>
+    		<Category>DeckFixed</Category>
+    		<EquipEffect>
+      			<HP>300</HP>
+      			<Break>150</Break>
+      			<SpeedMin>2</SpeedMin>
+      			<Speed>4</Speed>
+      			<SResist>Endure</SResist>
+                <PResist>Normal</PResist>
+                <HResist>Normal</HResist> 
+                <SBResist>Normal</SBResist>
+                <PBResist>Normal</PBResist>
+                <HBResist>Vulnerable</HBResist>
+      			<StartPlayPoint>4</StartPlayPoint>
+      			<MaxPlayPoint>4</MaxPlayPoint>
+      			<Passive Pid="@origin">10004</Passive>
+                <Passive>1700002</Passive>
+      			<Passive>1700021</Passive>
+				<Passive>1700022</Passive>
+				<Passive>1700023</Passive>
+				<Passive>1700024</Passive>
+    		</EquipEffect>
+    		<BookIcon>ContingencyReward</BookIcon>
+    		<Chapter>7</Chapter>
+    		<Episode>1800007</Episode>
+    		<Rarity>Unique</Rarity>
+    		<CharacterSkin>Roland2Phase</CharacterSkin>
+ 	 </Book>
+	  <Book ID="17000003">
+    		<Name>黑侍</Name>
+   		 <TextId>17000003</TextId>
+    		<Category>DeckFixed</Category>
+    		<EquipEffect>
+      			<HP>130</HP>
+      			<Break>50</Break>
+      			<SpeedMin>2</SpeedMin>
+      			<Speed>7</Speed>
+      			<SResist>Normal</SResist>
+                <PResist>Normal</PResist>
+                <HResist>Normal</HResist> 
+                <SBResist>Endure</SBResist>
+                <PBResist>Endure</PBResist>
+                <HBResist>Endure</HBResist>
+      			<StartPlayPoint>4</StartPlayPoint>
+      			<MaxPlayPoint>4</MaxPlayPoint>
+      			<Passive Pid="@origin">10008</Passive>
+                <Passive>1700002</Passive>
+      			<Passive>1700031</Passive>
+				<Passive Pid="@origin">260004</Passive>
+				<Passive>1700014</Passive>
+                <Passive Pid="@origin">250002</Passive>
+    		</EquipEffect>
+    		<BookIcon>ContingencyReward</BookIcon>
+    		<Chapter>7</Chapter>
+    		<Episode>1800007</Episode>
+    		<Rarity>Unique</Rarity>
+    		<CharacterSkin>BlackSilence3</CharacterSkin>
+ 	 </Book>
+	  <Book ID="17000103">
+    		<Name>白卫</Name>
+   		 <TextId>17000103</TextId>
+    		<Category>DeckFixed</Category>
+    		<EquipEffect>
+      			<HP>110</HP>
+      			<Break>60</Break>
+      			<SpeedMin>2</SpeedMin>
+      			<Speed>7</Speed>
+      			<SResist>Endure</SResist>
+                <PResist>Endure</PResist>
+                <HResist>Endure</HResist> 
+                <SBResist>Normal</SBResist>
+                <PBResist>Normal</PBResist>
+                <HBResist>Normal</HBResist>
+      			<StartPlayPoint>4</StartPlayPoint>
+      			<MaxPlayPoint>4</MaxPlayPoint>
+      			<Passive Pid="@origin">10008</Passive>
+      			<Passive>1701030</Passive>
+				<Passive>1701031</Passive>
+				<Passive>1701032</Passive>
+    		</EquipEffect>
+    		<BookIcon>ContingencyReward</BookIcon>
+    		<Chapter>7</Chapter>
+    		<Episode>1800007</Episode>
+    		<Rarity>Unique</Rarity>
+    		<CharacterSkin>AngelicaPhantom</CharacterSkin>
+ 	 </Book>
+	<Book ID="17000004">
+    		<Name>疯子</Name>
+   		 <TextId>17000004</TextId>
+    		<Category>DeckFixed</Category>
+    		<EquipEffect>
+      			<HP>110</HP>
+      			<Break>50</Break>
+      			<SpeedMin>2</SpeedMin>
+      			<Speed>7</Speed>
+      			<SResist>Endure</SResist>
+                <PResist>Endure</PResist>
+                <HResist>Endure</HResist> 
+                <SBResist>Endure</SBResist>
+                <PBResist>Endure</PBResist>
+                <HBResist>Endure</HBResist>
+      			<StartPlayPoint>4</StartPlayPoint>
+      			<MaxPlayPoint>4</MaxPlayPoint>
+      			<Passive Pid="@origin">10008</Passive>
+				<Passive>1700001</Passive>
+                <Passive>1700041</Passive>
+      			<Passive>1700042</Passive>
+				<Passive>1700043</Passive>
+    		</EquipEffect>
+    		<BookIcon>ContingencyReward</BookIcon>
+    		<Chapter>7</Chapter>
+    		<Episode>1800007</Episode>
+    		<Rarity>Unique</Rarity>
+    		<CharacterSkin>BlackSilence4</CharacterSkin>
  	 </Book>
 </BookXmlRoot>

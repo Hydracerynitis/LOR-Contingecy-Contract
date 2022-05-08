@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleCardAbilityDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<!--P3-->
+	  <BattleCardAbility ID="Vigilant1">
+    		<Desc>[使用时] 下一幕获得2层[迅捷]</Desc>
+			<Desc>这一幕结束时若在手中则恢复1点光芒</Desc>
+  	</BattleCardAbility>
+	  <BattleCardAbility ID="Vigilant2">
+    		<Desc>[使用时] 抽取3张书页</Desc>
+			<Desc>这一幕结束时若在手中则下一幕获得1层[迅捷]</Desc>
+  	</BattleCardAbility>
+	  <BattleCardAbility ID="RolandCombo">
+    		<Desc>[协同 纯白圆舞曲] 恢复6点光芒并且抽取2张书页</Desc>
+  	</BattleCardAbility>
+	  <BattleCardAbility ID="AngelicaCombo">
+    		<Desc>[协同 漆黑华尔兹] 恢复6点光芒并且抽取2张书页</Desc>
+  	</BattleCardAbility>
+	  <BattleCardAbility ID="RolandAura">
+    		<Desc>[协同 纯白之束] 使自身和[协同者]抽取2张书页</Desc>
+  	</BattleCardAbility>
+	  <BattleCardAbility ID="AngelicaAura">
+    		<Desc>[协同 漆黑之束] 使自身和[协同者]恢复3点光芒</Desc>
+  	</BattleCardAbility>
+	  <BattleCardAbility ID="GainSL">
+    		<Desc>[协同 混乱之束] 若这一幕内并未失去灵魂链接,获得2层灵魂链接</Desc>
+  	</BattleCardAbility>
+	  <BattleCardAbility ID="RolandZelkova">
+    		<Desc>[协同 突击-榉树工坊] 将一个斩击4-8的骰子([命中时] 下一幕施加3层流血)置入书页开头</Desc>
+  	</BattleCardAbility>
+	  <BattleCardAbility ID="AngelicaZelkova">
+    		<Desc>[协同 掩护-榉树工坊]  将一个斩击3-8的骰子([命中时] 恢复5点混乱抗性)置入书页末尾</Desc>
+  	</BattleCardAbility>
+	  <BattleCardAbility ID="RolandAllas">
+	  		<Desc>[拼点开始]使目标当前书页的所有骰子威力-2</Desc>
+    		<Desc>[协同 突击-阿拉斯工坊] 将一颗穿刺骰子(5-8 [命中时]下一幕中使体力最高的我方角色获得2层守护)置入书页开头</Desc>
+  	</BattleCardAbility>
+	  <BattleCardAbility ID="AngelicaAllas">
+	  		<Desc>[拼点开始]使目标当前书页的所有骰子威力-2</Desc>
+    		<Desc>[协同 掩护-阿拉斯工坊]  将一颗穿刺骰子(4-8 [命中时] 下一幕施加1层虚弱)置入书页末尾</Desc>
+  	</BattleCardAbility>
+	  <BattleCardAbility ID="RolandLogic">
+    		<Desc>[协同 突击-逻辑工坊] 将两颗穿刺骰子(7-11 [命中时] 下一幕施加1层束缚麻痹)置入书页开头</Desc>
+  	</BattleCardAbility>
+	  <BattleCardAbility ID="AngelicaLogic">
+    		<Desc>[协同 掩护-逻辑工坊] 将一颗打击骰子(7-11 [命中时] 下一幕施加1层束缚麻痹)置入书页末尾</Desc>
+  	</BattleCardAbility>
+	  <BattleCardAbility ID="DanceTogether">
+    		<Desc>[装备时] 使目标司书与“白卫”同化</Desc>
+  	</BattleCardAbility>
+	  <BattleCardAbility ID="MadFurioso">
+    		<Desc>[使用时] 将所有原版牌库被移除的书页置入牌库，并且恢复所有光芒抽取至手上有4张书页.
+每使用不同一张书页便重复投掷该书页第一个骰子一次</Desc>
+  	</BattleCardAbility>
+</BattleCardAbilityDescRoot>

@@ -1,7 +1,89 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <PassiveDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <PassiveDesc ID="1700000">
+    <PassiveDesc ID="1700001">
+        <Name>完美提取--罗兰</Name>
+        <Desc>&lt;color=#FF0000&gt;无法获取图书馆的情感卡和ego,尝试为其应用情感卡将会浪费该情感卡&lt;/color&gt;
+只能由罗兰装备.</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1700002">
         <Name>完美提取--罗兰</Name>
         <Desc>&lt;color=#FF0000&gt;无法获取图书馆的情感卡和ego,尝试为其应用情感卡将会浪费该情感卡&lt;/color&gt;</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1700011">
+        <Name>漆黑静默</Name>
+        <Desc>开启舞台时额外抽取2张书页，可使用专属书页Furioso
+每当使用第3张书页时将使其中的所有骰子威力+2</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1700012">
+        <Name>回击</Name>
+        <Desc>下令战斗时获得2颗斩击反击骰子(4~8)(每一幕至多触发1次)</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1700013">
+        <Name>复仇决意</Name>
+        <Desc>击中目标时恢复5点混乱抗性
+拼点失败时失去6点混乱抗性2</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1700014">
+        <Name>认知阻碍面具</Name>
+        <Desc>数值最低的1颗速度骰子无法被指定为攻击目标</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1700021">
+        <Name>亡者孵化</Name>
+        <Desc>每一幕开始时每有一个其他单位在上一幕死亡便生成1只不可控制的“烟气衍生物”并且对所有其他单位施加1层浓烟</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1700022">
+        <Name>怪蛮可憎</Name>
+        <Desc>舞台开始时抽取2张书页.
+拼点时使目标失去其20%当前混乱抗性</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1700023">
+        <Name>巨兽</Name>
+        <Desc>每3幕战斗开始时使用一张以所有单位为目标的交锋范围杀伤书页
+(穿刺 4-12 [命中时]下一幕施加5层流血)</Desc>
+    </PassiveDesc> 
+    <PassiveDesc ID="1700024">
+        <Name>浓烟</Name>
+        <Desc>击中处于“浓烟”状态下的目标时伤害+2
+被拥有“浓烟”的目标击中或施加负面状态时所受伤害-2</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1700031">
+        <Name>共舞</Name>
+        <Desc>可以使用让其他司书与“白卫”同化的书页
+同化后切换双方作战方式以联合为主并施加4层灵魂链接</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1700032">
+        <Name>标记</Name>
+        <Desc>攻击“标记”目标时进攻骰威力+2</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1700033">
+        <Name>此去永相别</Name>
+        <Desc>白卫死亡时陷入混乱，并提高造成伤害和混乱伤害100%持续止这一舞台结束</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1701030">
+        <Name>委托目标</Name>
+        <Desc>攻击血量最低的单位时威力+1</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1701031">
+        <Name>标记</Name>
+        <Desc>为每一幕最后攻击的敌人施加“标记”</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1701032">
+        <Name>升天而奔月</Name>
+        <Desc>黑侍死亡时失去50%混乱抗性并停止同化
+停止同化的下一幕获得2层强壮忍耐</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1700041">
+        <Name>漆黑静默</Name>
+        <Desc>开启舞台时额外抽取2张书页，可使用专属书页Furioso
+每当使用第3张书页时将使其中的所有骰子威力+2</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1700042">
+        <Name>执念</Name>
+        <Desc>所有伤害抗性设为耐性
+因负面状态所受的伤害减半</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1700043">
+        <Name>图书馆的记忆</Name>
+        <Desc>每一幕开始时获得特殊被动能力</Desc>
     </PassiveDesc>
 </PassiveDescRoot>
