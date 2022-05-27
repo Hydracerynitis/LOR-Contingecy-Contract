@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <BattleCardAbilityDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	<BattleCardAbility ID="energy3">
-    		<Desc>[使用时]恢复3点光芒</Desc>
-  	</BattleCardAbility>
-	<BattleCardAbility ID="drawCards3">
-    		<Desc>[使用时]抽取3张书页</Desc>
-  	</BattleCardAbility>
 	<!--阿尔加利亚-->
 	  <BattleCardAbility ID="PerfectResonanceActivate">
     		<Desc>[使用时]若自身速度与目标[震颤]层数相等则使本书页的所有骰子威力+2</Desc>

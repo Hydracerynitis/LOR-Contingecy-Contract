@@ -44,4 +44,9 @@ namespace Contingecy_Contract
     {
         int GetRecoveryBonus(int v);
     }
+    public interface Resonator
+    {
+        void ActiveResonate(BattlePlayingCardDataInUnitModel card);
+    }
+
 }

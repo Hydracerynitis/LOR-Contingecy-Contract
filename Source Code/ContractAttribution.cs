@@ -81,7 +81,7 @@ namespace Contingecy_Contract
             }
             List<PassiveAbilityBase> passiveList = Model.passiveDetail.PassiveList;
             passiveList.AddRange(Contracts);
-            typeof(BattleUnitPassiveDetail).GetField("_passiveList", AccessTools.all).SetValue((object)Model.passiveDetail, (object)passiveList);
+            Model.passiveDetail._passiveList = passiveList;
             foreach (PassiveAbilityBase contract in Contracts)
             {
                 try
@@ -96,9 +96,9 @@ namespace Contingecy_Contract
             if (Contracts.Count > 0)
             {
                 Model.bufListDetail.AddBuf(new ContractStatBonus(Contracts));
-                if (Harmony_Patch.CombaltData.ContainsKey(Model.UnitData))
+                if (CCInitializer.CombaltData.ContainsKey(Model.UnitData))
                 {
-                    Model.SetHp(Harmony_Patch.CombaltData[Model.UnitData]);
+                    Model.SetHp(CCInitializer.CombaltData[Model.UnitData]);
                     Model.breakDetail.breakGauge = Model.breakDetail.GetDefaultBreakGauge();
                     CheckPhaseCondition(Model);
                 }
@@ -113,21 +113,9 @@ namespace Contingecy_Contract
         public static void CheckPhaseCondition(BattleUnitModel unit)
         {
             if (unit.passiveDetail.PassiveList.Find(x => x is PassiveAbility_250022) is PassiveAbility_250022 Red)
-            {
-                typeof(PassiveAbility_250022).GetField("_egoCondition", AccessTools.all).SetValue(Red, (int)(0.5 * unit.MaxHp));
-            }
+                Red._egoCondition = unit.MaxHp / 2;
             if (unit.passiveDetail.PassiveList.Find(x => x is PassiveAbility_250227) is PassiveAbility_250227 Purple)
-            {
-                typeof(PassiveAbility_250227).GetField("_teleportCondition", AccessTools.all).SetValue(Purple, (int)(0.5 * unit.MaxHp));
-            }
-            try
-            {
-                //给别的mod不上百分比锁血被动适配
-            }
-            catch
-            {
-
-            }
+                Purple._teleportCondition = unit.MaxHp / 2;
         }
     }
     public class ContractStatBonus : BattleUnitBuf

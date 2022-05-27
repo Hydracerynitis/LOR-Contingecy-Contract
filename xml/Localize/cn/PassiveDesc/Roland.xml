@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <PassiveDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <!--General-->
     <PassiveDesc ID="1700001">
         <Name>完美提取--罗兰</Name>
         <Desc>&lt;color=#FF0000&gt;无法获取图书馆的情感卡和ego,尝试为其应用情感卡将会浪费该情感卡&lt;/color&gt;
@@ -9,6 +10,7 @@
         <Name>完美提取--罗兰</Name>
         <Desc>&lt;color=#FF0000&gt;无法获取图书馆的情感卡和ego,尝试为其应用情感卡将会浪费该情感卡&lt;/color&gt;</Desc>
     </PassiveDesc>
+    <!--P1-->
     <PassiveDesc ID="1700011">
         <Name>漆黑静默</Name>
         <Desc>开启舞台时额外抽取2张书页，可使用专属书页Furioso
@@ -27,6 +29,7 @@
         <Name>认知阻碍面具</Name>
         <Desc>数值最低的1颗速度骰子无法被指定为攻击目标</Desc>
     </PassiveDesc>
+    <!--P2-->
     <PassiveDesc ID="1700021">
         <Name>亡者孵化</Name>
         <Desc>每一幕开始时每有一个其他单位在上一幕死亡便生成1只不可控制的“烟气衍生物”并且对所有其他单位施加1层浓烟</Desc>
@@ -46,6 +49,7 @@
         <Desc>击中处于“浓烟”状态下的目标时伤害+2
 被拥有“浓烟”的目标击中或施加负面状态时所受伤害-2</Desc>
     </PassiveDesc>
+    <!--P3 roland-->
     <PassiveDesc ID="1700031">
         <Name>共舞</Name>
         <Desc>可以使用让其他司书与“白卫”同化的书页
@@ -59,6 +63,7 @@
         <Name>此去永相别</Name>
         <Desc>白卫死亡时陷入混乱，并提高造成伤害和混乱伤害100%持续止这一舞台结束</Desc>
     </PassiveDesc>
+    <!--P3 angelica-->
     <PassiveDesc ID="1701030">
         <Name>委托目标</Name>
         <Desc>攻击血量最低的单位时威力+1</Desc>
@@ -72,18 +77,59 @@
         <Desc>黑侍死亡时失去50%混乱抗性并停止同化
 停止同化的下一幕获得2层强壮忍耐</Desc>
     </PassiveDesc>
+    <!--P4-->
     <PassiveDesc ID="1700041">
         <Name>漆黑静默</Name>
         <Desc>开启舞台时额外抽取2张书页，可使用专属书页Furioso
 每当使用第3张书页时将使其中的所有骰子威力+2</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1700042">
-        <Name>执念</Name>
-        <Desc>所有伤害抗性设为耐性
-因负面状态所受的伤害减半</Desc>
-    </PassiveDesc>
-    <PassiveDesc ID="1700043">
         <Name>图书馆的记忆</Name>
         <Desc>每一幕开始时获得特殊被动能力</Desc>
+    </PassiveDesc>
+    <!--P4 Abnormality-->
+    <PassiveDesc ID="1700141">
+        <Name>渴望</Name>
+        <Desc>最大生命值提升15%，速度提升1-2点</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1700142">
+        <Name>学习</Name>
+		<Desc>可无限使用“模仿学习”战斗书页 
+命中时下一幕施加谎言效果(这一幕开始时手上书页费用随机化)</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1700143">
+        <Name>钉与锤</Name>
+		<Desc>这一幕内命中目标会根据进攻骰类型施加斩击钉，穿刺钉，打击钉。
+一幕内用不同进攻类型命中该目标会触发钉的效果并移除钉。否则会提升1层钉。
+斩击钉 --- 触发时，每层下一幕施加3层流血1层易损
+穿刺钉 --- 触发时，每层追加5点伤害
+打击钉 --- 触发时，每层追加5点混乱伤害</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1700144">
+        <Name>罪恶感</Name>
+        <Desc>拼点时, 减少骰子威力的承受伤害。
+被单方面攻击时额外承受2-4点伤害</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1700145">
+        <Name>暴风雪</Name>
+		<Desc>对所有其他角色施加3层束缚</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1700146">
+        <Name>脉动</Name>
+		<Desc>速度骰-1，命中时下一幕获得1层强壮(每张书页最多1层)
+若这一幕内没能造成伤害便承受15点混乱伤害。</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1700147">
+        <Name>剧烈搏动</Name>
+        <Desc>这一幕内获得2层强壮忍耐3层敏捷4层守护。 
+减少下一幕获得的特殊被动。</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1700148">
+        <Name>凌剑</Name>
+        <Desc>攻击速度低于自身的角色会追加2-4点伤害和混乱伤害</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1700149">
+        <Name>苍白之手</Name>
+        <Desc>这一幕内击中同一目标3次便追加3-10点混乱伤害</Desc>
     </PassiveDesc>
 </PassiveDescRoot>

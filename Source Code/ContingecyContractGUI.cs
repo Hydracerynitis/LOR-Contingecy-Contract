@@ -67,9 +67,9 @@ namespace Contingecy_Contract
         private void OnClose()
         {
             Debug.Log("Saving");
-            File.WriteAllText(Harmony_Patch.ModPath + "/ContractLoader.txt", "");
+            File.WriteAllText(CCInitializer.ModPath + "/ContractLoader.txt", "");
             foreach (Contract cc in ContractList)
-                File.AppendAllText(Harmony_Patch.ModPath + "/ContractLoader.txt", cc.Id + "\n");
+                File.AppendAllText(CCInitializer.ModPath + "/ContractLoader.txt", cc.Id + "\n");
             Debug.Log("SaveComplete");
             Singleton<ContractLoader>.Instance.Init();
         }

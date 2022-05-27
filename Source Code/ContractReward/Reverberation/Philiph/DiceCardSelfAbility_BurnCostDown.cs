@@ -17,10 +17,10 @@ namespace ContractReward
             if (card.target == null || card.target.bufListDetail.GetActivatedBuf(KeywordBuf.Burn) == null || card.target.bufListDetail.GetActivatedBuf(KeywordBuf.Burn).stack < 10)
                 return;
             List<BattleDiceCardModel> list = this.owner.allyCardDetail.GetHand();
-            BattleDiceCardModel Card = RandomUtil.SelectOne<BattleDiceCardModel>(list);
+            BattleDiceCardModel Card = RandomUtil.SelectOne(list);
             Card.AddBuf(new BurnCost());
             list.Remove(Card);
-            Card = RandomUtil.SelectOne<BattleDiceCardModel>(list);
+            Card = RandomUtil.SelectOne(list);
             Card.AddBuf(new BurnCost());
         }
         private class BurnCost: BattleDiceCardBuf

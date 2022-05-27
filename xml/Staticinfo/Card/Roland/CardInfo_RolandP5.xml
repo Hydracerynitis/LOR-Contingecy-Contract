@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Card ID="17000051">
+		<Name>愤怒</Name>
+		<Artwork>Roland3Phase_RolandLonely</Artwork>
+		<Rarity>Rare</Rarity>
+		<Spec Range="Near" Cost="3" />
+		<Script>black_4th_durandalstrong</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="8" Dice="13" Type="Atk" Detail="Hit" Motion="J2" EffectRes="BS4DurandalDown_J2" Script="powerUpNext2pw" ActionScript="dawnAction" Desc="" />
+			<Behaviour Min="6" Dice="9" Type="Atk" Detail="Slash" Motion="J" EffectRes="BS4DurandalUp_J" Script="black_4th_bfsword_pw" ActionScript="dawnAction" Desc="" />
+			<Behaviour Min="4" Dice="8" Type="Standby" Detail="Slash" Motion="J2" EffectRes="BS4DurandalDown_J2" Script="" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="damage3pw" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+  	</Card>
+	  <Card ID="17000052">
+		<Name>悲伤</Name>
+		<Artwork>Roland3Phase_RolandLonely</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Spec Range="Near" Cost="3" />
+		<Script>black_4th_durandal</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="6" Dice="9" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="BS4DurandalPene_Z" Script="" ActionScript="" Desc="" />
+			<Behaviour Min="5" Dice="9" Type="Atk" Detail="Slash" Motion="H" EffectRes="BS4DurandalHit_H" Script="" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="BS4DurandalPene_Z" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+  	</Card>
+	  <Card ID="17000053">
+		<Name>空虚</Name>
+		<Artwork>Roland3Phase_RolandLonely</Artwork>
+		<Rarity>Common</Rarity>
+		<Spec Range="Near" Cost="3" />
+		<Script>black_4th_durandalweak</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="5" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="BS4DurandalUp_J" Script="" ActionScript="" Desc="" />
+			<Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="BS4DurandalPene_Z" Script="" ActionScript="" Desc="" />
+			<Behaviour Min="5" Dice="7" Type="Atk" Detail="Hit" Motion="H" EffectRes="BS4DurandalHit_H" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+  	</Card>
+	<Card ID="17000054">
+		<Name>矛盾</Name>
+		<Artwork>Roland4Phase_Shout</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Spec Range="Near" Cost="1" />
+		<Script>energy3</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="BS4DurandalUp_J" Script="binding1atk" ActionScript="" Desc="" />
+			<Behaviour Min="3" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="clockEgoDice" ActionScript="" Desc="" />
+			<Behaviour Min="3" Dice="8" Type="Atk" Detail="Hit" Motion="J2" EffectRes="BS4DurandalDown_J2" Script="binding2atk" ActionScript="" Desc="" />
+			<Behaviour Min="3" Dice="8" Type="Standby" Detail="Penetrate" Motion="Z" EffectRes="BS4DurandalPene_Z" Script="black_4th_hammer_atk" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+  	</Card>
+	<Card ID="17000055">
+		<Name>苦痛</Name>
+		<Artwork>Roland4Phase_Shout</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Spec Range="Near" Cost="0" />
+		<Script>Agony</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="5" Dice="10" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="Seven_Fleche" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="9" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+  	</Card>
+	<Card ID="17000056">
+		<Name>呐喊</Name>
+		<Artwork>Roland3Phase_RolandFury</Artwork>
+		<Rarity>Unique</Rarity>
+		<Spec Range="FarAreaEach" Cost="5" Affection="Team"/>
+		<Script>AoeCoolDown</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="12" Dice="16" Type="Atk" Detail="Hit" Motion="S12" EffectRes="" Script="black_4th_areastrong_atk" ActionScript="BlackSilence_4th_Area_Strong" Desc="" />
+			<Behaviour Min="12" Dice="12" Type="Atk" Detail="Hit" Motion="S12" EffectRes="" Script="black_4th_areastrong_atk" ActionScript="BlackSilence_4th_Area_Strong_Last" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+  	</Card>
+</DiceCardXmlRoot>

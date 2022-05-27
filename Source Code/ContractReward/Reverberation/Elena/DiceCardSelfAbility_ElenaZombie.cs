@@ -41,7 +41,7 @@ namespace ContractReward
                     this._owner.breakDetail.nextTurnBreak = false;
                     List<PassiveAbilityBase> list = this._owner.passiveDetail.PassiveList;
                     list.Insert(0, new Zombie(this._owner));
-                    typeof(BattleUnitPassiveDetail).GetField("_passiveList", AccessTools.all).SetValue((object)this._owner.passiveDetail, (object)list);
+                    _owner.passiveDetail._passiveList = list;
                     this._owner.UnitData.unitData.SetTempName(TextDataModel.GetText("Zombie_name"));
                     init = true;
                 }
@@ -66,7 +66,7 @@ namespace ContractReward
                 Singleton<StageController>.Instance.CheckEndBattle();
             }
             Contingecy_Contract.Debug.Log("Zomebie try to move");
-            return RandomUtil.SelectOne<BattleUnitModel>(aliveList);
+            return RandomUtil.SelectOne(aliveList);
         }
     }
 }

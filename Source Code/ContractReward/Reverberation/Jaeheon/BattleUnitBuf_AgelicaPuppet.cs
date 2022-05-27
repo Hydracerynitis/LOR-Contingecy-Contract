@@ -37,7 +37,7 @@ namespace ContractReward
         {
             if (Jaehoen==null)
                 return base.GetFixedTarget();
-            return BattleObjectManager.instance.GetAliveList_opponent(this._owner.faction).FindAll((Predicate<BattleUnitModel>)(x => x.bufListDetail.GetActivatedBuf(KeywordBuf.JaeheonMark) !=null));
+            return BattleObjectManager.instance.GetAliveList_opponent(this._owner.faction).FindAll(x => x.bufListDetail.GetActivatedBuf(KeywordBuf.JaeheonMark) !=null);
         }
     }
 }

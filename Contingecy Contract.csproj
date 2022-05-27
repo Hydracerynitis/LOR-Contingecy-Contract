@@ -116,7 +116,15 @@
     <Compile Include="Source Code\ContractReward\Roland\P4\FarAreaEffect_MadFurioso.cs" />
     <Compile Include="Source Code\ContractReward\Roland\P4\BehaviourAction_MadFurioso.cs" />
     <Compile Include="Source Code\ContractReward\Roland\P4\DiceCardSelfAbility_MadFurioso.cs" />
-    <Compile Include="Source Code\ContractReward\Roland\P4\PassiveAbility_1700043.cs" />
+    <Compile Include="Source Code\ContractReward\Roland\P4\PassiveAbility_1700149.cs" />
+    <Compile Include="Source Code\ContractReward\Roland\P4\PassiveAbility_1700148.cs" />
+    <Compile Include="Source Code\ContractReward\Roland\P4\PassiveAbility_1700147.cs" />
+    <Compile Include="Source Code\ContractReward\Roland\P4\PassiveAbility_1700146.cs" />
+    <Compile Include="Source Code\ContractReward\Roland\P4\PassiveAbility_1700145.cs" />
+    <Compile Include="Source Code\ContractReward\Roland\P4\PassiveAbility_1700144.cs" />
+    <Compile Include="Source Code\ContractReward\Roland\P4\PassiveAbility_1700143.cs" />
+    <Compile Include="Source Code\ContractReward\Roland\P4\PassiveAbility_1700142.cs" />
+    <Compile Include="Source Code\ContractReward\Roland\P4\PassiveAbility_1700141.cs" />
     <Compile Include="Source Code\ContractReward\Roland\P4\PassiveAbility_1700042.cs" />
     <Compile Include="Source Code\ContractReward\Roland\P4\PassiveAbility_1700041.cs" />
     <Compile Include="Source Code\ContractReward\Roland\PassiveAbility_1700000.cs" />
@@ -126,11 +134,18 @@
     <Compile Include="Source Code\Fix\PassiveAbility_1302013_New.cs" />
     <Compile Include="Source Code\Fix\PassiveAbility_170301_New.cs" />
     <Compile Include="Source Code\HarmonyPatch\ExtentionMethod.cs" />
+    <Compile Include="Source Code\HarmonyPatch\HP_CoreSystem.cs" />
     <Compile Include="Source Code\HarmonyPatch\HP_Effect.cs" />
-    <Compile Include="Source Code\HarmonyPatch\HP_RolandReward.cs" />
-    <Compile Include="Source Code\HarmonyPatch\HP_System.cs" />
-    <Compile Include="Source Code\HarmonyPatch\HP_UI.cs" />
-    <Compile Include="Source Code\Impurity\ContractList_Roland.cs" />
+    <Compile Include="Source Code\HarmonyPatch\HP_ReverberationSystem.cs" />
+    <Compile Include="Source Code\HarmonyPatch\HP_ReverberationUI.cs" />
+    <Compile Include="Source Code\HarmonyPatch\HP_RolandSystem.cs" />
+    <Compile Include="Source Code\HarmonyPatch\HP_SetCard.cs" />
+    <Compile Include="Source Code\HarmonyPatch\HP_SubSystem.cs" />
+    <Compile Include="Source Code\HarmonyPatch\HP_RolandUI.cs" />
+    <Compile Include="Source Code\Impurity\ContractList_RolandP4.cs" />
+    <Compile Include="Source Code\Impurity\ContractList_RolandP3.cs" />
+    <Compile Include="Source Code\Impurity\ContractList_RolandP2.cs" />
+    <Compile Include="Source Code\Impurity\ContractList_RolandP1.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Oswald\DiceCardSelfAbility_Oswald_allpl.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Oswald\DiceCardSelfAbility_Oswald_daze.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Oswald\DiceCardSelfAbility_Oswald_area.cs" />
@@ -212,7 +227,6 @@
     <Compile Include="Source Code\ContractReward\Reverberation\Argalia\DiceCardSelfAbility_Insane2.cs" />
     <Compile Include="Source Code\Fix\DiceCardSelfAbility_Jaeheon_AreaDt_New.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Philiph\DiceCardSelfAbility_LoseBurn.cs" />
-    <Compile Include="Source Code\ContractReward\Reverberation\Argalia\DiceCardSelfAbility_PerfectResonance.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Argalia\DiceCardSelfAbility_PerfectResonanceActivate.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Pluto\DiceCardSelfAbility_PlutoAoe.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Pluto\DiceCardSelfAbility_PlutoContract1.cs" />
@@ -257,7 +271,7 @@
     <Compile Include="Source Code\General\ContractList_Enemy.cs" />
     <Compile Include="Source Code\ContractLoader.cs" />
     <Compile Include="Source Code\Contrasts.cs" />
-    <Compile Include="Source Code\Harmony_Patch.cs" />
+    <Compile Include="Source Code\CCInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Source Code\StaticDataManager.cs" />
     <PackageReference Include="Krafs.Publicizer" Version="1.0.2" />

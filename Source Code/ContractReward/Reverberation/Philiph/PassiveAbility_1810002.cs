@@ -30,10 +30,10 @@ namespace ContractReward
         public override void OnBattleEnd()
         {
             base.OnBattleEnd();
-            if (!((UnityEngine.Object)this._loopSound != (UnityEngine.Object)null))
+            if (_loopSound == null)
                 return;
             this._loopSound.source.Stop();
-            this._loopSound = (SoundEffectPlayer)null;
+            this._loopSound = null;
         }
         public override void OnRoundStartAfter()
         {
@@ -60,7 +60,7 @@ namespace ContractReward
                     PassiveAbilityBase cold = new PassiveAbility_1810003(this.owner);
                     passive.Remove(hot);
                     passive.Add(cold);
-                    typeof(BattleUnitPassiveDetail).GetField("_passiveList", AccessTools.all).SetValue((object)this.owner.passiveDetail, (object)passive);
+                    owner.passiveDetail._passiveList = passive;
                     this.phase = PhilipPhase.Cold;
                     if(this.owner.cardSlotDetail.PlayPoint<4)
                         this.owner.cardSlotDetail.RecoverPlayPoint(4- this.owner.cardSlotDetail.PlayPoint);
@@ -83,7 +83,7 @@ namespace ContractReward
                 PassiveAbilityBase hot = new PassiveAbility_1810004(this.owner);
                 passive.Remove(cold);
                 passive.Add(hot);
-                typeof(BattleUnitPassiveDetail).GetField("_passiveList", AccessTools.all).SetValue((object)this.owner.passiveDetail, (object)passive);
+                owner.passiveDetail._passiveList = passive;
                 this.phase = PhilipPhase.Hot;
                 if (this.owner.cardSlotDetail.PlayPoint < 4)
                     this.owner.cardSlotDetail.RecoverPlayPoint(4 - this.owner.cardSlotDetail.PlayPoint);

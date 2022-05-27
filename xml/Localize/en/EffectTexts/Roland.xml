@@ -37,5 +37,57 @@ When stack reach 0, both charactes lose 25% Max Stagger Resist and inflic 4 Para
 			<Name>Tag Team X： Y</Name>
 			<Desc>On Use Pgae,, trigger effect Y if ally using Page X (Tag Teammate) exist.</Desc>
 		</BattleEffectText>
+		<BattleEffectText ID="LearnIndicator">
+			<Name>Learn</Name>
+			<Desc>Can Use the Combat Page 'Learn' infinitely. 
+If this character's attack hits, it inflicts a 'Lies' status which changes the Costs of pages at random next Scene.</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="NailHammerIndicator">
+			<Name>Nail and Hammer</Name>
+			<Desc>For this Scene, successful hit will inflict one of Slash Nail, Pierce Nail and Blunt Nail according to the attack.
+Perform another succesful hit with different attack in the same Scene will proc Nail's effect and remove it. Otherwise increase the stack by 1.</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="SlashNail">
+			<Name>Slash Nail</Name>
+			<Desc>Upon Slash hit by character with "Nail and Hammer" passive, increase stack by 1.
+Otherwise, gain 3 Blead 1 Fragile for each stack next Scene and remove this status.</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="PenetrateNail">
+			<Name>Pierce Nail</Name>
+			<Desc>Upon Pierce hit by character with "Nail and Hammer" passive, increase stack by 1.
+Otherwise, take 5 Damage for each stack and remove this status.</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="HitNail">
+			<Name>Blunt Nail</Name>
+			<Desc>Upon Blunt hit by character with "Nail and Hammer" passive, increase stack by 1.
+Otherwise, take 5 Break Damage for each stack and remove this status.</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="GuiltIndicator">
+			<Name>Guilt</Name>
+        	<Desc>On Clash, reduce incoming Damage from attack by dice's Power.
+Upon hit from an one-side attack, increase incoming Damage from attack by 2-4</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="BlizzardIndicator">
+			<Name>Blizzard</Name>
+			<Desc>Inflict all other characters 3 Bind.</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="PulsationIndicator">
+			<Name>Pulsation</Name>
+			<Desc>Speed Dice Slot -1. On hit, give 1 Strength to all allies next Scene (once per Page). 
+If the character couldn't deal any damage by the end of the Scene, take 15 Stagger damage.</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="FerventIndicator">
+			<Name>Fervent Beats</Name>
+        	<Desc>Gain 2 Strength and Endurance, 3 Haste, and 4 Protection this Scene. 
+Reduce numbers of passive abilities recieved in the next Scene.</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="FrostIndicator">
+			<Name>Sword of Frost</Name>
+        	<Desc>On Hit, deal 2-4 Damage and Break Damage if target's speed is lower than the character.</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="HandIndicator">
+			<Name>Pale Hands</Name>
+        	<Desc>Perform 3 succesful hit on same character inflict additional 3-10 Break Damage this round.</Desc>
+		</BattleEffectText>
 	</effectTextList>
 </BattleEffectTextRoot>

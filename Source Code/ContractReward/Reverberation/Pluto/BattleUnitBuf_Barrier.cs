@@ -20,16 +20,16 @@ namespace ContractReward
             base.Init(owner);
             this.stack = 0;
             UnityEngine.Object original = Resources.Load("Prefabs/Battle/DiceAttackEffects/New/FX/Mon/Pluto/FX_Mon_Pluto_Lock");
-            if (!(original != (UnityEngine.Object)null))
+            if (original == null)
                 return;
             GameObject gameObject = UnityEngine.Object.Instantiate(original) as GameObject;
-            if (!((UnityEngine.Object)gameObject != (UnityEngine.Object)null))
+            if (gameObject == null)
                 return;
-            if ((UnityEngine.Object)this._auraEffect != (UnityEngine.Object)null)
-                UnityEngine.Object.Destroy((UnityEngine.Object)this._auraEffect);
+            if (_auraEffect != null)
+                UnityEngine.Object.Destroy(_auraEffect);
             this._auraEffect = gameObject;
             Pluto1st_BarrierAura component = gameObject.GetComponent<Pluto1st_BarrierAura>();
-            if (!((UnityEngine.Object)component != (UnityEngine.Object)null))
+            if (component == null)
                 return;
             component.Init(owner.view);
             owner.view.speedDiceSetterUI.DeselectAll();
@@ -59,7 +59,7 @@ namespace ContractReward
                                     {
                                         if (cardDataInUnitModel.subTargets.Count > 0)
                                         {
-                                            BattlePlayingCardDataInUnitModel.SubTarget subTarget = RandomUtil.SelectOne<BattlePlayingCardDataInUnitModel.SubTarget>(cardDataInUnitModel.subTargets);
+                                            BattlePlayingCardDataInUnitModel.SubTarget subTarget = RandomUtil.SelectOne(cardDataInUnitModel.subTargets);
                                             cardDataInUnitModel.target = subTarget.target;
                                             cardDataInUnitModel.targetSlotOrder = subTarget.targetSlotOrder;
                                             cardDataInUnitModel.earlyTarget = subTarget.target;
@@ -130,24 +130,24 @@ namespace ContractReward
         public override void OnDie()
         {
             base.OnDie();
-            if (!((UnityEngine.Object)this._owner?.view != (UnityEngine.Object)null))
+            if (_owner?.view == null)
                 return;
             this._owner.view.deadEvent += new BattleUnitView.DeadEvent(this.OnDeadEvent);
         }
 
         private void OnDeadEvent(BattleUnitView view)
         {
-            if (!((UnityEngine.Object)this._auraEffect != (UnityEngine.Object)null))
+            if (_auraEffect == null)
                 return;
-            UnityEngine.Object.Destroy((UnityEngine.Object)this._auraEffect);
+            UnityEngine.Object.Destroy(_auraEffect);
         }
 
         public override void Destroy()
         {
             base.Destroy();
-            if (!((UnityEngine.Object)this._auraEffect != (UnityEngine.Object)null))
+            if (_auraEffect == null)
                 return;
-            UnityEngine.Object.Destroy((UnityEngine.Object)this._auraEffect);
+            UnityEngine.Object.Destroy(_auraEffect);
         }
     }
 }

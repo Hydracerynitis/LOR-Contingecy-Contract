@@ -4,16 +4,26 @@ using System.Linq;
 using System.Text;
 using LOR_DiceSystem;
 using HarmonyLib;
-using System.Threading.Tasks;
+using Contingecy_Contract;
 using BaseMod;
 
 namespace ContractReward
 {
-    public class PassiveAbility_1800002 : PassiveAbilityBase
+    public class PassiveAbility_1800002 : PassiveAbilityBase, Resonator
     {
         public int count;
         private BattleDiceCardModel model;
         private Queue<DiceBehaviour> RestDice;
+
+        public void ActiveResonate(BattlePlayingCardDataInUnitModel card)
+        {
+            count += 1;
+            if (count == 5)
+            {
+                Upgrade();
+                count = 0;
+            }
+        }
         public override void OnWaveStart()
         {
             base.OnWaveStart();
@@ -36,7 +46,7 @@ namespace ContractReward
             model.CopySelf();
             DiceCardXmlInfo xml = model.XmlData;
             xml.DiceBehaviourList.Add(RestDice.Dequeue());
-            typeof(BattleDiceCardModel).GetField("_xmlData", AccessTools.all).SetValue(model, xml);
+            model._xmlData = xml;
         }
     }
 }

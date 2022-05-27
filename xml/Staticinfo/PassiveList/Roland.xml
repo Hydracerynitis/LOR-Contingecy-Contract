@@ -12,6 +12,7 @@
 			<Script>1700000</Script>
 		<Cost>0</Cost>
   	</Passive>
+	  <!--P1-->
 	  <Passive ID="1700011">
 		<Rarity>Unique</Rarity>
     		<CanGivePassive>false</CanGivePassive>
@@ -34,6 +35,7 @@
 			<Script>170006</Script>
 		<Cost>2</Cost>
   	</Passive>
+	  <!--P2-->
 	<Passive ID="1700021">
 		<Rarity>Unique</Rarity>
     		<CanGivePassive>false</CanGivePassive>
@@ -55,6 +57,7 @@
 			<Script>170102</Script>
 		<Cost>3</Cost>
   	</Passive>
+	  <!--P3 roland-->
 	<Passive ID="1700031">
 		<Rarity>Unique</Rarity>
     		<CanGivePassive>false</CanGivePassive>
@@ -70,6 +73,7 @@
     		<CanGivePassive>false</CanGivePassive>
 		<Cost>3</Cost>
   	</Passive>
+	  <!--P3 angelica-->
 	<Passive ID="1701030">
 		<Rarity>Unique</Rarity>
     		<CanGivePassive>false</CanGivePassive>
@@ -85,6 +89,7 @@
     		<CanGivePassive>false</CanGivePassive>
 		<Cost>5</Cost>
   	</Passive>
+	  <!--P4-->
 	<Passive ID="1700041">
 		<Rarity>Unique</Rarity>
     		<CanGivePassive>false</CanGivePassive>
@@ -93,11 +98,12 @@
 	<Passive ID="1700042">
 		<Rarity>Unique</Rarity>
     		<CanGivePassive>false</CanGivePassive>
-		<Cost>2</Cost>
+		<Cost>8</Cost>
   	</Passive>
-	<Passive ID="1700043">
+	  <!--P5-->
+	  <Passive ID="1700051">
 		<Rarity>Unique</Rarity>
     		<CanGivePassive>false</CanGivePassive>
-		<Cost>8</Cost>
+		<Cost>12</Cost>
   	</Passive>
 </PassiveXmlRoot>

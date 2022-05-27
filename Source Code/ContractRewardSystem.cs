@@ -10,18 +10,17 @@ namespace Contingecy_Contract
 {
     public class ContractRewardSystem : Singleton<ContractRewardSystem>
     {
+        public static HashSet<int> ClearList = new HashSet<int>();
         private List<string> UIs;
         public void CheckReward(StageClassInfo info)
         {
-            if (Harmony_Patch.CheckDuel(info.id) || Harmony_Patch.CheckPlaceHolder(info.id))
-                return;
             if (!SupportedPid.Contains(info.id.packageId))
                 return;
             if (Singleton<ContractLoader>.Instance.GetLevel(info.id) < 16)
                 return;
             UIs = new List<string>();
             if (StaticDataManager.RewardDic.ContainsKey(info.id))
-                Harmony_Patch.ClearList.Add(StaticDataManager.RewardDic[info.id]);
+                ClearList.Add(StaticDataManager.RewardDic[info.id]);
             UIs.Add(TextDataModel.GetText("ui_RewardStage", Singleton<StageNameXmlList>.Instance.GetName(info.id)));
             GetContractCondition(info);
             CheckSpecialCondition(info);
@@ -38,7 +37,7 @@ namespace Contingecy_Contract
         {
                 //Harmony_Patch.ClearList.Add(18810000);
             if (EnsembleComplete)
-                Harmony_Patch.ClearList.Add(18000000);
+                ClearList.Add(18000000);
         }
         public void CheckRewardAchieved()
         {
@@ -47,11 +46,11 @@ namespace Contingecy_Contract
             {
                 int id = book.GetBookClassInfoId().id;
                 Inventory.Add(id);
-                if (!Harmony_Patch.ClearList.Contains(id))
-                    Harmony_Patch.ClearList.Add(id);
+                if (!ClearList.Contains(id))
+                    ClearList.Add(id);
             }
-            new List<int>(Harmony_Patch.ClearList).Save<List<int>>("ContingecyContract_Save");
-            HashSet<int> ExceptWith = new HashSet<int>(Harmony_Patch.ClearList);
+            new List<int>(ClearList).Save<List<int>>("ContingecyContract_Save");
+            HashSet<int> ExceptWith = new HashSet<int>(ClearList);
             ExceptWith.ExceptWith(Inventory);
             foreach (int i in ExceptWith)
                 GiveEquipBook(i);
@@ -90,7 +89,7 @@ namespace Contingecy_Contract
                 }
                 Debug.Log("Condition for {0} test {1}", RC.RewardId.ToString(), pass.ToString());
                 if(pass)
-                    Harmony_Patch.ClearList.Add(RC.RewardId);
+                    ClearList.Add(RC.RewardId);
             }
         }
         public void GiveEquipBook(int bookid)
@@ -113,7 +112,7 @@ namespace Contingecy_Contract
             get
             {
                 HashSet<int> Test = new HashSet<int>() { 18100000, 18200000, 18300000, 18400000, 18500000, 18600000, 18700000, 18800000, 18900000 };
-                Test.ExceptWith(Harmony_Patch.ClearList);
+                Test.ExceptWith(ClearList);
                 return Test.Count <= 0;
             }
         }

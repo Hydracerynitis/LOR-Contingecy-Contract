@@ -170,7 +170,7 @@
 		<Name>纯白之束</Name>
 		<Artwork>Roland3Phase_WhiteAura</Artwork>
 		<Rarity>Rare</Rarity>
-		<Spec Range="Near" Cost="2" />
+		<Spec Range="Near" Cost="1" />
 		<Script>AngelicaAura</Script>
 		<ScriptDesc></ScriptDesc>
 		<BehaviourList>
@@ -184,7 +184,7 @@
 		<Name>混乱之束</Name>
 		<Artwork>Roland3Phase_MixAura</Artwork>
 		<Rarity>Unique</Rarity>
-		<Spec Range="Near" Cost="0" />
+		<Spec Range="Near" Cost="2" />
 		<Script>GainSL</Script>
 		<ScriptDesc></ScriptDesc>
 		<BehaviourList>

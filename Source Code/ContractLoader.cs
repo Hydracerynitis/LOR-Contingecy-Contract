@@ -19,7 +19,7 @@ namespace Contingecy_Contract
             StageList.Clear();
             Debug.PathDebug("/ContractLoader.txt", PathType.File);
             Debug.Log("----- Start Loading Contract -----");
-            foreach (string readAllLine in File.ReadAllLines(Harmony_Patch.ModPath + "/ContractLoader.txt"))
+            foreach (string readAllLine in File.ReadAllLines(CCInitializer.ModPath + "/ContractLoader.txt"))
             {
                 string str = readAllLine.Trim();
                 if (str == "")

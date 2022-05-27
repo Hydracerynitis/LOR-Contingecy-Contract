@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <BattleCardAbilityDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<!--P3-->
 	  <BattleCardAbility ID="Vigilant1">
     		<Desc>[On Use] Gain 2 Haste in the next Scene</Desc>
 			<Desc>At the end of Scene, recover 1 Light if this Page is at hand.</Desc>
@@ -49,5 +50,8 @@
 	  <BattleCardAbility ID="MadFurioso">
     		<Desc>[On Use] Return all original Exhausted Pages to Deck, and Recover All Lights, draw until 4 Pages in Hand.
 Repeat first dice for each pages have been used.</Desc>
+  	</BattleCardAbility>
+	  <BattleCardAbility ID="Agony">
+    		<Desc>[On Use] Draw 3 Pages, Inflict 2 random enemies 1 Bind in the next Scene.</Desc>
   	</BattleCardAbility>
 </BattleCardAbilityDescRoot>

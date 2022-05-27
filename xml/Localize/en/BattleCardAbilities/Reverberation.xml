@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <BattleCardAbilityDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	<BattleCardAbility ID="energy3">
-    		<Desc>[On Use] Recover 3 Light</Desc>
-  	</BattleCardAbility>
-	<BattleCardAbility ID="drawCards3">
-    		<Desc>[On Use] Draw 3 Pages</Desc>
-  	</BattleCardAbility>
 	<!--阿尔加利亚-->
 	  <BattleCardAbility ID="PerfectResonanceActivate">
     		<Desc>[On Use] If Speed is equal to target's Vibration, all dice on this page gain +2 Power</Desc>

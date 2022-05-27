@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <PassiveDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<PassiveDesc ID="20210302">
+		<Name>Contingency Contract:</Name> 
+		<Desc></Desc>
+	</PassiveDesc>
     <PassiveDesc ID="1">
         <Name>Faith of the Believers</Name>
         <Desc>When Eileen's HP reaches 70%, it will not drop below that threshold until the phase shifts; the same occurs at 30% After Eileen's HP reaches a threshold, the battle will progress to the next phase.</Desc>

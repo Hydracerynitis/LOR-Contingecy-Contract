@@ -52,7 +52,7 @@ namespace ContractReward
         }
         private int GetCard(out BattleUnitModel target)
         {
-            target = RandomUtil.SelectOne<BattleUnitModel>(BattleObjectManager.instance.GetAliveList_opponent(owner.faction));
+            target = RandomUtil.SelectOne(BattleObjectManager.instance.GetAliveList_opponent(owner.faction));
             switch (currentHead)
             {
                 case Head.Donkey:
@@ -64,7 +64,7 @@ namespace ContractReward
                     SoundEffectPlayer.PlaySound("Battle/Bremen_Chicken");
                     if(BattleObjectManager.instance.GetAliveList(owner.faction).Exists(x => x != owner) && RandomUtil.valueForProb < 0.5)
                     {
-                        target= RandomUtil.SelectOne<BattleUnitModel>(BattleObjectManager.instance.GetAliveList(owner.faction).Find(x=> x!=owner));
+                        target= RandomUtil.SelectOne(BattleObjectManager.instance.GetAliveList(owner.faction).Find(x=> x!=owner));
                         return 18400021;
                     }
                     else
@@ -72,7 +72,7 @@ namespace ContractReward
                 case Head.Dog:
                     this.owner.bufListDetail.AddBuf(new HeadDog());
                     SoundEffectPlayer.PlaySound("Battle/Bremen_Dog");
-                    return RandomUtil.SelectOne<int>(18400011, 18400012);
+                    return RandomUtil.SelectOne(18400011, 18400012);
             }
             return -1;
         }

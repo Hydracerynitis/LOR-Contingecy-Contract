@@ -62,7 +62,7 @@ namespace Contingecy_Contract
                 attack.ResetCardQueue();
                 List<BattleUnitModel> aliveList = BattleObjectManager.instance.GetAliveList(this.owner.faction == Faction.Player ? Faction.Enemy : Faction.Player);
                 if (aliveList.Count > 0)
-                    Singleton<StageController>.Instance.AddAllCardListInBattle(attack, RandomUtil.SelectOne<BattleUnitModel>(aliveList));
+                    Singleton<StageController>.Instance.AddAllCardListInBattle(attack, RandomUtil.SelectOne(aliveList));
                 extrahit.Add(attack);
                 crossburn.stack -= 1;
             }
@@ -135,7 +135,7 @@ namespace Contingecy_Contract
         }
         public override BattleUnitModel ChangeAttackTarget(BattleDiceCardModel card, int idx)
         {
-            return RandomUtil.SelectOne<BattleUnitModel>(BattleObjectManager.instance.GetAliveList_opponent(this.owner.faction).FindAll(x => !x.passiveDetail.PassiveList.Exists(y => y is Zombie)));
+            return RandomUtil.SelectOne(BattleObjectManager.instance.GetAliveList_opponent(this.owner.faction).FindAll(x => !x.passiveDetail.PassiveList.Exists(y => y is Zombie)));
         }
     }
     public class ContingecyContract_Elena : ContingecyContract
@@ -179,7 +179,7 @@ namespace Contingecy_Contract
         }
         private void AddCard_Cross(int round)
         {
-            int slow = (int) typeof(PassiveAbility_1308021).GetField("_speedDiceValuAdder",AccessTools.all).GetValue(Cross);
+            int slow = Cross._speedDiceValuAdder;
             slow = 0;
             if (round % 2 == 0 && BattleObjectManager.instance.GetAliveList().Find(x => x.UnitData.unitData.EnemyUnitId == 1308011) != null)
                 this.owner.allyCardDetail.AddNewCard(703815).SetPriorityAdder(Priority.Dequeue());

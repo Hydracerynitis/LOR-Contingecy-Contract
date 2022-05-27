@@ -33,15 +33,15 @@ namespace Contingecy_Contract
             base.OnRoundStartAfter();
             if (passive == null || !owner.passiveDetail.PassiveList.Contains(passive))
                 return;
-            switch ((int)typeof(PassiveAbility_1304012).GetField("currentPhase", AccessTools.all).GetValue(passive))
+            switch (passive.currentPhase)
             {
-                case 0:
+                case PassiveAbility_1304012.Phase.DONKEY:
                     GetCard(new List<int>(){ 703415, 703416});
                     break;
-                case 1:
+                case PassiveAbility_1304012.Phase.DOG:
                     GetCard(new List<int>(){ 703411, 703412});
                     break;
-                case 2:
+                case PassiveAbility_1304012.Phase.CHICKEN:
                     GetCard(new List<int>(){ 703413, 703414});
                     break;
             }
@@ -210,7 +210,7 @@ namespace Contingecy_Contract
             List<BattleUnitModel> aliveList = BattleObjectManager.instance.GetAliveList(this.owner.faction).FindAll(x => x != owner);
             if (aliveList.Count <= 0 || count <= 0)
                 return;
-            BattleUnitModel battleUnitModel = RandomUtil.SelectOne<BattleUnitModel>(aliveList);
+            BattleUnitModel battleUnitModel = RandomUtil.SelectOne(aliveList);
             switch (readyType)
             {
                 case BufReadyType.ThisRound:
@@ -259,7 +259,7 @@ namespace Contingecy_Contract
             if (card?.XmlData?.Spec?.Ranged != CardRange.Near)
                 return base.ChangeAttackTarget(card, idx);
             else
-                return RandomUtil.SelectOne<BattleUnitModel>(BattleObjectManager.instance.GetAliveList_opponent(owner.faction));
+                return RandomUtil.SelectOne(BattleObjectManager.instance.GetAliveList_opponent(owner.faction));
         }
     }
 }

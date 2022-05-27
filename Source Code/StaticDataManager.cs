@@ -33,7 +33,7 @@ namespace Contingecy_Contract
 
             Debug.PathDebug("/Contracts", PathType.Directory);
             Debug.XmlFileDebug("/Contracts");
-            foreach (FileInfo file in new DirectoryInfo(Harmony_Patch.ModPath + "/Contracts").GetFiles())
+            foreach (FileInfo file in new DirectoryInfo(CCInitializer.ModPath + "/Contracts").GetFiles())
             {
                 try
                 {
@@ -70,14 +70,14 @@ namespace Contingecy_Contract
         }
         public static void InitNonThumbDic()
         {
-            foreach (int i in Harmony_Patch.NoThumbPage)
+            foreach (int i in HP_SubSystem.NoThumbPage)
                 NonThumbSprite.Add(Tools.MakeLorId(i), null);
         }
         public static void LoadReward()
         {
             Debug.PathDebug("/Staticinfo/RewardList", PathType.Directory);
             Debug.XmlFileDebug("/Staticinfo/RewardList");
-            foreach (FileInfo file in new DirectoryInfo(Harmony_Patch.ModPath + "/Staticinfo/RewardList").GetFiles())
+            foreach (FileInfo file in new DirectoryInfo(CCInitializer.ModPath + "/Staticinfo/RewardList").GetFiles())
             {
                 try
                 {
@@ -106,7 +106,7 @@ namespace Contingecy_Contract
         {
             Debug.PathDebug("/Staticinfo/ExtraCondition", PathType.Directory);
             Debug.XmlFileDebug("/Staticinfo/ExtraCondition");
-            foreach (FileInfo file in new DirectoryInfo(Harmony_Patch.ModPath + "/Staticinfo/ExtraCondition").GetFiles())
+            foreach (FileInfo file in new DirectoryInfo(CCInitializer.ModPath + "/Staticinfo/ExtraCondition").GetFiles())
             {
                 try
                 {
@@ -123,7 +123,7 @@ namespace Contingecy_Contract
         {
             Debug.PathDebug("/Contracts/ContractParams", PathType.Directory);
             Debug.XmlFileDebug("/Contracts/ContractParams");
-            foreach (FileInfo file in new DirectoryInfo(Harmony_Patch.ModPath + "/Contracts/ContractParams").GetFiles())
+            foreach (FileInfo file in new DirectoryInfo(CCInitializer.ModPath + "/Contracts/ContractParams").GetFiles())
             {
                 try
                 {

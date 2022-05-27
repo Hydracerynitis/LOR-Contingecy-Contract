@@ -271,8 +271,8 @@ namespace Contingecy_Contract
             List<BattleUnitModel> aliveList = BattleObjectManager.instance.GetAliveList(this.owner.faction);
             aliveList.Remove(this.owner);
             bool flag = false;
-            BattleUnitModel battleUnitModel = aliveList.Find((Predicate<BattleUnitModel>)(x => x.UnitData.unitData.EnemyUnitId == unitId));
-            if (battleUnitModel != null && battleUnitModel.bufListDetail.GetActivatedBufList().Find((Predicate<BattleUnitBuf>)(x => x is BattleUnitBuf_Jaeheon_PuppetThread)) != null)
+            BattleUnitModel battleUnitModel = aliveList.Find(x => x.UnitData.unitData.EnemyUnitId == unitId);
+            if (battleUnitModel != null && battleUnitModel.bufListDetail.GetActivatedBufList().Find(x => x is BattleUnitBuf_Jaeheon_PuppetThread) != null)
                 flag = true;
             return flag;
         }

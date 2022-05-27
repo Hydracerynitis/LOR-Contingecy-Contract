@@ -124,15 +124,15 @@
    		 <TextId>17000004</TextId>
     		<Category>DeckFixed</Category>
     		<EquipEffect>
-      			<HP>110</HP>
+      			<HP>100</HP>
       			<Break>50</Break>
       			<SpeedMin>2</SpeedMin>
       			<Speed>7</Speed>
       			<SResist>Endure</SResist>
-                <PResist>Endure</PResist>
+                <PResist>Normal</PResist>
                 <HResist>Endure</HResist> 
-                <SBResist>Endure</SBResist>
-                <PBResist>Endure</PBResist>
+                <SBResist>Normal</SBResist>
+                <PBResist>Normal</PBResist>
                 <HBResist>Endure</HBResist>
       			<StartPlayPoint>4</StartPlayPoint>
       			<MaxPlayPoint>4</MaxPlayPoint>
@@ -140,7 +140,33 @@
 				<Passive>1700001</Passive>
                 <Passive>1700041</Passive>
       			<Passive>1700042</Passive>
-				<Passive>1700043</Passive>
+    		</EquipEffect>
+    		<BookIcon>ContingencyReward</BookIcon>
+    		<Chapter>7</Chapter>
+    		<Episode>1800007</Episode>
+    		<Rarity>Unique</Rarity>
+    		<CharacterSkin>BlackSilence4</CharacterSkin>
+ 	 </Book>
+	  <Book ID="17000005">
+    		<Name>失落天使</Name>
+   		 <TextId>17000005</TextId>
+    		<Category>DeckFixed</Category>
+    		<EquipEffect>
+      			<HP>140</HP>
+      			<Break>70</Break>
+      			<SpeedMin>2</SpeedMin>
+      			<Speed>7</Speed>
+      			<SResist>Normal</SResist>
+                <PResist>Normal</PResist>
+                <HResist>Normal</HResist> 
+                <SBResist>Normal</SBResist>
+                <PBResist>Normal</PBResist>
+                <HBResist>Normal</HBResist>
+      			<StartPlayPoint>4</StartPlayPoint>
+      			<MaxPlayPoint>4</MaxPlayPoint>
+      			<Passive Pid="@origin">10008</Passive>
+				<Passive>1700001</Passive>
+				<Passive>1700051</Passive>
     		</EquipEffect>
     		<BookIcon>ContingencyReward</BookIcon>
     		<Chapter>7</Chapter>

@@ -26,10 +26,10 @@ namespace Contingecy_Contract
         }
         public override void OnRoundStart()
         {
-            if (Harmony_Patch.CombaltData.ContainsKey(this.owner.UnitData))
+            if (CCInitializer.CombaltData.ContainsKey(this.owner.UnitData))
                 return;
             this.owner.RecoverHP((int)(this.owner.MaxHp / 4 * Level));
-            Harmony_Patch.CombaltData.Add(this.owner.UnitData, (int)this.owner.hp);
+            CCInitializer.CombaltData.Add(this.owner.UnitData, (int)this.owner.hp);
             base.OnWaveStart();
         }
     }

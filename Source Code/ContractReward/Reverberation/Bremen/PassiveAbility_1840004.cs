@@ -23,7 +23,7 @@ namespace ContractReward
             if (!_thisRoundActivated)
             {
                 this._thisRoundActivated = true;
-                RandomUtil.SelectOne<BattleUnitModel>(BattleObjectManager.instance.GetAliveList_opponent(this.owner.faction)).bufListDetail.AddKeywordBufByEtc(KeywordBuf.Vulnerable, 1, this.owner);
+                RandomUtil.SelectOne(BattleObjectManager.instance.GetAliveList_opponent(this.owner.faction)).bufListDetail.AddKeywordBufByEtc(KeywordBuf.Vulnerable, 1, this.owner);
             }
 
         }

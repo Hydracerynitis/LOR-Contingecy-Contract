@@ -4,4 +4,11 @@
 	  <BattleCardAbility ID="BlackSilence_Guilt">
     		<Desc> Cost is reduced by 1 whenever winning a clash. </Desc>
   	</BattleCardAbility>
+	<!--奖励通用-->
+	<BattleCardAbility ID="energy3">
+    		<Desc>[On Use] Recover 3 Light</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="drawCards3">
+    		<Desc>[On Use] Draw 3 Pages</Desc>
+  	</BattleCardAbility>
 </BattleCardAbilityDescRoot>

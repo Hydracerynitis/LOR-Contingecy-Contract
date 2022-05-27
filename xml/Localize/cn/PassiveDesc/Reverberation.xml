@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <PassiveDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<PassiveDesc ID="20210302">
-		<Name>危机合约:</Name> 
-		<Desc></Desc>
-	</PassiveDesc>
 	<!--奖励通用-->
 	<PassiveDesc ID="1800000">
-		<Name>完美提取</Name> 
+		<Name>完美提取--残响乐团</Name> 
 		<Desc>每一幕开始时抽牌直至你手中战斗书页数量达到7</Desc>
 	</PassiveDesc>
 	<!--阿尔加利亚-->

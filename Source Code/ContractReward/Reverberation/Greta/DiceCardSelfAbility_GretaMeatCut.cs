@@ -27,9 +27,9 @@ namespace ContractReward
             else
             {
                 DiceCardXmlInfo xml = ItemXmlDataList.instance.GetCardItem(Tools.MakeLorId(18300004));
-                typeof(BattleDiceCardModel).GetField("_xmlData", AccessTools.all).SetValue(self, xml);
+                self._xmlData = xml;
             }
-            typeof(BattleDiceCardModel).GetField("_script", AccessTools.all).SetValue(self, self.CreateDiceCardSelfAbilityScript());
+            self._script = self.CreateDiceCardSelfAbilityScript();
         }
     }
 }

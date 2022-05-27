@@ -7,13 +7,22 @@ using HarmonyLib;
 namespace Contingecy_Contract
 {
     [HarmonyPatch]
-    class HP_RolandReward
+    class HP_RolandSystem
     {
+        //Contract
+        [HarmonyPatch(typeof(EnemyTeamStageManager_BlackSilence),nameof(EnemyTeamStageManager_BlackSilence.OnWaveStart))]
+        [HarmonyPrefix]
+        public static void EnemyTeamStageManager_BlackSilence_OnWaveStart(EnemyTeamStageManager_BlackSilence __instance)
+        {
+            if (ContractLoader.Instance.GetStageList().Exists(x => x.Type == "Roland"))
+                __instance.curPhase = EnemyTeamStageManager_BlackSilence.Phase.FOURTH;
+        }
+        //P1
         [HarmonyPatch(typeof(UnitDataModel),nameof(UnitDataModel.ResetForBlackSilence))]
         [HarmonyPrefix]
         public static bool UnitDataModel_ResetFor_BlackSilence_Pre(UnitDataModel __instance, BookModel ____bookItem)
         {
-            if (Harmony_Patch.IsRoland(__instance) && ____bookItem!=null && ____bookItem.ClassInfo.id == Tools.MakeLorId(17000001))
+            if (CCInitializer.IsRoland(__instance) && ____bookItem!=null && ____bookItem.ClassInfo.id == Tools.MakeLorId(17000001))
                 return false;
             return true;
         }
@@ -21,7 +30,7 @@ namespace Contingecy_Contract
         [HarmonyPrefix]
         public static bool UnitDataModel_EquipBook_Pre(UnitDataModel __instance, BookModel newBook, ref BookModel ____bookItem, bool isEnemySetting = false, bool force = false)
         {
-            if (force || newBook == null || newBook.ClassInfo.id != Tools.MakeLorId(17000001) || newBook.ClassInfo.id != Tools.MakeLorId(17000004) || newBook.owner != null || !Harmony_Patch.IsRoland(__instance))
+            if (force || newBook == null || newBook.ClassInfo.id != Tools.MakeLorId(17000001) || newBook.ClassInfo.id != Tools.MakeLorId(17000004) || newBook.owner != null || !CCInitializer.IsRoland(__instance))
                 return true;
             BookModel bookItem = ____bookItem;
             ____bookItem = newBook;

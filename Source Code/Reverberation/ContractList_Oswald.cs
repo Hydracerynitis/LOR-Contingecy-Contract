@@ -83,7 +83,7 @@ namespace Contingecy_Contract
                         Dice.Dice += 2;
                         Dice.Min = Dice.Dice;
                     }
-                    typeof(BattleDiceCardModel).GetField("_xmlData", AccessTools.all).SetValue(card, xml);
+                    card._xmlData = xml;
                 }
             }
         }
@@ -280,10 +280,10 @@ namespace Contingecy_Contract
             public override void Destroy()
             {
                 base.Destroy();
-                BattleUnitModel battleUnitModel = BattleObjectManager.instance.GetAliveList().Find((Predicate<BattleUnitModel>)(x => x.UnitData.unitData.EnemyUnitId == 1305011));
+                BattleUnitModel battleUnitModel = BattleObjectManager.instance.GetAliveList().Find(x => x.UnitData.unitData.EnemyUnitId == 1305011);
                 if (battleUnitModel != null)
                 {
-                    PassiveAbilityBase passiveAbilityBase = battleUnitModel.passiveDetail.PassiveList.Find((Predicate<PassiveAbilityBase>)(x => x is PassiveAbility_1305012));
+                    PassiveAbilityBase passiveAbilityBase = battleUnitModel.passiveDetail.PassiveList.Find(x => x is PassiveAbility_1305012);
                     if (passiveAbilityBase != null)
                         (passiveAbilityBase as PassiveAbility_1305012).IncreaseDazeReleasedCount();
                 }
@@ -302,15 +302,15 @@ namespace Contingecy_Contract
                 if (_attractLoopSound != null)
                 {
                     _attractLoopSound.ManualDestroy();
-                    _attractLoopSound = (SoundEffectPlayer)null;
+                    _attractLoopSound = null;
                 }
                 if (play)
                 {
-                    _attractLoopSound = SingletonBehavior<SoundEffectManager>.Instance.PlayClip("Battle/Oswald_Attract_Loop", true, parent: this._owner.view.transform);
-                    SingletonBehavior<BattleSoundManager>.Instance.SetBgmVolumeRatio(0.25f);
+                    _attractLoopSound = SoundEffectManager.Instance.PlayClip("Battle/Oswald_Attract_Loop", true, parent: this._owner.view.transform);
+                    BattleSoundManager.Instance.SetBgmVolumeRatio(0.25f);
                 }
                 else
-                    SingletonBehavior<BattleSoundManager>.Instance.SetBgmVolumeRatio(1f);
+                    BattleSoundManager.Instance.SetBgmVolumeRatio(1f);
             }
         }
     }

@@ -11,9 +11,10 @@ using ContractReward;
 namespace Contingecy_Contract
 {
     [HarmonyPatch]
-    public class HP_UI
+    public class HP_RolandUI
     {
         static Color grey= new Color(0.75f, 0.75f, 0.75f);
+        //P1
         [HarmonyPatch(typeof(UISettingInvenEquipPageSlot), nameof(UISettingInvenEquipPageSlot.SetOperatingPanel))]
         [HarmonyPostfix]
         static void UISettingInvenEquipPageSlot_SetOperatingPanel_Pre(BookModel ____bookDataModel, UICustomGraphicObject ___button_Equip, TextMeshProUGUI ___txt_equipButton, Image ___img_equipbuttonIcon)
@@ -21,7 +22,7 @@ namespace Contingecy_Contract
             UnitDataModel currentUnit = UC.Instance.CurrentUnit;
             if (____bookDataModel != null && (____bookDataModel.ClassInfo.id == Tools.MakeLorId(17000001) || ____bookDataModel.ClassInfo.id == Tools.MakeLorId(17000004)))
             {
-                if (Harmony_Patch.IsRoland(currentUnit))
+                if (CCInitializer.IsRoland(currentUnit))
                 {
                     string id1 = ____bookDataModel.owner == null ? "ui_bookinventory_equipbook" : "ui_book_bookname_unequip";
                     ___button_Equip.interactable = true;
@@ -44,7 +45,7 @@ namespace Contingecy_Contract
             UnitDataModel currentUnit = UC.Instance.CurrentUnit;
             if (____bookDataModel != null && (____bookDataModel.ClassInfo.id == Tools.MakeLorId(17000001) || ____bookDataModel.ClassInfo.id == Tools.MakeLorId(17000004)))
             {
-                if (Harmony_Patch.IsRoland(currentUnit))
+                if (CCInitializer.IsRoland(currentUnit))
                 {
                     string id1 = ____bookDataModel.owner == null ? "ui_bookinventory_equipbook" : "ui_book_bookname_unequip";
                     ___button_Equip.interactable = true;
@@ -67,7 +68,7 @@ namespace Contingecy_Contract
             UnitDataModel currentUnit = UC.Instance.CurrentUnit;
             if (____bookDataModel != null && (____bookDataModel.ClassInfo.id == Tools.MakeLorId(17000001) || ____bookDataModel.ClassInfo.id == Tools.MakeLorId(17000004)))
             {
-                if (Harmony_Patch.IsRoland(currentUnit))
+                if (CCInitializer.IsRoland(currentUnit))
                 {
                     string id1 = ____bookDataModel.owner == null ? "ui_bookinventory_equipbook" : "ui_book_bookname_unequip";
                     ___button_Equip.interactable = true;
@@ -90,7 +91,7 @@ namespace Contingecy_Contract
             UnitDataModel currentUnit = UC.Instance.CurrentUnit;
             if (____bookDataModel != null && (____bookDataModel.ClassInfo.id == Tools.MakeLorId(17000001) || ____bookDataModel.ClassInfo.id == Tools.MakeLorId(17000004)))
             {
-                if (Harmony_Patch.IsRoland(currentUnit))
+                if (CCInitializer.IsRoland(currentUnit))
                 {
                     string id1 = ____bookDataModel.owner == null ? "ui_bookinventory_equipbook" : "ui_book_bookname_unequip";
                     ___button_Equip.interactable = true;
@@ -114,6 +115,7 @@ namespace Contingecy_Contract
                 str = "..............";
             return true;
         }
+        //P4
         [HarmonyPatch(typeof(BattleDiceCardUI), nameof(BattleDiceCardUI.SetCard))]
         [HarmonyPostfix]
         static void BattleDiceCardUI_SetCard(BattleDiceCardUI __instance)

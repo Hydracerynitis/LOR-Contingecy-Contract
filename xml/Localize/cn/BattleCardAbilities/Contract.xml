@@ -4,4 +4,11 @@
 	  <BattleCardAbility ID="BlackSilence_Guilt">
     		<Desc>每与带有'罪恶感'的单位取得1次拼点胜利便使得本书页费用-1</Desc>
   	</BattleCardAbility>
+	<!--奖励通用-->
+	<BattleCardAbility ID="energy3">
+    		<Desc>[使用时]恢复3点光芒</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="drawCards3">
+    		<Desc>[使用时]抽取3张书页</Desc>
+  	</BattleCardAbility>
 </BattleCardAbilityDescRoot>

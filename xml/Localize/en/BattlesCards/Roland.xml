@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <BattleCardDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	 <cardDescList>
+	 	<!--P2-->
 	 	<BattleCardDesc ID="17000021">
 			<LocalizedName>Swing</LocalizedName>
 		</BattleCardDesc>
@@ -19,6 +20,7 @@
 		<BattleCardDesc ID="17000026">
 			<LocalizedName>Spew Smoke</LocalizedName>
 		</BattleCardDesc>
+		<!--P3 maidenless-->
 		<BattleCardDesc ID="17000031">
 			<LocalizedName>Vigilant Stand</LocalizedName>
 		</BattleCardDesc>
@@ -31,6 +33,7 @@
 		<BattleCardDesc ID="17000034">
 			<LocalizedName>Frenzy</LocalizedName>
 		</BattleCardDesc>
+		<!--P3 maidenful-->
 		<BattleCardDesc ID="17000131">
 			<LocalizedName>Waltz in Black</LocalizedName>
 		</BattleCardDesc>
@@ -49,6 +52,7 @@
 		<BattleCardDesc ID="17000136">
 			<LocalizedName>Flank: Atelier Logique</LocalizedName>
 		</BattleCardDesc>
+		<!--P3 maiden-->
 		<BattleCardDesc ID="17000231">
 			<LocalizedName>Waltz in White</LocalizedName>
 		</BattleCardDesc>
@@ -70,6 +74,7 @@
 		<BattleCardDesc ID="17000331">
 			<LocalizedName>Invitation</LocalizedName>
 		</BattleCardDesc>
+		<!--P4-->
 		<BattleCardDesc ID="17000040">
 			<LocalizedName>Fruioso</LocalizedName>
 		</BattleCardDesc>

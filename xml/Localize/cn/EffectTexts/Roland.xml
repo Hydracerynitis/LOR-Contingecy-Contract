@@ -36,5 +36,57 @@
 			<Name>协同 X： Y</Name>
 			<Desc>使用书页时,若有其他友方单位(协同者)使用书页X,触发Y效果</Desc>
 		</BattleEffectText>
+		<BattleEffectText ID="LearnIndicator">
+			<Name>学习</Name>
+			<Desc>可无限使用“模仿学习”战斗书页 
+命中时下一幕施加谎言效果(这一幕开始时手上书页费用随机化)</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="NailHammerIndicator">
+			<Name>钉与锤</Name>
+			<Desc>这一幕内命中目标会根据进攻骰类型施加斩击钉，穿刺钉，打击钉。
+一幕内用不同进攻类型命中该目标会触发钉的效果并移除钉。否则会提升1层钉。</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="SlashNail">
+			<Name>斩击钉</Name>
+			<Desc>被带有“钉与锤”被动的角色使用斩击骰命中时层数+1。
+否则每层下一幕内施加3流血1易损并移除该效果</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="PenetrateNail">
+			<Name>穿刺钉</Name>
+			<Desc>被带有“钉与锤”被动的角色使用穿刺骰命中时层数+1。
+否则每层承受5点伤害并移除该效果</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="HitNail">
+			<Name>打击钉</Name>
+			<Desc>被带有“钉与锤”被动的角色使用打击骰命中时层数+1。
+否则每层承受5点混乱伤害并移除该效果</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="GuiltIndicator">
+			<Name>罪恶感</Name>
+        	<Desc>拼点时, 减少骰子威力的承受伤害。
+被单方面攻击时额外承受2-4点伤害</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="BlizzardIndicator">
+			<Name>暴风雪</Name>
+			<Desc>对所有其他角色施加3层束缚</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="PulsationIndicator">
+			<Name>脉动</Name>
+			<Desc>速度骰-1，命中时下一幕获得1层强壮(每张书页最多1层)
+若这一幕内没能造成伤害便承受15点混乱伤害。</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="FerventIndicator">
+			<Name>剧烈搏动</Name>
+        	<Desc>这一幕内获得2层强壮忍耐3层敏捷4层守护。 
+减少下一幕获得的特殊被动。</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="FrostIndicator">
+			<Name>凌剑</Name>
+        	<Desc>攻击速度低于自身的角色会追加2-4点伤害和混乱伤害</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="HandIndicator">
+			<Name>苍白之手</Name>
+        	<Desc>这一幕内击中同一目标3次便追加3-10点混乱伤害</Desc>
+		</BattleEffectText>
 	</effectTextList>
 </BattleEffectTextRoot>

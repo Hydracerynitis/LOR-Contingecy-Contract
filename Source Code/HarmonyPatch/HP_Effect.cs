@@ -20,7 +20,7 @@ namespace Contingecy_Contract
                 {
                     effect.OnEffectEnd();
                 }
-                catch(Exception e)
+                catch
                 {
 
                 }

@@ -74,7 +74,7 @@ namespace Contingecy_Contract
             {
                 while (info.exceptFloorList.Count < 5)
                 {
-                    SephirahType sephirah = RandomUtil.SelectOne<SephirahType>(SephirahType.Malkuth, SephirahType.Yesod, SephirahType.Hod, SephirahType.Netzach, SephirahType.Tiphereth, SephirahType.Gebura, SephirahType.Chesed, SephirahType.Binah, SephirahType.Hokma, SephirahType.Keter);
+                    SephirahType sephirah = RandomUtil.SelectOne(SephirahType.Malkuth, SephirahType.Yesod, SephirahType.Hod, SephirahType.Netzach, SephirahType.Tiphereth, SephirahType.Gebura, SephirahType.Chesed, SephirahType.Binah, SephirahType.Hokma, SephirahType.Keter);
                     if (!info.exceptFloorList.Contains(sephirah))
                         info.exceptFloorList.Add(sephirah);
                 }
@@ -82,7 +82,7 @@ namespace Contingecy_Contract
             }
             else
             {
-                info.floorOnlyList.Add(RandomUtil.SelectOne<SephirahType>(SephirahType.Malkuth, SephirahType.Yesod, SephirahType.Hod, SephirahType.Netzach, SephirahType.Tiphereth, SephirahType.Gebura, SephirahType.Chesed, SephirahType.Binah, SephirahType.Hokma, SephirahType.Keter));
+                info.floorOnlyList.Add(RandomUtil.SelectOne(SephirahType.Malkuth, SephirahType.Yesod, SephirahType.Hod, SephirahType.Netzach, SephirahType.Tiphereth, SephirahType.Gebura, SephirahType.Chesed, SephirahType.Binah, SephirahType.Hokma, SephirahType.Keter));
             }
         }
     }

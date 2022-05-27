@@ -46,7 +46,7 @@ namespace ContractReward
             original.Deck = unit.allyCardDetail;
             original.Passive = unit.passiveDetail;
             original.EGO = unit.personalEgoDetail;
-            Contingecy_Contract.Harmony_Patch.UnitBookId.Add(Angelica, Angelica.Book.GetBookClassInfoId());
+            Contingecy_Contract.CCInitializer.UnitBookId.Add(Angelica, Angelica.Book.GetBookClassInfoId());
             Angelica.Book.SetHp(angelica.HP);
             Angelica.Book.SetBp(angelica.Break);
             Angelica.Book.SetSpeedDiceMax(angelica.SpeedMax);

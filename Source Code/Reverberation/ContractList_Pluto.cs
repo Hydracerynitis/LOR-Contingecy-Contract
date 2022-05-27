@@ -36,7 +36,7 @@ namespace Contingecy_Contract
             base.BeforeRollDice(behavior);
             if (copypassive == null)
                 return;
-            if(behavior.card.target==typeof(PassiveAbility_1309021).GetField("_copyUnit",AccessTools.all).GetValue(copypassive) as BattleUnitModel)
+            if(behavior.card.target==copypassive._copyUnit)
             {
                 behavior.ApplyDiceStatBonus(new DiceStatBonus() { power = Level });
             }
@@ -107,11 +107,11 @@ namespace Contingecy_Contract
             if (!Activate)
                 return;
             GameObject gameObject = Util.LoadPrefab("Battle/DiceAttackEffects/New/FX/Mon/Pluto/FX_Mon_Pluto_Paper");
-            if (!((UnityEngine.Object)gameObject != (UnityEngine.Object)null))
+            if (gameObject == null)
                 return;
             gameObject.AddComponent<AutoDestruct>().time = 1.5f;
             Pluto1st_Contract component = gameObject.GetComponent<Pluto1st_Contract>();
-            if (!((UnityEngine.Object)component != (UnityEngine.Object)null))
+            if (component == null)
                 return;
             component.Init();
         }

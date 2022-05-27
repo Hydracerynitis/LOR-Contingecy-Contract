@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <PassiveDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<PassiveDesc ID="20210302">
-		<Name>Contingency Contract:</Name> 
-		<Desc></Desc>
-	</PassiveDesc>
 	<!--奖励通用-->
 	<PassiveDesc ID="1800000">
-		<Name>Perfect Extraction</Name> 
+		<Name>Perfect Extraction: Reverberation Ensemble</Name> 
 		<Desc>At the Start of the Scene, draw cards until there are 7 combat cards in the character's hand.</Desc>
 	</PassiveDesc>
 	<!--阿尔加利亚-->

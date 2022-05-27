@@ -80,7 +80,7 @@ namespace Contingecy_Contract
         {
             if (!IsEileen || BattleObjectManager.instance.GetAliveList(this.owner.faction).FindAll(x => x!= owner).Count<=0)
                 return false;
-            RandomUtil.SelectOne<BattleUnitModel>(BattleObjectManager.instance.GetAliveList(this.owner.faction).FindAll(x => x != owner)).TakeDamage(dmg);
+            RandomUtil.SelectOne(BattleObjectManager.instance.GetAliveList(this.owner.faction).FindAll(x => x != owner)).TakeDamage(dmg);
             return true;
         }
     }

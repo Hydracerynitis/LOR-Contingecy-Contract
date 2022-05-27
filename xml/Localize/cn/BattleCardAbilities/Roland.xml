@@ -51,4 +51,7 @@
     		<Desc>[使用时] 将所有原版牌库被移除的书页置入牌库，并且恢复所有光芒抽取至手上有4张书页.
 每使用不同一张书页便重复投掷该书页第一个骰子一次</Desc>
   	</BattleCardAbility>
+	  <BattleCardAbility ID="Agony">
+    		<Desc>[使用时] 抽取3张书页，并且在下一幕内对随机2个敌人施加1层束缚</Desc>
+  	</BattleCardAbility>
 </BattleCardAbilityDescRoot>

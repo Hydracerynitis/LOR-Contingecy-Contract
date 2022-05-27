@@ -14,7 +14,7 @@ namespace ContractReward
         public override void OnFixedUpdateInWaitPhase(float delta)
         {
             base.OnFixedUpdateInWaitPhase(delta);
-            if (Harmony_Patch.passive18900002_Makred.Count > 0)
+            if (CCInitializer.passive18900002_Makred.Count > 0)
                 return;
             List<DiceCardXmlInfo> uniques = new List<DiceCardXmlInfo>();
             foreach (BattleUnitModel unit in BattleObjectManager.instance.GetAliveList_opponent(owner.faction))
@@ -38,14 +38,14 @@ namespace ContractReward
             }
             foreach (DiceCardXmlInfo mark in MarkedCard)
             {
-                Harmony_Patch.passive18900002_Makred.Add(RandomUtil.SelectOne<DiceBehaviour>(mark.DiceBehaviourList.FindAll(x=> x.Type!=BehaviourType.Standby)));
+                CCInitializer.passive18900002_Makred.Add(RandomUtil.SelectOne<DiceBehaviour>(mark.DiceBehaviourList.FindAll(x=> x.Type!=BehaviourType.Standby)));
             }
             steal = null;
         }
         public override void BeforeRollDice(BattleDiceBehavior behavior)
         {
             base.BeforeRollDice(behavior);
-            if (behavior.TargetDice!=null && Harmony_Patch.passive18900002_Makred.Contains(behavior.TargetDice.behaviourInCard))
+            if (behavior.TargetDice!=null && CCInitializer.passive18900002_Makred.Contains(behavior.TargetDice.behaviourInCard))
             {
                 steal = BattleDiceCardModel.CreatePlayingCard(behavior.card.target.currentDiceAction.card.XmlData.Copy());
                 steal.owner = owner;
@@ -55,7 +55,7 @@ namespace ContractReward
         public override void OnWinParrying(BattleDiceBehavior behavior)
         {
             base.OnWinParrying(behavior);
-            if (Harmony_Patch.passive18900002_Makred.Contains(behavior.TargetDice.behaviourInCard)&&steal!=null)
+            if (CCInitializer.passive18900002_Makred.Contains(behavior.TargetDice.behaviourInCard)&&steal!=null)
             {
                 steal.SetCostToZero();
             }
@@ -71,7 +71,7 @@ namespace ContractReward
         }
         public override void OnRoundStart()
         {
-            Harmony_Patch.passive18900002_Makred.Clear();
+            CCInitializer.passive18900002_Makred.Clear();
         }
     }
 }

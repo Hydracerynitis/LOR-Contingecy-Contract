@@ -30,9 +30,9 @@ namespace ContractReward
         public void Revive()
         {
             List<BattleUnitModel> Dead = BattleObjectManager.instance.GetFriendlyAllList(this.owner.faction).FindAll(x =>x.IsDead()==true);
-            Angelica = RandomUtil.SelectOne<BattleUnitModel>(Dead);
+            Angelica = RandomUtil.SelectOne(Dead);
             BookModel puppet=new BookModel(Singleton<BookXmlList>.Instance.GetData(Tools.MakeLorId(18710000)));
-            Contingecy_Contract.Harmony_Patch.UnitBookId.Add(Angelica, Angelica.Book.GetBookClassInfoId());
+            Contingecy_Contract.CCInitializer.UnitBookId.Add(Angelica, Angelica.Book.GetBookClassInfoId());
             Angelica.Book.SetHp(puppet.HP);
             Angelica.Book.SetBp(puppet.Break);
             Angelica.Book.SetSpeedDiceMax(puppet.SpeedMax);
@@ -77,24 +77,24 @@ namespace ContractReward
             list1.Add(new PassiveAbility_1870101(Angelica));
             list1.Add(new PassiveAbility_1870102(Angelica));
             list1.Add(new PassiveAbility_1870103(Angelica));
-            typeof(BattleUnitPassiveDetail).GetField("_passiveList", AccessTools.all).SetValue((object)Angelica.passiveDetail, (object)list1);
+            Angelica.passiveDetail._passiveList = list1;
             Contingecy_Contract.ContractAttribution.Inition.Remove(Angelica);
             Contingecy_Contract.ContractAttribution.Init(Angelica);
             int num = 0;
             foreach (BattleUnitModel battleUnitModel in BattleObjectManager.instance.GetList())
                 SingletonBehavior<UICharacterRenderer>.Instance.SetCharacter(battleUnitModel.UnitData.unitData, num++,renderRealtime: true);
-            RandomUtil.SelectOne<BattleUnitModel>(BattleObjectManager.instance.GetAliveList_opponent(this.owner.faction)).bufListDetail.AddBuf(new BattleUnitBuf_AttackTarget());
+            RandomUtil.SelectOne(BattleObjectManager.instance.GetAliveList_opponent(this.owner.faction)).bufListDetail.AddBuf(new BattleUnitBuf_AttackTarget());
             BattleObjectManager.instance.InitUI();
             this.owner.personalEgoDetail.AddCard(Tools.MakeLorId(18700103));
             Active = this.owner.allyCardDetail;
             this.owner.allyCardDetail = Passive;
             this.owner.allyCardDetail.DrawCards(8);
             List<PassiveAbilityBase> list2 = this.owner.passiveDetail.PassiveList;
-            PassiveAbilityBase active = list2.Find((Predicate<PassiveAbilityBase>)(x => x is PassiveAbility_1870002));
+            PassiveAbilityBase active = list2.Find(x => x is PassiveAbility_1870002);
             PassiveAbilityBase passive = new PassiveAbility_1870003(this.owner,Angelica);
             list2.Remove(active);
             list2.Add(passive);
-            typeof(BattleUnitPassiveDetail).GetField("_passiveList", AccessTools.all).SetValue((object)this.owner.passiveDetail, (object)list2);
+            owner.passiveDetail._passiveList= list2;
         }
         public void ReturnToActive()
         {
@@ -104,11 +104,11 @@ namespace ContractReward
             this.owner.allyCardDetail = Active;
             this.owner.allyCardDetail.DrawCards(7);
             List<PassiveAbilityBase> list = this.owner.passiveDetail.PassiveList;
-            PassiveAbilityBase passive = list.Find((Predicate<PassiveAbilityBase>)(x => x is PassiveAbility_1870003));
+            PassiveAbilityBase passive = list.Find(x => x is PassiveAbility_1870003);
             PassiveAbilityBase active = new PassiveAbility_1870002(this.owner);
             list.Remove(passive);
             list.Add(active);
-            typeof(BattleUnitPassiveDetail).GetField("_passiveList", AccessTools.all).SetValue((object)this.owner.passiveDetail, (object)list);
+            owner.passiveDetail._passiveList = list;
         }
         public void ReturnToPassive()
         {
@@ -120,11 +120,11 @@ namespace ContractReward
             this.owner.allyCardDetail = Passive;
             this.owner.allyCardDetail.DrawCards(8);
             List<PassiveAbilityBase> list = this.owner.passiveDetail.PassiveList;
-            PassiveAbilityBase active = list.Find((Predicate<PassiveAbilityBase>)(x => x is PassiveAbility_1870002));
-            PassiveAbilityBase passive = new PassiveAbility_1870003(this.owner,Angelica);
+            PassiveAbilityBase active = list.Find(x => x is PassiveAbility_1870002);
+            PassiveAbilityBase passive = new PassiveAbility_1870003(owner,Angelica);
             list.Remove(active);
             list.Add(passive);
-            typeof(BattleUnitPassiveDetail).GetField("_passiveList", AccessTools.all).SetValue((object)this.owner.passiveDetail, (object)list);
+            owner.passiveDetail._passiveList = list;
         }
         public override void OnDie()
         {

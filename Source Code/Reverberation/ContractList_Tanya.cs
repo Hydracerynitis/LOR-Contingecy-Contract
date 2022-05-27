@@ -35,7 +35,7 @@ namespace Contingecy_Contract
                 card.CopySelf();
                 DiceCardXmlInfo info = card.XmlData.Copy();
                 info.DiceBehaviourList.RemoveAll(x => x.Type == BehaviourType.Standby);
-                typeof(BattleDiceCardModel).GetField("_xmlData", AccessTools.all).SetValue(card, info);
+                card._xmlData = info;
             }
         }
         public override void OnEndBattle(BattlePlayingCardDataInUnitModel curCard)
@@ -82,7 +82,7 @@ namespace Contingecy_Contract
         private PassiveAbility_1306011 TanyaPassive;
         private Queue<int> Priority;
         private int Ultimate_interval => Level >= 3 ? 3 : 4;
-        private int TanyaPhase => (int)typeof(PassiveAbility_1306011).GetField("_phase", AccessTools.all).GetValue(TanyaPassive);
+        private int TanyaPhase => TanyaPassive._phase;
         public override string[] GetFormatParam(string language) => new string[] { GetParam(language), (10 + 10 * Level).ToString() };
         private string GetParam(string language)
         {
@@ -250,7 +250,7 @@ namespace Contingecy_Contract
         private PassiveAbility_1306011 TanyaPassive;
         private int activate = 0;
         private bool _nextPhase;
-        private int TanyaPhase => (int)typeof(PassiveAbility_1306011).GetField("_phase", AccessTools.all).GetValue(TanyaPassive);
+        private int TanyaPhase => TanyaPassive._phase;
         public ContingecyContract_Tanya(int level)
         {
             Level = level;

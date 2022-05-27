@@ -1,0 +1,164 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using BaseMod;
+using ContractReward;
+using HarmonyLib;
+using UI;
+using UnityEngine;
+
+namespace Contingecy_Contract
+{
+    [HarmonyPatch]
+    class HP_SubSystem
+    {
+        [HarmonyPatch(typeof(BookModel),nameof(BookModel.GetThumbSprite))]
+        [HarmonyPostfix]
+        public static void BookModel_GetThumbSprite(ref Sprite __result, BookModel __instance)
+        {
+            if (StaticDataManager.NonThumbSprite.ContainsKey(__instance.GetBookClassInfoId()))
+            {
+                if (StaticDataManager.NonThumbSprite[__instance.GetBookClassInfoId()] != null)
+                    __result = StaticDataManager.NonThumbSprite[__instance.GetBookClassInfoId()];
+                else
+                {
+                    try
+                    {
+                        GameObject prefab = Singleton<AssetBundleManagerRemake>.Instance.LoadCharacterPrefab(__instance.GetOriginalCharcterName(), "_N", out string resourcename);
+                        if (prefab == null)
+                            return;
+                        CharacterAppearance character = prefab.GetComponent<CharacterAppearance>();
+                        CharacterMotion Default = character.GetCharacterMotion(ActionDetail.Default);
+                        if (Default == null)
+                            return;
+                        SpriteSet Body = Default.motionSpriteSet.Find(x => x.sprType == CharacterAppearanceType.Body);
+                        if (Body != null)
+                        {
+                            StaticDataManager.NonThumbSprite[__instance.GetBookClassInfoId()] = Default.motionSpriteSet.Find(x => x.sprType == CharacterAppearanceType.Body).sprRenderer.sprite;
+                            __result = StaticDataManager.NonThumbSprite[__instance.GetBookClassInfoId()];
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Debug.Error("PrefabThumbe", ex);
+                    }
+                }
+            }
+
+        }
+        [HarmonyPatch(typeof(BookXmlInfo),nameof(BookXmlInfo.GetThumbSprite))]
+        [HarmonyPostfix]
+        public static void BookXmlInfo_GetThumbSprite(ref Sprite __result, BookXmlInfo __instance)
+        {
+            if (StaticDataManager.NonThumbSprite.ContainsKey(__instance.id))
+            {
+                if (StaticDataManager.NonThumbSprite[__instance.id] != null)
+                    __result = StaticDataManager.NonThumbSprite[__instance.id];
+                else
+                {
+                    try
+                    {
+                        GameObject prefab = Singleton<AssetBundleManagerRemake>.Instance.LoadCharacterPrefab(__instance.GetCharacterSkin(), "_N", out string resourcename);
+                        if (prefab == null)
+                            return;
+                        CharacterAppearance character = prefab.GetComponent<CharacterAppearance>();
+                        CharacterMotion Default = character.GetCharacterMotion(ActionDetail.Default);
+                        if (Default == null)
+                            return;
+                        SpriteSet Body = Default.motionSpriteSet.Find(x => x.sprType == CharacterAppearanceType.Body);
+                        if (Body != null)
+                        {
+                            StaticDataManager.NonThumbSprite[__instance.id] = Default.motionSpriteSet.Find(x => x.sprType == CharacterAppearanceType.Body).sprRenderer.sprite;
+                            __result = StaticDataManager.NonThumbSprite[__instance.id];
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Debug.Error("PrefabThumbe", ex);
+                    }
+                }
+            }
+
+        }
+        [HarmonyPatch(typeof(AssemblyManager),nameof(AssemblyManager.CreateInstance_DiceCardSelfAbility))]
+        [HarmonyPostfix]
+        public static void AssemblyManager_CreateInstance_DiceCardSelfAbility(ref DiceCardSelfAbilityBase __result)
+        {
+            if (__result is DiceCardSelfAbility_Jaeheon_AreaDt)
+                __result = new Fix.DiceCardSelfAbility_Jaeheon_AreaDt_New();
+            else if (ContractLoader.Instance.GetPassiveList().Exists(x => x.Type == "Roland3rd_Unity") && __result is DiceCardSelfAbility_atkcombo_allas)
+                __result = new Fix.DiceCardSelfAbility_atkcombo_allas_New();
+            else if (ContractLoader.Instance.GetPassiveList().Exists(x => x.Type == "Roland3rd_Unity") && __result is DiceCardSelfAbility_atkcombo_logic)
+                __result = new Fix.DiceCardSelfAbility_atkcombo_logic_New();
+            else if (ContractLoader.Instance.GetPassiveList().Exists(x => x.Type == "Roland3rd_Unity") && __result is DiceCardSelfAbility_atkcombo_zelkova)
+                __result = new Fix.DiceCardSelfAbility_atkcombo_zelkova_New();
+        }
+        [HarmonyPatch(typeof(AssemblyManager),nameof(AssemblyManager.CreateInstance_PassiveAbility))]
+        [HarmonyPostfix]
+        public static void AssemblyManager_CreateInstance_PassiveAbility(ref PassiveAbilityBase __result)
+        {
+            if (__result is PassiveAbility_1302013)
+                __result = new Fix.PassiveAbility_1302013_New();
+            else if (__result is PassiveAbility_1303012)
+                __result = new Fix.PassiveAbility_1303012_New();
+            else if (__result is PassiveAbility_1303013)
+                __result = new Fix.PassiveAbility_1303013_New();
+            else if (ContractLoader.Instance.GetPassiveList().Exists(x => x.Type == "Roland1st") && __result is PassiveAbility_170003 && !(__result is PassiveAbility_1700013))
+                __result = new Fix.PassiveAbility_170003_New();
+            else if (ContractLoader.Instance.GetPassiveList().Exists(x => x.Type == "Roland4th_BlackSilence") && __result is PassiveAbility_170301)
+                __result = new Fix.PassiveAbility_170301_New();
+        }
+        [HarmonyPatch(typeof(UICharacterRenderer),nameof(UICharacterRenderer.SetCharacter))]
+        [HarmonyPostfix]
+        public static void UICharacterRenderer_SetCharacter(UnitDataModel unit, int index)
+        {
+            if (unit.GetCustomBookItemData() != null && NonHeadEquipPage.Exists(x => unit.GetCustomBookItemData().GetBookClassInfoId() == Tools.MakeLorId(x)) || NonHeadEquipPage.Exists(x => unit.bookItem.GetBookClassInfoId() == Tools.MakeLorId(x)) && unit.GetCustomBookItemData() == null)
+            {
+                UICharacter character = UICharacterRenderer.Instance.characterList[index];
+                CustomizedAppearance appearance = character.unitAppearance._customAppearance;
+                if (appearance != null)
+                {
+                    foreach (SpriteRenderer allSprite in appearance.allSpriteList)
+                    {
+                        SpriteMask spriteMask = allSprite.GetComponent<SpriteMask>();
+                        if (spriteMask != null)
+                            character.unitAppearance.maskControl.maskList.Remove(spriteMask);
+                    }
+                    if (appearance.gameObject != null)
+                        UnityEngine.Object.Destroy(appearance.gameObject);
+                    character.unitAppearance._customAppearance = null;
+                }
+            }
+        }
+        [HarmonyPatch(typeof(SdCharacterUtil),nameof(SdCharacterUtil.CreateSkin))]
+        [HarmonyPostfix]
+        public static void SdCharacterUtil_CreateSkin(UnitDataModel unit, CharacterAppearance __result)
+        {
+            if (unit.GetCustomBookItemData() != null && NonHeadEquipPage.Exists(x => unit.GetCustomBookItemData().GetBookClassInfoId() == Tools.MakeLorId(x)) || NonHeadEquipPage.Exists(x => unit.bookItem.GetBookClassInfoId() == Tools.MakeLorId(x)) && unit.GetCustomBookItemData() == null)
+            {
+                CustomizedAppearance appearance = __result._customAppearance;
+                if (appearance != null)
+                {
+                    foreach (SpriteRenderer allSprite in appearance.allSpriteList)
+                    {
+                        SpriteMask spriteMask = allSprite.GetComponent<SpriteMask>();
+                        if (spriteMask != null)
+                            __result.maskControl.maskList.Remove(spriteMask);
+                    }
+                    if (appearance.gameObject != null)
+                        UnityEngine.Object.Destroy(appearance.gameObject);
+                    __result._customAppearance = null;
+                }
+            }
+        }
+        [HarmonyPatch(typeof(EmotionCardXmlList),nameof(EmotionCardXmlList.GetDataList), new Type[] { typeof(SephirahType), typeof(int), typeof(int) })]
+        [HarmonyPostfix]
+        public static void EmotionCardXmlList_GetDataList(List<EmotionCardXmlInfo> __result, int emotionLevel)
+        {
+            if (Singleton<ContractLoader>.Instance.GetPassiveList().Find(x => x.Type == "NoEmotion") is Contract NoEmotion && emotionLevel >= 4 - NoEmotion.Variant)
+                __result.Clear();
+        }
+        public static List<int> NoThumbPage = new List<int>() { 18810000, 17000002, 17000003, 17000004 };
+        public static List<int> NonHeadEquipPage = new List<int>() { 18810000 };
+    }
+}

@@ -1,5 +1,5 @@
 ﻿using BaseMod;
-using HP=Contingecy_Contract.Harmony_Patch;
+using HP=Contingecy_Contract.CCInitializer;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

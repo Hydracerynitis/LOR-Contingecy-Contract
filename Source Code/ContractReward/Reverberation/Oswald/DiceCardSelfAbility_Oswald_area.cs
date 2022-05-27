@@ -23,6 +23,6 @@ namespace ContractReward
                     subTarget.target.bufListDetail.AddKeywordBufByCard(this.GetRandomBuf(keywordList), 2, this.owner);
             }
         }
-        private KeywordBuf GetRandomBuf(List<KeywordBuf> keywordList) => RandomUtil.SelectOne<KeywordBuf>(keywordList);
+        private KeywordBuf GetRandomBuf(List<KeywordBuf> keywordList) => RandomUtil.SelectOne(keywordList);
     }
 }

@@ -66,4 +66,15 @@
 		<Card>17000048</Card>
 		<Card>17000049</Card>
 	</Deck>
+	<Deck ID="17000005">
+		<Card>17000051</Card>
+		<Card>17000052</Card>
+		<Card>17000053</Card>
+		<Card>17000054</Card>
+		<Card>17000054</Card>
+		<Card>17000054</Card>
+		<Card>17000055</Card>
+		<Card>17000055</Card>
+		<Card>17000056</Card>
+	</Deck>
 </DeckXmlRoot>

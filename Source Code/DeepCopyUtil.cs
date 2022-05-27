@@ -131,7 +131,7 @@ namespace Contingecy_Contract
                 Dice.Dice += dice;
                 Dice.Min += min;
             }
-            typeof(BattleDiceCardModel).GetField("_xmlData", AccessTools.all).SetValue(card, xml);
+            card._xmlData = xml;
         }
         public static void EnhanceCard(int index, BattleDiceCardModel card, int min = 0, int dice = 0)
         {
@@ -139,7 +139,7 @@ namespace Contingecy_Contract
             DiceBehaviour Dice = xml.DiceBehaviourList[index];
             Dice.Dice += dice;
             Dice.Min += min;
-            typeof(BattleDiceCardModel).GetField("_xmlData", AccessTools.all).SetValue(card, xml);
+            card._xmlData = xml;
         }
     }
 }
