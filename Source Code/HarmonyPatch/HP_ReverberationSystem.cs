@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using ContractReward;
 using HarmonyLib;
 using LOR_DiceSystem;
 using UnityEngine;
@@ -174,6 +174,60 @@ namespace Contingecy_Contract
             if (CCInitializer.passive18900002_Makred.Contains(__instance))
                 CCInitializer.passive18900002_Makred.Add(__result);
         }
+        [HarmonyPatch(typeof(PassiveAbility_1309021),nameof(PassiveAbility_1309021.ChangeSpec))]
+        [HarmonyPrefix]
+        public static bool PassiveAbility_1309021_ChangeSpec(PassiveAbility_1309021 __instance)
+        {
+            if (__instance._copyUnit == null)
+                return false;
+            __instance.owner.UnitData.unitData.customizeData.SetCustomData(true);
+            __instance.owner.view.ChangeSkin(__instance._copyUnit.Book.GetCharacterName());
+            foreach (PassiveAbilityBase passive in __instance._copyUnit.passiveDetail.PassiveList)
+            {
+                if (passive is ContingecyContract)
+                    continue;
+                PassiveAbilityBase instance = Activator.CreateInstance(passive.GetType()) as PassiveAbilityBase;
+                instance.Init(__instance.owner);
+                if (instance.SpeedDiceNumAdder() == 0 && instance.SpeedDiceBreakedAdder() == 0)
+                {
+                    instance.rare = passive.rare;
+                    __instance.owner.passiveDetail.AddPassive(instance);
+                }
+            }
+            BookModel book = __instance._copyUnit.Book;
+            book.GetStartPlayPoint();
+            book.GetMaxPlayPoint();
+            int speedDiceNum = book.SpeedDiceNum;
+            int speedMin = book.SpeedMin;
+            int speedMax = book.SpeedMax;
+            int hp = book.HP;
+            int maxBp = book.Break;
+            __instance.owner.Book.SetCharacterName(book.GetCharacterName());
+            __instance.owner.Book.SetSpeedDiceMin(speedMin);
+            __instance.owner.Book.SetSpeedDiceMax(speedMax);
+            __instance.owner.Book.SetHp(hp);
+            __instance.owner.Book.SetBp(maxBp);
+            __instance.owner.RecoverHP(__instance.owner.MaxHp);
+            __instance.owner.RecoverBreakLife(__instance.owner.MaxBreakLife);
+            __instance.owner.breakDetail.nextTurnBreak = false;
+            __instance.owner.breakDetail.RecoverBreak(__instance.owner.breakDetail.GetDefaultBreakGauge());
+            AtkResist resistHp1 = book.GetResistHP(BehaviourDetail.Slash);
+            AtkResist resistHp2 = book.GetResistHP(BehaviourDetail.Penetrate);
+            AtkResist resistHp3 = book.GetResistHP(BehaviourDetail.Hit);
+            AtkResist resistBp1 = book.GetResistBP(BehaviourDetail.Slash);
+            AtkResist resistBp2 = book.GetResistBP(BehaviourDetail.Penetrate);
+            AtkResist resistBp3 = book.GetResistBP(BehaviourDetail.Hit);
+            __instance.owner.Book.SetResistHP(BehaviourDetail.Slash, resistHp1);
+            __instance.owner.Book.SetResistHP(BehaviourDetail.Penetrate, resistHp2);
+            __instance.owner.Book.SetResistHP(BehaviourDetail.Hit, resistHp3);
+            __instance.owner.Book.SetResistBP(BehaviourDetail.Slash, resistBp1);
+            __instance.owner.Book.SetResistBP(BehaviourDetail.Penetrate, resistBp2);
+            __instance.owner.Book.SetResistBP(BehaviourDetail.Hit, resistBp3);
+            __instance.owner.view.charAppearance.ChangeMotion(ActionDetail.Standing);
+            BattleUnitModel owner = __instance.owner;
+            SingletonBehavior<BattleManagerUI>.Instance.ui_unitListInfoSummary.UpdateCharacterProfile(owner, owner.faction, owner.hp, owner.breakDetail.breakGauge, owner.bufListDetail.GetBufUIDataList());
+            return false;
+        }
         //Elena
         [HarmonyPatch(typeof(DiceCardSelfAbility_elenaMinionStrong),nameof(DiceCardSelfAbility_elenaMinionStrong.OnSucceedAttack), new Type[] { })]
         [HarmonyPostfix]
@@ -189,6 +243,19 @@ namespace Contingecy_Contract
             {
                 if (passive is GetRecovery)
                     v += (passive as GetRecovery).GetRecoveryBonus(v);
+            }
+        }
+        [HarmonyPatch(typeof(BattleUnitModel),nameof(BattleUnitModel.CanChangeAttackTarget))]
+        [HarmonyPostfix]
+        public static void BattleUnitModel_CanChangeAttackTarget(BattleUnitModel __instance, ref bool __result,  int myIndex)
+        {
+            if (__result)
+            {
+                if(myIndex>=0 && myIndex<__instance.cardSlotDetail.cardAry.Count && __instance.cardSlotDetail.cardAry[myIndex] != null)
+                {
+                    if (__instance.cardSlotDetail.cardAry[myIndex].cardAbility !=null && __instance.cardSlotDetail.cardAry[myIndex].cardAbility is DiceCardSelfAbility_DirectAttack)
+                        __result = false;
+                }
             }
         }
     }

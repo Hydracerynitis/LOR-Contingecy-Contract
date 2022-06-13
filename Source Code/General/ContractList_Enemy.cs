@@ -110,9 +110,13 @@ namespace Contingecy_Contract
         public override string[] GetFormatParam(string language) => new string[] { Level.ToString(), Level.ToString() };
         public override void Init(BattleUnitModel self)
         {
-            if(self.emotionDetail.EmotionLevel<Level)
-                self.emotionDetail.SetEmotionLevel(Level);
             base.Init(self);
+            if (self.emotionDetail.EmotionLevel < Level)
+            {
+                self.emotionDetail.SetEmotionLevel(Level);
+                self.cardSlotDetail.RecoverPlayPoint(self.emotionDetail.MaxPlayPointAdderByLevel());
+            }    
+            
         }
     }
 }

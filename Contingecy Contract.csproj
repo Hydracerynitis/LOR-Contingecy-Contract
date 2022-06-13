@@ -91,6 +91,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Source Code\ContingecyContractGUI.cs" />
+    <Compile Include="Source Code\ContractReward\DiceCardSelfAbility_DirectAttack.cs" />
     <Compile Include="Source Code\ContractReward\DiceCardSelfAbility_darwCards3.cs" />
     <Compile Include="Source Code\ContractReward\Roland\P1\PassiveAbility_1700013.cs" />
     <Compile Include="Source Code\ContractReward\Roland\P1\PassiveAbility_1700011.cs" />

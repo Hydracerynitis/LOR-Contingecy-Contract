@@ -2,16 +2,16 @@
 <BattleEffectTextRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<effectTextList>
 		<BattleEffectText ID="BlackDecay">
-			<Name>Dark Coorasion</Name>
+			<Name>Dark Corrosion</Name>
 			<Desc></Desc>
 		</BattleEffectText>
 		<BattleEffectText ID="WhiteDecay">
-			<Name>White Corrasion</Name>
+			<Name>White Corrosion</Name>
 			<Desc></Desc>
 		</BattleEffectText>
 		<BattleEffectText ID="ForbidEnergy">
 			<Name>Blink of Scent</Name>
-			<Desc>Can't get either Energy for {0} Scene.</Desc>
+			<Desc>Can't get either Presence for {0} Scene.</Desc>
 		</BattleEffectText>
 		<BattleEffectText ID="Servent_Hammer">
 			<Name>Hammer and Nail</Name>
@@ -25,17 +25,17 @@ Reduce incoming damage from enemy with "Guilt" on hand by the cost of "Guilt".</
 		</BattleEffectText>
 		<BattleEffectText ID="Servent_Blizzard">
 			<Name>Blizzard</Name>
-			<Desc>inflict Stun on a random Actionable enemy.</Desc>
+			<Desc>inflict Immobilize to a random non-Immobilized enemy.</Desc>
 		</BattleEffectText>
 		<BattleEffectText ID="CC_SpiritLink">
 			<Name>Soul Link</Name>
 			<Desc>Stagger Resist does not go below 1.
 Reduce one stack if both characters lose a clash with the same enemy in the same Scene.
-When stack reach 0, both charactes lose 25% Max Stagger Resist and inflic 4 Paralysis.</Desc>
+When stack reaches 0, both charactes lose 25% Max Stagger Resist and gain 4 Paralysis.</Desc>
 		</BattleEffectText>
 		<BattleEffectText ID="Combo_Keyword">
 			<Name>Tag Team X： Y</Name>
-			<Desc>On Use Pgae,, trigger effect Y if ally using Page X (Tag Teammate) exist.</Desc>
+			<Desc>When using Pages, trigger effect Y if an ally using Page X (Tag Teammate) exist.</Desc>
 		</BattleEffectText>
 		<BattleEffectText ID="LearnIndicator">
 			<Name>Learn</Name>
@@ -49,27 +49,27 @@ Perform another succesful hit with different attack in the same Scene will proc 
 		</BattleEffectText>
 		<BattleEffectText ID="SlashNail">
 			<Name>Slash Nail</Name>
-			<Desc>Upon Slash hit by character with "Nail and Hammer" passive, increase stack by 1.
+			<Desc>Upon being hit by a Slash die by a character with "Nail and Hammer" passive, increase stack by 1.
 Otherwise, gain 3 Blead 1 Fragile for each stack next Scene and remove this status.</Desc>
 		</BattleEffectText>
 		<BattleEffectText ID="PenetrateNail">
 			<Name>Pierce Nail</Name>
-			<Desc>Upon Pierce hit by character with "Nail and Hammer" passive, increase stack by 1.
+			<Desc>Upon being hit by a Pierce die by character with "Nail and Hammer" passive, increase stack by 1.
 Otherwise, take 5 Damage for each stack and remove this status.</Desc>
 		</BattleEffectText>
 		<BattleEffectText ID="HitNail">
 			<Name>Blunt Nail</Name>
-			<Desc>Upon Blunt hit by character with "Nail and Hammer" passive, increase stack by 1.
-Otherwise, take 5 Break Damage for each stack and remove this status.</Desc>
+			<Desc>Upon being hit by a Blunt die by character with "Nail and Hammer" passive, increase stack by 1.
+Otherwise, take 5 Stagger Damage for each stack and remove this status.</Desc>
 		</BattleEffectText>
 		<BattleEffectText ID="GuiltIndicator">
 			<Name>Guilt</Name>
         	<Desc>On Clash, reduce incoming Damage from attack by dice's Power.
-Upon hit from an one-side attack, increase incoming Damage from attack by 2-4</Desc>
+When hit by a one-side attack, increase incoming Damage by 2-4</Desc>
 		</BattleEffectText>
 		<BattleEffectText ID="BlizzardIndicator">
 			<Name>Blizzard</Name>
-			<Desc>Inflict all other characters 3 Bind.</Desc>
+			<Desc>Inflict 3 Bind to all other characters</Desc>
 		</BattleEffectText>
 		<BattleEffectText ID="PulsationIndicator">
 			<Name>Pulsation</Name>
@@ -79,19 +79,19 @@ If the character couldn't deal any damage by the end of the Scene, take 15 Stagg
 		<BattleEffectText ID="FerventIndicator">
 			<Name>Fervent Beats</Name>
         	<Desc>Gain 2 Strength and Endurance, 3 Haste, and 4 Protection this Scene. 
-Reduce numbers of passive abilities recieved in the next Scene.</Desc>
+Reduce the number of passive abilities recieved next Scene.</Desc>
 		</BattleEffectText>
 		<BattleEffectText ID="FrostIndicator">
 			<Name>Sword of Frost</Name>
-        	<Desc>On Hit, deal 2-4 Damage and Break Damage if target's speed is lower than the character.</Desc>
+        	<Desc>On Hit, deal 2-4 Damage and Stagger Damage if target's speed is lower than the character.</Desc>
 		</BattleEffectText>
 		<BattleEffectText ID="HandIndicator">
 			<Name>Pale Hands</Name>
-        	<Desc>Perform 3 succesful hit on same character inflict additional 3-10 Break Damage this round.</Desc>
+        	<Desc>Upon performing 3 succesful hits on same character inflict additional 3-10 Stagger Damage this round.</Desc>
 		</BattleEffectText>
 		<BattleEffectText ID="rolandBlueCoolDown">
 			<Name>Memory - The Blue Reverberation</Name>
-        	<Desc>After {0} Scene, inflict 1 Nullify Power upon hit.</Desc>
+        	<Desc>After {0} Scene, inflict 1 Nullify Power on hit.</Desc>
 		</BattleEffectText>
 	</effectTextList>
 </BattleEffectTextRoot>

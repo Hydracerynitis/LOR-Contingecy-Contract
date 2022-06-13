@@ -149,7 +149,7 @@ namespace Contingecy_Contract
         [HarmonyPostfix]
         static void EmotionPassiveCardUI_SetSprites(EmotionPassiveCardUI __instance)
         {
-            if (HP_RolandSystem.IsRolandEmotion(__instance.Card))
+            if (CCInitializer.IsRolandEmotion(__instance.Card))
             {
                 __instance._hOverImg.color = new Color(0f, grey.g, grey.b);
                 __instance._rootImageBg.color = new Color(0f, grey.g, grey.b, 0.25f);

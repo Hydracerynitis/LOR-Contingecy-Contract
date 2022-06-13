@@ -16,12 +16,12 @@ namespace Contingecy_Contract
         {
             if (!SupportedPid.Contains(info.id.packageId))
                 return;
-            if (Singleton<ContractLoader>.Instance.GetLevel(info.id) < 16)
+            if (Singleton<ContractLoader>.Instance.GetLevel(info.id) < getLevelRequirement(info.chapter))
                 return;
             UIs = new List<string>();
             if (StaticDataManager.RewardDic.ContainsKey(info.id))
                 ClearList.Add(StaticDataManager.RewardDic[info.id]);
-            UIs.Add(TextDataModel.GetText("ui_RewardStage", Singleton<StageNameXmlList>.Instance.GetName(info.id)));
+            UIs.Add(TextDataModel.GetText("ui_RewardStage", getLevelRequirement(info.chapter), Singleton<StageNameXmlList>.Instance.GetName(info.id)));
             GetContractCondition(info);
             CheckSpecialCondition(info);
             CheckRewardAchieved();
@@ -32,6 +32,18 @@ namespace Contingecy_Contract
                     uis += TextDataModel.GetText("ui_MoreEquipPage");
                 UIAlarmPopup.instance.SetAlarmText(uis);
             }
+        }
+        public int getLevelRequirement(int chapter)
+        {
+            if (chapter >= 6)
+                return 16;
+            else if (chapter == 5)
+                return 24;
+            else if (chapter == 4)
+                return 32;
+            else if (chapter == 3)
+                return 40;
+            return 48;
         }
         public void CheckSpecialCondition(StageClassInfo info)
         {

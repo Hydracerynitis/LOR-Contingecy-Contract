@@ -18,7 +18,7 @@ Few things could be more agonizing and detestable than finding a common ground b
 			<PassiveList />
 		</BookDesc>
 		<BookDesc BookID="17000002">
-			<BookName>The Seedy Giant</BookName>
+			<BookName>The Putrid Giant</BookName>
 			<TextList>
  				<Desc>The past isn’t all that different from now… Nothing ever changes… The same kinds of tragedies happen time and time again…
 Everyone knows that it’s wrong… But they can’t stop it from repeating…
@@ -125,7 +125,7 @@ That’s what really scares me, Angelica.</Desc>
 			<PassiveList />
 		</BookDesc>
 	<BookDesc BookID="17000005">
-			<BookName>Gone Angels</BookName>
+			<BookName>The Gone Angels</BookName>
 			<TextList>
 				<Desc>It’s been a while, Roland… I was waiting for you to show up. So you’ve been guarding this monster mimicking a human all along?
 Roland… Is this what your big plan was all about? Is this really worth it?

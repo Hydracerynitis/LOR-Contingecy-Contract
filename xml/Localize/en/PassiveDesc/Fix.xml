@@ -10,6 +10,6 @@
     </PassiveDesc>
     <PassiveDesc ID="2">
         <Name>Clenched Grudge</Name>
-        <Desc>Recover 10 Stagger Resist on hit</Desc>
+        <Desc>Recover 10 Stagger Resist on hit.</Desc>
     </PassiveDesc>
 </PassiveDescRoot>

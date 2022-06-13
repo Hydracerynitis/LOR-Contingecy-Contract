@@ -36,5 +36,4 @@ namespace Contingecy_Contract
     {
         void ActiveResonate(BattlePlayingCardDataInUnitModel card);
     }
-
 }

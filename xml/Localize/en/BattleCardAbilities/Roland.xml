@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <BattleCardAbilityDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-		<!--P3-->
-	  <BattleCardAbility ID="Vigilant1">
-    		<Desc>[On Use] Gain 2 Haste in the next Scene</Desc>
-			<Desc>At the end of Scene, recover 1 Light if this Page is at hand.</Desc>
+	<!--P3-->
+	<BattleCardAbility ID="Vigilant1">
+    	<Desc>[On Use] Gain 2 Haste next Scene</Desc>
+		<Desc>At the end of a Scene, recover 1 Light if this Page is at hand.</Desc>
   	</BattleCardAbility>
-	  <BattleCardAbility ID="Vigilant2">
-    		<Desc>[On Use] Draw 3 Pages</Desc>
-			<Desc>At the end of Scene, gain 1 Haste in the next Scene if this Page is at hand.</Desc>
+	<BattleCardAbility ID="Vigilant2">
+    	<Desc>[On Use] Draw 3 Pages</Desc>
+		<Desc>At the end of a Scene, gain 1 Haste next Scene if this Page is at hand.</Desc>
   	</BattleCardAbility>
-	  <BattleCardAbility ID="RolandCombo">
-    		<Desc>[Tag Team Waltz in White] Recover 6 Light and draw 2 Pages</Desc>
+	<BattleCardAbility ID="RolandCombo">
+    	<Desc>[Tag Team Waltz in White] Recover 6 Light and draw 2 Pages</Desc>
   	</BattleCardAbility>
-	  <BattleCardAbility ID="AngelicaCombo">
-    		<Desc>[Tag Team Waltz in Black] Recover 6 Light and draw 2 Pages</Desc>
+	<BattleCardAbility ID="AngelicaCombo">
+    	<Desc>[Tag Team Waltz in Black] Recover 6 Light and draw 2 Pages</Desc>
   	</BattleCardAbility>
-	  <BattleCardAbility ID="RolandAura">
-    		<Desc>[Tag Team Ashen Bond] Tag Teammate and self draw 2 Pages</Desc>
+	<BattleCardAbility ID="RolandAura">
+    	<Desc>[Tag Team Ashen Bond] Tag Teammate and this character draw 2 Pages</Desc>
   	</BattleCardAbility>
-	  <BattleCardAbility ID="AngelicaAura">
-    		<Desc>[Tag Team Dark Bond] Tag Teammate and self recover 3 Light</Desc>
+	<BattleCardAbility ID="AngelicaAura">
+    	<Desc>[Tag Team Dark Bond] Tag Teammate and this character recover 3 Light</Desc>
   	</BattleCardAbility>
-	  <BattleCardAbility ID="GainSL">
-    		<Desc>[Tag Team Unstable Bond] Gain 2 Soul Link if no stack of SouL Link is lost this Scene</Desc>
+	<BattleCardAbility ID="GainSL">
+    	<Desc>[Tag Team Unstable Bond] Gain 2 Soul Link if no stack of SouL Link is lost this Scene</Desc>
   	</BattleCardAbility>
-	  <BattleCardAbility ID="RolandZelkova">
-    		<Desc>[Tag Team Charge: Zelkova Workshop] gain a Slash Dice (4-8 [On Hit] Inflict 3 Bleed next Scene) that comes first</Desc>
+	<BattleCardAbility ID="RolandZelkova">
+    	<Desc>[Tag Team Charge: Zelkova Workshop] Gain a Slash Dice (4-8 [On Hit] Inflict 3 Bleed next Scene) that comes first</Desc>
   	</BattleCardAbility>
-	  <BattleCardAbility ID="AngelicaZelkova">
-    		<Desc>[Tag Team Flank: Zelkova Workshop]  gain a Slash Dice (3-8 [On Hit] Recover 5 Stagger Resist) on the Page</Desc>
+	<BattleCardAbility ID="AngelicaZelkova">
+    	<Desc>[Tag Team Flank: Zelkova Workshop]  Gain a Slash Dice (3-8 [On Hit] Recover 5 Stagger Resist) on the Page</Desc>
   	</BattleCardAbility>
-	  <BattleCardAbility ID="RolandAllas">
-	  		<Desc>[Start of Clash] Reduce Power of all target's dice by 2</Desc>
-    		<Desc>[Tag Team Charge: Allas Workshop] gain a Penetrate Dice (5-8 [On Hit] Give 2 Protection to the ally with the highest HP next Scene) that comes first</Desc>
+	<BattleCardAbility ID="RolandAllas">
+	  	<Desc>[Start of Clash] Reduce Power of all target's dice by 2;</Desc>
+    	<Desc>[Tag Team Charge: Allas Workshop] Gain a Pierce Dice (5-8 [On Hit] Give 2 Protection to the ally with the highest HP next Scene) that comes first</Desc>
   	</BattleCardAbility>
-	  <BattleCardAbility ID="AngelicaAllas">
-	  		<Desc>[Start of Clash] Reduce Power of all target's dice by 2</Desc>
-    		<Desc>[Tag Team Flank: Allas Workshop]  gain a Penetrate Dice (4-8 [On Hit] Inflict 1 Feeble next Scene) on the Page</Desc>
+	<BattleCardAbility ID="AngelicaAllas">
+	  	<Desc>[Start of Clash] Reduce Power of all target's dice by 2;</Desc>
+    	<Desc>[Tag Team Flank: Allas Workshop]  Gain a Pierce Dice (4-8 [On Hit] Inflict 1 Feeble next Scene) on the Page</Desc>
   	</BattleCardAbility>
-	  <BattleCardAbility ID="RolandLogic">
-    		<Desc>[Tag Team Charge: Atelier Logique] gain two Penetrate Dice (7-11 [On Hit] Inflict 1 Paralysis 1 Bind next Scene) that comes first.</Desc>
+	<BattleCardAbility ID="RolandLogic">
+    	<Desc>[Tag Team Charge: Atelier Logique] Gain two Pierce Dice (7-11 [On Hit] Inflict 1 Paralysis 1 Bind next Scene) that comes first.</Desc>
   	</BattleCardAbility>
-	  <BattleCardAbility ID="AngelicaLogic">
-    		<Desc>[Tag Team Flank: Atelier Logique] gain a Blunt Dice (7-11 [On Hit] Inflict 1 Paralysis 1 Bind next Scene) on the Page</Desc>
+	<BattleCardAbility ID="AngelicaLogic">
+    	<Desc>[Tag Team Flank: Atelier Logique] Gain a Blunt Dice (7-11 [On Hit] Inflict 1 Paralysis 1 Bind next Scene) on the Page</Desc>
   	</BattleCardAbility>
-	  <BattleCardAbility ID="DanceTogether">
-    		<Desc>[On Play] synchronize target ally with "The White Guard"</Desc>
+	<BattleCardAbility ID="DanceTogether">
+    	<Desc>[On Play] synchronize target ally with "The White Guard"</Desc>
   	</BattleCardAbility>
-	  <BattleCardAbility ID="MadFurioso">
-    		<Desc>[On Use] Return all original Exhausted Pages to Deck, and Recover All Lights, draw until 4 Pages in Hand.
+	<BattleCardAbility ID="MadFurioso">
+    	<Desc>[On Use] Return all original Exhausted Pages to Deck, and Recover All Lights, draw until 4 Pages in Hand.
 Repeat first dice for each pages have been used.</Desc>
   	</BattleCardAbility>
-	  <BattleCardAbility ID="Agony">
-    		<Desc>[On Use] Draw 3 Pages, Inflict 2 random enemies 1 Bind in the next Scene.</Desc>
+	<BattleCardAbility ID="Agony">
+    	<Desc>[On Use] Draw 3 Pages, Inflict 1 Bind to 2 random enemies next Scene</Desc>
   	</BattleCardAbility>
 </BattleCardAbilityDescRoot>

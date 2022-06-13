@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ContractReward
 {
-    public class DiceCardSelfAbility_AllyCounter: DiceCardSelfAbilityBase
+    public class DiceCardSelfAbility_AllyCounter : DiceCardSelfAbility_DirectAttack
     {
         public override void OnStartBattle()
         {
@@ -28,6 +28,9 @@ namespace ContractReward
             target.cardSlotDetail.keepCard.AddBehaviours(cardItem, behaviourList);
 
         }
-        public override bool IsOnlyAllyUnit() => true;
+        public override bool IsOnlyAllyUnit()
+        {
+            return true;
+        }
     }
 }

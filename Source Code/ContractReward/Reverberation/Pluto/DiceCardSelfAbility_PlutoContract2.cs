@@ -19,6 +19,7 @@ namespace ContractReward
                 targetUnit.bufListDetail.AddBuf(new BattleUnitBuf_Pluto_Contracted_2());
             else
                 unit.bufListDetail.AddBuf(new BattleUnitBuf_Pluto_Contracted_2());
+            unit.personalEgoDetail.RemoveCard(self.GetID());
         }
     }
 }

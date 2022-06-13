@@ -70,7 +70,7 @@ namespace Contingecy_Contract
         }
         public static void InitNonThumbDic()
         {
-            foreach (int i in HP_SubSystem.NoThumbPage)
+            foreach (int i in CCInitializer.NoThumbPage)
                 NonThumbSprite.Add(Tools.MakeLorId(i), null);
         }
         public static void LoadReward()

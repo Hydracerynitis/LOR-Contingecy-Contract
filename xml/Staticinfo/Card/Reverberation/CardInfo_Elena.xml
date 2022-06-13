@@ -189,8 +189,8 @@
         <Script>AllyCounter</Script>
         <ScriptDesc></ScriptDesc>
         <BehaviourList>
-            <Behaviour Min="6" Dice="9" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="elenaMinionDefenseDice" ActionScript="" Desc="" />
-            <Behaviour Min="6" Dice="9" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="elenaMinionDefenseDice" ActionScript="" Desc="" />
+            <Behaviour Min="6" Dice="9" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="6" Dice="9" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
         </BehaviourList>
         <Chapter>7</Chapter>
         <Priority>0</Priority>

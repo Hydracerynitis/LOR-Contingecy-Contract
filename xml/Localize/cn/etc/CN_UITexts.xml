@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <localize xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<text id="ui_ContingecyLevel">{0}级危机--{1}</text>
-	<text id="ui_RewardStage">恭喜你打过{0}关卡的16级危机合约挑战</text>
+	<text id="ui_RewardStage">恭喜你打过{1}关卡的{0}级危机合约挑战</text>
 	<text id="ui_popup_getequippage">获得{1}张核心书页-“{0}”</text>
 	<text id="ui_MoreEquipPage">以及更多核心书页</text>
 	<text id="Tanya_Brawl_none">无</text>
@@ -11,5 +11,5 @@
 	<text id="Zombie_name">无名躯壳</text>
 	<text id="WaltzDecay_text">这一幕结束时造成{0}伤害和混乱伤害并且层数-1
 若一个单位同时拥有两种侵蚀且层数差距不超过{1}时不承受来自两个侵蚀的伤害</text>
-	<text id="marked_dice_desc">[昨日之约] </text>
+	<text id="marked_dice_desc">[昨日之约 | ] </text>
 </localize>

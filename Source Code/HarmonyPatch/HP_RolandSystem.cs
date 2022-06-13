@@ -22,7 +22,7 @@ namespace Contingecy_Contract
         [HarmonyPrefix]
         public static bool UnitDataModel_ResetFor_BlackSilence_Pre(UnitDataModel __instance, BookModel ____bookItem)
         {
-            if (CCInitializer.IsRoland(__instance) && ____bookItem!=null && ____bookItem.ClassInfo.id == Tools.MakeLorId(17000001))
+            if (CCInitializer.IsRoland(__instance) && ____bookItem!=null && ( ____bookItem.ClassInfo.id == Tools.MakeLorId(17000001) || ____bookItem.ClassInfo.id == Tools.MakeLorId(17000004) ))
                 return false;
             return true;
         }
@@ -30,7 +30,7 @@ namespace Contingecy_Contract
         [HarmonyPrefix]
         public static bool UnitDataModel_EquipBook_Pre(UnitDataModel __instance, BookModel newBook, ref BookModel ____bookItem, bool isEnemySetting = false, bool force = false)
         {
-            if (force || newBook == null || newBook.ClassInfo.id != Tools.MakeLorId(17000001) || newBook.ClassInfo.id != Tools.MakeLorId(17000004) || newBook.owner != null || !CCInitializer.IsRoland(__instance))
+            if (force || newBook == null || (newBook.ClassInfo.id != Tools.MakeLorId(17000001) && newBook.ClassInfo.id != Tools.MakeLorId(17000004)) || newBook.owner != null || !CCInitializer.IsRoland(__instance))
                 return true;
             BookModel bookItem = ____bookItem;
             ____bookItem = newBook;
@@ -44,15 +44,11 @@ namespace Contingecy_Contract
         [HarmonyPrefix]
         public static bool BattleUnitEmotionDetail_ApplyEmotionCard_Pre(BattleUnitModel ____self, EmotionCardXmlInfo card)
         {
-            if (____self.passiveDetail.HasPassive<PassiveAbility_1700000>() && !IsRolandEmotion(card))
+            if (____self.passiveDetail.HasPassive<PassiveAbility_1700000>() && !CCInitializer.IsRolandEmotion(card))
                 return false;
-            if (IsRolandEmotion(card))
+            if (CCInitializer.IsRolandEmotion(card))
                 return ____self.passiveDetail.HasPassive<PassiveAbility_1700051>();
             return true;
-        }
-        public static bool IsRolandEmotion(EmotionCardXmlInfo card)
-        {
-            return card.Sephirah == SephirahType.ETC && card.id >= 18001 && card.id <= 18009;
         }
         [HarmonyPatch(typeof(BattleUnitModel),nameof(BattleUnitModel.IsTargetable))]
         [HarmonyPostfix]

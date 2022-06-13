@@ -50,6 +50,10 @@ namespace Contingecy_Contract
             Debug.Log("Patch Class: Effect succeed");
         }
         public static bool IsRoland(UnitDataModel __instance) => __instance.OwnerSephirah == SephirahType.Keter && __instance.isSephirah;
+        public static bool IsRolandEmotion(EmotionCardXmlInfo card)
+        {
+            return card.Sephirah == SephirahType.ETC && card.id >= 18001 && card.id <= 18009;
+        }
         public static void ModifyEnsemble()
         {
             List<StageClassInfo> Ensemble = Singleton<StageClassInfoList>.Instance.GetAllDataList().FindAll(x => x.id.IsBasic() && x.id.id >= 70001 && x.id.id <= 70010);
@@ -63,5 +67,7 @@ namespace Contingecy_Contract
                 }
             }
         }
+        public static List<int> NoThumbPage = new List<int>() { 18810000, 17000002, 17000003, 17000004, 17000005 };
+        public static List<int> NonHeadEquipPage = new List<int>() { 18810000, 17000002 };
     }
 }

@@ -3,17 +3,17 @@
     <!--General-->
     <PassiveDesc ID="1700001">
         <Name>Perfect Extraction: Roland</Name>
-        <Desc>&lt;color=#FF0000&gt;Unable to utilize Emotion Card and EGO from the Library. Any attempt to apply emotion card will result in wasting said emotion card.&lt;/color&gt;
+        <Desc>&lt;color=#FF0000&gt;Unable to utilize Abnormality Pages and EGO from the Library. Any attempt to apply Abnormality Pages will result in wasting said Abnormality Pages.&lt;/color&gt;
 Can only be equiped by Roland.</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1700002">
         <Name>Perfect Extraction: Roland</Name>
-        <Desc>&lt;color=#FF0000&gt;Unable to utilize Emotion Card and EGO from the Library. Any attempt to apply emotion card will result in wasting said emotion card.&lt;/color&gt;</Desc>
+        <Desc>&lt;color=#FF0000&gt;Unable to utilize Abnormality Pages and EGO from the Library. Any attempt to apply Abnormality Pages will result in wasting said Abnormality Pages.&lt;/color&gt;</Desc>
     </PassiveDesc>
     <!--P1-->
     <PassiveDesc ID="1700011">
-        <Name>Balck Silence</Name>
-        <Desc>Draw 2 additional pages at the start of the Act. Can use exclusive Page "Furioso"
+        <Name>Black Silence</Name>
+        <Desc>Draw 2 additional pages at the start of the Act. Can use exclusive Page "Furioso".
 All dice on every third Combat Page used gain +2 Power.</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1700012">
@@ -22,51 +22,51 @@ All dice on every third Combat Page used gain +2 Power.</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1700013">
         <Name>Clenched Grudge</Name>
-        <Desc>Recover 5 Stagger Resist on hit; lose 8 Stagger Resist on clash lose.</Desc>
+        <Desc>Recover 5 Stagger Resist on hit. lose 8 Stagger Resist on clash lose.</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1700014">
         <Name>Perception-blocking Mask</Name>
-        <Desc>A Speed die with the lowest Speed becomes untargetable.</Desc>
+        <Desc>The last Speed die becomes untargetable.</Desc>
     </PassiveDesc>
     <!--P2-->
     <PassiveDesc ID="1700021">
         <Name>The Hatching Dead</Name>
         <Desc>Whenever another characer is defeated, spawn a Smoldering Byproduct to replace it next Scene. 
-At the start of each Scene, inflict 1 Suffocating Haze.</Desc>
+At the start of each Scene, inflict 1 Suffocating Haze on all other characters.</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1700022">
         <Name>Alien and Horrifying</Name>
-        <Desc>At the start of each Act, draw 2 cards.
+        <Desc>At the start of the Act, draw 2 cards.
 On clash, make enemy lose 20% of their current Stagger Resist.</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1700023">
         <Name>Juggernaut</Name>
-        <Desc>At the start of combat of each third Scene, use an Individual Mass Attack Page targeting all other units.
-(Penetrate 4-12 [On Hit] Inflict 3 Bleed in the next Scene.)</Desc>
+        <Desc> Every third Scene at the start of combat, use an Individual Mass Attack Page targeting all other units
+(Pierce 4-12 [On Hit] Inflict 3 Bleed in the next Scene).</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1700024">
         <Name>Wielder of Suffocating Haze</Name>
-        <Desc>When attacking, if target has Suffocating Haze, deal +2 damage.
-When hit, if attacker has Suffocating Haze, take 2 less damage.</Desc>
+        <Desc>When attacking, if the target has Suffocating Haze, deal +2 damage.
+When hit, if the attacker has Suffocating Haze, take 2 less damage.</Desc>
     </PassiveDesc>
     <!--P3 roland-->
     <PassiveDesc ID="1700031">
         <Name>Last Dance</Name>
-        <Desc>Gain Page that make other ally synchronize with "The White Guard".
-Synchronization will change both decks into those focusing on Unite and gain 4 Soul Link.</Desc>
+        <Desc>Gain Page that makes other ally synchronize with "The White Guard".
+Synchronization will change both decks into those focusing on Tag Team and gain 4 Soul Link.</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1700032">
         <Name>Dark Mark</Name>
-        <Desc>Dice of Pages against enemy with "Dark Mark" gain 2 Power.</Desc>
+        <Desc>All dice on a Page targeting an enemy with a "Dark Mark" gain +2 Power.</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1700033">
         <Name>Dearly Parting</Name>
-        <Desc>When The White Guard die, become staggerd and increase outgoing Damage and Stagger Damage by 100% for the rest of the Act.</Desc>
+        <Desc>When The White Guard dies, become staggerd and increase outgoing Damage and Stagger Damage by 100% for the rest of the Act.</Desc>
     </PassiveDesc>
     <!--P3 angelica-->
     <PassiveDesc ID="1701030">
         <Name>Request Target</Name>
-        <Desc>Dice of Pages against enemy with lowest HP gain 1 Power.</Desc>
+        <Desc>All dice on a Page targeting an enemy with lowest HP gain +1 Power.</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1701031">
         <Name>Dark Mark</Name>
@@ -74,13 +74,13 @@ Synchronization will change both decks into those focusing on Unite and gain 4 S
     </PassiveDesc>
     <PassiveDesc ID="1701032">
         <Name>Dearly Parting</Name>
-        <Desc>When The Black Servant die, end synchronization.
-Gain 2 Strength, Endurance the Scene after the end of synchronization.</Desc>
+        <Desc>When The Black Servant die, end synchronization;
+Gain 2 Strength and Endurance the Scene after the end of synchronization.</Desc>
     </PassiveDesc>
     <!--P4-->
     <PassiveDesc ID="1700041">
-        <Name>Balck Silence</Name>
-        <Desc>Draw 2 additional pages at the start of the Act. Can use exclusive Page "Furioso"
+        <Name>Black Silence</Name>
+        <Desc>Draw 2 additional pages at the start of the Act. Can use exclusive Page "Furioso".
 All dice on every third Combat Page used gain +2 Power.</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1700042">
@@ -101,18 +101,18 @@ If this character's attack hits, it inflicts a 'Lies' status which changes the C
         <Name>Nail and Hammer</Name>
         <Desc>For this Scene, successful hit will inflict one of Slash Nail, Pierce Nail and Blunt Nail according to the attack.
 Perform another succesful hit with different attack in the same Scene will proc Nail's effect and remove it. Otherwise increase the stack by 1.
-Slash Nail --- when proc, for each stack inflict 3 Bleed 1 Fragile next Scene.
-Pierce Nail --- when proc, for each stack deal 5 Damage to the character.
-Hit Nail --- when proc, for each stack deal 5 Stagger Damage to the character.</Desc>
+Slash Nail --- when procced, inflict 3 Bleed 1 Fragile next Scene for each stack.
+Pierce Nail --- when procced, deal 5 Damage to the character for each stack.
+Hit Nail --- when procced, deal 5 Stagger Damage to the character for each stack.</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1700144">
         <Name>Guilt</Name>
-        <Desc>On Clash, reduce incoming Damage from attack by dice's Power.
-Upon hit from an one-side attack, increase incoming Damage from attack by 2-4</Desc>
+        <Desc>When Clashing, reduce incoming Damage from attacks by dice's Power.
+When hit from an one-side attack, increase incoming Damage from attack by 2-4.</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1700145">
         <Name>Blizzard</Name>
-        <Desc>Inflict all other characters 3 Bind.</Desc>
+        <Desc>Inflict 3 Bind to all other characters.</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1700146">
         <Name>Pulsation</Name>
@@ -121,20 +121,20 @@ If the character couldn't deal any damage by the end of the Scene, take 15 Stagg
     </PassiveDesc>
     <PassiveDesc ID="1700147">
         <Name>Fervent Beats</Name>
-        <Desc>Gain 2 Strength and Endurance, 3 Haste, and 4 Protection this Scene. 
-Reduce numbers of passive abilities recieved in the next Scene.</Desc>
+        <Desc>Gain 2 Strength and Endurance, 3 Haste, and 4 Protection this Scene.
+Reduce numbers of passive abilities recieved next Scene.</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1700148">
         <Name>Sword of Frost</Name>
-        <Desc>On Hit, deal 2-4 Damage and Break Damage if target's speed is lower than the character.</Desc>
+        <Desc>On Hit, deal 2-4 Damage and Stagger Damage if target's speed is lower than the character.</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1700149">
         <Name>Pale Hands</Name>
-        <Desc>Perform 3 succesful hit on same character inflict additional 3-10 Break Damage this round.</Desc>
+        <Desc>Upon performing 3 succesful hit on same character inflict additional 3-10 Stagger Damage this round.</Desc>
     </PassiveDesc>
     <!--P5-->
     <PassiveDesc ID="1700051">
-        <Name>O sorrow, I have ended, by respecting you</Name>
-        <Desc>On Level up Emotion Level, choose and apply a unique Emotion Page to self.</Desc>
+        <Name>O sorrow, I have ended, you see, by respecting you</Name>
+        <Desc>Whenever the Emotion Level rises, choose and apply a unique Abnormality Page to self.</Desc>
     </PassiveDesc>
 </PassiveDescRoot>

@@ -103,9 +103,17 @@ namespace Contingecy_Contract
         }
         [HarmonyPatch(typeof(StageController), nameof(StageController.GameOver))]
         [HarmonyPostfix]
-        public static void StageController_GameOver()
+        public static void StageController_GameOver(bool iswin)
         {
             CCInitializer.CombaltData.Clear();
+            if(!iswin)
+                StageController.Instance._usedBooks.ForEach(x => DropBookInventoryModel.Instance.AddBook(x));
+        }
+        [HarmonyPatch(typeof(UIBattleResultLeftPanel),nameof(UIBattleResultLeftPanel.SetData))]
+        [HarmonyPrefix]
+        public static void UIBattleResultLeftPanel_SetData(TestBattleResultData resultdata)
+        {
+            resultdata.loseinvitationbooks = new List<LorId>();
         }
         [HarmonyPatch(typeof(LibraryModel), nameof(LibraryModel.OnClearStage))]
         [HarmonyPostfix]

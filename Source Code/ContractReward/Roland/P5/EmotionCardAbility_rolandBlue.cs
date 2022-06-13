@@ -14,11 +14,6 @@ namespace ContractReward
         {
             return behavior.card.card.XmlData.Spec.Ranged==CardRange.Far? 999999: 0;
         }
-        public override void OnSelectEmotion()
-        {
-            base.OnSelectEmotion();
-            _owner.bufListDetail.AddBuf(new Nullready() { stack = coolDown });
-        }
         public override void OnRoundStart()
         {
             base.OnRoundStart();        

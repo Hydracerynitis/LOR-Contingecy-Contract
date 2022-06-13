@@ -112,7 +112,7 @@ namespace Contingecy_Contract
         [HarmonyPostfix]
         public static void UICharacterRenderer_SetCharacter(UnitDataModel unit, int index)
         {
-            if (unit.GetCustomBookItemData() != null && NonHeadEquipPage.Exists(x => unit.GetCustomBookItemData().GetBookClassInfoId() == Tools.MakeLorId(x)) || NonHeadEquipPage.Exists(x => unit.bookItem.GetBookClassInfoId() == Tools.MakeLorId(x)) && unit.GetCustomBookItemData() == null)
+            if (unit.GetCustomBookItemData() != null && CCInitializer.NonHeadEquipPage.Exists(x => unit.GetCustomBookItemData().GetBookClassInfoId() == Tools.MakeLorId(x)) || CCInitializer.NonHeadEquipPage.Exists(x => unit.bookItem.GetBookClassInfoId() == Tools.MakeLorId(x)) && unit.GetCustomBookItemData() == null)
             {
                 UICharacter character = UICharacterRenderer.Instance.characterList[index];
                 CustomizedAppearance appearance = character.unitAppearance._customAppearance;
@@ -134,7 +134,7 @@ namespace Contingecy_Contract
         [HarmonyPostfix]
         public static void SdCharacterUtil_CreateSkin(UnitDataModel unit, CharacterAppearance __result)
         {
-            if (unit.GetCustomBookItemData() != null && NonHeadEquipPage.Exists(x => unit.GetCustomBookItemData().GetBookClassInfoId() == Tools.MakeLorId(x)) || NonHeadEquipPage.Exists(x => unit.bookItem.GetBookClassInfoId() == Tools.MakeLorId(x)) && unit.GetCustomBookItemData() == null)
+            if (unit.GetCustomBookItemData() != null && CCInitializer.NonHeadEquipPage.Exists(x => unit.GetCustomBookItemData().GetBookClassInfoId() == Tools.MakeLorId(x)) || CCInitializer.NonHeadEquipPage.Exists(x => unit.bookItem.GetBookClassInfoId() == Tools.MakeLorId(x)) && unit.GetCustomBookItemData() == null)
             {
                 CustomizedAppearance appearance = __result._customAppearance;
                 if (appearance != null)
@@ -151,6 +151,12 @@ namespace Contingecy_Contract
                 }
             }
         }
+        [HarmonyPatch(typeof(UIBattleSettingPanel),nameof(UIBattleSettingPanel.SetButtonText))]
+        [HarmonyPostfix]
+        public static void UIBattleSettingPanel_SetButtonText(UIBattleSettingPanel __instance)
+        {
+            __instance.txt_FloorText.text= TextDataModel.GetText("ui_battlesetting_possiblefloor") + " " + (object)(StageController.Instance.GetStageModel().ClassInfo.floorNum-StageController.Instance.GetStageModel().floorList.FindAll(x => x.IsUnavailable()).Count);
+        }
         [HarmonyPatch(typeof(EmotionCardXmlList),nameof(EmotionCardXmlList.GetDataList), new Type[] { typeof(SephirahType), typeof(int), typeof(int) })]
         [HarmonyPostfix]
         public static void EmotionCardXmlList_GetDataList(List<EmotionCardXmlInfo> __result, int emotionLevel)
@@ -158,7 +164,5 @@ namespace Contingecy_Contract
             if (Singleton<ContractLoader>.Instance.GetPassiveList().Find(x => x.Type == "NoEmotion") is Contract NoEmotion && emotionLevel >= 4 - NoEmotion.Variant)
                 __result.Clear();
         }
-        public static List<int> NoThumbPage = new List<int>() { 18810000, 17000002, 17000003, 17000004 };
-        public static List<int> NonHeadEquipPage = new List<int>() { 18810000, 17000002 };
     }
 }

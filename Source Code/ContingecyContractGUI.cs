@@ -33,6 +33,17 @@ namespace Contingecy_Contract
         {
             if (UI.UIController.Instance.CurrentUIPhase == UIPhase.Invitation || UI.UIController.Instance.CurrentUIPhase == UIPhase.Sephirah || !UIPopupWindow.IsOpened())
             {
+                if(GUIbool && Input.GetKeyDown(KeyCode.F7))
+                {
+                    ContractList.Clear();
+                    foreach(Contract contract in StaticDataManager.JsonList)
+                    {
+                        contract.isOn = false;
+                        contract.isConflict = false;
+                        Level = 0;
+                    }
+                    return;
+                }
                 if (!( Input.GetKeyDown(KeyCode.F9) || ( GUIbool && Input.GetKeyDown(KeyCode.Escape) ) ) )
                 {
                     return;
