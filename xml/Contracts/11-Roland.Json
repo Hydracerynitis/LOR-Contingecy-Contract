@@ -11,7 +11,7 @@
                 {
                     "language":"en",
                     "name":"Furioso",
-                    "desc":"Speed Ⅲ is upgraded to Speed Furioso with effect of \"{0}\".\nIn the first phase Roland's Attack Pattern become {1} aggressive,\n and all dice on the page selected in the sixth Speed dice slot gain +2 Power.\nUse an additional Furiose every 4 Scene."
+                    "desc":"Speed Ⅲ is upgraded to Speed Furioso with effect of \"{0}\".\nIn phase 1 Roland's Attack Pattern becomes {1} aggressive\n and all dice on the page selected in the sixth Speed dice slot gain +2 Power.\nUse an additional Furiose every 4 Scene."
                 }
             ],
             "Faction":0,
@@ -31,7 +31,7 @@
                 {
                     "language":"en",
                     "name":"The Sacred Sword of Charlemagne",
-                    "desc":"Roland in the first phase will {0}.\nRetaliate trigger twice."
+                    "desc":"Roland in phase 1 will {0}.\nRetaliate trigger twice."
                 }
             ],
             "Faction":0,
@@ -51,7 +51,7 @@
                 {
                     "language":"en",
                     "name":"That’s that, and this is this",
-                    "desc":"Clenched Grudge has ability \"Recover 10 Stagger Resist on hit\" instead.\nRoland's MaxHp change to 700 in the first phase."
+                    "desc":"Clenched Grudge has the ability \"Recover 10 Stagger Resist on hit\" instead.\nRoland's MaxHp changes to 700 in the first phase."
                 }
             ],
             "Faction":0,
@@ -70,7 +70,7 @@
                 {
                     "language":"en",
                     "name":"Haze Mist",
-                    "desc":"Wielder of Suffocating Haze has ability \"When attacking, if target has Suffocating Haze, deal +{0} damage.\nWhen hit, if attacker has Suffocating Haze, take {1} less damage.\" instead.\nSmoldering Byproduct gain 1 Speed Dice, Maximun Hp and Stagger Resist increased by {2}%.\nAll Dice can't be destroyed."
+                    "desc":"Wielder of Suffocating Haze has ability \"When attacking, if target has Suffocating Haze, deal +{0} damage.\nWhen hit, if attacker has Suffocating Haze, take {1} less damage.\" instead.\nSmoldering Byproduct gain +1 Speed Dice, Maximun Hp and Stagger Resist increased by {2}%.\nDice can't be destroyed."
                 }
             ],
             "Faction":0,
@@ -90,7 +90,7 @@
                 {
                     "language":"en",
                     "name":"Qui Garde Un Secret",
-                    "desc":"Librarian lose {0}% Max Stagger Resist upon killing a Smoldering Byproduct.\nRoland's Max Stagger Resist change to 500 in the Phase 2 and gain 2 Speed Dice.\nEnhance Smoldering Byproduct's Combat Pages."
+                    "desc":"Librarian lose {0}% Max Stagger Resist upon killing a Smoldering Byproduct.\nRoland's Max Stagger Resist change to 500 in the Phase 2 and gain +2 Speed Dice.\nEnhance Smoldering Byproduct's Combat Pages."
                 }
             ],
             "Faction":0,
@@ -110,7 +110,7 @@
                 {
                     "language":"en",
                     "name":"The Smoke War",
-                    "desc":"In second phase, all Librarians gain 3 Suffocating Haze at the start of each Scene.\nthe 'Weak/Fatal' resistances of Roland and Smoldering Byproduct change to 'Endured/Ineffective'.\nUplift dice values of Combat Pages by 1."
+                    "desc":"In phase 2, all Librarians gain 3 Suffocating Haze at the start of each Scene.\nthe 'Weak/Fatal' resistances of Roland and Smoldering Byproduct change to 'Endured/Ineffective'.\nUplift dice values of Combat Pages by 1."
                 }
             ],
             "Faction":0,
@@ -129,7 +129,7 @@
                 {
                     "language":"en",
                     "name":"Wife in Arm",
-                    "desc":"In thrid phase, when Roland and Angelica using Combo pages attacking same character,\n Roland will gain all dices from Angelica's Pages while Angelica gain counter dices from Rolands' pages.\nRoland and Angelica will use {0} more pages."
+                    "desc":"In phase 3, when Roland and Angelica using Combo pages attacking same character,\n Roland will gain all dices from Angelica's Pages while Angelica gain counter dices from Rolands' pages.\nRoland and Angelica will use {0} more pages."
                 }
             ],
             "Faction":0,
@@ -149,7 +149,7 @@
                 {
                     "language":"en",
                     "name":"Waltz in Black and White",
-                    "desc":"Roland and Angelica will inflict 1 Dark or White Corrasion to enemy on rolling a die.\nBoth Corrasion deal 1 Damage and Stagger Damage per stack at the End of the Scene and Subtract 1 stack,\nIf a character has both Corrasion and the difference between their stacks is less than {0},\nhe will take no Damage and Stagger Damage from them"
+                    "desc":"Roland and Angelica will inflict 1 Dark or White Corrosion to enemy on rolling a die.\nBoth Corrosion deal 1 Damage and Stagger Damage per stack at the End of the Scene and Subtract 1 stack,\nIf a character has both Corrosion and the difference between their stacks is less than {0},\nhe will take no Damage and Stagger Damage from them"
                 }
             ],
             "Faction":0,
@@ -188,7 +188,7 @@
                 {
                     "language":"en",
                     "name":"Memory: The Black Silence",
-                    "desc":"In fourth phase, Roland's Max Hp increased by {0}, Max Stagger Resist increased by {1}, will use Mass Attack Page Furioso one Scene in advance."
+                    "desc":"In phase 4, Roland's Max Hp increased by {0}, Max Stagger Resist increased by {1}, will use Mass Attack Page Furioso one Scene in advance."
                 }
             ],
             "Faction":0,
@@ -208,7 +208,7 @@
                 {
                     "language":"en",
                     "name":"Memory: Grade 9 Fixer",
-                    "desc":"In the fifth phase, increase Max Hp and Max Stagger Resist all Image of the Bygones by 100%,\n and gain Ability {0}"
+                    "desc":"In phase 5, increase Max Hp and Max Stagger Resist all Image of the Bygones by 100%,\n and gain Ability {0}"
                 }
             ],
             "Faction":0,
@@ -228,7 +228,7 @@
                 {
                     "language":"en",
                     "name":"Memory: Gone Angels",
-                    "desc":"Since the fourth phase, Roland gain Passive Ability \"Half-baked Courage\", \"Your Shield\",\n\"Light of Daybreak\",\"Adaptation\", \"Force of a Wildfire\", \"Eye of Death\",\n\"The Twelve Fixers\", \"Manipulator of Odds\" and \"The Blue Reverberation\""
+                    "desc":"From phase 4 onwards, Roland gain Passive Ability \"Half-baked Courage\", \"Your Shield\",\n\"Light of Daybreak\",\"Adaptation\", \"Force of a Wildfire\", \"Eye of Death\",\n\"The Twelve Fixers\", \"Manipulator of Odds\" and \"The Blue Reverberation\""
                 }
             ],
             "Faction":0,
@@ -246,7 +246,7 @@
                 {
                     "language":"en",
                     "name":"End of the Line",
-                    "desc":"The Black Slence Recpetion will start at the fourth Phase"
+                    "desc":"The Black Slence Recpetion will start from phase 4"
                 }
             ],
             "Faction":0,

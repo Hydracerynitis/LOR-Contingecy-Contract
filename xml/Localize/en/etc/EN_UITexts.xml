@@ -7,9 +7,9 @@
 	<text id="Tanya_Brawl_none">None</text>
 	<text id="Speed_Furioso">Speed Furioso</text>
 	<text id="Enhance_HeavySmoke_Passive">When attacking, if target has Suffocating Haze, deal +{0} damage.
-When hit, if attacker has Suffocating Haze, take {1} less damage.</text>		
+When hit, if the attacker has Suffocating Haze, take {1} less damage.</text>		
 	<text id="Zombie_name">Nameless Shell</text>
 	<text id="WaltzDecay_text">Take {0} Damage and Stagger Damage at the End of the Scene and Subtract 1 stack
-If the character has both Corrasion and the difference between their stacks is less than {1}, he will take no Damage and Stagger Damage from them</text>
+If the character has both Corrosions and the difference between their stacks is less than {1}, they will take no Damage and Stagger Damage from them</text>
 	<text id="marked_dice_desc">[Yesterday Promise] </text>
 </localize>

@@ -2,7 +2,7 @@
 <BattleCardAbilityDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<!--追忆：九阶收尾人-->
 	  <BattleCardAbility ID="BlackSilence_Guilt">
-    		<Desc> Cost is reduced by 1 whenever winning a clash. </Desc>
+    		<Desc>Cost is reduced by 1 on Clash Win.</Desc>
   	</BattleCardAbility>
 	<!--奖励通用-->
 	<BattleCardAbility ID="energy3">

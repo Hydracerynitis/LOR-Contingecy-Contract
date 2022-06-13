@@ -11,7 +11,7 @@
                 {
                     "language":"en",
                     "name":"Don‘t need pain",
-                    "desc":"All enemies gain ability \"Adaptation\"\n(Upon hit for the rest of the Scene, reduce incoming damage of same type by 2 (Max 4))\nTomerry's \"Adaptation\" have Max. Reduction increase to 10\nand change the damage type endured most to Resist at the end of each Scene"
+                    "desc":"All enemies gain ability \"Adaptation\"\n(On hit for the rest of the Scene, reduce incoming damage of same type by 2 (Max 4))\nTomerry's \"Adaptation\" have Max. Reduction increase to 10\nand change the damage type endured most to Resist at the end of each Scene"
                 }
             ],
             "Faction":0,

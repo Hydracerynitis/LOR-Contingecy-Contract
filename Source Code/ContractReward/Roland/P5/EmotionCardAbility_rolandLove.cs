@@ -35,5 +35,10 @@ namespace ContractReward
             HitDic[BehaviourDetail.Hit] = 0;
             base.OnRoundEnd();
         }
+        public override void OnStartOneSideAction(BattlePlayingCardDataInUnitModel curCard)
+        {
+            base.OnStartOneSideAction(curCard);
+            curCard.ApplyDiceStatBonus(DiceMatch.NextAttackDice, new DiceStatBonus() { power = 3 });
+        }
     }
 }
