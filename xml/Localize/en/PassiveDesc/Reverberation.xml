@@ -16,7 +16,7 @@
 	</PassiveDesc>
 	<PassiveDesc ID="1800003">
 		<Name>Frantic Performance</Name> 
-		<Desc>Gain 1 Frantic after inflicting or recieving damage equal to 2% of Max HP. Can spend Frantic to use Powerful Combat Pages.</Desc>
+		<Desc>Gain 1 Insanity after inflicting or recieving damage equal to 2% of Max HP. Can spend Insanity to use Powerful Combat Pages.</Desc>
 	</PassiveDesc>
 	<!--菲利普 -->
 	<PassiveDesc ID="1810001">
@@ -27,23 +27,23 @@ Gain Power by half the current Emotion Level (Rounded down)</Desc>
 	<PassiveDesc ID="1810002">
 		<Name>Searing Sword</Name> 
 		<Desc>When inflicting Burn using Combat Pages, apply +1 additional stack.
-If the character has 10 or more Burn at the start of the Scene, change to much more aggressive deck; otherwise, change to more perservative deck.</Desc>
+If the character has 10 or more Burn at the start of the Scene, become 'Overheated' and change to a much more aggressive deck; otherwise, change to a more passive deck.</Desc>
 	</PassiveDesc>
 	<PassiveDesc ID="1810003">
 		<Name>Cooled Heart</Name> 
-		<Desc>Reduce damaged taken due to Burn by 10. Become more endure to damage.</Desc>
+		<Desc>Reduce damaged taken due to Burn by 10; Set resistances to 'Endured'</Desc>
 	</PassiveDesc>
 	<PassiveDesc ID="1810004">
 		<Name>Sizzling Heart</Name> 
-		<Desc>Inflict 2 Burn to target on hit, and inflict 2 Burn to attacker when hit.
-Become more vulnerable to damage.</Desc>
+		<Desc>Inflict 2 Burn to target on hit, and inflict 2 Burn to attacker when hit;
+Become more vulnerable to damage when 'Overheated'</Desc>
 	</PassiveDesc>
 	<!--艾琳-->
 	<PassiveDesc ID="1820001">
 		<Name>Meat Gear: Production</Name> 
-		<Desc>At the start of the Act, Summon and Commond 2 Gear Worshipper unit. Gear Worshippers have independent deck and stats.
-Take Stagger Damage equal to 15% of Max Stagger Resist when one of the Gear Worshipper die.
-At the end of Scene when one of the Gear Worshipper die two scene before, summon a new Gear Worshipper unit. </Desc>
+		<Desc>At the start of the Act, Summon and Commond 2 Gear Worshipper units; Gear Worshippers have independent decks and stats;
+Take Stagger Damage equal to 15% of Max Stagger Resist when one of the Gear Worshipper die;
+Revive a Gear Worshipper after 2 scenes</Desc>
 	</PassiveDesc>
 	<PassiveDesc ID="1820002">
 		<Name>Thought Gear: Predict</Name> 
@@ -55,12 +55,12 @@ At the end of Scene when one of the Gear Worshipper die two scene before, summon
 	</PassiveDesc>
 	<PassiveDesc ID="1820004">
 		<Name>Meat Gear: Role</Name> 
-		<Desc>This character can't get bonus Speed Dice from High Emotion Level.</Desc>
+		<Desc>This character can't get bonus Speed Dice from Emotion Level.</Desc>
 	</PassiveDesc>
 	<PassiveDesc ID="1820005">
 		<Name>Zeal of the Believers</Name> 
 		<Desc>Smoke' amplifies outgoing damage instead of incoming damage on this character.
-Gain three special Combat Page that can be used to benifit self. Replenish them after all three are used.</Desc>
+Gain three special Combat Page that can be used to benifit the user. Replenish them after all three are used.</Desc>
 	</PassiveDesc>
 	<!--格蕾塔-->
 	<PassiveDesc ID="1830001">
@@ -69,14 +69,14 @@ Gain three special Combat Page that can be used to benifit self. Replenish them 
 	</PassiveDesc>
 	<PassiveDesc ID="1830002">
 		<Name>Unstoppable Viciousness</Name> 
-		<Desc>Gain 3 Protection each Scene. Take +3 additional damage from attacks while afflicted with Bleed.
+		<Desc>Gain 3 Protection each Scene. Take +3 additional damage from attacks while afflicted with Bleed;
 Cannot be Staggered. When Stagger Resist falls to 0, loses 100 Hp instead and gains 1 Strength next Scene.</Desc>
 	</PassiveDesc>
   	<PassiveDesc ID="1830003">
     	<Name>Feast and Furious</Name>
-   		<Desc>At the Start of the Act, shuffle a copies of "Into the Sack You Go!" into you Deck.
-Use it to turn an enemy into Fresh Meat, immobolize him until the end of the next Scene. Allies attack Fresh Meat will recover HP equal to damage dealt.
-Fresh Meat change resistance to Noraml but can at most take damage equal to 10% of their Max HP and no Stagger Damage.</Desc>
+   		<Desc>At the Start of the Act, add a copy of 'Into the Sack You Go!' to deck;
+Use it to turn an enemy into Fresh Meat and immobolize them until the end of the next Scene; Ally attacks against Fresh Meat will yield HP recovery equal to damage dealt;
+Fresh Meat change resistances to Noraml but can at most take damage equal to 10% of their Max HP and take no Stagger Damage</Desc>
   	</PassiveDesc>
 	<!-- 不来梅-->
 	<PassiveDesc ID="1840001">
@@ -115,8 +115,8 @@ At the start of the Scene: give 2 Strength, 2 Endurance, and 3 Protection to the
 	<!--塔尼亚-->
 	<PassiveDesc ID="1860001">
 		<Name>Brawl</Name> 
-		<Desc>This character can't get bonus Speed Dice from High Emotion Level.
-Upon being targeted one side attack, Use the rightmost Page in hand to clash with it.</Desc>
+		<Desc>This character can't get bonus Speed Dice from Emotion Level;
+Upon being targeted by a one-sided attack, use the rightmost page in hand to clash with it.</Desc>
 	</PassiveDesc>
 	<PassiveDesc ID="1860002">
 		<Name>Time for Round Two</Name> 
@@ -131,17 +131,17 @@ Afterwards, add a copy of "Beatdown" to the deck and gain 2 Strength and Enduran
 	<PassiveDesc ID="1870001">
 		<Name>On-site Sewing</Name> 
 		<Desc>Gain a copy of "On-site Sewing" that can only be used when there is a dead ally.
-Effect is Reive a random dead ally in the form of Puppet Angelica and start to control it.</Desc>
+Use it to revive a random dead ally as Puppet Angelica and start to control them</Desc>
 	</PassiveDesc>
 	<PassiveDesc ID="1870002">
 		<Name>The Puppeteer</Name> 
-		<Desc>Boost Blunt dices' Power by 1. On hit by Blunt dices inflict 2 Stagger damage.
-Increase Stagger Damage by 1 if the value of speed dice is greater than 5.</Desc>
+		<Desc>Blunt dice Power +1; Blunt dice deal 2 bonus Stagger Damage on hit;
+Increase Stagger Damage by 1 if speed is greater than 5</Desc>
 	</PassiveDesc>
 	<PassiveDesc ID="1870003">
 		<Name>Puppet Performance</Name> 
-		<Desc>Boost Counter dices' Power by 1. On Parry Lose, Puppet Angelica take 8 Stagger Damage.
-Can use a copy of 3 Cost "Recoonect" to make Puppet Angelica regain Puppet Strings.</Desc>
+		<Desc>Counter dice Power +1; On Clash Lose with counter dice, Puppet Angelica take 8 Stagger Damage;
+Can use the page 'Recoonect' (3-Cost) to make Puppet Angelica regain Puppet Strings;</Desc>
 	</PassiveDesc>
 	<PassiveDesc ID="1870004">
 		<Name>Protective Puppetry</Name> 
@@ -150,8 +150,8 @@ Can use a copy of 3 Cost "Recoonect" to make Puppet Angelica regain Puppet Strin
 	<!--安洁莉卡-->
 	<PassiveDesc ID="1870101">
 		<Name>Gigigigigig</Name> 
-		<Desc>Boost Blunt dices' Power by 1. On hit by Blunt dices inflict 2 Stagger damage.
-Increase Stagger Damage by 1 if the value of speed dice is greater than 5.</Desc>
+		<Desc>Blunt dice Power +1; Blunt dice deal 2 bonus Stagger Damage on hit;
+Increase Stagger Damage by 1 if speed is greater than 5;</Desc>
 	</PassiveDesc>
 	<PassiveDesc ID="1870102">
 		<Name>Ghghghghghghghgh…</Name> 
@@ -162,55 +162,55 @@ Can only attack enemy with Red Mark.</Desc>
 	<PassiveDesc ID="1870103">
 		<Name>Creeeeak…</Name> 
 		<Desc>Can not act if doesn't have Puppet Strings.
-When staggered or Jae-heon staggered, lose Puppet Strings status.
-When Jae-heon die, die.</Desc>
+When staggered or Jae-heon is staggered, lose Puppet Strings status;
+When Jae-heon dies, die as well</Desc>
 	</PassiveDesc>
 	<!--伊莲娜-->
 	<PassiveDesc ID="1880001">
 		<Name>Gnawing Hunger</Name> 
 		<Desc>On hit recover amount Hp equal to 2% Max HP
-Offensive Dices gain 1 Power with 25% Max HP lost (Max. 3)</Desc>
+Offensive Dice gain +1 Power for every 25% Max HP lost (Max; 3)</Desc>
 	</PassiveDesc>
 	<PassiveDesc ID="1880002">
 		<Name>Feast</Name> 
-		<Desc>Gain a copy of "Feast", turning enemy with 25% Max HP or less into Nameless Shell that attack its other ally.</Desc>
+		<Desc>Gain a copy of "Feast", turning enemy with 25% Max HP or less into Nameless Shell that attacks their other allies</Desc>
 	</PassiveDesc>
 	<PassiveDesc ID="1880003">
 		<Name>Nameless Shell</Name> 
-		<Desc>Uncontrollable, attack other allies. Vanish when there are no other allies.</Desc>
+		<Desc>Uncontrollable, attack other allies; Die when there are no other allies</Desc>
 	</PassiveDesc>
 	<PassiveDesc ID="1880004">
 		<Name>Blood of Bloodfiend</Name> 
-		<Desc>Gain a copy of "Pure Blood", Losing 25% Max Hp on play in exchange of healing half of the amount of lost hp</Desc>
+		<Desc>Gain a copy of "Pure Blood", spending 25% of Max HP on play in exchange for healing half of the amount of lost HP for an ally</Desc>
 	</PassiveDesc>
 	<!--朱红十字-->
 	<PassiveDesc ID="1880101">
 		<Name>Scorched Body / Heated Cross</Name> 
-		<Desc>At the Start of each Scene, Lose HP equal to 10% of Max HP to self/ All Dice gain 2 Power.</Desc>
+		<Desc>At the start of each Scene, lose HP 10% of max HP/ All Dice gain +2 Power</Desc>
 	</PassiveDesc>
 	<PassiveDesc ID="1880102">
 		<Name>Heavy Weaponry / Rampage</Name> 
-		<Desc>Lose 3 Speed / one of used "Cross Blade","Shockwave","Heated Weapon" will be used again.</Desc>
+		<Desc>Lose 3 Speed / one of used "Cross Blade","Shockwave","Heated Weapon" will be used again</Desc>
 	</PassiveDesc>
 	<PassiveDesc ID="1880103">
 		<Name>Drained Cardiovascular</Name> 
-		<Desc>This Characet will recover twice amount of health</Desc>
+		<Desc>This character recovers twice as much health</Desc>
 	</PassiveDesc>
 	<!--普鲁托-->
 	<PassiveDesc ID="1890001">
 		<Name>Contracts</Name> 
-		<Desc>Gain copy of 5 contracts. Point to ally to activate it for them or Point to enemy to activate it for self.
+		<Desc>Gain copy of 5 contracts; Target an ally to put it on them or target an enemy to put it on this character self;
 At the start of each Scene, Draw 1 Card.</Desc>
 	</PassiveDesc>
 	<PassiveDesc ID="1890002">
 		<Name>Yesterday's Promise</Name> 
-		<Desc>Half Combat Pages on enemies' Speed Dice has one die marked at each Scene. 
-Upon Clash with marked die, Add a single-use copy of enemy's Page to the hand. If Achieve Clash Win, the copy's cost set to 0.</Desc>
+		<Desc>There is a marked die on half of the enemies' combat pages each scene; 
+Upon Clashing with a marked die, add a single-use copy of enemy's page to hand; If the Clash was won, the copy's cost is set to 0</Desc>
 	</PassiveDesc>
 	<PassiveDesc ID="1890003">
 		<Name>Sealing Barrier</Name> 
-		<Desc>In every Scene, Immune damage from one types of attack when not staggered.
-At the start of Act, add a copy of "Hex: Seal" to the deck.</Desc>
+		<Desc>Every Scene, become immune to damage from one type of attack when not staggered;
+At the start of the Act, add a copy of 'Hex: Seal' to the deck.</Desc>
 	</PassiveDesc>
 	<PassiveDesc ID="1890004">
 		<Name>Indifference</Name> 

@@ -11,7 +11,7 @@
                 {
                     "language":"en",
                     "name":"Sharpened Blade",
-                    "desc":"Increase all Guests' outgoing Damage by {0}%"
+                    "desc":"Guests deal {0}% more Damage"
                 }
             ],
             "Faction":0,
@@ -28,7 +28,7 @@
                 {
                     "language":"en",
                     "name":"Concussing Strike",
-                    "desc":"Increase all Guests' outgoing Stagger Damage by {0}%"
+                    "desc":"Guests deal {0}% more Stagger Damage"
                 }
             ],
             "Faction":0,
@@ -45,7 +45,7 @@
                 {
                     "language":"en",
                     "name":"Powerful",
-                    "desc":"All Guests' Dice gain {0} Power."
+                    "desc":"All Guests gain +{0} Dice Power"
                 }
             ],
             "Faction":0,
@@ -64,7 +64,7 @@
                 {
                     "language":"en",
                     "name":"Surgery Enhancement",
-                    "desc":"Increase all Guests' Max HP by {0}%"
+                    "desc":"All Guests gain +{0}% max HP"
                 }
             ],
             "Faction":0,
@@ -81,7 +81,7 @@
                 {
                     "language":"en",
                     "name":"Experienced Combatant",
-                    "desc":"Increase all Guests' Max Stagger Resist by {0}%"
+                    "desc":"All Guests gain +{0}% max Stagger Resist"
                 }
             ],
             "Faction":0,
@@ -98,7 +98,7 @@
                 {
                     "language":"en",
                     "name":"Unflappable",
-                    "desc":"For all Guests, Becoming Staggered does not temporarily change the character's resistances."
+                    "desc":"For all Guests, becoming Staggered does not temporarily change the character's resistances."
                 }
             ],
             "Faction":0,
@@ -132,7 +132,7 @@
                 {
                     "language":"en",
                     "name":"Speedy Assault",
-                    "desc":"Speed values of the dices of all Guests change to the maximum possible value."
+                    "desc":"Speed dice of all Guests become the highest possible value"
                 }
             ],
             "Faction":0,
@@ -149,7 +149,7 @@
                 {
                     "language":"en",
                     "name":"Excited",
-                    "desc":"All Guests' Emotion Level are set to {0} if their Emotion Level are lower than {1}"
+                    "desc":"All Guests' Emotion Level is set to {0} if their Emotion Level is lower than {1}"
                 }
             ],
             "Faction":0,

@@ -10,8 +10,8 @@
                 },
                 {
                     "language":"en",
-                    "name":"Past's Glory",
-                    "desc":"At her first appearance, Yujin recover {0}% of Max HP. \nIncrease the Minimun value of first die of “Boundry of Death” by {1}"
+                    "name":"Past Glory",
+                    "desc":"Yujin starts with additional {0}% HP; \nIncrease the minimun value of 'Boundry of Death' by {1}"
                 }
             ],
             "Faction":0,

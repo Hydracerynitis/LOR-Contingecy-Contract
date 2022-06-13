@@ -18,14 +18,14 @@
             "Id":"Philip_Silence_param3",
             "Desc":[
                 {"Language":"cn","Content":"非常"},
-                {"Language":"en","Content":"extremely much more"}
+                {"Language":"en","Content":"extremely"}
             ]
         },
         {
             "Id":"Eileen_Production_param1",
             "Desc":[
                 {"Language":"cn","Content":"速度骰+1，最高光芒+2"},
-                {"Language":"en","Content":"gain 1 Speed dice, Max Light +2"}
+                {"Language":"en","Content":"gain an additional speed die and +2 max Light"}
             ]
         },
         {
@@ -39,28 +39,28 @@
             "Id":"Eileen_Production_param3",
             "Desc":[
                 {"Language":"cn","Content":"并且额外恢复2点光芒抽2张牌"},
-                {"Language":"en","Content":" and recover 2 light and draw 2 cards"}
+                {"Language":"en","Content":", recover 2 light and draw 2 cards"}
             ]
         },
         {
             "Id":"Tanya_Solo_param1",
             "Desc":[
                 {"Language":"cn","Content":"第一幕后所有进攻骰威力+4"},
-                {"Language":"en","Content":"On Clash all Offensive Dice Gain 4 Power after First Scene;"}
+                {"Language":"en","Content":"On Clash all Offensive Dice Gain 4 Power after the first Scene"}
             ]
         },
         {
             "Id":"Tanya_Solo_param2",
             "Desc":[
                 {"Language":"cn","Content":",达到情感3时进攻骰威力额外+3"},
-                {"Language":"en","Content":"\nOn Clash All Offensive Dice gain extra 3 Power after reached Emotion Level 3;"}
+                {"Language":"en","Content":"\nOn Clash All Offensive Dice gain extra 3 Power at and above Emotion Level 3"}
             ]
         },
         {
             "Id":"Tanya_Solo_param3",
             "Desc":[
                 {"Language":"cn","Content":",达到情感5时进攻骰威力额外+2"},
-                {"Language":"en","Content":"\nOn Clash All Offensive Dice gain extra 2 Power after reached Emotion Level 5."}
+                {"Language":"en","Content":"\nOn Clash All Offensive Dice gain extra 2 Power at Emotion Level 3."}
             ]
         },
         {
@@ -74,77 +74,77 @@
             "Id":"Bremen_Self_param2",
             "Desc":[
                 {"Language":"cn","Content":"破绽"},
-                {"Language":"en","Content":" Disarm"}
+                {"Language":"en","Content":", Disarm"}
             ]
         },
         {
             "Id":"Bremen_Self_param3",
             "Desc":[
                 {"Language":"cn","Content":"虚弱"},
-                {"Language":"en","Content":" Feeble"}
+                {"Language":"en","Content":" and Feeble"}
             ]
         },
         {
             "Id":"Bremen_Group_param1",
             "Desc":[
                 {"Language":"cn","Content":"3张永恒残音"},
-                {"Language":"en","Content":"3 \"Everlasting Melody\","}
+                {"Language":"en","Content":"3 copies of 'Everlasting Melody'"}
             ]
         },
         {
             "Id":"Bremen_Group_param2",
             "Desc":[
                 {"Language":"cn","Content":"3张至暗圣地"},
-                {"Language":"en","Content":"3 \"Dark Shrine to Music\","}
+                {"Language":"en","Content":", 3 copies of 'Dark Shrine to Music'"}
             ]
         },
         {
             "Id":"Bremen_Group_param3",
             "Desc":[
                 {"Language":"cn","Content":"1张合唱"},
-                {"Language":"en","Content":"1 \"Trio\""}
+                {"Language":"en","Content":" and a copy of 'Trio'"}
             ]
         },
         {
             "Id":"Oswald_Debut_param1",
             "Desc":[
                 {"Language":"cn","Content":"利刃先生战斗书页数值提升"},
-                {"Language":"en","Content":"Mr. Knife's combnat pages are enhanced"}
+                {"Language":"en","Content":"Mr. Knife's combat pages are enhanced"}
             ]
         },
         {
             "Id":"Oswald_Debut_param2",
             "Desc":[
                 {"Language":"cn","Content":"利刃先生战斗书页数值提升,美人鱼小姐速度骰+2且进攻方式更加激进"},
-                {"Language":"en","Content":"Mr. Knife's combnat pages are enhanced;\nMs. Mermaid gain 2 Speed Dice and becomes more aggressive"}
+                {"Language":"en","Content":"Mr. Knife's combat pages are enhanced;\nMs. Mermaid gain +2 Speed Dice and becomes more aggressive"}
             ]
         },
         {
             "Id":"Oswald_Debut_param3",
             "Desc":[
                 {"Language":"cn","Content":"利刃先生战斗书页数值提升,速度骰+1且进攻方式更加激进;美人鱼小姐速度骰+2且进攻方式非常激进"},
-                {"Language":"en","Content":"Mr. Knife's combnat pages are enhanced, gain 1 Speed Dice and becomes more aggressive;\nMs. Mermaid gain 2 Speed Dice and becomes much more aggressive"}
+                {"Language":"en","Content":"Mr. Knife's combnt pages are enhanced, gain +1 Speed Dice and becomes more aggressive;\nMs. Mermaid gain +2 Speed Dice and becomes much more aggressive"}
             ]
         },
         {
             "Id":"Oswald_Troll_param1",
             "Desc":[
                 {"Language":"cn","Content":"骰子威力提升2点"},
-                {"Language":"en","Content":"Dice gain 2 Power"}
+                {"Language":"en","Content":"gain +2 dice Power"}
             ]
         },
         {
             "Id":"Oswald_Troll_param2",
             "Desc":[
                 {"Language":"cn","Content":",造成伤害和混乱伤害提升50%"},
-                {"Language":"en","Content":", Deal 50% more Damage and Stagger Damage"}
+                {"Language":"en","Content":"and deals 50% more Damage as well as Stagger Damage;"}
             ]
         },
         {
             "Id":"Oswald_Troll_param3",
             "Desc":[
                 {"Language":"cn","Content":",额外获得2个速度骰并且每一幕开始时抽2张牌"},
-                {"Language":"en","Content":",\nGain 2 Speed Dice, Draw 2 more card at the Start of the Scene"}
+                {"Language":"en","Content":",\nAlso, they gain +2 speed dice and draw 2 more pages at the start of each Scene"}
             ]
         }
     ]

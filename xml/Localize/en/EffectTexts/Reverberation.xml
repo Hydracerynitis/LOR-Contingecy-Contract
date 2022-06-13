@@ -2,28 +2,28 @@
 <BattleEffectTextRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<effectTextList>
 		<BattleEffectText ID="Insanity">
-			<Name>Frantic</Name>
+			<Name>Insanity</Name>
 			<Desc>Gain 1 stack after inflicting or recieving damage equal to 2% of Max HP</Desc>
 		</BattleEffectText>
 		<BattleEffectText ID="NullifyPowerAll">
 			<Name>Power Stripped</Name>
-			<Desc>Dices are not affected by Power gain or loss</Desc>
+			<Desc>Dice are not affected by Power gain or loss</Desc>
 		</BattleEffectText>
 		<BattleEffectText ID="Mark">
 			<Name>Red Mark</Name>
-			<Desc>Being the target of Puppet Angelica Librarian.</Desc>
+			<Desc>Target of a Puppet Angelica Librarian</Desc>
 		</BattleEffectText>
 		<BattleEffectText ID="AngelicaPuppet">
 			<Name>Puppet Strings</Name>
-			<Desc>Gain 1 Speed dice, the character is free for you to control.</Desc>
+			<Desc>Gain 1 Speed die, The character is controlable.</Desc>
 		</BattleEffectText>
 		<BattleEffectText ID="TemporyPuppet">
 			<Name>Temporary Puppet Strings</Name>
-			<Desc>Gain 1 Speed dice, Immortal for the duraction of this Scene.</Desc>
+			<Desc>Gain 1 Speed dice; Immortal for the duraction of this Scene.</Desc>
 		</BattleEffectText>
 		<BattleEffectText ID="CC_Barrier">
 			<Name>Sealing Barrier</Name>
-			<Desc>Can not act, Untargetable.</Desc>
+			<Desc>Cannot act, Untargetable.</Desc>
 		</BattleEffectText>
 		<BattleEffectText ID="CrossBurn">
 			<Name>Scorched</Name>
@@ -31,14 +31,14 @@
 		</BattleEffectText>
 		<BattleEffectText ID="TanyaMaster">
 			<Name>One Man Army</Name>
-			<Desc>If Tanya use Combat Page against same Librarian 4 times in one Scene, she will “see through” such librarian's attack;
-In the next Scene, upon clash Tanya will nullify all dice from such librarian's Combat Pages.
-Librarian has been seen through in this Scene are: {0}</Desc>
+			<Desc>If Tanya uses combat pages against the same Librarian 4 times in one Scene, she will “see through” that librarian's attacks;
+Next scene, upon clashing with Tanya, she will destroy all dice from that librarian's combat pages.
+Librarians that have been seen through this scene: {0}</Desc>
 		</BattleEffectText>
 		<BattleEffectText ID="GretaMeat">
 			<Name>Fresh Meat</Name>
 			<Desc>Can't act. Upon being hit enemies will recover HP equal to damage dealt.
-Change resistance to Noraml. Can at most take damage equal to 10% of their Max HP and no Stagger Damage.</Desc>
+Change resistance to Noraml. Cannot take more Damage than 10% of their max HP in a scene and takes no Stagger Damage.</Desc>
 		</BattleEffectText>
 		<BattleEffectText ID="HeadDonkey">
 			<Name>Heehaw’s Hour to Shine</Name>
@@ -54,7 +54,7 @@ Change resistance to Noraml. Can at most take damage equal to 10% of their Max H
 		</BattleEffectText>
 		<BattleEffectText ID="TrollIndicator">
 			<Name>A little Trolling</Name>
-			<Desc>At the end of this Scene, the librarian with most damage dealt will be stupified.</Desc>
+			<Desc>At the end of this Scene, the librarian that dealt the most damage will be stupified.</Desc>
 		</BattleEffectText>
 		<BattleEffectText ID="LibrarianDaze">
 			<Name>Stupefied</Name>

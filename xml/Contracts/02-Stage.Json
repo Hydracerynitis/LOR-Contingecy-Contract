@@ -11,7 +11,7 @@
                 {
                     "language":"en",
                     "name":"REINFORCE!",
-                    "desc":"Add one extra wave consist of copy of random wave"
+                    "desc":"Duplicate a random wave"
                 }
             ],
             "contractType":1,
@@ -29,7 +29,7 @@
                 {
                     "language":"en",
                     "name":"Last Stand",
-                    "desc":"Only one floor of librarian can be involed in reception"
+                    "desc":"Only one floor can be used in a reception"
                 }
             ],
             "contractType":1,
@@ -48,7 +48,7 @@
                 {
                     "language":"en",
                     "name":"Ambush",
-                    "desc":"Random {0} Floors of library is unavailabe for this reception"
+                    "desc":"{0} random floors are unavailabe in a reception"
                 }
             ],
             "contractType":1,
@@ -69,7 +69,7 @@
                 {
                     "language":"en",
                     "name":"Oversleep",
-                    "desc":"Reduce number of Maximun Available Librarians by 1"
+                    "desc":"Reduce the number of available Librarians by 1"
                 }
             ],
             "contractType":1,

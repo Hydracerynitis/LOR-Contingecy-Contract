@@ -11,4 +11,7 @@
 	<BattleCardAbility ID="drawCards3">
     		<Desc>[On Use] Draw 3 Pages</Desc>
   	</BattleCardAbility>
+	<BattleCardAbility ID="AoeCoolDown">
+		<Desc>This page can be reused only after 4 scenes</Desc>
+  	</BattleCardAbility>
 </BattleCardAbilityDescRoot>

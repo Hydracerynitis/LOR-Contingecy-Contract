@@ -11,7 +11,7 @@
                 {
                     "language":"en",
                     "name":"Immolation",
-                    "desc":"Increase Philip's Max Stagger Resist by 50%;\nOverHeat will only change Stagger Resisteance to {0}; Increase Outgoing damage by {1} when OverHeat"
+                    "desc":"Increase Philip's max Stagger Resist by 50%;\nOverHeat will change Stagger Resisteance to {0}; Increase Damage dealt by {1} when Overheated"
                 }
             ],
             "Faction":0,
@@ -31,7 +31,7 @@
                 {
                     "language":"en",
                     "name":"Immolation",
-                    "desc":"Increase Unspeaking Childs' speed dice by 1,Attack pattern become {0} aggressive; \nIncrease Max HP and Max Stagger Resist by {1}%"
+                    "desc":"Increase Unspeaking Childs gain +1 speed die and their attack pattern becomes {0} aggressive; \nIncrease Max HP and Max Stagger Resist by {1}%"
                 }
             ],
             "Faction":0,
@@ -51,7 +51,7 @@
                 {
                     "language":"en",
                     "name":"Weighty Cello",
-                    "desc":"Philip's Attack Pattern becomes more aggressive."
+                    "desc":"Philip's attack pattern becomes more aggressive."
                 }
             ],
             "Faction":0,
@@ -69,7 +69,7 @@
                 {
                     "language":"en",
                     "name":"Frantic Faith",
-                    "desc":"Increase Eileen's Max Hp by {0}%;\nGear Worshipper {1}."
+                    "desc":"Increase Eileen's max Hp by {0}%;\nThe Gear Worshippers {1}."
                 }
             ],
             "Faction":0,
@@ -89,7 +89,7 @@
                 {
                     "language":"en",
                     "name":"Body Guard",
-                    "desc":"Increase Gear Whorshipper's Max HP and Max Stagger Resist by {0}%;\nIncrease the Maximun value of second die of “Thought Gear: Brainwash” by {1};\nWhenever alive Gear Worshipper exist, Damage inflicted to Eileen will be transferred to alive Gear Worshipper."
+                    "desc":"Increase Gear Whorshipper's Max HP and Max Stagger Resist by {0}%;\nIncrease the maximun value of the second die of 'Thought Gear: Brainwash' by {1};\nIf a Gear Worshipper is alive, damage inflicted to Eileen will be transferred to a Gear Worshipper."
                 }
             ],
             "Faction":0,
@@ -109,7 +109,7 @@
                 {
                     "language":"en",
                     "name":"Sharp Harp",
-                    "desc":"Gear Worshipper gain unique deck of Combat Pages."
+                    "desc":"The Gear Worshippers gain an unique deck of combat pages."
                 }
             ],
             "Faction":0,
@@ -127,7 +127,7 @@
                 {
                     "language":"en",
                     "name":"Season and Spice",
-                    "desc":"On Clash Win inflict 1 Paralyzed/Fragile/Bind randomly;Increase Inflicted Bleeding Stack by {0};\nLibrarian being put to Staggered or into a sack will be inflicted permantly {1} Feeble and Disarmed (Stackable);\nPrioritize Librarian without status ailment and use “Mealtime” to Fresh Meat immediately."
+                    "desc":"On Clash Win inflict 1 Paralyzed/Fragile/Bind randomly;Increase Inflicted Bleeding Stack by {0};\nLibrarians who got staggered or turned into Fresh Meat will be inflicted permantly {1} Feeble and Disarmed (Stackable);\nPrioritize Librarian without status ailment and uses 'Mealtime' on Fresh Meat immediately."
                 }
             ],
             "Faction":0,
@@ -147,7 +147,7 @@
                 {
                     "language":"en",
                     "name":"Mince and Mash",
-                    "desc":"In first Phase, HP does not go below 50% and If HP drops to 60% or lower, proceeds to the next phase instead;\nWhen using “Into the Sack you go!”, use it to {0} more librarins; Increase Hp recovered from Fresh Meat by {1}%."
+                    "desc":"In the first phase, HP does not fall below 50% and if it's at or below 60%, proceed to the next phase;\nWhen using “Into the Sack you go!”, use it to {0} more librarins; Increase Hp recovered from Fresh Meat by {1}%."
                 }
             ],
             "Faction":0,
@@ -205,7 +205,7 @@
                 {
                     "language":"en",
                     "name":"Influence with Passion",
-                    "desc":"Allies except Bremen will be revived with Bremen's Emotion Level 2 Scene after their death as long as Bremen is alive.\nAllies except Bremen gain {0}.\nWhen gaining Strength, Endurance, Haste, or Protection through Combat Pages,\ngive the same status effect to a random other ally\n(At most {1} times per Scene)."
+                    "desc":"Allies except Bremen will be revived with Bremen's Emotion Level 2 Scene after their death as long as Bremen is alive.\nBremen's allies gain {0};\nWhen gaining Strength, Endurance, Haste, or Protection through Combat Pages,\ngive the same status effect to a random other ally\n(At most {1} times per Scene)."
                 }
             ],
             "Faction":0,
@@ -225,7 +225,7 @@
                 {
                     "language":"en",
                     "name":"Horn, Tuba and Trombone",
-                    "desc":"Increase Max Stagger Resist to 200, Ignore ”Untargetable“ effect while using Melee Page.\nTake at most 15% of Max HP in one Scene."
+                    "desc":"Increase Max Stagger Resist to 200, Ignore 'Untargetable' effect while using Melee Page.\nTake at most 15% of Max HP in one Scene."
                 }
             ],
             "Faction":0,
@@ -263,7 +263,7 @@
                 {
                     "language":"en",
                     "name":"We do a little Trolling",
-                    "desc":"Oswald will render Librarian with most damage dealt stupified instead;\nReception will conclude if no non-stupified librarian exists.\nStupified Librarian {0}."
+                    "desc":"Oswald will render the librarian who dealt the most damage Stupified instead;\nReception will conclude if there are no non-stupified librarians left.\nStupified Librarian {0}."
                 }
             ],
             "Faction":0,
@@ -283,7 +283,7 @@
                 {
                     "language":"en",
                     "name":"Throaty Clarinet",
-                    "desc":"“Emma &amp; Noah” will appear and its combat pages' dice are enhanced."
+                    "desc":"Emma &amp; Noah will appear and their combat pages are enhanced"
                 }
             ],
             "Faction":0,
@@ -302,7 +302,7 @@
                 {
                     "language":"en",
                     "name":"Pinnical Strength",
-                    "desc":"Remove Counter Dice from all Combat Pages.\nUpon being targeted one side attack, Use “Fistcuffs”,“Kick and Stomp”,“Lupine Onslaught” or “Intimidate” to clash with it.;\n{0}."
+                    "desc":"Remove counter dice from all Combat Pages.\nUpon being targeted by a one-sideed attack, respond with 'Fistcuffs', 'Kick and Stomp', 'Lupine Onslaught' or 'Intimidate';\n{0}."
                 }
             ],
             "Faction":0,
@@ -322,7 +322,7 @@
                 {
                     "language":"en",
                     "name":"One Man Army",
-                    "desc":"Gain 2 Speed Dice, Attack pattern become {0} aggressive;\nReduce incoming Damage and Stagger Damage by {1}%;\nIf Tanya use Combat Page against same Librarian 4 times in one Scene, she will “see through” such librarian's attack;\nIn the next Scene, upon clash Tanya will nullify all dice from such librarian's Combat Pages."
+                    "desc":"Gain +2 Speed Dice; The attack pattern becomes {0} aggressive;\nReduce incoming Damage and Stagger Damage by {1}%;\nIf Tanya uses combat pages against the same Librarian 4 times in one Scene, she will “see through” that librarian's attacks;\nNext scene, upon clashing with Tanya, she will destroy all dice from that librarian's combat pages"
                 }
             ],
             "Faction":0,
@@ -342,7 +342,7 @@
                 {
                     "language":"en",
                     "name":"Dark Viola",
-                    "desc":"Time for round Two can be triggered again.\nAfter this, Tanya recover HP equal to 10% of Max HP at the end of each Scene, and cannot be Staggered"
+                    "desc":"'Time for Round Two' can be triggered again;\nTanya will recover 10% of max HP every Scene and become unstaggerable afterwards"
                 }
             ],
             "Faction":0,
@@ -360,7 +360,7 @@
                 {
                     "language":"en",
                     "name":"Puppet Performance",
-                    "desc":"Boost Jae-heon's Counter dices' Power by {0};\nImmune to Damage and Stagger Damage as long as other alive ally exist;\nIncrease Puppet Strings stack by {1} when it's first applied to Puppets."
+                    "desc":"Boost Jae-heon's Counter dices' Power by +{0};\nImmune to Damage and Stagger Damage as he has other allies;\nIncrease Puppet Strings stack by {1} when it's first applied to Puppets."
                 }
             ],
             "Faction":0,
@@ -380,7 +380,7 @@
                 {
                     "language":"en",
                     "name":"Strings Dexterity",
-                    "desc":"{0} Scene after Puppets lose Puppet Strings, Jae-heon will apply new Puppet Strings to them;\nIncrease Speed dice of Puppets with Puppet Strings by 1, Increase Jae-heon's Max Stagger Resist by {1}%."
+                    "desc":"{0} Scene after Puppets lose Puppet Strings, Jae-heon will apply new Puppet Strings to them;\nPuppets with Puppet Strings gain + 1 speed dice; Increase Jae-heon's Max Stagger Resist by {1}%."
                 }
             ],
             "Faction":0,
@@ -418,7 +418,7 @@
                 {
                     "language":"en",
                     "name":"Scorching Cross",
-                    "desc":"Upon hit 3 times by The Vermilion Cross will gain {0} Scorched in the next Scene\n(Upon Hit by The Vermilion Cross will reduce the stack by 1\n And make her attack other random Librarian with damage boosed by {1}%)."
+                    "desc":"Upon being hit by The Vermilion Cross 3 times will gain {0} Scorched the next Scene\n(Upon Hit by The Vermilion Cross reduce the stack by 1\n and make him attack a random other Librarian with Damage boosted by {1}%)."
                 }
             ],
             "Faction":0,
@@ -438,7 +438,7 @@
                 {
                     "language":"en",
                     "name":"Feast",
-                    "desc":"Elena will use Feast against Librarian with {0}% Max HP or lower,\nturning them into Nameless Shell that will attack other Librarians;\nIncrease Elena's Max HP by {1}%."
+                    "desc":"Elena will use Feast against Librarian with {0}% max HP or lower,\nturning them into Nameless Shell that will attack other Librarians;\nIncrease Elena's max HP by {1}%."
                 }
             ],
             "Faction":0,
@@ -476,7 +476,7 @@
                 {
                     "language":"en",
                     "name":"Indifference",
-                    "desc":"Increase Shades' Max HP and Stagger Resist by {0}%;\nBoost dice's Power against the Libarain copied from by {1}."
+                    "desc":"Increase Shades' max HP and Stagger Resist by {0}%;\nBoost dice Power against the Libarian copied from by {1}."
                 }
             ],
             "Faction":0,
@@ -496,7 +496,7 @@
                 {
                     "language":"en",
                     "name":"Crashing Barrier",
-                    "desc":"Librarian sent to Sealing Barrier take damage equal to {0}% Max HP;\nIncrease Pluto's Max HP by 100%; Increase Max Stagger Resist Librarian sent to Sealing Barrier by {1}%."
+                    "desc":"Librarians in the Sealing Barrier take Damage equal to {0}% of their max HP;\nIncrease Pluto's max HP by 100%; Increase max Stagger Resist Librarian sent to Sealing Barrier by {1}%."
                 }
             ],
             "Faction":0,
