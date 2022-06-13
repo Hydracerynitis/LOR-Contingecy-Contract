@@ -88,5 +88,9 @@
 			<Name>苍白之手</Name>
         	<Desc>这一幕内击中同一目标3次便追加3-10点混乱伤害</Desc>
 		</BattleEffectText>
+		<BattleEffectText ID="rolandBlueCoolDown">
+			<Name>追忆--苍蓝残响</Name>
+        	<Desc>{0}幕后命中目标便施加1层威力无效</Desc>
+		</BattleEffectText>
 	</effectTextList>
 </BattleEffectTextRoot>

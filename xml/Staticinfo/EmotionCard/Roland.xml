@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EmotionCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <EmotionCard ID="18001">
+        <Name>RolandYun</Name>
+        <Artwork>Roland4Phase_Finn</Artwork>
+        <State>Negative</State>
+        <Sephirah>ETC</Sephirah>
+        <Level>0</Level>
+        <EmotionLevel>0</EmotionLevel>
+        <EmotionRate>0</EmotionRate>
+        <TargetType>All</TargetType>
+        <Script>rolandYun</Script>
+    </EmotionCard>
+    <EmotionCard ID="18002">
+        <Name>RolandZwei</Name>
+        <Artwork>Roland4Phase_Walter</Artwork>
+        <State>Negative</State>
+        <Sephirah>ETC</Sephirah>
+        <Level>0</Level>
+        <EmotionLevel>0</EmotionLevel>
+        <EmotionRate>0</EmotionRate>
+        <TargetType>All</TargetType>
+        <Script>rolandZwei</Script>
+    </EmotionCard>
+    <EmotionCard ID="18003">
+        <Name>RolandDawn</Name>
+        <Artwork>Roland4Phase_Salvador</Artwork>
+        <State>Negative</State>
+        <Sephirah>ETC</Sephirah>
+        <Level>0</Level>
+        <EmotionLevel>0</EmotionLevel>
+        <EmotionRate>0</EmotionRate>
+        <TargetType>All</TargetType>
+        <Script>rolandDawn</Script>
+    </EmotionCard>
+    <EmotionCard ID="18004">
+        <Name>RolandLove</Name>
+        <Artwork>Roland4Phase_Tomerry</Artwork>
+        <State>Negative</State>
+        <Sephirah>ETC</Sephirah>
+        <Level>0</Level>
+        <EmotionLevel>0</EmotionLevel>
+        <EmotionRate>0</EmotionRate>
+        <TargetType>All</TargetType>
+        <Script>rolandLove</Script>
+    </EmotionCard>
+    <EmotionCard ID="18005">
+        <Name>RolandShi</Name>
+        <Artwork>Roland4Phase_Yujin</Artwork>
+        <State>Negative</State>
+        <Sephirah>ETC</Sephirah>
+        <Level>0</Level>
+        <EmotionLevel>0</EmotionLevel>
+        <EmotionRate>0</EmotionRate>
+        <TargetType>All</TargetType>
+        <Script>rolandShi</Script>
+    </EmotionCard>
+    <EmotionCard ID="18006">
+        <Name>RolandLiu</Name>
+        <Artwork>Roland4Phase_Xiao</Artwork>
+        <State>Negative</State>
+        <Sephirah>ETC</Sephirah>
+        <Level>0</Level>
+        <EmotionLevel>0</EmotionLevel>
+        <EmotionRate>0</EmotionRate>
+        <TargetType>All</TargetType>
+        <Script>rolandLiu</Script>
+    </EmotionCard>
+    <EmotionCard ID="18007">
+        <Name>RolandPurple</Name>
+        <Artwork>Roland4Phase_PurpleTear</Artwork>
+        <State>Negative</State>
+        <Sephirah>ETC</Sephirah>
+        <Level>0</Level>
+        <EmotionLevel>0</EmotionLevel>
+        <EmotionRate>0</EmotionRate>
+        <TargetType>All</TargetType>
+        <Script>rolandPurple</Script>
+    </EmotionCard>
+    <EmotionCard ID="18008">
+        <Name>RolandHana</Name>
+        <Artwork>Roland4Phase_Olivier</Artwork>
+        <State>Negative</State>
+        <Sephirah>ETC</Sephirah>
+        <Level>0</Level>
+        <EmotionLevel>0</EmotionLevel>
+        <EmotionRate>0</EmotionRate>
+        <TargetType>All</TargetType>
+        <Script>rolandHana</Script>
+    </EmotionCard>
+    <EmotionCard ID="18009">
+        <Name>RolandBlue</Name>
+        <Artwork>Roland4Phase_Argalia</Artwork>
+        <State>Negative</State>
+        <Sephirah>ETC</Sephirah>
+        <Level>0</Level>
+        <EmotionLevel>0</EmotionLevel>
+        <EmotionRate>0</EmotionRate>
+        <TargetType>All</TargetType>
+        <Script>rolandBlue</Script>
+    </EmotionCard>
+</EmotionCardXmlRoot>

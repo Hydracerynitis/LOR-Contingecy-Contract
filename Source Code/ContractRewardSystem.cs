@@ -38,6 +38,8 @@ namespace Contingecy_Contract
                 //Harmony_Patch.ClearList.Add(18810000);
             if (EnsembleComplete)
                 ClearList.Add(18000000);
+            if (RolandComplete)
+                ClearList.Add(17000005);
         }
         public void CheckRewardAchieved()
         {
@@ -112,6 +114,15 @@ namespace Contingecy_Contract
             get
             {
                 HashSet<int> Test = new HashSet<int>() { 18100000, 18200000, 18300000, 18400000, 18500000, 18600000, 18700000, 18800000, 18900000 };
+                Test.ExceptWith(ClearList);
+                return Test.Count <= 0;
+            }
+        }
+        public static bool RolandComplete
+        {
+            get
+            {
+                HashSet<int> Test = new HashSet<int>() { 17000001, 17000002, 17000003, 17000004 };
                 Test.ExceptWith(ClearList);
                 return Test.Count <= 0;
             }

@@ -159,6 +159,6 @@ namespace Contingecy_Contract
                 __result.Clear();
         }
         public static List<int> NoThumbPage = new List<int>() { 18810000, 17000002, 17000003, 17000004 };
-        public static List<int> NonHeadEquipPage = new List<int>() { 18810000 };
+        public static List<int> NonHeadEquipPage = new List<int>() { 18810000, 17000002 };
     }
 }

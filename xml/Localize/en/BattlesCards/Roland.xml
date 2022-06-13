@@ -105,5 +105,24 @@
 		<BattleCardDesc ID="17000049">
 			<LocalizedName>Durandal</LocalizedName>
 		</BattleCardDesc>
+		<!--P5-->
+		<BattleCardDesc ID="17000051">
+			<LocalizedName>Rage</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000052">
+			<LocalizedName>Sorrow</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000053">
+			<LocalizedName>Conflict</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000054">
+			<LocalizedName>Void</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000055">
+			<LocalizedName>Agony</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17000056">
+			<LocalizedName>Scream</LocalizedName>
+		</BattleCardDesc>
  	</cardDescList>
 </BattleCardDescRoot>

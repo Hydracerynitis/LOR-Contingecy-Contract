@@ -89,5 +89,9 @@ Reduce numbers of passive abilities recieved in the next Scene.</Desc>
 			<Name>Pale Hands</Name>
         	<Desc>Perform 3 succesful hit on same character inflict additional 3-10 Break Damage this round.</Desc>
 		</BattleEffectText>
+		<BattleEffectText ID="rolandBlueCoolDown">
+			<Name>Memory - The Blue Reverberation</Name>
+        	<Desc>After {0} Scene, inflict 1 Nullify Power upon hit.</Desc>
+		</BattleEffectText>
 	</effectTextList>
 </BattleEffectTextRoot>

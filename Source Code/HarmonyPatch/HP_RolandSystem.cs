@@ -1,4 +1,4 @@
-﻿using System;
+﻿using UnityEngine;
 using System.Collections.Generic;
 using ContractReward;
 using BaseMod;
@@ -44,9 +44,15 @@ namespace Contingecy_Contract
         [HarmonyPrefix]
         public static bool BattleUnitEmotionDetail_ApplyEmotionCard_Pre(BattleUnitModel ____self, EmotionCardXmlInfo card)
         {
-            if (____self.passiveDetail.HasPassive<PassiveAbility_1700000>() && card.Sephirah != SephirahType.None)
+            if (____self.passiveDetail.HasPassive<PassiveAbility_1700000>() && !IsRolandEmotion(card))
                 return false;
+            if (IsRolandEmotion(card))
+                return ____self.passiveDetail.HasPassive<PassiveAbility_1700051>();
             return true;
+        }
+        public static bool IsRolandEmotion(EmotionCardXmlInfo card)
+        {
+            return card.Sephirah == SephirahType.ETC && card.id >= 18001 && card.id <= 18009;
         }
         [HarmonyPatch(typeof(BattleUnitModel),nameof(BattleUnitModel.IsTargetable))]
         [HarmonyPostfix]
@@ -62,6 +68,29 @@ namespace Contingecy_Contract
             if (target!=null && !target.IsTargetable_theLast() && targetSlot==target.speedDiceResult.Count-1)
                 targetSlot = RandomUtil.Range(0, target.speedDiceResult.Count - 2);
             return true;
+        }
+        //P5
+        [HarmonyPatch(typeof(StageController),nameof(StageController.RoundEndPhase_ChoiceEmotionCard))]
+        [HarmonyPostfix]
+        static void StageController_RoundEndPhase_ChoiceEmotionCard(ref bool __result)
+        {
+            if(__result && BattleObjectManager.instance.GetAliveList(Faction.Player).Find(x => x.passiveDetail.HasPassive<PassiveAbility_1700051>()) is BattleUnitModel p5)
+            {
+                List<BattleEmotionCardModel> selected = p5.UnitData.emotionDetail.PassiveList;
+                if (selected.Count >= p5.emotionDetail.EmotionLevel)
+                    return;
+                List<EmotionCardXmlInfo> RolandEmotion = new List<EmotionCardXmlInfo>();
+                for (int i = 18001; i <= 18009; i++)
+                    RolandEmotion.Add(EmotionCardXmlList.Instance.GetData(i, SephirahType.ETC).Copy());      
+                RolandEmotion.RemoveAll(x => selected.Exists(y => y.XmlInfo.id == x.id));
+                while (RolandEmotion.Count > 3)
+                    RolandEmotion.RemoveAt(Random.Range(0, RolandEmotion.Count));
+                RolandEmotion.ForEach(x => x.EmotionLevel = selected.Count + 1);
+                StageController.Instance.GetCurrentStageFloorModel().team.currentSelectEmotionLevel--;
+                BattleManagerUI.Instance.ui_levelup.SetRootCanvas(true);
+                BattleManagerUI.Instance.ui_levelup.Init(selected.Count, RolandEmotion);
+                __result = false;
+            }
         }
     }
 }

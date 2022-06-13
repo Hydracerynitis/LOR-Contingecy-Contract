@@ -19,18 +19,6 @@ namespace Contingecy_Contract
                 }
             }
         }
-        public static void TriggerTagTeam(this TagTeam ability, Faction f, params LorId[] ids)
-        {
-            List<LorId> idList = new List<LorId>(ids);
-            foreach (BattleUnitModel unit in BattleObjectManager.instance.GetAliveList(f))
-            {
-                if (unit.cardSlotDetail.cardAry.Exists(x => idList.Contains(x.card.GetID())))
-                {
-                    ability.TagTeamEffect(unit);
-                    return;
-                }
-            }
-        }
     }
     public interface TagTeam
     {

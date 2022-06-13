@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbnormalityCardsRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Sephirah SephirahType="ETC">
+        <AbnormalityCard ID="RolandYun">
+            <Abnormality>芬恩</Abnormality>
+            <CardName>追忆--润事务所</CardName>
+            <AbilityDesc>1名友方角色死亡后将在下一幕中使自身获得1层“强壮”
+减少所有承受伤害2点</AbilityDesc>
+            <FlaborText>我才刚刚……成为，9阶收尾人……</FlaborText>
+            <Dialogues>
+                <Dialogue ID="1">不管怎么说，看到这么年轻的新人被砍倒真叫我心里不舒服。</Dialogue>
+                <Dialogue ID="2">话是这么说没错……可我还是觉得有点恶心。</Dialogue>
+            </Dialogues>
+        </AbnormalityCard>
+        <AbnormalityCard ID="RolandZwei">
+            <Abnormality>沃尔特</Abnormality>
+            <CardName>追忆--Zwei6科</CardName>
+            <AbilityDesc>防御骰子威力+1
+每一幕开始时所有其他友方单位获得1-2层忍耐</AbilityDesc>
+            <FlaborText>我原以为……这次一定能，翻身……</FlaborText>
+            <Dialogues>
+                <Dialogue ID="1">可能对于他们而言，人类与生俱来的权利才是最重要的吧。</Dialogue>
+                <Dialogue ID="2">这世道哪里又是公平的呢？</Dialogue>
+            </Dialogues>
+        </AbnormalityCard>
+        <AbnormalityCard ID="RolandDawn">
+            <Abnormality>萨尔瓦多</Abnormality>
+            <CardName>追忆--黎明事务所</CardName>
+            <AbilityDesc>击中处于“烧伤”状态下的目标时追加1~2点混乱伤害
+进攻骰命中时若其基础值高于目标骰子5点则对目标施加6点烧伤</AbilityDesc>
+            <FlaborText>你们不必被我的命运牵连……</FlaborText>
+            <Dialogues>
+                <Dialogue ID="1">这么多年过去了，那老爷子还是一样。</Dialogue>
+                <Dialogue ID="2">当然，他也没那个必要……</Dialogue>
+                <Dialogue ID="3">是啊，我很久以前就对人与人之间羁绊断了念想……</Dialogue>
+            </Dialogues>
+        </AbnormalityCard>
+        <AbnormalityCard ID="RolandLove">
+            <Abnormality>汤玛丽</Abnormality>
+            <CardName>追忆--爱之小镇</CardName>
+            <AbilityDesc>被击中时使这一幕内来自同一类型的所受伤害减少2点(最多4)
+单方面攻击时使第一个骰子威力+3</AbilityDesc>
+            <FlaborText>……心里空空的，感觉……自己要消失了……？好难过……好想哭……</FlaborText>
+            <Dialogues>
+                <Dialogue ID="1">唉……世事难料啊。</Dialogue>
+                <Dialogue ID="2">当那些艰难时刻的记忆从心底迸发的时候，你只能深刻地接受它们……</Dialogue>
+            </Dialogues>
+        </AbnormalityCard>
+        <AbnormalityCard ID="RolandShi">
+            <Abnormality>柳真</Abnormality>
+            <CardName>追忆--死协2科</CardName>
+            <AbilityDesc>所有骰子威力+1
+投掷骰子骰出最大值且基础值高于5时该骰子威力+4</AbilityDesc>
+            <FlaborText>离实现夙愿……只差，最后一步……</FlaborText>
+            <Dialogues>
+                <Dialogue ID="1">殷红迷雾很强，真的，我想不出更好的词来形容她。</Dialogue>
+                <Dialogue ID="2">我以前一直在想，如果哪天能像她那般强大，那我也可以随心所欲了吧？</Dialogue>
+            </Dialogues>
+        </AbnormalityCard>
+        <AbnormalityCard ID="RolandLiu">
+            <Abnormality>邵</Abnormality>
+            <CardName>追忆--六协1科</CardName>
+            <AbilityDesc>使用近战书页击中目标时将对其施加1层“烧伤”并在2幕之内使其处于“星火”状态
+使用范围杀伤书页后下一幕获得2层强壮忍耐</AbilityDesc>
+            <FlaborText>望眼欲穿，不见归人。覆水难收，宁为玉碎……</FlaborText>
+            <Dialogues>
+                <Dialogue ID="1">但她并不像其他家伙那样，露出崩溃的样子。人类真的能够如此坚强地前进吗……</Dialogue>
+                <Dialogue ID="2">但也很奇怪。只靠心境可改不了这世道。至少都市如此。</Dialogue>
+            </Dialogues>
+        </AbnormalityCard>
+        <AbnormalityCard ID="RolandPurple">
+            <Abnormality>伊織</Abnormality>
+            <CardName>追忆--堇紫泪滴</CardName>
+            <AbilityDesc>投掷骰子时若掷出最小值则重新投掷(每颗骰子至多触发1次)
+第三张书页的进攻骰将会转化为目标弱点抗性</AbilityDesc>
+            <FlaborText>就像那样，什么都不要说。</FlaborText>
+            <Dialogues>
+                <Dialogue ID="1">但人类越是心有不安，就越会做好准备哦？</Dialogue>
+                <Dialogue ID="2">所谓知晓一切的人……应该也知道自己的未来吧。</Dialogue>
+            </Dialogues>
+        </AbnormalityCard>
+        <AbnormalityCard ID="RolandHana">
+            <Abnormality>奥利维耶</Abnormality>
+            <CardName>追忆--Hana1科</CardName>
+            <AbilityDesc>使自身的所有骰子最小值+2，情感等级达到3级后获得额外效果“使自身的所有骰子最大值+1”
+拼点胜利使下一个骰子基础值+2</AbilityDesc>
+            <FlaborText>你我缘尽于此，罗兰。</FlaborText>
+            <Dialogues>
+                <Dialogue ID="1">万分感谢。还有……</Dialogue>
+                <Dialogue ID="2">没错。一码，归一码。</Dialogue>
+            </Dialogues>
+        </AbnormalityCard>
+        <AbnormalityCard ID="RolandBlue">
+            <Abnormality>阿尔加利亚</Abnormality>
+            <CardName>追忆--苍蓝残响</CardName>
+            <AbilityDesc>无法被远程战斗书页伤害
+每三幕对第一个命中的单位下一幕施加1层威力无效</AbilityDesc>
+            <FlaborText>我可不会像某人一样丑陋地胡作非为呢。</FlaborText>
+            <Dialogues>
+                <Dialogue ID="1">闭嘴</Dialogue>
+                <Dialogue ID="2">事到如今还有什么好说的？我们各自的目的都已经相当明确了吧。</Dialogue>
+                <Dialogue ID="3">你也不过是想要践踏蹂躏我、都市、还有夺走安吉丽卡的安吉拉而已吧。</Dialogue>
+            </Dialogues>
+        </AbnormalityCard>
+    </Sephirah>
+</AbnormalityCardsRoot>

@@ -102,7 +102,7 @@ Pain always catches up to those who chooses to stay
 Though it may hurt today
 Tomorrow I'll be heading my way</Desc>
 			</TextList>
-	</bookDescList>
+		</BookDesc>
 	<BookDesc BookID="17000004">
 			<BookName>The Lunatic</BookName>
 			<TextList>
@@ -124,4 +124,44 @@ That’s what really scares me, Angelica.</Desc>
 			</TextList>
 			<PassiveList />
 		</BookDesc>
+	<BookDesc BookID="17000005">
+			<BookName>Gone Angels</BookName>
+			<TextList>
+				<Desc>It’s been a while, Roland… I was waiting for you to show up. So you’ve been guarding this monster mimicking a human all along?
+Roland… Is this what your big plan was all about? Is this really worth it?
+What you’re doing isn’t any different from all the tragedies we’ve seen and gone through… You’ve been perpetuating it in the Library with that machine.</Desc>
+				<Desc>……</Desc>
+				<Desc>I’m partly responsible for what happened to you, which led you here…
+You have no idea the mess I had to clean up after you went missing.
+Neither of us had parents or any real family, so you probably thought no one would be concerned about you.
+And you were wrong. I was actually pretty worried for you, unlike some others in Charles’ Office.
+A bunch of thoughts came to my mind when you left after making a lengthy ramble.</Desc>
+				<Desc>……</Desc>
+				<Desc>None of that would have happened if you hadn’t tried to take a sip of the sauce out of the ladle “to see how great its taste must be to cause an incident”.
+…Those were the days, still. We didn’t have to worry about too many things, and just stuck to the matters at hand.
+Yeah… But you know we can’t go back to those times anymore, Roland.</Desc>
+				<Desc>……</Desc>
+				<Desc>You swallowed your anger and sadness to work with that machine, so I don’t doubt that you’ve prepared yourself for a lot of things.
+That’s that, and this is this. Isn’t that right?</Desc>
+				<Desc>……</Desc>
+				<Desc>…Right you are. That’s that, and this is this.</Desc>
+				<Desc></Desc>
+				<Desc>……</Desc>
+ 				<Desc>Hahaha… Do you think I’m like you? You might have seen through one thing, but you can’t see further than that.
+I’m not planning to return my suffering in full.
+But, it took no time for those feelings to dissipate into nothing.
+Was it truly a tragedy that I lost her? Who defined it as tragedy?
+Roland, you may still be blinded by wrath, but I made the decision that I will care not about those feelings anymore.</Desc>
+				<Desc>……</Desc>
+				<Desc>That’s not it, Roland… I’m going to send off Angelica with this performance.
+I won’t be going on an unsightly rampage, unlike a certain someone.
+That Angelica can justify the pursuit of an ambition tainted by unclean desires is just a dreadful excuse now.</Desc>
+				<Desc>……</Desc>
+				<Desc>Haha. You’re still keeping those gloves…… How putrid.</Desc>	
+				<Desc>……</Desc>
+				<Desc>…Shut up.</Desc>
+			</TextList>
+			<PassiveList />
+		</BookDesc>
+	</bookDescList>
 </BookDescRoot>

@@ -166,6 +166,7 @@
       			<MaxPlayPoint>4</MaxPlayPoint>
       			<Passive Pid="@origin">10008</Passive>
 				<Passive>1700001</Passive>
+				<Passive Pid="@origin">170004</Passive>
 				<Passive>1700051</Passive>
     		</EquipEffect>
     		<BookIcon>ContingencyReward</BookIcon>

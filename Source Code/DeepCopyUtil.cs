@@ -141,5 +141,25 @@ namespace Contingecy_Contract
             Dice.Min += min;
             card._xmlData = xml;
         }
+        public static EmotionCardXmlInfo Copy(this EmotionCardXmlInfo xml)
+        {
+            EmotionCardXmlInfo copy = new EmotionCardXmlInfo()
+            {
+                id = xml.id,
+                Name = xml.Name,
+                _artwork = xml._artwork,
+                State = xml.State,
+                TargetType = xml.TargetType,
+                Level = xml.Level,
+                EmotionLevel = xml.EmotionLevel,
+                EmotionRate = xml.EmotionRate,
+                Script = new List<string>(),
+                Sephirah=xml.Sephirah,
+                Locked=xml.Locked
+            };
+            foreach(string s in xml.Script)
+                copy.Script.Add(s);
+            return copy;
+        }
     }
 }

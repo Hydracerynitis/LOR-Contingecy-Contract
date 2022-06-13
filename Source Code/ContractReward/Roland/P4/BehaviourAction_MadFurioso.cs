@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BaseMod;
 
-namespace Fix
+namespace ContractReward
 {
     public class BehaviourAction_MadFurioso : BehaviourActionBase
     {

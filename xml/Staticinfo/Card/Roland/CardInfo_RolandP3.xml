@@ -39,7 +39,7 @@
 		<Rarity>Rare</Rarity>
 		<Option>NoInventory</Option>
 		<Spec Range="Near" Cost="1" />
-		<Script>energy3</Script>
+		<Script>energy2</Script>
 		<ScriptDesc></ScriptDesc>
 		<BehaviourList>
 			<Behaviour Min="4" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="quickness1pw" ActionScript="" Desc="" />

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using Contingecy_Contract;
 using LOR_DiceSystem;
 
 namespace ContractReward
@@ -15,10 +15,15 @@ namespace ContractReward
         private BehaviourDetail _currentBuf=BehaviourDetail.Slash;
         public override void OnWaveStart()
         {
-            base.OnWaveStart();     
+            base.OnWaveStart();
             this.owner.passiveDetail.AddPassive(new PassiveAbility_170303());//Scar
             owner.passiveDetail._readyPassiveList.Add(new PassiveAbility_1700141(owner));//Aspiration
             this.owner.passiveDetail.OnCreated();
+            if (owner.UnitData.floorBattleData.param3 == 0)
+            {
+                owner.RecoverHP(owner.MaxHp);
+                owner.UnitData.floorBattleData.param3 = 10;
+            }
         }
         public override void OnRoundStartAfter()
         {

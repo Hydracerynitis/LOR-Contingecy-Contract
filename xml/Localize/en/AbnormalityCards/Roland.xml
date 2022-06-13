@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbnormalityCardsRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Sephirah SephirahType="ETC">
+        <AbnormalityCard ID="RolandYun">
+            <Abnormality>Finn</Abnormality>
+            <CardName>Memory - Yun’s Office</CardName>
+            <AbilityDesc>When an ally dies, gain 1 Strength next Scene
+Reduce Incoming Damage by 2</AbilityDesc>
+            <FlaborText>I just managed to become a Grade 9, too…</FlaborText>
+            <Dialogues>
+                <Dialogue ID="1">Oh boy. It’s not all that delightful to see such a young rookie fall like that, all things considered.</Dialogue>
+                <Dialogue ID="2">Well, yeah, fair point. But still, it kinda feels dirty in a way.</Dialogue>
+            </Dialogues>
+        </AbnormalityCard>
+        <AbnormalityCard ID="RolandZwei">
+            <Abnormality>Walter</Abnormality>
+            <CardName>Memory - Zwei Association</CardName>
+            <AbilityDesc>Defensive Dice Power +1
+At the start of each Scene, All allies gain 1-2 Endurance.</AbilityDesc>
+            <FlaborText>I was certain that I would succeed…</FlaborText>
+            <Dialogues>
+                <Dialogue ID="1">I guess birthright matters to them the most.</Dialogue>
+                <Dialogue ID="2">Nothing is ever fair in this world.</Dialogue>
+            </Dialogues>
+        </AbnormalityCard>
+        <AbnormalityCard ID="RolandDawn">
+            <Abnormality>Salvador</Abnormality>
+            <CardName>Memory - Dawn Office</CardName>
+            <AbilityDesc>On a successful hit, deal +1-2 Stagger damage if the target has Burn.
+Upon successful hit, inclit 6 burn if the natural roll is 5 Power higher than enemies' natural roll.</AbilityDesc>
+            <FlaborText>There’s no need for all of us to share the same fate.</FlaborText>
+            <Dialogues>
+                <Dialogue ID="1">That gramps still hasn’t changed after so many years.</Dialogue>
+                <Dialogue ID="2">Not like he needs to, though…</Dialogue>
+                <Dialogue ID="3">I guess so. I gave up caring about bonds long ago…</Dialogue>
+            </Dialogues>
+        </AbnormalityCard>
+        <AbnormalityCard ID="RolandLove">
+            <Abnormality>Tomerry</Abnormality>
+            <CardName>Memory - Love Town</CardName>
+            <AbilityDesc>Upon hit for the rest of the Scene, reduce incoming damage of same type by 2 (Max 4)
+On one side attack, first die power +3</AbilityDesc>
+            <FlaborText>…I feel empty. It’s like part of me disappeared. I’m sad… I feel like crying……</FlaborText>
+            <Dialogues>
+                <Dialogue ID="1">Well… Anything can happen.</Dialogue>
+                <Dialogue ID="2">When the memories of hard times burst forth, you gotta embrace ‘em to the core…</Dialogue>
+            </Dialogues>
+        </AbnormalityCard>
+        <AbnormalityCard ID="RolandShi">
+            <Abnormality>Yujin</Abnormality>
+            <CardName>Memory - Shi Association</CardName>
+            <AbilityDesc>All dice gain +1 Power
+If the natrual roll is Max, and is higher than 5, the Power of Die +4</AbilityDesc>
+            <FlaborText>I was so close to reaching what I want…</FlaborText>
+            <Dialogues>
+                <Dialogue ID="1">The Red Mist was powerful. Really, that’s the only way to put it. Powerful.</Dialogue>
+                <Dialogue ID="2">I thought, man, it surely is true that you can do whatever you want when you’re that strong.</Dialogue>
+            </Dialogues>
+        </AbnormalityCard>
+        <AbnormalityCard ID="RolandLiu">
+            <Abnormality>Xiao</Abnormality>
+            <CardName>Memory - Liu Association</CardName>
+            <AbilityDesc>On a melee hit, inflict 1 Burn and 'Force of a Wildfire', a status that lasts 2 Scenes.
+On use Mass Attack Page, gain 2 Strength and Endurance next Scene.</AbilityDesc>
+            <FlaborText>I can rest without regret, knowing that you’ll find yourself not so far from me like this…</FlaborText>
+            <Dialogues>
+                <Dialogue ID="1">She didn’t break down like the other kid with the power did, at least. I was actually amazed by how unswerving her determination could be…</Dialogue>
+                <Dialogue ID="2">It’s weird, though. It can’t be possible to make any change with just willpower in this world. That’s not how this City works.</Dialogue>
+            </Dialogues>
+        </AbnormalityCard>
+        <AbnormalityCard ID="RolandPurple">
+            <Abnormality>Iori</Abnormality>
+            <CardName>Memory - The Purple Tear</CardName>
+            <AbilityDesc>When a die this character plays rolls the minimum value, reroll it. Activates once per die.
+Types of Offensive dice on the third page change to the types the target is weakest to</AbilityDesc>
+            <FlaborText>Uh-uh, stay still, and don’t peep a word.</FlaborText>
+            <Dialogues>
+                <Dialogue ID="1">When people feel anxiety, they tend to buckle up and prepare more thoroughly for what’s to come, you see?</Dialogue>
+                <Dialogue ID="2">She was treated like an all-knowing sage… She might have been aware of her own future, at least.</Dialogue>
+            </Dialogues>
+        </AbnormalityCard>
+        <AbnormalityCard ID="RolandHana">
+            <Abnormality>Olivier</Abnormality>
+            <CardName>Memory - Hana Association</CardName>
+            <AbilityDesc>Boost the *minimum* roll value of all dice by +2. At Emotion Level 3 or higher, also boost the *maximum* roll value of all dice by +1.
+On Clash Win, next die's *maximun* roll +2</AbilityDesc>
+            <FlaborText>Our past ties have finally led us here, Roland.</FlaborText>
+            <Dialogues>
+                <Dialogue ID="1">Thanks for everything. And…</Dialogue>
+                <Dialogue ID="2">…Right you are. That’s that, and this is this.</Dialogue>
+            </Dialogues>
+        </AbnormalityCard>
+        <AbnormalityCard ID="RolandBlue">
+            <Abnormality>Argalia</Abnormality>
+            <CardName>Memory - The Blue Reverberation</CardName>
+            <AbilityDesc>Take no damage from Ranged Combat Pages.
+For each 3 Scene, inflict 1 Nullify Power to the first enemy upon successfully hit.</AbilityDesc>
+            <FlaborText>I won’t be going on an unsightly rampage, unlike a certain someone.</FlaborText>
+            <Dialogues>
+                <Dialogue ID="1">Shut Up</Dialogue>
+                <Dialogue ID="2">What do you wanna hear? We both know each other’s goals.</Dialogue>
+                <Dialogue ID="3">You want to crush me, the City, and most of all Angela for taking Angelica’s life.</Dialogue>
+            </Dialogues>
+        </AbnormalityCard>
+    </Sephirah>
+</AbnormalityCardsRoot>

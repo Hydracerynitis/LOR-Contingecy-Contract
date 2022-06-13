@@ -19,7 +19,7 @@ namespace ContractReward
         }
         private class Indicator: BattleUnitBuf
         {
-            public override string keywordIconId => "DmgUp";
+            public override string keywordIconId => "SnowSword";
             public override string keywordId => "FrostIndicator";
             public override void OnRoundEnd()
             {

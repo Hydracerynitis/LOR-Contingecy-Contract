@@ -132,4 +132,9 @@
         <Name>苍白之手</Name>
         <Desc>这一幕内击中同一目标3次便追加3-10点混乱伤害</Desc>
     </PassiveDesc>
+    <!--P5-->
+    <PassiveDesc ID="1700051">
+        <Name>痛苦啊，你便是我的唯一</Name>
+        <Desc>情感等级提升时可随机获得1张专属情感卡</Desc>
+    </PassiveDesc>
 </PassiveDescRoot>

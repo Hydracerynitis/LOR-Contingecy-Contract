@@ -132,4 +132,9 @@ Reduce numbers of passive abilities recieved in the next Scene.</Desc>
         <Name>Pale Hands</Name>
         <Desc>Perform 3 succesful hit on same character inflict additional 3-10 Break Damage this round.</Desc>
     </PassiveDesc>
+    <!--P5-->
+    <PassiveDesc ID="1700051">
+        <Name>O sorrow, I have ended, by respecting you</Name>
+        <Desc>On Level up Emotion Level, choose and apply a unique Emotion Page to self.</Desc>
+    </PassiveDesc>
 </PassiveDescRoot>

@@ -141,6 +141,7 @@ namespace Contingecy_Contract
         {
             GameObject BSA = Resources.Load<GameObject>("Prefabs/InvitationMaps/InvitationMap_BlackSilence4");
             VanilaGameObject.Add("BlackSilence4Aura", ((BlackSilence4thMapManager)BSA.GetComponent<MapManager>()).areaAuraEffect);
+            VanilaGameObject.Add("BlackSilence4Boom", ((BlackSilence4thMapManager)BSA.GetComponent<MapManager>()).areaBoomEffect);
         }
         public static string GetParam(string ID, string Language)
         {

@@ -34,7 +34,7 @@
 	  <Card ID="17000053">
 		<Name>空虚</Name>
 		<Artwork>Roland3Phase_RolandLonely</Artwork>
-		<Rarity>Common</Rarity>
+		<Rarity>Uncommon</Rarity>
 		<Spec Range="Near" Cost="3" />
 		<Script>black_4th_durandalweak</Script>
 		<ScriptDesc></ScriptDesc>
@@ -84,8 +84,8 @@
 		<Script>AoeCoolDown</Script>
 		<ScriptDesc></ScriptDesc>
 		<BehaviourList>
-			<Behaviour Min="12" Dice="16" Type="Atk" Detail="Hit" Motion="S12" EffectRes="" Script="black_4th_areastrong_atk" ActionScript="BlackSilence_4th_Area_Strong" Desc="" />
-			<Behaviour Min="12" Dice="12" Type="Atk" Detail="Hit" Motion="S12" EffectRes="" Script="black_4th_areastrong_atk" ActionScript="BlackSilence_4th_Area_Strong_Last" Desc="" />
+			<Behaviour Min="12" Dice="16" Type="Atk" Detail="Hit" Motion="S12" EffectRes="" Script="black_4th_areastrong_atk" ActionScript="BlackSilenceCry" Desc="" />
+			<Behaviour Min="12" Dice="12" Type="Atk" Detail="Hit" Motion="S12" EffectRes="" Script="black_4th_areastrong_atk" ActionScript="BlackSilenceCry" Desc="" />
 		</BehaviourList>
 		<Chapter>7</Chapter>
 		<Priority>0</Priority>

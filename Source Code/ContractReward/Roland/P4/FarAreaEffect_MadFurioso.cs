@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using BaseMod;
 using LOR_XML;
 
-namespace Fix
+namespace ContractReward
 {
     public class FarAreaEffect_MadFurioso : FarAreaEffect
     {

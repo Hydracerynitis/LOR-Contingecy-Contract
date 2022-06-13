@@ -5,7 +5,7 @@ using HarmonyLib;
 using System.Reflection;
 using System.Text;
 using LOR_DiceSystem;
-using System.Threading.Tasks;
+using Contingecy_Contract;
 using BaseMod;
 
 namespace ContractReward
@@ -17,11 +17,10 @@ namespace ContractReward
             base.OnEnterCardPhase(unit, self);
             if(BattleObjectManager.instance.GetAliveList_opponent(unit.faction).Exists(x => x.bufListDetail.HasBuf<BattleUnitBuf_FreshMeat>()))
             {
-                self.CopySelf();
                 DiceCardXmlInfo xml = ItemXmlDataList.instance.GetCardItem(Tools.MakeLorId(18300012));
                 self._xmlData = xml;
+                self._script = new DiceCardSelfAbility_GretaMeatCut();
             }
-            self._script=self.CreateDiceCardSelfAbilityScript();
         }
     }
 }
