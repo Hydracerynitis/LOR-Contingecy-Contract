@@ -116,8 +116,8 @@ When hit from an one-side attack, increase incoming Damage from attack by 2-4.</
     </PassiveDesc>
     <PassiveDesc ID="1700146">
         <Name>Pulsation</Name>
-        <Desc>Speed Dice Slot -1. On hit, give 1 Strength to all allies next Scene (once per Page). 
-If the character couldn't deal any damage by the end of the Scene, take 15 Stagger damage.</Desc>
+        <Desc>Speed Dice Slot -1; On hit, give 1 Strength to all allies next Scene (once per Page); 
+If the character couldn't deal any damage by the end of the Scene, take 15 Stagger damage</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1700147">
         <Name>Fervent Beats</Name>

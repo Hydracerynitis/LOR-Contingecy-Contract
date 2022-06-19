@@ -25,7 +25,7 @@
             "Id":"Roland1st_Durandal_param1",
             "Desc":[
                 {"Language":"cn","Content":"每一幕额外使用一张杜兰特尔"},
-                {"Language":"en","Content":"use 1 more Durandal per Scene"}
+                {"Language":"en","Content":"use 1 more Durandal per Scene;"}
             ]
         },
         {
