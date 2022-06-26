@@ -4,9 +4,10 @@
     		<Name>崩坏序曲</Name>
     		<Artwork>Argalia2</Artwork>
     		<Rarity>Common</Rarity>
-		    <Option>NoInventory</Option>
-    		<Spec Range="Near" Cost="2" />
-    		<Script>PerfectResonance</Script>
+		    <Option>OnlyPage</Option>
+			<Option>Basic</Option>
+    		<Spec Range="Near" Cost="1" />
+    		<Script></Script>
     		<ScriptDesc></ScriptDesc>
     		<BehaviourList>
       			<Behaviour Min="5" Dice="7" Type="Atk" Detail="Slash" Motion="J" EffectRes="Argalia2_J" Script="argaliaVibrateUp2" ActionScript="" Desc="" />
@@ -20,9 +21,10 @@
     		<Name>独奏之刻</Name>
     		<Artwork>Argalia2_1</Artwork>
     		<Rarity>Common</Rarity>
-		    <Option>NoInventory</Option>
+		    <Option>OnlyPage</Option>
+			<Option>Basic</Option>
     		<Spec Range="Near" Cost="2" />
-    		<Script>PerfectResonance</Script>
+    		<Script></Script>
     		<ScriptDesc></ScriptDesc>
     		<BehaviourList>
       			<Behaviour Min="6" Dice="9" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
@@ -37,13 +39,14 @@
     		<Name>不谐和音</Name>
     		<Artwork>Argalia2_3</Artwork>
     		<Rarity>Uncommon</Rarity>
-		    <Option>NoInventory</Option>
+		    <Option>OnlyPage</Option>
+			<Option>Basic</Option>
     		<Spec Range="Near" Cost="2" />
-    		<Script>PerfectResonance</Script>
+    		<Script></Script>
     		<ScriptDesc></ScriptDesc>
     		<BehaviourList>
-			<Behaviour Min="5" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
-      			<Behaviour Min="4" Dice="7" Type="Atk" Detail="Hit" Motion="H" EffectRes="Argalia2_H" Script="argaliaDownWithCond" ActionScript="" Desc="" />
+				<Behaviour Min="5" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      			<Behaviour Min="6" Dice="8" Type="Atk" Detail="Hit" Motion="H" EffectRes="Argalia2_H" Script="argaliaDownWithCond" ActionScript="" Desc="" />
       			<Behaviour Min="5" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="Argalia2_J" Script="argaliaDownWithCond" ActionScript="" Desc="" />
     		</BehaviourList>
     		<Chapter>7</Chapter>
@@ -53,9 +56,10 @@
     		<Name>破空镰斩</Name>
     		<Artwork>Argalia2_1</Artwork>
     		<Rarity>Common</Rarity>
-		    <Option>NoInventory</Option>
+		    <Option>OnlyPage</Option>
+			<Option>Basic</Option>
     		<Spec Range="Near" Cost="1" />
-    		<Script>PerfectResonance</Script>
+    		<Script></Script>
     		<ScriptDesc></ScriptDesc>
     		<BehaviourList>
       			<Behaviour Min="3" Dice="4" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="Argalia2_H" Script="damage2atk" ActionScript="" Desc="" />
@@ -70,9 +74,10 @@
     		<Name>不安音律</Name>
     		<Artwork>Argalia2_1</Artwork>
     		<Rarity>Common</Rarity>
-		    <Option>NoInventory</Option>
+		    <Option>OnlyPage</Option>
+			<Option>Basic</Option>
     		<Spec Range="Near" Cost="2" />
-    		<Script>PerfectResonance</Script>
+    		<Script></Script>
     		<ScriptDesc></ScriptDesc>
     		<BehaviourList>
       			<Behaviour Min="7" Dice="13" Type="Atk" Detail="Slash" Motion="H" EffectRes="Argalia2_H" Script="" ActionScript="" Desc="" />
@@ -85,9 +90,10 @@
     		<Name>癫狂连击</Name>
     		<Artwork>Argalia2_1</Artwork>
     		<Rarity>Rare</Rarity>
-		    <Option>NoInventory</Option>
+		    <Option>OnlyPage</Option>
+			<Option>Basic</Option>
     		<Spec Range="Near" Cost="2" />
-    		<Script>PerfectResonance</Script>
+    		<Script></Script>
     		<ScriptDesc></ScriptDesc>
     		<BehaviourList>
       			<Behaviour Min="4" Dice="6" Type="Atk" Detail="Slash" Motion="H" EffectRes="Argalia2_H" Script="paralysis1atk" ActionScript="argaliaDawnAction" Desc="" />
@@ -102,8 +108,9 @@
     		<Name>心灵共振</Name>
     		<Artwork>Argalia2_2</Artwork>
     		<Rarity>Rare</Rarity>
-		    <Option>NoInventory</Option>
-    		<Spec Range="Near" Cost="3" />
+		    <Option>OnlyPage</Option>
+			<Option>Basic</Option>
+    		<Spec Range="Near" Cost="2" />
     		<Script>PerfectResonanceActivate</Script>
     		<ScriptDesc></ScriptDesc>
     		<BehaviourList>

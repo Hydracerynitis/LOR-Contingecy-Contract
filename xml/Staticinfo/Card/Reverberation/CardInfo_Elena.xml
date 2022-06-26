@@ -4,14 +4,15 @@
         <Name>猩红之爪</Name>
         <Artwork>Elena2</Artwork>
         <Rarity>Common</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
         <Spec Range="Near" Cost="2" />
-        <Script>energy4</Script>
+        <Script>sweeperOnly</Script>
         <ScriptDesc></ScriptDesc>
         <BehaviourList>
-            <Behaviour Min="4" Dice="7" Type="Atk" Detail="Hit" Motion="H" EffectRes="Elena_H" Script="" ActionScript="" Desc="" />
-            <Behaviour Min="3" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="Elena_J" Script="" ActionScript="" Desc="" />
-            <Behaviour Min="3" Dice="7" Type="Atk" Detail="Slash" Motion="J" EffectRes="Elena_J" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="5" Dice="7" Type="Atk" Detail="Hit" Motion="H" EffectRes="Elena_H" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="Elena_J" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="3" Dice="9" Type="Atk" Detail="Slash" Motion="J" EffectRes="Elena_J" Script="" ActionScript="" Desc="" />
             <Behaviour Min="5" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
         </BehaviourList>
         <Chapter>7</Chapter>
@@ -21,12 +22,13 @@
         <Name>利爪横扫</Name>
         <Artwork>Elena2</Artwork>
         <Rarity>Common</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
         <Spec Range="Near" Cost="2" />
         <Script>debufHalf</Script>
         <ScriptDesc></ScriptDesc>
         <BehaviourList>
-            <Behaviour Min="5" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="Elena_J" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="5" Dice="9" Type="Atk" Detail="Slash" Motion="J" EffectRes="Elena_J" Script="" ActionScript="" Desc="" />
             <Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Elena_Z" Script="" ActionScript="" Desc="" />
             <Behaviour Min="5" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
         </BehaviourList>
@@ -37,7 +39,8 @@
         <Name>体液循环</Name>
         <Artwork>Elena1</Artwork>
         <Rarity>Uncommon</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
         <Spec Range="Near" Cost="3" />
         <Script>ElenaBuff</Script>
         <ScriptDesc></ScriptDesc>
@@ -53,7 +56,8 @@
         <Name>能量灌注</Name>
         <Artwork>Elena1</Artwork>
         <Rarity>Uncommon</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
         <Spec Range="Near" Cost="2" />
         <Script></Script>
         <ScriptDesc></ScriptDesc>
@@ -69,8 +73,9 @@
         <Name>血液扩散</Name>
         <Artwork>Elena3</Artwork>
         <Rarity>Unique</Rarity>
-		<Option>NoInventory</Option>
-        <Spec Range="FarArea" Cost="5" Affection="Team"/>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
+        <Spec Range="FarArea" Cost="4" Affection="Team"/>
         <Script>AoeCoolDown</Script>
         <ScriptDesc></ScriptDesc>
         <BehaviourList>
@@ -123,9 +128,10 @@
         <Name>十字剑斩</Name>
         <Artwork>Orange1</Artwork>
         <Rarity>Common</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
         <Spec Range="Near" Cost="2" />
-        <Script>energy2</Script>
+        <Script></Script>
         <ScriptDesc></ScriptDesc>
         <BehaviourList>
             <Behaviour Min="7" Dice="10" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="Orange_H" Script="burn2atk" ActionScript="" Desc="" />
@@ -139,9 +145,10 @@
         <Name>震撼冲击</Name>
         <Artwork>Orange1</Artwork>
         <Rarity>Common</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
         <Spec Range="Near" Cost="2" />
-        <Script>energy2</Script>
+        <Script></Script>
         <ScriptDesc></ScriptDesc>
         <BehaviourList>
             <Behaviour Min="10" Dice="16" Type="Atk" Detail="Hit" Motion="H" EffectRes="Orange_H" Script="burn1atk" ActionScript="" Desc="" />
@@ -154,7 +161,8 @@
         <Name>焦热兵装</Name>
         <Artwork>Orange1</Artwork>
         <Rarity>Common</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
         <Spec Range="Near" Cost="2" />
         <Script>energy2</Script>
         <ScriptDesc></ScriptDesc>
@@ -170,7 +178,8 @@
         <Name>狂乱一击</Name>
         <Artwork>Orange2</Artwork>
         <Rarity>Unique</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
         <Spec Range="Near" Cost="5" />
         <Script>elenaMinionStrong</Script>
         <ScriptDesc></ScriptDesc>
@@ -184,7 +193,8 @@
         <Name>肉身阻隔</Name>
         <Artwork>Orange3</Artwork>
         <Rarity>Uncommon</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
         <Spec Range="Near" Cost="3"/>
         <Script>AllyCounter</Script>
         <ScriptDesc></ScriptDesc>

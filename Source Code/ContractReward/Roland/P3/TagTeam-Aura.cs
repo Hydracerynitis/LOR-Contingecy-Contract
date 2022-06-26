@@ -16,8 +16,8 @@ namespace ContractReward
         }
         public void TagTeamEffect(BattleUnitModel TagTeamMate)
         {
-            owner.allyCardDetail.DrawCards(2);
-            TagTeamMate.allyCardDetail.DrawCards(2);
+            owner.cardSlotDetail.RecoverPlayPoint(2);
+            TagTeamMate.cardSlotDetail.RecoverPlayPoint(2);
         }
     }
     public class DiceCardSelfAbility_AngelicaAura : DiceCardSelfAbilityBase, TagTeam
@@ -30,8 +30,8 @@ namespace ContractReward
         }
         public void TagTeamEffect(BattleUnitModel TagTeamMate)
         {
-            owner.cardSlotDetail.RecoverPlayPoint(3);
-            TagTeamMate.cardSlotDetail.RecoverPlayPoint(3);
+            owner.cardSlotDetail.RecoverPlayPoint(2);
+            TagTeamMate.cardSlotDetail.RecoverPlayPoint(2);
         }
     }
 }

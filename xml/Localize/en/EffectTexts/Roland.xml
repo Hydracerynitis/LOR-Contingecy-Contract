@@ -35,7 +35,8 @@ When stack reaches 0, both charactes lose 25% Max Stagger Resist and gain 4 Para
 		</BattleEffectText>
 		<BattleEffectText ID="Combo_Keyword">
 			<Name>Tag Team X： Y</Name>
-			<Desc>When using Pages, trigger effect Y if an ally using Page X (Tag Teammate) exist.</Desc>
+			<Desc>When using Pages, trigger effect Y if an ally using Page X (Tag Teammate) exist.
+One Page X can only trigger once such effect</Desc>
 		</BattleEffectText>
 		<BattleEffectText ID="LearnIndicator">
 			<Name>Learn</Name>

@@ -54,6 +54,20 @@
         		<Desc>所以从今天开始一起来做体操吧！抛却所有的期待，无论看到什么都要乐观地露出笑容！丢开只是念叨着“总有一天”的空头支票，来一场已然成为现实的盛大演出吧！我已沐浴在比任何东西都要明亮的聚光灯下，登上了这座舞台。</Desc>
       		</TextList>
     	</BookDesc>
+		<BookDesc BookID="18510000">
+			<BookName>利刃先生之页</BookName>
+			<TextList>
+      			<Desc></Desc>
+			</TextList>
+			<PassiveList />
+		</BookDesc>
+		<BookDesc BookID="18520000">
+			<BookName>美人鱼小姐之页</BookName>
+			<TextList>
+      			<Desc></Desc>
+			</TextList>
+			<PassiveList />
+		</BookDesc>
     	<BookDesc BookID="18600000">
       		<BookName>活跃的塔尼娅之页</BookName>
       		<TextList>

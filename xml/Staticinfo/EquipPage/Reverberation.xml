@@ -3,7 +3,6 @@
   	<Book ID="18000000">
     		<Name>苍蓝残响</Name>
    		 <TextId>18000000</TextId>
-    		<Category>DeckFixed</Category>
     		<EquipEffect>
       			<HP>200</HP>
       			<Break>90</Break>
@@ -18,12 +17,20 @@
       			<StartPlayPoint>4</StartPlayPoint>
       			<MaxPlayPoint>4</MaxPlayPoint>
       			<Passive Pid="@origin">10008</Passive>
+				<Passive>1800000</Passive>
       			<Passive Pid="@origin">1300001</Passive>
       			<Passive Pid="@origin">260005</Passive>
 				<Passive Pid="@origin">250113</Passive>
       			<Passive>1800001</Passive>
       			<Passive>1800002</Passive>
       			<Passive>1800003</Passive>
+				<OnlyCard>18000001</OnlyCard>
+				<OnlyCard>18000002</OnlyCard>
+				<OnlyCard>18000003</OnlyCard>
+				<OnlyCard>18000004</OnlyCard>
+				<OnlyCard>18000005</OnlyCard>
+				<OnlyCard>18000006</OnlyCard>
+				<OnlyCard>18000007</OnlyCard>
     		</EquipEffect>
     		<BookIcon>ContingencyReward</BookIcon>
     		<Chapter>7</Chapter>
@@ -34,7 +41,7 @@
   	<Book ID="18100000">
     		<Name>菲利普</Name>
    		 <TextId>18100000</TextId>
-    		<Category>DeckFixed</Category>
+    		<Option>MultiDeck</Option>
     		<EquipEffect>
       			<HP>180</HP>
       			<Break>80</Break>
@@ -54,6 +61,17 @@
       			<Passive>1810001</Passive>
       			<Passive>1810002</Passive>
       			<Passive>1810003</Passive>
+				<OnlyCard>18100001</OnlyCard>
+				<OnlyCard>18100002</OnlyCard>
+				<OnlyCard>18100003</OnlyCard>
+				<OnlyCard>18100004</OnlyCard>
+				<OnlyCard>18100005</OnlyCard>
+				<OnlyCard>0</OnlyCard>
+				<OnlyCard>18100011</OnlyCard>
+				<OnlyCard>18100012</OnlyCard>
+				<OnlyCard>18100013</OnlyCard>
+				<OnlyCard>18100014</OnlyCard>
+				<OnlyCard>18100015</OnlyCard>
     		</EquipEffect>
     		<BookIcon>ContingencyReward</BookIcon>
     		<Chapter>7</Chapter>
@@ -64,7 +82,7 @@
   	<Book ID="18200000">
     		<Name>艾琳</Name>
    		 <TextId>18200000</TextId>
-    		<Category>DeckFixed</Category>
+    		<Option>MultiDeck</Option>
 			<RangeType>Range</RangeType>
     		<EquipEffect>
       			<HP>150</HP>
@@ -80,9 +98,15 @@
       			<StartPlayPoint>4</StartPlayPoint>
       			<MaxPlayPoint>4</MaxPlayPoint>
       			<Passive Pid="@origin">1300001</Passive>
+				<Passive Pid="@origin">250214</Passive>
+				<Passive>1800000</Passive>
       			<Passive>1820001</Passive>
       			<Passive>1820002</Passive>
       			<Passive>1820003</Passive>
+				<OnlyCard>18200001</OnlyCard>
+				<OnlyCard>18200002</OnlyCard>
+				<OnlyCard>18200003</OnlyCard>
+				<OnlyCard>0</OnlyCard>
     		</EquipEffect>
     		<BookIcon>ContingencyReward</BookIcon>
     		<Chapter>7</Chapter>
@@ -121,7 +145,6 @@
 	<Book ID="18300000">
     		<Name>格蕾塔</Name>
    		 	<TextId>18300000</TextId>
-    		<Category>DeckFixed</Category>
     		<EquipEffect>
       			<HP>200</HP>
       			<Break>100</Break>
@@ -141,6 +164,13 @@
       			<Passive>1830001</Passive>
       			<Passive>1830002</Passive>
       			<Passive>1830003</Passive>
+				<OnlyCard>18300001</OnlyCard>
+				<OnlyCard>18300002</OnlyCard>
+				<OnlyCard>18300003</OnlyCard>
+				<OnlyCard>18300004</OnlyCard>
+				<OnlyCard>18300005</OnlyCard>
+				<OnlyCard>18300006</OnlyCard>
+				<OnlyCard>18300007</OnlyCard>
     		</EquipEffect>
     		<BookIcon>ContingencyReward</BookIcon>
     		<Chapter>7</Chapter>
@@ -151,7 +181,6 @@
 	<Book ID="18400000">
     		<Name>不来梅</Name>
    		 	<TextId>18400000</TextId>
-    		<Category>DeckFixed</Category>
     		<EquipEffect>
       			<HP>250</HP>
       			<Break>30</Break>
@@ -171,6 +200,11 @@
       			<Passive>1840002</Passive>
       			<Passive>1840003</Passive>
       			<Passive>1840004</Passive>
+				<OnlyCard>18400001</OnlyCard>
+				<OnlyCard>18400002</OnlyCard>
+				<OnlyCard>18400003</OnlyCard>
+				<OnlyCard>18400004</OnlyCard>
+				<OnlyCard>18400005</OnlyCard>
     		</EquipEffect>
     		<BookIcon>ContingencyReward</BookIcon>
     		<Chapter>7</Chapter>
@@ -181,7 +215,7 @@
 	<Book ID="18500000">
     		<Name>奥斯瓦尔德</Name>
    		 	<TextId>18500000</TextId>
-    		<Category>DeckFixed</Category>
+			<Option>MultiDeck</Option>
     		<EquipEffect>
       			<HP>150</HP>
       			<Break>100</Break>
@@ -201,6 +235,23 @@
       			<Passive>1850001</Passive>
       			<Passive>1850002</Passive>
       			<Passive>1850003</Passive>
+				<OnlyCard>18500001</OnlyCard>
+				<OnlyCard>18500002</OnlyCard>
+				<OnlyCard>18500003</OnlyCard>
+				<OnlyCard>18500004</OnlyCard>
+				<OnlyCard>18500005</OnlyCard>
+				<OnlyCard>18500006</OnlyCard>
+				<OnlyCard>0</OnlyCard>
+				<OnlyCard>18500011</OnlyCard>
+				<OnlyCard>18500012</OnlyCard>
+				<OnlyCard>18500013</OnlyCard>
+				<OnlyCard>18500014</OnlyCard>
+				<OnlyCard>0</OnlyCard>
+				<OnlyCard>18500021</OnlyCard>
+				<OnlyCard>18500022</OnlyCard>
+				<OnlyCard>18500023</OnlyCard>
+				<OnlyCard>18500024</OnlyCard>
+				<OnlyCard>18500025</OnlyCard>
     		</EquipEffect>
     		<BookIcon>ContingencyReward</BookIcon>
     		<Chapter>7</Chapter>
@@ -208,10 +259,59 @@
     		<Rarity>Unique</Rarity>
     		<CharacterSkin>Oswald</CharacterSkin>
 	</Book>
+	<Book ID="18510000">
+			<Name>利刃先生</Name>
+			<TextId>18510000</TextId>
+			<EquipEffect>
+				<HP>90</HP>
+				<Break>45</Break>
+				<SpeedMin>3</SpeedMin>
+				<Speed>5</Speed>
+				<SResist>Endure</SResist>
+				<PResist>Normal</PResist>
+				<HResist>Normal</HResist>
+				<SBResist>Endure</SBResist>
+				<PBResist>Vulnerable</PBResist>
+				<HBResist>Normal</HBResist>
+				<Passive Pid="@origin">10001</Passive>
+				<Passive>1850011</Passive>
+				<StartPlayPoint>4</StartPlayPoint>
+				<MaxPlayPoint>4</MaxPlayPoint>
+			</EquipEffect>
+			<BookIcon>ContingencyReward</BookIcon>
+    		<Chapter>7</Chapter>
+    		<Episode>1800007</Episode>
+			<Rarity>Unique</Rarity>
+			<CharacterSkin>OswaldBlade</CharacterSkin>
+	</Book>
+	<Book ID="18520000">
+			<Name>美人鱼小姐</Name>
+			<TextId>18520000</TextId>
+			<EquipEffect>
+				<HP>120</HP>
+				<Break>50</Break>
+				<SpeedMin>1</SpeedMin>
+				<Speed>4</Speed>
+				<SResist>Normal</SResist>
+				<PResist>Normal</PResist>
+				<HResist>Endure</HResist>
+				<SBResist>Normal</SBResist>
+				<PBResist>Vulnerable</PBResist>
+				<HBResist>Endure</HBResist>
+				<Passive Pid="@origin">10001</Passive>
+				<Passive>1850011</Passive>
+			<StartPlayPoint>4</StartPlayPoint>
+			<MaxPlayPoint>4</MaxPlayPoint>
+			</EquipEffect>
+			<BookIcon>ContingencyReward</BookIcon>
+    		<Chapter>7</Chapter>
+    		<Episode>1800007</Episode>
+			<Rarity>Unique</Rarity>
+			<CharacterSkin>OswaldMermaid</CharacterSkin>
+	</Book>
 	<Book ID="18600000">
 		<Name>塔尼亚</Name>
 		<TextId>18600000</TextId>
-    		<Category>DeckFixed</Category>
     		<EquipEffect>
       			<HP>125</HP>
       			<Break>100</Break>
@@ -230,6 +330,11 @@
       			<Passive>1860001</Passive>
       			<Passive>1860002</Passive>
       			<Passive>1860003</Passive>
+				<OnlyCard>18600001</OnlyCard>
+				<OnlyCard>18600002</OnlyCard>
+				<OnlyCard>18600003</OnlyCard>
+				<OnlyCard>18600004</OnlyCard>
+				<OnlyCard>18600005</OnlyCard>
     		</EquipEffect>
     		<BookIcon>ContingencyReward</BookIcon>
     		<Chapter>7</Chapter>
@@ -240,7 +345,7 @@
   	<Book ID="18700000">
     		<Name>在宪</Name>
    		 <TextId>18700000</TextId>
-    		<Category>DeckFixed</Category>
+    		<Option>MultiDeck</Option>
     		<EquipEffect>
       			<HP>160</HP>
       			<Break>70</Break>
@@ -260,6 +365,23 @@
       			<Passive>1870001</Passive>
       			<Passive>1870002</Passive>
       			<Passive>1870004</Passive>
+				<OnlyCard>18700001</OnlyCard>
+				<OnlyCard>18700003</OnlyCard>
+				<OnlyCard>18700013</OnlyCard>
+				<OnlyCard>18700012</OnlyCard>
+				<OnlyCard>18700011</OnlyCard>
+				<OnlyCard>0</OnlyCard>
+				<OnlyCard>18700021</OnlyCard>
+				<OnlyCard>18700022</OnlyCard>
+				<OnlyCard>18700023</OnlyCard>
+				<OnlyCard>18700024</OnlyCard>
+				<OnlyCard>18700025</OnlyCard>
+				<OnlyCard>0</OnlyCard>
+				<OnlyCard>18700002</OnlyCard>
+				<OnlyCard>18700004</OnlyCard>
+				<OnlyCard>18700031</OnlyCard>
+				<OnlyCard>18700032</OnlyCard>
+				<OnlyCard>18700033</OnlyCard>
     		</EquipEffect>
     		<BookIcon>ContingencyReward</BookIcon>
     		<Chapter>7</Chapter>
@@ -286,7 +408,6 @@
       			<StartPlayPoint>4</StartPlayPoint>
       			<MaxPlayPoint>4</MaxPlayPoint>
       			<Passive Pid="@origin">10001</Passive>
-      			<Passive>1800000</Passive>
       			<Passive>1870101</Passive>
       			<Passive>1870102</Passive>
       			<Passive>1870103</Passive>
@@ -300,7 +421,6 @@
 	<Book ID="18800000">
     	<Name>伊莲娜</Name>
    		<TextId>18800000</TextId>
-    	<Category>DeckFixed</Category>
     	<EquipEffect>
       		<HP>180</HP>
       		<Break>70</Break>
@@ -320,6 +440,11 @@
       		<Passive>1880001</Passive>
       		<Passive>1880002</Passive>
       		<Passive>1880004</Passive>
+			<OnlyCard>18800001</OnlyCard>
+			<OnlyCard>18800002</OnlyCard>
+			<OnlyCard>18800003</OnlyCard>
+			<OnlyCard>18800004</OnlyCard>
+			<OnlyCard>18800005</OnlyCard>
     	</EquipEffect>
     	<BookIcon>ContingencyReward</BookIcon>
     	<Chapter>7</Chapter>
@@ -330,7 +455,6 @@
   	<Book ID="18810000">
     	<Name>朱红十字</Name>
     	<TextId>18810000</TextId>
-		<Category>DeckFixed</Category>
     	<EquipEffect>
       		<HP>550</HP>
       		<Break>200</Break>
@@ -345,10 +469,14 @@
       		<StartPlayPoint>4</StartPlayPoint>
       		<MaxPlayPoint>4</MaxPlayPoint>
       		<Passive Pid="@origin">10008</Passive>
-      		<Passive>1800000</Passive>
 			<Passive>1880101</Passive>
 			<Passive>1880102</Passive>
 			<Passive>1880103</Passive>
+			<OnlyCard>18810001</OnlyCard>
+			<OnlyCard>18810002</OnlyCard>
+			<OnlyCard>18810003</OnlyCard>
+			<OnlyCard>18810004</OnlyCard>
+			<OnlyCard>18810005</OnlyCard>
     	</EquipEffect>
     	<BookIcon>ContingencyReward</BookIcon>
     	<Chapter>7</Chapter>
@@ -359,7 +487,6 @@
   	<Book ID="18900000">
     		<Name>普鲁托</Name>
    		 <TextId>18900000</TextId>
-    		<Category>DeckFixed</Category>
     		<EquipEffect>
       			<HP>150</HP>
       			<Break>200</Break>
@@ -374,11 +501,17 @@
       			<StartPlayPoint>4</StartPlayPoint>
       			<MaxPlayPoint>4</MaxPlayPoint>
       			<Passive Pid="@origin">10008</Passive>
+				<Passive>1800000</Passive>
       			<Passive Pid="@origin">1300001</Passive>
       			<Passive>1890001</Passive>
       			<Passive>1890004</Passive>
       			<Passive>1890002</Passive>
       			<Passive>1890003</Passive>
+				<OnlyCard>18900001</OnlyCard>
+				<OnlyCard>18900002</OnlyCard>
+				<OnlyCard>18900003</OnlyCard>
+				<OnlyCard>18900004</OnlyCard>
+				<OnlyCard>18900006</OnlyCard>
     		</EquipEffect>
     		<BookIcon>ContingencyReward</BookIcon>
     		<Chapter>7</Chapter>

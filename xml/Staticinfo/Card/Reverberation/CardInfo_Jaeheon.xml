@@ -4,13 +4,14 @@
 		<Name>操控傀儡</Name>
 		<Artwork>Jaeheon_Dollstring</Artwork>
 		<Rarity>Unique</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Near" Cost="2"/>
-		<Script>energy4</Script>
+		<Script>dmgUpFriend3</Script>
 		<ScriptDesc></ScriptDesc>
     	<BehaviourList>
-      		<Behaviour Min="4" Dice="7" Type="Atk" Detail="Hit" Motion="J" EffectRes="Puppet1_J" Script="" Desc="" />
-      		<Behaviour Min="4" Dice="6" Type="Atk" Detail="Hit" Motion="J" EffectRes="Puppet1_J" Script="" Desc="" />
+      		<Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="Puppet1_J" Script="" Desc="" />
+      		<Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="Puppet1_J" Script="" Desc="" />
 		</BehaviourList>
 		<Chapter>7</Chapter>
 		 <Priority>0</Priority> 
@@ -19,12 +20,13 @@
 		<Name>操控傀儡</Name>
 		<Artwork>Jaeheon_Dollstring</Artwork>
 		<Rarity>Unique</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Near" Cost="1"/>
-		<Script></Script>
+		<Script>drawCards</Script>
 		<ScriptDesc></ScriptDesc>
     	<BehaviourList>
-      		<Behaviour Min="6" Dice="10" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="paralysis3atk" Desc="[적중] 다음 막에 마비 3 부여" />
+      		<Behaviour Min="6" Dice="10" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="paralysis3atk" Desc="" />
       		<Behaviour Min="4" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" Desc="" />
 		</BehaviourList>
 		<Chapter>7</Chapter>
@@ -34,13 +36,14 @@
 		<Name>操控傀儡</Name>
 		<Artwork>Jaeheon_Dollstring</Artwork>
 		<Rarity>Unique</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Near" Cost="1"/>
 		<Script>QuickPuppet_Special</Script>
 		<ScriptDesc></ScriptDesc>
     	<BehaviourList>
       		<Behaviour Min="3" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" Desc="" />
-      		<Behaviour Min="3" Dice="7" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" Desc="" />
+      		<Behaviour Min="3" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" Desc="" />
       		<Behaviour Min="4" Dice="7" Type="Atk" Detail="Hit" Motion="J" EffectRes="Puppet1_J" Script="" Desc="" />
 		</BehaviourList>
 		<Chapter>7</Chapter>
@@ -50,7 +53,8 @@
 		<Name>操控傀儡</Name>
 		<Artwork>Jaeheon_Dollstring</Artwork>
 		<Rarity>Unique</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Near" Cost="3"/>
 		<Script>AngelicaPuppet_Special</Script>
 		<ScriptDesc></ScriptDesc>
@@ -67,7 +71,8 @@
 		<Name>绞杀线</Name>
 		<Artwork>Jaeheon_Strong</Artwork>
 		<Rarity>Unique</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
     	<Spec Range="FarAreaEach" Cost="5" Affection="Team"/>
 		<Script>AllPuppetControl</Script>
 		<ScriptDesc></ScriptDesc>
@@ -82,14 +87,14 @@
 		<Name>蛮力推搡</Name>
 		<Artwork>Jaeheon_Atk</Artwork>
 		<Rarity>Uncommon</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Near" Cost="3"/>
 		<Script></Script>
-		<ScriptDesc></ScriptDesc>
     	<BehaviourList>
       		<Behaviour Min="4" Dice="10" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="" ActionScript="" Desc="" />
       		<Behaviour Min="4" Dice="10" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="" ActionScript="" Desc="" />
-      		<Behaviour Min="3" Dice="9" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
+      		<Behaviour Min="5" Dice="9" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
       		<Behaviour Min="3" Dice="7" Type="Standby" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
 		</BehaviourList>
 		<Chapter>7</Chapter>
@@ -99,8 +104,9 @@
 		<Name>软弱无力</Name>
 		<Artwork>Jaeheon_Atk</Artwork>
 		<Rarity>Uncommon</Rarity>
-		<Option>NoInventory</Option>
-		<Spec Range="Near" Cost="2"/>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
+		<Spec Range="Near" Cost="1"/>
 		<Script></Script>
 		<ScriptDesc></ScriptDesc>
     	<BehaviourList>
@@ -114,13 +120,14 @@
 		<Name>休想靠近</Name>
 		<Artwork>Jaeheon_Atk</Artwork>
 		<Rarity>Common</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Near" Cost="0"/>
-		<Script>energy4</Script>
+		<Script>drawAndEnergy</Script>
 		<ScriptDesc></ScriptDesc>
     	<BehaviourList>
-			<Behaviour Min="3" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
-      		<Behaviour Min="3" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      		<Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
 		</BehaviourList>
 		<Chapter>7</Chapter>
 		<Priority>0</Priority>
@@ -129,13 +136,14 @@
 		<Name>傀儡线</Name>
 		<Artwork>Puppet2</Artwork>
 		<Rarity>Unique</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Near" Cost="1"/>
 		<Script>PuppetProtect</Script>
 		<ScriptDesc></ScriptDesc>
     	<BehaviourList>
-			<Behaviour Min="3" Dice="7" Type="Standby" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
-      		<Behaviour Min="3" Dice="6" Type="Standby" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="8" Type="Standby" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
+      		<Behaviour Min="4" Dice="7" Type="Standby" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
 		</BehaviourList>
 		<Chapter>7</Chapter>
 		<Priority>0</Priority>
@@ -144,13 +152,14 @@
 		<Name>纤细傀儡线</Name>
 		<Artwork>Puppet2</Artwork>
 		<Rarity>Unique</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Near" Cost="1"/>
 		<Script>PuppetDmg</Script>
 		<ScriptDesc></ScriptDesc>
     		<BehaviourList>
 			<Behaviour Min="3" Dice="9" Type="Standby" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
-			<Behaviour Min="3" Dice="6" Type="Standby" Detail="Penetrate" Motion="Z" EffectRes="" Script="" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="8" Type="Standby" Detail="Penetrate" Motion="Z" EffectRes="" Script="" ActionScript="" Desc="" />
 		</BehaviourList>
 		<Chapter>7</Chapter>
 		<Priority>0</Priority>
@@ -159,13 +168,14 @@
 		<Name>沉重傀儡线</Name>
 		<Artwork>Puppet2</Artwork>
 		<Rarity>Unique</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Near" Cost="1"/>
 		<Script>PuppetPower</Script>
 		<ScriptDesc></ScriptDesc>
     	<BehaviourList>
       		<Behaviour Min="4" Dice="7" Type="Standby" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
-      		<Behaviour Min="3" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      		<Behaviour Min="3" Dice="9" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
 		</BehaviourList>
 		<Chapter>7</Chapter>
 		<Priority>0</Priority>
@@ -174,12 +184,13 @@
 		<Name>特殊傀儡线</Name>
 		<Artwork>Puppet2</Artwork>
 		<Rarity>Unique</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Near" Cost="1"/>
 		<Script>PuppetHeal</Script>
 		<ScriptDesc></ScriptDesc>
     	<BehaviourList>
-      		<Behaviour Min="3" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      		<Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
       		<Behaviour Min="5" Dice="8" Type="Standby" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
 		</BehaviourList>
 		<Chapter>7</Chapter>
@@ -189,13 +200,14 @@
 		<Name>咯咯…</Name>
 		<Artwork>Jaeheon_Angelica</Artwork>
 		<Rarity>Rare</Rarity>
-		<Option>NoInventory</Option>
-		<Spec Range="Near" Cost="0"/>
-		<Script></Script>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
+		<Spec Range="Near" Cost="1"/>
+		<Script>breakDmg2thisRoundHit</Script>
 		<ScriptDesc></ScriptDesc>
     	<BehaviourList>
       		<Behaviour Min="5" Dice="9" Type="Def" Detail="Guard" Motion="G" EffectRes="Shi_G" Script="" Desc="" />
-      		<Behaviour Min="4" Dice="7" Type="Atk" Detail="Hit" Motion="J" EffectRes="Puppet1_J" Script="" Desc="" />
+      		<Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="Puppet1_J" Script="" Desc="" />
 		</BehaviourList>
 		<Chapter>7</Chapter>
 		 <Priority>0</Priority>
@@ -204,13 +216,14 @@
 		<Name>咯…叽叽…叽</Name>
 		<Artwork>Jaeheon_Angelica</Artwork>
 		<Rarity>Rare</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Near" Cost="2"/>
-		<Script>energy4</Script>
+		<Script></Script>
 		<ScriptDesc></ScriptDesc>
     	<BehaviourList>
-      		<Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="Puppet1_J" Script="" Desc="" />
-      		<Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="Puppet1_J" Script="" Desc="" />
+      		<Behaviour Min="6" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="Puppet1_J" Script="break3atk" Desc="" />
+      		<Behaviour Min="6" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="Puppet1_J" Script="break3atk" Desc="" />
       		<Behaviour Min="4" Dice="8" Type="Standby" Detail="Hit" Motion="J" EffectRes="Puppet1_J" Script="" Desc="" />
 		</BehaviourList>
 		<Chapter>7</Chapter>
@@ -220,12 +233,13 @@
 		<Name>嗑…咯咯咯…</Name>
 		<Artwork>Jaeheon_Angelica</Artwork>
 		<Rarity>Rare</Rarity>
-		<Option>NoInventory</Option>
-		<Spec Range="Near" Cost="4"/>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
+		<Spec Range="Near" Cost="3"/>
 		<Script></Script>
 		<ScriptDesc></ScriptDesc>
     	<BehaviourList>
-      		<Behaviour Min="6" Dice="15" Type="Atk" Detail="Hit" Motion="J" EffectRes="Puppet1_J" Script="AngelicaPuppet_Wheels" Desc="[합 승리] 대상의 다음 주사위 파괴" />
+      		<Behaviour Min="6" Dice="20" Type="Atk" Detail="Hit" Motion="J" EffectRes="Puppet1_J" Script="AngelicaPuppet_Wheels" Desc="" />
       		<Behaviour Min="5" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="Puppet1_J" Script="" Desc="" />
 		</BehaviourList>
 		<Chapter>7</Chapter>

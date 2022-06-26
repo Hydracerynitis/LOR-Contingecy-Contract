@@ -2,58 +2,34 @@
 <DeckXmlRoot>
 	<Deck ID="18000000">
 		<Card>18000001</Card>
-		<Card>18000001</Card>
 		<Card>18000002</Card>
 		<Card>18000003</Card>
-		<Card>18000004</Card>
 		<Card>18000005</Card>
 		<Card>18000006</Card>
 		<Card>18000007</Card>
-		<Card>18000007</Card>
+		<Card>18000011</Card>
+		<Card>18000012</Card>
+		<Card>18000021</Card>
 	</Deck>
 	<Deck ID="18100000">
 		<Card>18100001</Card>
-		<Card>18100001</Card>
-		<Card>18100002</Card>
-		<Card>18100002</Card>
 		<Card>18100002</Card>
 		<Card>18100003</Card>
-		<Card>18100004</Card>
-		<Card>18100004</Card>
 		<Card>18100005</Card>
-	</Deck>
-	<Deck ID="18100001">
 		<Card>18100011</Card>
-		<Card>18100011</Card>
-		<Card>18100012</Card>
-		<Card>18100012</Card>
 		<Card>18100012</Card>
 		<Card>18100013</Card>
-		<Card>18100014</Card>
 		<Card>18100014</Card>
 		<Card>18100015</Card>
 	</Deck>
   	<Deck ID="18200000">
     	<Card>18200001</Card>
-    	<Card>18200001</Card>
-    	<Card>18200001</Card>
-    	<Card>18200002</Card>
-    	<Card>18200002</Card>
     	<Card>18200002</Card>
     	<Card>18200003</Card>
-    	<Card>18200003</Card>
-    	<Card>18200003</Card> 
-  	</Deck>
-  	<Deck ID="18210000">
-    	<Card Pid="@origin">604001</Card>
-    	<Card Pid="@origin">604001</Card>
-    	<Card Pid="@origin">604002</Card>
-    	<Card Pid="@origin">604003</Card>
-    	<Card Pid="@origin">604003</Card>
-    	<Card Pid="@origin">604004</Card>
-    	<Card Pid="@origin">604004</Card>
-    	<Card Pid="@origin">604005</Card>
-    	<Card Pid="@origin">604005</Card>
+    	<Card>18200004</Card>
+    	<Card>18200006</Card>
+    	<Card>18200007</Card>
+    	<Card>18200008</Card>
   	</Deck>
   	<Deck ID="18220000">    	
 	  	<Card Pid="@origin">507007</Card>
@@ -77,109 +53,74 @@
 		<Card>18300002</Card>
 		<Card>18300003</Card>
 		<Card>18300004</Card>
-		<Card>18300004</Card>
-		<Card>18300005</Card>
 		<Card>18300005</Card>
 		<Card>18300006</Card>
 		<Card>18300007</Card>
+		<Card>18300012</Card>
+		<Card>18300013</Card>
 	</Deck>
 	<Deck ID="18400000">
 		<Card>18400001</Card>
-		<Card>18400001</Card>
-		<Card>18400002</Card>
 		<Card>18400002</Card>
 		<Card>18400003</Card>
-		<Card>18400003</Card>
-		<Card>18400004</Card>
 		<Card>18400004</Card>
 		<Card>18400005</Card>
+		<Card>18400006</Card>
+		<Card>18400011</Card>
+		<Card>18400022</Card>
+		<Card>18400031</Card>
 	</Deck>
 	<Deck ID="18500000">
 		<Card>18500001</Card>
 		<Card>18500002</Card>
 		<Card>18500003</Card>
-		<Card>18500003</Card>
 		<Card>18500004</Card>
-		<Card>18500004</Card>
-		<Card>18500005</Card>
 		<Card>18500005</Card>
 		<Card>18500006</Card>
+		<Card>18500012</Card>
+		<Card>18500014</Card>
+		<Card>18500025</Card>
 	</Deck>
 	<Deck ID="18600000">
 		<Card>18600001</Card>
-		<Card>18600001</Card>
-		<Card>18600001</Card>
-		<Card>18600002</Card>
 		<Card>18600002</Card>
 		<Card>18600003</Card>
 		<Card>18600004</Card>
 		<Card>18600005</Card>
-		<Card>18600005</Card>
+		<Card>18600006</Card>
 	</Deck>
 	<Deck ID="18700000">
 		<Card>18700001</Card>
-		<Card>18700001</Card>
+		<Card>18700002</Card>
 		<Card>18700003</Card>
-		<Card>18700003</Card>
-		<Card>18700013</Card>
-		<Card>18700013</Card>
-		<Card>18700012</Card>
-		<Card>18700012</Card>
+		<Card>18700004</Card>
 		<Card>18700011</Card>
-	</Deck>
-	<Deck ID="18700001">
-		<Card>18700021</Card>
-		<Card>18700022</Card>
-		<Card>18700022</Card>
-		<Card>18700023</Card>
-		<Card>18700023</Card>
-		<Card>18700024</Card>
-		<Card>18700024</Card>
-		<Card>18700025</Card>
-		<Card>18700025</Card>
-	</Deck>
-	<Deck ID="18710000">
-		<Card>18700002</Card>
-		<Card>18700002</Card>
-		<Card>18700004</Card>
-		<Card>18700004</Card>
-		<Card>18700031</Card>
-		<Card>18700031</Card>
-		<Card>18700032</Card>
+		<Card>18700012</Card>
+		<Card>18700013</Card>
 		<Card>18700032</Card>
 		<Card>18700033</Card>
 	</Deck>
 	<Deck ID="18800000">
 		<Card>18800001</Card>
-		<Card>18800001</Card>
-		<Card>18800002</Card>
 		<Card>18800002</Card>
 		<Card>18800003</Card>
-		<Card>18800003</Card>
-		<Card>18800004</Card>
 		<Card>18800004</Card>
 		<Card>18800005</Card>
+		<Card>18800006</Card>
 	</Deck>
 	<Deck ID="18810000">
 		<Card>18810001</Card>
-		<Card>18810001</Card>
 		<Card>18810002</Card>
-		<Card>18810002</Card>
-		<Card>18810003</Card>
 		<Card>18810003</Card>
 		<Card>18810004</Card>
-		<Card>18810005</Card>
 		<Card>18810005</Card>
 	</Deck>
 	<Deck ID="18900000">
 		<Card>18900001</Card>
-		<Card>18900001</Card>
-		<Card>18900002</Card>
 		<Card>18900002</Card>
 		<Card>18900003</Card>
-		<Card>18900003</Card>
 		<Card>18900004</Card>
-		<Card>18900004</Card>
+		<Card>18900005</Card>
 		<Card>18900006</Card>
 	</Deck>
 </DeckXmlRoot>

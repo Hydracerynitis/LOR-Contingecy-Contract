@@ -4,7 +4,8 @@
 		<Name>警戒姿态</Name>
 		<Artwork>Roland3Phase_RolandAtk</Artwork>
 		<Rarity>Uncommon</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Near" Cost="2" />
 		<Script>Vigilant1</Script>
 		<ScriptDesc></ScriptDesc>
@@ -21,7 +22,8 @@
 		<Name>警戒姿态</Name>
 		<Artwork>Roland3Phase_RolandAtk</Artwork>
 		<Rarity>Uncommon</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Near" Cost="2" />
 		<Script>Vigilant2</Script>
 		<ScriptDesc></ScriptDesc>
@@ -37,8 +39,9 @@
 		<Name>怒火中烧</Name>
 		<Artwork>Roland3Phase_RolandLonely</Artwork>
 		<Rarity>Rare</Rarity>
-		<Option>NoInventory</Option>
-		<Spec Range="Near" Cost="1" />
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
+		<Spec Range="Near" Cost="2" />
 		<Script>energy2</Script>
 		<ScriptDesc></ScriptDesc>
 		<BehaviourList>
@@ -52,7 +55,8 @@
 		<Name>狂乱奔袭</Name>
 		<Artwork>Roland3Phase_RolandLonely</Artwork>
 		<Rarity>Rare</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Near" Cost="3" />
 		<Script>powerup2highspeed</Script>
 		<ScriptDesc></ScriptDesc>
@@ -68,6 +72,8 @@
 		<Name>漆黑华尔兹</Name>
 		<Artwork>Roland3Phase_CrossAtk</Artwork>
 		<Rarity>Unique</Rarity>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Near" Cost="4" />
 		<Script>RolandCombo</Script>
 		<ScriptDesc></ScriptDesc>
@@ -83,7 +89,9 @@
 		<Name>漆黑之束</Name>
 		<Artwork>Roland3Phase_BlackAura</Artwork>
 		<Rarity>Rare</Rarity>
-		<Spec Range="Near" Cost="1" />
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
+		<Spec Range="Near" Cost="2" />
 		<Script>RolandAura</Script>
 		<ScriptDesc></ScriptDesc>
 		<BehaviourList>
@@ -98,6 +106,8 @@
 		<Name>混乱之束</Name>
 		<Artwork>Roland3Phase_MixAura</Artwork>
 		<Rarity>Unique</Rarity>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Near" Cost="2" />
 		<Script>GainSL</Script>
 		<ScriptDesc></ScriptDesc>
@@ -113,6 +123,8 @@
 		<Name>掩护-榉树工坊</Name>
 		<Artwork>Roland3Phase_RolandAtk</Artwork>
     	<Rarity>Rare</Rarity>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Near" Cost="0" />
 		<Script>RolandZelkova</Script>
 		<ScriptDesc></ScriptDesc>
@@ -127,6 +139,8 @@
 		<Name>掩护-阿拉斯工坊</Name>
 		<Artwork>Roland3Phase_RolandAtk</Artwork>
 		<Rarity>Rare</Rarity>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Near" Cost="2" />
 		<Script>RolandAllas</Script>
 		<ScriptDesc></ScriptDesc>
@@ -141,6 +155,8 @@
 		<Name>掩护-逻辑工坊</Name>
 		<Artwork>Roland3Phase_RolandAtk</Artwork>
     	<Rarity>Rare</Rarity>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
     	<Spec Range="Near" Cost="3" />
     	<Script>RolandLogic</Script>
 		<ScriptDesc></ScriptDesc>
@@ -155,6 +171,8 @@
 		<Name>纯白圆舞曲</Name>
 		<Artwork>Roland3Phase_CrossAtk</Artwork>
 		<Rarity>Unique</Rarity>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Near" Cost="4" />
 		<Script>AngelicaCombo</Script>
 		<ScriptDesc></ScriptDesc>
@@ -170,7 +188,9 @@
 		<Name>纯白之束</Name>
 		<Artwork>Roland3Phase_WhiteAura</Artwork>
 		<Rarity>Rare</Rarity>
-		<Spec Range="Near" Cost="1" />
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
+		<Spec Range="Near" Cost="2" />
 		<Script>AngelicaAura</Script>
 		<ScriptDesc></ScriptDesc>
 		<BehaviourList>
@@ -184,6 +204,8 @@
 		<Name>混乱之束</Name>
 		<Artwork>Roland3Phase_MixAura</Artwork>
 		<Rarity>Unique</Rarity>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Near" Cost="2" />
 		<Script>GainSL</Script>
 		<ScriptDesc></ScriptDesc>
@@ -198,6 +220,8 @@
 		<Name>突击-榉树工坊</Name>
 		<Artwork>Roland3Phase_AngelicaAxe</Artwork>
     	<Rarity>Common</Rarity>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Near" Cost="0" />
 		<Script>AngelicaZelkova</Script>
 		<ScriptDesc></ScriptDesc>
@@ -212,6 +236,8 @@
 		<Name>突击-阿拉斯工坊</Name>
 		<Artwork>Roland3Phase_AngelicaLance</Artwork>
 		<Rarity>Uncommon</Rarity>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Near" Cost="2" />
 		<Script>AngelicaAllas</Script>
 		<ScriptDesc></ScriptDesc>
@@ -226,6 +252,8 @@
 		<Name>突击-逻辑工坊</Name>
 		<Artwork>Roland3Phase_AngelicaLance</Artwork>
     	<Rarity>Uncommon</Rarity>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
     	<Spec Range="Far" Cost="3" />
     	<Script>AngelicaLogic</Script>
 		<ScriptDesc></ScriptDesc>

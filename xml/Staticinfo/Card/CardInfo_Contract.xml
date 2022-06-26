@@ -12,4 +12,76 @@
     	</BehaviourList>
     	<Priority>0</Priority>
   	</Card>
+	<Card ID="101">
+    	<Name></Name>
+    	<Artwork>MusicDisc</Artwork>
+    	<Rarity>Unique</Rarity>
+    	<Spec Range="Instance" Cost="0"/>
+		<Option>Personal</Option>
+    	<Script>SwitchMusic</Script>
+    	<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+    	</BehaviourList>
+    	<Priority>0</Priority>
+  	</Card>
+	<Card ID="102">
+    	<Name></Name>
+    	<Artwork>MusicDisc</Artwork>
+    	<Rarity>Unique</Rarity>
+    	<Spec Range="Instance" Cost="0"/>
+		<Option>Personal</Option>
+    	<Script>SwitchChapter1</Script>
+    	<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+    	</BehaviourList>
+    	<Priority>0</Priority>
+  	</Card>
+	<Card ID="103">
+    	<Name></Name>
+    	<Artwork>MusicDisc</Artwork>
+    	<Rarity>Unique</Rarity>
+    	<Spec Range="Instance" Cost="0"/>
+		<Option>Personal</Option>
+    	<Script>SwitchChapter2</Script>
+    	<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+    	</BehaviourList>
+    	<Priority>0</Priority>
+  	</Card>
+	<Card ID="104">
+    	<Name></Name>
+    	<Artwork>MusicDisc</Artwork>
+    	<Rarity>Unique</Rarity>
+    	<Spec Range="Instance" Cost="0"/>
+		<Option>Personal</Option>
+    	<Script>SwitchChapter3</Script>
+    	<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+    	</BehaviourList>
+    	<Priority>0</Priority>
+  	</Card>
+	<Card ID="105">
+    	<Name></Name>
+    	<Artwork>MusicDisc</Artwork>
+    	<Rarity>Unique</Rarity>
+    	<Spec Range="Instance" Cost="0"/>
+		<Option>Personal</Option>
+    	<Script>SwitchChapter4</Script>
+    	<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+    	</BehaviourList>
+    	<Priority>0</Priority>
+  	</Card>
+	<Card ID="106">
+    	<Name></Name>
+    	<Artwork>MusicDisc</Artwork>
+    	<Rarity>Unique</Rarity>
+    	<Spec Range="Instance" Cost="0"/>
+		<Option>Personal</Option>
+    	<Script>EndMusic</Script>
+    	<ScriptDesc></ScriptDesc>
+    	<BehaviourList>
+    	</BehaviourList>
+    	<Priority>0</Priority>
+  	</Card>
 </DiceCardXmlRoot>

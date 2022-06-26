@@ -6,4 +6,16 @@
     <MaxHeight>180</MaxHeight>
     <BookId>18210000</BookId>
   </Enemy>
+  <Enemy ID="18510000">
+    <NameID>252</NameID>
+    <MinHeight>200</MinHeight>
+    <MaxHeight>200</MaxHeight>
+    <BookId>18510000</BookId>
+  </Enemy>
+  <Enemy ID="18520000">
+    <NameID>253</NameID>
+    <MinHeight>330</MinHeight>
+    <MaxHeight>330</MaxHeight>
+    <BookId>18520000</BookId>
+  </Enemy>
 </EnemyUnitClassRoot>

@@ -21,10 +21,7 @@ namespace ContractReward
             phase = PhilipPhase.Cold;
             Cold = this.owner.allyCardDetail;
             Hot = new BattleAllyCardDetail(owner);
-            List<DiceCardXmlInfo> list = new List<DiceCardXmlInfo>();
-            foreach (LorId i in Singleton<DeckXmlList>.Instance.GetData(Tools.MakeLorId(18100001)).cardIdList)
-                list.Add(ItemXmlDataList.instance.GetCardItem(i));
-            Hot.Init(list);
+            Hot.Init(owner.UnitData.unitData.GetDeckForBattle(1));
             this._loopSound = SingletonBehavior<SoundEffectManager>.Instance.PlayClip("Creature/Philip_StrongLoop", true);
         }
         public override void OnBattleEnd()
@@ -51,7 +48,7 @@ namespace ContractReward
                 {
                     Hot = this.owner.allyCardDetail;
                     this.owner.allyCardDetail = Cold;
-                    this.owner.allyCardDetail.DrawCards(7);
+                    this.owner.allyCardDetail.DrawCards(4);
                     this.owner.view.ChangeSkin("Blue_Philip");
                     this.owner.view.charAppearance.ChangeMotion(ActionDetail.Default);
                     List<PassiveAbilityBase> passive = this.owner.passiveDetail.PassiveList;
@@ -71,7 +68,7 @@ namespace ContractReward
             {
                 Cold = this.owner.allyCardDetail;
                 this.owner.allyCardDetail = Hot;
-                this.owner.allyCardDetail.DrawCards(7);
+                this.owner.allyCardDetail.DrawCards(4);
                 SingletonBehavior<BattleSceneRoot>.Instance.currentMapObject.SetRunningState(true);
                 SoundEffectPlayer.PlaySound("Battle/Cry_MapChange_One");
                 new UnityEngine.GameObject().AddComponent<SpriteFilter_Gaho>().Init("EmotionCardFilter/PhilipFilter", false, 2f);

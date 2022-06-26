@@ -21,18 +21,7 @@ namespace ContractReward
             {
                 this.loseCount = 0;
                 this.card?.target?.cardSlotDetail.RecoverPlayPointByCard(2);
-                if (owner.passiveDetail.HasPassive<PassiveAbility_1850003>())
-                {
-                    List<BattleUnitModel> ally = BattleObjectManager.instance.GetAliveList(owner.faction);
-                    for (int i = 0; i < 2 && ally.Count > 0; i++)
-                    {
-                        BattleUnitModel unit = RandomUtil.SelectOne(ally);
-                        ally.Remove(unit);
-                        if (ally == null)
-                            continue;
-                        unit.cardSlotDetail.RecoverPlayPointByCard(2);
-                    }
-                }
+                card?.target?.allyCardDetail.DrawCards(2);
             }
 
         }

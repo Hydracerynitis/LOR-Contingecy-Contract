@@ -2,32 +2,32 @@
 <BattleCardAbilityDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<!--P3-->
 	<BattleCardAbility ID="Vigilant1">
-    	<Desc>[On Use] Gain 2 Haste next Scene</Desc>
-		<Desc>At the end of a Scene, recover 1 Light if this Page is at hand.</Desc>
+		<Desc>At the end of a Scene, recover 3 Stagger Resist if this Page is at hand.</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="Vigilant2">
-    	<Desc>[On Use] Draw 3 Pages</Desc>
 		<Desc>At the end of a Scene, gain 1 Haste next Scene if this Page is at hand.</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="RolandCombo">
-    	<Desc>[Tag Team Waltz in White] Recover 6 Light and draw 2 Pages</Desc>
+    	<Desc>[Tag Team Waltz in White] the second die of this page gain +2 natural value</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="AngelicaCombo">
-    	<Desc>[Tag Team Waltz in Black] Recover 6 Light and draw 2 Pages</Desc>
+    	<Desc>[Tag Team Waltz in Black] the first die of this page gain +5 maximun value</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="RolandAura">
-    	<Desc>[Tag Team Ashen Bond] Tag Teammate and this character draw 2 Pages</Desc>
+    	<Desc>[Tag Team Ashen Bond] Tag Teammate and this character recover 2 Light</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="AngelicaAura">
-    	<Desc>[Tag Team Dark Bond] Tag Teammate and this character recover 3 Light</Desc>
+    	<Desc>[Tag Team Dark Bond] Tag Teammate and this character recover 2 Light</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="GainSL">
     	<Desc>[Tag Team Unstable Bond] Gain 2 Soul Link if no stack of SouL Link is lost this Scene</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="RolandZelkova">
+		<Desc>[On Use] Draw 1 Card;</Desc>
     	<Desc>[Tag Team Charge: Zelkova Workshop] Gain a Slash Dice (4-8 [On Hit] Inflict 3 Bleed next Scene) that comes first</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="AngelicaZelkova">
+		<Desc>[On Use] Draw 1 Card;</Desc>
     	<Desc>[Tag Team Flank: Zelkova Workshop]  Gain a Slash Dice (3-8 [On Hit] Recover 5 Stagger Resist) on the Page</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="RolandAllas">
@@ -52,6 +52,6 @@
 Repeat first dice for each pages have been used.</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="Agony">
-    	<Desc>[On Use] Draw 3 Pages, Inflict 1 Bind to 2 random enemies next Scene</Desc>
+    	<Desc>[On Use] Draw 2 Pages, Inflict 1 Bind to 2 random enemies next Scene</Desc>
   	</BattleCardAbility>
 </BattleCardAbilityDescRoot>

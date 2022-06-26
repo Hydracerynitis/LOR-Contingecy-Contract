@@ -24,10 +24,7 @@ namespace ContractReward
             coop.EGO = new BattlePersonalEgoCardDetail(owner);
             coop.EGO.Init();
             coop.Deck=new BattleAllyCardDetail(owner);
-            List<DiceCardXmlInfo> list = new List<DiceCardXmlInfo>();
-            foreach (LorId i in Singleton<DeckXmlList>.Instance.GetData(Tools.MakeLorId(17000203)).cardIdList)
-                list.Add(ItemXmlDataList.instance.GetCardItem(i));
-            coop.Deck.Init(list);
+            coop.Deck.Init(owner.UnitData.unitData.GetDeckForBattle(1));
             coop.Deck.DrawCards(owner.Book.GetStartDraw() + 1);
             coop.Passive = new BattleUnitPassiveDetail(owner);
             coop.Passive._passiveList = new List<PassiveAbilityBase>(owner.passiveDetail.PassiveList);
@@ -65,10 +62,7 @@ namespace ContractReward
             Angelica.cardSlotDetail.LosePlayPoint(Angelica.cardSlotDetail.GetMaxPlayPoint());
             Angelica.cardSlotDetail.RecoverPlayPoint(Angelica.cardSlotDetail.GetMaxPlayPoint());
             Angelica.allyCardDetail = new BattleAllyCardDetail(Angelica);
-            List<DiceCardXmlInfo> list = new List<DiceCardXmlInfo>();
-            foreach (LorId i in Singleton<DeckXmlList>.Instance.GetData(Tools.MakeLorId(17000103)).cardIdList)
-                list.Add(ItemXmlDataList.instance.GetCardItem(i));
-            Angelica.allyCardDetail.Init(list);
+            Angelica.allyCardDetail.Init(owner.UnitData.unitData.GetDeckForBattle(2));
             Angelica.allyCardDetail.DrawCards(4);
             Angelica.personalEgoDetail = new BattlePersonalEgoCardDetail(Angelica);
             Angelica.personalEgoDetail.Init();

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BaseMod;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,10 +29,12 @@ namespace ContractReward
                 stack += 1;
             }
         }
-        public override void OnRoundEnd()
+        public override void OnSuccessAttack(BattleDiceBehavior behavior)
         {
-            base.OnRoundEnd();
-            accumulated += this._owner.history.damageAtOneRound;
+            base.OnSuccessAttack(behavior);
+            if (behavior.card.card.GetID() == Tools.MakeLorId(18000012))
+                return;
+            accumulated += behavior.DiceResultDamage;
             for (; accumulated > gauge;)
             {
                 accumulated -= gauge;

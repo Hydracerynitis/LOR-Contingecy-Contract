@@ -10,7 +10,7 @@ namespace ContractReward
     {
         public override void OnUseCard()
         {
-            owner.allyCardDetail.DrawCards(3);
+            owner.allyCardDetail.DrawCards(2);
             BattleObjectManager.instance.GetAliveList_random(owner.faction == Faction.Player ? Faction.Enemy : Faction.Player, 2).ForEach(x => x.bufListDetail.AddKeywordBufByCard(KeywordBuf.Binding, 1, owner));
         }
     }

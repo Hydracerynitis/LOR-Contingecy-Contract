@@ -42,6 +42,7 @@ namespace ContractReward
                 byproduct.passiveDetail._passiveList.Insert(0, new PassiveAbility_1700000(byproduct));
                 byproduct.bufListDetail.AddBuf(new Unctrollable());
                 byproduct.moveDetail.ReturnToFormationByBlink();
+                owner.LoseHp(15);
             }
             foreach(BattleUnitModel unit in BattleObjectManager.instance.GetAliveList())
             {

@@ -4,6 +4,8 @@
 	<text id="ui_RewardStage">恭喜你打过{1}关卡的{0}级危机合约挑战</text>
 	<text id="ui_popup_getequippage">获得{1}张核心书页-“{0}”</text>
 	<text id="ui_MoreEquipPage">以及更多核心书页</text>
+	<text id="ui_ForDemo">预览</text>
+	<text id="ui_Jeaheon_counter">反击架势</text>
 	<text id="Tanya_Brawl_none">无</text>
 	<text id="Speed_Furioso">速战速决 Furioso</text>
 	<text id="Enhance_HeavySmoke_Passive">击中处于“浓烟”状态下的目标时伤害+{0}
@@ -11,5 +13,17 @@
 	<text id="Zombie_name">无名躯壳</text>
 	<text id="WaltzDecay_text">这一幕结束时造成{0}伤害和混乱伤害并且层数-1
 若一个单位同时拥有两种侵蚀且层数差距不超过{1}时不承受来自两个侵蚀的伤害</text>
-	<text id="marked_dice_desc">[昨日之约 | ] </text>
+	<text id="marked_dice_desc">&lt;color=#FFA226&gt;昨日之约&lt;/color&gt; </text>
+	<text id="Reverberation_Conductor">指挥家: 每一幕结束时,情感等级提升至所有残响乐团成员内最高的情感等级</text>
+	<text id="Reverberation_Cello">大提琴: 使用带有斩击骰子的书页时,所有骰子最大值+2</text>
+ 	<text id="Reverberation_Harp">竖琴: 打击骰命中后恢复2点混乱抗性</text>
+	<text id="Reverberation_Drum">鼓: 第三个打击骰威力+1 </text>
+	<text id="Reverberation_Horn">圆号: 穿刺骰伤害+2</text>
+	<text id="Reverberation_Tuba">大号: 穿刺骰混乱伤害+2</text>
+	<text id="Reverberation_Trombone">长号: 穿刺骰威力+1</text>
+	<text id="Reverberation_Clarinet">双簧管: 穿刺骰命中后下一个骰子威力+1</text>
+	<text id="Reverberation_Viola">中提琴: 投掷斩击骰后,下一个斩击骰最小值+2</text>
+	<text id="Reverberation_S_Violin">第二小提琴: 斩击骰混乱伤害+2 </text>
+	<text id="Reverberation_F_Violin">第一小提琴: 斩击骰伤害+2</text>
+	<text id="Reverberation_Organ">管风琴: 打击骰拼点时减少目标伤害2点</text>
 </localize>

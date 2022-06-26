@@ -10,12 +10,8 @@ using BaseMod;
 
 namespace ContractReward
 {
-    public class DiceCardSelfAbility_GretaMeatCut : DiceCardSelfAbility_energy3
+    public class DiceCardSelfAbility_GretaMeatCut : DiceCardSelfAbilityBase
     {
-        public override bool IsValidTarget(BattleUnitModel unit, BattleDiceCardModel self, BattleUnitModel targetUnit)
-        {
-            return targetUnit.bufListDetail.HasBuf<BattleUnitBuf_FreshMeat>();
-        }
         public override void OnEnterCardPhase(BattleUnitModel unit, BattleDiceCardModel self)
         {
             base.OnEnterCardPhase(unit, self);

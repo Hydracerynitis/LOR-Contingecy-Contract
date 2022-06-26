@@ -10,8 +10,8 @@ namespace ContractReward
     {
         public void ActiveResonate(BattlePlayingCardDataInUnitModel card)
         {
-            this.owner.allyCardDetail.DrawCards(2);
-            this.owner.cardSlotDetail.RecoverPlayPoint(3);
+            this.owner.allyCardDetail.DrawCards(1);
+            this.owner.cardSlotDetail.RecoverPlayPoint(2);
         }
     }
 }

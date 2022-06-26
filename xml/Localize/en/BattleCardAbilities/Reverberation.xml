@@ -10,6 +10,7 @@
   	</BattleCardAbility>
 	 <BattleCardAbility ID="Insane2">
     		<Desc>Spend 100 Insanity to Use</Desc>
+			<Desc>Damage dealt with this page will not increase Insanity</Desc>
   	</BattleCardAbility>
 	  <BattleCardAbility ID="AllVibrate">
     		<Desc>[On Use] Set all enemies' Virbration to 4;</Desc>
@@ -44,13 +45,16 @@
     		<Desc>[On Use] All dice on this page gain +2 Power if the target has more than 10 Burn </Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="LoseBurn">
-    		<Desc>[On Use] Remove 5 Burn from self</Desc>
+    		<Desc>[On Use] Remove 5 Burn from self. Inflict 2 Burn to other characters</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="BurnCostDown">
     		<Desc>[On Use] If the target has more than 10 Burn, set the cost of 2 random pages in hand to 0 (Reset after Use)</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="philip_area_atk">
     		<Desc>[On Hit] Inflict 3 Burn</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="Negative3">
+    		<Desc>[On Use] Gain 3 Negative Emotion Coin</Desc>
   	</BattleCardAbility>
 	<!--艾琳-->
 	<BattleCardAbility ID="MeatGearPower">
@@ -86,7 +90,6 @@
   	</BattleCardAbility>
   	<BattleCardAbility ID="GretaCut">
     		<Desc>At the start of each Scene if 'Fresh Meat' exists, upgrade itself</Desc>
-    		<Desc>[On Use] Recover 3 Light</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="greta_seasoningAtk">
     		<Desc>[On Hit] Inflict 1 Bleed and Fragile next Scene</Desc>
@@ -109,13 +112,12 @@
 	<BattleCardAbility ID="GretaCatch">
     		<Desc>[On Use] Cancel target's action and turn them into Fresh Meat</Desc>
   	</BattleCardAbility>
-	<BattleCardAbility ID="GretaMeatCut">
-    		<Desc>Can only target Fresh Meat;</Desc>
-    		<Desc>[On Use] Restore 3 Light</Desc>
-  	</BattleCardAbility>
 	<BattleCardAbility ID="GretaMeatMeal">
     		<Desc>Can only target Fresh Meat</Desc>
     		<Desc>At the start of each Scene set cost of this card to current Light</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="BleedPlus">
+    	<Desc>[Combat Start] When inflicting Bleed using Combat Pages this Scene, inflict 1 additional stack</Desc>
   	</BattleCardAbility>
 	<!--不来梅-->
   	<BattleCardAbility ID="bremen_boom">
@@ -150,8 +152,11 @@
     		<Desc>[On Hit] Inflict 1 Paralysis next Scene</Desc>
   	</BattleCardAbility>
 	<!--奥斯瓦尔德-->
-	<BattleCardAbility ID="Oswald_energy3">
-    		<Desc>[When We Meet~] Recover 3 Light</Desc>
+	<BattleCardAbility ID="AllEnergy1">
+    		<Desc>[When We Meet~] all allies recover 1 Light</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="AllDraw1">
+    		<Desc>[When We Meet~] all allies draw 1 Page</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="oswald_recoverhp5pw">
     		<Desc>[On Clash Win] Recover 5 HP</Desc>
@@ -181,6 +186,38 @@
 	<BattleCardAbility ID="Oswald_daze">
     		<Desc>[Take it On~] Stagger target ally; Target ally is Stupefied next Scene</Desc>
 			<Desc>The Page can only be played when no stupified ally exist.</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="Oswald_Knife">
+    		<Desc>[Take it On~]Summon Mr. Knife</Desc>
+			<Desc>Remove "Ms Mermaid's Amazing Voice"</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="Oswald_Mermaid">
+    		<Desc>[Take it On~]Summon Ms. Mermaid</Desc>
+			<Desc>Remove "Mr Knife's Throwing Knife"</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="oswald_destroy1dice">
+    		<Desc>[On Hit] Destroy target's next die</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="KnifeQua">
+    		<Desc>If the last die fails to deal damage, inflict self with 2 Feeble next Scene</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="oswald_power1bleed1pw">
+    		<Desc>[On Clash Win] Next die gains +1 Power; inflict 1 Bleed next Scene</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="oswald_str1quick1atk">
+    		<Desc>[On Hit] Gain 1 Haste and Strength next Scene</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="oswald_aria_recover">
+    		<Desc>[On Use] Recover 8 HP for the ally with the lowest current HP</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="oswald_aria_protection">
+    		<Desc>[On Use] Give 2 Protection to the ally with the lowest current HP</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="oswald_aria_strength">
+    		<Desc>[On Use] Give 1 Strength to the ally with the lowest current HP</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="oswald_break4areaatk">
+    		<Desc>[On Hit] Deal 4 Stagger damage</Desc>
   	</BattleCardAbility>
 	<!--塔尼亚-->
   	<BattleCardAbility ID="TanyaCoolDown">
@@ -259,7 +296,10 @@
 	<BattleCardAbility ID="PlutoAoe">
     		<Desc>[On Use]Boost dices' damage according to numbers of enemies targeted</Desc>
     		<Desc>The less targets the greater the boost</Desc>
-    		<Desc>This page can be reused only after 4 scenes</Desc>
+    		<Desc>This page can be reused only after 2 scenes</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="BreakProtection5">
+    		<Desc>[Combat Start] gain 5 Break Protection this Scene</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="PlutoContract1">
     		<Desc>[On Play] Put the Contract of Liberty for targeted ally</Desc>

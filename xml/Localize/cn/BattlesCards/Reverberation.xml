@@ -187,6 +187,39 @@
 		<BattleCardDesc ID="18500007">
 			<LocalizedName>我需要你哟~？</LocalizedName>
 		</BattleCardDesc>
+		<BattleCardDesc ID="18500008">
+			<LocalizedName>利刃先生的飞刀表演</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500009">
+			<LocalizedName>美人鱼小姐的嘹亮歌喉</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500011">
+			<LocalizedName>微力飞掷</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500012">
+			<LocalizedName>X切割</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500013">
+			<LocalizedName>断头台</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500014">
+			<LocalizedName>连续飞剑</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500021">
+			<LocalizedName>鼓舞咏叹调</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500022">
+			<LocalizedName>守护咏叹调</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500023">
+			<LocalizedName>勇气咏叹调</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500024">
+			<LocalizedName>毛骨悚然的声音</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500025">
+			<LocalizedName>响彻云霄的恐惧</LocalizedName>
+		</BattleCardDesc>
 		<!--塔尼亚-->
 		<BattleCardDesc ID="18600001">
 			<LocalizedName>拳打</LocalizedName>

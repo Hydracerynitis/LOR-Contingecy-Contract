@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RewardCondition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Reward id="18100000">Get by Completing The Crying Children (Reverberation) reception at Risk Level 16 or more</Reward>
+	<Reward id="18200000">Get by Completing The Church of Gear reception at Risk Level 16 or more</Reward>
+	<Reward id="18300000">Get by Completing The Eighth Chef reception at Risk Level 16 or more</Reward>
+	<Reward id="18400000">Get by Completing The Musicians of Bremen reception at Risk Level 16 or more</Reward>
+	<Reward id="18500000">Get by Completing The 8 o’Clock Circus reception at Risk Level 16 or more</Reward>
+	<Reward id="18600000">Get by Completing L’heure du Loup reception at Risk Level 16 or more</Reward>
+	<Reward id="18700000">Get by Completing The Puppeteer reception at Risk Level 16 or more</Reward>
+    <Reward id="18800000">Get by Completing The Blood-Red Moon reception at Risk Level 16 or more</Reward>
+	<Reward id="18810000">Get by Completing The Blood-Red Moon reception at Risk Level 16 or more
+while "Sharpened Blade 4","Scorching Cross 3","Introspective First Violin" are active</Reward>
+    <Reward id="18900000">Get by Completing Yesterday's Promise reception at Risk Level 16 or more</Reward>
+    <Reward id="18000000">Get by Completing all Risk Level challenges from The Reverberation Ensemble reception</Reward>
+	<Reward id="17000001">Get by Completing The Black Silence reception at Risk Level 16 or more</Reward>
+    <Reward id="17000002">Get by Completing The Black Silence reception at Risk Level 16 or more
+while "Furioso 3" or "The Sacred Sword of Charlemagne 3", "Haze Mist 3" 
+or "Qui Garde Un Secret 3","That’s that, and this is this" or "The Smoke War" are active</Reward>
+    <Reward id="17000003">Get by Completing The Black Silence reception at Risk Level 16 or more
+while "Wife in Arms 3" or "Waltz in Black and White 3", "Memory: Grade 9 Fixer 3" 
+or "Memory: The Black Silence 3","Blink of Scent" or "Memory: Gone Angels" are active</Reward>
+    <Reward id="17000004">Get by Completing The Black Silence reception at Risk Level 16 or more
+while "End of the Line" and "Last Stand" are active</Reward>
+    <Reward id="17000005">Get by Completing all Risk Level challenges of The Black Silence reception</Reward>
+</RewardCondition>

@@ -10,13 +10,19 @@ namespace ContractReward
 {
     public class PassiveAbility_1860001 : PassiveAbilityBase, Retaliater
     {
+        private int count = 0;  
         public override int SpeedDiceNumAdder()
         {
-            int num1 = 0;
+            int num1 = 1;
             int num2 = owner.emotionDetail.SpeedDiceNumAdder();
             if (num2 > 0)
-                num1 = -num2;
+                num1 += -num2;
             return num1;
+        }
+        public override void OnRoundStart()
+        {
+            base.OnRoundStart();
+            count = 0;
         }
         public override void OnEndBattle(BattlePlayingCardDataInUnitModel curCard)
         {
@@ -47,6 +53,9 @@ namespace ContractReward
             if (retaliate.cardAbility != null)
                 retaliate.cardAbility.card = retaliate;
             retaliate.ResetCardQueueWithoutStandby();
+            count++;
+            if (count <= 2)
+                owner.allyCardDetail.DrawCards(1);
             return retaliate;
         }
         private bool CheckRange(CardRange range)

@@ -31,7 +31,7 @@ namespace Contingecy_Contract
         public static void Error(string type,Exception ex)
         {
             PathDebug("/Debug", PathType.Directory);
-            File.WriteAllText(CCInitializer.ModPath + "/Debug/"+type+"Error.txt", ex.Message + Environment.NewLine + ex.StackTrace);
+            File.WriteAllText(CCInitializer.ModPath + "/Debug/"+type+"Error.txt", ex.ToString());
         }
         public static void ErrorLog(string type, string Log)
         {

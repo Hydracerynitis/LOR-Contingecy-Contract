@@ -18,7 +18,9 @@ namespace Contingecy_Contract
         public static Dictionary<LorId , Sprite> NonThumbSprite = new Dictionary<LorId, Sprite>();
         public static Dictionary<LorId, int> RewardDic = new Dictionary<LorId, int>();
         public static List<RewardConfition> ExtraCondition=new List<RewardConfition>();
+        public static Dictionary<(string,int), string> RewardCondition= new Dictionary<(string, int), string>();
         public static Dictionary<(string, string), string> ContractParam = new Dictionary<(string, string), string>();
+        public static AudioClip[] reverberation;
         public static void LoadStaticData()
         {
             LoadContractParam();
@@ -101,6 +103,32 @@ namespace Contingecy_Contract
                     Debug.Error("RewardError", ex);
                 }
             }
+            foreach (string lang in TextDataModel._supported)
+            {
+                string path = CCInitializer.ModPath + "/Localize/" + lang + "/RewardCondition";
+                if (!Directory.Exists(path))
+                    continue;
+                foreach (FileInfo file in new DirectoryInfo(path).GetFiles())
+                {
+                    try
+                    {
+                        XmlDocument xml = new XmlDocument();
+                        xml.LoadXml(File.ReadAllText(file.FullName));
+                        foreach (XmlNode node in xml.SelectNodes("RewardCondition/Reward"))
+                        {
+                            string id = string.Empty;
+                            if (node.Attributes.GetNamedItem("id") != null)
+                                id = node.Attributes.GetNamedItem("id").InnerText;
+                            int key = Int32.Parse(id);
+                            RewardCondition[(lang,key)] = node.InnerText;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Debug.Error("RewardConditionError", ex);
+                    }
+                }
+            }     
         }
         public static void LoadExtraCondition()
         {
@@ -142,6 +170,9 @@ namespace Contingecy_Contract
             GameObject BSA = Resources.Load<GameObject>("Prefabs/InvitationMaps/InvitationMap_BlackSilence4");
             VanilaGameObject.Add("BlackSilence4Aura", ((BlackSilence4thMapManager)BSA.GetComponent<MapManager>()).areaAuraEffect);
             VanilaGameObject.Add("BlackSilence4Boom", ((BlackSilence4thMapManager)BSA.GetComponent<MapManager>()).areaBoomEffect);
+            reverberation = new AudioClip[4] { Resources.Load<AudioClip>("Sounds/Battle/Reverberation1st_Asiyah"),
+            Resources.Load<AudioClip>("Sounds/Battle/Reverberation1st_Briah"),Resources.Load<AudioClip>("Sounds/Battle/Reverberation1st_Atziluth"),
+            Resources.Load<AudioClip>("Sounds/Battle/Reverberation1st_Argalia")};
         }
         public static string GetParam(string ID, string Language)
         {

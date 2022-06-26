@@ -178,6 +178,39 @@
 		<BattleCardDesc ID="18500007">
 			<LocalizedName>We Need You, You Know~?</LocalizedName>
 		</BattleCardDesc>
+		<BattleCardDesc ID="18500008">
+			<LocalizedName>Mr. Knife's Throwing Knife</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500009">
+			<LocalizedName>Ms. Mermaid's Amazing Voice</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500011">
+			<LocalizedName>Casual Toss</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500012">
+			<LocalizedName>Cross Cut</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500013">
+			<LocalizedName>Guillotine</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500014">
+			<LocalizedName>Knife Barrage</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500021">
+			<LocalizedName>Aria of Encouragement</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500022">
+			<LocalizedName>Aria of Auspice</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500023">
+			<LocalizedName>Aria of Courage</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500024">
+			<LocalizedName>Horrendous Pitch</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="18500025">
+			<LocalizedName>Resonating Terror</LocalizedName>
+		</BattleCardDesc>
 		<!--塔尼亚-->
 		<BattleCardDesc ID="18600001">
 			<LocalizedName>Fisticuffs</LocalizedName>

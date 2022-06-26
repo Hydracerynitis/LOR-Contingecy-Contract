@@ -25,6 +25,10 @@ namespace ContractReward
             base.Init(self);
             self.bufListDetail.AddBuf(new NoEGO());
         }
+        public override int GetEmotionCoinAdder(int defaultCount)
+        {
+            return 1;
+        }
         private class NoEGO : BattleUnitBuf
         {
             public override bool IsCardChoosable(BattleDiceCardModel card)

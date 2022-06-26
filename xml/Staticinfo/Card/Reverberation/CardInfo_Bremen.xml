@@ -4,7 +4,8 @@
     		<Name>强劲之音</Name>
     		<Artwork>Bremen_Strong</Artwork>
     		<Rarity>Common</Rarity>
-		    <Option>NoInventory</Option>
+		    <Option>OnlyPage</Option>
+			<Option>Basic</Option>
     		<Spec Range="Near" Cost="2" />
     		<Script></Script>
     		<ScriptDesc></ScriptDesc>
@@ -19,7 +20,8 @@
     		<Name>永恒残音</Name>
     		<Artwork>Bremen_Strong</Artwork>
     		<Rarity>Rare</Rarity>
-		    <Option>NoInventory</Option>
+		    <Option>OnlyPage</Option>
+			<Option>Basic</Option>
     		<Spec Range="Near" Cost="2" />
     		<Script>ally2strength1thisRound</Script>
     		<ScriptDesc></ScriptDesc>
@@ -35,7 +37,8 @@
     		<Name>至暗圣地</Name>
     		<Artwork>Bremen_Strong</Artwork>
     		<Rarity>Uncommon</Rarity>
-		    <Option>NoInventory</Option>
+		    <Option>OnlyPage</Option>
+			<Option>Basic</Option>
     		<Spec Range="Near" Cost="3" />
     		<Script>enemy1weak1thisRound</Script>
     		<ScriptDesc></ScriptDesc>
@@ -51,7 +54,8 @@
     		<Name>爆炸旋律</Name>
     		<Artwork>Bremen_Strong</Artwork>
     		<Rarity>Rare</Rarity>
-		    <Option>NoInventory</Option>
+		    <Option>OnlyPage</Option>
+			<Option>Basic</Option>
     		<Spec Range="Near" Cost="3" />
     		<Script>enemy2weak1thisRound</Script>
     		<ScriptDesc></ScriptDesc>
@@ -65,7 +69,8 @@
     		<Name>合奏</Name>
     		<Artwork>Bremen_Sing</Artwork>
     		<Rarity>Rare</Rarity>
-		    <Option>NoInventory</Option>
+		    <Option>OnlyPage</Option>
+			<Option>Basic</Option>
     		<Spec Range="Near" Cost="5" />
     		<Script>bremen_boom</Script>
     		<ScriptDesc></ScriptDesc>
@@ -79,7 +84,7 @@
   	</Card>
   	<Card ID="18400006">
     		<Name>顶点大合奏</Name>
-    		<Artwork>Bremen_Strong</Artwork>3
+    		<Artwork>Bremen_Strong</Artwork>
     		<Rarity>Unique</Rarity>
 		    <Option>NoInventory</Option>
             <Option>ExhaustOnUse</Option>

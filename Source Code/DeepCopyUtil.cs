@@ -161,5 +161,20 @@ namespace Contingecy_Contract
                 copy.Script.Add(s);
             return copy;
         }
+        public static BookXmlInfo CopyForDemo(this BookXmlInfo xml)
+        {
+            return new BookXmlInfo()
+            {
+                _id = xml.id.id,
+                workshopID = xml.id.packageId,
+                InnerName = BookDescXmlList.Instance.GetBookName(xml.id),
+                _bookIcon = xml._bookIcon,
+                Chapter = xml.Chapter,
+                episode = xml.episode,
+                EquipEffect = xml.EquipEffect,
+                CharacterSkin = new List<string>(xml.CharacterSkin),
+                isError = true
+            };
+        }
     }
 }

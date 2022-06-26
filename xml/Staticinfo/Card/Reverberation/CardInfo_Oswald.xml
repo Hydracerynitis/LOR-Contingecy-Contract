@@ -4,14 +4,14 @@
         <Name>一起哈皮~</Name>
         <Artwork>Oswald_Show</Artwork>
         <Rarity>Common</Rarity>
-        <Option>NoInventory</Option>
-        <Keyword></Keyword>
-        <Spec Range="Near" Cost="1" />
-        <Script>Oswald_energy3</Script>
+        <Option>OnlyPage</Option>
+		    <Option>Basic</Option>
+        <Spec Range="Near" Cost="0" />
+        <Script>AllEnergy1</Script>
         <ScriptDesc></ScriptDesc>
         <BehaviourList>
-            <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="H" EffectRes="Oswald_H" Script="" ActionScript="" Desc="" />
             <Behaviour Min="3" Dice="7" Type="Atk" Detail="Slash" Motion="H" EffectRes="Oswald_H" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="2" Dice="6" Type="Atk" Detail="Slash" Motion="H" EffectRes="Oswald_H" Script="" ActionScript="" Desc="" />
             <Behaviour Min="3" Dice="7" Type="Standby" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
         </BehaviourList>
         <Chapter>7</Chapter>
@@ -21,9 +21,10 @@
         <Name>会吓一跳吗！？&lt;color="red"&gt;♥&lt;/color&gt;</Name>
         <Artwork>Oswald_Atk</Artwork>
         <Rarity>Rare</Rarity>
-        <Option>NoInventory</Option>
-        <Spec Range="Near" Cost="1" />
-        <Script>Oswald_energy3</Script>
+        <Option>OnlyPage</Option>
+		    <Option>Basic</Option>
+        <Spec Range="Near" Cost="0" />
+        <Script>AllDraw1</Script>
         <ScriptDesc></ScriptDesc>
         <BehaviourList>
             <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="Oswald_G" Script="oswald_recoverhp5pw" ActionScript="" Desc="" />
@@ -37,13 +38,14 @@
     <Name>嘭！~嘭！！♠</Name>
     <Artwork>Oswald_Atk</Artwork>
     <Rarity>Rare</Rarity>
-    <Option>NoInventory</Option>
+    <Option>OnlyPage</Option>
+		    <Option>Basic</Option>
     <Spec Range="Near" Cost="2" />
     <Script>Oswald_firstplquickendu</Script>
     <ScriptDesc></ScriptDesc>
     <BehaviourList>
-      <Behaviour Min="3" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="oswald_poweruplast1pw" ActionScript="" Desc="" />
-      <Behaviour Min="3" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="oswald_poweruplast1pw" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="oswald_poweruplast1pw" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="oswald_poweruplast1pw" ActionScript="" Desc="" />
       <Behaviour Min="3" Dice="5" Type="Atk" Detail="Hit" Motion="Z" EffectRes="Oswald_Z" Script="oswald_seal1atk" ActionScript="" Desc="" />
     </BehaviourList>
     <Chapter>7</Chapter>
@@ -53,12 +55,13 @@
     <Name>接好喽~！♣</Name>
     <Artwork>Oswald_Atk</Artwork>
     <Rarity>Rare</Rarity>
-    <Option>NoInventory</Option>
+    <Option>OnlyPage</Option>
+		    <Option>Basic</Option>
     <Spec Range="Near" Cost="2" />
     <Script>Oswald_firstplstr</Script>
     <ScriptDesc></ScriptDesc>
     <BehaviourList>
-      <Behaviour Min="9" Dice="12" Type="Atk" Detail="Hit" Motion="J" EffectRes="Oswald_J" Script="oswald_destroyallatk" ActionScript="Oswald_StrongVert" Desc="" />
+      <Behaviour Min="9" Dice="15" Type="Atk" Detail="Hit" Motion="J" EffectRes="Oswald_J" Script="oswald_destroyallatk" ActionScript="Oswald_StrongVert" Desc="" />
       <Behaviour Min="6" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="Oswald_G" Script="" ActionScript="" Desc="" />
     </BehaviourList>
     <Chapter>7</Chapter>
@@ -68,14 +71,15 @@
     <Name>蹦过去吧？&lt;color="red"&gt;◆&lt;/color&gt;</Name>
     <Artwork>Oswald_Atk</Artwork>
     <Rarity>Rare</Rarity>
-    <Option>NoInventory</Option>
+    <Option>OnlyPage</Option>
+		    <Option>Basic</Option>
     <Spec Range="Far" Cost="3" />
     <Script>Oswald_allpl</Script>
     <ScriptDesc></ScriptDesc>
     <BehaviourList>
-      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Hit" Motion="F" EffectRes="FX_Mon_Oswarld_FireRing" Script="burn1atk" ActionScript="Oswald_FireRing" Desc="" />
-      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="F" EffectRes="FX_Mon_Oswarld_FireRing" Script="burn1atk" ActionScript="Oswald_FireRing" Desc="" />
-      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="F" EffectRes="FX_Mon_Oswarld_FireRing" Script="burn1atk" ActionScript="Oswald_FireRing" Desc="" />
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Hit" Motion="F" EffectRes="FX_Mon_Oswarld_FireRing" Script="burn1atk" ActionScript="Oswald_FireRing" Desc="" />
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Hit" Motion="F" EffectRes="FX_Mon_Oswarld_FireRing" Script="burn1atk" ActionScript="Oswald_FireRing" Desc="" />
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Hit" Motion="F" EffectRes="FX_Mon_Oswarld_FireRing" Script="burn1atk" ActionScript="Oswald_FireRing" Desc="" />
     </BehaviourList>
     <Chapter>7</Chapter>
     <Priority>0</Priority>
@@ -84,12 +88,13 @@
     <Name>高潮！！！</Name>
     <Artwork>Oswald_Strong</Artwork>
     <Rarity>Unique</Rarity>
-    <Option>NoInventory</Option>
+    <Option>OnlyPage</Option>
+		    <Option>Basic</Option>
     <Spec Range="FarArea" Cost="5" Affection="Team"/>
     <Script>Oswald_area</Script>
     <ScriptDesc></ScriptDesc>
     <BehaviourList>
-      <Behaviour Min="20" Dice="20" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="oswald_break8areaatk" ActionScript="Oswald_AreaAtk" Desc="" />
+      <Behaviour Min="25" Dice="25" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="oswald_break8areaatk" ActionScript="Oswald_AreaAtk" Desc="" />
     </BehaviourList>
     <Chapter>7</Chapter>
     <Priority>0</Priority>
@@ -104,6 +109,175 @@
     <ScriptDesc></ScriptDesc>
     <BehaviourList>
       <Behaviour Min="1" Dice="1" Type="Atk" Detail="Hit" Motion="S1" EffectRes="Oswald_Daze" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="18500008">
+    <Name>利刃先生的飞刀表演</Name>
+    <Artwork>Oswald_Show</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>Personal</Option>
+    <Spec Range="Instance" Cost="3" />
+    <Script>Oswald_Knife</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="18500009">
+    <Name>美人鱼小姐的嘹亮歌喉</Name>
+    <Artwork>Oswald_Show</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>Personal</Option>
+    <Spec Range="Instance" Cost="3" />
+    <Script>Oswald_Mermaid</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="18500011">
+    <Name>微力飞掷</Name>
+    <Artwork>Oswald_Show</Artwork>
+    <Rarity>Common</Rarity>
+    <Option>OnlyPage</Option>
+		    <Option>Basic</Option>
+    <Spec Range="Far" Cost="0"/>
+    <Script>drawAndEnergy</Script>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="OswaldBlade_F" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="OswaldBlade_F" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="18500012">
+    <Name>X切割</Name>
+    <Artwork>Oswald_Show</Artwork>
+    <Rarity>Uncommon</Rarity>
+   <Option>OnlyPage</Option>
+		    <Option>Basic</Option>
+    <Spec Range="Near" Cost="2"/>
+    <Script></Script>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="" Script="bleeding2atk" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="" Script="bleeding2atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="18500013">
+    <Name>断头台</Name>
+    <Artwork>Oswald_Show</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Option>OnlyPage</Option>
+		    <Option>Basic</Option>
+    <Spec Range="Near" Cost="2"/>
+    <Script></Script>
+    <BehaviourList>
+      <Behaviour Min="8" Dice="12" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="oswald_destroy1dice" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Standby" Detail="Slash" Motion="J" EffectRes="" Script="bleeding1atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="18500014">
+    <Name>连续飞剑</Name>
+    <Artwork>Oswald_Show</Artwork>
+    <Rarity>Rare</Rarity>
+    <Option>OnlyPage</Option>
+		    <Option>Basic</Option>
+    <Spec Range="Far" Cost="3"/>
+    <Script>KnifeQua</Script>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="OswaldBlade_F" Script="oswald_power1bleed1pw" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="OswaldBlade_F" Script="oswald_power1bleed1pw" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="OswaldBlade_F" Script="oswald_power1bleed1pw" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="OswaldBlade_F" Script="oswald_str1quick1atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="18500021">
+    <Name>鼓舞咏叹调</Name>
+    <Artwork>Oswald_Show</Artwork>
+    <Rarity>Common</Rarity>
+    <Option>OnlyPage</Option>
+		    <Option>Basic</Option>
+    <Spec Range="Near" Cost="2"/>
+    <Script>oswald_aria_recover</Script>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="10" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="10" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="9" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="18500022">
+    <Name>守护咏叹调</Name>
+    <Artwork>Oswald_Show</Artwork>
+    <Rarity>Common</Rarity>
+    <Option>OnlyPage</Option>
+		    <Option>Basic</Option>
+    <Spec Range="Far" Cost="2"/>
+    <Script>oswald_aria_protection</Script>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="6" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Standby" Detail="Hit" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="18500023">
+    <Name>勇气咏叹调</Name>
+    <Artwork>Oswald_Show</Artwork>
+    <Rarity>Common</Rarity>
+    <Option>OnlyPage</Option>
+		    <Option>Basic</Option>
+    <Spec Range="Far" Cost="1"/>
+    <Script>oswald_aria_strength</Script>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Hit" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="18500024">
+    <Name>毛骨悚然的声音</Name>
+    <Artwork>Oswald_Show</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Option>OnlyPage</Option>
+		    <Option>Basic</Option>
+    <Spec Range="Far" Cost="0"/>
+    <Script>drawCard</Script>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Hit" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="18500025">
+    <Name>响彻云霄的恐惧</Name>
+    <Artwork>Oswald_Show</Artwork>
+    <Rarity>Rare</Rarity>
+    <Option>OnlyPage</Option>
+		    <Option>Basic</Option>
+    <Spec Range="FarAreaEach" Cost="4" Affection="Team"/>
+    <Script>AoeCoolDown</Script>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="oswald_break4areaatk" ActionScript="OswaldMermaid_AreaAtk" Desc="" />
+      <Behaviour Min="6" Dice="9" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="oswald_break4areaatk" ActionScript="OswaldMermaid_AreaAtk" Desc="" />
     </BehaviourList>
     <Chapter>7</Chapter>
     <Priority>0</Priority>

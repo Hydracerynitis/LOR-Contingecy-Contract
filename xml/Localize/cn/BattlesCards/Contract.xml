@@ -5,5 +5,24 @@
 		<BattleCardDesc ID="1">
 			<LocalizedName>罪恶感</LocalizedName>
 		</BattleCardDesc>
+		<!--音乐盒-->
+		<BattleCardDesc ID="101">
+			<LocalizedName>演奏开始</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="102">
+			<LocalizedName>变奏:第一乐章</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="103">
+			<LocalizedName>变奏:第二乐章</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="104">
+			<LocalizedName>变奏:第三乐章</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="105">
+			<LocalizedName>变奏:第四乐章</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="106">
+			<LocalizedName>演奏结束</LocalizedName>
+		</BattleCardDesc>
  	</cardDescList>
 </BattleCardDescRoot>

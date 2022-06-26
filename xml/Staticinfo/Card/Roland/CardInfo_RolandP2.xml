@@ -4,14 +4,15 @@
 		<Name>震骇猛击</Name>
 		<Artwork>Roland2Phase6</Artwork>
 		<Rarity>Unique</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Near" Cost="0" />
-		<Script>energy3</Script>
+		<Script>pinochioego</Script>
 		<ScriptDesc></ScriptDesc>
 		<BehaviourList>
 			<Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
 			<Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
-			<Behaviour Min="3" Dice="7" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="7" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
 		</BehaviourList>
 		<Chapter>7</Chapter>
 		<Priority>0</Priority>
@@ -20,7 +21,8 @@
 		<Name>大卸八块</Name>
 		<Artwork>Roland2Phase2</Artwork>
 		<Rarity>Unique</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Near" Cost="2" />
 		<Script>addRecoverHp3Atkalldice</Script>
 		<ScriptDesc></ScriptDesc>
@@ -35,12 +37,13 @@
 		<Name>巨尾横扫</Name>
 		<Artwork>Roland2Phase5</Artwork>
 		<Rarity>Unique</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Near" Cost="2" />
-		<Script>drawCards3</Script>
+		<Script></Script>
 		<ScriptDesc></ScriptDesc>
 		<BehaviourList>
-			<Behaviour Min="9" Dice="14" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="bleeding3atk" ActionScript="" Desc="" />
+			<Behaviour Min="9" Dice="14" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="bleeding6atk" ActionScript="" Desc="" />
 		</BehaviourList>
 		<Chapter>7</Chapter>
 		<Priority>0</Priority>
@@ -49,7 +52,8 @@
 		<Name>血肉凝结</Name>
 		<Artwork>Roland2Phase3</Artwork>
 		<Rarity>Unique</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Far" Cost="2" />
 		<Script></Script>
 		<ScriptDesc></ScriptDesc>
@@ -65,7 +69,8 @@
 		<Name>毒烟爆喷</Name>
 		<Artwork>Roland2Phase1</Artwork>
 		<Rarity>Unique</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="FarArea" Cost="5" />
 		<Script>AoeCoolDown</Script>
 		<ScriptDesc></ScriptDesc>

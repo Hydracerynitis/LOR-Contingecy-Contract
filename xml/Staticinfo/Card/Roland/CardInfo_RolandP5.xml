@@ -4,6 +4,8 @@
 		<Name>愤怒</Name>
 		<Artwork>Roland3Phase_RolandLonely</Artwork>
 		<Rarity>Rare</Rarity>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Near" Cost="3" />
 		<Script>black_4th_durandalstrong</Script>
 		<ScriptDesc></ScriptDesc>
@@ -20,6 +22,8 @@
 		<Name>悲伤</Name>
 		<Artwork>Roland3Phase_RolandLonely</Artwork>
 		<Rarity>Uncommon</Rarity>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Near" Cost="3" />
 		<Script>black_4th_durandal</Script>
 		<ScriptDesc></ScriptDesc>
@@ -35,6 +39,8 @@
 		<Name>空虚</Name>
 		<Artwork>Roland3Phase_RolandLonely</Artwork>
 		<Rarity>Uncommon</Rarity>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Near" Cost="3" />
 		<Script>black_4th_durandalweak</Script>
 		<ScriptDesc></ScriptDesc>
@@ -50,8 +56,10 @@
 		<Name>矛盾</Name>
 		<Artwork>Roland4Phase_Shout</Artwork>
 		<Rarity>Uncommon</Rarity>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Near" Cost="1" />
-		<Script>energy3</Script>
+		<Script></Script>
 		<ScriptDesc></ScriptDesc>
 		<BehaviourList>
 			<Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="BS4DurandalUp_J" Script="binding1atk" ActionScript="" Desc="" />
@@ -66,7 +74,9 @@
 		<Name>苦痛</Name>
 		<Artwork>Roland4Phase_Shout</Artwork>
 		<Rarity>Uncommon</Rarity>
-		<Spec Range="Near" Cost="0" />
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
+		<Spec Range="Near" Cost="2" />
 		<Script>Agony</Script>
 		<ScriptDesc></ScriptDesc>
 		<BehaviourList>
@@ -80,6 +90,8 @@
 		<Name>呐喊</Name>
 		<Artwork>Roland3Phase_RolandFury</Artwork>
 		<Rarity>Unique</Rarity>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="FarAreaEach" Cost="5" Affection="Team"/>
 		<Script>AoeCoolDown</Script>
 		<ScriptDesc></ScriptDesc>

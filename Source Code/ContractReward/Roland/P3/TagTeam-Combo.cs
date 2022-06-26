@@ -16,8 +16,7 @@ namespace ContractReward
         }
         public void TagTeamEffect(BattleUnitModel TagTeamMate)
         {
-            owner.cardSlotDetail.RecoverPlayPoint(6);
-            owner.allyCardDetail.DrawCards(2);
+            card.ApplyDiceStatBonus(x => x.index==1,new DiceStatBonus() { min=2,max=2});
         }
     }
     public class DiceCardSelfAbility_AngelicaCombo : DiceCardSelfAbility_rolandCombo, TagTeam
@@ -30,8 +29,7 @@ namespace ContractReward
         }
         public void TagTeamEffect(BattleUnitModel TagTeamMate)
         {
-            owner.cardSlotDetail.RecoverPlayPoint(6);
-            owner.allyCardDetail.DrawCards(2);
+            card.ApplyDiceStatBonus(x => x.index == 0, new DiceStatBonus() { max=5});
         }
     }
 }

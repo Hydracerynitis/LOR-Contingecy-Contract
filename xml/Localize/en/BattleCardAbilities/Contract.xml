@@ -4,13 +4,26 @@
 	  <BattleCardAbility ID="BlackSilence_Guilt">
     		<Desc>Cost is reduced by 1 on Clash Win</Desc>
   	</BattleCardAbility>
+	<!--音乐盒-->
+	<BattleCardAbility ID="SwitchMusic">
+    		<Desc>&lt;color=#3355FF&gt;This will be a requiem, devoted for Angelica&lt;/color&gt;</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="SwitchChapter1">
+    		<Desc>&lt;color=#3355FF&gt;Cello, Harp, Percussion, Horn, Tuba and Trombone; UP&lt;/color&gt;</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="SwitchChapter2">
+    		<Desc>&lt;color=#3355FF&gt;Clarinet, Viola, Second Violin; UP&lt;/color&gt;</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="SwitchChapter3">
+    		<Desc>&lt;color=#3355FF&gt;First Violin and Pipe Organ; UP&lt;/color&gt;</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="SwitchChapter4">
+    		<Desc>&lt;color=#3355FF&gt;Everyone, start performed TOGETHER&lt;/color&gt;</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="EndMusic">
+    		<Desc>&lt;color=#3355FF&gt;Thank you for everyone attending this concert&lt;/color&gt;</Desc>
+  	</BattleCardAbility>
 	<!--奖励通用-->
-	<BattleCardAbility ID="energy3">
-    		<Desc>[On Use] Recover 3 Light</Desc>
-  	</BattleCardAbility>
-	<BattleCardAbility ID="drawCards3">
-    		<Desc>[On Use] Draw 3 Pages</Desc>
-  	</BattleCardAbility>
 	<BattleCardAbility ID="AoeCoolDown">
 		<Desc>This page can be reused only after 4 scenes</Desc>
   	</BattleCardAbility>

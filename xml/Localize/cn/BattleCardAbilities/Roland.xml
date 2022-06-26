@@ -2,32 +2,32 @@
 <BattleCardAbilityDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 		<!--P3-->
 	  <BattleCardAbility ID="Vigilant1">
-    		<Desc>[使用时] 下一幕获得2层[迅捷]</Desc>
-			<Desc>这一幕结束时若在手中则恢复1点光芒</Desc>
+			<Desc>这一幕结束时若在手中则恢复3点混乱抗性</Desc>
   	</BattleCardAbility>
 	  <BattleCardAbility ID="Vigilant2">
-    		<Desc>[使用时] 抽取3张书页</Desc>
 			<Desc>这一幕结束时若在手中则下一幕获得1层[迅捷]</Desc>
   	</BattleCardAbility>
 	  <BattleCardAbility ID="RolandCombo">
-    		<Desc>[协同 纯白圆舞曲] 恢复6点光芒并且抽取2张书页</Desc>
+    		<Desc>[协同 纯白圆舞曲] 该书页第二个骰子基础值提升2点</Desc>
   	</BattleCardAbility>
 	  <BattleCardAbility ID="AngelicaCombo">
-    		<Desc>[协同 漆黑华尔兹] 恢复6点光芒并且抽取2张书页</Desc>
+    		<Desc>[协同 漆黑华尔兹] 该书页第一个骰子最大值提升5点</Desc>
   	</BattleCardAbility>
 	  <BattleCardAbility ID="RolandAura">
-    		<Desc>[协同 纯白之束] 使自身和[协同者]抽取2张书页</Desc>
+    		<Desc>[协同 纯白之束] 使自身和[协同者]恢复2点光芒</Desc>
   	</BattleCardAbility>
 	  <BattleCardAbility ID="AngelicaAura">
-    		<Desc>[协同 漆黑之束] 使自身和[协同者]恢复3点光芒</Desc>
+    		<Desc>[协同 漆黑之束] 使自身和[协同者]恢复2点光芒</Desc>
   	</BattleCardAbility>
 	  <BattleCardAbility ID="GainSL">
     		<Desc>[协同 混乱之束] 若这一幕内并未失去灵魂链接,获得2层灵魂链接</Desc>
   	</BattleCardAbility>
 	  <BattleCardAbility ID="RolandZelkova">
+	  		<Desc>[使用时] 抽取一张书页</Desc>
     		<Desc>[协同 突击-榉树工坊] 将一个斩击4-8的骰子([命中时] 下一幕施加3层流血)置入书页开头</Desc>
   	</BattleCardAbility>
 	  <BattleCardAbility ID="AngelicaZelkova">
+	  		<Desc>[使用时] 抽取一张书页</Desc>
     		<Desc>[协同 掩护-榉树工坊]  将一个斩击3-8的骰子([命中时] 恢复5点混乱抗性)置入书页末尾</Desc>
   	</BattleCardAbility>
 	  <BattleCardAbility ID="RolandAllas">
@@ -52,6 +52,6 @@
 每使用不同一张书页便重复投掷该书页第一个骰子一次</Desc>
   	</BattleCardAbility>
 	  <BattleCardAbility ID="Agony">
-    		<Desc>[使用时] 抽取3张书页，并且在下一幕内对随机2个敌人施加1层束缚</Desc>
+    		<Desc>[使用时] 抽取2张书页，并且在下一幕内对随机2个敌人施加1层束缚</Desc>
   	</BattleCardAbility>
 </BattleCardAbilityDescRoot>

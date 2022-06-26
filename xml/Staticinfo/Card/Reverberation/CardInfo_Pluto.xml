@@ -4,7 +4,8 @@
 		<Name>魔法: 反冲</Name>
 		<Artwork>Pluto_Atk</Artwork>
 		<Rarity>Uncommon</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Near" Cost="2"/>
 		<Script></Script>
 		<ScriptDesc></ScriptDesc>
@@ -20,7 +21,8 @@
 		<Name>魔法: 投射</Name>
 		<Artwork>Pluto_Atk</Artwork>
 		<Rarity>Uncommon</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Far" Cost="3"/>
 		<Script></Script>
 		<ScriptDesc></ScriptDesc>
@@ -37,7 +39,8 @@
 		<Name>魔法: 进攻</Name>
 		<Artwork>Pluto_Atk</Artwork>
 		<Rarity>Uncommon</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Near" Cost="2"/>
 		<Script></Script>
 		<ScriptDesc></ScriptDesc>
@@ -53,9 +56,10 @@
 		<Name>魔法: 防御</Name>
 		<Artwork>Pluto_Atk</Artwork>
 		<Rarity>Common</Rarity>
-		<Option>NoInventory</Option>
-		<Spec Range="Near" Cost="2"/>
-		<Script>energy4</Script>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
+		<Spec Range="Near" Cost="1"/>
+		<Script>BreakProtection5</Script>
 		<ScriptDesc></ScriptDesc>
     	<BehaviourList>
       		<Behaviour Min="3" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="Pluto_G" Script="" ActionScript="" Desc="" />
@@ -82,12 +86,13 @@
 		<Name>安息之臂</Name>
 		<Artwork>Pluto_Strong</Artwork>
 		<Rarity>Unique</Rarity>
-		<Option>NoInventory</Option>
-    	<Spec Range="FarAreaEach" Cost="5" Affection="Team"/>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
+    	<Spec Range="FarAreaEach" Cost="3" Affection="Team"/>
 		<Script>PlutoAoe</Script>
 		<ScriptDesc></ScriptDesc>
     	<BehaviourList>
-      		<Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="" Script="" ActionScript="Pluto_AreaAtk" Desc="" />
+      		<Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="" Script="" ActionScript="Pluto_AreaAtk" Desc="" />
       		<Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="" Script="" ActionScript="Pluto_AreaAtk_Continue" Desc="" />
       		<Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="" Script="" ActionScript="Pluto_AreaAtk_Continue" Desc="" />
 		</BehaviourList>

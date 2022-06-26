@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
+using ContractReward;
 using HarmonyLib;
 using UI;
 using BaseMod;
@@ -45,6 +45,7 @@ namespace Contingecy_Contract
         [HarmonyPrefix]
         public static bool StageController_RoundStartPhase_System()
         {
+            ExtentionMethod.triggeredCard.Clear();
             if (Duel)
                 return true;
             foreach (BattleUnitModel alive in BattleObjectManager.instance.GetAliveList())
@@ -57,11 +58,15 @@ namespace Contingecy_Contract
         }
         [HarmonyPatch(typeof(StageController), nameof(StageController.InitStageByInvitation))]
         [HarmonyPrefix]
-        public static void StageController_InitStageByInvitation(StageClassInfo stage)
+        public static void StageController_InitStageByInvitation(StageClassInfo stage, ref List<LorId> books)
         {
             Duel = false;
             if (CheckDuel(stage.id))
+            {
                 Duel = true;
+                return;
+            }
+            books = null;
         }
         [HarmonyPatch(typeof(StageController), nameof(StageController.InitStageByEndContentsStage))]
         [HarmonyPrefix]
@@ -106,8 +111,7 @@ namespace Contingecy_Contract
         public static void StageController_GameOver(bool iswin)
         {
             CCInitializer.CombaltData.Clear();
-            if(!iswin)
-                StageController.Instance._usedBooks.ForEach(x => DropBookInventoryModel.Instance.AddBook(x));
+            SynphonyOrchestra._oldEnemytheme = null;
         }
         [HarmonyPatch(typeof(UIBattleResultLeftPanel),nameof(UIBattleResultLeftPanel.SetData))]
         [HarmonyPrefix]
@@ -220,7 +224,7 @@ namespace Contingecy_Contract
             }
             return true;
         }
-        [HarmonyPatch(typeof(UI.UIController), nameof(UI.UIController.Initialize))]
+/*        [HarmonyPatch(typeof(UI.UIController), nameof(UI.UIController.Initialize))]
         [HarmonyPostfix]
         public static void UI_UIController_Initialize()
         {
@@ -229,13 +233,7 @@ namespace Contingecy_Contract
                 UI.UIController.Instance.gameObject.AddComponent<ContingecyContractGUI>();
                 UIInit = true;
             }
-        }
-        [HarmonyPatch(typeof(EntryScene), nameof(EntryScene.CheckModError))]
-        [HarmonyPrefix]
-        static void EntryScene_CheckModError_Pre()
-        {
-            ModContentManager.Instance._logs.RemoveAll(x => x.Contains("energy3") || x.Contains("drawCards3"));
-        }
+        }*/
         public static bool UIInit = false;
         public static bool Duel = false;
         public static bool CheckDuel(LorId stageId)

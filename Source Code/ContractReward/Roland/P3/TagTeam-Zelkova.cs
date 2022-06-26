@@ -6,7 +6,7 @@ using BaseMod;
 
 namespace ContractReward
 {
-    public class DiceCardSelfAbility_RolandZelkova : DiceCardSelfAbilityBase, TagTeam
+    public class DiceCardSelfAbility_RolandZelkova : DiceCardSelfAbility_drawCard, TagTeam
     {
         public override string[] Keywords => new string[] { "Combo_Keyword" };
         public override void OnUseCard()
@@ -25,7 +25,7 @@ namespace ContractReward
             card.AddDiceFront(diceBehavior);
         }
     }
-    public class DiceCardSelfAbility_AngelicaZelkova : DiceCardSelfAbilityBase, TagTeam
+    public class DiceCardSelfAbility_AngelicaZelkova : DiceCardSelfAbility_drawCard, TagTeam
     {
         public override string[] Keywords => new string[] { "Combo_Keyword" };
         public override void OnUseCard()

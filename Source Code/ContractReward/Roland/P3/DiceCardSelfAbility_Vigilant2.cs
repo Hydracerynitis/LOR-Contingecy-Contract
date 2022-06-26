@@ -8,7 +8,6 @@ namespace ContractReward
 {
     public class DiceCardSelfAbility_Vigilant2 : DiceCardSelfAbilityBase
     {
-        public override void OnUseCard() => owner.allyCardDetail.DrawCards(3);
         public override void OnRoundEnd_inHand(BattleUnitModel unit, BattleDiceCardModel self)
         {
             base.OnRoundEnd_inHand(unit, self);

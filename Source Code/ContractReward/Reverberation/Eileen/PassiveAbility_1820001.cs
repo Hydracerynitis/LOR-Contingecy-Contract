@@ -80,6 +80,10 @@ namespace ContractReward
             else
                 Gear[index].formation.ChangePos(new Vector2Int(xml.vector.x - 2, xml.vector.y - 5));
             Gear[index].moveDetail.ReturnToFormationByBlink();
+            Gear[index].allyCardDetail = new BattleAllyCardDetail(Gear[index]);
+            Gear[index].allyCardDetail.Init(owner.UnitData.unitData.GetDeckForBattle(1));
+            Gear[index].allyCardDetail.ReturnAllToDeck();
+            Gear[index].allyCardDetail.DrawCards(4);
         }
     }
 }

@@ -15,7 +15,10 @@ namespace ContractReward
         {
             if (owner.bufListDetail.GetActivatedBufList().Find(x => x is BattleUnitBuf_Insanity) is BattleUnitBuf_Insanity insanity)
             {
-                return insanity.stack > 100;
+                if (insanity.stack > 200)
+                    return true;
+                else
+                    return insanity.stack > 100 && !owner.cardSlotDetail.cardAry.Exists(x => x!= null && (x.card.GetID().id== 18000011 || x.card.GetID().id == 18000012));
             }
             else
                 return false;

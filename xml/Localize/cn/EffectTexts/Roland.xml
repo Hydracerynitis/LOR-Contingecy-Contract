@@ -33,8 +33,9 @@
 一幕内若都与同一单位拼点失败一次便减少一层。若层数达到0时使双方减少25%最大混乱并下一幕施加3层麻痹</Desc>
 		</BattleEffectText>
 		<BattleEffectText ID="Combo_Keyword">
-			<Name>协同 X： Y</Name>
-			<Desc>使用书页时,若有其他友方单位(协同者)使用书页X,触发Y效果</Desc>
+			<Name>协同 X: Y</Name>
+			<Desc>使用书页时,若有其他友方单位(协同者)使用书页X,触发Y效果
+一张书页X只能触发一次该效果</Desc>
 		</BattleEffectText>
 		<BattleEffectText ID="LearnIndicator">
 			<Name>学习</Name>

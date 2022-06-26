@@ -21,6 +21,11 @@ namespace ContractReward
             this.owner.view.Damaged((int)(0.1 * owner.MaxHp), BehaviourDetail.None, (int)(0.1 * owner.MaxHp), this.owner);
             if (this.owner.hp <= 0 && !this.owner.IsDead())
                 this.owner.Die();
+            else
+            {
+                owner.allyCardDetail.DrawCards(1);
+                owner.cardSlotDetail.RecoverPlayPoint(1);
+            }
         }
     }
 }

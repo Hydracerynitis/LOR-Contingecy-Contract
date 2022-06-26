@@ -4,11 +4,27 @@
 	  <BattleCardAbility ID="BlackSilence_Guilt">
     		<Desc>每与带有'罪恶感'的单位取得1次拼点胜利便使得本书页费用-1</Desc>
   	</BattleCardAbility>
-	<!--奖励通用-->
-	<BattleCardAbility ID="energy3">
-    		<Desc>[使用时]恢复3点光芒</Desc>
+	<!--音乐盒-->
+	<BattleCardAbility ID="SwitchMusic">
+    		<Desc>&lt;color=#3355FF&gt;这是送给安吉莉卡的镇魂之曲!&lt;/color&gt;</Desc>
   	</BattleCardAbility>
-	<BattleCardAbility ID="drawCards3">
-    		<Desc>[使用时]抽取3张书页</Desc>
+	<BattleCardAbility ID="SwitchChapter1">
+    		<Desc>&lt;color=#3355FF&gt;大提琴,竖琴,鼓,圆号,大号,长号;起&lt;/color&gt;</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="SwitchChapter2">
+    		<Desc>&lt;color=#3355FF&gt;双簧管,中提琴,第二小提琴;起&lt;/color&gt;</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="SwitchChapter3">
+    		<Desc>&lt;color=#3355FF&gt;第一小提琴和管风琴;起&lt;/color&gt;</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="SwitchChapter4">
+    		<Desc>&lt;color=#3355FF&gt;所有人,一起齐奏&lt;/color&gt;</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="EndMusic">
+    		<Desc>&lt;color=#3355FF&gt;谢谢各位的参加此次的演出&lt;/color&gt;</Desc>
+  	</BattleCardAbility>
+	<!--奖励通用-->
+	<BattleCardAbility ID="AoeCoolDown">
+		<Desc>该书页4幕内只能使用一次</Desc>
   	</BattleCardAbility>
 </BattleCardAbilityDescRoot>

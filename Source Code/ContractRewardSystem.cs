@@ -11,14 +11,13 @@ namespace Contingecy_Contract
     public class ContractRewardSystem : Singleton<ContractRewardSystem>
     {
         public static HashSet<int> ClearList = new HashSet<int>();
-        private List<string> UIs;
+        public List<string> UIs = new List<string>();
         public void CheckReward(StageClassInfo info)
         {
             if (!SupportedPid.Contains(info.id.packageId))
                 return;
             if (Singleton<ContractLoader>.Instance.GetLevel(info.id) < getLevelRequirement(info.chapter))
                 return;
-            UIs = new List<string>();
             if (StaticDataManager.RewardDic.ContainsKey(info.id))
                 ClearList.Add(StaticDataManager.RewardDic[info.id]);
             UIs.Add(TextDataModel.GetText("ui_RewardStage", getLevelRequirement(info.chapter), Singleton<StageNameXmlList>.Instance.GetName(info.id)));
@@ -47,7 +46,6 @@ namespace Contingecy_Contract
         }
         public void CheckSpecialCondition(StageClassInfo info)
         {
-                //Harmony_Patch.ClearList.Add(18810000);
             if (EnsembleComplete)
                 ClearList.Add(18000000);
             if (RolandComplete)
@@ -56,7 +54,7 @@ namespace Contingecy_Contract
         public void CheckRewardAchieved()
         {
             HashSet<int> Inventory = new HashSet<int>();
-            foreach(BookModel book in Singleton<BookInventoryModel>.Instance.GetBookListAll().FindAll(x => x.GetBookClassInfoId().packageId== "ContingencyConract"))
+            foreach(BookModel book in BookInventoryModel.Instance.GetBookListAll().FindAll(x => x.GetBookClassInfoId().packageId== "ContingencyConract"))
             {
                 int id = book.GetBookClassInfoId().id;
                 Inventory.Add(id);

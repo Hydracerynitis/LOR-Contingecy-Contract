@@ -4,13 +4,14 @@
 		<Name>思想齿轮: 加速</Name>
 		<Artwork>Eileen1</Artwork>
 		<Rarity>Unique</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Far" Cost="0"/>
 		<Script>energy2</Script>
 		<ScriptDesc></ScriptDesc>
     	<BehaviourList>
-            <Behaviour Min="4" Dice="9" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
-            <Behaviour Min="4" Dice="9" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="5" Dice="9" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="5" Dice="9" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
 		</BehaviourList>
 		<Chapter>7</Chapter>
 		 <Priority>0</Priority>
@@ -19,7 +20,8 @@
 		<Name>思想齿轮: 传播</Name>
 		<Artwork>Eileen2</Artwork>
 		<Rarity>Unique</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Far" Cost="1"/>
 		<Script>drawCard</Script>
 		<ScriptDesc></ScriptDesc>
@@ -34,7 +36,8 @@
 		<Name>思想齿轮: 传教</Name>
 		<Artwork>Eileen3</Artwork>
 		<Rarity>Unique</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Far" Cost="2"/>
 		<Script>drawCard</Script>
 		<ScriptDesc></ScriptDesc>
@@ -55,8 +58,8 @@
 		<Script></Script>
 		<ScriptDesc></ScriptDesc>
     	<BehaviourList>
-            <Behaviour Min="5" Dice="10" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="eileen_Text" ActionScript="Eileen_FarArea" Desc="" />
-            <Behaviour Min="14" Dice="20" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="" Script="eileen_Stun" ActionScript="Eileen_FarArea_Second" Desc="" />
+            <Behaviour Min="5" Dice="14" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="eileen_Text" ActionScript="Eileen_FarArea" Desc="" />
+            <Behaviour Min="14" Dice="24" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="" Script="eileen_Stun" ActionScript="Eileen_FarArea_Second" Desc="" />
 		</BehaviourList>
 		<Chapter>7</Chapter>
 		<Priority>0</Priority>

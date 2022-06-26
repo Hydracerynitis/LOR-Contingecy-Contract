@@ -10,6 +10,7 @@
   	</BattleCardAbility>
 	 <BattleCardAbility ID="Insane2">
     		<Desc>消耗100点[狂乱]值使用</Desc>
+			<Desc>该书页造成的伤害不会提升狂乱值</Desc>
   	</BattleCardAbility>
 	  <BattleCardAbility ID="AllVibrate">
     		<Desc>[使用时]将所有敌方单位[震颤]层数设为4</Desc>
@@ -44,10 +45,13 @@
     		<Desc>[使用时] 若目标[烧伤]层数大于10则本书页所有骰子威力+2</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="LoseBurn">
-    		<Desc>[使用时] 减少自身[烧伤]层数5点</Desc>
+    		<Desc>[战斗开始时] 减少自身[烧伤]层数5点并对其他所有单位施加2层[烧伤]</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="BurnCostDown">
     		<Desc>[使用时] 若目标烧伤层数大于10层则使随机2张手牌费用设定为0(仅限这一次)</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="Negative3">
+    		<Desc>[使用时] 获得3个负面情感硬币</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="philip_area_atk">
     		<Desc>[命中时] 对目标施加3层烧伤</Desc>
@@ -86,7 +90,6 @@
   	</BattleCardAbility>
   	<BattleCardAbility ID="GretaCut">
     		<Desc>每一幕开始时若场上有[大肉]则会升级</Desc>
-    		<Desc>[使用时]恢复3点光芒</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="greta_seasoningAtk">
     		<Desc>[命中时]下一幕中对目标施加1层[流血]与[易损]</Desc>
@@ -110,16 +113,15 @@
 	<BattleCardAbility ID="GretaCatch">
     		<Desc>[使用时]摧毁目标当前书页的所有骰子并将其变为[大肉]</Desc>
   	</BattleCardAbility>
-	<BattleCardAbility ID="GretaMeatCut">
-    		<Desc>只能把[大肉]指定为目标</Desc>
-    		<Desc>[使用时]恢复3点光芒</Desc>
-  	</BattleCardAbility>
 	<BattleCardAbility ID="GretaMeatMeal">
     		<Desc>只能把[大肉]指定为目标</Desc>
     		<Desc>每一幕开始时将费用设定为[当前光芒]</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="greta_mealAtk">
     		<Desc>[命中时]恢复20点体力;若目标是[大肉],击杀目标.</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="BleedPlus">
+    	<Desc>[战斗开始]这一幕中自身使用书页施加[流血]时层数+1</Desc>
   	</BattleCardAbility>
 	<!--不来梅-->
   	<BattleCardAbility ID="bremen_boom">
@@ -154,14 +156,17 @@
     		<Desc>[命中时]下一幕中对目标施加1层[麻痹]</Desc>
   	</BattleCardAbility>
 	<!--奥斯瓦尔德-->
-	<BattleCardAbility ID="Oswald_energy3">
-    		<Desc>[脸贴脸~] 恢复3点光芒</Desc>
+	<BattleCardAbility ID="AllEnergy1">
+    		<Desc>[脸贴脸~] 所有我方单位恢复1点光芒</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="AllDraw1">
+    		<Desc>[脸贴脸~] 所有我方单位抽取1张手牌</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="oswald_recoverhp5pw">
     		<Desc>[我比你大~]恢复5点体力</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="Oswald_firstplquickendu">
-    		<Desc>[做得好哟~]若最后一颗骰子拼点失败则下一幕中使目标获得1层[忍耐]与[迅捷]</Desc>
+    		<Desc>[做得好哟~]若最后一颗骰子拼点失败则下一幕中使目标获得2层[忍耐]与[迅捷]</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="oswald_poweruplast1pw">
     		<Desc>[我比你大~]使自身当前书页的最后一颗骰子威力+1</Desc>
@@ -170,13 +175,13 @@
     		<Desc>[糊你一脸！]下一幕中[封印]目标1颗速度骰子</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="Oswald_firstplstr">
-    		<Desc>[做得好哟~]若第一颗骰子拼点失败则下一幕中使目标获得1层[强壮]</Desc>
+    		<Desc>[做得好哟~]若第一颗骰子拼点失败则下一幕中使目标获得2层[强壮]</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="oswald_destroyallatk">
     		<Desc>[我比你大~]摧毁目标当前书页的所有骰子</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="Oswald_allpl">
-    		<Desc>[做得好哟~]若所有骰子全部拼点失败则为目标恢复2点光芒</Desc>
+    		<Desc>[做得好哟~]若所有骰子全部拼点失败则为目标恢复2点光芒抽取2张书页</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="Oswald_area">
     		<Desc>[大家都来玩呀！][脸贴脸~]下一幕中使目标随机获得2层[易损]/[破绽]/[虚弱]/[守护]/[强壮]/[忍耐]</Desc>
@@ -185,6 +190,38 @@
 	<BattleCardAbility ID="Oswald_daze">
     		<Desc>[塞上去~]使目标友方单位陷入混乱并在下一幕中陷入[迷惑]</Desc>
 			<Desc>该书页仅可在场上没有“迷惑”的友方单位存活时使用.</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="Oswald_Knife">
+    		<Desc>[塞上去~]召唤利刃先生</Desc>
+			<Desc>移除"美人鱼小姐的嘹亮歌喉"</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="Oswald_Mermaid">
+    		<Desc>[塞上去~]召唤美人鱼小姐</Desc>
+			<Desc>移除"利刃先生的飞刀表演".</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="oswald_destroy1dice">
+    		<Desc>[命中时]摧毁目标当前书页的下一颗骰子</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="KnifeQua">
+    		<Desc>若最后一颗骰子未能命中则下一幕中使自身获得2层[虚弱]</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="oswald_power1bleed1pw">
+    		<Desc>[拼点胜利]下一幕中对目标施加1层[流血]并使自身当前书页的下一颗骰子威力+1</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="oswald_str1quick1atk">
+    		<Desc>[命中时]下一幕中使自身获得1层[强壮]与[迅捷]</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="oswald_aria_recover">
+    		<Desc>[使用时]为体力最低的我方角色恢复8点体力</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="oswald_aria_protection">
+    		<Desc>[使用时]使体力最低的我方角色获得2层[守护]</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="oswald_aria_strength">
+    		<Desc>[使用时]使体力最低的我方角色获得1层[强壮]</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="oswald_break4areaatk">
+    		<Desc>[命中时]追加4点混乱伤害</Desc>
   	</BattleCardAbility>
 	<!--塔尼亚-->
   	<BattleCardAbility ID="TanyaCoolDown">
@@ -238,9 +275,6 @@
     	<Desc>[战斗开始]使目标获得2层[强壮][忍耐]</Desc>
 		<Desc>可指向友方单位为目标</Desc>
   	</BattleCardAbility>
-  	<BattleCardAbility ID="AoeCoolDown">
-		<Desc>该书页4幕内只能使用一次</Desc>
-  	</BattleCardAbility>
   	<BattleCardAbility ID="ElenaZombie">
     	<Desc>使目标下一幕起恢复所有血量和混乱抗性并转向攻击其友方单位</Desc>
     	<Desc>若无目标的其他友方单位则自动消散</Desc>
@@ -266,7 +300,10 @@
 	<BattleCardAbility ID="PlutoAoe">
     		<Desc>[使用时]根据目标数量提升该书页所有骰子伤害</Desc>
     		<Desc>目标数量越少伤害加成越大</Desc>
-    	<Desc>该书页4幕内只能使用一次</Desc>
+    	<Desc>该书页2幕内只能使用一次</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="BreakProtection5">
+    		<Desc>[战斗开始] 这一幕内获得5层[振奋]</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="PlutoContract1">
     		<Desc>[装备时]为选择的友方单位生效自由合同</Desc>

@@ -258,5 +258,15 @@ namespace Contingecy_Contract
                 }
             }
         }
+        [HarmonyPatch(typeof(BattleUnitEmotionDetail),nameof(BattleUnitEmotionDetail.DrawCardAdder))]
+        [HarmonyPostfix]
+        public static void BattleUnitEmotionDetail_DrawCardAdder(BattleUnitEmotionDetail __instance, ref int __result, int previousUsedCount)
+        {
+            foreach (PassiveAbilityBase passive in __instance._self.passiveDetail.PassiveList)
+            {
+                if (passive is CardDrawer)
+                    __result = __result+(passive as CardDrawer).getDrawCardAdder(previousUsedCount);
+            }
+        }
     }
 }

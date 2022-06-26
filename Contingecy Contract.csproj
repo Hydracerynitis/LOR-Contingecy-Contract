@@ -88,11 +88,29 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.UI.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.UIModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Source Code\CCGUI_new\BaseUI.cs" />
+    <Compile Include="Source Code\CCGUI_new\CCLevel.cs" />
+    <Compile Include="Source Code\CCGUI_new\CCManager.cs" />
+    <Compile Include="Source Code\CCGUI_new\CCTag.cs" />
+    <Compile Include="Source Code\CCGUI_new\CCTagList.cs" />
+    <Compile Include="Source Code\CCGUI_new\CCTagUGUI.cs" />
+    <Compile Include="Source Code\CCGUI_new\CCUGUI.cs" />
+    <Compile Include="Source Code\CCGUI_new\MyUITool.cs" />
     <Compile Include="Source Code\ContingecyContractGUI.cs" />
     <Compile Include="Source Code\ContractReward\DiceCardSelfAbility_DirectAttack.cs" />
-    <Compile Include="Source Code\ContractReward\DiceCardSelfAbility_darwCards3.cs" />
+    <Compile Include="Source Code\ContractReward\Reverberation\Greta\DiceCardSelfAbility_BleedPlus.cs" />
+    <Compile Include="Source Code\ContractReward\Reverberation\Oswald\DiceCardSelfAbility_Oswald_AllDraw1.cs" />
+    <Compile Include="Source Code\ContractReward\Reverberation\Oswald\DiceCardSelfAbility_Oswald_Mermaid.cs" />
+    <Compile Include="Source Code\ContractReward\Reverberation\Oswald\DiceCardSelfAbility_Oswald_Knife.cs" />
+    <Compile Include="Source Code\ContractReward\Reverberation\Oswald\PassiveAbility_1850011.cs" />
+    <Compile Include="Source Code\ContractReward\Reverberation\Philiph\DiceCardSelfAbility_Negative3.cs" />
+    <Compile Include="Source Code\ContractReward\Reverberation\Pluto\DiceCardSelfAbility_BreakProtection5.cs" />
     <Compile Include="Source Code\ContractReward\Roland\P1\PassiveAbility_1700013.cs" />
     <Compile Include="Source Code\ContractReward\Roland\P1\PassiveAbility_1700011.cs" />
     <Compile Include="Source Code\ContractReward\Roland\P2\PassiveAbility_1700023.cs" />
@@ -151,8 +169,10 @@
     <Compile Include="Source Code\HarmonyPatch\HP_Effect.cs" />
     <Compile Include="Source Code\HarmonyPatch\HP_ReverberationSystem.cs" />
     <Compile Include="Source Code\HarmonyPatch\HP_ReverberationUI.cs" />
+    <Compile Include="Source Code\HarmonyPatch\HP_RewardList.cs" />
     <Compile Include="Source Code\HarmonyPatch\HP_RolandSystem.cs" />
     <Compile Include="Source Code\HarmonyPatch\HP_SetCard.cs" />
+    <Compile Include="Source Code\HarmonyPatch\HP_SplitDeck.cs" />
     <Compile Include="Source Code\HarmonyPatch\HP_SubSystem.cs" />
     <Compile Include="Source Code\HarmonyPatch\HP_RolandUI.cs" />
     <Compile Include="Source Code\Impurity\ContractList_RolandP4.cs" />
@@ -185,7 +205,6 @@
     <Compile Include="Source Code\ContractReward\Reverberation\Bremen\PassiveAbility_1840003.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Bremen\PassiveAbility_1840002.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Bremen\PassiveAbility_1840001.cs" />
-    <Compile Include="Source Code\ContractReward\DiceCardSelfAbility_energy3.cs" />
     <Compile Include="Source Code\ContractReward\DiceCardSelfAbility_AoeCoolDown.cs" />
     <Compile Include="Source Code\ContractReward\DiceCardAbility_invalid.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Eileen\BattleUnitBuf_ZealLimit.cs" />
@@ -206,7 +225,7 @@
     <Compile Include="Source Code\ContractReward\Reverberation\Elena\DiceCardSelfAbility_ElenaZombie.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Elena\DiceCardSelfAbility_ElenaBuff.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Orange\PassiveAbility_1880103.cs" />
-    <Compile Include="Source Code\ContractReward\Reverberation\Oswald\DiceCardSelfAbility_Oswald_energy3.cs" />
+    <Compile Include="Source Code\ContractReward\Reverberation\Oswald\DiceCardSelfAbility_Oswald_AllEnergy1.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Pluto\PassiveAbility_1890004.cs" />
     <Compile Include="Source Code\DeepCopyUtil.cs" />
     <Compile Include="Source Code\Fix\BehaviourAction_TanyaSpecialAtk_New.cs" />
@@ -287,7 +306,10 @@
     <Compile Include="Source Code\CCInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Source Code\StaticDataManager.cs" />
-    <PackageReference Include="Krafs.Publicizer" Version="1.0.2" />
+    <PackageReference Include="Krafs.Publicizer" Version="1.0.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
     <Publicize Include="Assembly-CSharp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

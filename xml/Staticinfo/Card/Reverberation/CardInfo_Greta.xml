@@ -4,9 +4,10 @@
 		<Name>抽筋</Name>
 		<Artwork>Greta_Cut</Artwork>
 		<Rarity>Common</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Near" Cost="0"/>
-		<Script>energy2</Script>
+		<Script>BleedPlus</Script>
 		<ScriptDesc></ScriptDesc>
     	<BehaviourList>
             <Behaviour Min="4" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="Greta_G" Script="greta_weakGuardPw" ActionScript="" Desc="" />
@@ -20,7 +21,8 @@
 		<Name>抽筋</Name>
 		<Artwork>Greta_Cut</Artwork>
 		<Rarity>Common</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Near" Cost="2"/>
 		<Script>greta_strongGuard</Script>
 		<ScriptDesc></ScriptDesc>
@@ -36,7 +38,8 @@
 		<Name>击晕</Name>
 		<Artwork>Greta_Salt</Artwork>
 		<Rarity>Uncommon</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>>
 		<Spec Range="Near" Cost="3"/>
 		<Script>greta_stun</Script>
 		<ScriptDesc></ScriptDesc>
@@ -52,7 +55,8 @@
 		<Name>调味</Name>
 		<Artwork>Greta_Salt</Artwork>
 		<Rarity>Uncommon</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Near" Cost="1"/>
 		<Script>GretaCut</Script>
 		<ScriptDesc></ScriptDesc>
@@ -68,7 +72,8 @@
 		<Name>剁碎</Name>
 		<Artwork>Greta_Cut</Artwork>
 		<Rarity>Uncommon</Rarity>
-		<Option>NoInventory</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
 		<Spec Range="Near" Cost="3"/>
 		<Script></Script>
 		<ScriptDesc></ScriptDesc>
@@ -84,8 +89,9 @@
 		<Name>试味</Name>
 		<Artwork>Greta_Taste</Artwork>
 		<Rarity>Rare</Rarity>
-		<Option>NoInventory</Option>
-		<Spec Range="Near" Cost="4"/>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
+		<Spec Range="Near" Cost="3"/>
 		<Script></Script>
 		<ScriptDesc></ScriptDesc>
     	<BehaviourList>
@@ -101,8 +107,9 @@
 		<Name>品鉴</Name>
 		<Artwork>Greta_Taste</Artwork>
 		<Rarity>Rare</Rarity>
-		<Option>NoInventory</Option>
-		<Spec Range="Near" Cost="2"/>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
+		<Spec Range="Near" Cost="1"/>
 		<Script>greta_trample</Script>
 		<ScriptDesc></ScriptDesc>
     	<BehaviourList>
@@ -131,7 +138,7 @@
 		<Artwork>Greta_Cut</Artwork>
 		<Rarity>Unique</Rarity>
 		<Option>NoInventory</Option>
-		<Spec Range="Near" Cost="1"/>
+		<Spec Range="Near" Cost="0"/>
 		<Script>GretaMeatCut</Script>
 		<ScriptDesc></ScriptDesc>
     	<BehaviourList>

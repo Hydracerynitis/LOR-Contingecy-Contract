@@ -10,7 +10,7 @@ using BaseMod;
 
 namespace ContractReward
 {
-    public class DiceCardSelfAbility_GretaCut : DiceCardSelfAbility_energy3
+    public class DiceCardSelfAbility_GretaCut : DiceCardSelfAbilityBase
     {
         public override void OnEnterCardPhase(BattleUnitModel unit, BattleDiceCardModel self)
         {

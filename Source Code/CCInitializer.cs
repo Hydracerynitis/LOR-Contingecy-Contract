@@ -48,6 +48,10 @@ namespace Contingecy_Contract
             Debug.Log("Patch Class: SetCard succeed");
             harmony.PatchAll(typeof(HP_Effect));
             Debug.Log("Patch Class: Effect succeed");
+            harmony.PatchAll(typeof(HP_RewardList));
+            Debug.Log("Patch Class: Reward List succeed");
+            harmony.PatchAll(typeof(HP_SplitDeck));
+            Debug.Log("Patch Class: Split Deck succeed");
         }
         public static bool IsRoland(UnitDataModel __instance) => __instance.OwnerSephirah == SephirahType.Keter && __instance.isSephirah;
         public static bool IsRolandEmotion(EmotionCardXmlInfo card)

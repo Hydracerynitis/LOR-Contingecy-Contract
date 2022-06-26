@@ -61,5 +61,10 @@
 拼点失败时失去5%的混乱抗性
 若陷入混乱，则解除此状态并在下一幕开始时恢复所有混乱抗性</Desc>
 		</BattleEffectText>
+		<BattleEffectText ID="CC_Reverberation">
+			<Name>完美提取--残响乐团</Name>
+			<Desc>所有带有此被动的司书获得以下加成:
+</Desc>
+		</BattleEffectText>
 	</effectTextList>
 </BattleEffectTextRoot>

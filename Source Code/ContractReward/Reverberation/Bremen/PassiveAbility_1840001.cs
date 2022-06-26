@@ -5,25 +5,29 @@ using SummonLiberation;
 using UnityEngine;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using Contingecy_Contract;
 using BaseMod;
 
 namespace ContractReward
 {
-    public class PassiveAbility_1840001 : PassiveAbilityBase
+    public class PassiveAbility_1840001 : PassiveAbilityBase, CardDrawer
     {
         private List<Head> AvailableHead = new List<Head>() { Head.Donkey, Head.Chicken, Head.Dog};
-        private Head currentHead = Head.Chicken;
+        public Head currentHead = Head.Chicken;
         public override int SpeedDiceNumAdder() => 1;
         public override bool AllowTargetChanging(BattleUnitModel attacker, int myCardSlotIdx) => myCardSlotIdx != owner.speedDiceCount - 1;
+        public override void OnRoundStart()
+        {
+            base.OnRoundStart();
+            do
+                currentHead = GetHead(currentHead);
+            while (!AvailableHead.Contains(currentHead));
+        }
         public override void OnAfterRollSpeedDice()
         {
             int index = owner.speedDiceCount-1;
             owner.SetCurrentOrder(index);
             owner.speedDiceResult[index].isControlable = false;
-            do
-                currentHead = GetHead(currentHead);
-            while (!AvailableHead.Contains(currentHead));
             int cardId = GetCard(out BattleUnitModel target);
             if (cardId == -1)
                 return;
@@ -94,6 +98,17 @@ namespace ContractReward
                 }
             }
         }
+        public override void OnWaveStart()
+        {
+            base.OnWaveStart();
+            owner.allyCardDetail.DrawCards(1);
+        }
+
+        public int getDrawCardAdder(int userCard)
+        {
+            return -1;
+        }
+
         public enum Head
         {
             Donkey,

@@ -5,5 +5,24 @@
 		<BattleCardDesc ID="1">
 			<LocalizedName>Guilt</LocalizedName>
 		</BattleCardDesc>
+		<!--音乐盒-->
+		<BattleCardDesc ID="101">
+			<LocalizedName>Start Performing</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="102">
+			<LocalizedName>Variation: Movement 1</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="103">
+			<LocalizedName>Variation: Movement 2</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="104">
+			<LocalizedName>Variation: Movement 3</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="105">
+			<LocalizedName>Variation: Movement 4</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="106">
+			<LocalizedName>End Performing</LocalizedName>
+		</BattleCardDesc>
  	</cardDescList>
 </BattleCardDescRoot>

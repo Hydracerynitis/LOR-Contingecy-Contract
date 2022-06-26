@@ -22,10 +22,7 @@ namespace ContractReward
             Angelica = null;
             Active = this.owner.allyCardDetail;
             Passive = new BattleAllyCardDetail(this.owner);
-            List<DiceCardXmlInfo> list = new List<DiceCardXmlInfo>();
-            foreach (LorId i in Singleton<DeckXmlList>.Instance.GetData(Tools.MakeLorId(18700001)).cardIdList)
-                list.Add(ItemXmlDataList.instance.GetCardItem(i));
-            Passive.Init(list);
+            Passive.Init(owner.UnitData.unitData.GetDeckForBattle(1));
         }
         public void Revive()
         {
@@ -53,11 +50,8 @@ namespace ContractReward
             Angelica.cardSlotDetail.LosePlayPoint(Angelica.cardSlotDetail.GetMaxPlayPoint());
             Angelica.cardSlotDetail.RecoverPlayPoint(Angelica.cardSlotDetail.GetMaxPlayPoint());
             Angelica.Revive(Angelica.Book.HP);
-            List<DiceCardXmlInfo> Decklist = new List<DiceCardXmlInfo>();
-            foreach (LorId i in Singleton<DeckXmlList>.Instance.GetData(Tools.MakeLorId(18710000)).cardIdList)
-                Decklist.Add(ItemXmlDataList.instance.GetCardItem(i));
-            Angelica.allyCardDetail.Init(Decklist);
-            Angelica.allyCardDetail.DrawCards(8);
+            Angelica.allyCardDetail.Init(owner.UnitData.unitData.GetDeckForBattle(2));
+            Angelica.allyCardDetail.DrawCards(4);
             Angelica.personalEgoDetail = new BattlePersonalEgoCardDetail(Angelica);
             Angelica.personalEgoDetail.Init();
             Angelica.breakDetail.nextTurnBreak = false;
@@ -88,7 +82,7 @@ namespace ContractReward
             this.owner.personalEgoDetail.AddCard(Tools.MakeLorId(18700103));
             Active = this.owner.allyCardDetail;
             this.owner.allyCardDetail = Passive;
-            this.owner.allyCardDetail.DrawCards(8);
+            this.owner.allyCardDetail.DrawCards(4);
             List<PassiveAbilityBase> list2 = this.owner.passiveDetail.PassiveList;
             PassiveAbilityBase active = list2.Find(x => x is PassiveAbility_1870002);
             PassiveAbilityBase passive = new PassiveAbility_1870003(this.owner,Angelica);
@@ -102,7 +96,7 @@ namespace ContractReward
             this.owner.personalEgoDetail.RemoveCard(Tools.MakeLorId(18700103));
             Passive = this.owner.allyCardDetail;
             this.owner.allyCardDetail = Active;
-            this.owner.allyCardDetail.DrawCards(7);
+            this.owner.allyCardDetail.DrawCards(4);
             List<PassiveAbilityBase> list = this.owner.passiveDetail.PassiveList;
             PassiveAbilityBase passive = list.Find(x => x is PassiveAbility_1870003);
             PassiveAbilityBase active = new PassiveAbility_1870002(this.owner);
@@ -118,7 +112,7 @@ namespace ContractReward
             this.owner.personalEgoDetail.AddCard(Tools.MakeLorId(18700103));
             Active = this.owner.allyCardDetail;
             this.owner.allyCardDetail = Passive;
-            this.owner.allyCardDetail.DrawCards(8);
+            this.owner.allyCardDetail.DrawCards(4);
             List<PassiveAbilityBase> list = this.owner.passiveDetail.PassiveList;
             PassiveAbilityBase active = list.Find(x => x is PassiveAbility_1870002);
             PassiveAbilityBase passive = new PassiveAbility_1870003(owner,Angelica);

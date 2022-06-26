@@ -4,11 +4,12 @@
     <PassiveDesc ID="1700001">
         <Name>完美提取--罗兰</Name>
         <Desc>&lt;color=#FF0000&gt;无法获取图书馆的情感卡和ego,尝试为其应用情感卡将会浪费该情感卡&lt;/color&gt;
-只能由罗兰装备.</Desc>
+可获得双倍情感点数. 只能由罗兰装备.</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1700002">
         <Name>完美提取--罗兰</Name>
-        <Desc>&lt;color=#FF0000&gt;无法获取图书馆的情感卡和ego,尝试为其应用情感卡将会浪费该情感卡&lt;/color&gt;</Desc>
+        <Desc>&lt;color=#FF0000&gt;无法获取图书馆的情感卡和ego,尝试为其应用情感卡将会浪费该情感卡&lt;/color&gt;
+可获得双倍情感点数。</Desc>
     </PassiveDesc>
     <!--P1-->
     <PassiveDesc ID="1700011">
@@ -23,7 +24,7 @@
     <PassiveDesc ID="1700013">
         <Name>复仇决意</Name>
         <Desc>击中目标时恢复5点混乱抗性
-拼点失败时失去6点混乱抗性2</Desc>
+拼点失败时失去6点混乱抗性</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1700014">
         <Name>认知阻碍面具</Name>
@@ -32,7 +33,7 @@
     <!--P2-->
     <PassiveDesc ID="1700021">
         <Name>亡者孵化</Name>
-        <Desc>每一幕开始时每有一个其他单位在上一幕死亡便生成1只不可控制的“烟气衍生物”并且对所有其他单位施加1层浓烟</Desc>
+        <Desc>每一幕开始时每有一个其他单位在上一幕死亡便失去15点生命值生成1只不可控制的“烟气衍生物”并且对所有其他单位施加1层浓烟</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1700022">
         <Name>怪蛮可憎</Name>
@@ -53,7 +54,7 @@
     <PassiveDesc ID="1700031">
         <Name>共舞</Name>
         <Desc>可以使用让其他司书与“白卫”同化的书页
-同化后切换双方作战方式以联合为主并施加4层灵魂链接</Desc>
+同化后切换双方牌库换成“黑侍”和“白卫”并施加4层灵魂链接</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1700032">
         <Name>标记</Name>

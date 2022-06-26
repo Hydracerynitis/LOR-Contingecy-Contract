@@ -68,6 +68,20 @@ People entertain the hopes as they please, and then bite at each other when the 
         <Desc>So we should all do the stretches, starting today! Abandon all expectation—just keep a merry positive attitude and laugh no matter what you see! Let’s make a performance about what’s already come true, not of a supposed reality you hope for “someday”! I’m already on the stage, standing under the brightingest spotlight ever.</Desc>
       		</TextList>
     	</BookDesc>
+		<BookDesc BookID="18510000">
+			<BookName>Mr Knife's Page</BookName>
+			<TextList>
+      			<Desc></Desc>
+			</TextList>
+			<PassiveList />
+		</BookDesc>
+		<BookDesc BookID="18520000">
+			<BookName>Ms Mermaid's Page</BookName>
+			<TextList>
+      			<Desc></Desc>
+			</TextList>
+			<PassiveList />
+		</BookDesc>
 		<BookDesc BookID="18600000">
       		<BookName>Tanya’s lively Page</BookName>
       		<TextList>

@@ -34,7 +34,6 @@
 	<Book ID="17000002">
     		<Name>肮脏巨兽</Name>
    		 <TextId>17000002</TextId>
-    		<Category>DeckFixed</Category>
     		<EquipEffect>
       			<HP>300</HP>
       			<Break>150</Break>
@@ -54,6 +53,11 @@
 				<Passive>1700022</Passive>
 				<Passive>1700023</Passive>
 				<Passive>1700024</Passive>
+				<OnlyCard>17000021</OnlyCard>
+				<OnlyCard>17000022</OnlyCard>
+				<OnlyCard>17000023</OnlyCard>
+				<OnlyCard>17000024</OnlyCard>
+				<OnlyCard>17000025</OnlyCard>
     		</EquipEffect>
     		<BookIcon>ContingencyReward</BookIcon>
     		<Chapter>7</Chapter>
@@ -64,7 +68,7 @@
 	  <Book ID="17000003">
     		<Name>黑侍</Name>
    		 <TextId>17000003</TextId>
-    		<Category>DeckFixed</Category>
+    		<Option>MultiDeck</Option>
     		<EquipEffect>
       			<HP>130</HP>
       			<Break>50</Break>
@@ -84,6 +88,24 @@
 				<Passive Pid="@origin">260004</Passive>
 				<Passive>1700014</Passive>
                 <Passive Pid="@origin">250002</Passive>
+				<OnlyCard>17000031</OnlyCard>
+				<OnlyCard>17000032</OnlyCard>
+				<OnlyCard>17000033</OnlyCard>
+				<OnlyCard>17000034</OnlyCard>
+				<OnlyCard>0</OnlyCard>
+				<OnlyCard>17000131</OnlyCard>
+				<OnlyCard>17000132</OnlyCard>
+				<OnlyCard>17000133</OnlyCard>
+				<OnlyCard>17000134</OnlyCard>
+				<OnlyCard>17000135</OnlyCard>
+				<OnlyCard>17000136</OnlyCard>
+				<OnlyCard>0</OnlyCard>
+				<OnlyCard>17000231</OnlyCard>
+				<OnlyCard>17000232</OnlyCard>
+				<OnlyCard>17000233</OnlyCard>
+				<OnlyCard>17000234</OnlyCard>
+				<OnlyCard>17000235</OnlyCard>
+				<OnlyCard>17000236</OnlyCard>
     		</EquipEffect>
     		<BookIcon>ContingencyReward</BookIcon>
     		<Chapter>7</Chapter>
@@ -150,7 +172,6 @@
 	  <Book ID="17000005">
     		<Name>失落天使</Name>
    		 <TextId>17000005</TextId>
-    		<Category>DeckFixed</Category>
     		<EquipEffect>
       			<HP>140</HP>
       			<Break>70</Break>
@@ -168,6 +189,12 @@
 				<Passive>1700002</Passive>
 				<Passive Pid="@origin">170004</Passive>
 				<Passive>1700051</Passive>
+				<OnlyCard>17000051</OnlyCard>
+				<OnlyCard>17000052</OnlyCard>
+				<OnlyCard>17000053</OnlyCard>
+				<OnlyCard>17000054</OnlyCard>
+				<OnlyCard>17000055</OnlyCard>
+				<OnlyCard>17000056</OnlyCard>
     		</EquipEffect>
     		<BookIcon>ContingencyReward</BookIcon>
     		<Chapter>7</Chapter>
