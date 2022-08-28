@@ -3,12 +3,12 @@
 	<!--奖励通用-->
 	<PassiveDesc ID="1800000">
 		<Name>Perfect Extraction: Reverberation Ensemble</Name> 
-		<Desc>Gain bonus according to present Reverberation Ensemble member.</Desc>
+		<Desc>Gain bonus according to the present Reverberation Ensemble members.</Desc>
 	</PassiveDesc>
 	<!--阿尔加利亚-->
 	<PassiveDesc ID="1800001">
 		<Name>Perfect Resonance</Name> 
-		<Desc>Whenever "Resonance" is activated, recover 2 Light and draw 1 cards.</Desc>
+		<Desc>Whenever "Resonance" is activated, recover 2 Light and draw 1 page.</Desc>
 	</PassiveDesc>
 	<PassiveDesc ID="1800002">
 		<Name>The Requiem</Name> 
@@ -113,14 +113,14 @@ At the start of the Scene: give 2 Strength, 2 Endurance, and 3 Protection to the
 		<Desc>Able to choose summon Mr. Knife or Ms. Mermaid. Mr. Knife and Mrs. Mermaid will use their respective decks. (Once per Act)</Desc>
   	</PassiveDesc>
 	<PassiveDesc ID="1850011">
-    	<Name>Twas a Joy to Perform by Your Side…!</Name>
+    	<Name>T'was a Joy to Perform by Your Side…!</Name>
 		<Desc>When this character is defeated, Oswald takes 30 Stagger damage at the end of the Scene.</Desc>
   	</PassiveDesc>
 	<!--塔尼亚-->
 	<PassiveDesc ID="1860001">
 		<Name>Brawl</Name> 
 		<Desc>Gain +1 Speed Dice; This character can't get bonus Speed Dice from Emotion Levels.
-Upon being targeted by a one-sided attack, use the rightmost page in hand to clash with it.
+Upon being targeted by a one-sided attack, instead of using counter dice, use the rightmost page in hand to clash with it.
 Draw 1 page every time this passive is triggered (Max 2 per Scene).</Desc>
 	</PassiveDesc>
 	<PassiveDesc ID="1860002">
@@ -137,7 +137,7 @@ Afterwards, add a copy of "Beatdown" to the deck and gain 2 Strength and Enduran
 		<Name>On-site Sewing</Name> 
 		<Desc>Gain a copy of "On-site Sewing" that can only be used when there is a dead ally.
 Use it to revive a random dead ally as Puppet Angelica and switch to "Counter form" deck. Revived ally will use deck from "Angelica Puppet"
-"Counter form" deck can only equip pages with only Counter dice.</Desc>
+"Counter form" deck only has Counter dice.</Desc>
 	</PassiveDesc>
 	<PassiveDesc ID="1870002">
 		<Name>The Puppeteer</Name> 

@@ -19,7 +19,7 @@ namespace ContractReward
             if (owner.emotionDetail.EmotionLevel >= 4)
                 count += 1;
             for (int i = 0; i < count; i++)
-                improvise.Add(RandomUtil.SelectOne<BattleDiceCardModel>(owner.allyCardDetail.GetHand().FindAll(x => !improvise.Contains(x))));
+                improvise.Add(RandomUtil.SelectOne<BattleDiceCardModel>(owner.allyCardDetail.GetHand().FindAll( x => x.GetCost()>0 && !improvise.Contains(x))));
             improvise.ForEach(x => x.SetCostToZero());
         }
         public override void OnRoundStart()

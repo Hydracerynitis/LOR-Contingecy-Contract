@@ -45,7 +45,7 @@
     		<Desc>[On Use] All dice on this page gain +2 Power if the target has more than 10 Burn </Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="LoseBurn">
-    		<Desc>[On Use] Remove 5 Burn from self. Inflict 2 Burn to other characters</Desc>
+    		<Desc>[On Use] Remove 5 Burn from self; Inflict 2 Burn to other characters</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="BurnCostDown">
     		<Desc>[On Use] If the target has more than 10 Burn, set the cost of 2 random pages in hand to 0 (Reset after Use)</Desc>
@@ -299,7 +299,7 @@
     		<Desc>This page can be reused only after 2 scenes</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="BreakProtection5">
-    		<Desc>[Combat Start] gain 5 Break Protection this Scene</Desc>
+    		<Desc>[Combat Start] gain 5 Stagger Protection this Scene</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="PlutoContract1">
     		<Desc>[On Play] Put the Contract of Liberty for targeted ally</Desc>

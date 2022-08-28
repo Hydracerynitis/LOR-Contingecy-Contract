@@ -5,6 +5,16 @@
 		<BattleCardDesc ID="1">
 			<LocalizedName>罪恶感</LocalizedName>
 		</BattleCardDesc>
+		<!--激进协商-->
+		<BattleCardDesc ID="2">
+			<LocalizedName>非正当合同: 保护</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="3">
+			<LocalizedName>非正当合同: 攻击</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="4">
+			<LocalizedName>非正当合同: 光明</LocalizedName>
+    	</BattleCardDesc>
 		<!--音乐盒-->
 		<BattleCardDesc ID="101">
 			<LocalizedName>演奏开始</LocalizedName>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<!--追忆：九阶收尾人-->
 	<Card ID="1">
     	<Name></Name>
     	<Artwork>QuietKid_Eyeshine</Artwork>
@@ -11,6 +12,52 @@
     	<BehaviourList>
     	</BehaviourList>
     	<Priority>0</Priority>
+  	</Card>
+	<!--激进协商-->
+	<Card ID="2">
+    	<Name></Name>
+    	<Artwork>PlutoAdder</Artwork>
+		<Rarity>Rare</Rarity>
+		<Keyword></Keyword>
+		<Spec Range="Near" Cost="0"/>
+		<Script>Pluto_UC_Protect_New</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="6" Dice="10" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+			<Behaviour Min="5" Dice="9" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+  	</Card>
+	<Card ID="3">
+    	<Name></Name>
+    	<Artwork>PlutoAdder</Artwork>
+		<Rarity>Rare</Rarity>
+		<Keyword></Keyword>
+		<Spec Range="Near" Cost="0"/>
+		<Script>Pluto_UC_Atk_New</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="4" Dice="9" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="" ActionScript="" Desc="" />
+			<Behaviour Min="7" Dice="10" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+  	</Card>
+	<Card ID="4">
+    	<Name></Name>
+    	<Artwork>PlutoAdder</Artwork>
+		<Rarity>Rare</Rarity>
+		<Keyword></Keyword>
+		<Spec Range="Near" Cost="0"/>
+		<Script>Pluto_UC_Light_New</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="8" Dice="11" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
+			<Behaviour Min="6" Dice="7" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
   	</Card>
 	<Card ID="101">
     	<Name></Name>

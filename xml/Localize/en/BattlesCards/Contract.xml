@@ -5,9 +5,19 @@
 		<BattleCardDesc ID="1">
 			<LocalizedName>Guilt</LocalizedName>
 		</BattleCardDesc>
+		<!--激进协商-->
+		<BattleCardDesc ID="2">
+			<LocalizedName>Unjust Contract: Defense</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="3">
+			<LocalizedName>Unjust Contract: Offense</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="4">
+			<LocalizedName>Unjust Contract: Light</LocalizedName>
+		</BattleCardDesc>
 		<!--音乐盒-->
 		<BattleCardDesc ID="101">
-			<LocalizedName>Start Performing</LocalizedName>
+			<LocalizedName>Start Performance</LocalizedName>
 		</BattleCardDesc>
 		<BattleCardDesc ID="102">
 			<LocalizedName>Variation: Movement 1</LocalizedName>
@@ -22,7 +32,7 @@
 			<LocalizedName>Variation: Movement 4</LocalizedName>
 		</BattleCardDesc>
 		<BattleCardDesc ID="106">
-			<LocalizedName>End Performing</LocalizedName>
+			<LocalizedName>End Performance</LocalizedName>
 		</BattleCardDesc>
  	</cardDescList>
 </BattleCardDescRoot>

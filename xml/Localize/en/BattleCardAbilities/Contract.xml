@@ -4,9 +4,22 @@
 	  <BattleCardAbility ID="BlackSilence_Guilt">
     		<Desc>Cost is reduced by 1 on Clash Win</Desc>
   	</BattleCardAbility>
+	<!--激进协商-->
+	<BattleCardAbility ID="Pluto_UC_Protect_New">
+		<Desc>[On Use] Add 'Unjust Counterpart: Defense' to target's hand next Scene.</Desc>
+		<Desc>Only one copy of 'Unjust Counterpart: Defense' can be had at a time.</Desc>
+	</BattleCardAbility>
+	<BattleCardAbility ID="Pluto_UC_Atk_New">
+		<Desc>[On Use] Add 'Unjust Counterpart: Offense' to target's hand next Scene.</Desc>
+		<Desc>Only one copy of 'Unjust Counterpart: Offense' can be had at a time.</Desc>
+	</BattleCardAbility>
+	<BattleCardAbility ID="Pluto_UC_Light_New">
+		<Desc>[On Use] Add 'Unjust Counterpart: Light' to target's hand next Scene.</Desc>
+		<Desc>Only one copy of 'Unjust Counterpart: Light' can be had at a time.</Desc>
+	</BattleCardAbility>
 	<!--音乐盒-->
 	<BattleCardAbility ID="SwitchMusic">
-    		<Desc>&lt;color=#3355FF&gt;This will be a requiem, devoted for Angelica&lt;/color&gt;</Desc>
+    		<Desc>&lt;color=#3355FF&gt;This will be a requiem, devoted to Angelica&lt;/color&gt;</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="SwitchChapter1">
     		<Desc>&lt;color=#3355FF&gt;Cello, Harp, Percussion, Horn, Tuba and Trombone; UP&lt;/color&gt;</Desc>
@@ -18,7 +31,7 @@
     		<Desc>&lt;color=#3355FF&gt;First Violin and Pipe Organ; UP&lt;/color&gt;</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="SwitchChapter4">
-    		<Desc>&lt;color=#3355FF&gt;Everyone, start performed TOGETHER&lt;/color&gt;</Desc>
+    		<Desc>&lt;color=#3355FF&gt;Everyone, start performing TOGETHER&lt;/color&gt;</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="EndMusic">
     		<Desc>&lt;color=#3355FF&gt;Thank you for everyone attending this concert&lt;/color&gt;</Desc>

@@ -25,7 +25,7 @@ namespace ContractReward
                 stack += 2;
             crack = false;
             concentrate = false;
-            if (stack == 0)
+            if (stack <= 0)
                 Destroy();
         }
         public override void OnLoseParrying(BattleDiceBehavior behavior)
@@ -34,11 +34,15 @@ namespace ContractReward
             {
                 crack = true;
                 stack -= 1;
+                if (stack <= 0)
+                    Destroy();
                 BattleUnitBuf_SoulLink buf = partner.bufListDetail.FindBuf<BattleUnitBuf_SoulLink>();
                 if (buf != null)
                 {
                     buf.stack -= 1;
                     buf.crack = true;
+                    if (buf.stack <= 0)
+                        buf.Destroy();
                 }             
             }
             else

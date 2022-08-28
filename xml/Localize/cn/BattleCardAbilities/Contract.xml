@@ -4,6 +4,19 @@
 	  <BattleCardAbility ID="BlackSilence_Guilt">
     		<Desc>每与带有'罪恶感'的单位取得1次拼点胜利便使得本书页费用-1</Desc>
   	</BattleCardAbility>
+	<!--激进协商-->
+	<BattleCardAbility ID="Pluto_UC_Protect_New">
+		<Desc>[使用时] 下一幕开始时将1张[非正当合同: 保护]置入其手中</Desc>
+		<Desc>[非正当合同: 保护]至多可持有1张</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="Pluto_UC_Atk_New">
+		<Desc>[使用时] 下一幕开始时将1张[非正当合同: 攻击]置入其手中</Desc>
+		<Desc>[非正当合同: 攻击]至多可持有1张</Desc>
+	</BattleCardAbility>
+	<BattleCardAbility ID="Pluto_UC_Light_New">
+		<Desc>[使用时] 下一幕开始时将1张[非正当合同: 光明]置入其手中</Desc>
+		<Desc>[非正当合同: 光明]至多可持有1张</Desc>
+	</BattleCardAbility>
 	<!--音乐盒-->
 	<BattleCardAbility ID="SwitchMusic">
     		<Desc>&lt;color=#3355FF&gt;这是送给安吉莉卡的镇魂之曲!&lt;/color&gt;</Desc>

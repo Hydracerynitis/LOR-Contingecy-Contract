@@ -21,6 +21,14 @@ namespace Contingecy_Contract
                 }
             }
         }
+        public static bool GreaterEqual(this LorId lhs, int rhs)
+        {
+            return lhs.IsBasic() && lhs.id >= rhs;
+        }
+        public static bool LesserEqual(this LorId lhs, int rhs)
+        {
+            return lhs.IsBasic() && lhs.id <= rhs;
+        }
     }
     public interface TagTeam
     {

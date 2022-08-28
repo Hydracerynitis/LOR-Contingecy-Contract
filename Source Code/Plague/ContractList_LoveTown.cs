@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 
 namespace Contingecy_Contract
 {
-    //死协会
     public class ContingecyContract_LoveTown : ContingecyContract
     {
         private Dictionary<BehaviourDetail, int> HitDic = new Dictionary<BehaviourDetail, int>();

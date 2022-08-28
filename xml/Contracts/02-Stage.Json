@@ -35,7 +35,7 @@
             "contractType":1,
             "Faction":1,
             "BaseLevel":4,
-            "Conflict":["LowFloor"]
+            "Conflict":["LowFloor","DElena_Hp","DElena_Aoe","DPluto_Contract","DPluto_Shade","DArgalia_Ternaria","DArgalia_Sonata"]
         },
         {
             "Type":"LowFloor",
@@ -56,7 +56,7 @@
             "Variation":2,
             "Step":2,
             "BaseLevel":2,
-            "Conflict":["Last"]
+            "Conflict":["Last","DElena_Hp","DElena_Aoe","DPluto_Contract","DPluto_Shade","DArgalia_Ternaria","DArgalia_Sonata"]
         },
         {
             "Type":"LowPeople",

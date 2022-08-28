@@ -14,16 +14,16 @@ When hit, if the attacker has Suffocating Haze, take {1} less damage.</text>
 	<text id="WaltzDecay_text">Take {0} Damage and Stagger Damage at the End of the Scene and Subtract 1 stack
 If the character has both Corrosions and the difference between their stacks is less than {1}, they will take no Damage and Stagger Damage from them</text>
 	<text id="marked_dice_desc">&lt;color=#FFA226&gt;Yesterday Promise&lt;/color&gt; </text>
-	<text id="Reverberation_Conductor">Conductor: At the end of each Scene, set Emotion Level to the highest Emotion Level among all Reverberation Ensemble members</text>
-	<text id="Reverberation_Cello">Cello: When using Page with Slash dice, boost all dice of that page maximum value by +2 </text>
- 	<text id="Reverberation_Harp">Harp: After successful hit with Blunt die recover 2 Stagger Resist </text>
-	<text id="Reverberation_Drum">Percussion: Third Blunt Die gain +1 Power </text>
-	<text id="Reverberation_Horn">Horn: Pierce dice gain +2 Damage</text>
-	<text id="Reverberation_Tuba">Tuba: Pierce dice gain +2 Break Damage</text>
-	<text id="Reverberation_Trombone">Trombone: Pierce dice gain +1 Power</text>
-	<text id="Reverberation_Clarinet">Clarinet: After successful hit with Pierce die next die gain +1 Power</text>
-	<text id="Reverberation_Viola">Viola: After rolling a Slash die, the next Slash die gain +2 minimun value </text>
+	<text id="Reverberation_Conductor">Conductor: At the end of each Scene, set Emotion Level to the highest Emotion Level among all Reverberation Ensemble members.</text>
+	<text id="Reverberation_Cello">Cello: When using Page with Slash dice, boost all dice of that page maximum value by +2.</text>
+ 	<text id="Reverberation_Harp">Harp: After successful hit with Blunt die, recover 2 Stagger Resist.</text>
+	<text id="Reverberation_Drum">Percussion: The third Blunt Die gain +1 Power.</text>
+	<text id="Reverberation_Horn">Horn: Pierce dice gain +2 Damage.</text>
+	<text id="Reverberation_Tuba">Tuba: Pierce dice gain +2 Break Damage.</text>
+	<text id="Reverberation_Trombone">Trombone: Pierce dice gain +1 Power.</text>
+	<text id="Reverberation_Clarinet">Clarinet: After successful hit with Pierce die, next die gain +1 Power.</text>
+	<text id="Reverberation_Viola">Viola: After rolling a Slash die, the next Slash die gain +2 minimun value.</text>
 	<text id="Reverberation_S_Violin">Second Violin: Slash dice gain +2 Break Damage</text>
 	<text id="Reverberation_F_Violin">First Violin: Slash dice gain +2 Damage</text>
-	<text id="Reverberation_Organ">Pipe Organ: In a Clash with Blunt die, reduce incoming damage by -2</text>
+	<text id="Reverberation_Organ">Pipe Organ: In a Clash with Blunt die, reduce incoming damage by 2.</text>
 </localize>

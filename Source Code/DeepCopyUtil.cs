@@ -141,6 +141,17 @@ namespace Contingecy_Contract
             Dice.Min += min;
             card._xmlData = xml;
         }
+        public static void EnhanceCard(IEnumerable<int> indexes, BattleDiceCardModel card, int min = 0, int dice = 0)
+        {
+            DiceCardXmlInfo xml = card.XmlData.Copy(true);
+            foreach(int index in indexes)
+            {
+                DiceBehaviour Dice = xml.DiceBehaviourList[index];
+                Dice.Dice += dice;
+                Dice.Min += min;
+            }
+            card._xmlData = xml;
+        }
         public static EmotionCardXmlInfo Copy(this EmotionCardXmlInfo xml)
         {
             EmotionCardXmlInfo copy = new EmotionCardXmlInfo()

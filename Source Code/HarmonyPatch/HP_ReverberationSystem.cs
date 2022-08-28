@@ -190,6 +190,8 @@ namespace Contingecy_Contract
                 instance.Init(__instance.owner);
                 if (instance.SpeedDiceNumAdder() == 0 && instance.SpeedDiceBreakedAdder() == 0)
                 {
+                    instance.desc = passive.desc;
+                    instance.name = passive.name;
                     instance.rare = passive.rare;
                     __instance.owner.passiveDetail.AddPassive(instance);
                 }

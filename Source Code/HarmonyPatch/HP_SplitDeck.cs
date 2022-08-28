@@ -142,9 +142,9 @@ namespace Contingecy_Contract
             byDetailFilterUi.Sort(ModCardItemSort);
             Predicate<DiceCardItemModel> cond1 = x => true;
             if (book.ClassInfo._id == 18200000)
-                cond1 = x => x.GetSpec().Ranged == CardRange.Near;
+                cond1 = x => x.GetSpec().Ranged != CardRange.Far;
             else if (book.ClassInfo._id == 18500000)
-                cond1 = x => x.GetSpec().Ranged == CardRange.Far;
+                cond1 = x => x.GetSpec().Ranged != CardRange.Near;
             else if (book.ClassInfo._id == 18700000)
                 cond1 = x => !x.GetBehaviourList().Exists(y => y.Type != BehaviourType.Standby);
             List<DiceCardXmlInfo> onlyCards = book.GetOnlyCards();
@@ -260,6 +260,7 @@ namespace Contingecy_Contract
                     __result = __instance._deck.AddCardFromInventory(cardId);
                 else if(__result==CardEquipState.Equippable)
                 {
+                    RemoveDeck(cardId, __instance);
                     DiceCardXmlInfo cardXmlInfo = ItemXmlDataList.instance.GetCardItem(cardId);
                     if (cardXmlInfo.Spec.Ranged == CardRange.Far)
                         __result = CardEquipState.FarTypeLimit;
@@ -271,6 +272,7 @@ namespace Contingecy_Contract
                     __result = __instance._deck.AddCardFromInventory(cardId);
                 else if (__result == CardEquipState.Equippable)
                 {
+                    RemoveDeck(cardId, __instance);
                     DiceCardXmlInfo cardXmlInfo = ItemXmlDataList.instance.GetCardItem(cardId);
                     if (cardXmlInfo.Spec.Ranged == CardRange.Near && !cardXmlInfo.IsOnlyPage())
                         __result = CardEquipState.NearTypeLimit;
@@ -280,6 +282,8 @@ namespace Contingecy_Contract
             {
                 if (__result == CardEquipState.Equippable || __result==CardEquipState.FarTypeLimit)
                 {
+                    if (__result == CardEquipState.Equippable)
+                        RemoveDeck(cardId, __instance);
                     DiceCardXmlInfo cardXmlInfo = ItemXmlDataList.instance.GetCardItem(cardId);
                     if (cardXmlInfo.DiceBehaviourList.Exists(y => y.Type != BehaviourType.Standby))
                         __result = CardEquipState.OnlyPageLimit;
@@ -288,6 +292,12 @@ namespace Contingecy_Contract
                     
                 }
             }
+        }
+        private static void RemoveDeck(LorId cardId, BookModel __instance)
+        {
+            List<DiceCardXmlInfo> deckList = __instance._deck._deck;
+            if (deckList.Find(x => x.id == cardId) is DiceCardXmlInfo xml)
+                deckList.Remove(xml);
         }
     }
 }

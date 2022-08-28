@@ -1,0 +1,384 @@
+{
+    "CCs":[
+        {
+            "Type":"DPhilip_Helios",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"火种复苏",
+                    "desc":"菲利普的最大血量和混乱抗性提升100%. 每一幕结束时菲利普恢复自身烧伤层数的血量"
+                },
+                {
+                    "language":"en",
+                    "name":"Rekindled Ember",
+                    "desc":"Philip's Max Hp and Stagger Resist increase by +100%.\nAt the end of each Scene, Philip recover health equal to self's Burn stack."
+                }
+            ],
+            "Faction":0,
+            "BaseLevel":3,
+            "Conflict":["DPhilip_Restraint"],
+            "Stageid":60004
+        },
+        {
+            "Type":"DPhilip_Restraint",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"无尽枷锁",
+                    "desc":"菲利普使用一张书页获取2次拼点胜利便对目标这一幕施加1层拘束"
+                },
+                {
+                    "language":"en",
+                    "name":"Endless Shackle",
+                    "desc":"After Philip achieve 2 clash win with one Page, inflict 1 Restraint upon target this Scene."
+                }
+            ],
+            "Faction":0,
+            "BaseLevel":3,
+            "Conflict":["DPhilip_Helios"],
+            "Stageid":60004
+        },
+        {
+            "Type":"DEileen_Smoke",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"烟气生产",
+                    "desc":"艾琳的进攻方式变为更注重于给自己获得烟气"
+                },
+                {
+                    "language":"en",
+                    "name":"Smoke Manufacturer",
+                    "desc":"Eileen's attack pattern switch to one specifying in gaining Smoke."
+                }
+            ],
+            "Faction":0,
+            "BaseLevel":3,
+            "Conflict":["DEileen_DeusEx"],
+            "Stageid":60004
+        },
+        {
+            "Type":"DEileen_DeusEx",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"齿轮降神",
+                    "desc":"艾琳改为每5幕使用1张特殊书页\"思想齿轮-降神\",\"思想齿轮-降神\"的骰子数值提升至16-28"
+                },
+                {
+                    "language":"en",
+                    "name":"Deus ex Calces",
+                    "desc":"Eileen will use 'Thought Gear: Advent' every 4 Scene instead.\nThe die of 'Thought Gear: Advent' is enhanced to 16-28."
+                }
+            ],
+            "Faction":0,
+            "BaseLevel":3,
+            "Conflict":["DEileen_Smoke"],
+            "Stageid":60004
+        },
+        {
+            "Type":"DGreta_Prot",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"骑士之愿",
+                    "desc":"格蕾塔的'庇护'提供的守护和振奋层数提升至5"
+                },
+                {
+                    "language":"en",
+                    "name":"Wish of Guardianship",
+                    "desc":"'Knight in Shining Denticles' will instead give 5 Protection and Stagger Protection"
+                }
+            ],
+            "Faction":0,
+            "BaseLevel":3,
+            "Conflict":["DGreta_Eat"],
+            "Stageid":60004
+        },
+        {
+            "Type":"DGreta_Eat",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"饕餮之愿",
+                    "desc":"格蕾塔情感等级低于4级时每2幕会使用1次鲨口惊魂.鲨口惊魂后3个骰子基础值提升3点."
+                },
+                {
+                    "language":"en",
+                    "name":"Wish of Gluttery",
+                    "desc":"Greta will use 'Tackle Mount' every 2 Scene at Emotion Level lower than 4.\nIncrease Tackle Mount's last 3 dice natural roll by +3."
+                }
+            ],
+            "Faction":0,
+            "BaseLevel":3,
+            "Conflict":["DGreta_Prot"],
+            "Stageid":60004
+        },
+        {
+            "Type":"DBremen_Self",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"尽情高歌",
+                    "desc":"不来梅最大混乱抗性提升90, '颠倒战歌'提供给司书的强壮忍耐敏捷层数减少至1"
+                },
+                {
+                    "language":"en",
+                    "name":"Solo Jazz",
+                    "desc":"Increase Bremen's Stagger Resist by 90.\nReduce Strength, Endurance, Haste gained from 'Erlöschend Dirge of a War Grave' to 1 stack."
+                }
+            ],
+            "Faction":0,
+            "BaseLevel":3,
+            "Conflict":["DBremen_Other"],
+            "Stageid":60004
+        },
+        {
+            "Type":"DBremen_Other",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"振奋共歌",
+                    "desc":"不来梅对友方单位使用书页会恢复所有我方单位的混乱抗性30点"
+                },
+                {
+                    "language":"en",
+                    "name":"Gospel Choir",
+                    "desc":"When Bremen using Page against ally unit, recover 30 Stagger Resist for all allies."
+                }
+            ],
+            "Faction":0,
+            "BaseLevel":3,
+            "Conflict":["DBremen_Self"],
+            "Stageid":60004
+        },
+        {
+            "Type":"DOswald_Friend",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"It's Showtime!",
+                    "desc":"奥斯瓦尔德使用'好戏开始把~'后额外召唤个超级兔子大宝贝. 利刃先生, 美人鱼小姐和超级兔子大宝贝的血量上限提升100,混乱抗性上限提升50."
+                },
+                {
+                    "language":"en",
+                    "name":"It's Showtime!",
+                    "desc":"After Oswald using 'Shall We Start the Show ~ ?', additional Mx. Bunny is summoned.\nMr. Knife, Mrs. Mermaid and Mx. Bunny's Max Hp is increased by 100, Max Stagger Resist is increased by 50."
+                }
+            ],
+            "Faction":0,
+            "BaseLevel":4,
+            "Conflict":["DOswald_Show"],
+            "Stageid":60004
+        },
+        {
+            "Type":"DOswald_Show",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"顶级演出",
+                    "desc":"提升奥斯瓦尔德的'ShowTime~'的混乱伤害至4-8.每一幕至多承受最大生命值25%的伤害."
+                },
+                {
+                    "language":"en",
+                    "name":"Top Show",
+                    "desc":"Stagger Damage from Oswald's 'Showtime~' are boosted to 4-8.\nTake Damage equal to 25% Max hp at most in 1 Scene."
+                }
+            ],
+            "Faction":0,
+            "BaseLevel":4,
+            "Conflict":["DOswald_Friend"],
+            "Stageid":60004
+        },
+        {
+            "Type":"DTanya_Warrior",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"头狼",
+                    "desc":"塔尼亚进攻方式变得更加激进. 进攻骰威力+1且命中目标时追加3-5点伤害"
+                },
+                {
+                    "language":"en",
+                    "name":"Matriarch Wolf",
+                    "desc":"Tanya's attack pattern become more aggressive.\nHer Offensive Dice gain +1 Power and inflict 3-5 Damage on Hit."
+                }
+            ],
+            "Faction":0,
+            "BaseLevel":4,
+            "Conflict":["DTanya_Sand"],
+            "Stageid":60004
+        },
+        {
+            "Type":"DTanya_Sand",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"风沙残蚀",
+                    "desc":"提升塔尼亚的'风卷残云'的伤害至6-10. 战斗开始时获得3个5-8防御反击骰."
+                },
+                {
+                    "language":"en",
+                    "name":"Eroding Sandstorm",
+                    "desc":"Damage from Tanya's 'Fierce Sandstorm are boosted to 6-10.\nGain three Counter die (Defense, 5-8) at combat start."
+                }
+            ],
+            "Faction":0,
+            "BaseLevel":4,
+            "Conflict":["DTanya_Warrior"],
+            "Stageid":60004
+        },
+        {
+            "Type":"DJaeheon_Control",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"傀儡戏",
+                    "desc":"每一幕开始时若在宪存活, 没有红线状态的司书会获得1层'操纵'. '操纵'骰子使用的书页费用+2"
+                },
+                {
+                    "language":"en",
+                    "name":"Puppet Show",
+                    "desc":"At the start of each Scene if Jaeheon is alive, all librarians without Red String will be inflicted 1 'Puppet String'.\nIncrease cost of Pages used by uncontrolled die from 'Puppet String' by +2."
+                }
+            ],
+            "Faction":0,
+            "BaseLevel":4,
+            "Conflict":["DJaeheon_Tangle"],
+            "Stageid":60004
+        },
+        {
+            "Type":"DJaeheon_Tangle",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"纠缠乱网",
+                    "desc":"红线的费用提升2点,而且其骰子基础值降低至23-23. 在宪最大血量和混乱抗性提升100%."
+                },
+                {
+                    "language":"en",
+                    "name":"Entangled Mess",
+                    "desc":"Cost of Red String is increased by 2, and its die's natural roll reduce to 23-23. \nIncrease Jaeheon's Max Hp and Stagger Resist by +100%."
+                }
+            ],
+            "Faction":0,
+            "BaseLevel":4,
+            "Conflict":["DJaeheon_Control"],
+            "Stageid":60004
+        },
+        {
+            "Type":"DElena_Hp",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"不死传闻",
+                    "desc":"伊莲娜最大血量上限提升200, 承受伤害减少25%."
+                },
+                {
+                    "language":"en",
+                    "name":"Unending Carnard",
+                    "desc":"Increase Elena's Max Hp by 200. Reduce incoming Damage by 25%."
+                }
+            ],
+            "Faction":0,
+            "BaseLevel":4,
+            "Conflict":["DElena_Aoe","Last","LowFloor"],
+            "Stageid":60004
+        },
+        {
+            "Type":"DElena_Aoe",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"鲜血为薪",
+                    "desc":"伊莲娜使用近战书页造成伤害时恢复造成伤害量的血量.若血量低于50%百分比则回血量翻倍"
+                },
+                {
+                    "language":"en",
+                    "name":"Blood is Fuel",
+                    "desc":"Elena recover health equal to Damage dealt with Melee Page succesful hits.\nIf hp is lower than 50% then health recovered through this way double."
+                }
+            ],
+            "Faction":0,
+            "BaseLevel":4,
+            "Conflict":["DElena_Hp","Last","LowFloor"],
+            "Stageid":60004
+        },
+        {
+            "Type":"DPluto_Contract",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"激进协商",
+                    "desc":"普鲁托会改为使用书页时施加'非正当合同'效果. 司书的非正当合同费用+2."
+                },
+                {
+                    "language":"en",
+                    "name":"Aggressive Negotiation",
+                    "desc":"Pluto will instead inflict 'Unjust Contract' when using specific Pages. \nLibrarians' Unjust Contract Pages boost its cost by +2."
+                }
+            ],
+            "Faction":0,
+            "BaseLevel":4,
+            "Conflict":["DPluto_Shade","Last","LowFloor"],
+            "Stageid":60004
+        },
+        {
+            "Type":"DPluto_Shade",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"完美复制",
+                    "desc":"普鲁托生成阴影时会复制目标司书所有被动"
+                },
+                {
+                    "language":"en",
+                    "name":"Perfect Replica",
+                    "desc":"Pluto will copy all passive target librarian has when spawning a shade."
+                }
+            ],
+            "Faction":0,
+            "BaseLevel":4,
+            "Conflict":["DPluto_Contract","Last","LowFloor"],
+            "Stageid":60004
+        },
+        {
+            "Type":"DArgalia_Sonata",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"奏鸣曲式",
+                    "desc":"阿尔加利亚的'高潮'改为每两幕结束时触发其效果. \n舞台开启时提升所有单位情感等级2级"
+                },
+                {
+                    "language":"en",
+                    "name":"Forma-sonata",
+                    "desc":"Argalia's 'Emozioni Intensificantesi' will be triggered at the end of each Scene.\n At the start of each Act, all characters' Emotion Levels rise by 2."
+                }
+            ],
+            "Faction":0,
+            "BaseLevel":4,
+            "Conflict":["DArgalia_Ternaria","Last","LowFloor"],
+            "Stageid":60004
+        },
+        {
+            "Type":"DArgalia_Ternaria",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"三段曲式",
+                    "desc":"阿尔加利亚的'高潮'会每次触发时提升所有友方单位50%造成的伤害和混乱伤害.所有单位最大生命值提升100,最大混乱抗性提升50"
+                },
+                {
+                    "language":"en",
+                    "name":"Forma-Ternaria",
+                    "desc":"Argalia's 'Emozioni Intensificantesi' will additional increased Damge and Stagger Damage from all allies by +25% when triggered.\nAll characters' Max Hp increased by 100, Max Stagger Resist by 50."
+                }
+            ],
+            "Faction":0,
+            "BaseLevel":4,
+            "Conflict":["DArgalia_Sonata","Last","LowFloor"],
+            "Stageid":60004
+        }
+    ]
+}

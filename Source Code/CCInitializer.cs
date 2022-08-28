@@ -36,6 +36,12 @@ namespace Contingecy_Contract
             Debug.Log("Patch Class: CoreSystem succeed");
             harmony.PatchAll(typeof(HP_SubSystem));
             Debug.Log("Patch Class: SubSystem succeed");
+            harmony.PatchAll(typeof(HP_RewardList));
+            Debug.Log("Patch Class: Reward List succeed");
+            harmony.PatchAll(typeof(HP_SplitDeck));
+            Debug.Log("Patch Class: Split Deck succeed");
+            harmony.PatchAll(typeof(HP_SetCard));
+            Debug.Log("Patch Class: SetCard succeed");
             harmony.PatchAll(typeof(HP_ReverberationSystem));
             Debug.Log("Patch Class: ReverberationSystem succeed");
             harmony.PatchAll(typeof(HP_ReverberationUI));
@@ -44,14 +50,12 @@ namespace Contingecy_Contract
             Debug.Log("Patch Class: RolandUI succeed");
             harmony.PatchAll(typeof(HP_RolandSystem));
             Debug.Log("Patch Class: RolandSystem succeed");
-            harmony.PatchAll(typeof(HP_SetCard));
-            Debug.Log("Patch Class: SetCard succeed");
+            harmony.PatchAll(typeof(HP_DReverberationSystem));
+            Debug.Log("Patch Class: DReverberationSystem succeed");
             harmony.PatchAll(typeof(HP_Effect));
-            Debug.Log("Patch Class: Effect succeed");
-            harmony.PatchAll(typeof(HP_RewardList));
-            Debug.Log("Patch Class: Reward List succeed");
-            harmony.PatchAll(typeof(HP_SplitDeck));
-            Debug.Log("Patch Class: Split Deck succeed");
+            Debug.Log("Patch Class: Effect succeed");        
+            new BattleUnitBuf().GetBufIcon(); //cope BaseMod Late loading artwork
+            CCManager.InitializeUI();
         }
         public static bool IsRoland(UnitDataModel __instance) => __instance.OwnerSephirah == SephirahType.Keter && __instance.isSephirah;
         public static bool IsRolandEmotion(EmotionCardXmlInfo card)

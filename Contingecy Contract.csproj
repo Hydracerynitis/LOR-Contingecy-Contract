@@ -94,11 +94,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Source Code\CCGUI_new\BaseUI.cs" />
-    <Compile Include="Source Code\CCGUI_new\CCLevel.cs" />
+    <Compile Include="Source Code\CCGUI_new\CCLevelUGUI.cs" />
     <Compile Include="Source Code\CCGUI_new\CCManager.cs" />
-    <Compile Include="Source Code\CCGUI_new\CCTag.cs" />
-    <Compile Include="Source Code\CCGUI_new\CCTagList.cs" />
     <Compile Include="Source Code\CCGUI_new\CCTagUGUI.cs" />
     <Compile Include="Source Code\CCGUI_new\CCUGUI.cs" />
     <Compile Include="Source Code\CCGUI_new\MyUITool.cs" />
@@ -159,14 +156,16 @@
     <Compile Include="Source Code\ContractReward\Roland\P5\EmotionCardAbility_rolandYun.cs" />
     <Compile Include="Source Code\ContractReward\Roland\P5\PassiveAbility_1700051.cs" />
     <Compile Include="Source Code\ContractReward\Roland\PassiveAbility_1700000.cs" />
-    <Compile Include="Source Code\Fix\DiceCardSelfAbility_atkcombo_zelkova_New.cs" />
-    <Compile Include="Source Code\Fix\DiceCardSelfAbility_atkcombo_allas_New.cs" />
-    <Compile Include="Source Code\Fix\DiceCardSelfAbility_atkcombo_logic_New.cs" />
+    <Compile Include="Source Code\Fix\DPluto_UC_New.cs" />
     <Compile Include="Source Code\Fix\PassiveAbility_1302013_New.cs" />
+    <Compile Include="Source Code\Fix\PassiveAbility_1405011_New.cs" />
+    <Compile Include="Source Code\Fix\PassiveAbility_1410013_New.cs" />
     <Compile Include="Source Code\Fix\PassiveAbility_170301_New.cs" />
+    <Compile Include="Source Code\Fix\RolandP3_Combo_New.cs" />
     <Compile Include="Source Code\HarmonyPatch\ExtentionMethod.cs" />
     <Compile Include="Source Code\HarmonyPatch\HP_CoreSystem.cs" />
     <Compile Include="Source Code\HarmonyPatch\HP_Effect.cs" />
+    <Compile Include="Source Code\HarmonyPatch\HP_DReverberationSystem.cs" />
     <Compile Include="Source Code\HarmonyPatch\HP_ReverberationSystem.cs" />
     <Compile Include="Source Code\HarmonyPatch\HP_ReverberationUI.cs" />
     <Compile Include="Source Code\HarmonyPatch\HP_RewardList.cs" />
@@ -175,6 +174,10 @@
     <Compile Include="Source Code\HarmonyPatch\HP_SplitDeck.cs" />
     <Compile Include="Source Code\HarmonyPatch\HP_SubSystem.cs" />
     <Compile Include="Source Code\HarmonyPatch\HP_RolandUI.cs" />
+    <Compile Include="Source Code\Fix\PassiveAbility_1404013_New.cs" />
+    <Compile Include="Source Code\Impurity\ContractList_DistortedReverberationP2.cs" />
+    <Compile Include="Source Code\Impurity\ContractList_DistortedReverberationP3.cs" />
+    <Compile Include="Source Code\Impurity\ContractList_DistortedReverberationP1.cs" />
     <Compile Include="Source Code\Impurity\ContractList_RolandP4.cs" />
     <Compile Include="Source Code\Impurity\ContractList_RolandP3.cs" />
     <Compile Include="Source Code\Impurity\ContractList_RolandP2.cs" />
@@ -312,5 +315,6 @@
     </PackageReference>
     <Publicize Include="Assembly-CSharp" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

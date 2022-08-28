@@ -8,6 +8,7 @@ using UnityEngine;
 
 namespace Contingecy_Contract
 {
+    //Deprecated
     public class ContingecyContractGUI : MonoBehaviour
     {
         public bool GUIbool;

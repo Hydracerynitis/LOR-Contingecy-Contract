@@ -14,23 +14,25 @@ namespace ContractReward
     {
         private BattleAllyCardDetail Hot;
         private BattleAllyCardDetail Cold;
-        private SoundEffectPlayer _loopSound;
+        public static SoundEffectPlayer _loopSound;
         private PhilipPhase phase;
-        public override void OnWaveStart()
+        public override void Init(BattleUnitModel self)
         {
+            base.Init(self);
             phase = PhilipPhase.Cold;
             Cold = this.owner.allyCardDetail;
             Hot = new BattleAllyCardDetail(owner);
             Hot.Init(owner.UnitData.unitData.GetDeckForBattle(1));
-            this._loopSound = SingletonBehavior<SoundEffectManager>.Instance.PlayClip("Creature/Philip_StrongLoop", true);
+            if(_loopSound==null)
+                _loopSound = SingletonBehavior<SoundEffectManager>.Instance.PlayClip("Creature/Philip_StrongLoop", true);
         }
         public override void OnBattleEnd()
         {
             base.OnBattleEnd();
             if (_loopSound == null)
                 return;
-            this._loopSound.source.Stop();
-            this._loopSound = null;
+            _loopSound.source.Stop();
+            _loopSound = null;
         }
         public override void OnRoundStartAfter()
         {

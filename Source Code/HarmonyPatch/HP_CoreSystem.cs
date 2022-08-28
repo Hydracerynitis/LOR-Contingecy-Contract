@@ -14,6 +14,7 @@ namespace Contingecy_Contract
     [HarmonyPatch]
     class HP_CoreSystem
     {
+        static bool firstTime = false;
         [HarmonyPatch(typeof(StageNameXmlList),nameof(StageNameXmlList.GetName),new Type[] { typeof(int) })]
         [HarmonyPostfix]
         public static void StageNameXmlList_GetName_int(ref string __result, int id)
@@ -46,6 +47,7 @@ namespace Contingecy_Contract
         public static bool StageController_RoundStartPhase_System()
         {
             ExtentionMethod.triggeredCard.Clear();
+            firstTime = true;
             if (Duel)
                 return true;
             foreach (BattleUnitModel alive in BattleObjectManager.instance.GetAliveList())
@@ -55,6 +57,17 @@ namespace Contingecy_Contract
                 ContractAttribution.Init(alive);
             }
             return true;
+        }
+        [HarmonyPatch(typeof(StageController), nameof(StageController.ApplyLibrarianCardPhase))]
+        [HarmonyPrefix]
+        public static void StageController_ApplyLibrarianCardPhase_Pre()
+        {
+            if (firstTime)
+            {
+                foreach (BattleUnitModel unit in BattleObjectManager.instance.GetAliveList())
+                    unit.view?.speedDiceSetterUI?._speedDices.ForEach(x => x.isLightOn = false);
+                firstTime = false;
+            }
         }
         [HarmonyPatch(typeof(StageController), nameof(StageController.InitStageByInvitation))]
         [HarmonyPrefix]
@@ -112,6 +125,12 @@ namespace Contingecy_Contract
         {
             CCInitializer.CombaltData.Clear();
             SynphonyOrchestra._oldEnemytheme = null;
+            if(PassiveAbility_1810002._loopSound != null)
+            {
+                PassiveAbility_1810002._loopSound.source.Stop();
+                PassiveAbility_1810002._loopSound = null;
+            }
+            
         }
         [HarmonyPatch(typeof(UIBattleResultLeftPanel),nameof(UIBattleResultLeftPanel.SetData))]
         [HarmonyPrefix]
@@ -224,13 +243,13 @@ namespace Contingecy_Contract
             }
             return true;
         }
-/*        [HarmonyPatch(typeof(UI.UIController), nameof(UI.UIController.Initialize))]
+        /*[HarmonyPatch(typeof(UI.UIController), nameof(UI.UIController.Initialize))]
         [HarmonyPostfix]
         public static void UI_UIController_Initialize()
         {
             if (!UIInit)
             {
-                UI.UIController.Instance.gameObject.AddComponent<ContingecyContractGUI>();
+                //UI.UIController.Instance.gameObject.AddComponent<ContingecyContractGUI>();
                 UIInit = true;
             }
         }*/

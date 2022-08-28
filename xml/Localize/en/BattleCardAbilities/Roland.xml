@@ -2,16 +2,16 @@
 <BattleCardAbilityDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<!--P3-->
 	<BattleCardAbility ID="Vigilant1">
-		<Desc>At the end of a Scene, recover 3 Stagger Resist if this Page is at hand.</Desc>
+		<Desc>At the end of a Scene, recover 3 Stagger Resist if this Page is in hand</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="Vigilant2">
-		<Desc>At the end of a Scene, gain 1 Haste next Scene if this Page is at hand.</Desc>
+		<Desc>At the end of a Scene, gain 1 Haste next Scene if this Page is in hand</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="RolandCombo">
-    	<Desc>[Tag Team Waltz in White] the second die of this page gain +2 natural value</Desc>
+    	<Desc>[Tag Team Waltz in White] The second die of this page gains +2 natural value</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="AngelicaCombo">
-    	<Desc>[Tag Team Waltz in Black] the first die of this page gain +5 maximun value</Desc>
+    	<Desc>[Tag Team Waltz in Black] The first die of this page gains +5 maximun value</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="RolandAura">
     	<Desc>[Tag Team Ashen Bond] Tag Teammate and this character recover 2 Light</Desc>

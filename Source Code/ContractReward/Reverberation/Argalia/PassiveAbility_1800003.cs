@@ -16,5 +16,11 @@ namespace ContractReward
             this.owner.personalEgoDetail.AddCard(Tools.MakeLorId(18000011));
             this.owner.personalEgoDetail.AddCard(Tools.MakeLorId(18000012));
         }
+        public override void OnSucceedAreaAttack(BattleDiceBehavior behavior, BattleUnitModel target)
+        {
+            base.OnSucceedAreaAttack(behavior, target);
+            if (owner.bufListDetail.FindBuf<BattleUnitBuf_Insanity>() is BattleUnitBuf_Insanity insane)
+                insane.OnSuccessAttack(behavior);
+        }
     }
 }

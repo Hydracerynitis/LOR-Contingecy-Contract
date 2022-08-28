@@ -14,16 +14,16 @@ namespace ContractReward
         public BattleUnitModel Angelica=null;
         public UnitKit solo = new UnitKit();
         public UnitKit coop =new UnitKit();
-        public override void OnWaveStart()
+        public override void Init(BattleUnitModel self)
         {
-            base.OnWaveStart();
+            base.Init(self);
             owner.personalEgoDetail.AddCard(Tools.MakeLorId(17000331));
             solo.Deck = owner.allyCardDetail;
             solo.Passive = owner.passiveDetail;
             solo.EGO = owner.personalEgoDetail;
             coop.EGO = new BattlePersonalEgoCardDetail(owner);
             coop.EGO.Init();
-            coop.Deck=new BattleAllyCardDetail(owner);
+            coop.Deck = new BattleAllyCardDetail(owner);
             coop.Deck.Init(owner.UnitData.unitData.GetDeckForBattle(1));
             coop.Deck.DrawCards(owner.Book.GetStartDraw() + 1);
             coop.Passive = new BattleUnitPassiveDetail(owner);
@@ -33,12 +33,13 @@ namespace ContractReward
             coop.Passive._passiveList.Add(new PassiveAbility_1700032(owner));
             coop.Passive._passiveList.Add(new PassiveAbility_1700033(owner));
         }
-
         public void Dance(BattleUnitModel unit)
         {
             if (unit.faction != owner.faction)
                 return;
             BookModel angelica = new BookModel(Singleton<BookXmlList>.Instance.GetData(Tools.MakeLorId(17000103)));
+            float hpRatio = unit.hp / unit.MaxHp;
+            float breakRatio=unit.breakDetail.breakGauge/unit.breakDetail.GetDefaultBreakGauge();
             Angelica = unit;
             original.Deck = unit.allyCardDetail;
             original.Passive = unit.passiveDetail;
@@ -86,6 +87,8 @@ namespace ContractReward
             owner.passiveDetail = coop.Passive;
             owner.bufListDetail.AddBuf(new BattleUnitBuf_SoulLink(Angelica) { stack = 4 });
             Angelica.bufListDetail.AddBuf(new BattleUnitBuf_SoulLink(owner) { stack = 4 });
+            Angelica.SetHp((int)(hpRatio * Angelica.MaxHp));
+            Angelica.breakDetail.breakGauge = ((int)(breakRatio * Angelica.breakDetail.GetDefaultBreakGauge()));
             owner.OnRoundStartOnlyUI();
             owner.RollSpeedDice();
             Angelica.OnRoundStartOnlyUI();

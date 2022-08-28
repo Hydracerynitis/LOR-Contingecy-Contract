@@ -107,6 +107,12 @@ namespace Contingecy_Contract
                 __result = new Fix.PassiveAbility_170003_New();
             else if (ContractLoader.Instance.GetPassiveList().Exists(x => x.Type == "Roland4th_BlackSilence") && __result is PassiveAbility_170301)
                 __result = new Fix.PassiveAbility_170301_New();
+            else if (ContractLoader.Instance.GetPassiveList().Exists(x => x.Type == "DBremen_Self") && __result is PassiveAbility_1404013)
+                __result = new Fix.PassiveAbility_1404013_New();
+            else if (ContractLoader.Instance.GetPassiveList().Exists(x => x.Type == "DOswald_Friend" || x.Type== "DOswald_Show") && __result is PassiveAbility_1405011)
+                __result = new Fix.PassiveAbility_1405011_New();
+            else if (ContractLoader.Instance.GetPassiveList().Exists(x => x.Type == "DArgalia_Sonata") && __result is PassiveAbility_1410013)
+                __result = new Fix.PassiveAbility_1410013_New();
         }
         [HarmonyPatch(typeof(UICharacterRenderer),nameof(UICharacterRenderer.SetCharacter))]
         [HarmonyPostfix]

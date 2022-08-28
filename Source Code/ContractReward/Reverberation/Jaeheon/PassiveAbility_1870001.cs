@@ -15,9 +15,9 @@ namespace ContractReward
         private BattleAllyCardDetail Active;
         private BattleAllyCardDetail Passive;
         private BattleUnitModel Angelica;
-        public override void OnWaveStart()
+        public override void Init(BattleUnitModel self)
         {
-            base.OnWaveStart();
+            base.Init(self);
             this.owner.personalEgoDetail.AddCard(Tools.MakeLorId(18700101));
             Angelica = null;
             Active = this.owner.allyCardDetail;

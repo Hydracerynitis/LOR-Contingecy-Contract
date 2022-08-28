@@ -102,14 +102,20 @@ namespace Contingecy_Contract
                     Model.breakDetail.breakGauge = Model.breakDetail.GetDefaultBreakGauge();
                     CheckPhaseCondition(Model);
                 }
-                else
+                else if(!IsNewTwistedOswald(Model))
                 {
-                    Model.SetHp((int)Model.passiveDetail.GetStartHp((float)Model.MaxHp));
+                    Model.SetHp((int)Model.passiveDetail.GetStartHp(Model.MaxHp));
                     Model.breakDetail.breakGauge = Model.breakDetail.GetDefaultBreakGauge();
                     CheckPhaseCondition(Model);
                 }
             }
         }
+
+        private static bool IsNewTwistedOswald(BattleUnitModel unit)
+        {
+            return StageController.Instance.EnemyStageManager is EnemyTeamStageManager_TwistedReverberationBand_Middle TRM && unit.UnitData.unitData.EnemyUnitId==1405011 && unit.hp==TRM._oswaldHp ;
+        }
+
         public static void CheckPhaseCondition(BattleUnitModel unit)
         {
             if (unit.passiveDetail.PassiveList.Find(x => x is PassiveAbility_250022) is PassiveAbility_250022 Red)
@@ -133,6 +139,18 @@ namespace Contingecy_Contract
             if (posType == BufPositiveType.Positive && Contracts.Exists(x => x is ContingecyContract_NoBuff))
                 return true;
             return base.IsImmune(posType);
+        }
+        public override int GetDamageReductionRate()
+        {
+            int i = 0;
+            Contracts.ForEach(x => i = x.GetDamageReductionRate()>i ? x.GetDamageReductionRate() : i);
+            return i;
+        }
+        public override int GetBreakDamageReductionRate()
+        {
+            int i = 0;
+            Contracts.ForEach(x => i = x.GetBreakDamageReductionRate() > i ? x.GetBreakDamageReductionRate() : i);
+            return i;
         }
         public override bool IsCardChoosable(BattleDiceCardModel card)
         {
@@ -160,6 +178,8 @@ namespace Contingecy_Contract
         public virtual DiceStatBonus GetDicestatBonus(BattleDiceBehavior behavior) => new DiceStatBonus();
         public virtual bool CheckEnemyId(LorId EnemyId) => true;
         public virtual StatBonus GetStatBonus(BattleUnitModel owner) => new StatBonus();
+        public virtual int GetDamageReductionRate() => 0;
+        public virtual int GetBreakDamageReductionRate() => 0;
         public virtual string[] GetFormatParam(string language) => Array.Empty<string>();
     }
 }
