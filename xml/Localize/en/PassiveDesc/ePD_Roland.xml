@@ -37,8 +37,8 @@ At the start of each Scene, inflict 1 Suffocating Haze on all other characters.<
     </PassiveDesc>
     <PassiveDesc ID="1700022">
         <Name>Alien and Horrifying</Name>
-        <Desc>At the start of the Act, draw 2 cards.
-On clash, make enemy lose 20% of their current Stagger Resist.</Desc>
+        <Desc>At the start of the Act, draw 2 pages.
+In a clash, make enemy lose 20% of their current Stagger Resist.</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1700023">
         <Name>Juggernaut</Name>

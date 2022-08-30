@@ -12,7 +12,7 @@
 	</PassiveDesc>
 	<PassiveDesc ID="1800002">
 		<Name>The Requiem</Name> 
-		<Desc>At the start of each act add a copy of "Tempestuous Danza" to hand. Activating "Resonance" 5 times will upgrade the card.</Desc>
+		<Desc>At the start of each act add a copy of "Tempestuous Danza" to hand. Activating "Resonance" 5 times will upgrade the Page.</Desc>
 	</PassiveDesc>
 	<PassiveDesc ID="1800003">
 		<Name>Frantic Performance</Name> 
@@ -91,8 +91,8 @@ When all heads are destroyed, recover all heads and add one copy of "Chorus at t
 	</PassiveDesc>
   	<PassiveDesc ID="1840003">
     	<Name>Improvisation</Name>
-   		<Desc>At the start of each Scene, set cost of one random card in Hand to 0. At Emotion Level 4 and higher, set cost of one extra card in hand to 0.
-This Character's Maximun Light is not affected by Emotion Level, and draw 1 less card at the start of each Scene.</Desc>
+   		<Desc>At the start of each Scene, set cost of one random Page in Hand to 0. At Emotion Level 4 and higher, set cost of one extra Page in hand to 0.
+This Character's Maximun Light is not affected by Emotion Level, and draw 1 less Page at the start of each Scene.</Desc>
   	</PassiveDesc>
   	<PassiveDesc ID="1840004">
     	<Name>Woof ruff! Doodly-doo? Heehaw~!</Name>
@@ -206,7 +206,7 @@ Offensive Dice gain +1 Power for every 25% Max HP lost (Max 3).</Desc>
 	<PassiveDesc ID="1890001">
 		<Name>Contracts</Name> 
 		<Desc>Gain copy of 5 contracts. Target an ally to put it on them or target an enemy to put it on this character self.
-At the start of each Scene, Draw 1 Card.</Desc>
+At the start of each Scene, Draw 1 Page.</Desc>
 	</PassiveDesc>
 	<PassiveDesc ID="1890002">
 		<Name>Yesterday's Promise</Name> 
