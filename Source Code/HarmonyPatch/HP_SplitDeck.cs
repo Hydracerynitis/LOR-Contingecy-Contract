@@ -7,6 +7,7 @@ using LOR_DiceSystem;
 using System;
 using UC = UI.UIController;
 using Mod;
+using HyperCard;
 
 namespace Contingecy_Contract
 {
@@ -25,7 +26,14 @@ namespace Contingecy_Contract
             {
                 
                 if (modified != book.ClassInfo._id)
-                    RestoreDefault(CTC);
+                    RestoreDefault(CTC); //若查看的司书用的是不同的书页, 重置UICustomTabsController
+                if(PrimeSoulCond(book))//完美提取--原生灵魂
+                {
+                    CTC.CustomTabs[0].TabName.text = TextDataModel.GetText("ui_PrimeSould_1");
+                    CTC.CustomTabs[1].TabName.text = TextDataModel.GetText("ui_PrimeSould_2");
+                    CTC.CustomTabs[2].gameObject.SetActive(false);
+                    CTC.CustomTabs[3].gameObject.SetActive(false);
+                } 
                 if(book.ClassInfo._id== 18100000)
                 {
                     
@@ -89,7 +97,6 @@ namespace Contingecy_Contract
                 List<DiceCardXmlInfo> only= GetDeckOnly(__result, __instance.GetCurrentDeckIndex());
                 if (only != null)
                     __result = only;
-
             }
         }
         [HarmonyPatch(typeof(UIEquipDeckCardList),nameof(UIEquipDeckCardList.OnChangeDeckTab))]
@@ -121,6 +128,7 @@ namespace Contingecy_Contract
         static bool EileenCond(BookModel book) => book.ClassInfo._id == 18200000 && book.GetCurrentDeckIndex() == 1;
         static bool OswaldCond(BookModel book) => book.ClassInfo._id == 18500000 && book.GetCurrentDeckIndex() == 2;
         static bool JaeheonCond(BookModel book) => book.ClassInfo._id == 18700000 && book.GetCurrentDeckIndex() == 1;
+        static bool PrimeSoulCond(BookModel book) => book.ClassInfo._id >= 19000000 && book.ClassInfo._id < 20000000;
         //static bool EileenCond(int id, int index) => id == 18200000 && index == 1;
         [HarmonyPatch(typeof(UIInvenCardListScroll),nameof(UIInvenCardListScroll.ApplyFilterAll))]
         [HarmonyPostfix]
@@ -194,8 +202,17 @@ namespace Contingecy_Contract
                 BookModel book = currentUnit.bookItem;
                 if (book.ClassInfo.workshopID != "ContingencyConract")
                     return;
-                if (!EileenCond(book) && !OswaldCond(book) && !JaeheonCond(book))
+                if (!EileenCond(book) && !OswaldCond(book) && !JaeheonCond(book) && !PrimeSoulCond(book))
                     return;
+                if (PrimeSoulCond(book))//完美提取--原生灵魂
+                {
+                    List<DiceCardXmlInfo> combined = book._deckList[0].GetAllCardList();
+                    combined.AddRange(book._deckList[1].GetAllCardList());
+                    LorId cardId = __instance.CardModel.GetID();
+                    DiceCardXmlInfo card = ItemXmlDataList.instance.GetCardItem(cardId);
+                    if (combined.FindAll(x => x.id == cardId).Count >= card.Limit)
+                        __instance.slotState = UIINVENCARD_STATE.LimitedDeck;
+                }
                 if (book.ClassInfo._id == 18200000)
                 {
                     if (__instance.slotState == UIINVENCARD_STATE.MeleeCard)
@@ -252,8 +269,16 @@ namespace Contingecy_Contract
         {
             if (__instance.ClassInfo.workshopID != "ContingencyConract")
                 return;
-            if (!EileenCond(__instance) && !OswaldCond(__instance) && !JaeheonCond(__instance))
+            if (!EileenCond(__instance) && !OswaldCond(__instance) && !JaeheonCond(__instance) && !PrimeSoulCond(__instance))
                 return;
+            if (PrimeSoulCond(__instance))//完美提取--原生灵魂
+            {
+                List<DiceCardXmlInfo> combined = __instance._deckList[0].GetAllCardList();
+                combined.AddRange(__instance._deckList[1].GetAllCardList());
+                DiceCardXmlInfo card = ItemXmlDataList.instance.GetCardItem(cardId);
+                if (combined.FindAll(x => x.id == cardId).Count > card.Limit)
+                    RemoveDeck(cardId,__instance);
+            }
             if (__instance.ClassInfo._id == 18200000)
             {
                 if (__result == CardEquipState.NearTypeLimit)

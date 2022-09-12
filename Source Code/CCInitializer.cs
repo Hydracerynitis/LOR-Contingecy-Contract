@@ -54,7 +54,7 @@ namespace Contingecy_Contract
             Debug.Log("Patch Class: DReverberationSystem succeed");
             harmony.PatchAll(typeof(HP_Effect));
             Debug.Log("Patch Class: Effect succeed");        
-            new BattleUnitBuf().GetBufIcon(); //cope BaseMod Late loading artwork
+            new BattleUnitBuf().GetBufIcon(); //cope BaseMod Late loading artwork for CCGUI Artworks
             CCManager.InitializeUI();
         }
         public static bool IsRoland(UnitDataModel __instance) => __instance.OwnerSephirah == SephirahType.Keter && __instance.isSephirah;
@@ -75,7 +75,7 @@ namespace Contingecy_Contract
                 }
             }
         }
-        public static List<int> NoThumbPage = new List<int>() { 18810000, 17000002, 17000003, 17000004, 17000005 };
+        public static List<int> NoThumbPage = new List<int>() { 18810000, 17000002, 17000003, 17000004, 17000005, 19100000 };
         public static List<int> NonHeadEquipPage = new List<int>() { 18810000, 17000002 };
     }
 }

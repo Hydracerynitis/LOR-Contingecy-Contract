@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PassiveDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <!--General-->
+    <PassiveDesc ID="1900001">
+        <Name>Speed</Name>
+        <Desc>Speed Dice Slot +1. Gain a Speed die since the third Scene. 
+Gain an additional one if there's an enemy whose Emotion Level is 4 or higher.
+Does not gain Speed dice from Emotion Level bonuses.</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1900000">
+        <Name>Perfect Extraction--Prime Soul</Name>
+        <Desc>The Deck Limit increase to 18</Desc>
+    </PassiveDesc>
+    <!--哭泣之子-->
+    <PassiveDesc ID="1910001">
+        <Name>Borrowed Embers</Name>
+        <Desc>While alive, the first Offensive die allies play each engagement inflicts 2 Burn on hit.
+After death, allies are inflicted with 1 Burn when hit.</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1910002">
+        <Name>Supraheat</Name>
+        <Desc>If there is total 30 stacks Burn in the field at the start of Scene, Dice gain +1 Power and inflict +25% Damage and Stagger Damage for the duration of that Scene.</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1910003">
+        <Name>Restraints</Name>
+        <Desc>If achieve 6 clash win agaisnt same enemy in one Scene, inflict 1 'Restraint' at the end of the Scene.
+On hit against a target with 3 or more stacks of 'Restraint', Immobilize them for the next Scene.</Desc>
+    </PassiveDesc>
+    <!--齿轮教团-->
+    <PassiveDesc ID="1920001">
+        <Name>Prognosis</Name>
+        <Desc>While alive, allies gain the effect of 'Puffy Brume'. Upon death, allies are inflicted with 10 Smoke and lose the effect of 'Puffy Brume'.</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1920002">
+        <Name>Fumigating Smoke</Name>
+        <Desc>Every Scene, all allies gain Smoke equal to half the amount of Smoke this character has.</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1920003">
+        <Name>Foggy Matrix</Name>
+        <Desc>If the character has 'Smoke', Reduce incoming Damage by (5 * Smoke)%</Desc>
+    </PassiveDesc>
+</PassiveDescRoot>

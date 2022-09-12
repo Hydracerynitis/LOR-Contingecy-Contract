@@ -6,6 +6,8 @@
 	<text id="ui_popup_getequippage">Gain {1} Keypage: “{0}”</text>
 	<text id="ui_ForDemo">Preview</text>
 	<text id="ui_Jeaheon_counter">Counter Form</text>
+	<text id="ui_PrimeSould_1">First Page</text>
+	<text id="ui_PrimeSould_2">Second Page</text>
 	<text id="Tanya_Brawl_none">None</text>
 	<text id="Speed_Furioso">Speed Furioso</text>
 	<text id="Enhance_HeavySmoke_Passive">When attacking, if target has Suffocating Haze, deal +{0} damage.

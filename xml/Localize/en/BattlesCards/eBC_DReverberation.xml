@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleCardDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	 <cardDescList>
+		<!--哭泣之子-->
+		<BattleCardDesc ID="19100001">
+			<LocalizedName>Distorted Courage</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19100002">
+			<LocalizedName>Blazing Strike</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19100003">
+			<LocalizedName>Restrain</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19100004">
+			<LocalizedName>Wound of Sorrow</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19100005">
+			<LocalizedName>Scorching Desperation</LocalizedName>
+		</BattleCardDesc>
+		<!--齿轮教团-->
+		<BattleCardDesc ID="19200001">
+			<LocalizedName>Thought Gear: Foretell</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19200002">
+			<LocalizedName>Thought Gear: Combust</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19200003">
+			<LocalizedName>Thought Gear: Oxide Overflow</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19200004">
+			<LocalizedName>Meat Gear: Smoke Cycle</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19200005">
+			<LocalizedName>Meat Gear: Imbue</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19200006">
+			<LocalizedName>Thought Gear: Advent</LocalizedName>
+		</BattleCardDesc>
+ 	</cardDescList>
+</BattleCardDescRoot>

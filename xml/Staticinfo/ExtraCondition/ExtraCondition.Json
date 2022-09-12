@@ -34,6 +34,20 @@
                 [{"Type":"Last","Variation":0}]
             ],
             "RewardId":17000004
+        },
+        {
+            "Stageid":60004,
+            "Condition":[
+                [{"Type":"DPhilip_Helios","Variation":0},{"Type":"DPhilip_Restraint","Variation":0}]
+            ],
+            "RewardId":19100000
+        },
+        {
+            "Stageid":60004,
+            "Condition":[
+                [{"Type":"DEileen_Smoke","Variation":0},{"Type":"DEileen_DeusEx","Variation":0}]
+            ],
+            "RewardId":19200000
         }
     ]
 }

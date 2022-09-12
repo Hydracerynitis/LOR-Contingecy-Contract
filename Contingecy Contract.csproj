@@ -101,6 +101,16 @@
     <Compile Include="Source Code\CCGUI_new\MyUITool.cs" />
     <Compile Include="Source Code\ContingecyContractGUI.cs" />
     <Compile Include="Source Code\ContractReward\DiceCardSelfAbility_DirectAttack.cs" />
+    <Compile Include="Source Code\ContractReward\DReverberation\DEileen\DiceCardSelfAbility_strength2quickness2friend.cs" />
+    <Compile Include="Source Code\ContractReward\DReverberation\DEileen\PassiveAbility_1920003.cs" />
+    <Compile Include="Source Code\ContractReward\DReverberation\DEileen\PassiveAbility_1920002.cs" />
+    <Compile Include="Source Code\ContractReward\DReverberation\DEileen\PassiveAbility_1920001.cs" />
+    <Compile Include="Source Code\ContractReward\DReverberation\DPhilip\DiceCardAbility_Area5Burn.cs" />
+    <Compile Include="Source Code\ContractReward\DReverberation\DPhilip\DiceCardSelfAbility_CostBurnAoe.cs" />
+    <Compile Include="Source Code\ContractReward\DReverberation\DPhilip\PassiveAbility_1910003.cs" />
+    <Compile Include="Source Code\ContractReward\DReverberation\DPhilip\PassiveAbility_1910002.cs" />
+    <Compile Include="Source Code\ContractReward\DReverberation\DPhilip\PassiveAbility_1910001.cs" />
+    <Compile Include="Source Code\ContractReward\DReverberation\PassiveAbility_1900000.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Greta\DiceCardSelfAbility_BleedPlus.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Oswald\DiceCardSelfAbility_Oswald_AllDraw1.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Oswald\DiceCardSelfAbility_Oswald_Mermaid.cs" />

@@ -24,4 +24,6 @@ while "End of the Line" and "Last Stand" are active.</Reward>
     <Reward id="17000005">Get by Completing all Risk Level challenges of The Black Silence reception.</Reward>
 	<Reward id="19100000">Get by Completing The Distorted Reverberation Ensemble reception at Risk Level 16 or more
 while "Rekindled Ember" or "Endless Shackle" is active</Reward>
+	<Reward id="19200000">Get by Completing The Distorted Reverberation Ensemble reception at Risk Level 16 or more
+while "Smoke Manufacturer" or "Deus ex Calces" is active</Reward>
 </RewardCondition>

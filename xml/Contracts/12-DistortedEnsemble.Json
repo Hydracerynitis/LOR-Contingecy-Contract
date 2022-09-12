@@ -101,12 +101,12 @@
                 {
                     "language":"cn",
                     "name":"饕餮之愿",
-                    "desc":"格蕾塔情感等级低于4级时每2幕会使用1次鲨口惊魂.鲨口惊魂后3个骰子基础值提升3点."
+                    "desc":"格蕾塔每幕都会使用1次鲨口惊魂.鲨口惊魂后3个骰子基础值提升3点."
                 },
                 {
                     "language":"en",
                     "name":"Wish of Gluttery",
-                    "desc":"Greta will use 'Tackle Mount' every 2 Scene at Emotion Level lower than 4.\nIncrease Tackle Mount's last 3 dice natural roll by +3."
+                    "desc":"Greta will use 'Tackle Mount' every Scene.\nIncrease Tackle Mount's last 3 dice natural roll by +3."
                 }
             ],
             "Faction":0,

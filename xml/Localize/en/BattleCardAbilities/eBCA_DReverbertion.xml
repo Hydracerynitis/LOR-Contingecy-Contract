@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleCardAbilityDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!--哭泣之子-->
+	  <BattleCardAbility ID="ReLit">
+    		<Desc>Cost 5 Burn to use</Desc>
+			<Desc>This page can be reused only after 4 scenes</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="Area5Burn">
+    		<Desc>[On Hit] inflict 5 Burn</Desc>
+  	</BattleCardAbility>
+	<!--齿轮教团-->
+	  <BattleCardAbility ID="strength2quickness2friend">
+    		<Desc>[On Use] A random ally gain 2 Strength 2 Quickness next Scene</Desc>
+  	</BattleCardAbility>
+</BattleCardAbilityDescRoot>

@@ -32,8 +32,9 @@ namespace Contingecy_Contract
                 {
                     BookModel demo = new BookModel(BookXmlList.Instance.GetData(Tools.MakeLorId(pair.Item2)).CopyForDemo());
                     DeckXmlInfo deck = DeckXmlList.Instance.GetData(demo.GetBookClassInfoId());
-                    foreach (LorId id in deck.cardIdList)
-                        demo._deck.AddCardForLoading(id);
+                    if(deck != null)
+                        foreach (LorId id in deck.cardIdList)
+                            demo._deck.AddCardForLoading(id);
                     __result.Add(demo);
                 }
             }

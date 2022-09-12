@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Card ID="19200001">
+        <Name>思想齿轮-预知</Name>
+        <Artwork>Eileen1</Artwork>
+        <Rarity>Rare</Rarity>
+        <Option>OnlyPage</Option>
+		<Option>Basic</Option>
+        <Spec Range="Far" Cost="2" />
+        <Script>smokeSelf3</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="5" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="6" Dice="8" Type="Atk" Detail="Slash" Motion="S1" EffectRes="" Script="smoke2atk" ActionScript="" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="19200002">
+        <Name>思想齿轮-燃烧</Name>
+        <Artwork>Eileen1</Artwork>
+        <Rarity>Rare</Rarity>
+        <Option>OnlyPage</Option>
+		<Option>Basic</Option>
+        <Spec Range="Far" Cost="3" />
+        <Script>smokeSelf4</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+        <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="S1" EffectRes="" Script="smoke1atk" ActionScript="" Desc="" />
+        <Behaviour Min="6" Dice="11" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="smokeatkbyburnbuf" ActionScript="" Desc="" />
+        <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="19200003">
+        <Name>思想齿轮-烟泛</Name>
+        <Artwork>TwistEileen1</Artwork>
+        <Rarity>Rare</Rarity>
+        <Option>OnlyPage</Option>
+		<Option>Basic</Option>
+        <Spec Range="Far" Cost="1" />
+        <Script>drawCard2</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="S2" EffectRes="" Script="smoke2atk" ActionScript="" Desc="" />
+            <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="S2" EffectRes="" Script="smoke2atk" ActionScript="" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="19200004">
+        <Name>血肉齿轮-烟循</Name>
+        <Artwork>Eileen6</Artwork>
+        <Rarity>Rare</Rarity>
+        <Option>OnlyPage</Option>
+        <Option>Basic</Option>
+        <Spec Range="Far" Cost="1" />
+        <Script>energySmoke2</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="dmgupbysmokebuf" ActionScript="" Desc="" />
+            <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="" Script="dmgupbysmokebuf" ActionScript="" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="19200005">
+        <Name>血肉齿轮-给予</Name>
+        <Artwork>Eileen3</Artwork>
+        <Rarity>Rare</Rarity>
+        <Option>OnlyPage</Option>
+        <Option>Basic</Option>
+        <Spec Range="Far" Cost="2" />
+        <Script>strength2quickness2friend</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="3" Dice="9" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="5" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="19200006">
+        <Name>思想齿轮-降神</Name>
+        <Artwork>TwistEileen2</Artwork>
+        <Rarity>Unique</Rarity>
+        <Option>OnlyPage</Option>
+        <Option>Basic</Option>
+        <Spec Range="FarArea" Cost="5" />
+        <Script>AoeCoolDown</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="16" Dice="22" Type="Atk" Detail="Hit" Motion="S3" EffectRes="" Script="smoke5atkandStun" ActionScript="TwistEileen_FarArea" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+</DiceCardXmlRoot>

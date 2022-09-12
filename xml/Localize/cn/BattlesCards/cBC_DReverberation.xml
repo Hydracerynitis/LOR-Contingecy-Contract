@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleCardDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	 <cardDescList>
+		<!--哭泣之子-->
+		<BattleCardDesc ID="19100001">
+			<LocalizedName>扭曲之勇</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19100002">
+			<LocalizedName>爆炎一击</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19100003">
+			<LocalizedName>扭曲之勇</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19100004">
+			<LocalizedName>哀痛创痕</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19100005">
+			<LocalizedName>焦灼死灰</LocalizedName>
+		</BattleCardDesc>
+		<!--齿轮教团-->
+		<BattleCardDesc ID="19200001">
+			<LocalizedName>思想齿轮-预知</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19200002">
+			<LocalizedName>思想齿轮-燃烧</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19200003">
+			<LocalizedName>思想齿轮-烟泛</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19200004">
+			<LocalizedName>血肉齿轮-烟循</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19200005">
+			<LocalizedName>血肉齿轮-给予</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19200006">
+			<LocalizedName>思想齿轮-降神</LocalizedName>
+		</BattleCardDesc>
+ 	</cardDescList>
+</BattleCardDescRoot>

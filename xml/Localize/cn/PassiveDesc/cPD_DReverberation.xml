@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PassiveDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <!--General-->
+    <PassiveDesc ID="1900001">
+        <Name>速战速决4</Name>
+        <Desc>速度骰子+1, 自第3幕起额外+1
+若有敌人已达到情感4级则额外+1
+速度骰子数不随情感等级提升而增加</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1900000">
+        <Name>完美提取--原生灵魂</Name>
+        <Desc>牌库上限提升18张书页</Desc>
+    </PassiveDesc>
+    <!--哭泣之子-->
+    <PassiveDesc ID="1910001">
+        <Name>火种</Name>
+        <Desc>使所有来自友方单位的书页第一次命中时对目标施加2层"烧伤"
+若自身死亡，则使所有友方角色被击中时获得1层“烧伤”</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1910002">
+        <Name>过热</Name>
+        <Desc>每一幕开始时若场上至少总共有30层烧伤则这一幕内自身骰子威力+1，伤害和混乱伤害+25%</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1910003">
+        <Name>自我束缚</Name>
+        <Desc>若这一幕内对同一目标达成6次拼点胜利则这一幕结束时对其施加1层拘禁.
+击中拥有3层“拘禁”的目标使其下一幕陷入“眩晕”并清除“拘禁”层数</Desc>
+    </PassiveDesc>
+    <!--齿轮教团-->
+    <PassiveDesc ID="1920001">
+        <Name>烟气福音</Name>
+        <Desc>每一幕开始时使所有我方角色获得被动能力“烟气缭绕”.若自身死亡，则对所有友方角色施加10层“烟气”并失去“烟气缭绕”效果</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1920002">
+        <Name>烟气扩散</Name>
+        <Desc>每一幕开始时自身每有2层“烟气”便使所有友方角色获得1层“烟气”. </Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1920003">
+        <Name>烟气护罩</Name>
+        <Desc>减少(5*自身烟气层数)%承受伤害</Desc>
+    </PassiveDesc>
+</PassiveDescRoot>
