@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace ContractReward
 {
-    public class DiceCardAbility_Area5Burn : DiceCardAbilityBase
+    public class DiceCardAbility_Area4Burn : DiceCardAbilityBase
     {
         public override void OnSucceedAreaAttack(BattleUnitModel target)
         {
             base.OnSucceedAreaAttack(target);
-            target.bufListDetail.AddKeywordBufThisRoundByCard(KeywordBuf.Burn, 5);
+            target.bufListDetail.AddKeywordBufThisRoundByCard(KeywordBuf.Burn, 4,owner);
         }
     }
 }

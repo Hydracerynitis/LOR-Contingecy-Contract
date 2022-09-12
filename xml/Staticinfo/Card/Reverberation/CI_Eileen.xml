@@ -3,7 +3,7 @@
     <Card ID="18200001">
 		<Name>思想齿轮: 加速</Name>
 		<Artwork>Eileen1</Artwork>
-		<Rarity>Unique</Rarity>
+		<Rarity>Rare</Rarity>
 		<Option>OnlyPage</Option>
 		<Option>Basic</Option>
 		<Spec Range="Far" Cost="0"/>
@@ -19,7 +19,7 @@
     <Card ID="18200002">
 		<Name>思想齿轮: 传播</Name>
 		<Artwork>Eileen2</Artwork>
-		<Rarity>Unique</Rarity>
+		<Rarity>Rare</Rarity>
 		<Option>OnlyPage</Option>
 		<Option>Basic</Option>
 		<Spec Range="Far" Cost="1"/>
@@ -35,7 +35,7 @@
     <Card ID="18200003">
 		<Name>思想齿轮: 传教</Name>
 		<Artwork>Eileen3</Artwork>
-		<Rarity>Unique</Rarity>
+		<Rarity>Rare</Rarity>
 		<Option>OnlyPage</Option>
 		<Option>Basic</Option>
 		<Spec Range="Far" Cost="2"/>

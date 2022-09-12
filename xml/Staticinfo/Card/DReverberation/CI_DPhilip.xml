@@ -73,11 +73,11 @@
         <Rarity>Unique</Rarity>
         <Option>OnlyPage</Option>
 		<Option>Basic</Option>
-        <Spec Range="FarArea" Cost="0" />
+        <Spec Range="FarArea" Cost="3" />
         <Script>ReLit</Script>
         <ScriptDesc></ScriptDesc>
         <BehaviourList>
-            <Behaviour Min="14" Dice="20" Type="Atk" Detail="Penetrate" Motion="S5" EffectRes="" Script="Area5Burn" ActionScript="TwistPhilip_AreaBurnDespair" Desc="" />
+            <Behaviour Min="14" Dice="20" Type="Atk" Detail="Penetrate" Motion="S5" EffectRes="" Script="Area4Burn" ActionScript="TwistPhilip_AreaBurnDespair" Desc="" />
         </BehaviourList>
         <Chapter>7</Chapter>
         <Priority>0</Priority>

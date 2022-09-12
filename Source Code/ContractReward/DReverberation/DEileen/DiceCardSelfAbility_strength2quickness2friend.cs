@@ -14,9 +14,9 @@ namespace ContractReward
         public override void OnUseCard()
         {
             base.OnUseCard();
-            BattleUnitModel unit=BattleObjectManager.instance.GetAliveList_random(owner.faction, 1)[0];
-            unit.bufListDetail.AddKeywordBufByCard(KeywordBuf.Strength, 2,owner);
-            unit.bufListDetail.AddKeywordBufByCard(KeywordBuf.Quickness, 2,owner);
+            BattleUnitModel unit = BattleObjectManager.instance.GetAliveList_random(owner.faction, 1)[0];
+            unit.bufListDetail.AddKeywordBufByCard(KeywordBuf.Strength, 2, owner);
+            unit.bufListDetail.AddKeywordBufByCard(KeywordBuf.Quickness, 2, owner);
         }
     }
 }

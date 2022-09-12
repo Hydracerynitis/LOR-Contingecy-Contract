@@ -2,11 +2,11 @@
 <BattleCardAbilityDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<!--哭泣之子-->
 	  <BattleCardAbility ID="ReLit">
-	  		<Desc>这一幕施加烧伤层数+2</Desc>
+	  		<Desc>[战斗开始]这一幕中自身使用书页施加[烧伤]时层数+2</Desc>
 			<Desc>该书页4幕内最多使用1次</Desc>
   	</BattleCardAbility>
-	<BattleCardAbility ID="Area5Burn">
-    		<Desc>[命中时] 施加5层烧伤</Desc>
+	<BattleCardAbility ID="Area4Burn">
+    		<Desc>[命中时] 施加4层烧伤</Desc>
   	</BattleCardAbility>
 	<!--齿轮教团-->
 	  <BattleCardAbility ID="strength2quickness2friend">
