@@ -39,4 +39,17 @@
         <Name>烟气护罩</Name>
         <Desc>减少(5*自身烟气层数)%承受伤害</Desc>
     </PassiveDesc>
+    <!--八大主厨-->
+    <PassiveDesc ID="1930001">
+        <Name>鲨鱼骑士</Name>
+        <Desc>每一幕开始时使所有友方角色获得2层“守护”与“振奋”; 若自身死亡，则下一幕中对所有友方角色施加5层“易损”</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1930002">
+        <Name>疮痍之痛</Name>
+        <Desc>若目标至少拥有5层“流血”，则使命中时下一幕中对目标施加1层‘易损’”(至多3层)</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1930003">
+        <Name>糙皮恢复</Name>
+        <Desc>每一幕结束时若自身未被击中，则恢复15点体力并在下一幕中获得1层“强壮””忍耐”</Desc>
+    </PassiveDesc>
 </PassiveDescRoot>

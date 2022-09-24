@@ -39,4 +39,17 @@ On hit against a target with 3 or more stacks of 'Restraint', Immobilize them fo
         <Name>Foggy Matrix</Name>
         <Desc>If the character has 'Smoke', Reduce incoming Damage by (5 * Smoke)%</Desc>
     </PassiveDesc>
+    <!--八大主厨-->
+    <PassiveDesc ID="1930001">
+        <Name>Knight in Shark Fins</Name>
+        <Desc>While alive, all other allies gain 2 Protection and Stagger Protection. 若Upon death, all allies are inflicted with 5 Fragile next Scene.</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1930002">
+        <Name>Add Salt to Injury</Name>
+        <Desc>If the target has 5 or more Bleed, Inflicts 1 Fragile on hit. (Max. 3)</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1930003">
+        <Name>Dermal Regeneration</Name>
+        <Desc>If the character was not hit by any attacks for a Scene, recover 15 HP and gain 1 Strength Endurance.</Desc>
+    </PassiveDesc>
 </PassiveDescRoot>

@@ -70,4 +70,38 @@
     	<Rarity>Unique</Rarity>
     	<CharacterSkin>TwistEileen</CharacterSkin>
  	</Book>
+	<Book ID="19300000">
+    	<Name>八大主厨</Name>
+   		<TextId>19300000</TextId>
+        <Option>MultiDeck</Option>
+    	<EquipEffect>
+      		<HP>125</HP>
+      		<Break>51</Break>
+      		<SpeedMin>3</SpeedMin>
+      		<Speed>6</Speed>
+      		<SResist>Endure</SResist>
+      		<PResist>Normal</PResist>
+      		<HResist>Endure</HResist>
+    		<SBResist>Endure</SBResist>
+  			<PBResist>Normal</PBResist>
+      		<HBResist>Endure</HBResist>
+      		<StartPlayPoint>4</StartPlayPoint>
+    		<MaxPlayPoint>4</MaxPlayPoint>
+  			<Passive>1900001</Passive>
+			<Passive>1900000</Passive>
+      		<Passive>1930001</Passive>
+      		<Passive>1930002</Passive>
+      		<Passive>1930003</Passive>
+			<OnlyCard>19300001</OnlyCard>
+			<OnlyCard>19300002</OnlyCard>
+			<OnlyCard>19300003</OnlyCard>
+			<OnlyCard>19300004</OnlyCard>
+			<OnlyCard>19300005</OnlyCard>
+    	</EquipEffect>
+    	<BookIcon>ContingencyReward</BookIcon>
+    	<Chapter>7</Chapter>
+    	<Episode>1800007</Episode>
+    	<Rarity>Unique</Rarity>
+    	<CharacterSkin>TwistGreta</CharacterSkin>
+ 	</Book>
 </BookXmlRoot>

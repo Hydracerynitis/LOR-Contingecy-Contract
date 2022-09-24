@@ -15,4 +15,11 @@
 		<Card>19200005</Card>
 		<Card>19200006</Card>
 	</Deck>
+	<Deck ID="19300000">
+		<Card>19300001</Card>
+		<Card>19300002</Card>
+		<Card>19300003</Card>
+		<Card>19300004</Card>
+		<Card>19300005</Card>
+	</Deck>
 </DeckXmlRoot>

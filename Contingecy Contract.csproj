@@ -105,6 +105,11 @@
     <Compile Include="Source Code\ContractReward\DReverberation\DEileen\PassiveAbility_1920003.cs" />
     <Compile Include="Source Code\ContractReward\DReverberation\DEileen\PassiveAbility_1920002.cs" />
     <Compile Include="Source Code\ContractReward\DReverberation\DEileen\PassiveAbility_1920001.cs" />
+    <Compile Include="Source Code\ContractReward\DReverberation\DGreta\DiceCardSelfAbility_Alert.cs" />
+    <Compile Include="Source Code\ContractReward\DReverberation\DGreta\DiceCardSelfAbility_Intimidate.cs" />
+    <Compile Include="Source Code\ContractReward\DReverberation\DGreta\PassiveAbility_1930003.cs" />
+    <Compile Include="Source Code\ContractReward\DReverberation\DGreta\PassiveAbility_1930002.cs" />
+    <Compile Include="Source Code\ContractReward\DReverberation\DGreta\PassiveAbility_1930001.cs" />
     <Compile Include="Source Code\ContractReward\DReverberation\DPhilip\DiceCardAbility_Area4Burn.cs" />
     <Compile Include="Source Code\ContractReward\DReverberation\DPhilip\DiceCardSelfAbility_ReLit.cs" />
     <Compile Include="Source Code\ContractReward\DReverberation\DPhilip\PassiveAbility_1910003.cs" />

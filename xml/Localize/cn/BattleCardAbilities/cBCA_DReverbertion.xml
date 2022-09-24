@@ -12,4 +12,12 @@
 	  <BattleCardAbility ID="strength2quickness2friend">
     		<Desc>[使用时] 下一幕随机友方单位获得2层[强壮][敏捷]</Desc>
   	</BattleCardAbility>
+	<!--八大主厨-->
+	<BattleCardAbility ID="Alert">
+    		<Desc>[战斗开始] 抽取1张书页</Desc>
+			<Desc>若该书页仍在手牌里,则丢弃该书页并将该书页骰子加至反击池</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="Intimidate">
+    		<Desc>[战斗开始] 使目标这一幕内骰子威力-1</Desc>
+  	</BattleCardAbility>
 </BattleCardAbilityDescRoot>

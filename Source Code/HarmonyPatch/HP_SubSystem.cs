@@ -170,5 +170,15 @@ namespace Contingecy_Contract
             if (Singleton<ContractLoader>.Instance.GetPassiveList().Find(x => x.Type == "NoEmotion") is Contract NoEmotion && emotionLevel >= 4 - NoEmotion.Variant)
                 __result.Clear();
         }
+        [HarmonyPatch(typeof(BattleUnitModel),nameof(BattleUnitModel.OnStartBattle))]
+        [HarmonyPostfix]
+        public static void BattleUnitModel_OnStartBattle(BattleUnitModel __instance)
+        {
+            foreach(BattleUnitBuf buf in __instance.bufListDetail.GetActivatedBufList())
+            {
+                if (buf is BattleUnitBuf_Extention)
+                    (buf as BattleUnitBuf_Extention).OnStartBattle();
+            }
+        }
     }
 }

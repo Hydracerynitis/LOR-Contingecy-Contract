@@ -36,5 +36,21 @@
 		<BattleCardDesc ID="19200006">
 			<LocalizedName>Thought Gear: Advent</LocalizedName>
 		</BattleCardDesc>
+		<!--八大主厨-->
+		<BattleCardDesc ID="19300001">
+			<LocalizedName>Powsowdie Slam</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19300002">
+			<LocalizedName>Tail Whisk</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19300003">
+			<LocalizedName>Hunting Hour</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19300004">
+			<LocalizedName>Roundhouse Tail</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19300005">
+			<LocalizedName>Tackle Mount</LocalizedName>
+		</BattleCardDesc>
  	</cardDescList>
 </BattleCardDescRoot>

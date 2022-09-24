@@ -12,4 +12,12 @@
 	  <BattleCardAbility ID="strength2quickness2friend">
     		<Desc>[On Use] A random ally gain 2 Strength 2 Quickness next Scene</Desc>
   	</BattleCardAbility>
+	<!--八大主厨-->
+	<BattleCardAbility ID="Alert">
+    		<Desc>[Combat Start] Draw 1 Page</Desc>
+			<Desc>If this page is still on hand, discard this page and respond to one-side attack with dies of this page</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="Intimidate">
+    		<Desc>[Combat Start] Reduce target's Power by 1 for the duration of the Scene</Desc>
+  	</BattleCardAbility>
 </BattleCardAbilityDescRoot>

@@ -48,6 +48,13 @@
                 [{"Type":"DEileen_Smoke","Variation":0},{"Type":"DEileen_DeusEx","Variation":0}]
             ],
             "RewardId":19200000
+        },
+        {
+            "Stageid":60004,
+            "Condition":[
+                [{"Type":"DGreta_Prot","Variation":0},{"Type":"DGreta_Eat","Variation":0}]
+            ],
+            "RewardId":19300000
         }
     ]
 }

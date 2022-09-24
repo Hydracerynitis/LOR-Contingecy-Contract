@@ -44,4 +44,20 @@
     	<CanGivePassive>false</CanGivePassive>
 		<Cost>2</Cost>
   	</Passive>
+	<!--八大主厨-->
+	<Passive ID="1930001">
+		<Rarity>Unique</Rarity>
+    	<CanGivePassive>false</CanGivePassive>
+		<Cost>3</Cost>
+  	</Passive>
+	<Passive ID="1930002">
+		<Rarity>Unique</Rarity>
+    	<CanGivePassive>false</CanGivePassive>
+		<Cost>5</Cost>
+  	</Passive>
+	<Passive ID="1930003">
+		<Rarity>Unique</Rarity>
+    	<CanGivePassive>false</CanGivePassive>
+		<Cost>4</Cost>
+  	</Passive>
 </PassiveXmlRoot>

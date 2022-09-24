@@ -50,4 +50,11 @@ namespace Contingecy_Contract
     {
         int getDrawCardAdder(int userCard);
     }
+    public class BattleUnitBuf_Extention: BattleUnitBuf
+    {
+        public virtual void OnStartBattle()
+        {
+
+        }
+    }
 }

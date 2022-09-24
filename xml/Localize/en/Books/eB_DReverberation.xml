@@ -11,5 +11,10 @@
 			<TextList />
 			<PassiveList />
 		</BookDesc>
+		<BookDesc BookID="19200000">
+			<BookName>The Eighth Chef</BookName>
+			<TextList />
+			<PassiveList />
+		</BookDesc>
 	</bookDescList>
 </BookDescRoot>

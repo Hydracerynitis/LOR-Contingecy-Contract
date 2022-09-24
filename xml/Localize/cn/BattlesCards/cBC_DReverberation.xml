@@ -36,5 +36,21 @@
 		<BattleCardDesc ID="19200006">
 			<LocalizedName>思想齿轮-降神</LocalizedName>
 		</BattleCardDesc>
+		<!--八大主厨-->
+		<BattleCardDesc ID="19300001">
+			<LocalizedName>迎头痛击</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19300002">
+			<LocalizedName>凶鲨摆尾</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19300003">
+			<LocalizedName>狩猎时刻</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19300004">
+			<LocalizedName>鲨尾回抽</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19300005">
+			<LocalizedName>鲨口惊魂</LocalizedName>
+		</BattleCardDesc>
  	</cardDescList>
 </BattleCardDescRoot>

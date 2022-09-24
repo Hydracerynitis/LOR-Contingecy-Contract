@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Card ID="19300001">
+        <Name>迎头痛击</Name>
+        <Artwork>TwistGreta1</Artwork>
+        <Rarity>Unique</Rarity>
+        <Option>OnlyPage</Option>
+		<Option>Basic</Option>
+        <Spec Range="Near" Cost="0" />
+        <Script>Alert</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="4" Dice="9" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="bleeding2pw" ActionScript="" Desc="" />
+            <Behaviour Min="5" Dice="9" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="19300002">
+        <Name>凶鲨摆尾</Name>
+        <Artwork>TwistGreta2</Artwork>
+        <Rarity>Unique</Rarity>
+        <Option>OnlyPage</Option>
+		<Option>Basic</Option>
+        <Spec Range="Near" Cost="0" />
+        <Script>Alert</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="4" Dice="9" Type="Atk" Detail="Slash" Motion="S1" EffectRes="" Script="bleeding2pw" ActionScript="" Desc="" />
+            <Behaviour Min="5" Dice="9" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="19300003">
+        <Name>狩猎时刻</Name>
+        <Artwork>Greta_Eat</Artwork>
+        <Rarity>Unique</Rarity>
+        <Option>OnlyPage</Option>
+		<Option>Basic</Option>
+        <Spec Range="Near" Cost="3" />
+        <Script>Intimidate</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="S2" EffectRes="" Script="paralysis1pw" ActionScript="" Desc="" />
+            <Behaviour Min="7" Dice="10" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="bleeding3pw" ActionScript="" Desc="" />
+            <Behaviour Min="4" Dice="9" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="19300004">
+        <Name>鲨尾回抽</Name>
+        <Artwork>TwistGreta2</Artwork>
+        <Rarity>Unique</Rarity>
+        <Option>OnlyPage</Option>
+		<Option>Basic</Option>
+        <Spec Range="Near" Cost="1" />
+        <Script>Alert</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="2" Dice="8" Type="Atk" Detail="Hit" Motion="S2" EffectRes="" Script="bleeding2pw" ActionScript="" Desc="" />
+            <Behaviour Min="5" Dice="10" Type="Atk" Detail="Slash" Motion="S1" EffectRes="" Script="paralysis2pw" ActionScript="" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="19300005">
+        <Name>鲨口惊魂</Name>
+        <Artwork>TwistGreta3</Artwork>
+        <Rarity>Unique</Rarity>
+        <Option>OnlyPage</Option>
+		<Option>Basic</Option>
+        <Spec Range="Near" Cost="4" />
+        <Script>addRecoverHp3Atkalldice</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="11" Dice="15" Type="Atk" Detail="Hit" Motion="S2" EffectRes="" Script="greta_destroyDice" ActionScript="TwistGreta_BiteS2" Desc="" />
+            <Behaviour Min="3" Dice="5" Type="Atk" Detail="Slash" Motion="S3" EffectRes="" Script="greta_dmgUpbybleedingbufatk" ActionScript="TwistGreta_BiteS3" Desc="" />
+            <Behaviour Min="3" Dice="5" Type="Atk" Detail="Hit" Motion="S4" EffectRes="" Script="greta_dmgUpbybleedingbufatk" ActionScript="TwistGreta_BiteS4" Desc="" />
+            <Behaviour Min="3" Dice="5" Type="Atk" Detail="Hit" Motion="S5" EffectRes="" Script="greta_dmgUpbybleedingbufatk" ActionScript="TwistGreta_BiteS5" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+</DiceCardXmlRoot>
