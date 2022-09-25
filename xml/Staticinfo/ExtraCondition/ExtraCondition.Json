@@ -55,6 +55,13 @@
                 [{"Type":"DGreta_Prot","Variation":0},{"Type":"DGreta_Eat","Variation":0}]
             ],
             "RewardId":19300000
+        },
+        {
+            "Stageid":60004,
+            "Condition":[
+                [{"Type":"DBremen_Self","Variation":0},{"Type":"DBremen_Other","Variation":0}]
+            ],
+            "RewardId":19400000
         }
     ]
 }

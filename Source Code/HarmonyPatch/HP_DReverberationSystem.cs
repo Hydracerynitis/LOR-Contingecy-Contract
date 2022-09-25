@@ -119,5 +119,12 @@ namespace Contingecy_Contract
                 }
             }   
         }
+        //Bremen Reward
+        [HarmonyPatch(typeof(BattlePlayingCardSlotDetail),nameof(BattlePlayingCardSlotDetail.RecoverPlayPoint))]
+        [HarmonyPrefix]
+        static bool BattlePlayingCardSlotDetail_RecoverPlayPoint(BattlePlayingCardSlotDetail __instance)
+        {
+            return !__instance._self.passiveDetail.HasPassive<PassiveAbility_1940002>();
+        }
     }
 }

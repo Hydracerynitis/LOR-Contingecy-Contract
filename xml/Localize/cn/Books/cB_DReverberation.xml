@@ -16,5 +16,10 @@
 			<TextList />
 			<PassiveList />
 		</BookDesc>
+		<BookDesc BookID="19400000">
+			<BookName>不来梅乐团</BookName>
+			<TextList />
+			<PassiveList />
+		</BookDesc>
 	</bookDescList>
 </BookDescRoot>

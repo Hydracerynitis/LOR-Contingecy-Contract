@@ -11,8 +11,13 @@
 			<TextList />
 			<PassiveList />
 		</BookDesc>
-		<BookDesc BookID="19200000">
+		<BookDesc BookID="19300000">
 			<BookName>The Eighth Chef</BookName>
+			<TextList />
+			<PassiveList />
+		</BookDesc>
+		<BookDesc BookID="19400000">
+			<BookName>The Bremen Band</BookName>
 			<TextList />
 			<PassiveList />
 		</BookDesc>

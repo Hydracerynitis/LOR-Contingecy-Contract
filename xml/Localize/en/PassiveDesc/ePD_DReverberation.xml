@@ -52,4 +52,14 @@ On hit against a target with 3 or more stacks of 'Restraint', Immobilize them fo
         <Name>Dermal Regeneration</Name>
         <Desc>If the character was not hit by any attacks for a Scene, recover 15 HP and gain 1 Strength Endurance.</Desc>
     </PassiveDesc>
+    <!--不来梅乐团-->
+    <PassiveDesc ID="1940001">
+        <Name>Martial Song of the Battlefield</Name>
+        <Desc>While this character is alive, give a random ally one stack of status effect. (Strength, Endurance, or Haste) for each Light this character has.
+Upon death: all enemies gain 3 Strength, Endurance, and Haste next scene.</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1940002">
+        <Name>Beklemmt Resolve</Name>
+        <Desc>Cost of all pages are reduced by 2. Can only recover 1 Light at the start of each Scene. Loses all Light when Staggered.</Desc>
+    </PassiveDesc>
 </PassiveDescRoot>

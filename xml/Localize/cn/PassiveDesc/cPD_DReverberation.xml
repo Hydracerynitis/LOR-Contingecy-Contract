@@ -52,4 +52,14 @@
         <Name>糙皮恢复</Name>
         <Desc>每一幕结束时若自身未被击中，则恢复15点体力并在下一幕中获得1层“强壮””忍耐”</Desc>
     </PassiveDesc>
+    <!--不来梅乐团-->
+    <PassiveDesc ID="1940001">
+        <Name>战歌</Name>
+        <Desc>每一幕开始时自身每有1点光芒便随机使1个友方角色获得1层“强壮”或“忍耐”或“迅捷”
+若自身死亡，则下一幕中使所有敌人获得3层“强壮”，“忍耐”与“迅捷”</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1940002">
+        <Name>分散之心</Name>
+        <Desc>所有书页费用-2. 只能在每一幕开始时恢复1点光芒. 陷入混乱时失去所有光芒</Desc>
+    </PassiveDesc>
 </PassiveDescRoot>

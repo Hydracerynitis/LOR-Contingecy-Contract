@@ -52,5 +52,21 @@
 		<BattleCardDesc ID="19300005">
 			<LocalizedName>Tackle Mount</LocalizedName>
 		</BattleCardDesc>
+		<!--不来梅乐团-->
+		<BattleCardDesc ID="19400001">
+			<LocalizedName>Menacing Noise</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19400002">
+			<LocalizedName>Concerto</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19400003">
+			<LocalizedName>Fanciful Tune</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19400004">
+			<LocalizedName>Music Therapy</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19400005">
+			<LocalizedName>Wohlklang</LocalizedName>
+		</BattleCardDesc>
  	</cardDescList>
 </BattleCardDescRoot>

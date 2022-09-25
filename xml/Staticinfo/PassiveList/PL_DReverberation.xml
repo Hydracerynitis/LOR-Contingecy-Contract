@@ -60,4 +60,15 @@
     	<CanGivePassive>false</CanGivePassive>
 		<Cost>4</Cost>
   	</Passive>
+	<!--不来梅乐团-->
+	<Passive ID="1940001">
+		<Rarity>Unique</Rarity>
+    	<CanGivePassive>false</CanGivePassive>
+		<Cost>6</Cost>
+  	</Passive>
+	<Passive ID="1940002">
+		<Rarity>Unique</Rarity>
+    	<CanGivePassive>false</CanGivePassive>
+		<Cost>6</Cost>
+  	</Passive>
 </PassiveXmlRoot>

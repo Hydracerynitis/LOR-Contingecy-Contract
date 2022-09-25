@@ -101,6 +101,8 @@
     <Compile Include="Source Code\CCGUI_new\MyUITool.cs" />
     <Compile Include="Source Code\ContingecyContractGUI.cs" />
     <Compile Include="Source Code\ContractReward\DiceCardSelfAbility_DirectAttack.cs" />
+    <Compile Include="Source Code\ContractReward\DReverberation\DBremen\PassiveAbility_1940002.cs" />
+    <Compile Include="Source Code\ContractReward\DReverberation\DBremen\PassiveAbility_1940001.cs" />
     <Compile Include="Source Code\ContractReward\DReverberation\DEileen\DiceCardSelfAbility_strength2quickness2friend.cs" />
     <Compile Include="Source Code\ContractReward\DReverberation\DEileen\PassiveAbility_1920003.cs" />
     <Compile Include="Source Code\ContractReward\DReverberation\DEileen\PassiveAbility_1920002.cs" />

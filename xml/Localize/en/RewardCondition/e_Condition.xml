@@ -28,4 +28,6 @@ while "Rekindled Ember" or "Endless Shackle" is active</Reward>
 while "Smoke Manufacturer" or "Deus ex Calces" is active</Reward>
 	<Reward id="19300000">Get by Completing The Distorted Reverberation Ensemble reception at Risk Level 16 or more
 while "Wish of Guardianship" or "Wish of Gluttory" is active</Reward>
+	<Reward id="19400000">Get by Completing The Distorted Reverberation Ensemble reception at Risk Level 16 or more
+while "Solo Jazz" or "Gospel Choir" is active</Reward>
 </RewardCondition>
