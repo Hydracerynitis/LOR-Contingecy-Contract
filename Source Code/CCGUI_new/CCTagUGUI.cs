@@ -19,8 +19,8 @@ namespace Contingecy_Contract
 				CCManager.OnContract.Add(CC);
 			else
 				CCManager.OnContract.Remove(CC);
-			CCManager.BanTag(CC);
-			UpdateUI();
+            CCManager.BanTag(CC);
+            CCManager.UpdateConflict();
 			CCUGUI.Instance.SetGetLevel();
 		}
 		public void UpdateUI()

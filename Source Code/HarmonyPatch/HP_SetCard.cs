@@ -49,5 +49,12 @@ namespace Contingecy_Contract
                     __instance.Owner.allyCardDetail.AddNewCard(RandomUtil.SelectOne(__instance.Philip_CardIds)).SetCostToZero();
             }
         }
+        [HarmonyPatch(typeof(PassiveAbility_170311),nameof(PassiveAbility_170311.SetCards))]
+        [HarmonyPostfix]
+        public static void PassiveAbility_170311_SetCards(PassiveAbility_170311 __instance)
+        {
+            if (__instance.owner.emotionDetail.EmotionLevel >= 4)
+                __instance.AddNewCard(702315);
+        }
     }
 }

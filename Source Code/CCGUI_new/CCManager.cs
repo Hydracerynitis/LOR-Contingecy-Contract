@@ -82,6 +82,17 @@ namespace Contingecy_Contract
 			CCUGUI.Instance.SetGetLevel();
 			UpdateCCTagUI();
 		}
+		public static void UpdateConflict()
+		{
+			tagUGUIs.ForEach(x => x.CC.isConflict = false);
+			List<CCTagUGUI> On = tagUGUIs.FindAll(x => x.CC.isOn);
+			foreach(CCTagUGUI off in tagUGUIs.FindAll(x => !On.Contains(x)))
+			{
+				if (On.Exists(x => off.CC.Type==x.CC.Type || x.CC.Conflict.Contains(off.CC.Type)))
+					off.CC.isConflict = true;
+			}
+			tagUGUIs.ForEach(x => x.UpdateUI());
+		}
 		public static void BanTag(Contract contract)
 		{
 			bool isOn = contract.isOn;
@@ -92,22 +103,11 @@ namespace Contingecy_Contract
 				foreach (CCTagUGUI cctagUGUI in list.FindAll(ban))
 				{
 					OnContract.Remove(cctagUGUI.CC);
-					if (cctagUGUI.CC.isOn)
-						UnbanTag(contract, cctagUGUI.CC);
 					cctagUGUI.CC.isOn = false;
 					cctagUGUI.CC.isConflict = isOn;
 					cctagUGUI.UpdateUI();
 				}
 			}
-		}
-		public static void UnbanTag(Contract contract, Contract Banned)
-        {
-			List<CCTagUGUI> list = tagUGUIs;
-			foreach(CCTagUGUI cctagUGUI in list.FindAll(x => Banned.Conflict.Contains(x.CC.Type) && !contract.Conflict.Contains(x.CC.Type) && x.CC.Type!=contract.Type && x.CC.Type != Banned.Type))
-            {
-				cctagUGUI.CC.isConflict = false;
-				cctagUGUI.UpdateUI();
-            }
 		}
 	}
 }
