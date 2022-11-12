@@ -50,11 +50,12 @@ namespace Contingecy_Contract
     {
         int getDrawCardAdder(int userCard);
     }
-    public class BattleUnitBuf_Extention: BattleUnitBuf
+    public interface StartBattleBuf
     {
-        public virtual void OnStartBattle()
-        {
-
-        }
+        void OnStartBattle();
+    }
+    public interface OnStandBy
+    {
+        void OnStandBy(BattlePlayingCardDataInUnitModel card, BattleUnitModel unit, List<BattleDiceBehavior> StandByDie);
     }
 }

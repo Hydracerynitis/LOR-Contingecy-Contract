@@ -20,4 +20,42 @@
 	<BattleCardAbility ID="Intimidate">
     		<Desc>[Combat Start] Reduce target's Power by 1 for the duration of the Scene</Desc>
   	</BattleCardAbility>
+	<!--八点档马戏团-->
+	<BattleCardAbility ID="OswaldHide">
+    		<Desc>[On Play] Disappearing from Battlefield for 2 Scene. Recover all Lights and draw 6 Pages when returned.</Desc>
+			<Desc>It can be used again 3 Scene after reappearance</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="OswaldJaeheonCombo">
+    		<Desc>[On Play] Force ally Puppeteer to use "Conjoins with Red String" against target</Desc>
+			<Desc>Can use multiple in one Scene.</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="ApplyRedString">
+    		<Desc>[On Use] Inflict 2 "Red String" next Scene</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="MxBunny">
+    		<Desc>[On Use] if ally and alive Mx. Bunny present, make it to use this page again target again.</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="UnusedCounter">
+    		<Desc>[Combat Start] If there are counter die unused at the end of the Scene, draw 1 Pages and recover 2 Lights.</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="StaggerReward">
+    		<Desc>[Combat Start] At the end of the Scene, if target is Staggered, All allies draw 3 Pages and recover 3 Lights.</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="OswaldMark">
+    		<Desc>[Combat Start] for the dureation of rest of the Scene, target increase incoming Damage and Stagger Damage by 50%</Desc>
+  	</BattleCardAbility>
+	<!--傀儡师-->
+	<BattleCardAbility ID="JaheonStringAtk">
+    		<Desc>[On Hit] Inflict 1 Puppet Strings next Scene</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="JaheonString">
+    		<Desc>If achieved successful hit with this page, inflict 1 Puppet Strings next Scene</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="NoChance">
+    		<Desc>[Combat Start] Gain 1 Block die (3-8) for each Pages targeting self</Desc>
+			<Desc>Same effect do not stack up</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="Reassemble">
+    		<Desc>[On Hit] Transform 3 random Pages from target's deck</Desc>
+  	</BattleCardAbility>
 </BattleCardAbilityDescRoot>

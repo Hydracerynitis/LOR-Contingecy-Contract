@@ -46,8 +46,11 @@ namespace Contingecy_Contract
         [HarmonyPrefix]
         public static bool StageController_RoundStartPhase_System()
         {
+            if (StageController.Instance._bCalledRoundStart_system)
+                return true;
             ExtentionMethod.triggeredCard.Clear();
-            firstTime = true;
+            firstTime = true; //仅限刷新被控制的速度骰UI一次
+            DiceCardSelfAbility_OswaldHide.RecallOswald(); //重招奥斯瓦尔德的中途离场
             if (Duel)
                 return true;
             foreach (BattleUnitModel alive in BattleObjectManager.instance.GetAliveList())
@@ -117,6 +120,9 @@ namespace Contingecy_Contract
                 }
             }
             ContractAttribution.Inition.Clear();
+            if (DiceCardSelfAbility_OswaldHide.HidingOswald != null)
+                DiceCardSelfAbility_OswaldHide.HidingOswald.UpdateUnitData();
+            DiceCardSelfAbility_OswaldHide.HidingOswald = null;
             return true;
         }
         [HarmonyPatch(typeof(StageController), nameof(StageController.GameOver))]
@@ -243,16 +249,6 @@ namespace Contingecy_Contract
             }
             return true;
         }
-        /*[HarmonyPatch(typeof(UI.UIController), nameof(UI.UIController.Initialize))]
-        [HarmonyPostfix]
-        public static void UI_UIController_Initialize()
-        {
-            if (!UIInit)
-            {
-                //UI.UIController.Instance.gameObject.AddComponent<ContingecyContractGUI>();
-                UIInit = true;
-            }
-        }*/
         public static bool UIInit = false;
         public static bool Duel = false;
         public static bool CheckDuel(LorId stageId)

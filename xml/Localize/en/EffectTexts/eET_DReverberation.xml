@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleEffectTextRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<effectTextList>
+		<BattleEffectText ID="RedString">
+			<Name>Red String</Name>
+			<Desc>Combat Start, gain a Counter Guard die (6-10 On Clash Lose Remove self's Red String)
+After {0} Scene remove all enemies' Red String, making them lose 20% Max Hp (not Lethal) and summon a Mx. Bunny</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="OswaldMark">
+			<Name>Stupified</Name>
+			<Desc>For the duration of the Scene, increase incoming Damage and Stagger Damage by 50%</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="JaeheonControl">
+			<Name>Puppet Strings</Name>
+			<Desc>{0} Speed dice with the lowest Speed become uncontrollable, targeting allies for attacks. (Can stack up to 3)
+At the end of each Scene, reduce 1 stack.</Desc>
+		</BattleEffectText>
+	</effectTextList>
+</BattleEffectTextRoot>

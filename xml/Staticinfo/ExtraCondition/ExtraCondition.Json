@@ -62,6 +62,27 @@
                 [{"Type":"DBremen_Self","Variation":0},{"Type":"DBremen_Other","Variation":0}]
             ],
             "RewardId":19400000
+        },
+        {
+            "Stageid":60004,
+            "Condition":[
+                [{"Type":"DOswald_Friend","Variation":0},{"Type":"DOswald_Show","Variation":0}]
+            ],
+            "RewardId":19500000
+        },
+        {
+            "Stageid":60004,
+            "Condition":[
+                [{"Type":"DTanya_Warrior","Variation":0},{"Type":"DTanya_Sand","Variation":0}]
+            ],
+            "RewardId":19600000
+        },
+        {
+            "Stageid":60004,
+            "Condition":[
+                [{"Type":"DJaeheon_Control","Variation":0},{"Type":"DJaeheon_Tangle","Variation":0}]
+            ],
+            "RewardId":19700000
         }
     ]
 }

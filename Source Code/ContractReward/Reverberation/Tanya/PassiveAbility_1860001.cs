@@ -31,7 +31,7 @@ namespace ContractReward
         }
         public BattlePlayingCardDataInUnitModel Retaliate(BattlePlayingCardDataInUnitModel attackerCard)
         {
-            if (owner.IsBreakLifeZero())
+            if (owner.IsBreakLifeZero() || !owner.IsActionable())
                 return null;
             List<BattleDiceCardModel> hand = owner.allyCardDetail.GetHand().FindAll(x => x.GetCost() <= owner.cardSlotDetail.PlayPoint - owner.cardSlotDetail.ReservedPlayPoint && CheckRange(x.XmlData.Spec.Ranged) && x.XmlData.Spec.affection!=CardAffection.TeamNear);
             if (hand.Count <= 0)

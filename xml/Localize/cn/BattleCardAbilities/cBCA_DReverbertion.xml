@@ -20,4 +20,42 @@
 	<BattleCardAbility ID="Intimidate">
     		<Desc>[战斗开始] 使目标这一幕内骰子威力-1</Desc>
   	</BattleCardAbility>
+	<!--八点档马戏团-->
+	<BattleCardAbility ID="OswaldHide">
+    		<Desc>[装备时] 从战场上离开2幕. 返回时恢复所有光芒并抽取6张书页.</Desc>
+			<Desc>返回后3幕后才能使用该书页</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="OswaldJaeheonCombo">
+    		<Desc>[装备时] 强制在场的友方傀儡师对目标使用"红线牵引".</Desc>
+			<Desc>仅可场上没有超级兔子大宝贝时使用. 一幕内可使用多次.</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="ApplyRedString">
+    		<Desc>[使用时] 下一幕施加2层"红线"</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="MxBunny">
+    		<Desc>[使用时] 若有存活的友方超级兔子大宝贝,使其对目标再次使用该书页</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="UnusedCounter">
+    		<Desc>[战斗开始] 若这一幕结束时仍有该书页的反击骰子未被使用,抽取1张书页并恢复2点光芒</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="StaggerReward">
+    		<Desc>[战斗开始] 若这一幕结束时目标陷入混乱,所有友方单位抽取3张书页恢复3点光芒</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="OswaldMark">
+    		<Desc>[战斗开始] 目标这一幕内承受伤害和混乱伤害+50%</Desc>
+  	</BattleCardAbility>
+	<!--傀儡师-->
+	<BattleCardAbility ID="JaheonStringAtk">
+    		<Desc>[命中时]下一幕中对目标施加1层[操纵]</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="JaheonString">
+    		<Desc>若有该书页的骰子命中则下一幕中对目标施加1层[操纵]</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="NoChance">
+    		<Desc>[战斗开始] 每有一张指向自己的书页便将一个防御骰(3-8)洗入反击池</Desc>
+			<Desc>同类效果不叠加</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="Reassemble">
+    		<Desc>[命中时] 转化目标牌库随机3张书页</Desc>
+  	</BattleCardAbility>
 </BattleCardAbilityDescRoot>

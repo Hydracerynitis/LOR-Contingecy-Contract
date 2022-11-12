@@ -40,4 +40,7 @@
 	<BattleCardAbility ID="AoeCoolDown">
 		<Desc>该书页4幕内只能使用一次</Desc>
   	</BattleCardAbility>
+	<BattleCardAbility ID="draw1Energy2">
+    		<Desc>[使用时] 抽取1张书页并恢复2点光芒</Desc>
+  	</BattleCardAbility>
 </BattleCardAbilityDescRoot>

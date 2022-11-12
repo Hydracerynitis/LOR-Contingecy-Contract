@@ -1,21 +1,31 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <EnemyUnitClassRoot>
+  <!--艾琳-血肉齿轮-->
   <Enemy ID="18210000">
     <NameID>222</NameID>
     <MinHeight>160</MinHeight>
     <MaxHeight>180</MaxHeight>
     <BookId>18210000</BookId>
   </Enemy>
+  <!--奥斯瓦尔德-利刃先生-->
   <Enemy ID="18510000">
     <NameID>252</NameID>
     <MinHeight>200</MinHeight>
     <MaxHeight>200</MaxHeight>
     <BookId>18510000</BookId>
   </Enemy>
+  <!--奥斯瓦尔德-美人鱼小姐-->
   <Enemy ID="18520000">
     <NameID>253</NameID>
     <MinHeight>330</MinHeight>
     <MaxHeight>330</MaxHeight>
     <BookId>18520000</BookId>
+  </Enemy>
+  <!--八点档马戏团-超级兔子大宝贝-->
+  <Enemy ID="19510000">
+    <NameID>352</NameID>
+    <MinHeight>350</MinHeight>
+    <MaxHeight>350</MaxHeight>
+    <BookId>19510000</BookId>
   </Enemy>
 </EnemyUnitClassRoot>

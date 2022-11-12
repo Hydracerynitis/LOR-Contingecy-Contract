@@ -100,7 +100,7 @@ namespace Contingecy_Contract
             if (__result && BattleManagerUI.Instance.selectedAllyDice != null)
             {
                 int index = BattleManagerUI.Instance.selectedAllyDice._speedDiceIndex;
-                if (!__instance.speedDiceResult[index].isControlable)
+                if (!__instance.speedDiceResult[index].isControlable && __instance.faction==Faction.Player)
                     __result = false;
             }
         }
@@ -131,7 +131,7 @@ namespace Contingecy_Contract
             {
                 case 1:
                     puppetId = 1307021;
-                    num = 2;
+                    num = 2; 
                     break;
                 case 2:
                     puppetId = 1307031;

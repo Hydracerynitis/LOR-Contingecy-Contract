@@ -176,8 +176,8 @@ namespace Contingecy_Contract
         {
             foreach(BattleUnitBuf buf in __instance.bufListDetail.GetActivatedBufList())
             {
-                if (buf is BattleUnitBuf_Extention)
-                    (buf as BattleUnitBuf_Extention).OnStartBattle();
+                if (buf is StartBattleBuf )
+                    (buf as StartBattleBuf ).OnStartBattle();
             }
         }
     }

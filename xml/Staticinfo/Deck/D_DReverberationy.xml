@@ -29,4 +29,43 @@
 		<Card>19400004</Card>
 		<Card>19400005</Card>
 	</Deck>
+	<Deck ID="19500000">
+		<Card>19500001</Card>
+		<Card>19500002</Card>
+		<Card>19500003</Card>
+		<Card>19500004</Card>
+		<Card>19500005</Card>
+		<Card>19500006</Card>
+		<Card>19500007</Card>
+		<Card>19500008</Card>
+	</Deck>
+	<Deck ID="19510000">    	
+	  	<Card Pid="@origin">703511</Card>
+    	<Card Pid="@origin">703512</Card>
+    	<Card Pid="@origin">703513</Card>
+    	<Card Pid="@origin">703514</Card>
+		<Card Pid="@origin">703521</Card>
+		<Card Pid="@origin">703522</Card>
+    	<Card Pid="@origin">703523</Card>
+    	<Card Pid="@origin">703524</Card>
+  	</Deck>
+	<Deck ID="19600000">
+		<Card>19600001</Card>
+		<Card>19600002</Card>
+		<Card>19600003</Card>
+		<Card>19600004</Card>
+		<Card>19600005</Card>
+		<Card>19600006</Card>
+		<Card>19600007</Card>
+	</Deck>
+	<Deck ID="19700000">
+		<Card>19700001</Card>
+		<Card>19700002</Card>
+		<Card>19700003</Card>
+		<Card>19700004</Card>
+		<Card>19700005</Card>
+		<Card>19700006</Card>
+		<Card>19700007</Card>
+		<Card>19700008</Card>
+	</Deck>
 </DeckXmlRoot>

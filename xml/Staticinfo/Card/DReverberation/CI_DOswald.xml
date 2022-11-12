@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Card ID="19500001">
+        <Name>来见见新团员！</Name>
+        <Artwork>Oswald_Summon</Artwork>
+        <Rarity>Rare</Rarity>
+        <Option>OnlyPage</Option>
+		<Option>Basic</Option>
+        <Spec Range="Near" Cost="2" />
+        <Script>MxBunny</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="FX_Mon_JH2_Link" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="FX_Mon_JH2_Link" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="4" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="19500002">
+        <Name>嘭！~嘭！！♠</Name>
+        <Artwork>Oswald_Atk</Artwork>
+        <Rarity>Common</Rarity>
+        <Option>OnlyPage</Option>
+		<Option>Basic</Option>
+        <Spec Range="Near" Cost="2"/>
+        <Script></Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="3" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="5" Dice="7" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="oswald_attack_atk" ActionScript="" Desc="" />
+            <Behaviour Min="4" Dice="6" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="oswald_attack_atk" ActionScript="" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="19500003">
+        <Name>会吓一跳吗！？&lt;color="red"&gt;♥&lt;/color&gt;</Name>
+        <Artwork>Oswald_Atk</Artwork>
+        <Rarity>Uncommon</Rarity>
+        <Option>OnlyPage</Option>
+		<Option>Basic</Option>
+        <Spec Range="Near" Cost="1"/>
+        <Script>UnusedCounter</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="4" Dice="8" Type="Standby" Detail="Slash" Motion="J" EffectRes="" Script="oswald_counter_atk" ActionScript="" Desc="" />
+            <Behaviour Min="4" Dice="7" Type="Standby" Detail="Slash" Motion="J" EffectRes="" Script="oswald_counter_atk" ActionScript="" Desc="" />
+            <Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="19500004">
+        <Name>接好喽~！♣</Name>
+        <Artwork>Oswald_Atk</Artwork>
+        <Rarity>Rare</Rarity>
+        <Option>OnlyPage</Option>
+		<Option>Basic</Option>
+        <Spec Range="Near" Cost="2"/>
+        <Script></Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="3" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="8" Dice="11" Type="Atk" Detail="Hit" Motion="S1" EffectRes="FX_Mon_Oswarld_BallATK" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="3" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="19500005">
+        <Name>蹦过去吧？&lt;color="red"&gt;◆&lt;/color&gt;</Name>
+        <Artwork>Oswald_Atk</Artwork>
+        <Rarity>Uncommon</Rarity>
+        <Option>OnlyPage</Option>
+		<Option>Basic</Option>
+        <Spec Range="Far" Cost="3"/>
+        <Script></Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="5" Dice="8" Type="Atk" Detail="Hit" Motion="S1" EffectRes="FX_Mon_Oswarld_FireRing" Script="oswald_combo_atk1" ActionScript="" Desc="" />
+            <Behaviour Min="4" Dice="7" Type="Atk" Detail="Hit" Motion="S1" EffectRes="FX_Mon_Oswarld_FireRing" Script="oswald_combo_atk1" ActionScript="" Desc="" />
+            <Behaviour Min="3" Dice="7" Type="Atk" Detail="Hit" Motion="S1" EffectRes="FX_Mon_Oswarld_FireRing" Script="oswald_combo_atk2" ActionScript="" Desc="" />
+            <Behaviour Min="3" Dice="6" Type="Atk" Detail="Hit" Motion="S1" EffectRes="FX_Mon_Oswarld_FireRing" Script="oswald_combo_atk2" ActionScript="" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="19500006">
+        <Name>我需要你哟~？</Name>
+        <Artwork>Oswald_Attract</Artwork>
+        <Rarity>Unique</Rarity>
+        <Option>OnlyPage</Option>
+		<Option>Basic</Option>
+        <Spec Range="Far" Cost="2"/>
+        <Script>StaggerReward</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="5" Dice="7" Type="Atk" Detail="Hit" Motion="F" EffectRes="FX_Mon_Oswarld_BingBing_Small" Script="oswald_distract_atk" ActionScript="" Desc="" />
+            <Behaviour Min="4" Dice="6" Type="Atk" Detail="Hit" Motion="F" EffectRes="FX_Mon_Oswarld_BingBing_Small" Script="oswald_distract_atk" ActionScript="" Desc="" />
+            <Behaviour Min="3" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="19500007">
+        <Name>别乱动嘛~！</Name>
+        <Artwork>Oswald_Attract</Artwork>
+        <Rarity>Unique</Rarity>
+        <Option>OnlyPage</Option>
+		<Option>Basic</Option>
+        <Spec Range="Far" Cost="1"/>
+        <Script>OswaldMark</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="5" Dice="7" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="4" Dice="8" Type="Standby" Detail="Slash" Motion="J" EffectRes="" Script="oswald_vulnerable_atk" ActionScript="" Desc="" />
+            <Behaviour Min="4" Dice="8" Type="Standby" Detail="Slash" Motion="J" EffectRes="" Script="oswald_vulnerable_atk" ActionScript="" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="19500008">
+        <Name>高潮！！！</Name>
+        <Artwork>Oswald_Strong</Artwork>
+        <Rarity>Unique</Rarity>
+        <Option>OnlyPage</Option>
+		<Option>Basic</Option>
+        <Spec Range="FarArea" Cost="5" Affection="Team"/>
+        <Script>OswaldClimax</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="25" Dice="25" Type="Atk" Detail="Hit" Motion="S3" EffectRes="" Script="oswald_climax_atk" ActionScript="Twisted_Oswald_AreaAtk" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="19500101">
+        <Name>中场时间到~</Name>
+        <Artwork>Oswald_Party</Artwork>
+        <Rarity>Unique</Rarity>
+        <Option>Personal</Option>
+        <Spec Range="Instance" Cost="0" />
+        <Script>OswaldHide</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList/>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="19500102">
+        <Name>红线绞杀</Name>
+        <Artwork>Jaeheon_Fusion</Artwork>
+        <Rarity>Unique</Rarity>
+        <Option>Personal</Option>
+        <Spec Range="Instance" Cost="2" />
+        <Script>OswaldJaeheonCombo</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList/>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="19500103">
+        <Name>红线牵引</Name>
+        <Artwork>Jaeheon_Fusion</Artwork>
+        <Rarity>Unique</Rarity>
+        <Spec Range="Near" Cost="0" />
+        <Script>ApplyRedString</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="FX_Mon_JH2_Link" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="FX_Mon_JH2_Link" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="4" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="19500201">
+        <Name>红线</Name>
+        <Artwork>Jaeheon_Fusion</Artwork>
+        <Rarity>Unique</Rarity>
+        <Spec Range="Near" Cost="0" />
+        <Script></Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="6" Dice="10" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="RemoveRedString" ActionScript="" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="19500202">
+        <Name>红线</Name>
+        <Artwork>Jaeheon_Fusion</Artwork>
+        <Rarity>Unique</Rarity>
+        <Spec Range="Far" Cost="0" />
+        <Script></Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="6" Dice="10" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="RemoveRedString" ActionScript="" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+</DiceCardXmlRoot>

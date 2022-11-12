@@ -40,4 +40,7 @@
 	<BattleCardAbility ID="AoeCoolDown">
 		<Desc>This page can be reused only after 4 scenes</Desc>
   	</BattleCardAbility>
+	<BattleCardAbility ID="draw1Energy2">
+    		<Desc>[On Use] Draw 1 Page and Recover 2 Lights</Desc>
+  	</BattleCardAbility>
 </BattleCardAbilityDescRoot>

@@ -68,5 +68,92 @@
 		<BattleCardDesc ID="19400005">
 			<LocalizedName>Wohlklang</LocalizedName>
 		</BattleCardDesc>
+		<!--八点档马戏团-->
+		<BattleCardDesc ID="19500001">
+			<LocalizedName>Introducing Our Newest Member!</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19500002">
+			<LocalizedName>Pow~! Kablammo!!</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19500003">
+			<LocalizedName>Ready for a Surprise!?♥</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19500004">
+			<LocalizedName>Here, Catch~!♣</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19500005">
+			<LocalizedName>Shall We Somersault These?♦</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19500006">
+			<LocalizedName>We Need You, You Know~?!</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19500007">
+			<LocalizedName>Don’t Resist~!</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19500008">
+			<LocalizedName>CLIMAX!!!</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19500101">
+			<LocalizedName>Intermission Time~</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19500102">
+			<LocalizedName>Strangle with Red String</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19500103">
+			<LocalizedName>Red String Conjoins</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19500201">
+			<LocalizedName>Red String</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19500202">
+			<LocalizedName>Red String</LocalizedName>
+		</BattleCardDesc>
+		<!--狼之时刻-->
+		<BattleCardDesc ID="19600001">
+			<LocalizedName>Fisticuffs</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19600002">
+			<LocalizedName>Kicks and Stomps</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19600003">
+			<LocalizedName>Overspeed</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19600004">
+			<LocalizedName>Intimidate</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19600005">
+			<LocalizedName>Lupine Onslaught</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19600006">
+			<LocalizedName>Beatdown</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19600007">
+			<LocalizedName>Pitch Black Pulverizer</LocalizedName>
+		</BattleCardDesc>
+		<!--傀儡师-->
+		<BattleCardDesc ID="19700001">
+			<LocalizedName>Straining Strings</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19700002">
+			<LocalizedName>Controlling Strings</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19700003">
+			<LocalizedName>Not a Chance</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19700004">
+			<LocalizedName>Needlework</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19700005">
+			<LocalizedName>Backstitch</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19700006">
+			<LocalizedName>Cripple</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19700007">
+			<LocalizedName>Puppetry</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19700008">
+			<LocalizedName>Puppetry</LocalizedName>
+		</BattleCardDesc>
  	</cardDescList>
 </BattleCardDescRoot>

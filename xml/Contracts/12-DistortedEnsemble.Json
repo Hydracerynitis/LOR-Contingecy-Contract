@@ -282,7 +282,7 @@
             ],
             "Faction":0,
             "BaseLevel":4,
-            "Conflict":["DElena_Aoe","Last","LowFloor"],
+            "Conflict":["DElena_Aoe"],
             "Stageid":60004
         },
         {
@@ -301,7 +301,7 @@
             ],
             "Faction":0,
             "BaseLevel":4,
-            "Conflict":["DElena_Hp","Last","LowFloor"],
+            "Conflict":["DElena_Hp"],
             "Stageid":60004
         },
         {
@@ -320,7 +320,7 @@
             ],
             "Faction":0,
             "BaseLevel":4,
-            "Conflict":["DPluto_Shade","Last","LowFloor"],
+            "Conflict":["DPluto_Shade"],
             "Stageid":60004
         },
         {
@@ -339,7 +339,7 @@
             ],
             "Faction":0,
             "BaseLevel":4,
-            "Conflict":["DPluto_Contract","Last","LowFloor"],
+            "Conflict":["DPluto_Contract"],
             "Stageid":60004
         },
         {

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using BaseMod;
 using ContractReward;
 using HarmonyLib;
+using LOR_BattleUnit_UI;
 using LOR_DiceSystem;
 using UI;
 using UnityEngine;
@@ -125,6 +127,80 @@ namespace Contingecy_Contract
         static bool BattlePlayingCardSlotDetail_RecoverPlayPoint(BattlePlayingCardSlotDetail __instance)
         {
             return !__instance._self.passiveDetail.HasPassive<PassiveAbility_1940002>();
+        }
+        //Oswald Reward
+        [HarmonyPatch(typeof(BattleUnitModel),nameof(BattleUnitModel.Die))]
+        [HarmonyPostfix]
+        static void BattleUnitModel_Die(BattleUnitModel __instance)
+        {
+            if (DiceCardSelfAbility_OswaldHide.HidingOswald != null && DiceCardSelfAbility_OswaldHide.HidingOswald.faction == __instance.faction)
+                DiceCardSelfAbility_OswaldHide.HidingOswald.TakeBreakDamage(16);
+        }
+        [HarmonyPatch(typeof(BattleUnitModel),nameof(BattleUnitModel.OnCheckEndBattle))]
+        [HarmonyPostfix]
+        static void BattleUnitModel_OnCheckEndBattle(ref bool librarianExists)
+        {
+            if (librarianExists == false && DiceCardSelfAbility_OswaldHide.HidingOswald != null)
+                librarianExists = true;
+        }
+        [HarmonyPatch(typeof(BattlePersonalEgoCardDetail),nameof(BattlePersonalEgoCardDetail.UseCard))]
+        [HarmonyPrefix]
+        static bool BattlePersonalEgoCardDetail_UseCard(BattleDiceCardModel card)
+        {
+            if (card.GetID() == Tools.MakeLorId(19500102))
+                return false;
+            return true;
+        }
+        [HarmonyPatch(typeof(BattlePlayingCardDataInUnitModel),nameof(BattlePlayingCardDataInUnitModel.OnStandbyBehaviour))]
+        [HarmonyPostfix]
+        static void BattlePlayingCardDataInUnitModel_OnStandbyBehaviour(BattlePlayingCardDataInUnitModel __instance, List<BattleDiceBehavior> __result)
+        {
+            if (__instance.card != null && __instance.card._script != null && __instance.card._script is OnStandBy)
+                (__instance.card._script as OnStandBy).OnStandBy(__instance, __instance.owner, __result);
+        }
+        //Jaeheon Fix Can't Target Enemy UnControllable Dice
+        [HarmonyPatch(typeof(SpeedDiceUI),nameof(SpeedDiceUI.OnClickSpeedDice))]
+        [HarmonyPrefix]
+        static bool SpeedDiceUI_OnClickSpeedDice(SpeedDiceUI __instance)
+        {
+            if (!__instance.view.model.speedDiceResult[__instance._speedDiceIndex].isControlable && __instance.view.model.faction == Faction.Enemy)
+            {
+                SingletonBehavior<BattleSoundManager>.Instance.PlaySound(EffectSoundType.UI_CLICK, __instance.transform.position);
+                if (SingletonBehavior<BattleManagerUI>.Instance.ui_unitCardsInHand.IsCardSelected())
+                {
+                    BattleDiceCardUI selectedCard = SingletonBehavior<BattleManagerUI>.Instance.ui_unitCardsInHand.GetSelectedCard();
+                    BattleUnitModel selectedModel = SingletonBehavior<BattleManagerUI>.Instance.ui_unitCardsInHand.SelectedModel;
+                    int faction1 = (int)__instance._view.model.faction;
+                    int speedDiceIndex = __instance._speedDiceIndex;
+                    if (!BattleUnitModel.IsTargetableUnit(selectedCard.CardModel, selectedModel, __instance._view.model, speedDiceIndex) || __instance.CheckBlockDice())
+                        return false;
+                    BattlePlayingCardDataInUnitModel cardDataInUnitModel = __instance._view.model.cardSlotDetail.cardAry[speedDiceIndex];
+                    SingletonBehavior<BattleManagerUI>.Instance.ui_unitCardsInHand.ApplySelectedCard(__instance._view.model, speedDiceIndex);
+                    BattleUIInputController.Instance.ResetCharacterCursor(false);
+                    __instance.playerinfo.ReleaseSelectedCard();
+                    if (!SingletonBehavior<BattleTutorialManagerUI>.Instance.IsRunningTutorial || SingletonBehavior<BattleTutorialManagerUI>.Instance.selectEnemySpeedDiceFuncForTutorial == null)
+                        return false;
+                    SingletonBehavior<BattleTutorialManagerUI>.Instance.selectEnemySpeedDiceFuncForTutorial();
+                }
+                else
+                {
+                    SingletonBehavior<BattleSoundManager>.Instance.PlaySound(EffectSoundType.UI_CLICK, __instance.transform.position);
+                    if ((UnityEngine.Object)SingletonBehavior<BattleManagerUI>.Instance.selectedEnemyDice != (UnityEngine.Object)__instance)
+                    {
+                        SingletonBehavior<BattleManagerUI>.Instance.selectedEnemyDice = __instance;
+                        __instance.SetHighlightClicked();
+                        __instance.enemyinfo.ReleaseSelectedCharacter();
+                        __instance.enemyinfo.OpenUnitInformationByDice(__instance._view.model, true, __instance._speedDiceIndex);
+                    }
+                    else
+                    {
+                        SingletonBehavior<BattleManagerUI>.Instance.selectedEnemyDice = (SpeedDiceUI)null;
+                        __instance.SetHighlight(false);
+                    }
+                }
+                return false;
+            }
+            return true;
         }
     }
 }

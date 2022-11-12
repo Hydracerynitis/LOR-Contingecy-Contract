@@ -23,20 +23,18 @@ namespace ContractReward
         {
             owner.allyCardDetail.DrawCards(1);
         }
-        public class CheckInHand: BattleUnitBuf_Extention
+        public class CheckInHand: BattleUnitBuf,StartBattleBuf
         {
             BattleDiceCardModel TargetCard;
             public CheckInHand(BattleDiceCardModel card)
             {
                 TargetCard = card;
             }
-            public override void OnStartBattle()
+            public void OnStartBattle()
             {
-                base.OnStartBattle();
                 if (TargetCard!=null && _owner.allyCardDetail.GetHand().Contains(TargetCard))
                 {
                     DiceCardXmlInfo cardItem = ItemXmlDataList.instance.GetCardItem(TargetCard.GetID());
-                    DiceBehaviour diceBehaviour1 = new DiceBehaviour();
                     List<BattleDiceBehavior> behaviourList = new List<BattleDiceBehavior>();
                     int num = 0;
                     foreach (DiceBehaviour diceBehaviour2 in cardItem.DiceBehaviourList)
@@ -44,6 +42,12 @@ namespace ContractReward
                         BattleDiceBehavior battleDiceBehavior = new BattleDiceBehavior();
                         battleDiceBehavior.behaviourInCard = diceBehaviour2.Copy();
                         battleDiceBehavior.SetIndex(num++);
+                        if (diceBehaviour2.Script != null)
+                        {
+                            DiceCardAbilityBase instanceDiceCardAbility = Singleton<AssemblyManager>.Instance.CreateInstance_DiceCardAbility(diceBehaviour2.Script);
+                            if (instanceDiceCardAbility != null)
+                                battleDiceBehavior.AddAbility(instanceDiceCardAbility);
+                        }
                         behaviourList.Add(battleDiceBehavior);
                     }
                     _owner.cardSlotDetail.keepCard.AddBehaviours(cardItem, behaviourList);

@@ -14,6 +14,7 @@ namespace Contingecy_Contract
     public class StaticDataManager
     {
         public static Dictionary<string, GameObject> VanilaGameObject=new Dictionary<string, GameObject>();
+        public static Dictionary<string, AudioClip> VanilaAudio = new Dictionary<string, AudioClip>();
         public static List<Contract> JsonList = new List<Contract>();
         public static Dictionary<LorId , Sprite> NonThumbSprite = new Dictionary<LorId, Sprite>();
         public static Dictionary<LorId, int> RewardDic = new Dictionary<LorId, int>();
@@ -170,6 +171,8 @@ namespace Contingecy_Contract
             GameObject BSA = Resources.Load<GameObject>("Prefabs/InvitationMaps/InvitationMap_BlackSilence4");
             VanilaGameObject.Add("BlackSilence4Aura", ((BlackSilence4thMapManager)BSA.GetComponent<MapManager>()).areaAuraEffect);
             VanilaGameObject.Add("BlackSilence4Boom", ((BlackSilence4thMapManager)BSA.GetComponent<MapManager>()).areaBoomEffect);
+            GameObject FAEO = Util.LoadPrefab("Battle/SpecialEffect/FarAreaEffect_Oswald1st");
+            VanilaAudio.Add("ClownClip", FAEO.GetComponent<FarAreaEffect_Oswald>()._curtainUpSound);
             reverberation = new AudioClip[4] { Resources.Load<AudioClip>("Sounds/Battle/Reverberation1st_Asiyah"),
             Resources.Load<AudioClip>("Sounds/Battle/Reverberation1st_Briah"),Resources.Load<AudioClip>("Sounds/Battle/Reverberation1st_Atziluth"),
             Resources.Load<AudioClip>("Sounds/Battle/Reverberation1st_Argalia")};

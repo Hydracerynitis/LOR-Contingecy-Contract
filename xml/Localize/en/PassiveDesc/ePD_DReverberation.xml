@@ -62,4 +62,58 @@ Upon death: all enemies gain 3 Strength, Endurance, and Haste next scene.</Desc>
         <Name>Beklemmt Resolve</Name>
         <Desc>Cost of all pages are reduced by 2. Can only recover 1 Light at the start of each Scene. Loses all Light when Staggered.</Desc>
     </PassiveDesc>
+    <!--八点档马戏团-->
+    <PassiveDesc ID="1950001">
+        <Name>Showtime~</Name>
+        <Desc>At the end of the Scene, all enemies take Stagger damage euqal to 3-6% of Max Stagger Resist.
+Upon death, all enemies fully restore Stagger Resist, and all status ailments on them are halved.</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1950002">
+        <Name>I Can Shrug That Off!</Name>
+        <Desc>Cannot lose more than 50% of Max HP in a single Scene. Whenever an ally dies, takes 16 Stagger damage.</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1950003">
+        <Name>Intermission</Name>
+        <Desc>Gain a copy of "Intermission Time~", making self disappearing from Battlefield for 2 Scene. Recover all Lights and draw 6 Pages when returned. 
+If staggered when disappearance then reappear immediately.</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1950004">
+        <Name>Fusion with Red String</Name>
+        <Desc>If there is allied and alive Puppeteer presnet, be able to use "Strangle with Red String".
+On play to force Puppeteer to use "Red String Conjoins" attacking enemies, make them gain 2 "Red String" next Scene.</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1950101">
+        <Name>Amalgamation</Name>
+        <Desc>If spawned by the effects of 'Red Strings', Max HP increases by hp lost from character that was conjoined, and gains some passive abilities of the enemies conjoined.
+At the start of each Scene, draw 2 Pages.</Desc>
+    </PassiveDesc>
+    <!--狼之时刻-->
+    <PassiveDesc ID="1960001">
+        <Name>Fierce Sandstorm</Name>
+        <Desc>At the end of the Scene, all enemies take damage equal to 3-6% Max HP.
+After death, all enemies deal +3 damage with attacks for the rest of the Act.</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1960002">
+        <Name>Burning Resolve to Fight On</Name>
+        <Desc>If there are no other allies present at the end of the Scene, gain 1 Strength and Endurance, and gain 2 Speed dice for the rest of the Act.
+At the start of each Scene, draw 2 Page and recover 2 Light.</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1960003">
+        <Name>Lord and Clown</Name>
+        <Desc>If there is allied and alive 8 O'clock Circus presnet, reduce incoming Stagger Damage by 30%.</Desc>
+    </PassiveDesc>
+    <!--傀儡师-->
+    <PassiveDesc ID="1970001">
+        <Name>Entangled Strings</Name>
+        <Desc>When a die each ally plays rolls the minimum value, reroll it. Activates once per die. At the start of the Scene, all enemies are inflicted with 1-3 Bind.
+After death, all enemies gain 1-3 Haste at the start of each Scene, and all of their dice gain +1 Power for the rest of the Act.</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1970002">
+        <Name>Sandstorm Entanglement</Name>
+        <Desc>If there is allied and alive L’heure du Loup presnet, successful hits will inflict 1 Bleed in the next Scene.</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1970003">
+        <Name>Unbound Flesh</Name>
+        <Desc>Achieve a successful kill will randomly summon an uncontrollable Puppet, Nimble Puppet or Weighty Puppet</Desc>
+    </PassiveDesc>
 </PassiveDescRoot>

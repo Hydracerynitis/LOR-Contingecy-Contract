@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleEffectTextRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<effectTextList>
+		<BattleEffectText ID="RedString">
+			<Name>红线</Name>
+			<Desc>战斗开始时获得反击格挡(6-10 拼点失败 移除自身红线)
+{0}幕后使移除所有敌人的红线, 使他们失去20%最大血量(不致死)并召唤一个超级兔子大宝贝</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="OswaldMark">
+			<Name>迷惑</Name>
+			<Desc>这一幕内承受伤害和混乱伤害提升50%</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="JaeheonControl">
+			<Name>操纵</Name>
+			<Desc>速度最低的{0}颗骰子已失去控制并攻击友方角色。(至多3颗) 
+每一幕结束时减少一层层数</Desc>
+		</BattleEffectText>
+	</effectTextList>
+</BattleEffectTextRoot>

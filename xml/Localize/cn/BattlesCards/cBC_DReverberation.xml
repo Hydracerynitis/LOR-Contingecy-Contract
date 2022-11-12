@@ -68,5 +68,92 @@
 		<BattleCardDesc ID="19400005">
 			<LocalizedName>和音</LocalizedName>
 		</BattleCardDesc>
+		<!--八点档马戏团-->
+		<BattleCardDesc ID="19500001">
+			<LocalizedName>来见见新团员！</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19500002">
+			<LocalizedName>嘭！~嘭！！♠</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19500003">
+			<LocalizedName>会吓一跳吗！？&lt;color="red"&gt;♥&lt;/color&gt;</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19500004">
+			<LocalizedName>接好喽~！♣</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19500005">
+			<LocalizedName>蹦过去吧？&lt;color="red"&gt;◆&lt;/color&gt;</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19500006">
+			<LocalizedName>我需要你哟~？</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19500007">
+			<LocalizedName>别乱动嘛~！</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19500008">
+			<LocalizedName>高潮！！！</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19500101">
+			<LocalizedName>中场时间到~</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19500102">
+			<LocalizedName>红线绞杀</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19500103">
+			<LocalizedName>红线牵引</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19500201">
+			<LocalizedName>红线</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19500202">
+			<LocalizedName>红线</LocalizedName>
+		</BattleCardDesc>
+		<!--狼之时刻-->
+		<BattleCardDesc ID="19600001">
+			<LocalizedName>拳打</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19600002">
+			<LocalizedName>脚踢</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19600003">
+			<LocalizedName>超速</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19600004">
+			<LocalizedName>恐吓</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19600005">
+			<LocalizedName>狼之猛袭</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19600006">
+			<LocalizedName>痛殴</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19600007">
+			<LocalizedName>暗黑强袭</LocalizedName>
+		</BattleCardDesc>
+		<!--傀儡师-->
+		<BattleCardDesc ID="19700001">
+			<LocalizedName>拘束之线</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19700002">
+			<LocalizedName>操控之线</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19700003">
+			<LocalizedName>休想靠近</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19700004">
+			<LocalizedName>穿针引线</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19700005">
+			<LocalizedName>缝纫技艺</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19700006">
+			<LocalizedName>软弱无力</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19700007">
+			<LocalizedName>操控傀儡</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19700008">
+			<LocalizedName>操控傀儡</LocalizedName>
+		</BattleCardDesc>
  	</cardDescList>
 </BattleCardDescRoot>
