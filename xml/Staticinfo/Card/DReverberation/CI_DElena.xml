@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Card ID="19800001">
+        <Name>永恒饥渴</Name>
+        <Artwork>ElenaNewArea</Artwork>
+        <Rarity>Unique</Rarity>
+        <Option>OnlyPage</Option>
+		<Option>Basic</Option>
+        <Spec Range="FarAreaEach" Cost="4" Affection="Team" />
+        <Script>RecoverEnhance</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="6" Dice="9" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="cryingChildAreaDice" ActionScript="TwistedElenaArea1" Desc="" />
+            <Behaviour Min="8" Dice="11" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="elenaNewAreaDice" ActionScript="TwistedElenaArea2" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="19800002">
+        <Name>血液回流</Name>
+        <Artwork>Elena1</Artwork>
+        <Rarity>Unique</Rarity>
+        <Option>OnlyPage</Option>
+		<Option>Basic</Option>
+        <Spec Range="Near" Cost="2" />
+        <Script>negatePower</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+        <Behaviour Min="6" Dice="9" Type="Atk" Detail="Slash" Motion="J" EffectRes="Elena_J" Script="StealRecovery" ActionScript="" Desc="" />
+        <Behaviour Min="5" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="19800003">
+        <Name>猩红之爪</Name>
+        <Artwork>Elena2</Artwork>
+        <Rarity>Common</Rarity>
+        <Option>OnlyPage</Option>
+		<Option>Basic</Option>
+        <Spec Range="Near" Cost="2" />
+        <Script>sweeperOnly</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="5" Dice="7" Type="Atk" Detail="Hit" Motion="H" EffectRes="Elena_H" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="Elena_J" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="3" Dice="9" Type="Atk" Detail="Slash" Motion="J" EffectRes="Elena_J" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="5" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="19800004">
+        <Name>鲜血吸收</Name>
+        <Artwork>Elena1</Artwork>
+        <Rarity>Common</Rarity>
+        <Option>OnlyPage</Option>
+		<Option>Basic</Option>
+        <Spec Range="Near" Cost="2" />
+        <Script>debufHalf</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="5" Dice="9" Type="Atk" Detail="Slash" Motion="J" EffectRes="Elena_J" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Elena_Z" Script="" ActionScript="" Desc="" />
+            <Behaviour Min="5" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>0</Priority>
+    </Card>
+    <Card ID="19800005">
+        <Name>血液扩散</Name>
+        <Artwork>Elena3</Artwork>
+        <Rarity>Unique</Rarity>
+        <Option>OnlyPage</Option>
+		<Option>Basic</Option>
+        <Spec Range="FarArea" Cost="4" Affection="Team"  />
+        <Script>AoeCoolDown</Script>
+        <ScriptDesc></ScriptDesc>
+        <BehaviourList>
+            <Behaviour Min="17" Dice="25" Type="Atk" Detail="Slash" Motion="Z" EffectRes="" Script="elenaAreaDice" ActionScript="ElenaAreaAtk" Desc="" />
+        </BehaviourList>
+        <Chapter>7</Chapter>
+        <Priority>10</Priority>
+    </Card>
+</DiceCardXmlRoot>

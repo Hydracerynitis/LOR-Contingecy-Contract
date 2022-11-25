@@ -15,5 +15,13 @@ After {0} Scene remove all enemies' Red String, making them lose 20% Max Hp (not
 			<Desc>{0} Speed dice with the lowest Speed become uncontrollable, targeting allies for attacks. (Can stack up to 3)
 At the end of each Scene, reduce 1 stack.</Desc>
 		</BattleEffectText>
+		<BattleEffectText ID="DElenaIndicator">
+			<Name>Vampiric Rampage</Name>
+			<Desc>Have recovered {0} health during this Act</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="RecoveryHijack">
+			<Name>Recovery Hijack</Name>
+			<Desc>For {0} Scene whenever self recover health, the inflicter reocver half amount of health as well.</Desc>
+		</BattleEffectText>
 	</effectTextList>
 </BattleEffectTextRoot>

@@ -155,5 +155,21 @@
 		<BattleCardDesc ID="19700008">
 			<LocalizedName>操控傀儡</LocalizedName>
 		</BattleCardDesc>
+		<!--猩红之月-->
+		<BattleCardDesc ID="19800001">
+			<LocalizedName>永恒饥渴</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19800002">
+			<LocalizedName>血液回流</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19800003">
+			<LocalizedName>猩红之爪</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19800004">
+			<LocalizedName>鲜血吸收</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19800005">
+			<LocalizedName>血液扩散</LocalizedName>
+		</BattleCardDesc>
  	</cardDescList>
 </BattleCardDescRoot>

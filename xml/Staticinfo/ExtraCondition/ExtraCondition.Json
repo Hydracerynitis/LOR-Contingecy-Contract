@@ -83,6 +83,13 @@
                 [{"Type":"DJaeheon_Control","Variation":0},{"Type":"DJaeheon_Tangle","Variation":0}]
             ],
             "RewardId":19700000
+        },
+        {
+            "Stageid":60004,
+            "Condition":[
+                [{"Type":"DElena_Hp","Variation":0},{"Type":"DElena_Aoe","Variation":0}]
+            ],
+            "RewardId":19800000
         }
     ]
 }

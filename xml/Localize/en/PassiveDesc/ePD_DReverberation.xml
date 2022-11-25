@@ -116,4 +116,18 @@ After death, all enemies gain 1-3 Haste at the start of each Scene, and all of t
         <Name>Unbound Flesh</Name>
         <Desc>Achieve a successful kill will randomly summon an uncontrollable Puppet, Nimble Puppet or Weighty Puppet</Desc>
     </PassiveDesc>
+    <!--猩红之月-->
+    <PassiveDesc ID="1980001">
+        <Name>Blood is Fuel</Name>
+        <Desc>All allies recover 2 health after a successful hit. On Death, all allies lose 50% Max HP</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1980002">
+        <Name>Vampiric Rampage</Name>
+        <Desc>For each 40 health recoverd in a single Act, Dice gain +1 power.</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1980003">
+        <Name>Unwielding Will</Name>
+        <Desc>Revive in the next Scene after first death.
+Revived body only has passive Speedy and stats of 100/50 with 2-6 speed dice.</Desc>
+    </PassiveDesc>
 </PassiveDescRoot>

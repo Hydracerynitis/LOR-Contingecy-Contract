@@ -130,4 +130,20 @@
     	<CanGivePassive>false</CanGivePassive>
 		<Cost>6</Cost>
   	</Passive>
+	<!--猩红之月-->
+	<Passive ID="1980001">
+		<Rarity>Unique</Rarity>
+    	<CanGivePassive>false</CanGivePassive>
+		<Cost>3</Cost>
+  	</Passive>
+	<Passive ID="1980002">
+		<Rarity>Unique</Rarity>
+    	<CanGivePassive>false</CanGivePassive>
+		<Cost>5</Cost>
+  	</Passive>
+	<Passive ID="1980003">
+		<Rarity>Unique</Rarity>
+    	<CanGivePassive>false</CanGivePassive>
+		<Cost>4</Cost>
+  	</Passive>
 </PassiveXmlRoot>

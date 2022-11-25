@@ -36,4 +36,6 @@ while "It's Showtime!" or "Top Show" is active</Reward>
 while "Matriarch Wolf" or "Eroding Sandstorm" is active</Reward>
 	<Reward id="19700000">Get by Completing The Distorted Reverberation Ensemble reception at Risk Level 16 or more
 while "Puppet Show" or "Entangled Mess" is active</Reward>
+	<Reward id="19800000">Get by Completing The Distorted Reverberation Ensemble reception at Risk Level 16 or more
+while "Unending Carnard" or "Blood is Fuel" is active</Reward>
 </RewardCondition>

@@ -202,5 +202,16 @@ namespace Contingecy_Contract
             }
             return true;
         }
+        //Elena Reward
+        [HarmonyPatch(typeof(BattleUnitModel),nameof(BattleUnitModel.OnRecoverHp))]
+        [HarmonyPostfix]
+        static void BattleUnitModel_OnRecoverHp(BattleUnitModel __instance, int recoverAmount)
+        {
+            foreach(BattleUnitBuf buf in __instance.bufListDetail.GetActivatedBufList())
+            {
+                if (buf is RecoverHpBuf)
+                    (buf as RecoverHpBuf).OnRecoverHp(recoverAmount);
+            }
+        }
     }
 }

@@ -111,4 +111,17 @@
         <Name>肉身解放</Name>
         <Desc>击杀目标时随机召唤1个无法控制的傀儡/敏捷傀儡/沉重傀儡</Desc>
     </PassiveDesc>
+    <!--猩红之月-->
+    <PassiveDesc ID="1980001">
+        <Name>鲜血为薪</Name>
+        <Desc>所有友方单位命中时恢复2点生命值. 当自身死亡时使所有友方单位流失50%最大血量</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1980002">
+        <Name>血魔狂欢</Name>
+        <Desc>这一舞台每恢复40点血量所有骰子威力+1</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1980003">
+        <Name>不朽意志</Name>
+        <Desc>死亡后下一幕开始时清除自身所有被动以100/50 2-6面板复活并获得被动速战速决</Desc>
+    </PassiveDesc>
 </PassiveDescRoot>

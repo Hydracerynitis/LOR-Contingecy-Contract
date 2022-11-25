@@ -108,6 +108,12 @@
     <Compile Include="Source Code\ContractReward\DReverberation\DEileen\PassiveAbility_1920003.cs" />
     <Compile Include="Source Code\ContractReward\DReverberation\DEileen\PassiveAbility_1920002.cs" />
     <Compile Include="Source Code\ContractReward\DReverberation\DEileen\PassiveAbility_1920001.cs" />
+    <Compile Include="Source Code\ContractReward\DReverberation\DElena\BattleUnitBuf_RecoveryHijack.cs" />
+    <Compile Include="Source Code\ContractReward\DReverberation\DElena\DiceCardAbility_StealRecovery.cs" />
+    <Compile Include="Source Code\ContractReward\DReverberation\DElena\DiceCardSelfAbility_RecoverEnhance.cs" />
+    <Compile Include="Source Code\ContractReward\DReverberation\DElena\PassiveAbility_1980003.cs" />
+    <Compile Include="Source Code\ContractReward\DReverberation\DElena\PassiveAbility_1980002.cs" />
+    <Compile Include="Source Code\ContractReward\DReverberation\DElena\PassiveAbility_1980001.cs" />
     <Compile Include="Source Code\ContractReward\DReverberation\DGreta\DiceCardSelfAbility_Alert.cs" />
     <Compile Include="Source Code\ContractReward\DReverberation\DGreta\DiceCardSelfAbility_Intimidate.cs" />
     <Compile Include="Source Code\ContractReward\DReverberation\DGreta\PassiveAbility_1930003.cs" />

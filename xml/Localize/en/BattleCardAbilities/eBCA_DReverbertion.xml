@@ -58,4 +58,12 @@
 	<BattleCardAbility ID="Reassemble">
     		<Desc>[On Hit] Transform 3 random Pages from target's deck</Desc>
   	</BattleCardAbility>
+	<!--猩红之月-->
+	<BattleCardAbility ID="RecoverEnhance">
+    		<Desc>For each 20 health recovered during this Act increase the Maximun value of the second die by +2</Desc>
+			<Desc>This page can be reused only after 4 scenes</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="StealRecovery">
+    		<Desc>[On Hit] Inflict 2 [Recovery Hijack] next Scene</Desc>
+  	</BattleCardAbility>
 </BattleCardAbilityDescRoot>

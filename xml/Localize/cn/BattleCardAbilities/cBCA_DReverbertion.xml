@@ -58,4 +58,12 @@
 	<BattleCardAbility ID="Reassemble">
     		<Desc>[命中时] 转化目标牌库随机3张书页</Desc>
   	</BattleCardAbility>
+	<!--猩红之月-->
+	<BattleCardAbility ID="RecoverEnhance">
+    		<Desc>该舞台内每恢复20点血量使第二个骰子提升2点上限</Desc>
+			<Desc>该书页4幕内最多使用1次</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="StealRecovery">
+    		<Desc>[命中时] 下一幕对目标施加2层[治疗偷窃]</Desc>
+  	</BattleCardAbility>
 </BattleCardAbilityDescRoot>

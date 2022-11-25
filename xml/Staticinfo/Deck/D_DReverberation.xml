@@ -68,4 +68,11 @@
 		<Card>19700007</Card>
 		<Card>19700008</Card>
 	</Deck>
+	<Deck ID="19800000">
+		<Card>19800001</Card>
+		<Card>19800002</Card>
+		<Card>19800003</Card>
+		<Card>19800004</Card>
+		<Card>19800005</Card>
+	</Deck>
 </DeckXmlRoot>

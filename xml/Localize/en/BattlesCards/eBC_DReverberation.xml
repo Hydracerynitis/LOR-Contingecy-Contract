@@ -155,5 +155,21 @@
 		<BattleCardDesc ID="19700008">
 			<LocalizedName>Puppetry</LocalizedName>
 		</BattleCardDesc>
+		<!--猩红之月-->
+		<BattleCardDesc ID="19800001">
+			<LocalizedName>Unending Thirst</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19800002">
+			<LocalizedName>Regurgitation</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19800003">
+			<LocalizedName>Sanguine Nails</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19800004">
+			<LocalizedName>Absorb</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19800005">
+			<LocalizedName>Bloodspreading</LocalizedName>
+		</BattleCardDesc>
  	</cardDescList>
 </BattleCardDescRoot>

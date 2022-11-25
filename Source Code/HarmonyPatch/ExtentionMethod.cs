@@ -58,4 +58,8 @@ namespace Contingecy_Contract
     {
         void OnStandBy(BattlePlayingCardDataInUnitModel card, BattleUnitModel unit, List<BattleDiceBehavior> StandByDie);
     }
+    public interface RecoverHpBuf
+    {
+        void OnRecoverHp(int amount);
+    }
 }

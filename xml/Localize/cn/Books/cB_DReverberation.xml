@@ -41,5 +41,10 @@
 			<TextList />
 			<PassiveList />
 		</BookDesc>
+		<BookDesc BookID="19800000">
+			<BookName>猩红之月</BookName>
+			<TextList />
+			<PassiveList />
+		</BookDesc>
 	</bookDescList>
 </BookDescRoot>

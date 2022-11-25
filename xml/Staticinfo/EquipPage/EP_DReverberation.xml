@@ -275,4 +275,38 @@
     	<Rarity>Unique</Rarity>
     	<CharacterSkin>TwistedJaeheon</CharacterSkin>
  	</Book>
+	<Book ID="19800000">
+    	<Name>猩红之月</Name>
+   		<TextId>19800000</TextId>
+        <Option>MultiDeck</Option>
+    	<EquipEffect>
+      		<HP>160</HP>
+      		<Break>80</Break>
+      		<SpeedMin>2</SpeedMin>
+      		<Speed>7</Speed>
+      		<SResist>Endure</SResist>
+      		<PResist>Normal</PResist>
+      		<HResist>Normal</HResist>
+    		<SBResist>Endure</SBResist>
+  			<PBResist>Normal</PBResist>
+      		<HBResist>Normal</HBResist>
+      		<StartPlayPoint>4</StartPlayPoint>
+    		<MaxPlayPoint>4</MaxPlayPoint>
+  			<Passive>1900001</Passive>
+			<Passive>1900000</Passive>
+      		<Passive>1980001</Passive>
+			<Passive>1980002</Passive>
+      		<Passive>1980003</Passive>
+			<OnlyCard>19800001</OnlyCard>
+			<OnlyCard>19800002</OnlyCard>
+			<OnlyCard>19800003</OnlyCard>
+			<OnlyCard>19800004</OnlyCard>
+			<OnlyCard>19800005</OnlyCard>
+    	</EquipEffect>
+    	<BookIcon>ContingencyReward</BookIcon>
+    	<Chapter>7</Chapter>
+    	<Episode>1800007</Episode>
+    	<Rarity>Unique</Rarity>
+    	<CharacterSkin>TwistedElena</CharacterSkin>
+ 	</Book>
 </BookXmlRoot>

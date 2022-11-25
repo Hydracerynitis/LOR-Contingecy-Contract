@@ -15,5 +15,13 @@
 			<Desc>速度最低的{0}颗骰子已失去控制并攻击友方角色。(至多3颗) 
 每一幕结束时减少一层层数</Desc>
 		</BattleEffectText>
+		<BattleEffectText ID="DElenaIndicator">
+			<Name>血魔狂欢</Name>
+			<Desc>这一舞台已恢复{0}点血量</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="RecoveryHijack">
+			<Name>治疗窃取</Name>
+			<Desc>{0}幕内恢复生命值时为施加者恢复一半的生命值</Desc>
+		</BattleEffectText>
 	</effectTextList>
 </BattleEffectTextRoot>
