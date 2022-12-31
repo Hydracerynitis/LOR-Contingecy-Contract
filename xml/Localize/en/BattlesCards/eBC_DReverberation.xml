@@ -171,5 +171,9 @@
 		<BattleCardDesc ID="19800005">
 			<LocalizedName>Bloodspreading</LocalizedName>
 		</BattleCardDesc>
+		<!--昨日之约-->
+		<BattleCardDesc ID="19900101">
+			<LocalizedName>Hex: Shade Eclipse</LocalizedName>
+		</BattleCardDesc>
  	</cardDescList>
 </BattleCardDescRoot>

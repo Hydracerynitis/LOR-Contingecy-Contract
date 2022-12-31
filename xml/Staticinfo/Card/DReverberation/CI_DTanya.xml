@@ -94,7 +94,7 @@
 		<Option>OnlyPage</Option>
 		<Option>Basic</Option>
 		<Spec Range="Near" Cost="5"/>
-		<Script>TanyaCoolDown</Script>
+		<Script></Script>
 		<ScriptDesc></ScriptDesc>
     	<BehaviourList>
             <Behaviour Min="29" Dice="35" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="damage5atk" ActionScript="TwistedTanyaSpecialAtk_New" Desc="" />

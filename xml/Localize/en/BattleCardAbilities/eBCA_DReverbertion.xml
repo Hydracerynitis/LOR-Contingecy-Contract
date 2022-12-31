@@ -66,4 +66,8 @@
 	<BattleCardAbility ID="StealRecovery">
     		<Desc>[On Hit] Inflict 2 [Recovery Hijack] next Scene</Desc>
   	</BattleCardAbility>
+	<!--昨日之约-->
+	<BattleCardAbility ID="SummonShade">
+    		<Desc>[On Play] Spawns a Shade that copy target's Combat Pages and passive.</Desc>
+  	</BattleCardAbility>
 </BattleCardAbilityDescRoot>

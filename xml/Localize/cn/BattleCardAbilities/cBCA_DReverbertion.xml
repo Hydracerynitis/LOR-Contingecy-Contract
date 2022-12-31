@@ -66,4 +66,8 @@
 	<BattleCardAbility ID="StealRecovery">
     		<Desc>[命中时] 下一幕对目标施加2层[治疗偷窃]</Desc>
   	</BattleCardAbility>
+	<!--昨日之约-->
+	<BattleCardAbility ID="SummonShade">
+    		<Desc>[装备时] 生成1个“残像”, “残像”将复制目标的被动和战斗书页</Desc>
+  	</BattleCardAbility>
 </BattleCardAbilityDescRoot>

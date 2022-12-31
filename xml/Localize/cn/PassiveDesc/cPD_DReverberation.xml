@@ -9,7 +9,7 @@
     </PassiveDesc>
     <PassiveDesc ID="1900000">
         <Name>完美提取--质洁灵魂</Name>
-        <Desc>牌库上限提升18张书页</Desc>
+        <Desc>牌库上限提升18张书页,不会向大于等于9张书页的牌库添加书页</Desc>
     </PassiveDesc>
     <!--哭泣之子-->
     <PassiveDesc ID="1910001">
@@ -123,5 +123,14 @@
     <PassiveDesc ID="1980003">
         <Name>不朽意志</Name>
         <Desc>死亡后下一幕开始时清除自身所有被动以100/50 2-6面板复活并获得被动速战速决</Desc>
+    </PassiveDesc>
+    <!--昨日之约-->
+    <PassiveDesc ID="1990001">
+        <Name>非正当剥削</Name>
+        <Desc>每一幕开始时场上每个生效的非正当合同都会给予随机一位友方单位随机契约加成. 当自身死亡时对所有友方单位施加无法移除的随机非正当合同效果</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1990002">
+        <Name>强大的阴影</Name>
+        <Desc>获得一张用来生成1个“残像”, “残像”将复制目标的被动和战斗书页</Desc>
     </PassiveDesc>
 </PassiveDescRoot>

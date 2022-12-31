@@ -309,4 +309,32 @@
     	<Rarity>Unique</Rarity>
     	<CharacterSkin>TwistedElena</CharacterSkin>
  	</Book>
+	<Book ID="19900000">
+    	<Name>昨日之约</Name>
+   		<TextId>19900000</TextId>
+        <Option>MultiDeck</Option>
+    	<EquipEffect>
+      		<HP>150</HP>
+      		<Break>65</Break>
+      		<SpeedMin>2</SpeedMin>
+      		<Speed>7</Speed>
+      		<SResist>Normal</SResist>
+      		<PResist>Normal</PResist>
+      		<HResist>Endure</HResist>
+    		<SBResist>Normal</SBResist>
+  			<PBResist>Normal</PBResist>
+      		<HBResist>Endure</HBResist>
+      		<StartPlayPoint>4</StartPlayPoint>
+    		<MaxPlayPoint>4</MaxPlayPoint>
+  			<Passive>1900001</Passive>
+			<Passive>1900000</Passive>
+      		<Passive>1990001</Passive>
+			<Passive>1990002</Passive>
+    	</EquipEffect>
+    	<BookIcon>ContingencyReward</BookIcon>
+    	<Chapter>7</Chapter>
+    	<Episode>1800007</Episode>
+    	<Rarity>Unique</Rarity>
+    	<CharacterSkin>TwistedPluto</CharacterSkin>
+ 	</Book>
 </BookXmlRoot>

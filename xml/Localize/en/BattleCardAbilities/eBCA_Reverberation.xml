@@ -281,7 +281,7 @@
     	<Desc>Target will die if all of their other allies are dead</Desc>
   	</BattleCardAbility>
   	<BattleCardAbility ID="SacrificeHp">
-    	<Desc>Requires at least 25% of Max Hp to play;</Desc>
+    	<Desc>Requires at least having 25% of Max Hp to play;</Desc>
     	<Desc>[On Play] Lose 25% of Max Hp and heal target ally for half the lost HP</Desc>
   	</BattleCardAbility>
 	<!-- 朱红十字-->

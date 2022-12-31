@@ -146,4 +146,15 @@
     	<CanGivePassive>false</CanGivePassive>
 		<Cost>4</Cost>
   	</Passive>
+	<!--昨日之约-->
+	<Passive ID="1990001">
+		<Rarity>Unique</Rarity>
+    	<CanGivePassive>false</CanGivePassive>
+		<Cost>5</Cost>
+  	</Passive>
+	<Passive ID="1990002">
+		<Rarity>Unique</Rarity>
+    	<CanGivePassive>false</CanGivePassive>
+		<Cost>5</Cost>
+  	</Passive>
 </PassiveXmlRoot>

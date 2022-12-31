@@ -20,7 +20,7 @@ namespace ContractReward
                 return;
             double ratio = 1-this.owner.hp / this.owner.MaxHp;
             int count = 0;
-            for(;ratio>0.25 && count < 3; count++)
+            for(;ratio>=0.25 && count < 3; count++)
             {
                 ratio -= 0.25;
             }

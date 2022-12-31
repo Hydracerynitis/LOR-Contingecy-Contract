@@ -90,6 +90,13 @@
                 [{"Type":"DElena_Hp","Variation":0},{"Type":"DElena_Aoe","Variation":0}]
             ],
             "RewardId":19800000
+        },
+        {
+            "Stageid":60004,
+            "Condition":[
+                [{"Type":"DPluto_Contract","Variation":0},{"Type":"DPluto_Shade","Variation":0}]
+            ],
+            "RewardId":19900000
         }
     ]
 }

@@ -171,5 +171,9 @@
 		<BattleCardDesc ID="19800005">
 			<LocalizedName>血液扩散</LocalizedName>
 		</BattleCardDesc>
+		<!--昨日之约-->
+		<BattleCardDesc ID="19900101">
+			<LocalizedName>变数: 影食</LocalizedName>
+		</BattleCardDesc>
  	</cardDescList>
 </BattleCardDescRoot>

@@ -46,5 +46,10 @@
 			<TextList />
 			<PassiveList />
 		</BookDesc>
+		<BookDesc BookID="19800000">
+			<BookName>Yesterday's Promise</BookName>
+			<TextList />
+			<PassiveList />
+		</BookDesc>
 	</bookDescList>
 </BookDescRoot>
