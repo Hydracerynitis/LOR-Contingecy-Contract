@@ -67,7 +67,33 @@
     		<Desc>[On Hit] Inflict 2 [Recovery Hijack] next Scene</Desc>
   	</BattleCardAbility>
 	<!--昨日之约-->
+	<BattleCardAbility ID="UnjustPower">
+    		<Desc>If achieved successful hit with this page, inflict [Unjust Contract: Power] next Scene</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="UnjustProctect">
+    		<Desc>If achieved successful hit with this page, inflict [Unjust Contract: Protection next Scene</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="UnjustSwift">
+    		<Desc>If achieved successful hit with this page, inflict [Unjust Contract: Haste] next Scene</Desc>
+  	</BattleCardAbility>
 	<BattleCardAbility ID="SummonShade">
-    		<Desc>[On Play] Spawns a Shade that copy target's Combat Pages and passive.</Desc>
+    		<Desc>[On Play] Spawns a Shade copying target's Combat Pages and Passive ability.</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="ParryWeaken">
+    		<Desc>[In a Clash] Reduce incoming Stagger Damage of Target's Die by -50%</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="ReturnToHand">
+    		<Desc>[On Use] if target is inflicted with [Unjust Contract], Recover 1 Light and return this Page to the Hand</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="PlutoPurge">
+    		<Desc>[On Hit] Purge Targets' [Strength]/[Endurance]/[Protection]/[Stagger Protection]</Desc>
+			<Desc>For each stack that is removed, inflict 4 Damage to Target</Desc>
+			<Desc>This page can be reused only after 4 scenes</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="PlutoShade1">
+    		<Desc>[On Use] Recover 1 Light</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="PlutoShade2">
+    		<Desc>[Cambat Start] All Dice gain +1 Power for the duration of the Scene</Desc>
   	</BattleCardAbility>
 </BattleCardAbilityDescRoot>

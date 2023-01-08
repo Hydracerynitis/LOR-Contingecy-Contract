@@ -23,5 +23,53 @@ At the end of each Scene, reduce 1 stack.</Desc>
 			<Name>Recovery Hijack</Name>
 			<Desc>For {0} Scene whenever self recover health, the inflicter reocver half amount of health as well.</Desc>
 		</BattleEffectText>
+		<BattleEffectText ID="UnjustPower">
+			<Name>Unjust Contract: Power</Name>
+			<Desc>At the start of each Scene, Gain 1 Strength and Endurance;
+A Random Enemy's Pages of a certain Cost gain +3 Power; 
+This Status last {0} Scene</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="UnjustPower_Desc">
+			<Name>Unjust Contract: Power</Name>
+			<Desc>The target gain 1 Strength and Endurance at the start of each Scene;
+A Random ally's Pages of a certain Cost gain +3 Power; 
+This Status will last 2 Scene</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="UnjustPower">
+			<Name>Contract Dividend: Power</Name>
+			<Desc>Dice of Pages of which Cost is {0} gain +3 Pages</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="UnjustProctect">
+			<Name>Unjust Contract: Proctect</Name>
+			<Desc>At the start of each Scene, Gain 3 Proction and Stagger Protection;
+Reduce incoming Damage and Stagger Damage of a random enemy by -50% for the duration of the Scene;
+This Status last {0} Scene.</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="UnjustProctect_Desc">
+			<Name>Unjust Contract: Proctect</Name>
+			<Desc>The target gain 3 Protection and Stagger Protection at the start of each Scene;
+Reduce incoming Damage and Stagger Damage of a random ally by -50% for the duration of the Scene;
+This Status last 2 Scene</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="UnjustProctect">
+			<Name>Contract Dividend: Proctect</Name>
+			<Desc>Reduce incoming Damage and Stagger Damage by -50% for the duration of the Scene</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="UnjustSwift">
+			<Name>Unjust Contract: Haste</Name>
+			<Desc>At the start of each Scene, Gain 3 Swift;
+A random enemy gain 2 additional Speed Dice for the duration of the Scene;
+This Status last {0} Scene.</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="UnjustSwift_Desc">
+			<Name>Unjust Contract: Haste</Name>
+			<Desc>The target gain 3 Swift at the start of each Scene;
+A random enemy gain 2 additional Speed Dice for the duration of the Scene;
+This Status last 2 Scene</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="UnjustSwift">
+			<Name>Contract Dividend: Haste</Name>
+			<Desc>Gain 2 additional Speed Dice for the duration of the Scene.</Desc>
+		</BattleEffectText>
 	</effectTextList>
 </BattleEffectTextRoot>

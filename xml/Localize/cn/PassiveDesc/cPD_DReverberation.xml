@@ -127,10 +127,18 @@
     <!--昨日之约-->
     <PassiveDesc ID="1990001">
         <Name>非正当剥削</Name>
-        <Desc>每一幕开始时场上每个生效的非正当合同都会给予随机一位友方单位随机契约加成. 当自身死亡时对所有友方单位施加无法移除的随机非正当合同效果</Desc>
+        <Desc>能使用对目标施加"非正当合同"的书页. 当自身死亡时移除所有友方单位的手牌</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1990002">
         <Name>强大的阴影</Name>
         <Desc>获得一张用来生成1个“残像”, “残像”将复制目标的被动和战斗书页</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1990011">
+        <Name>残像</Name>
+        <Desc>若"昨日之约"死亡,则当幕结束时自身将一同死亡</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1990012">
+        <Name>强大的阴影</Name>
+        <Desc>所有骰子威力+1, 每一幕可使用1张"阴影书页"</Desc>
     </PassiveDesc>
 </PassiveDescRoot>

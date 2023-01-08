@@ -49,7 +49,7 @@
     		<Desc>[命中时]下一幕中对目标施加1层[操纵]</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="JaheonString">
-    		<Desc>若有该书页的骰子命中则下一幕中对目标施加1层[操纵]</Desc>
+    		<Desc>若有该书页的骰子命中目标则下一幕中对目标施加1层[操纵]</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="NoChance">
     		<Desc>[战斗开始] 每有一张指向自己的书页便将一个防御骰(3-8)洗入反击池</Desc>
@@ -67,7 +67,32 @@
     		<Desc>[命中时] 下一幕对目标施加2层[治疗偷窃]</Desc>
   	</BattleCardAbility>
 	<!--昨日之约-->
+	<BattleCardAbility ID="UnjustPower">
+    		<Desc>若有该书页的骰子命中目标则下一幕中对目标施加[非正当合同: 强力]</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="UnjustProctect">
+    		<Desc>若有该书页的骰子命中目标则下一幕中对目标施加[非正当合同: 守护]</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="UnjustSwift">
+    		<Desc>若有该书页的骰子命中目标则下一幕中对目标施加[非正当合同: 急速]</Desc>
+  	</BattleCardAbility>
 	<BattleCardAbility ID="SummonShade">
     		<Desc>[装备时] 生成1个“残像”, “残像”将复制目标的被动和战斗书页</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="ParryWeaken">
+    		<Desc>[拼点时] 减少目标骰子-50%的混乱伤害</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="ReturnToHand">
+    		<Desc>[使用时] 若目标带有[非正当合同]则恢复1点光芒并将该书页退回至手上</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="PlutoPurge">
+    		<Desc>[命中时] 清除目标[强壮]/[忍耐]/[守护]/[振奋],每清除一层便对其造成4点伤害</Desc>
+			<Desc>该书页4幕内最多使用1次</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="PlutoShade1">
+    		<Desc>[使用时] 恢复一点光芒</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="PlutoShade2">
+    		<Desc>[战斗开始] 这一幕内所有骰子威力+1</Desc>
   	</BattleCardAbility>
 </BattleCardAbilityDescRoot>

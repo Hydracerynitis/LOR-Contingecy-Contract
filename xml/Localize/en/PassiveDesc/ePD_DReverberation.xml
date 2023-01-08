@@ -133,11 +133,19 @@ Revived body only has passive Speedy and stats of 100/50 with 2-6 speed dice.</D
     <!--昨日之约-->
     <PassiveDesc ID="1990001">
         <Name>Unjust Exploitation</Name>
-        <Desc>At the start of each Scene, for each active "Unjust Contract", a random ally recieve a random Contract Bonus. 
-On Death, inflict all allies random unremovable "Unjust Contract".</Desc>
+        <Desc>Can use Pages that inflict "Unjust Contract" to enemies. 
+On Death, exhaust all Pages in hands of all allies.</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1990002">
         <Name>Stygian Shade</Name>
         <Desc>Gain a copy of "Hex: Shade Eclipse", spawns a Shade that copy target's Combat Pages and passive.</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1990011">
+        <Name>Without Light</Name>
+        <Desc>If Yesterday's Promise is not present at the end of the Scene, dies.</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1990012">
+        <Name>Powerful Shadow</Name>
+        <Desc>Dice Power +1. Can use one of the Shade's Combat Page every Scene.</Desc>
     </PassiveDesc>
 </PassiveDescRoot>

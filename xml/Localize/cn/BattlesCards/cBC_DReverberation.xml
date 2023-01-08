@@ -172,8 +172,32 @@
 			<LocalizedName>血液扩散</LocalizedName>
 		</BattleCardDesc>
 		<!--昨日之约-->
+		<BattleCardDesc ID="19900001">
+			<LocalizedName>非正当合同: 强力</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19900002">
+			<LocalizedName>非正当合同: 守护</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19900003">
+			<LocalizedName>非正当合同: 急速</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19900004">
+			<LocalizedName>魔法: 打击</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19900005">
+			<LocalizedName>魔法: 突刺</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19900006">
+			<LocalizedName>安息之臂</LocalizedName>
+		</BattleCardDesc>
 		<BattleCardDesc ID="19900101">
 			<LocalizedName>变数: 影食</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19900102">
+			<LocalizedName>影击</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19900103">
+			<LocalizedName>影袭</LocalizedName>
 		</BattleCardDesc>
  	</cardDescList>
 </BattleCardDescRoot>

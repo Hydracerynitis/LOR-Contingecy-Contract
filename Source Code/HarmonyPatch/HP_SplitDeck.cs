@@ -29,8 +29,8 @@ namespace Contingecy_Contract
                     RestoreDefault(CTC); //若查看的司书用的是不同的书页, 重置UICustomTabsController
                 if(PrimeSoulCond(book))//完美提取--原生灵魂
                 {
-                    CTC.CustomTabs[0].TabName.text = TextDataModel.GetText("ui_PrimeSould_1");
-                    CTC.CustomTabs[1].TabName.text = TextDataModel.GetText("ui_PrimeSould_2");
+                    CTC.CustomTabs[0].TabName.text = TextDataModel.GetText("ui_PrimeSoul_1");
+                    CTC.CustomTabs[1].TabName.text = TextDataModel.GetText("ui_PrimeSoul_2");
                     CTC.CustomTabs[2].gameObject.SetActive(false);
                     CTC.CustomTabs[3].gameObject.SetActive(false);
                 } 

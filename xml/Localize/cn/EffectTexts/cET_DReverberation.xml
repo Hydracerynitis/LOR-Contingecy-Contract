@@ -23,5 +23,41 @@
 			<Name>治疗窃取</Name>
 			<Desc>{0}幕内恢复生命值时为施加者恢复一半的生命值</Desc>
 		</BattleEffectText>
+		<BattleEffectText ID="UnjustPower">
+			<Name>非正当合同: 强力</Name>
+			<Desc>每一幕开始时获得1层强壮忍耐;使随机一位敌人特定费用的书页的威力+3;持续{0}幕</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="UnjustPower_Desc">
+			<Name>非正当合同: 强力</Name>
+			<Desc>目标每一幕开始时获得1层强壮忍耐;使随机一位友方特定费用的书页的威力+3;持续2幕</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="UnjustPowerDividend">
+			<Name>合同红利: 强力</Name>
+			<Desc>这一幕内费用为{0}的书页的威力+3</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="UnjustProctect">
+			<Name>非正当合同: 守护</Name>
+			<Desc>每一幕开始时获得3层守护振奋,并使随机一位敌人在这一幕内减少50%承受的伤害和混乱伤害;持续{0}幕</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="UnjustProctect_Desc">
+			<Name>非正当合同: 守护</Name>
+			<Desc>目标每一幕开始时获得3层守护振奋,并使随机一位友方在这一幕内减少50%承受的伤害和混乱伤害;持续2幕</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="UnjustProctectDividend">
+			<Name>合同红利: 守护</Name>
+			<Desc>这一幕内减少50%承受的伤害和混乱伤害</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="UnjustSwift">
+			<Name>非正当合同: 急速</Name>
+			<Desc>每一幕开始时获得3层敏捷;随机一位敌人额外获得两个速度骰;持续{0}幕</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="UnjustSwift_Desc">
+			<Name>非正当合同: 急速</Name>
+			<Desc>目标每一幕开始时获得3层敏捷;使随机一位友方额外获得两个速度骰;持续2幕</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="UnjustSwiftDividend">
+			<Name>合同红利: 急速</Name>
+			<Desc>这一幕内额外获得两个速度骰</Desc>
+		</BattleEffectText>
 	</effectTextList>
 </BattleEffectTextRoot>

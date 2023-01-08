@@ -22,7 +22,7 @@ namespace ContractReward
         {
             base.OnRoundStart();
             active = false;
-            _effect.ManualDestroy();
+            _effect?.ManualDestroy();
             _effect = null;
             int burn = 0;
             BattleObjectManager.instance.GetAliveList().ForEach(x => burn += x.bufListDetail.GetKewordBufStack(KeywordBuf.Burn));

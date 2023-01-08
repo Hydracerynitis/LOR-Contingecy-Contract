@@ -28,4 +28,11 @@
     <MaxHeight>350</MaxHeight>
     <BookId>19510000</BookId>
   </Enemy>
+  <!--昨日之约-残影-->
+  <Enemy ID="19910000">
+    <NameID>392</NameID>
+    <MinHeight>190</MinHeight>
+    <MaxHeight>190</MaxHeight>
+    <BookId>19910000</BookId>
+  </Enemy>
 </EnemyUnitClassRoot>

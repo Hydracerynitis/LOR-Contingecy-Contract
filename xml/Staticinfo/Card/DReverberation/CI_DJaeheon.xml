@@ -7,7 +7,7 @@
         <Option>OnlyPage</Option>
 		<Option>Basic</Option>
         <Spec Range="FarAreaEach" Cost="4" Affection="Team"/>
-        <Script></Script>
+        <Script>AoeCoolDown</Script>
         <ScriptDesc></ScriptDesc>
         <BehaviourList>
             <Behaviour Min="5" Dice="9" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="JaheonStringAtk" ActionScript="JaeheonAreaAtk" Desc="" />

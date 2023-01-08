@@ -172,8 +172,32 @@
 			<LocalizedName>Bloodspreading</LocalizedName>
 		</BattleCardDesc>
 		<!--昨日之约-->
+		<BattleCardDesc ID="19900001">
+			<LocalizedName>Unjust Contract: Power</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19900002">
+			<LocalizedName>Unjust Contract: Protection</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19900003">
+			<LocalizedName>Unjust Contract: Haste</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19900004">
+			<LocalizedName>Magic: Impact</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19900005">
+			<LocalizedName>Magic: Spear</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19900006">
+			<LocalizedName>Deluge of Brachial Quietuses</LocalizedName>
+		</BattleCardDesc>
 		<BattleCardDesc ID="19900101">
 			<LocalizedName>Hex: Shade Eclipse</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19900102">
+			<LocalizedName>Shaded Strike</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19900103">
+			<LocalizedName>Shaded Assault</LocalizedName>
 		</BattleCardDesc>
  	</cardDescList>
 </BattleCardDescRoot>
