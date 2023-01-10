@@ -102,6 +102,9 @@
     <Compile Include="Source Code\ContingecyContractGUI.cs" />
     <Compile Include="Source Code\ContractReward\DiceCardSelfAbility_draw1Energy2.cs" />
     <Compile Include="Source Code\ContractReward\DiceCardSelfAbility_DirectAttack.cs" />
+    <Compile Include="Source Code\ContractReward\DReverberation\DArgalia\BattleUnitBuf_Disarray.cs" />
+    <Compile Include="Source Code\ContractReward\DReverberation\DArgalia\PassiveAbility_1900003.cs" />
+    <Compile Include="Source Code\ContractReward\DReverberation\DArgalia\PassiveAbility_1900002.cs" />
     <Compile Include="Source Code\ContractReward\DReverberation\DBremen\PassiveAbility_1940002.cs" />
     <Compile Include="Source Code\ContractReward\DReverberation\DBremen\PassiveAbility_1940001.cs" />
     <Compile Include="Source Code\ContractReward\DReverberation\DEileen\DiceCardSelfAbility_strength2quickness2friend.cs" />

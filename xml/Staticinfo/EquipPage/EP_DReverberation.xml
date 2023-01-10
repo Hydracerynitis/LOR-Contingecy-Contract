@@ -1,5 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <BookXmlRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Book ID="19000000">
+    	<Name>指挥家</Name>
+   		<TextId>19000000</TextId>
+        <Option>MultiDeck</Option>
+    	<EquipEffect>
+      		<HP>200</HP>
+      		<Break>52</Break>
+      		<SpeedMin>4</SpeedMin>
+      		<Speed>6</Speed>
+      		<SResist>Normal</SResist>
+      		<PResist>Normal</PResist>
+      		<HResist>Endure</HResist>
+    		<SBResist>Endure</SBResist>
+  			<PBResist>Normal</PBResist>
+      		<HBResist>Normal</HBResist>
+      		<StartPlayPoint>4</StartPlayPoint>
+    		<MaxPlayPoint>4</MaxPlayPoint>
+  			<Passive>1900001</Passive>
+			<Passive>1900000</Passive>
+      		<Passive>1900002</Passive>
+			<Passive Pid="@origin">260005</Passive>
+			<Passive>1800001</Passive>
+      		<Passive>1900003</Passive>
+			<OnlyCard>19000001</OnlyCard>
+			<OnlyCard>19000002</OnlyCard>
+			<OnlyCard>19000003</OnlyCard>
+			<OnlyCard>19000004</OnlyCard>
+			<OnlyCard>19000005</OnlyCard>
+			<OnlyCard>19000006</OnlyCard>
+			<OnlyCard>19000007</OnlyCard>
+			<OnlyCard>19000008</OnlyCard>
+    	</EquipEffect>
+    	<BookIcon>ContingencyReward</BookIcon>
+    	<Chapter>7</Chapter>
+    	<Episode>1800007</Episode>
+    	<Rarity>Unique</Rarity>
+    	<CharacterSkin>TwistedArgalia</CharacterSkin>
+ 	</Book>
     <Book ID="19100000">
     	<Name>哭泣之子</Name>
    		<TextId>19100000</TextId>

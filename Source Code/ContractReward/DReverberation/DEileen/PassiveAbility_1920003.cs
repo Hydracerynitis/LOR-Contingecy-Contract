@@ -22,5 +22,14 @@ namespace ContractReward
                 return 5*_owner.bufListDetail.GetKewordBufStack(KeywordBuf.Smoke);
             }
         }
+        public override void OnRoundEnd()
+        {
+            base.OnRoundEnd();
+            if (owner.bufListDetail.GetKewordBufStack(KeywordBuf.Smoke) == 10)
+            {
+                owner.allyCardDetail.DrawCards(1);
+                owner.cardSlotDetail.RecoverPlayPoint(1);
+            }
+        }
     }
 }

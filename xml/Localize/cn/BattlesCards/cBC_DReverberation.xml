@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <BattleCardDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	 <cardDescList>
+	<cardDescList>
+	 	<!--总指挥家-->
+		<BattleCardDesc ID="19000001">
+			<LocalizedName>苍蓝轨迹</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19000002">
+			<LocalizedName>Allegro</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19000003">
+			<LocalizedName>Largo</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19000004">
+			<LocalizedName>共振调节</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19000005">
+			<LocalizedName>共鸣之镰</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19000006">
+			<LocalizedName>冷血裁断</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19000007">
+			<LocalizedName>Crescendo</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19000008">
+			<LocalizedName>落幕终曲</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19000009">
+			<LocalizedName>蘭·舞</LocalizedName>
+		</BattleCardDesc>
 		<!--哭泣之子-->
 		<BattleCardDesc ID="19100001">
 			<LocalizedName>扭曲之勇</LocalizedName>

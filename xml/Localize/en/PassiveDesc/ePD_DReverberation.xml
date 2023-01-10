@@ -3,13 +3,23 @@
     <!--General-->
     <PassiveDesc ID="1900001">
         <Name>Speed</Name>
-        <Desc>Speed Dice Slot +1. Gain a Speed die since the third Scene. 
-Gain an additional one if there's an enemy whose Emotion Level is 4 or higher.
+        <Desc>Speed Dice Slot +1. Gain a Speed die on the third Scene. 
+Gain an additional die if there's an enemy whose Emotion Level is 4 or higher.
 Does not gain Speed dice from Emotion Level bonuses.</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1900000">
-        <Name>Perfect Extraction--Prime Soul</Name>
-        <Desc>The Deck Limit increase to 18. A deck with 9 or more Pages will not be added with additional Pages.</Desc>
+        <Name>Perfect Extraction -- Prime Soul</Name>
+        <Desc>The Deck Limit is increased to 18. Additional Pages will not be added to a deck with 9 or more Pages.</Desc>
+    </PassiveDesc>
+    <!--总指挥家-->
+    <PassiveDesc ID="1900002">
+        <Name>Conducting the final chapter</Name>
+        <Desc>Every 3 Scenes, all allies gain 1 "Emozioni Intensificantesi" (At the start of each Scene, gain 1 Strength and Endurance).
+Upon death, all allies are inflicted with "disarray" (Uncontrollable; targets random characters including allies; When attacking ally deal 50% more Stagger Damage; This status lasts 3 Scenes)</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1900003">
+        <Name>Synphony No. 5</Name>
+        <Desc>At the start of each act add a copy of "Tempestuous Danza" to hand. Activating "Resonance" 3 times will increase the natural roll of the Page by +1.</Desc>
     </PassiveDesc>
     <!--哭泣之子-->
     <PassiveDesc ID="1910001">
@@ -18,13 +28,13 @@ Does not gain Speed dice from Emotion Level bonuses.</Desc>
 After death, allies are inflicted with 1 Burn when hit.</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1910002">
-        <Name>Supraheat</Name>
-        <Desc>If there is total 30 stacks Burn in the field at the start of Scene, Dice gain +1 Power and inflict +25% Damage and Stagger Damage for the duration of that Scene.</Desc>
+        <Name>Superheat</Name>
+        <Desc>If there is a total 30 stacks Burn on the field at the start of Scene, Dice gain +1 Power and inflict +25% more Damage and Stagger Damage for the duration of that Scene.</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1910003">
         <Name>Restraints</Name>
-        <Desc>If achieve 6 clash win agaisnt same enemy in one Scene, inflict 1 'Restraint' at the end of the Scene.
-On hit against a target with 3 or more stacks of 'Restraint', Immobilize them for the next Scene.</Desc>
+        <Desc>Upon winning 6 clashes against the same target in a single scene, inflict 1 'Restraint' at the end of the Scene.
+Upon hitting a target with 3 or more stacks of 'Restraint', Immobilize them for the next Scene.</Desc>
     </PassiveDesc>
     <!--齿轮教团-->
     <PassiveDesc ID="1920001">
@@ -37,16 +47,17 @@ On hit against a target with 3 or more stacks of 'Restraint', Immobilize them fo
     </PassiveDesc>
     <PassiveDesc ID="1920003">
         <Name>Foggy Matrix</Name>
-        <Desc>If the character has 'Smoke', Reduce incoming Damage by (5 * Smoke)%</Desc>
+        <Desc>If the character has 'Smoke', Reduce incoming Damage by (5 * Smoke)%;
+At the end of each Scene, if the character has 10 stacks of Smoke, draw 1 Page and recover 1 Light</Desc>
     </PassiveDesc>
     <!--八大主厨-->
     <PassiveDesc ID="1930001">
         <Name>Knight in Shark Fins</Name>
-        <Desc>While alive, all other allies gain 2 Protection and Stagger Protection. 若Upon death, all allies are inflicted with 5 Fragile next Scene.</Desc>
+        <Desc>While alive, all other allies gain 2 Protection and Stagger Protection. Upon death, all allies are inflicted with 5 Fragile next Scene.</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1930002">
         <Name>Add Salt to Injury</Name>
-        <Desc>If the target has 5 or more Bleed, Inflicts 1 Fragile on hit. (Max. 3)</Desc>
+        <Desc>If the target has 5 or more Bleed, Inflict 1 Fragile on hit. (Max. 3)</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1930003">
         <Name>Dermal Regeneration</Name>
@@ -55,12 +66,12 @@ On hit against a target with 3 or more stacks of 'Restraint', Immobilize them fo
     <!--不来梅乐团-->
     <PassiveDesc ID="1940001">
         <Name>Martial Song of the Battlefield</Name>
-        <Desc>While this character is alive, give a random ally one stack of status effect. (Strength, Endurance, or Haste) for each Light this character has.
+        <Desc>While this character is alive, give a random ally one stack of a status effect. (Strength, Endurance, or Haste) for each Light this character has.
 Upon death: all enemies gain 3 Strength, Endurance, and Haste next scene.</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1940002">
         <Name>Beklemmt Resolve</Name>
-        <Desc>Cost of all pages are reduced by 2. Can only recover 1 Light at the start of each Scene. Loses all Light when Staggered.</Desc>
+        <Desc>Cost of all pages is reduced by 2. Can only recover 1 Light at the start of each Scene. Loses all Light when Staggered.</Desc>
     </PassiveDesc>
     <!--八点档马戏团-->
     <PassiveDesc ID="1950001">
@@ -74,13 +85,13 @@ Upon death, all enemies fully restore Stagger Resist, and all status ailments on
     </PassiveDesc>
     <PassiveDesc ID="1950003">
         <Name>Intermission</Name>
-        <Desc>Gain a copy of "Intermission Time~", making self disappearing from Battlefield for 2 Scene. Recover all Lights and draw 6 Pages when returned. 
-If staggered when disappearance then reappear immediately.</Desc>
+        <Desc>Gain a copy of "Intermission Time~", making self disappear from the battlefield for 2 Scene. Recover all Lights and draw 6 Pages when returned. 
+If staggered when disappeared, then reappear immediately.</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1950004">
         <Name>Fusion with Red String</Name>
-        <Desc>If there is allied and alive Puppeteer presnet, be able to use "Strangle with Red String".
-On play to force Puppeteer to use "Red String Conjoins" attacking enemies, make them gain 2 "Red String" next Scene.</Desc>
+        <Desc>If there is an allied and alive Puppeteer present, gain the ability to use "Strangle with Red String".
+an [On Play] page that forces the Puppeteer to use "Red String Conjoins" on enemies, making them gain 2 "Red Strings" next Scene.</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1950101">
         <Name>Amalgamation</Name>
@@ -96,11 +107,11 @@ After death, all enemies deal +3 damage with attacks for the rest of the Act.</D
     <PassiveDesc ID="1960002">
         <Name>Burning Resolve to Fight On</Name>
         <Desc>If there are no other allies present at the end of the Scene, gain 1 Strength and Endurance, and gain 2 Speed dice for the rest of the Act.
-At the start of each Scene, draw 2 Page and recover 2 Light.</Desc>
+At the start of each Scene, draw 2 Pages and recover 2 Light.</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1960003">
         <Name>Lord and Clown</Name>
-        <Desc>If there is allied and alive 8 O'clock Circus presnet, reduce incoming Stagger Damage by 30%.</Desc>
+        <Desc>If there is an allied and alive 8 O'clock Circus presnet, reduce incoming Stagger Damage by 30%.</Desc>
     </PassiveDesc>
     <!--傀儡师-->
     <PassiveDesc ID="1970001">
@@ -110,16 +121,16 @@ After death, all enemies gain 1-3 Haste at the start of each Scene, and all of t
     </PassiveDesc>
     <PassiveDesc ID="1970002">
         <Name>Sandstorm Entanglement</Name>
-        <Desc>If there is allied and alive L’heure du Loup presnet, successful hits will inflict 1 Bleed in the next Scene.</Desc>
+        <Desc>If there is an allied and alive L’heure du Loup presnet, successful hits will inflict 1 Bleed next Scene.</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1970003">
         <Name>Unbound Flesh</Name>
-        <Desc>Achieve a successful kill will randomly summon an uncontrollable Puppet, Nimble Puppet or Weighty Puppet</Desc>
+        <Desc>A successful kill will randomly summon an uncontrollable Puppet, Nimble Puppet or Weighty Puppet</Desc>
     </PassiveDesc>
     <!--猩红之月-->
     <PassiveDesc ID="1980001">
         <Name>Blood is Fuel</Name>
-        <Desc>All allies recover 2 health after a successful hit. On Death, all allies lose 50% Max HP</Desc>
+        <Desc>All allies recover 2 health on hit. On Death, all allies lose 50% Max HP</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1980002">
         <Name>Vampiric Rampage</Name>
@@ -127,22 +138,22 @@ After death, all enemies gain 1-3 Haste at the start of each Scene, and all of t
     </PassiveDesc>
     <PassiveDesc ID="1980003">
         <Name>Unwielding Will</Name>
-        <Desc>Revive in the next Scene after first death.
-Revived body only has passive Speedy and stats of 100/50 with 2-6 speed dice.</Desc>
+        <Desc>Revive next Scene after first death.
+Revived body only has the passive "Speed" and stats of 100/50 with 2-6 speed dice.</Desc>
     </PassiveDesc>
     <!--昨日之约-->
     <PassiveDesc ID="1990001">
         <Name>Unjust Exploitation</Name>
-        <Desc>Can use Pages that inflict "Unjust Contract" to enemies. 
+        <Desc>Can use Pages that inflict "Unjust Contract" on enemies. 
 On Death, exhaust all Pages in hands of all allies.</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1990002">
         <Name>Stygian Shade</Name>
-        <Desc>Gain a copy of "Hex: Shade Eclipse", spawns a Shade that copy target's Combat Pages and passive.</Desc>
+        <Desc>Gain a copy of "Hex: Shade Eclipse" that spawns a Shade that copies target's Combat Pages and passives.</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1990011">
         <Name>Without Light</Name>
-        <Desc>If Yesterday's Promise is not present at the end of the Scene, dies.</Desc>
+        <Desc>If Yesterday's Promise is not present at the end of the Scene, die.</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1990012">
         <Name>Powerful Shadow</Name>

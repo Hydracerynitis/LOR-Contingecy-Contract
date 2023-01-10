@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <BookDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<bookDescList>
+		<BookDesc BookID="19000000">
+			<BookName>总指挥家</BookName>
+			<TextList />
+			<PassiveList />
+		</BookDesc>
 		<BookDesc BookID="19100000">
 			<BookName>哭泣之子</BookName>
 			<TextList />
@@ -48,6 +53,11 @@
 		</BookDesc>
 		<BookDesc BookID="19900000">
 			<BookName>昨日之约</BookName>
+			<TextList />
+			<PassiveList />
+		</BookDesc>
+		<BookDesc BookID="19910000">
+			<BookName>残影</BookName>
 			<TextList />
 			<PassiveList />
 		</BookDesc>

@@ -12,7 +12,7 @@ namespace ContractReward
         {
             base.BeforeRollDice();
             if (behavior.TargetDice != null)
-                behavior.TargetDice.ApplyDiceStatBonus(new DiceStatBonus() { breakRate = -50 });
+                behavior.TargetDice.ApplyDiceStatBonus(new DiceStatBonus() { breakRate = -35, dmgRate=-35 });
         }
     }
 }

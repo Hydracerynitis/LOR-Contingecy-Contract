@@ -11,6 +11,16 @@
         <Name>完美提取--质洁灵魂</Name>
         <Desc>牌库上限提升18张书页,不会向大于等于9张书页的牌库添加书页</Desc>
     </PassiveDesc>
+    <!--总指挥家-->
+    <PassiveDesc ID="1900002">
+        <Name>指引终章</Name>
+        <Desc>每3幕对所有友方单位施加1层"高潮"(每一幕开始时获得1层强壮忍耐).
+若自身死亡,则对所有友方单位施加1层"无序"(无法控制,指定目标不分你我且攻击友方单位时额外造成50%的混乱伤害,持续3幕)</Desc>
+    </PassiveDesc>
+    <PassiveDesc ID="1900003">
+        <Name>第五乐章</Name>
+        <Desc>战斗开始时将一张"蘭·舞"置入手牌.每触发3次共鸣便使该书页的骰子基础值提升1点</Desc>
+    </PassiveDesc>
     <!--哭泣之子-->
     <PassiveDesc ID="1910001">
         <Name>火种</Name>
@@ -37,7 +47,8 @@
     </PassiveDesc>
     <PassiveDesc ID="1920003">
         <Name>烟气护罩</Name>
-        <Desc>减少(5*自身烟气层数)%承受伤害</Desc>
+        <Desc>减少(5*自身烟气层数)%承受伤害
+每一幕结束时若已拥有10层烟气则额外抽取1张书页并恢复1点光芒</Desc>
     </PassiveDesc>
     <!--八大主厨-->
     <PassiveDesc ID="1930001">

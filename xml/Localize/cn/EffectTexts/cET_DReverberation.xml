@@ -59,5 +59,9 @@
 			<Name>合同红利: 急速</Name>
 			<Desc>这一幕内额外获得两个速度骰</Desc>
 		</BattleEffectText>
+		<BattleEffectText ID="Disarray">
+			<Name>无序</Name>
+			<Desc>无法控制,指定目标不分你我且攻击友方单位时额外造成50%的混乱伤害,持续{0}幕</Desc>
+		</BattleEffectText>
 	</effectTextList>
 </BattleEffectTextRoot>

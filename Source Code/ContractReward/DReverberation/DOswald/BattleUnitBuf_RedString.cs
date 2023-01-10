@@ -38,7 +38,7 @@ namespace ContractReward
                 }
                 BattleUnitModel Bunny = HP.SummonUnit(_owner.faction == Faction.Enemy ? Faction.Player : Faction.Enemy, Tools.MakeLorId(19510000), Tools.MakeLorId(19510000), PlayerUnitName: CharactersNameXmlList.Instance.GetName(352));
                 PassiveAbility_1950101 amalgamation = Bunny.passiveDetail.FindPassive<PassiveAbility_1950101>();
-                if (amalgamation != null)
+                if (amalgamation != null && conjoined.Count>=2)
                     amalgamation.Conjoin(conjoined);
                 Destroy();
             }

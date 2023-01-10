@@ -28,25 +28,20 @@ namespace ContractReward
                         continue;
                     if (card.target == unit)
                     {
-                        if(card.subTargets.Exists(x => x.target == unit))
-                        {
-                            card.subTargets.RemoveAll(x => x.target == unit);
-                            BattleManagerUI.Instance.ui_TargetArrow.UpdateTargetList();
-                        }
-                        else if (card.subTargets.Count > 0)
-                        {
+                        if (card.subTargets.Count > 0)
                             card.ChangeSubTargetToMainTarget();
-                            BattleManagerUI.Instance.ui_TargetArrow.UpdateTargetList();
-                        }                       
                         else
                         {
                             other.cardOrder = i;
                             other.cardSlotDetail.AddCard(null, null, 0);
                         }
                     }
+                    else if(card.subTargets.Exists(x => x.target == unit))
+                        card.subTargets.RemoveAll(x => x.target == unit);
                 }
             }
             BattleObjectManager.instance.UnregisterUnit(unit);
+            BattleManagerUI.Instance.ui_TargetArrow.UpdateTargetList();
         }
         public static void RecallOswald()
         {

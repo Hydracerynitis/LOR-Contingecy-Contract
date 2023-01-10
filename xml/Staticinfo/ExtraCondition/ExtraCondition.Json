@@ -97,6 +97,13 @@
                 [{"Type":"DPluto_Contract","Variation":0},{"Type":"DPluto_Shade","Variation":0}]
             ],
             "RewardId":19900000
+        },
+        {
+            "Stageid":60004,
+            "Condition":[
+                [{"Type":"DArgalia_Sonata","Variation":0},{"Type":"DArgalia_Ternaria","Variation":0}]
+            ],
+            "RewardId":19000000
         }
     ]
 }

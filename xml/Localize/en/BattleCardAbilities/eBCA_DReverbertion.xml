@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <BattleCardAbilityDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!--总指挥家-->
+	<BattleCardAbility ID="EmotionLimit5">
+	  		<Desc>Can only be used at Emotion Level 5 and above</Desc>
+  	</BattleCardAbility>
 	<!--哭泣之子-->
 	  <BattleCardAbility ID="ReLit">
-    		<Desc>[Combat Start] When inflicting Burn using Combat Pages this Scene, inflict 2 additional stack</Desc>
+    		<Desc>[Combat Start] When inflicting Burn using Combat Pages this Scene, inflict 2 additional stacks</Desc>
 			<Desc>This page can be reused only after 4 scenes</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="Area4Burn">
@@ -10,53 +14,53 @@
   	</BattleCardAbility>
 	<!--齿轮教团-->
 	  <BattleCardAbility ID="strength2quickness2friend">
-    		<Desc>[On Use] A random ally gain 2 Strength 2 Quickness next Scene</Desc>
+    		<Desc>[On Use] A random ally gains 2 Strength and 2 Haste next Scene</Desc>
   	</BattleCardAbility>
 	<!--八大主厨-->
 	<BattleCardAbility ID="Alert">
     		<Desc>[Combat Start] Draw 1 Page</Desc>
-			<Desc>If this page is still on hand, discard this page and respond to one-side attack with dies of this page</Desc>
+			<Desc>If this page is still in hand, discard this page and respond to a one-side attack with dice from this page</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="Intimidate">
     		<Desc>[Combat Start] Reduce target's Power by 1 for the duration of the Scene</Desc>
   	</BattleCardAbility>
 	<!--八点档马戏团-->
 	<BattleCardAbility ID="OswaldHide">
-    		<Desc>[On Play] Disappearing from Battlefield for 2 Scene. Recover all Lights and draw 6 Pages when returned.</Desc>
-			<Desc>It can be used again 3 Scene after reappearance</Desc>
+    		<Desc>[On Play] Disappear from Battlefield for 2 Scene. Recover all Light and draw 6 Pages when returning.</Desc>
+			<Desc>It can be used again 3 Scenes after reappearance</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="OswaldJaeheonCombo">
-    		<Desc>[On Play] Force ally Puppeteer to use "Conjoins with Red String" against target</Desc>
+    		<Desc>[On Play] Force allied Puppeteer to use "Conjoins with Red String" against the target</Desc>
 			<Desc>Can use multiple in one Scene.</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="ApplyRedString">
-    		<Desc>[On Use] Inflict 2 "Red String" next Scene</Desc>
+    		<Desc>[On Use] Inflict 2 "Red Strings" next Scene</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="MxBunny">
-    		<Desc>[On Use] if ally and alive Mx. Bunny present, make it to use this page again target again.</Desc>
+    		<Desc>[On Use] If an allied and alive Mx. Bunny is present, make it use this page against the target again.</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="UnusedCounter">
-    		<Desc>[Combat Start] If there are counter die unused at the end of the Scene, draw 1 Pages and recover 2 Lights.</Desc>
+    		<Desc>[Combat Start] If there are counter dice unused at the end of the Scene, draw 1 Page and recover 2 Light.</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="StaggerReward">
-    		<Desc>[Combat Start] At the end of the Scene, if target is Staggered, All allies draw 3 Pages and recover 3 Lights.</Desc>
+    		<Desc>[Combat Start] At the end of the Scene, if target is Staggered, All allies draw 3 Pages and recover 3 Light.</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="OswaldMark">
-    		<Desc>[Combat Start] for the dureation of rest of the Scene, target increase incoming Damage and Stagger Damage by 50%</Desc>
+    		<Desc>[Combat Start] for the dureation of rest of the Scene, increase the target's received Damage and Stagger Damage by 50%</Desc>
   	</BattleCardAbility>
 	<!--傀儡师-->
 	<BattleCardAbility ID="JaheonStringAtk">
-    		<Desc>[On Hit] Inflict 1 Puppet Strings next Scene</Desc>
+    		<Desc>[On Hit] Inflict 1 Puppet String next Scene</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="JaheonString">
-    		<Desc>If achieved successful hit with this page, inflict 1 Puppet Strings next Scene</Desc>
+    		<Desc>If have achieved a successful hit with this page, inflict 1 Puppet String next Scene</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="NoChance">
-    		<Desc>[Combat Start] Gain 1 Block die (3-8) for each Pages targeting self</Desc>
-			<Desc>Same effect do not stack up</Desc>
+    		<Desc>[Combat Start] Gain 1 Block die (3-8) for each Pages targeting the user</Desc>
+			<Desc>Same effect do not stack</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="Reassemble">
-    		<Desc>[On Hit] Transform 3 random Pages from target's deck</Desc>
+    		<Desc>[On Hit] Transform 3 random Pages in target's deck</Desc>
   	</BattleCardAbility>
 	<!--猩红之月-->
 	<BattleCardAbility ID="RecoverEnhance">
@@ -68,19 +72,19 @@
   	</BattleCardAbility>
 	<!--昨日之约-->
 	<BattleCardAbility ID="UnjustPower">
-    		<Desc>If achieved successful hit with this page, inflict [Unjust Contract: Power] next Scene</Desc>
+    		<Desc>If have achieved a successful hit with this page, inflict [Unjust Contract: Power] next Scene</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="UnjustProctect">
-    		<Desc>If achieved successful hit with this page, inflict [Unjust Contract: Protection next Scene</Desc>
+    		<Desc>If have achieved a successful hit with this page, inflict [Unjust Contract: Protection next Scene</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="UnjustSwift">
-    		<Desc>If achieved successful hit with this page, inflict [Unjust Contract: Haste] next Scene</Desc>
+    		<Desc>If have achieved a successful hit with this page, inflict [Unjust Contract: Haste] next Scene</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="SummonShade">
-    		<Desc>[On Play] Spawns a Shade copying target's Combat Pages and Passive ability.</Desc>
+    		<Desc>[On Play] Spawns a Shade copying the target's Combat Pages and Passive ability.</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="ParryWeaken">
-    		<Desc>[In a Clash] Reduce incoming Stagger Damage of Target's Die by -50%</Desc>
+    		<Desc>[In a Clash] Reduce the incoming Damage and Stagger Damage from the Target's Die by -35%</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="ReturnToHand">
     		<Desc>[On Use] if target is inflicted with [Unjust Contract], Recover 1 Light and return this Page to the Hand</Desc>

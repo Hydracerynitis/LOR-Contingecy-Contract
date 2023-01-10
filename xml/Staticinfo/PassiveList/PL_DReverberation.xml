@@ -12,6 +12,17 @@
     	<CanGivePassive>false</CanGivePassive>
 		<Cost>8</Cost>
   	</Passive>
+	<!--总指挥家-->
+	<Passive ID="1900002">
+		<Rarity>Unique</Rarity>
+    	<CanGivePassive>false</CanGivePassive>
+		<Cost>5</Cost>
+  	</Passive>
+	<Passive ID="1900003">
+		<Rarity>Unique</Rarity>
+    	<CanGivePassive>false</CanGivePassive>
+		<Cost>4</Cost>
+  	</Passive>
 	<!--哭泣之子-->
 	<Passive ID="1910001">
 		<Rarity>Unique</Rarity>

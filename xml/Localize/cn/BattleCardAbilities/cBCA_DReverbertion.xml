@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <BattleCardAbilityDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!--总指挥家-->
+	<BattleCardAbility ID="EmotionLimit5">
+	  		<Desc>本书页仅限情感等级达到5级后方可使用</Desc>
+  	</BattleCardAbility>
 	<!--哭泣之子-->
-	  <BattleCardAbility ID="ReLit">
+	<BattleCardAbility ID="ReLit">
 	  		<Desc>[战斗开始]这一幕中自身使用书页施加[烧伤]时层数+2</Desc>
 			<Desc>该书页4幕内最多使用1次</Desc>
   	</BattleCardAbility>
@@ -80,7 +84,7 @@
     		<Desc>[装备时] 生成1个“残像”, “残像”将复制目标的被动和战斗书页</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="ParryWeaken">
-    		<Desc>[拼点时] 减少目标骰子-50%的混乱伤害</Desc>
+    		<Desc>[拼点时] 减少目标骰子-35%的伤害和混乱伤害</Desc>
   	</BattleCardAbility>
 	<BattleCardAbility ID="ReturnToHand">
     		<Desc>[使用时] 若目标带有[非正当合同]则恢复1点光芒并将该书页退回至手上</Desc>

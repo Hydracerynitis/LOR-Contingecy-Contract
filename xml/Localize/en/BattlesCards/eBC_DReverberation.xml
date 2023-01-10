@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <BattleCardDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	 <cardDescList>
+	<cardDescList>
+	 	<!--总指挥家-->
+		<BattleCardDesc ID="19000001">
+			<LocalizedName>Trails of Blue</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19000002">
+			<LocalizedName>Allegro</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19000003">
+			<LocalizedName>Largo</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19000004">
+			<LocalizedName>Controlled Resonance</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19000005">
+			<LocalizedName>Oscillating Sickle</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19000006">
+			<LocalizedName>Cleave</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19000007">
+			<LocalizedName>Crescendo</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19000008">
+			<LocalizedName>Grand Finale</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="19000009">
+			<LocalizedName>Tempestuous Danza</LocalizedName>
+		</BattleCardDesc>
 		<!--哭泣之子-->
 		<BattleCardDesc ID="19100001">
 			<LocalizedName>Distorted Courage</LocalizedName>

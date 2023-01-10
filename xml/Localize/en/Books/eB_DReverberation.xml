@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <BookDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<bookDescList>
+		<BookDesc BookID="19000000">
+			<BookName>The Lead Conductor</BookName>
+			<TextList />
+			<PassiveList />
+		</BookDesc>
 		<BookDesc BookID="19100000">
-			<BookName>The Crying Child</BookName>
+			<BookName>The Crying Children</BookName>
 			<TextList />
 			<PassiveList />
 		</BookDesc>
 		<BookDesc BookID="19200000">
-			<BookName>The Gear Church</BookName>
+			<BookName>The Church of Gears</BookName>
 			<TextList />
 			<PassiveList />
 		</BookDesc>
@@ -17,7 +22,7 @@
 			<PassiveList />
 		</BookDesc>
 		<BookDesc BookID="19400000">
-			<BookName>The Bremen Band</BookName>
+			<BookName>The Musicians of Bremen</BookName>
 			<TextList />
 			<PassiveList />
 		</BookDesc>
@@ -42,12 +47,17 @@
 			<PassiveList />
 		</BookDesc>
 		<BookDesc BookID="19800000">
-			<BookName>The Blood-Red Moon</BookName>
+			<BookName>The Blood-Red Night</BookName>
 			<TextList />
 			<PassiveList />
 		</BookDesc>
-		<BookDesc BookID="19800000">
+		<BookDesc BookID="19900000">
 			<BookName>Yesterday's Promise</BookName>
+			<TextList />
+			<PassiveList />
+		</BookDesc>
+		<BookDesc BookID="19910000">
+			<BookName>Shade</BookName>
 			<TextList />
 			<PassiveList />
 		</BookDesc>
