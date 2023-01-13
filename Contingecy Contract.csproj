@@ -227,6 +227,7 @@
     <Compile Include="Source Code\Fix\PassiveAbility_1410013_New.cs" />
     <Compile Include="Source Code\Fix\PassiveAbility_170301_New.cs" />
     <Compile Include="Source Code\Fix\RolandP3_Combo_New.cs" />
+    <Compile Include="Source Code\Fix\TanyaSuper_New.cs" />
     <Compile Include="Source Code\HarmonyPatch\ExtentionMethod.cs" />
     <Compile Include="Source Code\HarmonyPatch\HP_CoreSystem.cs" />
     <Compile Include="Source Code\HarmonyPatch\HP_Effect.cs" />
