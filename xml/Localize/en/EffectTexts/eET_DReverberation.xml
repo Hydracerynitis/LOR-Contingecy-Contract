@@ -35,7 +35,7 @@ This Status lasts {0} Scenes.</Desc>
 A Random ally's Pages of a certain Cost gain +3 Power; 
 This Status lasts 2 Scenes.</Desc>
 		</BattleEffectText>
-		<BattleEffectText ID="UnjustPower">
+		<BattleEffectText ID="UnjustPowerDividend">
 			<Name>Contract Dividend: Power</Name>
 			<Desc>Dice on the Pages that Cost {0} gain +3 Power.</Desc>
 		</BattleEffectText>
@@ -51,7 +51,7 @@ This Status lasts {0} Scenes.</Desc>
 Reduce incoming Damage and Stagger Damage of a random ally by -50% for the duration of the Scene;
 This Status lasts 2 Scenes.</Desc>
 		</BattleEffectText>
-		<BattleEffectText ID="UnjustProctect">
+		<BattleEffectText ID="UnjustProctectDividend">
 			<Name>Contract Dividend: Proctect</Name>
 			<Desc>Reduce incoming Damage and Stagger Damage by -50% for the duration of the Scene.</Desc>
 		</BattleEffectText>
@@ -67,7 +67,7 @@ This Status lasts {0} Scenes.</Desc>
 A random enemy gains 2 additional Speed Dice for the duration of the Scene;
 This Status lasts 2 Scenes.</Desc>
 		</BattleEffectText>
-		<BattleEffectText ID="UnjustSwift">
+		<BattleEffectText ID="UnjustSwiftDividend">
 			<Name>Contract Dividend: Haste</Name>
 			<Desc>Gain 2 additional Speed Dice for the duration of the Scene.</Desc>
 		</BattleEffectText>

@@ -47,10 +47,12 @@
 	<BattleCardAbility ID="DanceTogether">
     	<Desc>[On Play] synchronize target ally with "The White Guard"</Desc>
   	</BattleCardAbility>
+	<!--P4-->
 	<BattleCardAbility ID="MadFurioso">
     	<Desc>[On Use] Return all original Exhausted Pages to Deck, and Recover All Lights, draw until 4 Pages in Hand.
 Repeat first dice for each pages have been used.</Desc>
   	</BattleCardAbility>
+	<!--P5-->
 	<BattleCardAbility ID="Agony">
     	<Desc>[On Use] Draw 2 Pages, Inflict 1 Bind to 2 random enemies next Scene</Desc>
   	</BattleCardAbility>

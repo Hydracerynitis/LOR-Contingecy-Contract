@@ -26,6 +26,7 @@ namespace ContractReward
         }
         public void Revive()
         {
+            owner.view.speedDiceSetterUI.DeselectAll();
             List<BattleUnitModel> Dead = BattleObjectManager.instance.GetFriendlyAllList(this.owner.faction).FindAll(x =>x.IsDead()==true);
             Angelica = RandomUtil.SelectOne(Dead);
             BookModel puppet=new BookModel(Singleton<BookXmlList>.Instance.GetData(Tools.MakeLorId(18710000)));

@@ -40,6 +40,7 @@ namespace ContractReward
                         card.subTargets.RemoveAll(x => x.target == unit);
                 }
             }
+            unit.bufListDetail.OnRoundEnd();
             BattleObjectManager.instance.UnregisterUnit(unit);
             BattleManagerUI.Instance.ui_TargetArrow.UpdateTargetList();
         }
@@ -68,7 +69,8 @@ namespace ContractReward
             HidingOswald.cardSlotDetail.RecoverPlayPoint(HidingOswald.cardSlotDetail.GetMaxPlayPoint());
             HidingOswald.allyCardDetail.DrawCards(6);
             HidingOswald.OnRoundStartOnlyUI();
-            HidingOswald.cardSlotDetail.OnRoundStart();
+            HidingOswald.OnRoundEnd_before();
+            HidingOswald.OnRoundStart_after();
             BattleManagerUI.Instance.ui_unitListInfoSummary.UpdateCharacterProfile(HidingOswald, HidingOswald.faction, HidingOswald.hp, HidingOswald.breakDetail.breakGauge);
             if (HidingOswald.IsBreakLifeZero())
                 HidingOswald.view.charAppearance.ChangeMotion(ActionDetail.Damaged);

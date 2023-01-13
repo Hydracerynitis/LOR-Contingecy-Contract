@@ -171,8 +171,10 @@ namespace Contingecy_Contract
             GameObject BSA = Resources.Load<GameObject>("Prefabs/InvitationMaps/InvitationMap_BlackSilence4");
             VanilaGameObject.Add("BlackSilence4Aura", ((BlackSilence4thMapManager)BSA.GetComponent<MapManager>()).areaAuraEffect);
             VanilaGameObject.Add("BlackSilence4Boom", ((BlackSilence4thMapManager)BSA.GetComponent<MapManager>()).areaBoomEffect);
+            UnityEngine.Object.Destroy(BSA);
             GameObject FAEO = Util.LoadPrefab("Battle/SpecialEffect/FarAreaEffect_Oswald1st");
             VanilaAudio.Add("ClownClip", FAEO.GetComponent<FarAreaEffect_Oswald>()._curtainUpSound);
+            UnityEngine.Object.Destroy(FAEO);
             reverberation = new AudioClip[4] { Resources.Load<AudioClip>("Sounds/Battle/Reverberation1st_Asiyah"),
             Resources.Load<AudioClip>("Sounds/Battle/Reverberation1st_Briah"),Resources.Load<AudioClip>("Sounds/Battle/Reverberation1st_Atziluth"),
             Resources.Load<AudioClip>("Sounds/Battle/Reverberation1st_Argalia")};

@@ -62,6 +62,14 @@ namespace Contingecy_Contract
         {
             return card.Sephirah == SephirahType.ETC && card.id >= 18001 && card.id <= 18009;
         }
+        public static bool CheckTanya(RencounterManager.ActionAfterBehaviour self, int id)
+        {
+            return CheckTanya(self, new LorId(id));
+        }
+        public static bool CheckTanya(RencounterManager.ActionAfterBehaviour self, LorId id)
+        {
+            return self.view.model.Book.GetBookClassInfoId() == id || self.view.model.customBook.ClassInfo.id == id;
+        }
         public static void ModifyEnsemble()
         {
             List<StageClassInfo> Ensemble = Singleton<StageClassInfoList>.Instance.GetAllDataList().FindAll(x => x.id.IsBasic() && x.id.id >= 70001 && x.id.id <= 70010);

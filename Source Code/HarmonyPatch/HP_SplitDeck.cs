@@ -285,10 +285,12 @@ namespace Contingecy_Contract
                     __result = __instance._deck.AddCardFromInventory(cardId);
                 else if(__result==CardEquipState.Equippable)
                 {
-                    RemoveDeck(cardId, __instance);
                     DiceCardXmlInfo cardXmlInfo = ItemXmlDataList.instance.GetCardItem(cardId);
                     if (cardXmlInfo.Spec.Ranged == CardRange.Far)
+                    {
+                        RemoveDeck(cardId, __instance);
                         __result = CardEquipState.FarTypeLimit;
+                    }
                 }
             }
             if(__instance.ClassInfo._id == 18500000)
@@ -297,21 +299,24 @@ namespace Contingecy_Contract
                     __result = __instance._deck.AddCardFromInventory(cardId);
                 else if (__result == CardEquipState.Equippable)
                 {
-                    RemoveDeck(cardId, __instance);
                     DiceCardXmlInfo cardXmlInfo = ItemXmlDataList.instance.GetCardItem(cardId);
                     if (cardXmlInfo.Spec.Ranged == CardRange.Near && !cardXmlInfo.IsOnlyPage())
+                    {
+                        RemoveDeck(cardId, __instance);
                         __result = CardEquipState.NearTypeLimit;
+                    }      
                 }
             }
             if (__instance.ClassInfo._id == 18700000)
             {
                 if (__result == CardEquipState.Equippable || __result==CardEquipState.FarTypeLimit)
-                {
-                    if (__result == CardEquipState.Equippable)
-                        RemoveDeck(cardId, __instance);
+                {   
                     DiceCardXmlInfo cardXmlInfo = ItemXmlDataList.instance.GetCardItem(cardId);
                     if (cardXmlInfo.DiceBehaviourList.Exists(y => y.Type != BehaviourType.Standby))
+                    {
+                        RemoveDeck(cardId, __instance);
                         __result = CardEquipState.OnlyPageLimit;
+                    }  
                     else
                         __result = CardEquipState.Equippable;
                     
