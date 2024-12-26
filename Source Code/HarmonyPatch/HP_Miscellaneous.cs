@@ -6,15 +6,34 @@ using ContractReward;
 using HarmonyLib;
 using UI;
 using UnityEngine;
+using static Contingecy_Contract.ContingecyContract_Roland1st;
 
 namespace Contingecy_Contract
 {
     [HarmonyPatch]
-    class HP_SubSystem
+    class HP_Miscellaneous
     {
+        [HarmonyPatch(typeof(DropBookInventoryModel), nameof(DropBookInventoryModel.GetBookList_invitationBookList))]
+        [HarmonyPostfix]
+        public static void AddEnsembleRematchPages(ref List<LorId> __result)
+        {
+            if (LibraryModel.Instance.PlayHistory.Clear_EndcontentsAllStage == 1)
+            {
+                __result.Add(Tools.MakeLorId(70001));
+                __result.Add(Tools.MakeLorId(70002));
+                __result.Add(Tools.MakeLorId(70003));
+                __result.Add(Tools.MakeLorId(70004));
+                __result.Add(Tools.MakeLorId(70005));
+                __result.Add(Tools.MakeLorId(70006));
+                __result.Add(Tools.MakeLorId(70007));
+                __result.Add(Tools.MakeLorId(70008));
+                __result.Add(Tools.MakeLorId(70009));
+                __result.Add(Tools.MakeLorId(70010));
+            }
+        }
         [HarmonyPatch(typeof(BookModel),nameof(BookModel.GetThumbSprite))]
         [HarmonyPostfix]
-        public static void BookModel_GetThumbSprite(ref Sprite __result, BookModel __instance)
+        public static void BookModel_AddThumbSprite(ref Sprite __result, BookModel __instance)
         {
             if (StaticDataManager.NonThumbSprite.ContainsKey(__instance.GetBookClassInfoId()))
             {
@@ -48,7 +67,7 @@ namespace Contingecy_Contract
         }
         [HarmonyPatch(typeof(BookXmlInfo),nameof(BookXmlInfo.GetThumbSprite))]
         [HarmonyPostfix]
-        public static void BookXmlInfo_GetThumbSprite(ref Sprite __result, BookXmlInfo __instance)
+        public static void BookXmlInfo_AddThumbSprite(ref Sprite __result, BookXmlInfo __instance)
         {
             if (StaticDataManager.NonThumbSprite.ContainsKey(__instance.id))
             {
@@ -82,7 +101,7 @@ namespace Contingecy_Contract
         }
         [HarmonyPatch(typeof(AssemblyManager),nameof(AssemblyManager.CreateInstance_DiceCardSelfAbility))]
         [HarmonyPostfix]
-        public static void AssemblyManager_CreateInstance_DiceCardSelfAbility(ref DiceCardSelfAbilityBase __result)
+        public static void ReplaceDiceCardSelfAbility(ref DiceCardSelfAbilityBase __result)
         {
             if (__result is DiceCardSelfAbility_Jaeheon_AreaDt)
                 __result = new Fix.DiceCardSelfAbility_Jaeheon_AreaDt_New();
@@ -95,7 +114,7 @@ namespace Contingecy_Contract
         }
         [HarmonyPatch(typeof(AssemblyManager),nameof(AssemblyManager.CreateInstance_PassiveAbility))]
         [HarmonyPostfix]
-        public static void AssemblyManager_CreateInstance_PassiveAbility(ref PassiveAbilityBase __result)
+        public static void ReplacePassiveAbilityBase(ref PassiveAbilityBase __result)
         {
             if (__result is PassiveAbility_1302013)
                 __result = new Fix.PassiveAbility_1302013_New();
@@ -103,8 +122,10 @@ namespace Contingecy_Contract
                 __result = new Fix.PassiveAbility_1303012_New();
             else if (__result is PassiveAbility_1303013)
                 __result = new Fix.PassiveAbility_1303013_New();
+            else if (ContractLoader.Instance.GetPassiveList().Exists(x => x.Type == "Shi") && (__result is PassiveAbility_241001 || __result is PassiveAbility_241301))
+                __result = new ContingecyContract_Shi.Enhanced_passive_241301();
             else if (ContractLoader.Instance.GetPassiveList().Exists(x => x.Type == "Roland1st") && __result is PassiveAbility_170003 && !(__result is PassiveAbility_1700013))
-                __result = new Fix.PassiveAbility_170003_New();
+                __result = new ContingecyContract_Roland1st.Enhanced_Passive_170003();
             else if (ContractLoader.Instance.GetPassiveList().Exists(x => x.Type == "Roland4th_BlackSilence") && __result is PassiveAbility_170301)
                 __result = new Fix.PassiveAbility_170301_New();
             else if (ContractLoader.Instance.GetPassiveList().Exists(x => x.Type == "DBremen_Self") && __result is PassiveAbility_1404013)
@@ -116,7 +137,7 @@ namespace Contingecy_Contract
         }
         [HarmonyPatch(typeof(UICharacterRenderer),nameof(UICharacterRenderer.SetCharacter))]
         [HarmonyPostfix]
-        public static void UICharacterRenderer_SetCharacter(UnitDataModel unit, int index)
+        public static void UICharacterRenderer_RemoveHead(UnitDataModel unit, int index)
         {
             if (unit.GetCustomBookItemData() != null && CCInitializer.NonHeadEquipPage.Exists(x => unit.GetCustomBookItemData().GetBookClassInfoId() == Tools.MakeLorId(x)) || CCInitializer.NonHeadEquipPage.Exists(x => unit.bookItem.GetBookClassInfoId() == Tools.MakeLorId(x)) && unit.GetCustomBookItemData() == null)
             {
@@ -138,7 +159,7 @@ namespace Contingecy_Contract
         }
         [HarmonyPatch(typeof(SdCharacterUtil),nameof(SdCharacterUtil.CreateSkin))]
         [HarmonyPostfix]
-        public static void SdCharacterUtil_CreateSkin(UnitDataModel unit, CharacterAppearance __result)
+        public static void SdCharacterUtil_RemoveHead(UnitDataModel unit, CharacterAppearance __result)
         {
             if (unit.GetCustomBookItemData() != null && CCInitializer.NonHeadEquipPage.Exists(x => unit.GetCustomBookItemData().GetBookClassInfoId() == Tools.MakeLorId(x)) || CCInitializer.NonHeadEquipPage.Exists(x => unit.bookItem.GetBookClassInfoId() == Tools.MakeLorId(x)) && unit.GetCustomBookItemData() == null)
             {
@@ -159,26 +180,25 @@ namespace Contingecy_Contract
         }
         [HarmonyPatch(typeof(UIBattleSettingPanel),nameof(UIBattleSettingPanel.SetButtonText))]
         [HarmonyPostfix]
-        public static void UIBattleSettingPanel_SetButtonText(UIBattleSettingPanel __instance)
+        public static void RenewAvailableFloorCount(UIBattleSettingPanel __instance)
         {
-            __instance.txt_FloorText.text= TextDataModel.GetText("ui_battlesetting_possiblefloor") + " " + (object)(StageController.Instance.GetStageModel().ClassInfo.floorNum-StageController.Instance.GetStageModel().floorList.FindAll(x => x.IsUnavailable()).Count);
+            __instance.txt_FloorText.text= TextDataModel.GetText("ui_battlesetting_possiblefloor") + " " + 
+                (object)(StageController.Instance.GetStageModel().ClassInfo.floorNum-StageController.Instance.GetStageModel().floorList.FindAll(x => x.IsUnavailable()).Count);
         }
-        [HarmonyPatch(typeof(EmotionCardXmlList),nameof(EmotionCardXmlList.GetDataList), new Type[] { typeof(SephirahType), typeof(int), typeof(int) })]
+        [HarmonyPatch(typeof(StageLibraryFloorModel),nameof(StageLibraryFloorModel.CreateSelectableList))]
         [HarmonyPostfix]
-        public static void EmotionCardXmlList_GetDataList(List<EmotionCardXmlInfo> __result, int emotionLevel)
+        public static void ClearEmotionForNoEmotionContract(List<EmotionCardXmlInfo> __result, int emotionLevel)
         {
             if (Singleton<ContractLoader>.Instance.GetPassiveList().Find(x => x.Type == "NoEmotion") is Contract NoEmotion && emotionLevel >= 4 - NoEmotion.Variant)
                 __result.Clear();
         }
-        [HarmonyPatch(typeof(BattleUnitModel),nameof(BattleUnitModel.OnStartBattle))]
+        [HarmonyPatch(typeof(StageLibraryFloorModel), nameof(StageLibraryFloorModel.CreateSelectableEgoList))]
         [HarmonyPostfix]
-        public static void BattleUnitModel_OnStartBattle(BattleUnitModel __instance)
+        public static void ClearEgoForNoEgoContract(List<EmotionEgoXmlInfo> __result)
         {
-            foreach(BattleUnitBuf buf in __instance.bufListDetail.GetActivatedBufList())
-            {
-                if (buf is StartBattleBuf )
-                    (buf as StartBattleBuf ).OnStartBattle();
-            }
+            if (Singleton<ContractLoader>.Instance.GetPassiveList().Find(x => x.Type == "NoEGO") is Contract NoEGO)
+                __result.Clear();
         }
+        
     }
 }

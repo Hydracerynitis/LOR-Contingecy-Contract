@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleEffectTextRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<effectTextList>
+		<BattleEffectText ID="shiFocus">
+			<Name>专注</Name>
+			<Desc>上限8层，8层时使下一个基础值大于8的进攻骰最终点数x2并消耗所有专注</Desc>
+		</BattleEffectText>
+	</effectTextList>
+</BattleEffectTextRoot>

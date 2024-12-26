@@ -61,7 +61,7 @@ namespace Contingecy_Contract
                 if (!ClearList.Contains(id))
                     ClearList.Add(id);
             }
-            new List<int>(ClearList).Save<List<int>>("ContingecyContract_Save");
+            ContractSaveManager.Save(new List<int>(ClearList), "RewardList");
             HashSet<int> ExceptWith = new HashSet<int>(ClearList);
             ExceptWith.ExceptWith(Inventory);
             foreach (int i in ExceptWith)
@@ -69,7 +69,7 @@ namespace Contingecy_Contract
         }
         public void GetContractCondition(StageClassInfo info)
         {
-            foreach(RewardConfition RC in StaticDataManager.ExtraCondition)
+            foreach(RewardConfig RC in StaticDataManager.ExtraCondition)
             {
                 if (info.id != RC.Id)
                     continue;
@@ -87,19 +87,16 @@ namespace Contingecy_Contract
                         {
                             if (Singleton<ContractLoader>.Instance.CheckActivate(contract, info) && contract.Variant >= condition.Variation)
                             {
-                                Debug.Log("Condition for {0} of contract {1} variantion {2} test True", RC.RewardId.ToString(), condition.Type, condition.Variation.ToString());
                                 check = true;
                                 break;
                             }                         
                         }
-                        Debug.Log("Condition for {0} of contract {1} variantion {2} test False", RC.RewardId.ToString(),condition.Type,condition.Variation.ToString());
                     }
                     if (!check)
                     {
                         pass = false;
                     }                 
                 }
-                Debug.Log("Condition for {0} test {1}", RC.RewardId.ToString(), pass.ToString());
                 if(pass)
                     ClearList.Add(RC.RewardId);
             }

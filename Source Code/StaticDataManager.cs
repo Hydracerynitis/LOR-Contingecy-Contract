@@ -2,6 +2,7 @@
 using MyJsonTool;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -18,10 +19,14 @@ namespace Contingecy_Contract
         public static List<Contract> JsonList = new List<Contract>();
         public static Dictionary<LorId , Sprite> NonThumbSprite = new Dictionary<LorId, Sprite>();
         public static Dictionary<LorId, int> RewardDic = new Dictionary<LorId, int>();
-        public static List<RewardConfition> ExtraCondition=new List<RewardConfition>();
+        public static List<RewardConfig> ExtraCondition=new List<RewardConfig>();
         public static Dictionary<(string,int), string> RewardCondition= new Dictionary<(string, int), string>();
         public static Dictionary<(string, string), string> ContractParam = new Dictionary<(string, string), string>();
         public static AudioClip[] reverberation;
+        public static System.Type GetContingencyContract(string ContractType)
+        {
+            return System.Type.GetType("Contingecy_Contract.ContingecyContract_" + ContractType);
+        }
         public static void LoadStaticData()
         {
             LoadContractParam();
@@ -43,13 +48,14 @@ namespace Contingecy_Contract
                     ContractBluePrintList list = File.ReadAllText(file.FullName).ToObject<ContractBluePrintList>();
                     foreach (ContractBluePrint bluePrint in list.CCs)
                     {
-                        System.Type type = System.Type.GetType("Contingecy_Contract.ContingecyContract_" + bluePrint.Type);
+                        System.Type type = GetContingencyContract(bluePrint.Type);
                         if (type == null)
                             continue;
                         if (bluePrint.Variation <= 0)
                         {
-                            JsonList.Add(new Contract() { Type = bluePrint.Type, Variant = 0, desc = bluePrint.desc, contractType = bluePrint.contractType, Faction = bluePrint.Faction, Level = bluePrint.BaseLevel, Bonus = bluePrint.BonusBaseLevel, Stageid = bluePrint.Stageid, Conflict = bluePrint.Conflict });
-                            Debug.Log("XML: {0} Added", bluePrint.Type);
+                            JsonList.Add(new Contract() { Type = bluePrint.Type, Variant = 0, desc = bluePrint.desc, contractType = bluePrint.contractType, Faction = bluePrint.Faction, Level = bluePrint.BaseLevel 
+                                ,Pid=bluePrint.Pid, Stageid = bluePrint.Stageid, Conflict = bluePrint.Conflict });
+                            Debug.Log("Contract: {0} Added", bluePrint.Type);
                         }
                         else
                         {
@@ -57,10 +63,12 @@ namespace Contingecy_Contract
                             for (int i = 1; i <= bluePrint.Variation; i++)
                             {
                                 contract.Level = i;
-                                Contract item = new Contract() { Type = bluePrint.Type, Variant = i, contractType = bluePrint.contractType, Faction = bluePrint.Faction, Level = bluePrint.BaseLevel + i * bluePrint.Step, Bonus = bluePrint.BonusBaseLevel + i * bluePrint.BonusStep, Stageid = bluePrint.Stageid, Conflict = bluePrint.Conflict };
+                                Contract item = new Contract() { Type = bluePrint.Type, Variant = i, contractType = bluePrint.contractType, Faction = bluePrint.Faction, Level = bluePrint.BaseLevel + i * bluePrint.Step, 
+                                     Stageid = bluePrint.Stageid, Pid=bluePrint.Pid,
+                                    Conflict = bluePrint.Conflict };
                                 bluePrint.desc.ForEach(x => item.desc.Add(new ContractDesc() { language = x.language, name = x.name + " " + i.ToString(), desc = string.Format(x.desc, contract.GetFormatParam(x.language)) }));
                                 JsonList.Add(item);
-                                Debug.Log("XML: {0} Added", item.Id);
+                                Debug.Log("Contract: {0} Added", item.Id);
                             }
                         }
                     }
@@ -168,13 +176,13 @@ namespace Contingecy_Contract
         }
         public static void LoadGameObject()
         {
-            GameObject BSA = Resources.Load<GameObject>("Prefabs/InvitationMaps/InvitationMap_BlackSilence4");
+            GameObject BSA = Util.LoadPrefab("InvitationMaps/InvitationMap_BlackSilence4");
             VanilaGameObject.Add("BlackSilence4Aura", ((BlackSilence4thMapManager)BSA.GetComponent<MapManager>()).areaAuraEffect);
             VanilaGameObject.Add("BlackSilence4Boom", ((BlackSilence4thMapManager)BSA.GetComponent<MapManager>()).areaBoomEffect);
-            UnityEngine.Object.Destroy(BSA);
+            GameObject.Destroy(BSA);
             GameObject FAEO = Util.LoadPrefab("Battle/SpecialEffect/FarAreaEffect_Oswald1st");
             VanilaAudio.Add("ClownClip", FAEO.GetComponent<FarAreaEffect_Oswald>()._curtainUpSound);
-            UnityEngine.Object.Destroy(FAEO);
+            GameObject.Destroy(FAEO);
             reverberation = new AudioClip[4] { Resources.Load<AudioClip>("Sounds/Battle/Reverberation1st_Asiyah"),
             Resources.Load<AudioClip>("Sounds/Battle/Reverberation1st_Briah"),Resources.Load<AudioClip>("Sounds/Battle/Reverberation1st_Atziluth"),
             Resources.Load<AudioClip>("Sounds/Battle/Reverberation1st_Argalia")};

@@ -6,6 +6,7 @@ using System.Linq;
 using LOR_DiceSystem;
 using System.Text;
 using System.Threading.Tasks;
+using BaseMod;
 
 namespace Contingecy_Contract
 {
@@ -17,20 +18,16 @@ namespace Contingecy_Contract
             this.Level = level;
         }
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 40001;
-        public override string[] GetFormatParam(string language) => new string[] { (25*Level).ToString(),Level.ToString()};
+        public override string[] GetFormatParam(string language) => new string[] { (Level - 1).ToString(), Level.ToString() };
         public override void Init(BattleUnitModel self)
         {
             base.Init(self);
-            BattleDiceCardModel card = self.allyCardDetail.GetAllDeck().Find(x => x.GetID() == 501001);
-            DeepCopyUtil.EnhanceCard(card, Level, 0);
-        }
-        public override void OnRoundStart()
-        {
-            if (CCInitializer.CombaltData.ContainsKey(this.owner.UnitData))
-                return;
-            this.owner.RecoverHP((int)(this.owner.MaxHp / 4 * Level));
-            CCInitializer.CombaltData.Add(this.owner.UnitData, (int)this.owner.hp);
-            base.OnWaveStart();
+            self.allyCardDetail.AddNewCardToDeck(501001);
+            foreach(BattleDiceCardModel card in self.allyCardDetail.GetAllDeck().FindAll(x => x.GetID() == 501001))
+            {
+                DeepCopyUtil.EnhanceCard(card, Level, 0);
+                DeepCopyUtil.ChangeCost(card, -Level + 1);
+            }
         }
     }
     public class ContingecyContract_Shi_ValTem : ContingecyContract
@@ -64,6 +61,42 @@ namespace Contingecy_Contract
         public override StatBonus GetStatBonus(BattleUnitModel owner)
         {
             return new StatBonus() { hpRate = 20 * Level, breakRate = 20 * Level };
+        }
+    }
+    public class ContingecyContract_Shi : ContingecyContract
+    {
+        public ContingecyContract_Shi(int level)
+        {
+            this.Level = level;
+        }
+        public class Enhanced_passive_241301 : PassiveAbilityBase
+        {
+            private int _stack;
+            public override void Init(BattleUnitModel self)
+            {
+                base.Init(self);
+                name = PassiveDescXmlList.Instance.GetName(Tools.MakeLorId(3));
+                desc = PassiveDescXmlList.Instance.GetDesc(Tools.MakeLorId(3));
+                rare = Rarity.Uncommon;
+            }
+            public override void OnWaveStart() => this._stack = 0;
+
+            public override void OnRoundStart()
+            {
+                if (this._stack <= 0)
+                    return;
+                this.owner.bufListDetail.AddKeywordBufThisRoundByEtc(KeywordBuf.Strength, 1*_stack, this.owner);
+                this.owner.bufListDetail.AddKeywordBufThisRoundByEtc(KeywordBuf.Endurance, 1 * _stack, this.owner);
+                this.owner.bufListDetail.AddKeywordBufThisRoundByEtc(KeywordBuf.Protection, 3 * _stack, this.owner);
+                this.owner.bufListDetail.AddKeywordBufThisRoundByEtc(KeywordBuf.BreakProtection, 3 * _stack, this.owner);
+            }
+
+            public override void OnDieOtherUnit(BattleUnitModel unit)
+            {
+                if (unit.faction != this.owner.faction || this._stack >= 2)
+                    return;
+                ++this._stack;
+            }
         }
     }
 }

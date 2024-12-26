@@ -13,4 +13,8 @@
         <Name>复仇决意</Name>
         <Desc>拼点胜利恢复10点混乱抗性</Desc>
     </PassiveDesc>
+    <PassiveDesc ID="3">
+        <Name>手足之情</Name>
+        <Desc>在同—舞台中每有1名友方角色死亡便在每一幕开始时使自身获得1层强壮忍耐和3层守护振奋(至多2次)</Desc>
+    </PassiveDesc>
 </PassiveDescRoot>

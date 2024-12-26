@@ -15,68 +15,32 @@ namespace Contingecy_Contract
         {
             Inition.Add(Model);
             List<ContingecyContract> Contracts = new List<ContingecyContract>();
-            foreach (Contract contract in Singleton<ContractLoader>.Instance.GetPassiveList())
+            List<Contract> activatedContract=new List<Contract>();
+            activatedContract.AddRange(Singleton<ContractLoader>.Instance.GetPassiveList());
+            activatedContract.AddRange(Singleton<ContractLoader>.Instance.GetStageList());
+            foreach (Contract contract in activatedContract)
             {
                 if (contract.Faction != Model.faction)
-                {
-                    Debug.Log("{0}'s faction doesn't match {1}'s", contract.Type, Model.UnitData.unitData.name);
                     continue;
-                }
-                if(contract.Stageid!=-1 && Singleton<StageController>.Instance.GetStageModel().ClassInfo.id != contract.Stageid)
-                {
-                    Debug.Log("{0} isn't for stage {1}", contract.Type, Singleton<StageController>.Instance.GetStageModel().ClassInfo.id.ToString());
+                StageClassInfo original = Singleton<StageClassInfoList>.Instance.GetData(Singleton<StageController>.Instance.GetStageModel().ClassInfo.id);
+                if (contract.modifier != null && !contract.modifier.IsValid(original))
                     continue;
-                }
-                System.Type type = System.Type.GetType("Contingecy_Contract.ContingecyContract_" + contract.Type);
+                LorId stageId = StageController.Instance.GetStageModel().ClassInfo.id;
+                if (contract.Stageid!=-1 && stageId != new LorId(contract.Pid, contract.Stageid))
+                    continue;
+                System.Type type = StaticDataManager.GetContingencyContract(contract.Type);
                 if (type == (System.Type)null)
-                {
-                    Debug.Log("Instance of {0} is not found for {1}", type.Name, Model.UnitData.unitData.name);
                     continue;
-                }
-                Debug.Log("Instance of {0} is found for {1}", type.Name, Model.UnitData.unitData.name);
-
-                if (Activator.CreateInstance(type, new object[] { contract.Variant }) is ContingecyContract instance)
+                ContingecyContract instance = (ContingecyContract)Activator.CreateInstance(type, new object[] { contract.Variant });
+                if (instance!=null)
                 {
-                    Debug.Log("Instance of {0}  is created for {1}", type.Name, Model.UnitData.unitData.name);
                     if(!instance.CheckEnemyId(Model.UnitData.unitData.EnemyUnitId))
-                    {
-                        Debug.Log("Instance of {0} is not found for {1}", type.Name, Model.UnitData.unitData.EnemyUnitId.ToString());
                         continue;
-                    }
                     instance.Init(Model);
                     instance.name = Singleton<PassiveDescXmlList>.Instance.GetName(Tools.MakeLorId(20210302)) + contract.GetDesc().name;
                     instance.desc = contract.GetDesc().desc;
                     instance.rare = Rarity.Unique;
                     Contracts.Add(instance);
-                }
-            }
-            foreach(Contract contract in Singleton<ContractLoader>.Instance.GetStageList())
-            {
-                if (contract.Faction != Model.faction)
-                {
-                    Debug.Log("{0}'s faction doesn't match {1}'s", contract.Type, Model.UnitData.unitData.name);
-                    continue;
-                }
-                StageClassInfo original = Singleton<StageClassInfoList>.Instance.GetData(Singleton<StageController>.Instance.GetStageModel().ClassInfo.id);
-                if (!contract.modifier.IsValid(original))
-                {
-                    Debug.Log("{0} doesn't match {1}'s requirement",Singleton<StageNameXmlList>.Instance.GetName(original.id), contract.Type);
-                    continue;
-                }                  
-                System.Type type = System.Type.GetType("Contingecy_Contract.ContingecyContract_" + contract.Type);
-                if (type == (System.Type)null)
-                {
-                    Debug.Log("Instance of {0} is not found for {1}", type.Name, Model.UnitData.unitData.name);
-                    continue;
-                }
-                Debug.Log("Instance of {0} is found for {1}", type.Name, Model.UnitData.unitData.name);
-                if (Activator.CreateInstance(type, new object[] { contract.Variant }) is ContingecyContract stage)
-                {
-                    stage.Init(Model);
-                    stage.name = Singleton<PassiveDescXmlList>.Instance.GetName(Tools.MakeLorId(20210302)) + contract.GetDesc().name;
-                    stage.desc = contract.GetDesc().desc;
-                    stage.rare = Rarity.Unique;
-                    Contracts.Add(stage);
                 }
             }
             List<PassiveAbilityBase> passiveList = Model.passiveDetail.PassiveList;
@@ -152,10 +116,6 @@ namespace Contingecy_Contract
             Contracts.ForEach(x => i = x.GetBreakDamageReductionRate() > i ? x.GetBreakDamageReductionRate() : i);
             return i;
         }
-        public override bool IsCardChoosable(BattleDiceCardModel card)
-        {
-            return Contracts.Exists(x => x is ContingecyContract_NoEGO) ? !card.XmlData.IsEgo() : base.IsCardChoosable(card);
-        }
         public override StatBonus GetStatBonus()
         {
             StatBonus statbonus = new StatBonus();
@@ -165,12 +125,6 @@ namespace Contingecy_Contract
             }
             return statbonus;
         }
-    }
-    public enum ContractType
-    {
-        Passive,
-        Buff,
-        Special
     }
     public class ContingecyContract : PassiveAbilityBase
     {

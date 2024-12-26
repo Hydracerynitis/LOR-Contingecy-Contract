@@ -5,13 +5,13 @@
             "desc":[
                 {
                     "language":"cn",
-                    "name":"重振雄风",
-                    "desc":"柳真首次开启舞台时恢复{0}%的血量，生死界限第一骰最小值提升{1}点"
+                    "name":"向死而生",
+                    "desc":"柳真牌库内额外获得一张生死界限\n生死界限费用-{0}且第一骰最小值提升{1}点"
                 },
                 {
                     "language":"en",
                     "name":"Past Glory",
-                    "desc":"Yujin starts with additional {0}% HP; \nIncrease the minimun value of 'Boundry of Death' by {1}"
+                    "desc":"Yujin's deck contain one additional 'Boundry of Death'\n Increase the minimun value of 'Boundry of Death' by {1} and reduce its cost by {0}"
                 }
             ],
             "Faction":0,
@@ -25,7 +25,7 @@
             "desc":[
                 {
                     "language":"cn",
-                    "name":"二协中坚",
+                    "name":"四协中坚",
                     "desc":"天满和瓦伦丁提升{0}%最大血量和最大混乱抗性\n天满速度不会低于{1}，瓦伦丁使用单骰书页时拼点胜利会摧毁目标下{2}个骰子"
                 },
                 {
@@ -38,6 +38,24 @@
             "Variation":3,
             "BaseLevel":1,
             "Conflict":["Shi_Yujin"],
+            "Stageid":40001
+        },
+        {
+            "Type":"Shi",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"劳逸结合",
+                    "desc":"所有敌人失去\"精疲力尽\"与\"遍体鳞伤\"被动,\n且\"手足之情\"触发时额外获得额外3层守护振奋"
+                },
+                {
+                    "language":"en",
+                    "name":"Work Life Balance",
+                    "desc":"All enemies lose passive \"Extreme Fatigue\".\n Whenever their passive \"Kizuna\" triggers, they gain additional 3 Protection, Break Protection"
+                }
+            ],
+            "Faction":0,
+            "BaseLevel":4,
             "Stageid":40001
         }
     ]

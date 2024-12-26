@@ -18,7 +18,10 @@ namespace ContractReward
                 return;
             owner.UnitData.unitData._customizeData = new UnitCustomizingData(new LorId(1409021),false);
             this.owner.UnitData.unitData.customizeData.SetCustomData(true);
-            this.owner.view.ChangeSkin(target.Book.GetCharacterName());
+            if (target.Book.IsWorkshop)
+                owner.view.ChangeSkin(target.Book.GetBookClassInfoId().packageId + ":" + target.Book.GetCharacterName());
+            else
+                this.owner.view.ChangeSkin(target.Book.GetCharacterName());
             foreach (BattleDiceCardModel battleDiceCardModel in target.allyCardDetail.GetHand())
             {
                 if (battleDiceCardModel.GetSpec().Ranged != CardRange.Instance)
@@ -38,10 +41,14 @@ namespace ContractReward
             {
                 if (!(passive is ContingecyContract))
                 {
-                    PassiveAbilityBase instance = Activator.CreateInstance(passive.GetType()) as PassiveAbilityBase;
-                    instance.rare = passive.rare;
+                    PassiveAbilityBase instance = Activator.CreateInstance(passive.GetType()) as PassiveAbilityBase;       
                     if (!owner.passiveDetail.PassiveList.Exists(x => x.GetType() == instance.GetType()))
+                    {
                         owner.passiveDetail.AddPassive(instance);
+                        instance.rare = passive.rare;
+                        instance.name = passive.name;
+                        instance.desc = passive.desc;
+                    }
                 }
             }
             owner.passiveDetail.OnCreated();

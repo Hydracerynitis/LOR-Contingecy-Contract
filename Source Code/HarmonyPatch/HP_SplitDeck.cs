@@ -18,7 +18,7 @@ namespace Contingecy_Contract
         static int modified;
         [HarmonyPatch(typeof(UIEquipDeckCardList),nameof(UIEquipDeckCardList.SetDeckLayout))]
         [HarmonyPostfix]
-        static void UIEquipDeckCardList_SetDeckLayout(UIEquipDeckCardList __instance)
+        static void SetMultiDeckLayoutUI(UIEquipDeckCardList __instance)
         {
             BookModel book = __instance.currentunit.bookItem;
             UICustomTabsController CTC = __instance.multiDeckLayout.transform.GetChild(0).GetComponent<UICustomTabsController>();
@@ -90,7 +90,7 @@ namespace Contingecy_Contract
         }
         [HarmonyPatch(typeof(BookModel),nameof(BookModel.GetOnlyCards))]
         [HarmonyPostfix]
-        static void BookModel_GetOnlyCards(BookModel __instance,ref List<DiceCardXmlInfo> __result)
+        static void PersonalisedOnlyCardForEachDeck(BookModel __instance,ref List<DiceCardXmlInfo> __result)
         {
             if(__instance.ClassInfo.workshopID == "ContingencyConract" && __instance.IsMultiDeck())
             {
@@ -99,25 +99,18 @@ namespace Contingecy_Contract
                     __result = only;
             }
         }
-        [HarmonyPatch(typeof(UIEquipDeckCardList),nameof(UIEquipDeckCardList.OnChangeDeckTab))]
-        [HarmonyPostfix]
-        static void UIEquipDeckCardList_OnChangeDeckTab()
-        {
-            if (modified != -1 && cardListScroll != null)
-                cardListScroll.ApplyFilterAll();
-        }
-        static List<DiceCardXmlInfo> GetDeckOnly(List<DiceCardXmlInfo> __result, int deckIndex)
+        static List<DiceCardXmlInfo> GetDeckOnly(List<DiceCardXmlInfo> __result, int deckIndex) //靠不存在的书页为分割符来分割不同牌库的专有书页
         {
             List<List<DiceCardXmlInfo>> split = new List<List<DiceCardXmlInfo>>();
             List<DiceCardXmlInfo> next = new List<DiceCardXmlInfo>();
-            foreach(DiceCardXmlInfo card in __result)
+            foreach (DiceCardXmlInfo card in __result)
             {
-                if (!card.isError)
+                if (card.id!=Tools.MakeLorId(0))
                     next.Add(card);
                 else
                 {
                     split.Add(next);
-                    next= new List<DiceCardXmlInfo>();
+                    next = new List<DiceCardXmlInfo>();
                 }
             }
             split.Add(next);
@@ -125,6 +118,14 @@ namespace Contingecy_Contract
                 return null;
             return split[deckIndex];
         }
+        [HarmonyPatch(typeof(UIEquipDeckCardList),nameof(UIEquipDeckCardList.OnChangeDeckTab))]
+        [HarmonyPostfix]
+        static void RefreshCardFilterOnChangeDeckTab()
+        {
+            if (modified != -1 && cardListScroll != null)
+                cardListScroll.ApplyFilterAll();
+        }
+        
         static bool EileenCond(BookModel book) => book.ClassInfo._id == 18200000 && book.GetCurrentDeckIndex() == 1;
         static bool OswaldCond(BookModel book) => book.ClassInfo._id == 18500000 && book.GetCurrentDeckIndex() == 2;
         static bool JaeheonCond(BookModel book) => book.ClassInfo._id == 18700000 && book.GetCurrentDeckIndex() == 1;
@@ -132,7 +133,7 @@ namespace Contingecy_Contract
         //static bool EileenCond(int id, int index) => id == 18200000 && index == 1;
         [HarmonyPatch(typeof(UIInvenCardListScroll),nameof(UIInvenCardListScroll.ApplyFilterAll))]
         [HarmonyPostfix]
-        static void UIInvenCardListScroll_ApplyFilterAll(UIInvenCardListScroll __instance)
+        static void SpecialisedCardFilterRuleForDifferentDeck(UIInvenCardListScroll __instance)
         {
             if (cardListScroll == null)
                 cardListScroll = __instance;
@@ -148,19 +149,19 @@ namespace Contingecy_Contract
             __instance._currentCardListForFilter.Clear();
             List<DiceCardItemModel> byDetailFilterUi = __instance.GetCardsByDetailFilterUI(__instance.GetCardBySearchFilterUI(__instance.GetCardsByCostFilterUI(__instance.GetCardsByGradeFilterUI(__instance._originCardList))));
             byDetailFilterUi.Sort(ModCardItemSort);
-            Predicate<DiceCardItemModel> cond1 = x => true;
+            Predicate<DiceCardItemModel> rangeSpec = x => true;
             if (book.ClassInfo._id == 18200000)
-                cond1 = x => x.GetSpec().Ranged != CardRange.Far;
+                rangeSpec = x => x.GetSpec().Ranged != CardRange.Far;
             else if (book.ClassInfo._id == 18500000)
-                cond1 = x => x.GetSpec().Ranged != CardRange.Near;
+                rangeSpec = x => x.GetSpec().Ranged != CardRange.Near;
             else if (book.ClassInfo._id == 18700000)
-                cond1 = x => !x.GetBehaviourList().Exists(y => y.Type != BehaviourType.Standby);
+                rangeSpec = x => !x.GetBehaviourList().Exists(y => y.Type != BehaviourType.Standby);
             List<DiceCardXmlInfo> onlyCards = book.GetOnlyCards();
-            Predicate<DiceCardItemModel> cond2 = x => onlyCards.Exists(y => y.id == x.GetID());
-            foreach (DiceCardItemModel diceCardItemModel in byDetailFilterUi.FindAll(x => x.ClassInfo.optionList.Contains(CardOption.OnlyPage) && !cond2(x)))
+            Predicate<DiceCardItemModel> onlyPage = x => onlyCards.Exists(y => y.id == x.GetID());
+            foreach (DiceCardItemModel diceCardItemModel in byDetailFilterUi.FindAll(x => x.ClassInfo.optionList.Contains(CardOption.OnlyPage) && !onlyPage(x)))
                 byDetailFilterUi.Remove(diceCardItemModel);
-            __instance._currentCardListForFilter.AddRange(byDetailFilterUi.FindAll(x => !x.ClassInfo.optionList.Contains(CardOption.OnlyPage) ? cond1(x) : cond2(x)));
-            __instance._currentCardListForFilter.AddRange(byDetailFilterUi.FindAll(x => (x.ClassInfo.optionList.Contains(CardOption.OnlyPage) ? (cond2(x) ? 1 : 0) : (cond1(x) ? 1 : 0)) == 0));
+            __instance._currentCardListForFilter.AddRange(byDetailFilterUi.FindAll(x => !x.ClassInfo.optionList.Contains(CardOption.OnlyPage) ? rangeSpec(x) : onlyPage(x)));
+            __instance._currentCardListForFilter.AddRange(byDetailFilterUi.FindAll(x => (x.ClassInfo.optionList.Contains(CardOption.OnlyPage) ? (onlyPage(x) ? 1 : 0) : (rangeSpec(x) ? 1 : 0)) == 0));
             __instance.scrollBar.SetScrollRectSize(__instance.column * __instance.slotWidth, (__instance.GetMaxRow() + __instance.row - 1) * __instance.slotHeight);
             __instance.scrollBar.SetWindowPosition(0.0f, 0.0f);
             __instance.selectablePanel.ChildSelectable = __instance.slotList[0].selectable;
@@ -194,7 +195,7 @@ namespace Contingecy_Contract
         }
         [HarmonyPatch(typeof(UIInvenCardSlot),nameof(UIInvenCardSlot.SetSlotState))]
         [HarmonyPostfix]
-        static void UIInvenCardSlot_SetSlotState(UIInvenCardSlot __instance)
+        static void SpecialisedCardAppearanceForDifferentDeck(UIInvenCardSlot __instance)
         {
             UnitDataModel currentUnit = UC.Instance.CurrentUnit;
             if (currentUnit != null)
@@ -265,7 +266,7 @@ namespace Contingecy_Contract
         }
         [HarmonyPatch(typeof(BookModel),nameof(BookModel.AddCardFromInventoryToCurrentDeck))]
         [HarmonyPostfix]
-        static void BookModel_AddCardFromInventoryToCurrentDeck(LorId cardId, BookModel __instance,ref CardEquipState __result)
+        static void DifferentCardEquipRuleState(LorId cardId, BookModel __instance,ref CardEquipState __result)
         {
             if (__instance.ClassInfo.workshopID != "ContingencyConract")
                 return;

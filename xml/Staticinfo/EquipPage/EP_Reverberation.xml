@@ -32,7 +32,7 @@
 				<OnlyCard>18000006</OnlyCard>
 				<OnlyCard>18000007</OnlyCard>
     		</EquipEffect>
-    		<BookIcon>ContingencyReward</BookIcon>
+    		<BookIcon>EnsembleReward</BookIcon>
     		<Chapter>7</Chapter>
     		<Episode>1800007</Episode>
     		<Rarity>Unique</Rarity>
@@ -73,7 +73,7 @@
 				<OnlyCard>18100014</OnlyCard>
 				<OnlyCard>18100015</OnlyCard>
     		</EquipEffect>
-    		<BookIcon>ContingencyReward</BookIcon>
+    		<BookIcon>EnsembleReward</BookIcon>
     		<Chapter>7</Chapter>
     		<Episode>1800007</Episode>
     		<Rarity>Unique</Rarity>
@@ -106,9 +106,8 @@
 				<OnlyCard>18200001</OnlyCard>
 				<OnlyCard>18200002</OnlyCard>
 				<OnlyCard>18200003</OnlyCard>
-				<OnlyCard>0</OnlyCard>
     		</EquipEffect>
-    		<BookIcon>ContingencyReward</BookIcon>
+    		<BookIcon>EnsembleReward</BookIcon>
     		<Chapter>7</Chapter>
     		<Episode>1800007</Episode>
     		<Rarity>Unique</Rarity>
@@ -136,7 +135,7 @@
       			<Passive Pid="@origin">250114</Passive>
       			<Passive Pid="@origin">250214</Passive>
     		</EquipEffect>
-    		<BookIcon>ContingencyReward</BookIcon>
+    		<BookIcon>EnsembleReward</BookIcon>
     		<Chapter>7</Chapter>
     		<Episode>1800007</Episode>
     		<Rarity>Unique</Rarity>
@@ -172,7 +171,7 @@
 				<OnlyCard>18300006</OnlyCard>
 				<OnlyCard>18300007</OnlyCard>
     		</EquipEffect>
-    		<BookIcon>ContingencyReward</BookIcon>
+    		<BookIcon>EnsembleReward</BookIcon>
     		<Chapter>7</Chapter>
     		<Episode>1800007</Episode>
     		<Rarity>Unique</Rarity>
@@ -206,7 +205,7 @@
 				<OnlyCard>18400004</OnlyCard>
 				<OnlyCard>18400005</OnlyCard>
     		</EquipEffect>
-    		<BookIcon>ContingencyReward</BookIcon>
+    		<BookIcon>EnsembleReward</BookIcon>
     		<Chapter>7</Chapter>
     		<Episode>1800007</Episode>
     		<Rarity>Unique</Rarity>
@@ -253,7 +252,7 @@
 				<OnlyCard>18500024</OnlyCard>
 				<OnlyCard>18500025</OnlyCard>
     		</EquipEffect>
-    		<BookIcon>ContingencyReward</BookIcon>
+    		<BookIcon>EnsembleReward</BookIcon>
     		<Chapter>7</Chapter>
     		<Episode>1800007</Episode>
     		<Rarity>Unique</Rarity>
@@ -278,7 +277,7 @@
 				<StartPlayPoint>4</StartPlayPoint>
 				<MaxPlayPoint>4</MaxPlayPoint>
 			</EquipEffect>
-			<BookIcon>ContingencyReward</BookIcon>
+			<BookIcon>EnsembleReward</BookIcon>
     		<Chapter>7</Chapter>
     		<Episode>1800007</Episode>
 			<Rarity>Unique</Rarity>
@@ -303,7 +302,7 @@
 			<StartPlayPoint>4</StartPlayPoint>
 			<MaxPlayPoint>4</MaxPlayPoint>
 			</EquipEffect>
-			<BookIcon>ContingencyReward</BookIcon>
+			<BookIcon>EnsembleReward</BookIcon>
     		<Chapter>7</Chapter>
     		<Episode>1800007</Episode>
 			<Rarity>Unique</Rarity>
@@ -336,7 +335,7 @@
 				<OnlyCard>18600004</OnlyCard>
 				<OnlyCard>18600005</OnlyCard>
     		</EquipEffect>
-    		<BookIcon>ContingencyReward</BookIcon>
+    		<BookIcon>EnsembleReward</BookIcon>
     		<Chapter>7</Chapter>
     		<Episode>1800007</Episode>
     		<Rarity>Unique</Rarity>
@@ -383,7 +382,7 @@
 				<OnlyCard>18700032</OnlyCard>
 				<OnlyCard>18700033</OnlyCard>
     		</EquipEffect>
-    		<BookIcon>ContingencyReward</BookIcon>
+    		<BookIcon>EnsembleReward</BookIcon>
     		<Chapter>7</Chapter>
     		<Episode>1800007</Episode>
     		<Rarity>Unique</Rarity>
@@ -412,7 +411,7 @@
       			<Passive>1870102</Passive>
       			<Passive>1870103</Passive>
     		</EquipEffect>
-    		<BookIcon>ContingencyReward</BookIcon>
+    		<BookIcon>EnsembleReward</BookIcon>
     		<Chapter>7</Chapter>
     		<Episode>1800007</Episode>
     		<Rarity>Rare</Rarity>
@@ -446,7 +445,7 @@
 			<OnlyCard>18800004</OnlyCard>
 			<OnlyCard>18800005</OnlyCard>
     	</EquipEffect>
-    	<BookIcon>ContingencyReward</BookIcon>
+    	<BookIcon>EnsembleReward</BookIcon>
     	<Chapter>7</Chapter>
     	<Episode>1800007</Episode>
     	<Rarity>Unique</Rarity>
@@ -478,7 +477,7 @@
 			<OnlyCard>18810004</OnlyCard>
 			<OnlyCard>18810005</OnlyCard>
     	</EquipEffect>
-    	<BookIcon>ContingencyReward</BookIcon>
+    	<BookIcon>EnsembleReward</BookIcon>
     	<Chapter>7</Chapter>
     	<Episode>1800007</Episode>
     	<Rarity>Unique</Rarity>
@@ -513,7 +512,7 @@
 				<OnlyCard>18900004</OnlyCard>
 				<OnlyCard>18900006</OnlyCard>
     		</EquipEffect>
-    		<BookIcon>ContingencyReward</BookIcon>
+    		<BookIcon>EnsembleReward</BookIcon>
     		<Chapter>7</Chapter>
     		<Episode>1800007</Episode>
     		<Rarity>Unique</Rarity>

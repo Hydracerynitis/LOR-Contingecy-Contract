@@ -12,15 +12,15 @@ namespace ContractReward
     {
         BattleUnitModel Roland;
         UnitKit original;
-        public PassiveAbility_1701032()
+        public override void Init(BattleUnitModel self)
         {
-        }
-        public PassiveAbility_1701032(BattleUnitModel unit, BattleUnitModel r, UnitKit o)
-        {
-            this.owner = unit;
+            base.Init(self);
             this.name = Singleton<PassiveDescXmlList>.Instance.GetName(Tools.MakeLorId(1701032));
             this.desc = Singleton<PassiveDescXmlList>.Instance.GetDesc(Tools.MakeLorId(1701032));
             this.rare = Rarity.Unique;
+        }
+        public void Setup(BattleUnitModel r, UnitKit o)
+        {
             Roland = r;
             original = o;
         }
@@ -54,6 +54,7 @@ namespace ContractReward
                 owner.view.charAppearance.ChangeMotion(ActionDetail.Damaged);
                 owner.bufListDetail.AddKeywordBufByEtc(KeywordBuf.Strength, 2);
                 owner.bufListDetail.AddKeywordBufByEtc(KeywordBuf.Endurance, 2);
+                owner.bufListDetail.RemoveBufAll(typeof(BattleUnitBuf_SoulLink));
             }
         }
     }

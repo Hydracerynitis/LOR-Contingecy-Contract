@@ -200,12 +200,12 @@
                 {
                     "language":"cn",
                     "name":"激情感染",
-                    "desc":"不来梅存活时,除不来梅外友方单位死亡后第2幕会复活,复活单位的情感等级提升至不来梅情感等级.\n除不来梅其他友方单位获得{0}并且使用书页获得“强壮”,“忍耐”,“敏捷”,“守护”时使随机友方单位获得相同效果(每一幕至多触发{1}次)"
+                    "desc":"不来梅存活时,除不来梅外友方单位死亡后第2幕会复活,\n复活单位的情感等级提升至不来梅情感等级.\n除不来梅其他友方单位获得{0}并且使用书页\n获得“强壮”,“忍耐”,“敏捷”,“守护”时使随机友方单位获得相同效果(每一幕至多触发{1}次)"
                 },
                 {
                     "language":"en",
                     "name":"Influence with Passion",
-                    "desc":"Allies except Bremen will be revived with Bremen's Emotion Level 2 Scene after their death as long as Bremen is alive.\nBremen's allies gain {0};\nWhen gaining Strength, Endurance, Haste, or Protection through Combat Pages,\ngive the same status effect to a random other ally\n(At most {1} times per Scene)."
+                    "desc":"Allies except Bremen will be revived with Bremen's Emotion Level\n 2 Scene after their death as long as Bremen is alive.\nBremen's allies gain {0};\nWhen gaining Strength, Endurance, Haste, or Protection through Combat Pages,\ngive the same status effect to a random other ally\n(At most {1} times per Scene)."
                 }
             ],
             "Faction":0,

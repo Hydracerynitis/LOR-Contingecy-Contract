@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <RewardCondition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Reward id="15100000">Get by Completing The Shi Association reception at Risk Level 24 or more.</Reward>
 	<Reward id="18100000">Get by Completing The Crying Children (Reverberation) reception at Risk Level 16 or more.</Reward>
 	<Reward id="18200000">Get by Completing The Church of Gear reception at Risk Level 16 or more.</Reward>
 	<Reward id="18300000">Get by Completing The Eighth Chef reception at Risk Level 16 or more.</Reward>

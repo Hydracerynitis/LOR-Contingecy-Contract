@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleCardDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	 <cardDescList>
+		<!--柳真-->
+		<BattleCardDesc ID="15100001">
+			<LocalizedName>生死分界</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="15100002">
+			<LocalizedName>极意之剑</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="15100003">
+			<LocalizedName>闪瞬背刺</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="15100004">
+			<LocalizedName>飞剑断招</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="15100005">
+			<LocalizedName>近距打量</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="15100006">
+			<LocalizedName>佯攻</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="15100007">
+			<LocalizedName>消减攻势</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="15100011">
+			<LocalizedName>正面迎敌</LocalizedName>
+		</BattleCardDesc>
+ 	</cardDescList>
+</BattleCardDescRoot>

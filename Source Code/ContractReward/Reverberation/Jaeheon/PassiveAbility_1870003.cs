@@ -6,18 +6,22 @@ using LOR_DiceSystem;
 using System.Text;
 using System.Threading.Tasks;
 using BaseMod;
+using static UnityEngine.UI.CanvasScaler;
 
 namespace ContractReward
 {
     public class PassiveAbility_1870003: PassiveAbilityBase
     {
-        private readonly BattleUnitModel Angelica;
-        public PassiveAbility_1870003(BattleUnitModel unit,BattleUnitModel angelica)
+        private BattleUnitModel Angelica;
+        public override void Init(BattleUnitModel self)
         {
-            this.owner = unit;
+            base.Init(self);
             this.name = Singleton<PassiveDescXmlList>.Instance.GetName(Tools.MakeLorId(1870003));
             this.desc = Singleton<PassiveDescXmlList>.Instance.GetDesc(Tools.MakeLorId(1870003));
             this.rare = Rarity.Unique;
+        }
+        public void SetAngelica(BattleUnitModel angelica)
+        {
             Angelica = angelica;
         }
         public override void BeforeRollDice(BattleDiceBehavior behavior)

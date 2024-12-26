@@ -93,7 +93,7 @@ namespace Contingecy_Contract
         {
             if (PassiveList.Contains(contract))
             {
-                if (contract.Stageid != -1 && info.id != contract.Stageid)
+                if (contract.Stageid != -1 && info.id != new LorId(contract.Pid, contract.Stageid))
                     return false;
                 return true;
             }
@@ -112,16 +112,14 @@ namespace Contingecy_Contract
         }
         public int GetLevel(StageClassInfo info)
         {
-            int i = 0;
-            int b = 0;
+            int allLevel = 0;
             if (PassiveList.Count > 0)
             {
                 foreach (Contract contract in PassiveList)
                 {
                     if (CheckActivate(contract, info))
                     {
-                        i += contract.Level;
-                        b += contract.Bonus;
+                        allLevel += contract.Level;
                     }
                     continue;
                 }
@@ -132,15 +130,12 @@ namespace Contingecy_Contract
                 {
                     if (CheckActivate(contract, info))
                     {
-                        i += contract.Level;
-                        b += contract.Bonus;
+                        allLevel += contract.Level;
                     }
                     continue;
                 }
             }
-            Debug.Log("Base Level: {0}", i.ToString());
-            Debug.Log("Base Bonus: {0}", b.ToString());
-            return (int)Math.Floor(i * (1 + b * 0.01));
+            return allLevel;
         }
         public int GetLevel(LorId id)
         {

@@ -13,7 +13,7 @@ namespace ContractReward
     {
         public override bool OnChooseCard(BattleUnitModel owner)
         {
-            return BattleObjectManager.instance.GetFriendlyAllList(owner.faction).Find(x => x.IsDead()==true)!=null;
+            return BattleObjectManager.instance.GetFriendlyAllList(owner.faction).Exists(x => x.IsDead()==true && x.UnitData.unitData.EnemyUnitId == LorId.None);
         }
         public override void OnUseInstance(BattleUnitModel unit, BattleDiceCardModel self, BattleUnitModel targetUnit)
         {

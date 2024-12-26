@@ -50,8 +50,7 @@
             ],
             "Faction":1,
             "Variation":3,
-            "BonusBaseLevel":-10,
-            "BonusStep":20
+            "BaseLevel":1
         },
         {
             "Type":"Hp_L",
@@ -103,10 +102,8 @@
             ],
             "Faction":1,
             "Variation":4,
-            "BaseLevel":1,
-            "Step":0,
-            "BonusBaseLevel":-10,
-            "BonusStep":15
+            "BaseLevel":-1,
+            "Step":2
         },
         {
             "Type":"NoBuff",
@@ -123,8 +120,7 @@
                 }
             ],
             "Faction":1,
-            "BaseLevel":2,
-            "BonusBaseLevel":50
+            "BaseLevel":4
         },
         {
             "Type":"NoEGO",
@@ -159,10 +155,8 @@
             ],
             "Faction":1,
             "Variation":3,
-            "BaseLevel":2,
-            "Step":0,
-            "BonusBaseLevel":-30,
-            "BonusStep":30
+            "BaseLevel":-1,
+            "Step":3
         }
     ]
 }

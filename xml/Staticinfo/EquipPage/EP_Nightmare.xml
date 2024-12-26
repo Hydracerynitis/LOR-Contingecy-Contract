@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<BookXmlRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  	<Book ID="15100000">
+    	<Name>柳真</Name>
+   		<TextId>15100000</TextId>
+    	<EquipEffect>
+      	    <HP>348</HP>
+      		<Break>62</Break>
+      		<SpeedMin>2</SpeedMin>
+      		<Speed>7</Speed>
+      		<SResist>Normal</SResist>
+            <PResist>Endure</PResist>
+            <HResist>Normal</HResist>
+            <SBResist>Normal</SBResist>
+            <PBResist>Normal</PBResist>
+            <HBResist>Endure</HBResist>
+      		<StartPlayPoint>4</StartPlayPoint>
+      		<MaxPlayPoint>4</MaxPlayPoint>
+      		<Passive Pid="@origin">10004</Passive>
+            <Passive>1510001</Passive>
+      		<Passive>1510002</Passive>
+			<Passive>1510003</Passive>
+			<Passive>1510004</Passive>
+			<OnlyCard>15100001</OnlyCard>
+			<OnlyCard>15100002</OnlyCard>
+			<OnlyCard>15100003</OnlyCard>
+			<OnlyCard>15100004</OnlyCard>
+			<OnlyCard>15100005</OnlyCard>
+			<OnlyCard>15100006</OnlyCard>
+			<OnlyCard>15100007</OnlyCard>
+    	</EquipEffect>
+    	<BookIcon>ShiReward</BookIcon>
+    	<Chapter>5</Chapter>
+    	<Episode>1800005</Episode>
+    	<Rarity>Unique</Rarity>
+    	<CharacterSkin>Yujin</CharacterSkin>
+ 	 </Book>
+</BookXmlRoot>

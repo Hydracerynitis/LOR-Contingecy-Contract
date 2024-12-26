@@ -1,0 +1,25 @@
+{
+    "Ps":[
+        {
+            "Id":"SpeedDice_param1",
+            "Desc":[
+                {"Language":"cn","Content":"2"},
+                {"Language":"en","Content":"2 speed dice"}
+            ]
+        },
+        {
+            "Id":"SpeedDice_param2",
+            "Desc":[
+                {"Language":"cn","Content":"2,情感等级到3时至少为3"},
+                {"Language":"en","Content":"2 speed dice, 3 speed dice if their Emotion Level has reached 3"}
+            ]
+        },
+        {
+            "Id":"SpeedDice_param3",
+            "Desc":[
+                {"Language":"cn","Content":"3"},
+                {"Language":"en","Content":"3 speed dice"}
+            ]
+        }
+    ]
+}

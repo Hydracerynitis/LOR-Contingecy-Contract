@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PassiveXmlRoot>
+	<!--Yujin-->
+	<Passive ID="1510001">
+		<Rarity>Unique</Rarity>
+    		<CanGivePassive>false</CanGivePassive>
+		<Cost>6</Cost>
+  	</Passive>
+	<Passive ID="1510002">
+		<Rarity>Unique</Rarity>
+    		<CanGivePassive>false</CanGivePassive>
+		<Cost>3</Cost>
+  	</Passive>
+	<Passive ID="1510003">
+		<Rarity>Unique</Rarity>
+    		<CanGivePassive>false</CanGivePassive>
+		<Cost>3</Cost>
+  	</Passive>
+	<Passive ID="1510004">
+		<Rarity>Uncommon</Rarity>
+    		<CanGivePassive>false</CanGivePassive>
+		<Cost>2</Cost>
+  	</Passive>
+
+</PassiveXmlRoot>

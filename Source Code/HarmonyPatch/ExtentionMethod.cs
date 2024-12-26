@@ -8,15 +8,15 @@ namespace Contingecy_Contract
 {
     static class ExtentionMethod
     {
-        public static List<BattlePlayingCardDataInUnitModel> triggeredCard = new List<BattlePlayingCardDataInUnitModel>();
+        public static List<BattlePlayingCardDataInUnitModel> triggeredTagTeamCard = new List<BattlePlayingCardDataInUnitModel>();
         public static void TriggerTagTeam(this TagTeam ability, Faction f, LorId targetCard)
         {
             foreach (BattleUnitModel unit in BattleObjectManager.instance.GetAliveList(f))
             {
-                if (unit.cardSlotDetail.cardAry.Find(x => x != null && x.card.GetID() == targetCard && !triggeredCard.Contains(x)) is BattlePlayingCardDataInUnitModel page)
+                if (unit.cardSlotDetail.cardAry.Find(x => x != null && x.card.GetID() == targetCard && !triggeredTagTeamCard.Contains(x)) is BattlePlayingCardDataInUnitModel page)
                 {
                     ability.TagTeamEffect(unit);
-                    triggeredCard.Add(page);
+                    triggeredTagTeamCard.Add(page);
                     return;
                 }
             }

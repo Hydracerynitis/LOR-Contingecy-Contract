@@ -41,7 +41,7 @@ Become more vulnerable to damage when 'Overheated'.</Desc>
 	<!--艾琳-->
 	<PassiveDesc ID="1820001">
 		<Name>Meat Gear: Production</Name> 
-		<Desc>At the start of the Act, Summon and Commond 2 Gear Worshipper units. Gear Worshippers will have decks from "Meat Gear" and independent stats.
+		<Desc>At the start of the Act, Summon and Commond 2 Gear Worshipper units. Gear Worshippers will have editable decks and independent stats.
 Take Stagger Damage equal to 15% of Max Stagger Resist when one of the Gear Worshippers die.
 Revive a Gear Worshipper after 2 scenes.</Desc>
 	</PassiveDesc>
@@ -110,7 +110,7 @@ At the start of the Scene: give 2 Strength, 2 Endurance, and 3 Protection to the
   	</PassiveDesc>
   	<PassiveDesc ID="1850003">
     	<Name>Collaborative Performance</Name>
-		<Desc>Able to choose summon Mr. Knife or Ms. Mermaid. Mr. Knife and Mrs. Mermaid will use their respective decks. (Once per Act)</Desc>
+		<Desc>Able to choose summon Mr. Knife or Ms. Mermaid. Mr. Knife and Mrs. Mermaid will use their editable decks. (Once per Act)</Desc>
   	</PassiveDesc>
 	<PassiveDesc ID="1850011">
     	<Name>T'was a Joy to Perform by Your Side…!</Name>

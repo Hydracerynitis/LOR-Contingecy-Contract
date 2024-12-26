@@ -250,5 +250,20 @@ namespace Contingecy_Contract
         {
             return new StatBonus() {hpAdder=300 };
         }
+        public class Enhanced_Passive_170003 : PassiveAbilityBase
+        {
+            public override void Init(BattleUnitModel self)
+            {
+                base.Init(self);
+                name = PassiveDescXmlList.Instance.GetName(Tools.MakeLorId(2));
+                desc = PassiveDescXmlList.Instance.GetDesc(Tools.MakeLorId(2));
+                rare = Rarity.Unique;
+            }
+            public override void OnSucceedAttack(BattleDiceBehavior behavior)
+            {
+                this.owner.breakDetail.RecoverBreak(10);
+                this.owner?.battleCardResultLog?.SetPassiveAbility(this);
+            }
+        }
     }
 }

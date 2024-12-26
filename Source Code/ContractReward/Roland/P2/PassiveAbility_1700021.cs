@@ -39,7 +39,9 @@ namespace ContractReward
                 if (unit.faction != owner.faction)
                     xml.vector.x = -xml.vector.x;
                 byproduct.formation = new FormationPosition(xml);
-                byproduct.passiveDetail._passiveList.Insert(0, new PassiveAbility_1700000(byproduct));
+                PassiveAbilityBase rolandPassive = new PassiveAbility_1700000();
+                rolandPassive.Init(byproduct);
+                byproduct.passiveDetail._passiveList.Insert(0, rolandPassive);
                 byproduct.bufListDetail.AddBuf(new Unctrollable());
                 byproduct.moveDetail.ReturnToFormationByBlink();
                 owner.LoseHp(15);

@@ -16,16 +16,17 @@ namespace Contingecy_Contract
     public class ContractBluePrint
     {
         public string Type;
-        public List<ContractDesc> desc;
+        public List<ContractDesc> desc = new List<ContractDesc>();
         public ContractXmlType contractType = ContractXmlType.Passive;
         public Faction Faction;
         public int Variation = 0;
         public int BaseLevel = 0;
         public int Step = 1;
-        public int BonusBaseLevel = 0;
-        public int BonusStep = 0;
+        public string Pid = "";
         public int Stageid = -1;
+
         public List<string> Conflict = new List<string>();
+
     }
     public class Contract
     {
@@ -35,8 +36,8 @@ namespace Contingecy_Contract
         public ContractXmlType contractType = ContractXmlType.Passive;
         public Faction Faction;
         public int Level = 0;
-        public int Bonus = 1;
         public int Stageid = -1;
+        public string Pid = "";
         public List<string> Conflict = new List<string>();
         public StageModifier modifier;
         public string Id => Variant == 0 ? Type : Type + Variant.ToString();

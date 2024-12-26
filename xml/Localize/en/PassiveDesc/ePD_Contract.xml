@@ -12,4 +12,8 @@
         <Name>Clenched Grudge</Name>
         <Desc>Recover 10 Stagger Resist on hit.</Desc>
     </PassiveDesc>
+    <PassiveDesc ID="3">
+        <Name>Kizuna</Name>
+        <Desc>After an ally dies, gain 1 Strength, 1 Endurance, 3 Protection and 3 Break Protection each Scene for the rest of the Act. (Stacks up to two times).</Desc>
+    </PassiveDesc>
 </PassiveDescRoot>

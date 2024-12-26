@@ -26,8 +26,10 @@ namespace Contingecy_Contract
 		public static GameObject CCItemViewport;
 		//主界面
 		public static GameObject CCGUI_Background;
-		//更新贴图
-		private static Image img_background;
+        //描述
+        public static GameObject DescUI;
+        //更新贴图
+        private static Image img_background;
 		private static Image img_CCLevel;
 		private static List<CCLevelUGUI> listeners = new List<CCLevelUGUI>();
 		public static InputField search;
@@ -89,9 +91,16 @@ namespace Contingecy_Contract
 		public void Start()
 		{
 		}
-		public void Update()
+        private bool IsBattleSetting()
+        {
+			if (UI.UIController.Instance == null)
+				return true;
+            UIPhase CurrentPhase = UI.UIController.Instance.CurrentUIPhase;
+            return CurrentPhase == UIPhase.DUMMY || CurrentPhase == UIPhase.BattleSetting || CurrentPhase == UIPhase.Sepiroth;
+        }
+        public void Update()
 		{
-			if (UI.UIController.Instance!=null && (UI.UIController.Instance.CurrentUIPhase == UIPhase.Invitation || UI.UIController.Instance.CurrentUIPhase == UIPhase.Sephirah) && !UIPopupWindow.IsOpened())
+			if (!IsBattleSetting() && !UIPopupWindow.IsOpened())
 			{
 				if (Input.GetKeyDown(KeyCode.F9))
 				{
@@ -149,14 +158,11 @@ namespace Contingecy_Contract
         }
 		public void SetGetLevel()
 		{
-			int i = 0;
-			int b = 0;
+            alllevel = 0;
 			foreach (Contract contract in CCManager.OnContract)
 			{
-				i += contract.Level;
-				b += contract.Bonus;
+                alllevel += contract.Level;
 			}
-			alllevel = (int)Math.Floor(i * (1 + b * 0.01));
 			if (AllLevelUI)
 			{
 				AllLevelUI.text = alllevel.ToString();
@@ -230,15 +236,22 @@ namespace Contingecy_Contract
 			inputField.lineType = InputField.LineType.SingleLine;
 			inputField.onValueChanged.AddListener(delegate { CCManager.FilterList(); });
 			search = inputField;
-            //描述栏
-            GameObject desc = new GameObject("NowDesc");
-			Text txt_desc = desc.AddComponent<Text>();
-			desc.transform.SetParent(CCGUI_Background.transform);
+			//描述栏
+			DescUI = new GameObject("DescUI");
+			DescUI.transform.SetParent(CCGUI_Background.transform);
+			DescUI.transform.localPosition = new Vector2(0f, -370f);
+            Image img_desc = DescUI.AddComponent<Image>();
+            img_desc.sprite = BH.ArtWorks["Desc_Background"];
+            img_desc.transform.SetParent(DescUI.transform);
+            img_desc.rectTransform.sizeDelta = new Vector2(960f, 200f);
+
+			GameObject DescText = new GameObject("DescText");
+            DescText.transform.SetParent(DescUI.transform);
+            Text txt_desc = DescText.AddComponent<Text>();
 			txt_desc.rectTransform.sizeDelta = Vector2.zero;
 			txt_desc.rectTransform.anchorMin = new Vector2(0.05f, 0.05f);
 			txt_desc.rectTransform.anchorMax = new Vector2(0.95f, 0.95f);
 			txt_desc.rectTransform.anchoredPosition = new Vector2(0f, 0f);
-			txt_desc.transform.localPosition = new Vector2(-45f, -511f);
 			txt_desc.text = NowDesc;
 			txt_desc.font = DefFont;
 			txt_desc.fontSize = 20;

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <RewardList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Reward id="40001">15100000</Reward>
 	<Reward id="70001">18100000</Reward>
 	<Reward id="70002">18200000</Reward>
 	<Reward id="70003">18300000</Reward>

@@ -50,8 +50,7 @@
             ],
             "Faction":0,
             "Variation":3,
-            "BonusBaseLevel":-10,
-            "BonusStep":20
+            "BaseLevel":1
         },
         {
             "Type":"Hp",
@@ -126,17 +125,36 @@
             "desc":[
                 {
                     "language":"cn",
-                    "name":"急速进军",
+                    "name":"闪电战",
                     "desc":"所有来宾速度骰子数值设为无限大"
                 },
                 {
                     "language":"en",
-                    "name":"Speedy Assault",
+                    "name":"Blitzkrieg",
                     "desc":"Speed dice of all Guests become the highest possible value"
                 }
             ],
             "Faction":0,
             "BaseLevel":3
+        },
+        {
+            "Type":"SpeedDice",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"速战速决",
+                    "desc":"所有来宾速度骰子数量至少为{0}\n每一幕开始时额外抽取1张书页"
+                },
+                {
+                    "language":"en",
+                    "name":"Speedy",
+                    "desc":"All Guests have at least {0}\nAt the start of each Scene, draw 1 Page"
+                }
+            ],
+            "Faction":0,
+            "BaseLevel":3,
+            "Variation":3,
+            "Step":2
         },
         {
             "Type":"Angry",

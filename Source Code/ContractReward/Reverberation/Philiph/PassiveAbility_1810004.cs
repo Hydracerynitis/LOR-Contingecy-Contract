@@ -11,13 +11,13 @@ namespace ContractReward
     public class PassiveAbility_1810004: PassiveAbilityBase
     {
         private Battle.CreatureEffect.CreatureEffect _effect;
-        public PassiveAbility_1810004(BattleUnitModel unit)
+        public override void Init(BattleUnitModel self)
         {
-            this.owner = unit;
+            base.Init(self);
             this.name = Singleton<PassiveDescXmlList>.Instance.GetName(Tools.MakeLorId(1810004));
             this.desc = Singleton<PassiveDescXmlList>.Instance.GetDesc(Tools.MakeLorId(1810004));
             this.rare = Rarity.Unique;
-            this._effect = SingletonBehavior<DiceEffectManager>.Instance.CreateCreatureEffect("Philip/Philip_Aura_Body", 1f, unit.view, unit.view);
+            this._effect = SingletonBehavior<DiceEffectManager>.Instance.CreateCreatureEffect("Philip/Philip_Aura_Body", 1f, self.view, self.view);
         }
         public override void OnSucceedAttack(BattleDiceBehavior behavior)
         {

@@ -7,6 +7,7 @@ using System.Reflection;
 using System.Linq;
 using System.Text;
 using BaseMod;
+using static UnityEngine.UI.CanvasScaler;
 
 namespace ContractReward
 {
@@ -27,7 +28,7 @@ namespace ContractReward
         public void Revive()
         {
             owner.view.speedDiceSetterUI.DeselectAll();
-            List<BattleUnitModel> Dead = BattleObjectManager.instance.GetFriendlyAllList(this.owner.faction).FindAll(x =>x.IsDead()==true);
+            List<BattleUnitModel> Dead = BattleObjectManager.instance.GetFriendlyAllList(this.owner.faction).FindAll(x =>x.IsDead()==true && x.UnitData.unitData.EnemyUnitId == LorId.None);
             Angelica = RandomUtil.SelectOne(Dead);
             BookModel puppet=new BookModel(Singleton<BookXmlList>.Instance.GetData(Tools.MakeLorId(18710000)));
             Contingecy_Contract.CCInitializer.UnitBookId.Add(Angelica, Angelica.Book.GetBookClassInfoId());
@@ -68,10 +69,12 @@ namespace ContractReward
             Angelica.view.StartEgoSkinChangeEffect("Character");
             Angelica.moveDetail.ReturnToFormationByBlink();
             List<PassiveAbilityBase> list1 = Angelica.passiveDetail.PassiveList;
-            list1.Add(new PassiveAbility_1800000(Angelica));
-            list1.Add(new PassiveAbility_1870101(Angelica));
-            list1.Add(new PassiveAbility_1870102(Angelica));
-            list1.Add(new PassiveAbility_1870103(Angelica));
+            list1.Add(new PassiveAbility_1800000());
+            list1.Add(new PassiveAbility_1870101());
+            list1.Add(new PassiveAbility_1870102());
+            list1.Add(new PassiveAbility_1870103());
+            foreach (PassiveAbilityBase angelicaPassive in list1)
+                angelicaPassive.Init(Angelica);
             Angelica.passiveDetail._passiveList = list1;
             Contingecy_Contract.ContractAttribution.Inition.Remove(Angelica);
             Contingecy_Contract.ContractAttribution.Init(Angelica);
@@ -86,7 +89,9 @@ namespace ContractReward
             this.owner.allyCardDetail.DrawCards(4);
             List<PassiveAbilityBase> list2 = this.owner.passiveDetail.PassiveList;
             PassiveAbilityBase active = list2.Find(x => x is PassiveAbility_1870002);
-            PassiveAbilityBase passive = new PassiveAbility_1870003(this.owner,Angelica);
+            PassiveAbility_1870003 passive = new PassiveAbility_1870003();
+            passive.Init(owner);
+            passive.SetAngelica(Angelica);
             list2.Remove(active);
             list2.Add(passive);
             owner.passiveDetail._passiveList= list2;
@@ -116,7 +121,9 @@ namespace ContractReward
             this.owner.allyCardDetail.DrawCards(4);
             List<PassiveAbilityBase> list = this.owner.passiveDetail.PassiveList;
             PassiveAbilityBase active = list.Find(x => x is PassiveAbility_1870002);
-            PassiveAbilityBase passive = new PassiveAbility_1870003(owner,Angelica);
+            PassiveAbility_1870003 passive = new PassiveAbility_1870003();
+            passive.Init(owner);
+            passive.SetAngelica(Angelica);
             list.Remove(active);
             list.Add(passive);
             owner.passiveDetail._passiveList = list;

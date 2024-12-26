@@ -9,9 +9,9 @@ namespace ContractReward
 {
     public class PassiveAbility_1870102: PassiveAbilityBase
     {
-        public PassiveAbility_1870102(BattleUnitModel unit)
+        public override void Init(BattleUnitModel self)
         {
-            this.owner = unit;
+            base.Init(self);
             this.name = Singleton<PassiveDescXmlList>.Instance.GetName(Tools.MakeLorId(1870102));
             this.desc = Singleton<PassiveDescXmlList>.Instance.GetDesc(Tools.MakeLorId(1870102));
             this.rare = Rarity.Rare;

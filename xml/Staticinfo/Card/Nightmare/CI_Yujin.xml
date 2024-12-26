@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Card ID="15100001">
+		<Name>生死分界</Name>
+		<Artwork>Shi1</Artwork>
+		<Rarity>Unique</Rarity>
+		<Option>OnlyPage</Option>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
+		<Spec Range="Near" Cost="3" />
+		<Script/>
+		<ScriptDesc/>
+		<BehaviourList>
+		<Behaviour Min="12" Dice="20" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="Shi_H" Script="newYujin" ActionScript="newborderof4" Desc="" />
+		</BehaviourList>
+		<Chapter>5</Chapter>
+		<Priority>2</Priority>
+		<SortPriority>1</SortPriority>
+	</Card>
+	<Card ID="15100002">
+		<Name>极意之剑</Name>
+		<Artwork>Shi2</Artwork>
+		<Rarity>Rare</Rarity>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
+		<Spec Range="Near" Cost="2" />
+		<Script></Script>
+		<ScriptDesc />
+		<BehaviourList>
+		<Behaviour Min="9" Dice="15" Type="Atk" Detail="Slash" Motion="J" EffectRes="Shi_J" Script="shiDestroy" Desc="" />
+		</BehaviourList>
+		<Chapter>5</Chapter>
+		<Priority>0</Priority>
+	</Card>
+	<Card ID="15100003">
+		<Name>闪瞬背刺</Name>
+		<Artwork>Shi3</Artwork>
+		<Rarity>Rare</Rarity>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
+		<Spec Range="Near" Cost="3" />
+		<Script>SpeedMin</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+		<Behaviour Min="3" Dice="11" Type="Atk" Detail="Slash" Motion="H" EffectRes="Tenma_H" Script="" Desc="" />
+		<Behaviour Min="3" Dice="10" Type="Atk" Detail="Slash" Motion="H" EffectRes="Tenma_H" Script="" Desc="" />
+		<Behaviour Min="4" Dice="9" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" Desc="" />
+		</BehaviourList>
+		<Chapter>5</Chapter>
+		<Priority>0</Priority>
+	</Card>
+	<Card ID="15100004">
+		<Name>飞剑断招</Name>
+		<Artwork>Shi4</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
+		<Spec Range="Near" Cost="1" />
+		<Script>quickness2</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+		<Behaviour Min="2" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="Tenma_J" Script="" Desc="" />
+		<Behaviour Min="3" Dice="9" Type="Atk" Detail="Slash" Motion="Z" EffectRes="Shi_Z" Script="shiStagger" Desc="" />
+		</BehaviourList>
+		<Chapter>5</Chapter>
+		<Priority>0</Priority>
+	</Card>
+	<Card ID="15100005">
+		<Name>近距打量</Name>
+		<Artwork>Shi5</Artwork>
+		<Rarity>Common</Rarity>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
+		<Spec Range="Near" Cost="2" />
+		<Script></Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+		<Behaviour Min="5" Dice="10" Type="Def" Detail="Guard" Motion="G" EffectRes="Shi_G" Script="FocusClash" Desc="" />
+		<Behaviour Min="3" Dice="8" Type="Atk" Detail="Hit" Motion="H" EffectRes="Shi_H" Script="" Desc="" />
+		<Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="Shi_J" Script="" Desc="" />
+		</BehaviourList>
+		<Chapter>5</Chapter>
+		<Priority>0</Priority>
+	</Card>
+	<Card ID="15100006">
+		<Name>佯攻</Name>
+		<Artwork>Shi6</Artwork>
+		<Rarity>Common</Rarity>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
+		<Spec Range="Near" Cost="1" />
+		<Script>clashDefense</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+		<Behaviour Min="4" Dice="7" Type="Atk" Detail="Slash" Motion="H" EffectRes="Shi_H" Script="" Desc="" />
+		<Behaviour Min="3" Dice="7" Type="Atk" Detail="Slash" Motion="J" EffectRes="Shi_J" Script="" Desc="" />
+		</BehaviourList>
+		<Chapter>5</Chapter>
+		<Priority>0</Priority>
+	</Card>
+	<Card ID="15100007">
+		<Name>消减攻势</Name>
+		<Artwork>Shi7</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
+		<Spec Range="Near" Cost="0" />
+		<Script>drawCard</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+		<Behaviour Min="3" Dice="8" Type="Atk" Detail="Slash" Motion="Z" EffectRes="Shi_Z" Script="weak1atk" Desc="" />
+		</BehaviourList>
+		<Chapter>5</Chapter>
+		<Priority>0</Priority>
+	</Card>
+    <Card ID="15100011">
+		<Name>正面迎敌</Name>
+		<Artwork>Shi7</Artwork>
+		<Rarity>Common</Rarity>
+		<!-- <Option>OnlyPage</Option>
+		<Option>Basic</Option> -->
+		<Spec Range="Near" Cost="0" />
+		<Script></Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="3" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="Shi_G" Script="" Desc="" />
+		</BehaviourList>
+		<Chapter>5</Chapter>
+		<Priority>0</Priority>
+  	</Card>
+</DiceCardXmlRoot>

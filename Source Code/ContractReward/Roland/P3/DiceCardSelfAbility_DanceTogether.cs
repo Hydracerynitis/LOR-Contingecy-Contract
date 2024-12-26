@@ -12,6 +12,10 @@ namespace ContractReward
         {
             return true;
         }
+        public override bool IsValidTarget(BattleUnitModel unit, BattleDiceCardModel self, BattleUnitModel targetUnit)
+        {
+            return targetUnit.UnitData.unitData.EnemyUnitId==LorId.None;
+        }
         public override void OnUseInstance(BattleUnitModel unit, BattleDiceCardModel self, BattleUnitModel targetUnit)
         {
             base.OnUseInstance(unit, self, targetUnit);

@@ -10,12 +10,9 @@ namespace ContractReward
 {
     public class PassiveAbility_1800000 : PassiveAbilityBase
     {
-        public PassiveAbility_1800000()
+        public override void Init(BattleUnitModel self)
         {
-        }
-        public PassiveAbility_1800000(BattleUnitModel unit)
-        {
-            this.owner = unit;
+            base.Init(self);
             this.name = Singleton<PassiveDescXmlList>.Instance.GetName(Tools.MakeLorId(1800000));
             this.desc = Singleton<PassiveDescXmlList>.Instance.GetDesc(Tools.MakeLorId(1800000));
             this.rare = Rarity.Unique;
@@ -239,24 +236,52 @@ namespace ContractReward
             AudioClip[] synphony = new AudioClip[3] { StaticDataManager.reverberation[0], StaticDataManager.reverberation[0], StaticDataManager.reverberation[0] };
             BattleSoundManager.Instance.SetEnemyTheme(synphony);
             BattleSoundManager.Instance.ChangeEnemyTheme(0);
+            foreach (BattleUnitModel unit in unit)
+            {
+                foreach (int id in new int[] { 102, 103, 104, 105, 106 })
+                    unit.personalEgoDetail.RemoveCard(Tools.MakeLorId(id));
+                foreach (int id in new int[] { 103, 104, 105, 106 })
+                    unit.personalEgoDetail.AddCard(Tools.MakeLorId(id));
+            }      
         }
         public void SwitchChapter2()
         {
             AudioClip[] synphony = new AudioClip[3] { StaticDataManager.reverberation[1], StaticDataManager.reverberation[1], StaticDataManager.reverberation[1] };
             BattleSoundManager.Instance.SetEnemyTheme(synphony);
             BattleSoundManager.Instance.ChangeEnemyTheme(1);
+            foreach (BattleUnitModel unit in unit)
+            {
+                foreach (int id in new int[] { 102, 103, 104, 105, 106 })
+                    unit.personalEgoDetail.RemoveCard(Tools.MakeLorId(id));
+                foreach (int id in new int[] { 102, 104, 105, 106 })
+                    unit.personalEgoDetail.AddCard(Tools.MakeLorId(id));
+            }
         }
         public void SwitchChapter3()
         {
             AudioClip[] synphony = new AudioClip[3] { StaticDataManager.reverberation[2], StaticDataManager.reverberation[2], StaticDataManager.reverberation[2] };
             BattleSoundManager.Instance.SetEnemyTheme(synphony);
             BattleSoundManager.Instance.ChangeEnemyTheme(2);
+            foreach (BattleUnitModel unit in unit)
+            {
+                foreach (int id in new int[] { 102, 103, 104, 105, 106 })
+                    unit.personalEgoDetail.RemoveCard(Tools.MakeLorId(id));
+                foreach (int id in new int[] { 102, 103, 105, 106 })
+                    unit.personalEgoDetail.AddCard(Tools.MakeLorId(id));
+            }
         }
         public void SwitchChapter4()
         {
             AudioClip[] synphony = new AudioClip[3] { StaticDataManager.reverberation[3], StaticDataManager.reverberation[3], StaticDataManager.reverberation[3] };
             BattleSoundManager.Instance.SetEnemyTheme(synphony);
             BattleSoundManager.Instance.ChangeEnemyTheme(0);
+            foreach (BattleUnitModel unit in unit)
+            {
+                foreach (int id in new int[] { 102, 103, 104, 105, 106 })
+                    unit.personalEgoDetail.RemoveCard(Tools.MakeLorId(id));
+                foreach (int id in new int[] { 102, 103, 104, 106 })
+                    unit.personalEgoDetail.AddCard(Tools.MakeLorId(id));
+            }
         }
         public void EndMusic()
         {

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <RewardCondition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Reward id="15100000">在24危机等级或更高的情况下完成し协会接待可获得</Reward>
 	<Reward id="18100000">在16危机等级或更高的情况下完成哭泣之子(残响)接待可获得</Reward>
 	<Reward id="18200000">在16危机等级或更高的情况下完成齿轮教团接待可获得</Reward>
 	<Reward id="18300000">在16危机等级或更高的情况下完成八大主厨接待可获得</Reward>

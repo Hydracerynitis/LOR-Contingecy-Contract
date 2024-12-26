@@ -119,4 +119,28 @@ namespace Contingecy_Contract
             
         }
     }
+    public class ContingecyContract_SpeedDice : ContingecyContract
+    {
+        public ContingecyContract_SpeedDice(int level)
+        {
+            Level = level;
+        }
+        public override string[] GetFormatParam(string language) => new string[] { GetParam(language) };
+        private string GetParam(string language)
+        {
+            string s = "";
+            if (Level >= 1)
+                s = StaticDataManager.GetParam("SpeedDice_param1", language);
+            if (Level >= 2)
+                s = StaticDataManager.GetParam("SpeedDice_param2", language);
+            if (Level >= 3)
+                s = StaticDataManager.GetParam("SpeedDice_param3", language);
+            return s;
+        }
+        public override void OnRoundStart()
+        {
+            base.OnRoundStart();
+            owner.allyCardDetail.DrawCards(1);
+        }
+    }
 }

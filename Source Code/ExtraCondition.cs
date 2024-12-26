@@ -8,9 +8,9 @@ namespace Contingecy_Contract
 {
     public class RewardConditionList
     {
-        public List<RewardConfition> RCs;
+        public List<RewardConfig> RCs;
     }
-    public class RewardConfition
+    public class RewardConfig
     {
         public string Pid = "";
         public int Stageid;

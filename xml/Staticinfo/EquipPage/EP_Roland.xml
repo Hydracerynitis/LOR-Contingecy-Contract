@@ -25,7 +25,7 @@
 				<Passive>1700014</Passive>
                 <Passive Pid="@origin">250002</Passive>
     		</EquipEffect>
-    		<BookIcon>ContingencyReward</BookIcon>
+    		<BookIcon>RolandReward</BookIcon>
     		<Chapter>7</Chapter>
     		<Episode>1800007</Episode>
     		<Rarity>Unique</Rarity>
@@ -59,7 +59,7 @@
 				<OnlyCard>17000024</OnlyCard>
 				<OnlyCard>17000025</OnlyCard>
     		</EquipEffect>
-    		<BookIcon>ContingencyReward</BookIcon>
+    		<BookIcon>RolandReward</BookIcon>
     		<Chapter>7</Chapter>
     		<Episode>1800007</Episode>
     		<Rarity>Unique</Rarity>
@@ -107,7 +107,7 @@
 				<OnlyCard>17000235</OnlyCard>
 				<OnlyCard>17000236</OnlyCard>
     		</EquipEffect>
-    		<BookIcon>ContingencyReward</BookIcon>
+    		<BookIcon>RolandReward</BookIcon>
     		<Chapter>7</Chapter>
     		<Episode>1800007</Episode>
     		<Rarity>Unique</Rarity>
@@ -135,7 +135,7 @@
 				<Passive>1701031</Passive>
 				<Passive>1701032</Passive>
     		</EquipEffect>
-    		<BookIcon>ContingencyReward</BookIcon>
+    		<BookIcon>RolandReward</BookIcon>
     		<Chapter>7</Chapter>
     		<Episode>1800007</Episode>
     		<Rarity>Unique</Rarity>
@@ -163,7 +163,7 @@
                 <Passive>1700041</Passive>
       			<Passive>1700042</Passive>
     		</EquipEffect>
-    		<BookIcon>ContingencyReward</BookIcon>
+    		<BookIcon>RolandReward</BookIcon>
     		<Chapter>7</Chapter>
     		<Episode>1800007</Episode>
     		<Rarity>Unique</Rarity>
@@ -196,7 +196,7 @@
 				<OnlyCard>17000055</OnlyCard>
 				<OnlyCard>17000056</OnlyCard>
     		</EquipEffect>
-    		<BookIcon>ContingencyReward</BookIcon>
+    		<BookIcon>RolandReward</BookIcon>
     		<Chapter>7</Chapter>
     		<Episode>1800007</Episode>
     		<Rarity>Unique</Rarity>

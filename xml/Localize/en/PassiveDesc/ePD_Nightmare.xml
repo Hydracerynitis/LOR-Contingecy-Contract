@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PassiveDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<PassiveDesc ID="1510001">
+		<Name>Eye of Death</Name> 
+		<Desc>All dice gain +1 Power. At the end of each Scene, gain 3 "Focus".
+(Max 8. At 8 stack, Double the Power of next Offensive Dice with more than 8 natual roll. Afterwards clear all stacks)
+    </Desc>
+	</PassiveDesc>
+    <PassiveDesc ID="1510002">
+		<Name>Poised Breathing</Name> 
+		<Desc>Restore 1 Light upon using a page whose original Cost is 3.</Desc>
+	</PassiveDesc>
+    <PassiveDesc ID="1510003">
+		<Name>Deflect Assault</Name> 
+		<Desc>Once per Scene, respond to a one-sided attack with a Block die [Roll: 2-6]. (Not played in clashes where both characters use a Combat Page).
+Repeat twice for each Speed Dice unused in this Scene. Winning clashes with Block dice gain 1 "Focus"</Desc>
+	</PassiveDesc>
+    <PassiveDesc ID="1510004">
+		<Name>Kizuna</Name> 
+		<Desc>After an ally dies, gain 1 Strength and 1 Endurance each Scene for the rest of the Act. (Stacks up to two times)</Desc>
+	</PassiveDesc>
+</PassiveDescRoot>

@@ -17,14 +17,14 @@ namespace Contingecy_Contract
     {
         [HarmonyPatch(typeof(BookInventoryModel), nameof(BookInventoryModel.GetBookList_equip))]
         [HarmonyPrefix]
-        static void BookInventoryModel_GetBookList_equip_Pre()
+        static void ResetRewardSystem()
         {
             ContractRewardSystem.Instance.CheckRewardAchieved();
             ContractRewardSystem.Instance.UIs.Clear();
         }
         [HarmonyPatch(typeof(BookInventoryModel),nameof(BookInventoryModel.GetBookList_equip))]
         [HarmonyPostfix]
-        static void BookInventoryModel_GetBookList_equip_Post(List<BookModel> __result)
+        static void AppendDemonstrationPage(List<BookModel> __result)
         {
             foreach((string, int) pair in StaticDataManager.RewardCondition.Keys)
             {
@@ -41,13 +41,13 @@ namespace Contingecy_Contract
         }
         [HarmonyPatch(typeof(BookInventoryModel),nameof(BookInventoryModel.GetBookList_PassiveEquip))]
         [HarmonyPostfix]
-        static void BookInventoryModel_GetBookList_PassiveEquip(List<BookModel> __result)
+        static void RemoveRewardPageFromPassiveAttribute(List<BookModel> __result)
         {
             __result.RemoveAll(x => x.ClassInfo.workshopID == "ContingencyConract");
         }
         [HarmonyPatch(typeof(UISettingInvenEquipPageSlot), nameof(UISettingInvenEquipPageSlot.SetOperatingPanel))]
         [HarmonyPostfix]
-        static void UISettingInvenEquipPageSlot_SetOperatingPanel_Pre(UISettingInvenEquipPageSlot __instance, BookModel ____bookDataModel, UICustomGraphicObject ___button_Equip, TextMeshProUGUI ___txt_equipButton, Image ___img_equipbuttonIcon)
+        static void DemonstrationEquipPageUI_SIEPS(UISettingInvenEquipPageSlot __instance, BookModel ____bookDataModel, UICustomGraphicObject ___button_Equip, TextMeshProUGUI ___txt_equipButton, Image ___img_equipbuttonIcon)
         {
             if(____bookDataModel.ClassInfo.workshopID == "ContingencyConract" && ____bookDataModel.ClassInfo.isError)
             {
@@ -62,7 +62,7 @@ namespace Contingecy_Contract
                 return;
             }      
             UnitDataModel currentUnit = UC.Instance.CurrentUnit;
-            if (____bookDataModel != null && (____bookDataModel.ClassInfo.id == Tools.MakeLorId(17000001) || ____bookDataModel.ClassInfo.id == Tools.MakeLorId(17000004)))
+            if (____bookDataModel != null && (____bookDataModel.ClassInfo.id == Tools.MakeLorId(17000001) || ____bookDataModel.ClassInfo.id == Tools.MakeLorId(17000004)))//Rpland Special
             {
                 if (CCInitializer.IsRoland(currentUnit))
                 {
@@ -82,7 +82,7 @@ namespace Contingecy_Contract
         }
         [HarmonyPatch(typeof(UISettingInvenEquipPageLeftSlot), nameof(UISettingInvenEquipPageLeftSlot.SetOperatingPanel))]
         [HarmonyPostfix]
-        static void UISettingInvenEquipPageLeftSlot_SetOperatingPanel_Pre(UISettingInvenEquipPageLeftSlot __instance,BookModel ____bookDataModel, UICustomGraphicObject ___button_Equip, TextMeshProUGUI ___txt_equipButton, Image ___img_equipbuttonIcon)
+        static void DemonstrationEquipPageUI_SIEPLS(UISettingInvenEquipPageLeftSlot __instance,BookModel ____bookDataModel, UICustomGraphicObject ___button_Equip, TextMeshProUGUI ___txt_equipButton, Image ___img_equipbuttonIcon)
         {
             if (____bookDataModel.ClassInfo.workshopID == "ContingencyConract" && ____bookDataModel.ClassInfo.isError)
             {
@@ -97,7 +97,7 @@ namespace Contingecy_Contract
                 return;
             }
             UnitDataModel currentUnit = UC.Instance.CurrentUnit;
-            if (____bookDataModel != null && (____bookDataModel.ClassInfo.id == Tools.MakeLorId(17000001) || ____bookDataModel.ClassInfo.id == Tools.MakeLorId(17000004)))
+            if (____bookDataModel != null && (____bookDataModel.ClassInfo.id == Tools.MakeLorId(17000001) || ____bookDataModel.ClassInfo.id == Tools.MakeLorId(17000004))) //Roland Special
             {
                 if (CCInitializer.IsRoland(currentUnit))
                 {
@@ -117,7 +117,7 @@ namespace Contingecy_Contract
         }
         [HarmonyPatch(typeof(UIInvenEquipPageSlot), nameof(UIInvenEquipPageSlot.SetOperatingPanel))]
         [HarmonyPostfix]
-        static void UIInvenEquipPageSlot_SetOperatingPanel_Pre(UIInvenEquipPageSlot __instance, BookModel ____bookDataModel, UICustomGraphicObject ___button_Equip, TextMeshProUGUI ___txt_equipButton, Image ___img_equipbuttonIcon)
+        static void DemonstrationEquipPageUI_IEPS(UIInvenEquipPageSlot __instance, BookModel ____bookDataModel, UICustomGraphicObject ___button_Equip, TextMeshProUGUI ___txt_equipButton, Image ___img_equipbuttonIcon)
         {
             if (____bookDataModel.ClassInfo.workshopID == "ContingencyConract" && ____bookDataModel.ClassInfo.isError)
             {
@@ -153,7 +153,7 @@ namespace Contingecy_Contract
         }
         [HarmonyPatch(typeof(UIInvenLeftEquipPageSlot), nameof(UIInvenLeftEquipPageSlot.SetOperatingPanel))]
         [HarmonyPostfix]
-        static void UIInvenLeftEquipPageSlot_SetOperatingPanel_Pre(UIInvenLeftEquipPageSlot __instance, BookModel ____bookDataModel, UICustomGraphicObject ___button_Equip, TextMeshProUGUI ___txt_equipButton, Image ___img_equipbuttonIcon)
+        static void DemonstrationEquipPageUI_ILEPS(UIInvenLeftEquipPageSlot __instance, BookModel ____bookDataModel, UICustomGraphicObject ___button_Equip, TextMeshProUGUI ___txt_equipButton, Image ___img_equipbuttonIcon)
         {
             if (____bookDataModel.ClassInfo.workshopID == "ContingencyConract" && ____bookDataModel.ClassInfo.isError)
             {
@@ -189,7 +189,7 @@ namespace Contingecy_Contract
         }
         [HarmonyPatch(typeof(UIInvenLeftEquipPageSlot),nameof(UIInvenLeftEquipPageSlot.OnClickEquipButton))]
         [HarmonyPrefix]
-        static bool UIInvenLeftEquipPageSlot_OnClickEquipButton(UIInvenLeftEquipPageSlot __instance)
+        static bool DisplayRewardCondition_ILEPS(UIInvenLeftEquipPageSlot __instance)
         {
             if(__instance.BookDataModel.ClassInfo.workshopID== "ContingencyConract" && __instance.BookDataModel.ClassInfo.isError)
             {
@@ -200,7 +200,7 @@ namespace Contingecy_Contract
         }
         [HarmonyPatch(typeof(UIInvenEquipPageSlot),nameof(UIInvenEquipPageSlot.OnClickEquipButton))]
         [HarmonyPrefix]
-        static bool UIInvenEquipPageSlot_OnClickEquipButton(UIInvenEquipPageSlot __instance)
+        static bool DisplayRewardCondition_IEPS(UIInvenEquipPageSlot __instance)
         {
             if (__instance.BookDataModel.ClassInfo.workshopID == "ContingencyConract" && __instance.BookDataModel.ClassInfo.isError)
             {
@@ -211,7 +211,7 @@ namespace Contingecy_Contract
         }
         [HarmonyPatch(typeof(UISettingInvenEquipPageLeftSlot),nameof(UISettingInvenEquipPageLeftSlot.OnClickEquipButton))]
         [HarmonyPrefix]
-        static bool UISettingInvenEquipPageLeftSlot_OnClickEquipButton(UISettingInvenEquipPageLeftSlot __instance)
+        static bool DisplayRewardCondition_SIEPLS(UISettingInvenEquipPageLeftSlot __instance)
         {
             if (__instance.BookDataModel.ClassInfo.workshopID == "ContingencyConract" && __instance.BookDataModel.ClassInfo.isError)
             {
@@ -222,7 +222,7 @@ namespace Contingecy_Contract
         }
         [HarmonyPatch(typeof(UISettingInvenEquipPageSlot),nameof(UISettingInvenEquipPageSlot.OnClickEquipButton))]
         [HarmonyPrefix]
-        static bool UISettingInvenEquipPageSlot_OnClickEquipButton(UISettingInvenEquipPageSlot __instance)
+        static bool DisplayRewardCondition_ILEPS_SIEPS(UISettingInvenEquipPageSlot __instance)
         {
             if (__instance.BookDataModel.ClassInfo.workshopID == "ContingencyConract" && __instance.BookDataModel.ClassInfo.isError)
             {

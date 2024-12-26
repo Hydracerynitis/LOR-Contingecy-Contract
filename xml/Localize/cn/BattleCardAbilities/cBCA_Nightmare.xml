@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleCardAbilityDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!--柳真-->
+	<BattleCardAbility ID="newYujin">
+    	<Desc>触发[专注]时,使[专注]效果改为将该骰子基础值改为50</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="shiDestroy">
+    	<Desc>[命中时] 若该骰子威力不低于20,摧毁目标书页剩余骰子</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="shiStagger">
+    	<Desc>[拼点胜利] 摧毁目标指向自己的下一个书页</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="FocusClash">
+    		<Desc>[拼点胜利] 获得2层[专注]</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="clashDefense">
+    		<Desc>[拼点时] 将该书页所有进攻骰切换成威力+2的格挡骰</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="SpeedMin">
+    		<Desc>[使用时] 该书页所有骰子的最小值提升当前速度一半(至多+4)</Desc>
+  	</BattleCardAbility>
+</BattleCardAbilityDescRoot>

@@ -29,9 +29,14 @@ namespace ContractReward
             coop.Passive = new BattleUnitPassiveDetail(owner);
             coop.Passive._passiveList = new List<PassiveAbilityBase>(owner.passiveDetail.PassiveList);
             coop.Passive._passiveList.RemoveAll(x => x is PassiveAbility_170006 || x is PassiveAbility_260004 || x is PassiveAbility_250002);
-            coop.Passive._passiveList.Add(new PassiveAbility_1701030(owner));
-            coop.Passive._passiveList.Add(new PassiveAbility_1700032(owner));
-            coop.Passive._passiveList.Add(new PassiveAbility_1700033(owner));
+            List<PassiveAbilityBase> list = new List<PassiveAbilityBase>
+            {
+                new PassiveAbility_1701030(),
+                new PassiveAbility_1700032(),
+                new PassiveAbility_1700033()
+            };
+            list.ForEach(p => p.Init(owner));
+            coop.Passive._passiveList.AddRange(list);
         }
         public void Dance(BattleUnitModel unit)
         {
@@ -78,10 +83,15 @@ namespace ContractReward
             speed.desc = Singleton<PassiveDescXmlList>.Instance.GetDesc(10008);
             speed.rare = Rarity.Unique;
             Angelica.passiveDetail._passiveList.Add(speed);
-            Angelica.passiveDetail._passiveList.Add(new PassiveAbility_1700000(Angelica));
-            Angelica.passiveDetail._passiveList.Add(new PassiveAbility_1701030(Angelica));
-            Angelica.passiveDetail._passiveList.Add(new PassiveAbility_1701031(Angelica));
-            Angelica.passiveDetail._passiveList.Add(new PassiveAbility_1701032(Angelica,owner, original));
+            List<PassiveAbilityBase> newPassive= new List<PassiveAbilityBase>();
+            newPassive.Add(new PassiveAbility_1700000());
+            newPassive.Add(new PassiveAbility_1701030());
+            newPassive.Add(new PassiveAbility_1701031());
+            PassiveAbility_1701032 angelicaPassive= new PassiveAbility_1701032();
+            angelicaPassive.Setup(owner, original);
+            newPassive.Add(angelicaPassive);
+            newPassive.ForEach(p => p.Init(Angelica));
+            Angelica.passiveDetail._passiveList.AddRange(newPassive);
             owner.allyCardDetail = coop.Deck;
             owner.personalEgoDetail = coop.EGO;
             owner.passiveDetail = coop.Passive;

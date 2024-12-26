@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleCardAbilityDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!--柳真-->
+	<BattleCardAbility ID="newYujin">
+    	<Desc>If this die tigger [Focus], change the natural roll of this die to 50 instead of doubling the Power</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="shiDestroy">
+    	<Desc>[On Hit] Destroy remaining dice of the target's Page if this dice's Power is no less than 20</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="shiStagger">
+    	<Desc>[On Win Clash] Destroy the target's next Page that is targeting the user.</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="FocusClash">
+    		<Desc>[On Win Clash] Gain 2 [Focus]</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="clashDefense">
+    		<Desc>[On Clash] Change all Offensive dice of this Page to Block dice with +2 Power</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="SpeedMin">
+    		<Desc>[On Use] Increase the minimun roll of all dice in this Page by Half of Speed (Max +4)</Desc>
+  	</BattleCardAbility>
+</BattleCardAbilityDescRoot>

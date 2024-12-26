@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleEffectTextRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<effectTextList>
+		<BattleEffectText ID="shiFocus">
+			<Name>Focus</Name>
+			<Desc>Max 8. At 8 stack, Double the Power of next Offensive Dice with more than 8 natual roll. Afterwards clear all stacks</Desc>
+		</BattleEffectText>
+	</effectTextList>
+</BattleEffectTextRoot>

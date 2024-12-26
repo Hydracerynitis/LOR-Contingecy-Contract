@@ -79,7 +79,8 @@ namespace ContractReward
                 this.owner.view.StartCoroutine(this.Transformation());
                 List<PassiveAbilityBase> passive = this.owner.passiveDetail.PassiveList;
                 PassiveAbilityBase cold = passive.Find(x => x is PassiveAbility_1810003);
-                PassiveAbilityBase hot = new PassiveAbility_1810004(this.owner);
+                PassiveAbilityBase hot = new PassiveAbility_1810004();
+                hot.Init(owner);
                 passive.Remove(cold);
                 passive.Add(hot);
                 owner.passiveDetail._passiveList = passive;

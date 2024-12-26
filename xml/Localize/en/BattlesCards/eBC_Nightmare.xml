@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleCardDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	 <cardDescList>
+		<!--柳真-->
+		<BattleCardDesc ID="15100001">
+			<LocalizedName>Boundary between Death</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="15100002">
+			<LocalizedName>Extreme Edge</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="15100003">
+			<LocalizedName>Flashing Backstab</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="15100004">
+			<LocalizedName>Flying Counter</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="15100005">
+			<LocalizedName>Point blank Observation</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="15100006">
+			<LocalizedName>Half-commited Attack</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="15100007">
+			<LocalizedName>Punish Pressure</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="15100011">
+			<LocalizedName>Deflect Assault</LocalizedName>
+		</BattleCardDesc>
+ 	</cardDescList>
+</BattleCardDescRoot>

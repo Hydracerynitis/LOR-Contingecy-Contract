@@ -25,8 +25,13 @@ namespace ContractReward
                     {
                         PassiveAbilityBase instance = Activator.CreateInstance(passive.GetType()) as PassiveAbilityBase;
                         instance.rare = passive.rare;
-                        if (!owner.passiveDetail.PassiveList.Exists(x => x.GetType()==instance.GetType()))
+                        if (!owner.passiveDetail.PassiveList.Exists(x => x.GetType() == instance.GetType()))
+                        {
                             owner.passiveDetail.AddPassive(instance);
+                            instance.rare = passive.rare;
+                            instance.name = passive.name;
+                            instance.desc = passive.desc;
+                        }
                     }
                 }
                 foreach(BattleDiceCardModel card in unit.allyCardDetail.GetAllDeck())

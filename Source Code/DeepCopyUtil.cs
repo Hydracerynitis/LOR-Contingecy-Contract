@@ -152,6 +152,15 @@ namespace Contingecy_Contract
             }
             card._xmlData = xml;
         }
+        public static void ChangeCost(BattleDiceCardModel card, int change_value)
+        {
+            DiceCardXmlInfo xml = card.XmlData.Copy(true);
+            DiceCardSpec specXML = xml.Spec.Copy();
+            specXML.Cost += change_value;
+            xml.Spec = specXML;
+            card._xmlData = xml;
+            card.SetCurrentCost(card.GetOriginCost());  
+        }
         public static EmotionCardXmlInfo Copy(this EmotionCardXmlInfo xml)
         {
             EmotionCardXmlInfo copy = new EmotionCardXmlInfo()

@@ -18,6 +18,7 @@ namespace Contingecy_Contract
 
     public class CCInitializer: ModInitializer
     {
+        public static readonly string Pid = "ContingencyConract";
         public static int PatchNum = 0;
         public static List<DiceBehaviour> passive18900002_Makred = new List<DiceBehaviour>();
         public static Dictionary<UnitBattleDataModel, int> CombaltData = new Dictionary<UnitBattleDataModel, int>();
@@ -32,28 +33,22 @@ namespace Contingecy_Contract
             StaticDataManager.LoadStaticData();
             ModifyEnsemble();
             Singleton<ContractLoader>.Instance.Init();
-            harmony.PatchAll(typeof(HP_CoreSystem));
-            Debug.Log("Patch Class: CoreSystem succeed");
-            harmony.PatchAll(typeof(HP_SubSystem));
-            Debug.Log("Patch Class: SubSystem succeed");
+            harmony.PatchAll(typeof(HP_StageController));
+            Debug.Log("Patch Class: StageController succeed");
+            harmony.PatchAll(typeof(HP_Miscellaneous));
+            Debug.Log("Patch Class: Miscellaneous succeed");
+            harmony.PatchAll(typeof(HP_NewTrigger));
+            Debug.Log("Patch Class: New_Trigger succeed");
             harmony.PatchAll(typeof(HP_RewardList));
             Debug.Log("Patch Class: Reward List succeed");
             harmony.PatchAll(typeof(HP_SplitDeck));
             Debug.Log("Patch Class: Split Deck succeed");
             harmony.PatchAll(typeof(HP_SetCard));
             Debug.Log("Patch Class: SetCard succeed");
-            harmony.PatchAll(typeof(HP_ReverberationSystem));
-            Debug.Log("Patch Class: ReverberationSystem succeed");
-            harmony.PatchAll(typeof(HP_ReverberationUI));
-            Debug.Log("Patch Class: ReverberationUI succeed");
-            harmony.PatchAll(typeof(HP_RolandUI));
-            Debug.Log("Patch Class: RolandUI succeed");
-            harmony.PatchAll(typeof(HP_RolandSystem));
-            Debug.Log("Patch Class: RolandSystem succeed");
-            harmony.PatchAll(typeof(HP_DReverberationSystem));
-            Debug.Log("Patch Class: DReverberationSystem succeed");
-            harmony.PatchAll(typeof(HP_Effect));
-            Debug.Log("Patch Class: Effect succeed");        
+            harmony.PatchAll(typeof(HP_ContractSpecific));
+            Debug.Log("Patch Class: ContractSpecific) succeed");
+            harmony.PatchAll(typeof(HP_RewardPage));
+            Debug.Log("Patch Class: RewardPage succeed");       
             new BattleUnitBuf().GetBufIcon(); //cope BaseMod Late loading artwork for CCGUI Artworks
             CCManager.InitializeUI();
         }

@@ -10,12 +10,9 @@ namespace ContractReward
 {
     public class PassiveAbility_1700033 : PassiveAbilityBase
     {
-        public PassiveAbility_1700033()
+        public override void Init(BattleUnitModel self)
         {
-        }
-        public PassiveAbility_1700033(BattleUnitModel unit)
-        {
-            this.owner = unit;
+            base.Init(self);
             this.name = Singleton<PassiveDescXmlList>.Instance.GetName(Tools.MakeLorId(1700033));
             this.desc = Singleton<PassiveDescXmlList>.Instance.GetDesc(Tools.MakeLorId(1700033));
             this.rare = Rarity.Unique;
@@ -33,6 +30,7 @@ namespace ContractReward
                 owner.passiveDetail = Synchroniz.solo.Passive;
                 owner.bufListDetail.AddBuf(new Enrage());
                 owner.breakDetail.LoseBreakLife();
+                owner.bufListDetail.RemoveBufAll(typeof(BattleUnitBuf_SoulLink));
             }
         }
         class Enrage: BattleUnitBuf
