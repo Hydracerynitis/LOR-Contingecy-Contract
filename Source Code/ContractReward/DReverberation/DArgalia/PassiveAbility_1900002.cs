@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LOR_DiceSystem;
+using Contingecy_Contract;
 
 namespace ContractReward
 {
@@ -22,7 +23,7 @@ namespace ContractReward
             foreach (BattleUnitModel unit in BattleObjectManager.instance.GetAliveList(owner.faction))
             {
                 unit.bufListDetail.RemoveBufAll(KeywordBuf.UpSurge);
-                unit.bufListDetail.AddBufByEtc<BattleUnitBuf_Disarray>(3, readyType: BufReadyType.NextRound);
+                unit.bufListDetail.AddAutoBufByEtc<BattleUnitBuf_Disarray>(3, readyType: BufReadyType.NextRound);
             };
         }
     }

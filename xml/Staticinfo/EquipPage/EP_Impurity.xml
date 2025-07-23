@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<BookXmlRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  	<Book ID="17100000">
+    	<Name>美里奈</Name>
+   		<TextId>17100000</TextId>
+    	<EquipEffect>
+      	    <HP>120</HP>
+      		<Break>55</Break>
+      		<SpeedMin>2</SpeedMin>
+      		<Speed>7</Speed>
+      		<SResist>Endure</SResist>
+			<PResist>Normal</PResist>
+			<HResist>Normal</HResist>
+			<SBResist>Normal</SBResist>
+			<PBResist>Endure</PBResist>
+			<HBResist>Normal</HBResist>
+      		<StartPlayPoint>4</StartPlayPoint>
+      		<MaxPlayPoint>4</MaxPlayPoint>
+      		<Passive Pid="@origin">10008</Passive>
+			<Passive Pid="@origin">260001</Passive>
+			<Passive>1710001</Passive>
+			<Passive>1710002</Passive>
+			<OnlyCard>17100001</OnlyCard>
+			<OnlyCard>17100004</OnlyCard>
+			<OnlyCard>17100005</OnlyCard>
+			<OnlyCard>17100006</OnlyCard>
+			<OnlyCard>17100007</OnlyCard>
+			<OnlyCard>17100008</OnlyCard>
+			<OnlyCard>17100009</OnlyCard>
+			<OnlyCard>17100010</OnlyCard>
+			<OnlyCard>17100011</OnlyCard>
+			<OnlyCard>17100012</OnlyCard>
+    	</EquipEffect>
+    	<BookIcon>HanaReward</BookIcon>
+    	<Chapter>7</Chapter>
+    	<Episode>1800007</Episode>
+    	<Rarity>Unique</Rarity>
+    	<CharacterSkin>Mirinae</CharacterSkin>
+ 	</Book>
+	<Book ID="17100001">
+    	<Name>哈罗德</Name>
+   		<TextId>17100001</TextId>
+    	<EquipEffect>
+      	    <HP>142</HP>
+      		<Break>68</Break>
+      		<SpeedMin>2</SpeedMin>
+      		<Speed>7</Speed>
+			<SpeedMin>1</SpeedMin>
+			<Speed>8</Speed>
+			<SResist>Normal</SResist>
+			<PResist>Normal</PResist>
+			<HResist>Endure</HResist>
+			<SBResist>Endure</SBResist>
+			<PBResist>Normal</PBResist>
+			<HBResist>Normal</HBResist>
+      		<StartPlayPoint>4</StartPlayPoint>
+      		<MaxPlayPoint>4</MaxPlayPoint>
+      		<Passive Pid="@origin">10008</Passive>
+			<Passive Pid="@origin">260001</Passive>
+			<Passive>1710001</Passive>
+			<Passive>1710003</Passive>
+			<OnlyCard>17100001</OnlyCard>
+			<OnlyCard>17100004</OnlyCard>
+			<OnlyCard>17100005</OnlyCard>
+			<OnlyCard>17100006</OnlyCard>
+			<OnlyCard>17100007</OnlyCard>
+			<OnlyCard>17100008</OnlyCard>
+			<OnlyCard>17100009</OnlyCard>
+			<OnlyCard>17100010</OnlyCard>
+			<OnlyCard>17100011</OnlyCard>
+			<OnlyCard>17100012</OnlyCard>
+    	</EquipEffect>
+    	<BookIcon>HanaReward</BookIcon>
+    	<Chapter>7</Chapter>
+    	<Episode>1800007</Episode>
+    	<Rarity>Unique</Rarity>
+    	<CharacterSkin>Harold</CharacterSkin>
+ 	</Book>
+	<Book ID="17100002">
+    	<Name>奥利维耶</Name>
+   		<TextId>17100002</TextId>
+    	<EquipEffect>
+      	    <HP>130</HP>
+      		<Break>60</Break>
+      		<SpeedMin>2</SpeedMin>
+      		<Speed>7</Speed>
+			<SpeedMin>2</SpeedMin>
+      		<Speed>7</Speed>
+			<SResist>Normal</SResist>
+			<PResist>Normal</PResist>
+			<HResist>Endure</HResist>
+			<SBResist>Endure</SBResist>
+			<PBResist>Normal</PBResist>
+			<HBResist>Normal</HBResist>
+      		<StartPlayPoint>4</StartPlayPoint>
+      		<MaxPlayPoint>4</MaxPlayPoint>
+      		<Passive Pid="@origin">10008</Passive>
+			<Passive Pid="@origin">260001</Passive>
+			<Passive>1710001</Passive>
+			<Passive Pid="@origin">260003</Passive>
+			<Passive Pid="@origin">260004</Passive>
+			<OnlyCard>17100001</OnlyCard>
+			<OnlyCard>17100002</OnlyCard>
+			<OnlyCard>17100003</OnlyCard>
+			<OnlyCard>17100004</OnlyCard>
+			<OnlyCard>17100005</OnlyCard>
+			<OnlyCard>17100006</OnlyCard>
+			<OnlyCard>17100007</OnlyCard>
+			<OnlyCard>17100008</OnlyCard>
+			<OnlyCard>17100009</OnlyCard>
+			<OnlyCard>17100010</OnlyCard>
+			<OnlyCard>17100011</OnlyCard>
+			<OnlyCard>17100012</OnlyCard>
+    	</EquipEffect>
+    	<BookIcon>HanaReward</BookIcon>
+    	<Chapter>7</Chapter>
+    	<Episode>1800007</Episode>
+    	<Rarity>Unique</Rarity>
+    	<CharacterSkin>Olivier</CharacterSkin>
+ 	</Book>
+</BookXmlRoot>

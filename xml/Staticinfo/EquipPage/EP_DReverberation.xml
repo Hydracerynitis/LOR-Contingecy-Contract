@@ -5,8 +5,8 @@
    		<TextId>19000000</TextId>
         <Option>MultiDeck</Option>
     	<EquipEffect>
-      		<HP>200</HP>
-      		<Break>52</Break>
+      		<HP>160</HP>
+      		<Break>55</Break>
       		<SpeedMin>4</SpeedMin>
       		<Speed>6</Speed>
       		<SResist>Normal</SResist>
@@ -43,8 +43,8 @@
    		<TextId>19100000</TextId>
         <Option>MultiDeck</Option>
     	<EquipEffect>
-      		<HP>98</HP>
-      		<Break>52</Break>
+      		<HP>135</HP>
+      		<Break>57</Break>
       		<SpeedMin>2</SpeedMin>
       		<Speed>7</Speed>
       		<SResist>Endure</SResist>
@@ -78,8 +78,8 @@
         <Option>MultiDeck</Option>
 		<RangeType>Range</RangeType>
     	<EquipEffect>
-      		<HP>93</HP>
-      		<Break>46</Break>
+      		<HP>130</HP>
+      		<Break>61</Break>
       		<SpeedMin>1</SpeedMin>
       		<Speed>7</Speed>
       		<SResist>Endure</SResist>
@@ -113,8 +113,8 @@
    		<TextId>19300000</TextId>
         <Option>MultiDeck</Option>
     	<EquipEffect>
-      		<HP>125</HP>
-      		<Break>51</Break>
+      		<HP>146</HP>
+      		<Break>59</Break>
       		<SpeedMin>3</SpeedMin>
       		<Speed>6</Speed>
       		<SResist>Endure</SResist>
@@ -147,7 +147,7 @@
    		<TextId>19400000</TextId>
         <Option>MultiDeck</Option>
     	<EquipEffect>
-      		<HP>100</HP>
+      		<HP>135</HP>
       		<Break>30</Break>
       		<SpeedMin>3</SpeedMin>
       		<Speed>6</Speed>
@@ -181,8 +181,8 @@
         <Option>MultiDeck</Option>
 		<RangeType>Hybrid</RangeType>
     	<EquipEffect>
-      		<HP>120</HP>
-      		<Break>64</Break>
+      		<HP>130</HP>
+      		<Break>80</Break>
       		<SpeedMin>2</SpeedMin>
       		<Speed>7</Speed>
       		<SResist>Endure</SResist>
@@ -218,7 +218,7 @@
     	<Name>超级兔子大宝贝</Name>
    		<TextId>19510000</TextId>
     	<EquipEffect>
-      		<HP>60</HP>
+      		<HP>80</HP>
       		<Break>40</Break>
       		<SpeedMin>2</SpeedMin>
       		<Speed>7</Speed>
@@ -244,8 +244,8 @@
    		<TextId>19600000</TextId>
         <Option>MultiDeck</Option>
     	<EquipEffect>
-      		<HP>160</HP>
-      		<Break>75</Break>
+      		<HP>142</HP>
+      		<Break>70</Break>
       		<SpeedMin>1</SpeedMin>
       		<Speed>8</Speed>
       		<SResist>Normal</SResist>
@@ -282,7 +282,7 @@
 		<RangeType>Hybrid</RangeType>
     	<EquipEffect>
       		<HP>135</HP>
-      		<Break>70</Break>
+      		<Break>58</Break>
       		<SpeedMin>2</SpeedMin>
       		<Speed>7</Speed>
       		<SResist>Normal</SResist>
@@ -318,8 +318,8 @@
    		<TextId>19800000</TextId>
         <Option>MultiDeck</Option>
     	<EquipEffect>
-      		<HP>160</HP>
-      		<Break>80</Break>
+      		<HP>110</HP>
+      		<Break>68</Break>
       		<SpeedMin>2</SpeedMin>
       		<Speed>7</Speed>
       		<SResist>Endure</SResist>
@@ -353,7 +353,7 @@
         <Option>MultiDeck</Option>
 		<RangeType>Hybrid</RangeType>
     	<EquipEffect>
-      		<HP>150</HP>
+      		<HP>137</HP>
       		<Break>65</Break>
       		<SpeedMin>2</SpeedMin>
       		<Speed>7</Speed>
@@ -386,8 +386,8 @@
     	<Name>残像</Name>
    		<TextId>19910000</TextId>
     	<EquipEffect>
-      		<HP>100</HP>
-      		<Break>45</Break>
+      		<HP>104</HP>
+      		<Break>50</Break>
       		<SpeedMin>2</SpeedMin>
       		<Speed>7</Speed>
       		<SResist>Normal</SResist>

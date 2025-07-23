@@ -13,10 +13,6 @@ namespace Contingecy_Contract
     {
         private Dictionary<BehaviourDetail, int> HitDic = new Dictionary<BehaviourDetail, int>();
         private BehaviourDetail resist = BehaviourDetail.None;
-        public ContingecyContract_LoveTown(int level)
-        {
-            this.Level = level;
-        }
         private bool IsTomerry => owner.UnitData.unitData.EnemyUnitId == 30016;
         private int cap => IsTomerry ? 5 : 2;
         public override AtkResist GetResistHP(AtkResist origin, BehaviourDetail detail)

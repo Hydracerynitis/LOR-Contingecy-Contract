@@ -358,7 +358,7 @@
             ],
             "Faction":0,
             "BaseLevel":4,
-            "Conflict":["DArgalia_Ternaria","Last","LowFloor"],
+            "Conflict":["DArgalia_Ternaria"],
             "Stageid":60004
         },
         {
@@ -377,7 +377,7 @@
             ],
             "Faction":0,
             "BaseLevel":4,
-            "Conflict":["DArgalia_Sonata","Last","LowFloor"],
+            "Conflict":["DArgalia_Sonata"],
             "Stageid":60004
         }
     ]

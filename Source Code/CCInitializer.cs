@@ -10,7 +10,7 @@ using System.IO;
 using HarmonyLib;
 using BaseMod;
 using TMPro;
-using LOR_XML;
+using AutoKeywordUtil;
 using ContractReward;
 
 namespace Contingecy_Contract
@@ -29,8 +29,11 @@ namespace Contingecy_Contract
             base.OnInitializeMod();
             Harmony harmony = new Harmony("Hydracerynitis.ContingecyContract");
             ModPath = Path.GetDirectoryName(Uri.UnescapeDataString(new UriBuilder(Assembly.GetExecutingAssembly().CodeBase).Path));
+            AutoKeywordUtils.RegisterKeywordsFromAssembly(Assembly.GetExecutingAssembly());
             Debug.ModPatchDebug();
-            StaticDataManager.LoadStaticData();
+            StaticDataManager.LoadStaticData(ModPath);
+            StaticDataManager.LoadGameObject();
+            StaticDataManager.InitNonThumbDic();
             ModifyEnsemble();
             Singleton<ContractLoader>.Instance.Init();
             harmony.PatchAll(typeof(HP_StageController));
@@ -43,8 +46,8 @@ namespace Contingecy_Contract
             Debug.Log("Patch Class: Reward List succeed");
             harmony.PatchAll(typeof(HP_SplitDeck));
             Debug.Log("Patch Class: Split Deck succeed");
-            harmony.PatchAll(typeof(HP_SetCard));
-            Debug.Log("Patch Class: SetCard succeed");
+            harmony.PatchAll(typeof(HP_ModifyOrigin));
+            Debug.Log("Patch Class: ModifyOrigin succeed");
             harmony.PatchAll(typeof(HP_ContractSpecific));
             Debug.Log("Patch Class: ContractSpecific) succeed");
             harmony.PatchAll(typeof(HP_RewardPage));

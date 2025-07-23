@@ -8,12 +8,126 @@ using System.Threading.Tasks;
 
 namespace Contingecy_Contract
 {
+    //Replacement Passive
+    public class PassiveAbility_1302013_New : PassiveAbility_1302013
+    {
+        private int GetPhaseThreshold(EileenPhase phase)
+        {
+            int i = 0;
+            switch (phase)
+            {
+                case EileenPhase.First:
+                    i = owner.MaxHp;
+                    break;
+                case EileenPhase.Second:
+                    i = (int)(0.7 * owner.MaxHp);
+                    break;
+                case EileenPhase.Third:
+                    i = (int)(0.3 * owner.MaxHp);
+                    break;
+                case EileenPhase.None:
+                    i = 0;
+                    break;
+            }
+            return i;
+        }
+        private EileenPhase nextPhase
+        {
+            get
+            {
+                switch (currentEileenPhase)
+                {
+                    case EileenPhase.None:
+                        return EileenPhase.First;
+                    case EileenPhase.First:
+                        return EileenPhase.Second;
+                    case EileenPhase.Second:
+                        return EileenPhase.Third;
+                    case EileenPhase.Third:
+                        return EileenPhase.None;
+                    default:
+                        return EileenPhase.None;
+                }
+            }
+        }
+        public override void OnWaveStart()
+        {
+            CheckChangePhase_CC();
+            beliverdeath = false;
+            owner.breakDetail.blockRecoverBreakByEvaision = true;
+        }
+        public void ChangePhase_CC(EileenPhase phase)
+        {
+            ChangePhase(phase);
+            owner.SetHp(GetPhaseThreshold(phase));
+        }
+        public override void OnRoundEndTheLast()
+        {
+            if (CheckChangePhase_CC() || owner.IsBreakLifeZero() || !beliverdeath)
+                return;
+            List<BattleUnitModel> aliveList = BattleObjectManager.instance.GetAliveList(owner.faction);
+            aliveList.Remove(owner);
+            if (aliveList.Count != 0)
+                return;
+            beliverdeath = false;
+            CreateBeliever(4);
+        }
+        public bool CheckChangePhase_CC()
+        {
+            if (owner.hp <= GetPhaseThreshold(EileenPhase.Third))
+            {
+                if (currentEileenPhase == EileenPhase.Third)
+                    return false;
+                ChangePhase_CC(EileenPhase.Third);
+                int num = owner.allyCardDetail.GetHand().Count + 1 - owner.allyCardDetail.maxHandCount;
+                if (num > 0)
+                    owner.allyCardDetail.DiscardInHand(num);
+                owner.allyCardDetail.AddNewCard(specialCards[3]).temporary = true;
+                return true;
+            }
+            else if (owner.hp <= GetPhaseThreshold(EileenPhase.Second))
+            {
+                if (currentEileenPhase == EileenPhase.Second)
+                    return false;
+                ChangePhase_CC(EileenPhase.Second);
+                int num = owner.allyCardDetail.GetHand().Count + 1 - owner.allyCardDetail.maxHandCount;
+                if (num > 0)
+                    owner.allyCardDetail.DiscardInHand(num);
+                owner.allyCardDetail.AddNewCard(specialCards[3]).temporary = true;
+                return true;
+
+            }
+            else if (owner.hp <= GetPhaseThreshold(EileenPhase.First))
+            {
+                if (currentEileenPhase == EileenPhase.First)
+                    return false;
+                ChangePhase_CC(EileenPhase.First);
+                return true;
+            }
+            return false;
+        }
+
+        public override void OnDieOtherUnit(BattleUnitModel unit)
+        {
+            if (unit.UnitData.unitData.EnemyUnitId != 1302021)
+                return;
+            else
+                owner.TakeBreakDamage(owner.breakDetail.GetDefaultBreakGauge() / 4, DamageType.Passive, atkResist: AtkResist.None);
+            beliverdeath = true;
+        }
+        public override bool BeforeTakeDamage(BattleUnitModel attacker, int dmg)
+        {
+            _dmgReduction = 0;
+            int phaseThreshold = GetPhaseThreshold(nextPhase);
+            int exceedDmg = (int)owner.hp - dmg;
+            if (exceedDmg <= phaseThreshold)
+                _dmgReduction = phaseThreshold - exceedDmg;
+            return false;
+        }
+        public override int GetDamageReductionAll() => owner.hp > GetPhaseThreshold(nextPhase) ? _dmgReduction : 10000;
+    }
     public class ContingecyContract_Eileen_Production : ContingecyContract
     {
-        public ContingecyContract_Eileen_Production(int level)
-        {
-            Level = level;
-        }
         public override string[] GetFormatParam(string language) => new string[] { (25 + Level * 25).ToString(), GetParam(language) };
         private string GetParam(string language)
         {
@@ -57,10 +171,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_Eileen_BodyGuard: ContingecyContract
     {
-        public ContingecyContract_Eileen_BodyGuard(int level)
-        {
-            Level = level;
-        }
         public override string[] GetFormatParam(string language) => new string[] { (25 + Level * 25).ToString(), (Math.Max(0, -3 + 3 * Level)).ToString() };
         private bool IsEileen => owner.UnitData.unitData.EnemyUnitId == 1302011;
         public override StatBonus GetStatBonus(BattleUnitModel owner)
@@ -86,10 +196,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_Eileen : ContingecyContract
     {
-        public ContingecyContract_Eileen(int level)
-        {
-            Level = level;
-        }
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1302021;
         public override void Init(BattleUnitModel self)
         {

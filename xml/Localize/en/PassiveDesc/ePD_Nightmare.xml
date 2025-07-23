@@ -2,9 +2,13 @@
 <PassiveDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<PassiveDesc ID="1510001">
 		<Name>Eye of Death</Name> 
-		<Desc>All dice gain +1 Power. At the end of each Scene, gain 3 "Focus".
-(Max 8. At 8 stack, Double the Power of next Offensive Dice with more than 8 natual roll. Afterwards clear all stacks)
-    </Desc>
+		<Desc>All dice gain +1 Power. At the end of each Scene, gain 3 "Focus" if not taking any hit this Scene.
+(Max 8. At 8 stack, Double the Power of next Offensive Dice with more than 8 natual roll. Afterwards clear all stacks)</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1510001">
+		<Name>Assassin's Focus</Name> 
+		<Desc>All dice gain +1 Power. At the end of each Scene, gain 3 "Focus" if not taking any hit this Scene.
+(Max 8. At 8 stack, Double the Power of next Offensive Dice with more than 8 natual roll. Afterwards clear all stacks)</Desc>
 	</PassiveDesc>
     <PassiveDesc ID="1510002">
 		<Name>Poised Breathing</Name> 
@@ -18,5 +22,24 @@ Repeat twice for each Speed Dice unused in this Scene. Winning clashes with Bloc
     <PassiveDesc ID="1510004">
 		<Name>Kizuna</Name> 
 		<Desc>After an ally dies, gain 1 Strength and 1 Endurance each Scene for the rest of the Act. (Stacks up to two times)</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1510005">
+		<Name>Singular Strike</Name> 
+		<Desc>When using a Combat Page with one non-Counter die, the die gains +2 Power, and it yields twice as many Emotion Points in a clash.
+Winning clashes with such Page gain 2 "Focus"</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1510006">
+		<Name>Risky Maneuver</Name> 
+		<Desc>Once per Scene, respond to a one-sided attack with a Slash die [Roll: 6-12 [On Clash Win] Destroy all of opponent's dice [On Clash Lose] Destroy all retained dice]. 
+(Not played in clashes where both characters use a Combat Page).</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1510007">
+		<Name>Respiration</Name> 
+		<Desc>At the end of the Scene, restore 2 Light and gain 3 "Focus" if current Light is 0.</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1510008">
+		<Name>Cautious Sense</Name> 
+		<Desc>Once per Scene, respond to a one-sided attack with a Counter Evade die [Roll: 3-9]. 
+(Not played in clashes where both characters use a Combat Page).</Desc>
 	</PassiveDesc>
 </PassiveDescRoot>

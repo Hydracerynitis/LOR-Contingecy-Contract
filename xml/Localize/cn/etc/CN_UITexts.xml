@@ -3,6 +3,10 @@
 	<text id="ui_ContingecyLevel">{0}级危机--{1}</text>
 	<text id="ui_RewardStage">恭喜你打过{1}关卡的{0}级危机合约挑战</text>
 	<text id="ui_popup_getequippage">获得{1}张核心书页-“{0}”</text>
+	<text id="ui_disable_reward">你确认要禁用合约奖励书页吗？
+禁用合约奖励书页会移除所有你拥有的奖励书页并在未来完成高危机等级接待后也不会追加奖励. 该设置适用于只为了能体验困难合约组合而游玩该模组的玩家</text>
+	<text id="ui_enable_reward">你确认要启用合约奖励书页吗？
+启用合约奖励书页会在未来你完成高危机等级接待后奖励对应接待的强力核心书页. 之前获得的奖励书页也会同时返还</text>
 	<text id="ui_MoreEquipPage">以及更多核心书页</text>
 	<text id="ui_ForDemo">预览</text>
 	<text id="ui_Jeaheon_counter">反击架势</text>

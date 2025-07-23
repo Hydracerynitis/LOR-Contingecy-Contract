@@ -1,4 +1,5 @@
 ﻿using BaseMod;
+using Contingecy_Contract;
 using LOR_DiceSystem;
 using Sound;
 using System;
@@ -23,6 +24,7 @@ namespace ContractReward
             knife.allyCardDetail.Init(owner.UnitData.unitData.GetDeckForBattle(1));
             knife.allyCardDetail.ReturnAllToDeck();
             knife.allyCardDetail.DrawCards(4);
+            ContractAttribution.Init(knife);
             unit.personalEgoDetail.RemoveCard(Tools.MakeLorId(18500008));
             unit.personalEgoDetail.RemoveCard(Tools.MakeLorId(18500009));
         }

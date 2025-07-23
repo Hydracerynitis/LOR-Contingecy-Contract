@@ -15,14 +15,9 @@ namespace Contingecy_Contract
     public class ContingecyContract_Elena_Cross : ContingecyContract
     {
         private bool ExtraHit;
-        public ContingecyContract_Elena_Cross(int level)
-        {
-            Level = level;
-            extrahit = new List<BattlePlayingCardDataInUnitModel>();
-        }
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1308021;
         public override string[] GetFormatParam(string language) => new string[] { Level.ToString(),((Level - 1)*25).ToString() };
-        private readonly List<BattlePlayingCardDataInUnitModel> extrahit;
+        private readonly List<BattlePlayingCardDataInUnitModel> extrahit = new List<BattlePlayingCardDataInUnitModel>();
         public override void OnRoundStart()
         {
             base.OnRoundStart();
@@ -90,10 +85,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_Elena_Zombie : ContingecyContract
     {
-        public ContingecyContract_Elena_Zombie(int level)
-        {
-            Level = level;
-        }
         public override string[] GetFormatParam(string language) => new string[] { ( 15+ 5*Level).ToString(), (Level * 20).ToString() };
         public override int SpeedDiceNumAdder() => IsElena? this.GetVictimList().Count: 0;
         private bool IsElena => this.owner.UnitData.unitData.EnemyUnitId == 1308011;
@@ -141,10 +132,6 @@ namespace Contingecy_Contract
     public class ContingecyContract_Elena : ContingecyContract
     {
         private Queue<int> Priority;
-        public ContingecyContract_Elena(int level)
-        {
-            this.Level = level;
-        }
         public override int SpeedDiceNumAdder() => Cross==null? 1:0;
         private PassiveAbility_1308021 Cross => (PassiveAbility_1308021) this.owner.passiveDetail.PassiveList.Find(x => x is PassiveAbility_1308021);
         public override void OnRoundStartAfter()

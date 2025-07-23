@@ -7,14 +7,20 @@ using System.Threading.Tasks;
 using BaseMod;
 using System;
 using UnityEngine;
+using AutoKeywordUtil;
 
 namespace ContractReward
 {
-    public class BattleUnitBuf_Disarray: BattleUnitBuf
+    public class BattleUnitBuf_Disarray: BattleUnitBuf, IAutoKeywordBuf
     {
         public override string keywordIconId => "PowerUpOrchestraEgo";
         public override string keywordId => "Disarray";
         public override bool IsControllable => false;
+
+        public override KeywordBuf bufType => AutoKeywordUtils.GetAutoKeyword(typeof(BattleUnitBuf_JaeheonControl));
+
+        public string KeywordBufName => "CC_Disarray";
+
         public override bool TeamKill()
         {
             return true;

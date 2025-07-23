@@ -1,0 +1,59 @@
+{
+    "Ps":[
+        {
+            "Id":"Hana_Web_param1",
+            "Desc":[
+                {"Language":"cn","Content":"耐性"},
+                {"Language":"en","Content":"Endured"}
+            ]
+        },
+        {
+            "Id":"Hana_Web_param2",
+            "Desc":[
+                {"Language":"cn","Content":"抵抗"},
+                {"Language":"en","Content":"Ineffective"}
+            ]
+        },
+        {
+            "Id":"Hana_Web_param3",
+            "Desc":[
+                {"Language":"cn","Content":"免疫"},
+                {"Language":"en","Content":"Immune"}
+            ]
+        },{
+            "Id":"Hana_Protocol_param1",
+            "Desc":[
+                {"Language":"cn","Content":"速度骰+1"},
+                {"Language":"en","Content":"gain additional Speed Dice"}
+            ]
+        },
+        {
+            "Id":"Hana_Protocol_param2",
+            "Desc":[
+                {"Language":"cn","Content":",回复所有血量并从混乱恢复过来"},
+                {"Language":"en","Content":", heal all HP and recover from Stagger"}
+            ]
+        },
+        {
+            "Id":"Hana_Protocol_param3",
+            "Desc":[
+                {"Language":"cn","Content":",这一幕所有书页费用为0"},
+                {"Language":"en","Content":", all Pages' cost become 0 for the duration of the Scene"}
+            ]
+        },
+        {
+            "Id":"Hana_Olivier_Web",
+            "Desc":[
+                {"Language":"cn","Content":"奥利维耶会在第二舞台加入战斗.\n奥利维耶存活时使所有友方单位获得\"十二收尾人\"被动."},
+                {"Language":"en","Content":"Olivier will join the battle in the second Act.\nAll ally units gain \"The Twelve Fixers\" passive when Olivier is alive."}
+            ]
+        },
+        {
+            "Id":"Hana_Olivier_Protocol",
+            "Desc":[
+                {"Language":"cn","Content":"奥利维耶会在第二舞台加入战斗.\n美里奈获得\"十二收尾人\"和\"一切为하나\"被动并且也会在传递\"하나为一切\"时也会传递这些被动"},
+                {"Language":"en","Content":"Olivier will join the battle in the second Act.\nMirinae gain additional \"The Twelve Fixers\" and \"All for Hana\" passives.\nWhen transfering passives, these passives will also be transferred."}
+            ]
+        }
+    ]
+}

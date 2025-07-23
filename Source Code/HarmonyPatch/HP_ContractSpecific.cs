@@ -30,6 +30,32 @@ namespace Contingecy_Contract
                 __result = new SpeedDiceRule(__result.diceMin, __result.diceFaces, Math.Max(num, __result.diceNum), breakNum);
             }
         }
+        [HarmonyPatch(typeof(StageLibraryFloorModel),nameof(StageLibraryFloorModel.CreateSelectableList))]
+        [HarmonyPostfix]
+        public static void ClearEmotionForNoEmotionContract(List<EmotionCardXmlInfo> __result, int emotionLevel)
+        {
+            if (Singleton<ContractLoader>.Instance.GetPassiveList().Find(x => x.Type == "NoEmotion") is Contract NoEmotion)
+            {
+                int libraryLevelThreshold = 6;
+                if(NoEmotion.Variant==3)
+                    libraryLevelThreshold = 1;
+                else if(NoEmotion.Variant==2)
+                    libraryLevelThreshold = 3;
+                else if (NoEmotion.Variant == 1)
+                    libraryLevelThreshold = 5;
+                if(emotionLevel >= libraryLevelThreshold)
+                    __result.Clear();
+            }
+                
+        }
+        [HarmonyPatch(typeof(StageLibraryFloorModel), nameof(StageLibraryFloorModel.CreateSelectableEgoList))]
+        [HarmonyPostfix]
+        public static void ClearEgoForNoEgoContract(List<EmotionEgoXmlInfo> __result)
+        {
+            if (Singleton<ContractLoader>.Instance.GetPassiveList().Find(x => x.Type == "NoEGO") is Contract NoEGO)
+                __result.Clear();
+        }
+        
         //Philip
         [HarmonyPatch(typeof(BattleUnitBuf_Philip_OverHeat), nameof(BattleUnitBuf_Philip_OverHeat.Init))]
         [HarmonyPrefix]
@@ -235,9 +261,15 @@ namespace Contingecy_Contract
                             SingletonBehavior<UICharacterRenderer>.Instance.SetCharacter(battleUnitModel2.UnitData.unitData, num++);
                         BattleObjectManager.instance.InitUI();
                         __instance.isOswaldHide = false;
-                        return;
+                        break;
                     }
                 }
+            }
+            BattleUnitModel newOswald = BattleObjectManager.instance.GetAliveList(Faction.Enemy).Find(x => x.UnitData.unitData.EnemyUnitId == 1405011);
+            if(newOswald != null)
+            {
+                if (!ContractAttribution.Inition.Contains(newOswald))
+                    ContractAttribution.Init(newOswald);
             }
         }
         //DTanya

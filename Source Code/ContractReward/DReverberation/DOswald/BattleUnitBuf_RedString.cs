@@ -44,9 +44,9 @@ namespace ContractReward
             }
             base.OnRoundEnd();
         }
-        public void OnStartBattle()
+        public void OnStartBattle(BattleUnitModel unit)
         {
-            DiceCardXmlInfo cardItem = ItemXmlDataList.instance.GetCardItem(Tools.MakeLorId(_owner.Book.ClassInfo.RangeType==EquipRangeType.Range? 19500202: 19500201));
+            DiceCardXmlInfo cardItem = ItemXmlDataList.instance.GetCardItem(Tools.MakeLorId(unit.Book.ClassInfo.RangeType==EquipRangeType.Range? 19500202: 19500201));
             List<BattleDiceBehavior> behaviourList = new List<BattleDiceBehavior>();
             int num = 0;
             foreach (DiceBehaviour diceBehaviour2 in cardItem.DiceBehaviourList)
@@ -57,7 +57,7 @@ namespace ContractReward
                 battleDiceBehavior.AddAbility(new DiceCardAbility_RemoveRedString());
                 behaviourList.Add(battleDiceBehavior);
             }
-            _owner.cardSlotDetail.keepCard.AddBehaviours(cardItem, behaviourList);
+            unit.cardSlotDetail.keepCard.AddBehaviours(cardItem, behaviourList);
         }
     }
 }

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BookDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<bookDescList>
+		<BookDesc BookID="17100000">
+			<BookName>1科美里奈之页</BookName>
+			<TextList />
+			<PassiveList />
+		</BookDesc>
+		<BookDesc BookID="17100001">
+			<BookName>1科哈罗德之页</BookName>
+			<TextList />
+			<PassiveList />
+		</BookDesc>
+		<BookDesc BookID="17100002">
+			<BookName>1科奥利维耶之页</BookName>
+			<TextList />
+			<PassiveList />
+		</BookDesc>
+	</bookDescList>
+</BookDescRoot>

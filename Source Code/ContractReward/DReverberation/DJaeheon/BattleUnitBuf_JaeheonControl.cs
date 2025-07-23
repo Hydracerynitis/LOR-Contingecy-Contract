@@ -1,19 +1,19 @@
 ﻿using LOR_DiceSystem;
 using Contingecy_Contract;
 using System.Collections.Generic;
-using HP = SummonLiberation.Harmony_Patch;
-using System.Text;
-using System.Threading.Tasks;
+using AutoKeywordUtil;
 using BaseMod;
 using System;
 using UnityEngine;
 
 namespace ContractReward
 {
-    public class BattleUnitBuf_JaeheonControl: BattleUnitBuf
+    public class BattleUnitBuf_JaeheonControl: BattleUnitBuf,IAutoKeywordBuf
     {
         public override string keywordIconId => "Jaeheon_String";
         public override string keywordId => "JaeheonControl";
+        public string KeywordBufName => "CC_JaeheonControl";
+        public override KeywordBuf bufType => AutoKeywordUtils.GetAutoKeyword(typeof(BattleUnitBuf_JaeheonControl));
         public override void OnAfterRollSpeedDice()
         {
             base.OnAfterRollSpeedDice();

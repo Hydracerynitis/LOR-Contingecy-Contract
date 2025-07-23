@@ -5,12 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BaseMod;
+using static UnityEngine.UI.CanvasScaler;
 
 namespace Contingecy_Contract
 {
     public class ContractAttribution
     {
         public static List<BattleUnitModel> Inition = new List<BattleUnitModel>();
+        public static int OswaldHp=-1;
         public static void Init(BattleUnitModel Model)
         {
             Inition.Add(Model);
@@ -31,22 +33,23 @@ namespace Contingecy_Contract
                 System.Type type = StaticDataManager.GetContingencyContract(contract.Type);
                 if (type == (System.Type)null)
                     continue;
-                ContingecyContract instance = (ContingecyContract)Activator.CreateInstance(type, new object[] { contract.Variant });
+                ContingecyContract instance = (ContingecyContract)Activator.CreateInstance(type, new object[] { });
+                instance.Level = contract.Variant;
                 if (instance!=null)
                 {
                     if(!instance.CheckEnemyId(Model.UnitData.unitData.EnemyUnitId))
                         continue;
-                    instance.Init(Model);
                     instance.name = Singleton<PassiveDescXmlList>.Instance.GetName(Tools.MakeLorId(20210302)) + contract.GetDesc().name;
                     instance.desc = contract.GetDesc().desc;
                     instance.rare = Rarity.Unique;
+                    instance.Init(Model);
                     Contracts.Add(instance);
                 }
             }
             List<PassiveAbilityBase> passiveList = Model.passiveDetail.PassiveList;
             passiveList.AddRange(Contracts);
             Model.passiveDetail._passiveList = passiveList;
-            foreach (PassiveAbilityBase contract in Contracts)
+            /*foreach (PassiveAbilityBase contract in Contracts)
             {
                 try
                 {
@@ -56,31 +59,32 @@ namespace Contingecy_Contract
                 {
 
                 }
-            }
+            }*/
             if (Contracts.Count > 0)
             {
                 Model.bufListDetail.AddBuf(new ContractStatBonus(Contracts));
-                if (CCInitializer.CombaltData.ContainsKey(Model.UnitData))
+                Model.breakDetail.breakGauge = Model.breakDetail.GetDefaultBreakGauge();
+                ChangePhaseTransitionThreshold(Model);
+                if (Model.UnitData.unitData.EnemyUnitId == 1405011)
                 {
+                    if (OswaldHp <= 0)
+                        Model.SetHp((int)Model.passiveDetail.GetStartHp(Model.MaxHp));
+                    else
+                        Model.SetHp(OswaldHp);
+                }
+                else if (CCInitializer.CombaltData.ContainsKey(Model.UnitData))
                     Model.SetHp(CCInitializer.CombaltData[Model.UnitData]);
-                    Model.breakDetail.breakGauge = Model.breakDetail.GetDefaultBreakGauge();
-                    CheckPhaseCondition(Model);
-                }
-                else if(!IsNewTwistedOswald(Model))
-                {
+                else
                     Model.SetHp((int)Model.passiveDetail.GetStartHp(Model.MaxHp));
-                    Model.breakDetail.breakGauge = Model.breakDetail.GetDefaultBreakGauge();
-                    CheckPhaseCondition(Model);
-                }
             }
         }
 
-        private static bool IsNewTwistedOswald(BattleUnitModel unit)
+/*        private static bool IsNewTwistedOswald(BattleUnitModel unit)
         {
-            return StageController.Instance.EnemyStageManager is EnemyTeamStageManager_TwistedReverberationBand_Middle TRM && unit.UnitData.unitData.EnemyUnitId==1405011 && unit.hp==TRM._oswaldHp ;
-        }
+            return StageController.Instance.EnemyStageManager is EnemyTeamStageManager_TwistedReverberationBand_Middle TRM &&  && unit.hp==TRM._oswaldHp ;
+        }*/
 
-        public static void CheckPhaseCondition(BattleUnitModel unit)
+        public static void ChangePhaseTransitionThreshold(BattleUnitModel unit)
         {
             if (unit.passiveDetail.PassiveList.Find(x => x is PassiveAbility_250022) is PassiveAbility_250022 Red)
                 Red._egoCondition = unit.MaxHp / 2;

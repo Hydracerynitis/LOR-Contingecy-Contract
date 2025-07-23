@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PassiveDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <PassiveDesc ID="1710001">
+		<Name>Full Trigrams</Name> 
+		<Desc>After using 2 distinct Trigram pages, gain 1 "Hexagram" Page in the next Scene
+Hexagram Page can enhance slotted combat pages on play, the enhancement effect is based on the order of previous Trigram Pages.
+Each page can only be enhanced at most by 1 "Hexagram" Page</Desc>
+	</PassiveDesc>
+	<!--
+	乾坤 => 否 (该书页有1/2的几率再次对随机敌人使用一次)
+	乾坎 => 讼 (该书页[使用时]额外触发一次)
+	乾离 => 同人 (该书页使用时在这一幕内自己每使用一张其他同名书页使所有骰子威力+2)
+
+	坤乾 => 泰 (战斗开始时,若该书页在手牌则使这回合造成的伤害+25%,之后弃掉该书页)
+	坤坎 => 师 (战斗结束时,若该书页在手牌则对随机敌人触发其[使用时]特效,之后弃掉该书页)
+	坤离 => 明夷 (战斗结束时,若该书页在手牌则使同名书页所有骰子永久+1下限+2上限,之后弃掉该书页)
+
+	坎乾 => 需 (该书页在手牌时使用当前费用更高的书页时在下次打出该书页时对目标造成(3+书页当前费用*5)点混乱伤害(可叠加))
+	坎坤 => 比 (该书页在手牌时使用当前费用更高的书页时则在下次打出该书页后使下次承受的混乱伤害-(1+书页当前费用*2)点)
+	坎离 => 既济 (该书页在手牌时使用当前费用更高的书页时该书页费用永久-1)
+
+	离乾 => 大有 (该书页在置入手牌的一幕内使用该书页时使其所有骰子这一幕内+2威力)
+	离坤 => 晋  (该书页在置入手牌的一幕内使用该书页时将其所有骰子的反击版复制洗入反击池)
+	离坎 => 未济  (该书页在置入手牌的一幕内使用该书页时下一幕开始时抽取该书页)
+	-->
+	<PassiveDesc ID="1710002">
+		<Name>Hana for All</Name> 
+		<Desc>When gaining Strength, Endurance, Protection, or Stagger Protection through Combat Pages: give the same status effect to a random other ally as well.
+When obtaining "Hexagram" Pages, give the same page to a random other ally as well.</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1710003">
+		<Name>All for Hana</Name> 
+		<Desc>If the character took damage from attacks on the previous Scene, change this character's resistances against the type that dealt the most damage to "Endured" for the Scene. 
+Share the resistances modification with two random other allies as well.
+(Applies separately for physical and Stagger damage)</Desc>
+	</PassiveDesc>
+</PassiveDescRoot>

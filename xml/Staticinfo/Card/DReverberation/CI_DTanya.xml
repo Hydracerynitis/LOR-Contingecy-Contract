@@ -97,7 +97,7 @@
 		<Script></Script>
 		<ScriptDesc></ScriptDesc>
     	<BehaviourList>
-            <Behaviour Min="29" Dice="35" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="damage5atk" ActionScript="TwistedTanyaSpecialAtk_New" Desc="" />
+            <Behaviour Min="29" Dice="35" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="damage5atk" ActionScript="TwistedTanyaSpecialAtk" Desc="" />
 			<Behaviour Min="5" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
 			<Behaviour Min="5" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
 			<Behaviour Min="5" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
@@ -115,8 +115,8 @@
 		<Script></Script>
 		<ScriptDesc></ScriptDesc>
 		<BehaviourList>
-			<Behaviour Min="13" Dice="13" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="break5atk" ActionScript="TwistedTanyaSuperAtk1_New" Desc="" />
-			<Behaviour Min="13" Dice="16" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="damage5atk" ActionScript="TwistedTanyaSuperAtk2_New" Desc="" />
+			<Behaviour Min="13" Dice="13" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="break5atk" ActionScript="TwistedTanyaSuperAtk1" Desc="" />
+			<Behaviour Min="13" Dice="16" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="damage5atk" ActionScript="TwistedTanyaSuperAtk2" Desc="" />
 			<Behaviour Min="5" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
 		</BehaviourList>
 		<Chapter>7</Chapter>

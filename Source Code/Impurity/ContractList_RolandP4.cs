@@ -7,15 +7,12 @@ using UnityEngine;
 using System.Text;
 using System.Threading.Tasks;
 using Sound;
+using UI;
 
 namespace Contingecy_Contract
 {
     public class ContingecyContract_Roland4th_BlackSilence : ContingecyContract
     {
-        public ContingecyContract_Roland4th_BlackSilence(int level)
-        {
-            Level = level;
-        }
         public override string[] GetFormatParam(string language) => new string[] {(150* Level-50).ToString(),(75*Level-25).ToString() };
         public override bool CheckEnemyId(LorId EnemyId)
         {
@@ -27,13 +24,201 @@ namespace Contingecy_Contract
                 return new StatBonus() { hpAdder = 150 * Level - 50, breakGageAdder = 75 * Level - 25 };
             return base.GetStatBonus(owner);
         }
+        public class PassiveAbility_170301_New : PassiveAbility_170301
+        {
+            public override void Init(BattleUnitModel self)
+            {
+                base.Init(self);
+                BattleUnitModel battleUnitModel1 = Singleton<StageController>.Instance.AddNewUnit(Faction.Enemy, 60108, 1);
+                BattleUnitModel battleUnitModel2 = Singleton<StageController>.Instance.AddNewUnit(Faction.Enemy, 60118, 2);
+                BattleUnitModel battleUnitModel3 = Singleton<StageController>.Instance.AddNewUnit(Faction.Enemy, 60128, 3);
+                if (!self.IsBreakLifeZero())
+                {
+                    self.view.charAppearance.RemoveAltMotion(ActionDetail.Default);
+                    self.view.charAppearance.RemoveAltMotion(ActionDetail.Standing);
+                    self.view.charAppearance.ChangeMotion(ActionDetail.Default);
+                }
+                battleUnitModel1.SetDeadSceneBlock(false);
+                battleUnitModel1.view.EnableView(false);
+                battleUnitModel2.SetDeadSceneBlock(false);
+                battleUnitModel2.view.EnableView(false);
+                battleUnitModel3.SetDeadSceneBlock(false);
+                battleUnitModel3.view.EnableView(false);
+            }
+
+            public override void OnRoundEndTheLast()
+            {
+                if ((double)this.owner.hp <= (double)this.owner.MaxHp * 0.4)
+                {
+                    SingletonBehavior<BattleSceneRoot>.Instance.currentMapObject.SetRunningState(true);
+                    this.owner.view.StartCoroutine(this.Transformation());
+                }
+                else
+                {
+                    switch (this._patternCount)
+                    {
+                        case 0:
+                            BattleUnitModel battleUnitModel1 = Singleton<StageController>.Instance.AddNewUnit(Faction.Enemy, 60108, 1);
+                            BattleUnitModel battleUnitModel2 = Singleton<StageController>.Instance.AddNewUnit(Faction.Enemy, 60118, 2);
+                            BattleUnitModel battleUnitModel3 = Singleton<StageController>.Instance.AddNewUnit(Faction.Enemy, 60128, 3);
+                            if (!this.owner.IsBreakLifeZero())
+                            {
+                                this.owner.view.charAppearance.RemoveAltMotion(ActionDetail.Default);
+                                this.owner.view.charAppearance.RemoveAltMotion(ActionDetail.Standing);
+                                this.owner.view.charAppearance.ChangeMotion(ActionDetail.Default);
+                            }
+                            battleUnitModel1.SetDeadSceneBlock(false);
+                            battleUnitModel1.view.EnableView(false);
+                            battleUnitModel2.SetDeadSceneBlock(false);
+                            battleUnitModel2.view.EnableView(false);
+                            battleUnitModel3.SetDeadSceneBlock(false);
+                            battleUnitModel3.view.EnableView(false);
+                            break;
+                        case 1:
+                            BattleUnitModel battleUnitModel4 = Singleton<StageController>.Instance.AddNewUnit(Faction.Enemy, 60138, 1);
+                            BattleUnitModel battleUnitModel5 = Singleton<StageController>.Instance.AddNewUnit(Faction.Enemy, 60148, 2);
+                            BattleUnitModel battleUnitModel6 = Singleton<StageController>.Instance.AddNewUnit(Faction.Enemy, 60158, 3);
+
+                            if (!this.owner.IsBreakLifeZero())
+                            {
+                                this.owner.view.charAppearance.RemoveAltMotion(ActionDetail.Default);
+                                this.owner.view.charAppearance.RemoveAltMotion(ActionDetail.Standing);
+                                this.owner.view.charAppearance.ChangeMotion(ActionDetail.Default);
+                            }
+                            battleUnitModel4.SetDeadSceneBlock(false);
+                            battleUnitModel4.view.EnableView(false);
+                            battleUnitModel5.SetDeadSceneBlock(false);
+                            battleUnitModel5.view.EnableView(false);
+                            battleUnitModel6.SetDeadSceneBlock(false);
+                            battleUnitModel6.view.EnableView(false);
+                            break;
+                        case 2:
+                            BattleUnitModel battleUnitModel7 = Singleton<StageController>.Instance.AddNewUnit(Faction.Enemy, 60168, 1);
+                            BattleUnitModel battleUnitModel8 = Singleton<StageController>.Instance.AddNewUnit(Faction.Enemy, 60178, 2);
+                            BattleUnitModel battleUnitModel9 = Singleton<StageController>.Instance.AddNewUnit(Faction.Enemy, 60188, 3);
+                            if (!this.owner.IsBreakLifeZero())
+                            {
+                                this.owner.view.charAppearance.RemoveAltMotion(ActionDetail.Default);
+                                this.owner.view.charAppearance.RemoveAltMotion(ActionDetail.Standing);
+                                this.owner.view.charAppearance.ChangeMotion(ActionDetail.Default);
+                            }
+                            battleUnitModel7.SetDeadSceneBlock(false);
+                            battleUnitModel7.view.EnableView(false);
+                            battleUnitModel8.SetDeadSceneBlock(false);
+                            battleUnitModel8.view.EnableView(false);
+                            battleUnitModel9.SetDeadSceneBlock(false);
+                            battleUnitModel9.view.EnableView(false);
+                            break;
+                        case 3:
+                            if (!this.owner.IsBreakLifeZero())
+                            {
+                                this.owner.view.charAppearance.ChangeMotion(ActionDetail.S12);
+                                break;
+                            }
+                            break;
+                    }
+                    int num = 0;
+                    foreach (BattleUnitModel unit in BattleObjectManager.instance.GetList())
+                        SingletonBehavior<UICharacterRenderer>.Instance.SetCharacter(unit.UnitData.unitData, num++, true);
+                    BattleObjectManager.instance.InitUI();
+                }
+            }
+
+            public override void OnRoundStartAfter()
+            {
+                if (this.owner.IsBreakLifeZero())
+                    return;
+                this.SetNewCards();
+                switch (this._patternCount)
+                {
+                    case 0:
+                        this.owner.passiveDetail.AddPassive(new PassiveAbility_170304());
+                        this.owner.passiveDetail.OnCreated();
+                        break;
+                    case 1:
+                        ++this._strCnt;
+                        this.owner.bufListDetail.AddKeywordBufThisRoundByEtc(KeywordBuf.Strength, this._strCnt, this.owner);
+                        this.owner.passiveDetail.AddPassive(new PassiveAbility_170305());
+                        this.owner.passiveDetail.OnCreated();
+                        break;
+                    case 2:
+                        this.owner.passiveDetail.AddPassive(new PassiveAbility_170306());
+                        this.owner.passiveDetail.OnCreated();
+                        break;
+                    case 3:
+                        this.owner.passiveDetail.AddPassive(new PassiveAbility_170307());
+                        this.owner.passiveDetail.OnCreated();
+                        break;
+                }
+                ++this._patternCount;
+                this._patternCount %= 4;
+                switch (this._currentBuf)
+                {
+                    case BehaviourDetail.Slash:
+                        this.owner.bufListDetail.AddBuf(new BattleUnitBuf_Roland_4th_DmgReduction_Slash());
+                        this._currentBuf = BehaviourDetail.Penetrate;
+                        break;
+                    case BehaviourDetail.Penetrate:
+                        this.owner.bufListDetail.AddBuf(new BattleUnitBuf_Roland_4th_DmgReduction_Penetrate());
+                        this._currentBuf = BehaviourDetail.Hit;
+                        break;
+                    case BehaviourDetail.Hit:
+                        this.owner.bufListDetail.AddBuf(new BattleUnitBuf_Roland_4th_DmgReduction_Hit());
+                        this._currentBuf = BehaviourDetail.Slash;
+                        break;
+                }
+            }
+
+            private void SetNewCards()
+            {
+                this.owner.allyCardDetail.ExhaustAllCards();
+                int num = this.owner.Book.GetSpeedDiceRule(this.owner).Roll(this.owner).Count - 3;
+                this._cardCount = 0;
+                switch (this._patternCount)
+                {
+                    case 0:
+                        this.AddNewCard(702301);
+                        this.AddNewCard(702302);
+                        this.AddNewCard(702303);
+                        this.AddNewCard(702315);
+                        this.AddNewCard(702316);
+                        break;
+                    case 1:
+                        this.AddNewCard(702304);
+                        this.AddNewCard(702305);
+                        this.AddNewCard(702306);
+                        this.AddNewCard(702315);
+                        this.AddNewCard(702316);
+                        break;
+                    case 2:
+                        this.owner.view.charAppearance.SetAltMotion(ActionDetail.Default, ActionDetail.S14);
+                        this.owner.view.charAppearance.SetAltMotion(ActionDetail.Standing, ActionDetail.S14);
+                        this.owner.view.charAppearance.ChangeMotion(ActionDetail.S14);
+                        this.AddNewCard(702307);
+                        this.AddNewCard(702308);
+                        this.AddNewCard(702309);
+                        this.AddNewCard(702315);
+                        this.AddNewCard(702316);
+                        break;
+                    case 3:
+                        this.owner.view.charAppearance.SetAltMotion(ActionDetail.Default, ActionDetail.S14);
+                        this.owner.view.charAppearance.SetAltMotion(ActionDetail.Standing, ActionDetail.S14);
+                        this.owner.view.charAppearance.ChangeMotion(ActionDetail.S14);
+                        this.Map?.AttatchAura();
+                        this.AddNewCard(702313);
+                        this.AddNewCard(702310);
+                        this.AddNewCard(702312);
+                        this.AddNewCard(702312);
+                        this.AddNewCard(702315);
+                        break;
+                }
+                for (int index = 0; index < num; ++index)
+                    this.AddNewCard(this.GetAddedDiceCard());
+            }
+        }
     }
     public class ContingecyContract_Roland4th_Servant : ContingecyContract
     {
-        public ContingecyContract_Roland4th_Servant(int level)
-        {
-            Level = level;
-        }
         public override string[] GetFormatParam(string language) => new string[] { GetParam(language) };
         private string GetParam(string language)
         {
@@ -174,10 +359,6 @@ namespace Contingecy_Contract
     public class ContingecyContract_Roland4th : ContingecyContract
     {
         private Dictionary<BehaviourDetail, int> HitDic = new Dictionary<BehaviourDetail, int>();
-        public ContingecyContract_Roland4th(int level)
-        {
-            Level = level;
-        }
         public override bool CheckEnemyId(LorId EnemyId)
         {
             return EnemyId == 60008;
@@ -255,17 +436,9 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_Roland : ContingecyContract
     {
-        public ContingecyContract_Roland(int level)
-        {
-            Level = level;
-        }
     }
     public class StageModifier_Roland : StageModifier
     {
-        public StageModifier_Roland(int Level)
-        {
-            this.Level = Level;
-        }
         public override bool IsValid(StageClassInfo info)
         {
             return info.id == 60003;

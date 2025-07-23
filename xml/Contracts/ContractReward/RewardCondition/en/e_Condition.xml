@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RewardCondition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<!--梦魇-->
+	<Reward Pid="ContingencyConract" id="15100000">Get by Completing The Shi Association reception at Risk Level 24 or more.</Reward>
+	<Reward Pid="ContingencyConract" id="15100001">Get by Completing The Shi Association reception at Risk Level 24 or more.</Reward>
+	<Reward Pid="ContingencyConract" id="15100002">Get by Completing The Shi Association reception at Risk Level 24 or more.</Reward>
+	<!--杂质-->
+	<Reward Pid="ContingencyConract" id="17100000">Get by Completing The Hana Association reception at Risk Level 16 or more.</Reward>
+	<Reward Pid="ContingencyConract" id="17100001">Get by Completing The Hana Association reception at Risk Level 16 or more.</Reward>
+	<Reward Pid="ContingencyConract" id="17100002">Get by Completing The Hana Association reception at Risk Level 16 or more
+while "Tactical Command Network 3" or "Avenging Protocol 3","Full Trigrams","Working Overtime" are active.</Reward>
+	<!--残响乐团-->
+	<Reward Pid="ContingencyConract" id="18100000">Get by Completing The Crying Children (Reverberation) reception at Risk Level 16 or more.</Reward>
+	<Reward Pid="ContingencyConract" id="18200000">Get by Completing The Church of Gear reception at Risk Level 16 or more.</Reward>
+	<Reward Pid="ContingencyConract" id="18300000">Get by Completing The Eighth Chef reception at Risk Level 16 or more.</Reward>
+	<Reward Pid="ContingencyConract" id="18400000">Get by Completing The Musicians of Bremen reception at Risk Level 16 or more.</Reward>
+	<Reward Pid="ContingencyConract" id="18500000">Get by Completing The 8 o’Clock Circus reception at Risk Level 16 or more.</Reward>
+	<Reward Pid="ContingencyConract"  id="18600000">Get by Completing L’heure du Loup reception at Risk Level 16 or more.</Reward>
+	<Reward Pid="ContingencyConract"  id="18700000">Get by Completing The Puppeteer reception at Risk Level 16 or more.</Reward>
+    <Reward Pid="ContingencyConract"  id="18800000">Get by Completing The Blood-Red Moon reception at Risk Level 16 or more.</Reward>
+	<Reward Pid="ContingencyConract"  id="18810000">Get by Completing The Blood-Red Moon reception at Risk Level 16 or more
+while "Sharpened Blade 4","Scorching Cross 3","Introspective First Violin" are active.</Reward>
+    <Reward Pid="ContingencyConract"  id="18900000">Get by Completing Yesterday's Promise reception at Risk Level 16 or more.</Reward>
+    <Reward Pid="ContingencyConract"  id="18000000">Get by Completing all Risk Level challenges from The Reverberation Ensemble reception.</Reward>
+	<!--漆黑静默-->
+	<Reward Pid="ContingencyConract"  id="17000001">Get by Completing The Black Silence reception at Risk Level 16 or more.</Reward>
+    <Reward Pid="ContingencyConract"  id="17000002">Get by Completing The Black Silence reception at Risk Level 16 or more
+while "Furioso 3" or "The Sacred Sword of Charlemagne 3", "Haze Mist 3" 
+or "Qui Garde Un Secret 3","That’s that, and this is this" or "The Smoke War" are active.</Reward>
+    <Reward Pid="ContingencyConract"  id="17000003">Get by Completing The Black Silence reception at Risk Level 16 or more
+while "Wife in Arms 3" or "Waltz in Black and White 3", "Memory: Grade 9 Fixer 3" 
+or "Memory: The Black Silence 3","Blink of Scent" or "Memory: Gone Angels" are active.</Reward>
+    <Reward Pid="ContingencyConract"  id="17000004">Get by Completing The Black Silence reception at Risk Level 16 or more
+while "End of the Line" and "Last Stand" are active.</Reward>
+    <Reward Pid="ContingencyConract"  id="17000005">Get by Completing all Risk Level challenges of The Black Silence reception.</Reward>
+	<!--扭曲残响-->
+	<Reward Pid="ContingencyConract"  id="19100000">Get by Completing The Distorted Reverberation Ensemble reception at Risk Level 16 or more
+while "Rekindled Ember" or "Endless Shackle" is active.</Reward>
+	<Reward Pid="ContingencyConract"  id="19200000">Get by Completing The Distorted Reverberation Ensemble reception at Risk Level 16 or more
+while "Smoke Manufacturer" or "Deus ex Calces" is active.</Reward>
+	<Reward Pid="ContingencyConract"  id="19300000">Get by Completing The Distorted Reverberation Ensemble reception at Risk Level 16 or more
+while "Wish of Guardianship" or "Wish of Gluttory" is active.</Reward>
+	<Reward Pid="ContingencyConract"  id="19400000">Get by Completing The Distorted Reverberation Ensemble reception at Risk Level 16 or more
+while "Solo Jazz" or "Gospel Choir" is active.</Reward>
+	<Reward Pid="ContingencyConract"  id="19500000">Get by Completing The Distorted Reverberation Ensemble reception at Risk Level 16 or more
+while "It's Showtime!" or "Top Show" is active.</Reward>
+	<Reward Pid="ContingencyConract"  id="19600000">Get by Completing The Distorted Reverberation Ensemble reception at Risk Level 16 or more
+while "Matriarch Wolf" or "Eroding Sandstorm" is active.</Reward>
+	<Reward Pid="ContingencyConract"  id="19700000">Get by Completing The Distorted Reverberation Ensemble reception at Risk Level 16 or more
+while "Puppet Show" or "Entangled Mess" is active.</Reward>
+	<Reward Pid="ContingencyConract"  id="19800000">Get by Completing The Distorted Reverberation Ensemble reception at Risk Level 16 or more
+while "Unending Carnard" or "Blood is Fuel" is active.</Reward>
+	<Reward Pid="ContingencyConract"  id="19900000">Get by Completing The Distorted Reverberation Ensemble reception at Risk Level 16 or more
+while "Aggressive Negotiation" or "Perfect Replica" is active.</Reward>
+	<Reward Pid="ContingencyConract"  id="19000000">Get by Completing The Distorted Reverberation Ensemble reception at Risk Level 16 or more
+while "Forma-sonata" or "Forma-Ternaria" is active.</Reward>
+</RewardCondition>

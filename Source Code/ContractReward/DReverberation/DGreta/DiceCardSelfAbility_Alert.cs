@@ -30,9 +30,9 @@ namespace ContractReward
             {
                 TargetCard = card;
             }
-            public void OnStartBattle()
+            public void OnStartBattle(BattleUnitModel unit)
             {
-                if (TargetCard!=null && _owner.allyCardDetail.GetHand().Contains(TargetCard))
+                if (TargetCard!=null && unit.allyCardDetail.GetHand().Contains(TargetCard))
                 {
                     DiceCardXmlInfo cardItem = ItemXmlDataList.instance.GetCardItem(TargetCard.GetID());
                     List<BattleDiceBehavior> behaviourList = new List<BattleDiceBehavior>();
@@ -50,9 +50,9 @@ namespace ContractReward
                         }
                         behaviourList.Add(battleDiceBehavior);
                     }
-                    _owner.cardSlotDetail.keepCard.AddBehaviours(cardItem, behaviourList);
-                    _owner.allyCardDetail.DiscardACardByAbility(TargetCard);
-                    _owner.allyCardDetail.DrawCards(1);
+                    unit.cardSlotDetail.keepCard.AddBehaviours(cardItem, behaviourList);
+                    unit.allyCardDetail.DiscardACardByAbility(TargetCard);
+                    unit.allyCardDetail.DrawCards(1);
                 }
             }
         }

@@ -15,10 +15,6 @@ namespace Contingecy_Contract
         private static int[] Arsenal = new int[]{702001,702002,702003,702004,702005,702006,702007,702008, 702009};
         private Queue<int> Priority=new Queue<int>();
         private int StrongProc = 0;
-        public ContingecyContract_Roland1st_Furioso(int level)
-        {
-            Level = level;
-        }
         public override int SpeedDiceNumAdder()
         {
             int num = Level;
@@ -131,10 +127,6 @@ namespace Contingecy_Contract
     public class ContingecyContract_Roland1st_Durandal : ContingecyContract
     {
         private Queue<int> Priority = new Queue<int>();
-        public ContingecyContract_Roland1st_Durandal(int level)
-        {
-            Level = level;
-        }
         public override string[] GetFormatParam(string language) => new string[] {  GetParam(language) };
         private string GetParam(string language)
         {
@@ -238,10 +230,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_Roland1st : ContingecyContract
     {
-        public ContingecyContract_Roland1st(int level)
-        {
-            Level = level;
-        }
         public override bool CheckEnemyId(LorId EnemyId)
         {
             return EnemyId == 60005;

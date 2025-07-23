@@ -16,7 +16,7 @@ namespace ContractReward
         }
         public override bool OnBreakGageZero()
         {
-            this.owner.LoseHp(100);
+            this.owner.LoseHp(50);
             this.owner.breakDetail.RecoverBreak(this.owner.breakDetail.GetDefaultBreakGauge());
             this.owner.bufListDetail.AddKeywordBufByEtc(KeywordBuf.Strength, 1, this.owner);
             return true;

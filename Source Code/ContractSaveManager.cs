@@ -12,10 +12,6 @@ using static BaseMod.Tools;
 
 namespace Contingecy_Contract
 {
-    public class Data<T>
-    {
-        public T data;
-    }
     static class ContractSaveManager
     {
         public static void RemoveData(string savename)
@@ -27,31 +23,53 @@ namespace Contingecy_Contract
             File.Delete(Saveroot + savename);
         }
 
-        public static void Save<T>(T value, string savename)
+        public static SaveCollection EncryClearList(HashSet<LorId> ClearList)
         {
-            if (!Directory.Exists(Saveroot))
-                Directory.CreateDirectory(Saveroot);
-            string path = string.Concat(Saveroot, savename, ".json");
-            File.WriteAllText(path, new Data<T>
+            SaveCollection SC=new SaveCollection();
+            SC.Active = ContractRewardSystem.Instance.Active;
+            foreach (LorId id in ClearList)
             {
-                data = value
-            }.ToJson());
+                SavedReward sr = SC.GetSavedReward(id.packageId);
+                if (sr == null)
+                    SC.SRs.Add(new SavedReward() { Pid = id.packageId, data = new List<int>() { id.id } });
+                else
+                    sr.data.Add(id.id);
+            }
+            return SC;
+        }
+        public static HashSet<LorId> DecryptSave(SaveCollection saves)
+        {
+            HashSet<LorId> clearList= new HashSet<LorId>();
+            ContractRewardSystem.Instance.Active = saves.Active;
+            saves.SRs.ForEach(x => x.data.ForEach(y => clearList.Add(new LorId(x.Pid, y) ) ) );
+            return clearList;
         }
 
-        public static T Load<T>(string savename)
+        public static void Save(string savename)
         {
             if (!Directory.Exists(Saveroot))
-            {
                 Directory.CreateDirectory(Saveroot);
-                return default(T);
-            }
-
             string path = string.Concat(Saveroot, savename, ".json");
-            if (!File.Exists(path))
+            SaveCollection SC = EncryClearList(ContractRewardSystem.Instance.ClearList);
+            File.WriteAllText(path, SC.ToJson());
+        }
+
+        public static void Load(string savename)
+        {
+            HashSet<LorId> bmSave = new HashSet<LorId>();
+            if (Directory.Exists(Saveroot))
             {
-                return default(T);
+                string path = string.Concat(Saveroot, savename, ".json");
+                if (File.Exists(path))
+                {
+                    bmSave = DecryptSave(File.ReadAllText(path).ToObject<SaveCollection>());
+                }
             }
-            return File.ReadAllText(path).ToObject<Data<T>>().data;
+            if (bmSave.Count > 0)
+            {
+                foreach(LorId id in bmSave)
+                    ContractRewardSystem.Instance.ClearList.Add(id);
+            }
         }
 
         public static string Saveroot => SaveManager.savePath + "/CCSave/";

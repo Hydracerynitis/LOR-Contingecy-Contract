@@ -1,4 +1,5 @@
 ﻿using BaseMod;
+using Contingecy_Contract;
 using LOR_DiceSystem;
 using Sound;
 using System;
@@ -23,6 +24,7 @@ namespace ContractReward
             mermaid.allyCardDetail.Init(owner.UnitData.unitData.GetDeckForBattle(2));
             mermaid.allyCardDetail.ReturnAllToDeck();
             mermaid.allyCardDetail.DrawCards(4);
+            ContractAttribution.Init(mermaid);
             unit.personalEgoDetail.RemoveCard(Tools.MakeLorId(18500008));
             unit.personalEgoDetail.RemoveCard(Tools.MakeLorId(18500009));
         }

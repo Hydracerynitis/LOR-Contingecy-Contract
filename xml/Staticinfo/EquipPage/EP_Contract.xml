@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<BookXmlRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  	<Book ID="60004">
+    	<Name>奥利维耶</Name>
+   	<TextId>260004</TextId>
+    	<EquipEffect>
+      	    <HP>210</HP>
+            <Break>125</Break>
+            <SpeedMin>2</SpeedMin>
+            <Speed>7</Speed>
+            <SResist>Normal</SResist>
+            <PResist>Normal</PResist>
+            <HResist>Endure</HResist>
+            <SBResist>Endure</SBResist>
+            <PBResist>Normal</PBResist>
+            <HBResist>Normal</HBResist>
+      		<StartPlayPoint>4</StartPlayPoint>
+      		<MaxPlayPoint>4</MaxPlayPoint>
+            <Passive Pid="@origin">10008</Passive>
+            <Passive Pid="@origin">260001</Passive>
+            <Passive Pid="@origin">260004</Passive>
+            <Passive Pid="@origin">260003</Passive>
+            <AddedStartDraw>2</AddedStartDraw>
+            <StartPlayPoint>4</StartPlayPoint>
+            <MaxPlayPoint>4</MaxPlayPoint>
+    	</EquipEffect>
+    	<BookIcon>HanaAssociation</BookIcon>
+        <Chapter>7</Chapter>
+        <Rarity>Unique</Rarity>
+        <CharacterSkin>Olivier</CharacterSkin>
+ 	 </Book>
+</BookXmlRoot>

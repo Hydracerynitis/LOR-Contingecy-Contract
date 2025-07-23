@@ -21,6 +21,11 @@
 			<TextList />
 			<PassiveList />
 		</BookDesc>
+		<BookDesc BookID="17000004">
+			<BookName>疯子</BookName>
+			<TextList />
+			<PassiveList />
+		</BookDesc>
 		<BookDesc BookID="17000005">
 			<BookName>失落天使</BookName>
 			<TextList />

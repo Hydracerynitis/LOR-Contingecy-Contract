@@ -1,8 +1,9 @@
-﻿using System;
+﻿using BaseMod;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using AutoKeywordUtil;
 
 namespace Contingecy_Contract
 {
@@ -19,6 +20,40 @@ namespace Contingecy_Contract
                     triggeredTagTeamCard.Add(page);
                     return;
                 }
+            }
+        }
+        public static void AddAutoBufByCard<T>(this BattleUnitBufListDetail unitBufListDetail, int stack, BattleUnitModel actor = null, BufReadyType readyType = BufReadyType.ThisRound)
+      where T : IAutoKeywordBuf
+        {
+            
+            switch (readyType)
+            {
+                case BufReadyType.ThisRound:
+                    unitBufListDetail.AddKeywordBufThisRoundByCard(AutoKeywordUtils.GetAutoKeyword(typeof(T)), stack, actor);
+                    return;
+                case BufReadyType.NextRound:
+                    unitBufListDetail.AddKeywordBufByCard(AutoKeywordUtils.GetAutoKeyword(typeof(T)), stack, actor);
+                    return;
+                case BufReadyType.NextNextRound:
+                    unitBufListDetail.AddKeywordBufNextNextByCard(AutoKeywordUtils.GetAutoKeyword(typeof(T)), stack, actor);
+                    return;
+            }
+        }
+
+        public static void AddAutoBufByEtc<T>(this BattleUnitBufListDetail unitBufListDetail, int stack, BattleUnitModel actor = null, BufReadyType readyType = BufReadyType.ThisRound)
+      where T : IAutoKeywordBuf
+        {
+
+            switch (readyType)
+            {
+                case BufReadyType.ThisRound:
+                    unitBufListDetail.AddKeywordBufThisRoundByEtc(AutoKeywordUtils.GetAutoKeyword(typeof(T)), stack, actor);
+                    return;
+                case BufReadyType.NextRound:
+                    unitBufListDetail.AddKeywordBufByEtc(AutoKeywordUtils.GetAutoKeyword(typeof(T)), stack, actor);
+                    return;
+                case BufReadyType.NextNextRound:
+                    return;
             }
         }
         public static bool GreaterEqual(this LorId lhs, int rhs)
@@ -52,7 +87,11 @@ namespace Contingecy_Contract
     }
     public interface StartBattleBuf
     {
-        void OnStartBattle();
+        void OnStartBattle(BattleUnitModel unit);
+    }
+    public interface StartBattleInHandBuf
+    {
+        void OnStartBattle_inHand(BattleUnitModel unit);
     }
     public interface OnStandBy
     {
@@ -61,5 +100,17 @@ namespace Contingecy_Contract
     public interface RecoverHpBuf
     {
         void OnRecoverHp(int amount);
+    }
+    public interface OnUseOtherCardInHand
+    {
+        void OnUseOtherCardInHand(BattleUnitModel unit, BattlePlayingCardDataInUnitModel card);
+    }
+    public interface StaggerDamageReductionAllBuf
+    {
+        int GetBreakDamageReductionAll(int dmg, DamageType dmgType, BattleUnitModel attacker);
+    }
+    public interface OnAddToHandBuf
+    {
+        void OnAddToHand(BattleUnitModel unit);
     }
 }

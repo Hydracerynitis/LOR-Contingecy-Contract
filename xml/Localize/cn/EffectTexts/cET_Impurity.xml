@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleEffectTextRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<effectTextList>
+		<BattleEffectText ID="CC_NewHanaPassive1">
+			<Name>乾</Name>
+            <Desc>这一幕中使自身获得1层“强壮”且击中目标时伤害与混乱伤害+3</Desc>
+		</BattleEffectText>
+        <BattleEffectText ID="CC_NewHanaPassive2">
+			<Name>坤</Name>
+            <Desc>这一幕中使自身获得2层“忍耐”且被击中时所受伤害与混乱伤害-30%</Desc>
+		</BattleEffectText>
+        <BattleEffectText ID="CC_NewHanaPassive3">
+			<Name>坎</Name>
+            <Desc>恢复1点光芒. 若光芒已满则改为让光芒最少的友方单位恢复</Desc>
+		</BattleEffectText>
+        <BattleEffectText ID="CC_NewHanaPassive4">
+			<Name>離</Name>
+            <Desc>抽取1张书页.抽取的书页费用-1 (使用时重置)</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="Tooltip_Hexagram">
+			<Name>六十四卦书页</Name>
+            <Desc>在装备书页的速度骰上打出能让装备的书页获得额外能力.无法用在EGO,范围杀伤及被动相关书页上.</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="Tooltip_Qian">
+			<Name>[兑艮震巽] 已使用"乾"</Name>
+            <Desc>使用以下卦象书页可获得这些六十四卦书页:
+"坤": 否 (增强的书页在使用时有概率再次使用一次)			
+"坎": 讼 (增强的书页在使用时额外触发一次[使用时]特效)	
+"離": 同人 (增强的书页骰子会根据使用同名书页数量提升威力)</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="Tooltip_Kun">
+			<Name>[兑艮震巽] 已使用"坤"</Name>
+            <Desc>使用以下卦象书页可获得这些六十四卦书页:
+"乾": 泰 (将增强的书页留在手牌则使自身在这幕内造成的伤害)			
+"坎": 师 (将增强的书页留在手牌则对随机敌人触发其[使用时]特效)	
+"離": 明夷 (将增强的书页留在手牌则永久增强同名书页所有骰子)</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="Tooltip_Kan">
+			<Name>[兑艮震巽] 已使用"坎"</Name>
+            <Desc>使用以下卦象书页可获得这些六十四卦书页:
+"乾": 需 (若之前使用过高费书页,增强的书页会在打出时追加混乱伤害)			
+"坤": 比 (若之前使用过高费书页,打出增强的书页会获得抵挡混乱伤害的护盾)	
+"離": 既济 (使用其他高费书页会永久减少增强的书页费用)</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="Tooltip_Li">
+			<Name>[兑艮震巽] 已使用"離"</Name>
+            <Desc>使用以下卦象书页可获得这些六十四卦书页:
+"乾": 大有 (增强的书页在抽到的一幕内使用则提升其所有骰子威力)			
+"坤": 晋 (增强的书页在抽到的一幕内使用则获得其所有骰子的反击复制)	
+"坎": 未济 (增强的书页在抽到的一幕内使用则下一幕开始时抽取该书页)</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="CardBuf_HanaPi">
+			<Name>否</Name>
+            <Desc>使用该书页后有1/2的几率再次对随机敌人使用一次 (一幕仅一次)</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="CardBuf_HanaSong">
+			<Name>讼</Name>
+            <Desc>该书页[使用时]效果额外触发一次 (一幕仅一次)</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="CardBuf_HanaTongRen">
+			<Name>同人</Name>
+            <Desc>[使用时] 这一幕内自己每使用一张其他同名书页,该书页使的所有骰子威力+2</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="CardBuf_HanaTai">
+			<Name>泰</Name>
+            <Desc>[战斗开始] 若该书页仍在手牌里,则丢弃该书页并使在这幕内造成的伤害+35%</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="CardBuf_HanaShi">
+			<Name>师</Name>
+            <Desc>[战斗开始] 若该书页仍在手牌里,则丢弃该书页并对随机敌人触发其[使用时]效果</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="CardBuf_HanaMingYi">
+			<Name>明夷</Name>
+            <Desc>[战斗开始] 若该书页仍在手牌里,则丢弃该书页并永久提升所有同名书页骰子数值1点</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="CardBuf_HanaXu">
+			<Name>需</Name>
+            <Desc>当该书页在手牌中时每使用一张费用高于当前费用的书页自身获得1层"需"
+[使用时] 根据"需"的层数,对目标追加每层{0}点混乱伤害,使用后层数清零.</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="CardBuf_HanaBi">
+			<Name>比</Name>
+            <Desc>当该书页在手牌中时每使用一张费用高于当前费用的书页自身获得1层"比"
+[使用时] 根据"比"的层数每层获得能吸收{0}点混乱伤害的护盾,使用后层数清零.</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="staggerShield">
+			<Name>混乱护盾</Name>
+            <Desc>能吸收{0}点混乱伤害的护盾</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="CardBuf_HanaJiJi">
+			<Name>既济</Name>
+            <Desc>该书页在手牌时,每使用一张费用高于{0}费书页便让该书页费用减少1点</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="CardBuf_HanaDaYou">
+			<Name>大有</Name>
+            <Desc>[使用时] 该书页所有骰子威力+2
+[战斗开始] 若该书页在手牌里则该效果暂时失效,直至重新回到手牌上</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="CardBuf_HanaJin">
+			<Name>晋</Name>
+            <Desc>[战斗开始] 将该书页的骰子的复制以反击骰形式洗入反击池;
+若该书页在手牌里则该效果暂时失效,直至重新回到手牌上</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="CardBuf_HanaWeiJi">
+			<Name>未济</Name>
+            <Desc>[使用时] 下一幕开始时抽取该书页
+[战斗开始] 若该书页在手牌里则该效果暂时失效,直至重新回到手牌上</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="newHanaSpecial1">
+			<Name>额外效果</Name>
+            <Desc>乾 - [战斗开始] 这一幕内自身所有骰子威力+1
+坤 - [战斗开始] 使所有我方角色获得3层"守护"与"振奋".</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="newHanaSpecial2">
+			<Name>额外效果</Name>
+            <Desc>坎 - [战斗开始] 仅限下一幕使手中的书页费用-1 
+離 - [战斗开始] 抽取3张书页 </Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="newHanaUltimate1">
+			<Name>额外效果</Name>
+            <Desc>乾 - 该书页所有骰子重复投掷1次
+坤 - 恢复30%最大血量并所有混乱抗性</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="newHanaUltimate2">
+			<Name>额外效果</Name>
+            <Desc>坎 - 所有友方角色恢复2点光芒
+離 - 下一幕开始时抽取3张书页 </Desc>
+		</BattleEffectText>
+	</effectTextList>
+</BattleEffectTextRoot>
+

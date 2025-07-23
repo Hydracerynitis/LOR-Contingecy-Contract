@@ -93,7 +93,7 @@
 		<Script>TanyaCoolDown</Script>
 		<ScriptDesc></ScriptDesc>
     	<BehaviourList>
-            <Behaviour Min="29" Dice="35" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="damage5atk" ActionScript="TanyaSpecialAtk_New" Desc="" />
+            <Behaviour Min="29" Dice="35" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="damage5atk" ActionScript="TanyaSpecialAtk" Desc="" />
 		</BehaviourList>
 		<Chapter>7</Chapter>
 	    <Priority>0</Priority>

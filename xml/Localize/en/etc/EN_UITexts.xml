@@ -4,6 +4,10 @@
 	<text id="ui_RewardStage">Congrats for completing the Risk {0} Level Challenge of {1}</text>
 	<text id="ui_MoreEquipPage"> and more Keypages</text>
 	<text id="ui_popup_getequippage">Gain {1} Keypage: “{0}”</text>
+	<text id="ui_disable_reward">Are you sure about disabling Contract Reward Pages?
+Disabling Contract Reward Pages will remove all of available Reward Pages, and will no longer provide Reward Pages aftter completing high risk level receptions. This setting is more suitable for players that only want to enjoy diffcult playthroughs using this mod.</text>
+	<text id="ui_enable_reward">Are you sure about enabling Contract Reward Pages?
+Enabling Contract Reward Pages will reward you powerful Equip Page after future completion of High Risk Level Reception. Previously accquired Reward Pages will also be given after re-enabling Contract Rewards.</text>
 	<text id="ui_ForDemo">Preview</text>
 	<text id="ui_Jeaheon_counter">Counter Form</text>
 	<text id="ui_PrimeSoul_1">First Page</text>

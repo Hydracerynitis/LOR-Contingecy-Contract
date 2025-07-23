@@ -18,7 +18,7 @@ namespace Contingecy_Contract
         {
             File.WriteAllText(CCInitializer.ModPath + "/Log.txt", "ModPath: " + CCInitializer.ModPath + "\n");
         }
-        public static void Log(string message, params string[] Params)
+        public static void Log(string message, params object[] Params)
         {
             File.AppendAllText(CCInitializer.ModPath + "/Log.txt", string.Format(message,Params) + "\n");
         }
@@ -30,23 +30,6 @@ namespace Contingecy_Contract
         public static void Error(string type,Exception ex)
         {
             File.WriteAllText(CCInitializer.ModPath+"/"+type+"Error.txt", ex.ToString());
-        }
-        public static void PathDebug(string path,PathType type)
-        {
-            if (type == PathType.Directory)
-            {
-                if (!Directory.Exists(CCInitializer.ModPath + path))
-                {
-                    File.WriteAllText(Application.dataPath + "/Mods/ContingecyContractModPathError.txt", CCInitializer.ModPath + path + " not found");
-                }
-            }
-            if (type == PathType.File)
-            {
-                if (!File.Exists(CCInitializer.ModPath + path))
-                {
-                    File.WriteAllText(Application.dataPath + "/Mods/ContingecyContractModPathError.txt", CCInitializer.ModPath + path + " not found");
-                }
-            }
         }
         public static void OutputIL(string name, List<CodeInstruction> codes)
         {
@@ -61,21 +44,16 @@ namespace Contingecy_Contract
                     else
                         output += " " + codes[i].operand.ToString();
                 }
-                catch (NullReferenceException ex)
+                catch
                 {
                     output += " null";
                 }
                 foreach(Label l in codes[i].labels)
                 {
-                    output +=" [" +l.GetHashCode().ToString()+"] ";
+                    output +=" [[" +l.GetHashCode().ToString()+"]] ";
                 }
                 File.AppendAllText(CCInitializer.ModPath + "/"+name+".txt", output + "\n");
             }
         }
-    }
-    public enum PathType
-    {
-        Directory,
-        File
     }
 }

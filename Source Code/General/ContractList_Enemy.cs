@@ -11,10 +11,6 @@ namespace Contingecy_Contract
 {
     public class ContingecyContract_Damage : ContingecyContract
     {
-        public ContingecyContract_Damage(int level)
-        {
-            this.Level = level;
-        }
         public override string[] GetFormatParam(string language) => new string[] { (25*Level).ToString()};
         public override void BeforeRollDice(BattleDiceBehavior behavior)
         {
@@ -26,10 +22,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_BreakDamage : ContingecyContract
     {
-        public ContingecyContract_BreakDamage(int level)
-        {
-            this.Level = level;
-        }
         public override string[] GetFormatParam(string language) => new string[] { (25 * Level).ToString() };
         public override void BeforeRollDice(BattleDiceBehavior behavior)
         {
@@ -41,10 +33,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_Power : ContingecyContract
     {
-        public ContingecyContract_Power(int level)
-        {
-            this.Level = level;
-        }
         public override string[] GetFormatParam(string language) => new string[] { Level.ToString() };
         public override void BeforeRollDice(BattleDiceBehavior behavior)
         {
@@ -53,10 +41,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_Hp : ContingecyContract
     {
-        public ContingecyContract_Hp(int level)
-        {
-            this.Level = level;
-        }
         public override string[] GetFormatParam(string language) => new string[] { (25 * Level).ToString() };
         public override StatBonus GetStatBonus(BattleUnitModel owner)
         {
@@ -65,10 +49,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_Bp : ContingecyContract
     {
-        public ContingecyContract_Bp(int level)
-        {
-            this.Level = level;
-        }
         public override string[] GetFormatParam(string language) => new string[] { (25 * Level).ToString() };
         public override StatBonus GetStatBonus(BattleUnitModel owner)
         {
@@ -77,25 +57,14 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_NoBreak : ContingecyContract
     {
-        public ContingecyContract_NoBreak(int level)
-        {
-            this.Level = level;
-        }
         public override bool DontChangeResistByBreak() => true;
     }
     public class ContingecyContract_NoDebuff : ContingecyContract
     {
-        public ContingecyContract_NoDebuff(int level)
-        {
-            this.Level = level;
-        }
+
     }
     public class ContingecyContract_Quick: ContingecyContract
     {
-        public ContingecyContract_Quick(int level)
-        {
-            Level = level;
-        }
         public override int GetSpeedDiceAdder(int speedDiceResult)
         {
             return 10000;
@@ -103,10 +72,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_Angry: ContingecyContract
     {
-        public ContingecyContract_Angry(int level)
-        {
-            Level = level;
-        }
         public override string[] GetFormatParam(string language) => new string[] { Level.ToString(), Level.ToString() };
         public override void Init(BattleUnitModel self)
         {
@@ -121,10 +86,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_SpeedDice : ContingecyContract
     {
-        public ContingecyContract_SpeedDice(int level)
-        {
-            Level = level;
-        }
         public override string[] GetFormatParam(string language) => new string[] { GetParam(language) };
         private string GetParam(string language)
         {

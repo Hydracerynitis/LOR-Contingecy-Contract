@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LOR_DiceSystem;
+using static UnityEngine.GraphicsBuffer;
 
 namespace ContractReward
 {
@@ -50,7 +51,10 @@ namespace ContractReward
                     owner.Book.ClassInfo.workshopID = HP.UnitBookId[owner].packageId;
                     HP.UnitBookId.Remove(owner);
                 }
-                owner.view.ChangeSkin(owner.Book.ClassInfo.GetCharacterSkin());
+                if (owner.Book.IsWorkshop)
+                    owner.view.ChangeSkin(owner.Book.GetBookClassInfoId().packageId + ":" + owner.Book.ClassInfo.GetCharacterSkin());
+                else
+                    owner.view.ChangeSkin(owner.Book.ClassInfo.GetCharacterSkin());
                 owner.view.charAppearance.ChangeMotion(ActionDetail.Damaged);
                 owner.bufListDetail.AddKeywordBufByEtc(KeywordBuf.Strength, 2);
                 owner.bufListDetail.AddKeywordBufByEtc(KeywordBuf.Endurance, 2);

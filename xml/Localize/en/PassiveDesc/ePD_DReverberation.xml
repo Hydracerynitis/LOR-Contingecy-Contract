@@ -81,7 +81,7 @@ Upon death, all enemies fully restore Stagger Resist, and all status ailments on
     </PassiveDesc>
     <PassiveDesc ID="1950002">
         <Name>I Can Shrug That Off!</Name>
-        <Desc>Cannot lose more than 50% of Max HP in a single Scene. Whenever an ally dies, takes 16 Stagger damage.</Desc>
+        <Desc>Cannot lose more than 50% of Max HP in a single Scene. Whenever an ally dies, takes 20 Stagger damage.</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1950003">
         <Name>Intermission</Name>

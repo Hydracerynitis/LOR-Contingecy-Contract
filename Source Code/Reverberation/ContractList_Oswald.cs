@@ -12,10 +12,7 @@ namespace Contingecy_Contract
     public class ContingecyContract_Oswald_Debut : ContingecyContract
     {
         private Queue<int> Priority;
-        public ContingecyContract_Oswald_Debut(int level)
-        {
-            this.Level = level;
-        }
+
         public override string[] GetFormatParam(string language) => new string[] {  StaticDataManager.GetParam("Oswald_Debut_param" + Level.ToString(),language) };
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId==1305021 || EnemyId==1305031;
         private bool IsMermaid => owner.UnitData.unitData.EnemyUnitId == 1305031;
@@ -91,10 +88,6 @@ namespace Contingecy_Contract
     public class ContingecyContract_Oswald_Troll : ContingecyContract
     {
         private Dictionary<BattleUnitModel, int> DPSScore = new Dictionary<BattleUnitModel, int>();
-        public ContingecyContract_Oswald_Troll(int level)
-        {
-            this.Level = level;
-        }
         public override string[] GetFormatParam(string language) => new string[] { GetParam(language) };
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1305011;
         private string GetParam(string langugae)
@@ -316,10 +309,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_Oswald : ContingecyContract
     {
-        public ContingecyContract_Oswald(int level)
-        {
-            Level = level;
-        }
         public override void Init(BattleUnitModel self)
         {
             base.Init(self);
@@ -347,10 +336,6 @@ namespace Contingecy_Contract
     }
     public class StageModifier_Oswald : StageModifier
     {
-        public StageModifier_Oswald(int Level)
-        {
-            this.Level = Level;
-        }
         public override bool IsValid(StageClassInfo info)
         {
             return info.id== 70005;

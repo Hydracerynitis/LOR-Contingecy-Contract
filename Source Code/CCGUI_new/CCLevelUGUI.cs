@@ -50,6 +50,9 @@ namespace Contingecy_Contract
                 case 4:
                     word = "4th";
                     break;
+                case 0:
+                    word = "0th";
+                    break;
             }
             background.sprite = BH.ArtWorks[language + "_CCGUI_" + word + "Level"];
         }

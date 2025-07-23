@@ -8,27 +8,12 @@ using LOR_DiceSystem;
 
 namespace ContractReward
 {
-    public class PassiveAbility_1510001 : PassiveAbilityBase
+    public class PassiveAbility_1510001 : PassiveAbility_1510101
     {
-        public bool onHit = false;
         public override void BeforeRollDice(BattleDiceBehavior behavior)
         {
             base.BeforeRollDice(behavior);
             behavior.ApplyDiceStatBonus(new DiceStatBonus() { power = 1 });
-        }
-        public override void OnRoundEnd()
-        {
-            base.OnRoundEnd();
-            if (!onHit)
-            {
-                Focus.AddStack(owner, 3);
-            }
-            onHit = false;
-        }
-        public override bool BeforeTakeDamage(BattleUnitModel attacker, int dmg)
-        {
-            onHit = true;
-            return base.BeforeTakeDamage(attacker, dmg);
         }
     }
 }

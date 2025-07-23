@@ -12,10 +12,6 @@ namespace Contingecy_Contract
 {
     public class ContingecyContract_Bremen_Self : ContingecyContract
     {
-        public ContingecyContract_Bremen_Self(int level)
-        {
-            Level = level;
-        }
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1304011;
         public override string[] GetFormatParam(string language) => new string[] { Level.ToString(), GetParam(language) };
         private PassiveAbility_1304012 passive=null;
@@ -143,10 +139,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_Bremen_Group : ContingecyContract
     {
-        public ContingecyContract_Bremen_Group(int level)
-        {
-            Level = level;
-        }
         private bool isBremen => owner.UnitData.unitData.EnemyUnitId == 1304011;
         private List<BattleUnitModel> dead = new List<BattleUnitModel>();
         private int count;
@@ -225,10 +217,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_Bremen : ContingecyContract
     {
-        public ContingecyContract_Bremen(int level)
-        {
-            Level = level;
-        }
         private double accumulateDamage;
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1304011;
         public override void Init(BattleUnitModel self)

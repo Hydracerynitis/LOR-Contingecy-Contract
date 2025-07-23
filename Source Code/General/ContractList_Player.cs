@@ -11,10 +11,6 @@ namespace Contingecy_Contract
 {
     public class ContingecyContract_Damage_L : ContingecyContract
     {
-        public ContingecyContract_Damage_L(int level)
-        {
-            this.Level = level;
-        }
         public override string[] GetFormatParam(string language) => new string[] { (20*Level).ToString()};
         public override void BeforeRollDice(BattleDiceBehavior behavior)
         {
@@ -26,10 +22,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_BreakDamage_L : ContingecyContract
     {
-        public ContingecyContract_BreakDamage_L(int level)
-        {
-            this.Level = level;
-        }
         public override string[] GetFormatParam(string language) => new string[] { (20 * Level).ToString() };
         public override void BeforeRollDice(BattleDiceBehavior behavior)
         {
@@ -41,10 +33,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_Power_L : ContingecyContract
     {
-        public ContingecyContract_Power_L(int level)
-        {
-            this.Level = level;
-        }
         public override string[] GetFormatParam(string language) => new string[] { Level.ToString() };
         public override void BeforeRollDice(BattleDiceBehavior behavior)
         {
@@ -53,10 +41,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_Hp_L : ContingecyContract
     {
-        public ContingecyContract_Hp_L(int level)
-        {
-            this.Level = level;
-        }
         public override string[] GetFormatParam(string language) => new string[] { (20 * Level).ToString() };
         public override StatBonus GetStatBonus(BattleUnitModel owner)
         {
@@ -65,10 +49,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_Bp_L : ContingecyContract
     {
-        public ContingecyContract_Bp_L(int level)
-        {
-            this.Level = level;
-        }
         public override string[] GetFormatParam(string language) => new string[] { (20 * Level).ToString() };
         public override StatBonus GetStatBonus(BattleUnitModel owner)
         {
@@ -77,16 +57,14 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_Darkness : ContingecyContract
     {
-        public ContingecyContract_Darkness(int level)
-        {
-            this.Level = level;
-        }
         public override string[] GetFormatParam(string language) => new string[] { (4-Level).ToString() };
-        public override void OnWaveStart()
+        public override void Init(BattleUnitModel self)
         {
+            base.Init(self);
+            if (CCInitializer.CombaltData.ContainsKey(self.UnitData))
+                return;
             this.owner.cardSlotDetail.LosePlayPoint(this.owner.cardSlotDetail.PlayPoint);
-            this.owner.cardSlotDetail.RecoverPlayPoint(4-Level);
-            this.owner.cardSlotDetail.SetRecoverPoint(0);
+            this.owner.cardSlotDetail.RecoverPlayPoint(4 - Level);
         }
         public override void OnRoundEnd()
         {
@@ -97,24 +75,12 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_NoBuff : ContingecyContract
     {
-        public ContingecyContract_NoBuff(int level)
-        {
-            this.Level = level;
-        }
     }
     public class ContingecyContract_NoEGO: ContingecyContract
     {
-        public ContingecyContract_NoEGO(int level)
-        {
-            Level = level;
-        }
     }
     public class ContingecyContract_NoEmotion : ContingecyContract
     {
-        public ContingecyContract_NoEmotion(int level)
-        {
-            Level = level;
-        }
         public override string[] GetFormatParam(string language) => new string[] { GetParam(language)};
         private string GetParam(string language)
         {

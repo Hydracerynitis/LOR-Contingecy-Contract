@@ -16,7 +16,7 @@ namespace ContractReward
         public override void OnRoundStart()
         {
             base.OnRoundStart();
-            BattleObjectManager.instance.GetAliveList(owner.faction).FindAll(x => x.IsDead() && x.UnitData.unitData.EnemyUnitId.id <= 40006 && x.UnitData.unitData.EnemyUnitId.id >= 40004).ForEach(x => BattleObjectManager.instance.UnregisterUnit(x));
+            BattleObjectManager.instance.GetList(owner.faction).FindAll(x => x.IsDead() && x.UnitData.unitData.EnemyUnitId.id <= 40006 && x.UnitData.unitData.EnemyUnitId.id >= 40004).ForEach(x => BattleObjectManager.instance.UnregisterUnit(x));
             foreach(BattleUnitModel model in victims)
             {
                 int id = RandomUtil.SelectOne(0,1,2);
@@ -27,6 +27,7 @@ namespace ContractReward
                 puppet.bufListDetail.AddBuf(new PuppetUnctrollable());
                 puppet.cardSlotDetail.RecoverPlayPoint(puppet.cardSlotDetail.GetMaxPlayPoint());
                 puppet.moveDetail.ReturnToFormationByBlink();
+                ContractAttribution.Init(puppet);
             }
             victims.Clear();
         }

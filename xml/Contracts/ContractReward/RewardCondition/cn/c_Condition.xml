@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RewardCondition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <!--梦魇-->
+    <Reward Pid="ContingencyConract" id="15100000">在24危机等级或更高的情况下完成し协会接待可获得</Reward>
+    <Reward Pid="ContingencyConract" id="15100001">在24危机等级或更高的情况下完成し协会接待可获得</Reward>
+    <Reward Pid="ContingencyConract" id="15100002">在24危机等级或更高的情况下完成し协会接待可获得</Reward>
+    <!--杂质-->
+    <Reward Pid="ContingencyConract" id="17100000">在16危机等级或更高的情况下完成하나协会接待可获得</Reward>
+    <Reward Pid="ContingencyConract" id="17100001">在16危机等级或更高的情况下完成하나协会接待可获得</Reward>
+    <Reward Pid="ContingencyConract" id="17100002">在16危机等级或更高的情况下完成하나协会接待并且激活了
+“战术指挥网络3”或“复仇协议3”，“兑艮震巽”，“加班调休”可获得</Reward>
+    <!--残响乐团-->
+	<Reward Pid="ContingencyConract" id="18100000">在16危机等级或更高的情况下完成哭泣之子(残响)接待可获得</Reward>
+	<Reward Pid="ContingencyConract" id="18200000">在16危机等级或更高的情况下完成齿轮教团接待可获得</Reward>
+	<Reward Pid="ContingencyConract"  id="18300000">在16危机等级或更高的情况下完成八大主厨接待可获得</Reward>
+	<Reward Pid="ContingencyConract" id="18400000">在16危机等级或更高的情况下完成不来梅乐团可获得</Reward>
+	<Reward Pid="ContingencyConract" id="18500000">在16危机等级或更高的情况下完成8点档马戏团可获得</Reward>
+	<Reward Pid="ContingencyConract" id="18600000">在16危机等级或更高的情况下完成狼之时刻可获得</Reward>
+	<Reward Pid="ContingencyConract" id="18700000">在16危机等级或更高的情况下完成傀儡师可获得</Reward>
+    <Reward Pid="ContingencyConract" id="18800000">在16危机等级或更高的情况下完成猩红之月可获得</Reward>
+    <Reward Pid="ContingencyConract" id="18810000">在16危机等级或更高情况下完成猩红之月接待并且激活了
+“研磨锋刃4”，“烧灼十字3”，“一号小提琴的典雅”可获得</Reward>
+    <Reward Pid="ContingencyConract" id="18900000">在16危机等级或更高的情况下完成l昨日之约可获得</Reward>
+    <Reward Pid="ContingencyConract" id="18000000">完成所有残响乐团的危机挑战可获得</Reward>
+    <!--漆黑静默-->
+	<Reward Pid="ContingencyConract" id="17000001">在16危机等级或更高的情况下完成漆黑静默可获得</Reward>
+    <Reward Pid="ContingencyConract" id="17000002">在16危机等级或更高情况下完成漆黑静默接待并且激活了“Furioso 3”或“查理曼圣剑3”，
+“浓烟弥漫3” 或 “Qui Garde Un Secret3”，“一码归一码” 或 “烟霾之战”可获得</Reward>
+    <Reward Pid="ContingencyConract" id="17000003">在16危机等级或更高情况下完成漆黑静默接待并且激活了“协同进军 3”或
+“黑白圆舞曲3”，“追忆: 漆黑静默3” 或 “追忆: 九阶收尾人3”，
+“瞬息而散” 或 “追忆: 失落天使”可获得</Reward>
+    <Reward Pid="ContingencyConract" id="17000004">在16危机等级或更高情况下完成漆黑静默接待并且
+激活了“图穷匕现”，“最后防线”可获得</Reward>
+    <Reward Pid="ContingencyConract" id="17000005">完成所有漆黑静默的危机挑战可获得</Reward>
+    <!--扭曲残响-->
+    <Reward Pid="ContingencyConract" id="19100000">在16危机等级或更高情况下完成扭曲残响乐团接待并且
+激活了“火种复苏”或“无尽枷锁”可获得</Reward>
+    <Reward Pid="ContingencyConract" id="19200000">在16危机等级或更高情况下完成扭曲残响乐团接待并且
+激活了“烟气生产”或“齿轮降神”可获得</Reward>
+    <Reward Pid="ContingencyConract" id="19300000">在16危机等级或更高情况下完成扭曲残响乐团接待并且
+激活了“骑士之愿”或“饕餮之愿”可获得</Reward>
+    <Reward Pid="ContingencyConract" id="19400000">在16危机等级或更高情况下完成扭曲残响乐团接待并且
+激活了“尽情高歌”或“振奋共歌”可获得</Reward>
+    <Reward Pid="ContingencyConract" id="19500000">在16危机等级或更高情况下完成扭曲残响乐团接待并且
+激活了“It's Showtime!”或“顶级演出”可获得</Reward>
+    <Reward Pid="ContingencyConract" id="19600000">在16危机等级或更高情况下完成扭曲残响乐团接待并且
+激活了“头狼”或“风沙残蚀”可获得</Reward>
+    <Reward Pid="ContingencyConract" id="19700000">在16危机等级或更高情况下完成扭曲残响乐团接待并且
+激活了“傀儡戏”或“纠缠乱网”可获得</Reward> 
+    <Reward Pid="ContingencyConract" id="19800000">在16危机等级或更高情况下完成扭曲残响乐团接待并且
+激活了“不死传闻”或“鲜血为薪”可获得</Reward>
+    <Reward Pid="ContingencyConract" id="19900000">在16危机等级或更高情况下完成扭曲残响乐团接待并且
+激活了“激进协商”或“完美复制”可获得</Reward>
+    <Reward Pid="ContingencyConract" id="19000000">在16危机等级或更高情况下完成扭曲残响乐团接待并且
+激活了“奏鸣曲式”或“三段曲式”可获得</Reward>
+</RewardCondition>

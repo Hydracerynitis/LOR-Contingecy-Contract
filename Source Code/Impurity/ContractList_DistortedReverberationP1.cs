@@ -11,10 +11,6 @@ namespace Contingecy_Contract
 {
     public class ContingecyContract_DPhilip_Helios : ContingecyContract
     {
-        public ContingecyContract_DPhilip_Helios(int level)
-        {
-            this.Level = level;
-        }
         public override bool CheckEnemyId(LorId EnemyId)
         {
             return EnemyId== 1401011;
@@ -32,10 +28,6 @@ namespace Contingecy_Contract
     public class ContingecyContract_DPhilip_Restraint : ContingecyContract
     {
         private int count = 0;
-        public ContingecyContract_DPhilip_Restraint(int level)
-        {
-            this.Level = level;
-        }
         public override bool CheckEnemyId(LorId EnemyId)
         {
             return EnemyId == 1401011;
@@ -55,10 +47,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_DEileen_Smoke : ContingecyContract
     {
-        public ContingecyContract_DEileen_Smoke(int level)
-        {
-            this.Level = level;
-        }
         public override bool CheckEnemyId(LorId EnemyId)
         {
             return EnemyId == 1402011;
@@ -90,10 +78,6 @@ namespace Contingecy_Contract
     public class ContingecyContract_DEileen_DeusEx : ContingecyContract
     {
         private PassiveAbility_1402014 passive;
-        public ContingecyContract_DEileen_DeusEx(int level)
-        {
-            this.Level = level;
-        }
         public override bool CheckEnemyId(LorId EnemyId)
         {
             return EnemyId == 1402011;
@@ -117,10 +101,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_DGreta_Prot : ContingecyContract
     {
-        public ContingecyContract_DGreta_Prot(int level)
-        {
-            this.Level = level;
-        }
         public override bool CheckEnemyId(LorId EnemyId)
         {
             return EnemyId == 1403011;
@@ -138,10 +118,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_DGreta_Eat : ContingecyContract
     {
-        public ContingecyContract_DGreta_Eat(int level)
-        {
-            this.Level = level;
-        }
         public override bool CheckEnemyId(LorId EnemyId)
         {
             return EnemyId == 1403011;
@@ -150,18 +126,12 @@ namespace Contingecy_Contract
         {
             base.OnRoundStartAfter();
             BattleDiceCardModel tackle = owner.allyCardDetail.GetHand().Find(x => x.GetID() == 707305);
-            /*if (StageController.Instance.RoundTurn % 2 == 0 && owner.emotionDetail.EmotionLevel < 4)
-                owner.allyCardDetail.ExhaustACard(tackle);*/
             tackle.SetPriorityAdder(4);
             DeepCopyUtil.EnhanceCard(new int[] { 1, 2, 3 }, tackle, 3, 3);
         }
     }
     public class ContingecyContract_DBremen_Self : ContingecyContract
     {
-        public ContingecyContract_DBremen_Self(int level)
-        {
-            this.Level = level;
-        }
         public override bool CheckEnemyId(LorId EnemyId)
         {
             return EnemyId == 1404011;
@@ -170,13 +140,25 @@ namespace Contingecy_Contract
         {
             return new StatBonus() {breakGageAdder=90 };
         }
+        public class PassiveAbility_1404013_New : PassiveAbility_1404013
+        {
+            public override void OnDie()
+            {
+                List<BattleUnitModel> aliveList = BattleObjectManager.instance.GetAliveList(this.owner.faction == Faction.Enemy ? Faction.Player : Faction.Enemy);
+                int stack = 1;
+                if (aliveList.Count == 0)
+                    return;
+                foreach (BattleUnitModel battleUnitModel in aliveList)
+                {
+                    battleUnitModel.bufListDetail.AddKeywordBufByEtc(KeywordBuf.Strength, stack, this.owner);
+                    battleUnitModel.bufListDetail.AddKeywordBufByEtc(KeywordBuf.Quickness, stack, this.owner);
+                    battleUnitModel.bufListDetail.AddKeywordBufByEtc(KeywordBuf.Endurance, stack, this.owner);
+                }
+            }
+        }
     }
     public class ContingecyContract_DBremen_Other : ContingecyContract
     {
-        public ContingecyContract_DBremen_Other(int level)
-        {
-            this.Level = level;
-        }
         public override bool CheckEnemyId(LorId EnemyId)
         {
             return EnemyId == 1404011;

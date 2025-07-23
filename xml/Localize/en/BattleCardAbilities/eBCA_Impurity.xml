@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleCardAbilityDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!--Hana-->
+	<BattleCardAbility ID="HanaPi">
+    	<Desc>[On Play] Apply the following ability to the slotted Combat Page:
+"After using the page, reuse the page against a random enemy at 50% chance. (Once per Scene)"</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaSong">
+    	<Desc>[On Play] Apply the following ability to the slotted Combat Page:
+"The page's [On Use] effect trigger twice (Once per Scene)"</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaTongRen">
+    	<Desc>[On Play] Apply the following ability to the slotted Combat Page:
+"[On Use] For each other copy of the page played this Scene by the character, all dice of the page gain +2 Power"</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaTai">
+    	<Desc>[On Play] Apply the following ability to the slotted Combat Page:
+"[Combat Start] If this page remain in hand, discard this page to boost your Damage dealt in this Scene by +35%"</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaShi">
+    	<Desc>[On Play] Apply the following ability to the slotted Combat Page:
+"[Combat Start] If this page remain in hand, discard this page to trigger its [On Use] effect on random enemy"</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaMingYi">
+    	<Desc>[On Play] Apply the following ability to the slotted Combat Page:
+"[Combat Start] If this page remain in hand, discard this page to permantly uplift all dice of its copies by 1"</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaXu">
+    	<Desc>[On Play] Apply the following ability to the slotted Combat Page:
+"When using Pages with cost larger than the cost of this Page, gain 1 stack of "Xū"			
+[On Use] Based on Xū's stack, inflict (2+(Current Cost)*4) Stagger Damage per stack to target. Reset all stacks after use"</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaBi">
+    	<Desc>[On Play] Apply the following ability to the slotted Combat Page:
+"When using Pages with cost larger than the cost of this Page, gain 1 stack of "Bǐ"			
+[On Use] Based on Bǐ's stack, gain shield that can absorb (3+(Current Cost)*6) Stagger Damage per stack. Reset all stacks after use"</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaJiJi">
+    	<Desc>[On Play] Apply the following ability to the slotted Combat Page:
+"When using Pages that cost more while this page is in hand, permantly reduce the cost of this page by 1"</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaDaYou">
+    	<Desc>[On Play] Apply the following ability to the slotted Combat Page:
+"[On Use] All dice gain +2 Power
+[Combat Start] If this page remain in hand, temporarily disable this effect until this Page return to hand again"</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaJin">
+    	<Desc>[On Play] Apply the following ability to the slotted Combat Page:
+"[Combat Start] Retain copies of all dice as Counter dice;
+If this page remain in hand, temporarily disable this effect until this Page return to hand again"</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaWeiJi">
+    	<Desc>[On Play] Apply the following ability to the slotted Combat Page:
+"[On Use] Draw this page at the start of next Scene
+[Combat Start] If this page remain in hand, temporarily disable this effect until this Page return to hand again"</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="newHanaSpecial">
+    	<Desc>[Combat Start] Gains additional effects depending on the Four Trigrams page ('Geon', 'Gon', 'Gam', and 'Ri') used during the Scene
+[On Use] Refresh all used Trigram Pages</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaUltimate">
+    	<Desc>[On Use] Discard all pages from hand; all dice on this page gain +2 Power;
+If more than 4 Pages have been discarded, gains additional effects depending on the Four Trigrams page ('Geon', 'Gon', 'Gam', and 'Ri') used during the Scene</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaUpgrade">
+    	<Desc>[On Clash Win] Boost next die’s max value by +3</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="GonPower">
+    	<Desc>If Trigram Page 'Gon' is used, this die gain +3 Power</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="GeonDmg">
+    	<Desc>If Trigram Page 'Geon' is used, this die deal +50% Damage</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaCostdown">
+    	<Desc>At the end of each Scene, this Page's cost is lowered by 1 if the character use a Trigram Page (Reset after use)</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaBuf">
+    	<Desc>[Combat Start] If Trigram Page [Gam] is used, fix the cost of the Page to 2
+[On Use] Gain 1 [Strength] next Scene</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaBufAtk">
+    	<Desc>[On Hit] Gain 2 [Strength] next Scene; If Trigram Page [Gon] is used, gain additional 3 [Endurance] next Scene</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaDraw">
+    	<Desc>[On Use] Draw 1 Page
+If Trigram Page [Gon] is used, add 2 Block dice (5-8) to the card queue</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaSpear">
+    	<Desc>[On Hit] Deal 5 damage to target;If Trigram Page [Geon] is used, deal damage eqaul to its valid roll to target</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="RiLight">
+    	<Desc>[On Hit] If Trigram Page [Ri] is used, Recover 2 Light</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="GamDraw">
+    	<Desc>[On Hit] If Trigram Page [Gam] is used, Draw 1 Page</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaSkull">
+    	<Desc>[On Use] Recover 1 Light
+If Trigram Page [Goen], the maximum rolled of all offensive dice on this page is increased by +3</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="RiDmg">
+    	<Desc>If Trigram [Ri] is used, the die's damage is increased by (the number of Page in hand)*2</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaDebufClear">
+    	<Desc>[Combat Start] Remove all status ailments on self
+If Trigram Page [Gam] is used, recover 1 Light for each status ailment removed at the start of next Scene</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="RiDraw">
+    	<Desc>If Trigram Page [Ri] is used and there are less than 4 Pages in the hand, draw 2 Pages.</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaFriend">
+    	<Desc>[Combat Start] Give 2 [Protection] to all allies this Scene
+If Trigram Page [Goen] is used, give additonal 1 [Strength]</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="GonBreak">
+    	<Desc>[On Hit] Recover 5 Stagger Resist
+If Trigram Page [Gon] is used, all other Unstaggered allies recover 5 Stagger Resist</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaEnergy">
+    	<Desc>[On Use] Recover 1 Light
+If Trigram Page [Gam] is used, recover additional 1 Light</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="GeonReuse">
+    	<Desc>[On Hit] If Trigram Page 'Goen' is used, Reuse this die (at most Once)</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="newHanaDiscardDraw">
+    	<Desc>[On Use] Discard a random page; draw 2 pages at the start of the next Scene
+If Trigram Page [Ri] is used, temporarily increase the maximum number of Pages in hand by +2</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="GonBrace">
+    	<Desc>[On Clash Lose] Reduce target die's damage by 5
+If Trigram Page [Gon] is used, apply the same effect for target Page's remaining dice as well</Desc>
+  	</BattleCardAbility>
+</BattleCardAbilityDescRoot>

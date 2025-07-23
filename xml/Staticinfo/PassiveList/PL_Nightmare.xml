@@ -6,6 +6,13 @@
     		<CanGivePassive>false</CanGivePassive>
 		<Cost>6</Cost>
   	</Passive>
+
+	<Passive ID="1510101">
+		<Rarity>Unique</Rarity>
+    		<CanGivePassive>false</CanGivePassive>
+		<Cost>6</Cost>
+  	</Passive>
+
 	<Passive ID="1510002">
 		<Rarity>Unique</Rarity>
     		<CanGivePassive>false</CanGivePassive>
@@ -18,8 +25,30 @@
   	</Passive>
 	<Passive ID="1510004">
 		<Rarity>Uncommon</Rarity>
-    		<CanGivePassive>false</CanGivePassive>
+    	<CanGivePassive>false</CanGivePassive>
+		<CopyInnerType Pid="@origin">241301</CopyInnerType>
 		<Cost>2</Cost>
   	</Passive>
-
+	<Passive ID="1510005">
+		<Rarity>Rare</Rarity>
+    		<CanGivePassive>false</CanGivePassive>
+			<CopyInnerType Pid="@origin">240002</CopyInnerType>
+		<Cost>3</Cost>
+  	</Passive>
+	<Passive ID="1510006">
+		<Rarity>Unique</Rarity>
+    	<CanGivePassive>false</CanGivePassive>
+		<Cost>5</Cost>
+  	</Passive>
+	<Passive ID="1510007">
+		<Rarity>Rare</Rarity>
+    	<CanGivePassive>false</CanGivePassive>
+		<CopyInnerType Pid="@origin">240003</CopyInnerType>
+		<Cost>4</Cost>
+  	</Passive>
+	<Passive ID="1510008">
+		<Rarity>Rare</Rarity>
+    	<CanGivePassive>false</CanGivePassive>
+		<Cost>4</Cost>
+  	</Passive>
 </PassiveXmlRoot>

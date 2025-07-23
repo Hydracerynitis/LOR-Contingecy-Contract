@@ -5,7 +5,6 @@
 		<Artwork>Shi1</Artwork>
 		<Rarity>Unique</Rarity>
 		<Option>OnlyPage</Option>
-		<Option>OnlyPage</Option>
 		<Option>Basic</Option>
 		<Spec Range="Near" Cost="3" />
 		<Script/>
@@ -13,7 +12,7 @@
 		<BehaviourList>
 		<Behaviour Min="12" Dice="20" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="Shi_H" Script="newYujin" ActionScript="newborderof4" Desc="" />
 		</BehaviourList>
-		<Chapter>5</Chapter>
+		<Chapter>7</Chapter>
 		<Priority>2</Priority>
 		<SortPriority>1</SortPriority>
 	</Card>
@@ -29,7 +28,7 @@
 		<BehaviourList>
 		<Behaviour Min="9" Dice="15" Type="Atk" Detail="Slash" Motion="J" EffectRes="Shi_J" Script="shiDestroy" Desc="" />
 		</BehaviourList>
-		<Chapter>5</Chapter>
+		<Chapter>7</Chapter>
 		<Priority>0</Priority>
 	</Card>
 	<Card ID="15100003">
@@ -46,7 +45,7 @@
 		<Behaviour Min="3" Dice="10" Type="Atk" Detail="Slash" Motion="H" EffectRes="Tenma_H" Script="" Desc="" />
 		<Behaviour Min="4" Dice="9" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" Desc="" />
 		</BehaviourList>
-		<Chapter>5</Chapter>
+		<Chapter>7</Chapter>
 		<Priority>0</Priority>
 	</Card>
 	<Card ID="15100004">
@@ -62,7 +61,7 @@
 		<Behaviour Min="2" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="Tenma_J" Script="" Desc="" />
 		<Behaviour Min="3" Dice="9" Type="Atk" Detail="Slash" Motion="Z" EffectRes="Shi_Z" Script="shiStagger" Desc="" />
 		</BehaviourList>
-		<Chapter>5</Chapter>
+		<Chapter>7</Chapter>
 		<Priority>0</Priority>
 	</Card>
 	<Card ID="15100005">
@@ -79,7 +78,7 @@
 		<Behaviour Min="3" Dice="8" Type="Atk" Detail="Hit" Motion="H" EffectRes="Shi_H" Script="" Desc="" />
 		<Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="Shi_J" Script="" Desc="" />
 		</BehaviourList>
-		<Chapter>5</Chapter>
+		<Chapter>7</Chapter>
 		<Priority>0</Priority>
 	</Card>
 	<Card ID="15100006">
@@ -95,7 +94,7 @@
 		<Behaviour Min="4" Dice="7" Type="Atk" Detail="Slash" Motion="H" EffectRes="Shi_H" Script="" Desc="" />
 		<Behaviour Min="3" Dice="7" Type="Atk" Detail="Slash" Motion="J" EffectRes="Shi_J" Script="" Desc="" />
 		</BehaviourList>
-		<Chapter>5</Chapter>
+		<Chapter>7</Chapter>
 		<Priority>0</Priority>
 	</Card>
 	<Card ID="15100007">
@@ -110,7 +109,7 @@
 		<BehaviourList>
 		<Behaviour Min="3" Dice="8" Type="Atk" Detail="Slash" Motion="Z" EffectRes="Shi_Z" Script="weak1atk" Desc="" />
 		</BehaviourList>
-		<Chapter>5</Chapter>
+		<Chapter>7</Chapter>
 		<Priority>0</Priority>
 	</Card>
     <Card ID="15100011">
@@ -125,7 +124,33 @@
 		<BehaviourList>
 			<Behaviour Min="3" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="Shi_G" Script="" Desc="" />
 		</BehaviourList>
-		<Chapter>5</Chapter>
+		<Chapter>7</Chapter>
 		<Priority>0</Priority>
   	</Card>
+	<Card ID="15100012">
+		<Name>极意之剑</Name>
+		<Artwork>Shi2</Artwork>
+		<Rarity>Rare</Rarity>
+		<Spec Range="Near" Cost="2" />
+		<Script></Script>
+		<ScriptDesc />
+		<BehaviourList>
+		<Behaviour Min="6" Dice="12" Type="Atk" Detail="Slash" Motion="J" EffectRes="Shi_J" Script="nicolaiDice1" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+	</Card>
+	<Card ID="15100013">
+		<Name>谨慎感官</Name>
+		<Artwork>Shi3</Artwork>
+		<Rarity>Rare</Rarity>
+		<Spec Range="Near" Cost="1" />
+		<Script></Script>
+		<ScriptDesc />
+		<BehaviourList>
+		<Behaviour Min="3" Dice="9" Type="Standby" Detail="Evasion" Motion="E" EffectRes="" Script="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+	</Card>
 </DiceCardXmlRoot>

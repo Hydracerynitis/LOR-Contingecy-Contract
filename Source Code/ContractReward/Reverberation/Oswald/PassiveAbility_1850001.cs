@@ -18,7 +18,7 @@ namespace ContractReward
         public override void OnDieOtherUnit(BattleUnitModel unit)
         {
             if (unit.faction == owner.faction)
-                owner.TakeBreakDamage(30, DamageType.Passive);
+                owner.TakeBreakDamage(20, DamageType.Passive);
         }
     }
 }

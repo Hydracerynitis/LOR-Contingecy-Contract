@@ -7,13 +7,16 @@ using System.Threading.Tasks;
 using BaseMod;
 using System;
 using UnityEngine;
+using AutoKeywordUtil;
 
 namespace ContractReward
 {
-    public class UnjustPower : BattleUnitBuf
+    public class UnjustPower : BattleUnitBuf, IAutoKeywordBuf
     {
         public override string keywordIconId => "PlutoUnfairAtk";
         public override string keywordId => "UnjustPower";
+        public string KeywordBufName => "CC_UnjustPower";
+        public override KeywordBuf bufType => AutoKeywordUtils.GetAutoKeyword(typeof(UnjustPower));
         public override void OnRoundStart()
         {
             base.OnRoundStart();
@@ -41,7 +44,7 @@ namespace ContractReward
         {
             base.OnEndBattle();
             if (hit)
-                card.target.bufListDetail.AddBufByCard<UnjustPower>(2, readyType: BufReadyType.NextRound);
+                card.target.bufListDetail.AddAutoBufByCard<UnjustPower>(2, readyType: BufReadyType.NextRound);
         }
     }
     public class UnjustPowerDividend: BattleUnitBuf

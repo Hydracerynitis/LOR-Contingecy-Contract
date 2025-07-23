@@ -32,14 +32,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="0Harmony">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\workshop\content\1256670\2603522001\Assemblies\0Harmony.dll</HintPath>
+    <Reference Include="0Harmony, Version=2.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\Assembly-CSharp.dll</HintPath>
     </Reference>
-    <Reference Include="BaseMod">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\workshop\content\1256670\2603522001\Assemblies\BaseMod.dll</HintPath>
+    <Reference Include="AutoKeywordUtil">
+      <HintPath>..\AutoKeywordUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="BaseMod, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BaseMod.dll</HintPath>
     </Reference>
     <Reference Include="MyJsonTool, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -56,6 +61,9 @@
     <Reference Include="Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -94,11 +102,51 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Source Code\CCGUI_new\CCRewardToggleGUI.cs" />
     <Compile Include="Source Code\CCGUI_new\CCLevelUGUI.cs" />
     <Compile Include="Source Code\CCGUI_new\CCManager.cs" />
     <Compile Include="Source Code\CCGUI_new\CCTagUGUI.cs" />
     <Compile Include="Source Code\CCGUI_new\CCUGUI.cs" />
     <Compile Include="Source Code\CCGUI_new\MyUITool.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\DiceCardAbility_GamDraw.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\DiceCardAbility_GeonReuse.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\DiceCardAbility_GonBreak.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\DiceCardAbility_GonBrace.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\DiceCardAbility_RiDmg.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\DiceCardAbility_RiDraw.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\DiceCardAbility_RiLight.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\DiceCardAbility_GeonDmg.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\DiceCardAbility_HanaSpear.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\DiceCardAbility_HanaBufAtk.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\DiceCardAbility_GonPower.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\DiceCardSelfAbility_newHanaDiscardDraw.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\DiceCardSelfAbility_HanaEnergy.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\DiceCardSelfAbility_HanaFriend.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\DiceCardSelfAbility_HanaDebufClear.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\DiceCardSelfAbility_HanaSkull.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\DiceCardSelfAbility_HanaHaste.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\DiceCardSelfAbility_HanaDraw.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\DiceCardSelfAbility_HanaBuf.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\DiceCardSelfAbility_HanaUltimate.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\DiceCardSelfAbility_HanaUpgrade.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\DiceCardSelfAbility_HanaCostDown.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\DiceCardSelfAbility_newHanaSpecial.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\DiceCardSelfAbility_HanaBi.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\DiceCardSelfAbility_HanaWeiJi.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\DiceCardSelfAbility_HanaJin.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\DiceCardSelfAbility_HanaJiJi.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\DiceCardSelfAbility_HanaDaYou.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\DiceCardSelfAbility_HanaXu.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\DiceCardSelfAbility_HanaMingYi.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\DiceCardSelfAbility_HanaShi.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\DiceCardSelfAbility_HanaTai.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\DiceCardSelfAbility_HanaTongRen.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\DiceCardSelfAbility_HanaSong.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\DiceCardSelfAbility_HanaPi.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\HexagramAbility.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\PassiveAbility_1710003.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\PassiveAbility_1710002.cs" />
+    <Compile Include="Source Code\ContractReward\Impurity\Hana\PassiveAbility_1710001.cs" />
     <Compile Include="Source Code\ContractReward\Nightmare\Yujin\DiceCardAbility_FocusClash.cs" />
     <Compile Include="Source Code\ContractReward\Nightmare\Yujin\DiceCardAbility_shiStagger.cs" />
     <Compile Include="Source Code\ContractReward\Nightmare\Yujin\DiceCardAbility_shiDestroy.cs" />
@@ -107,6 +155,11 @@
     <Compile Include="Source Code\ContractReward\Nightmare\Yujin\DiceCardSelfAbility_clashDefense.cs" />
     <Compile Include="Source Code\ContractReward\Nightmare\Yujin\BehaviourAction_newborderof4.cs" />
     <Compile Include="Source Code\ContractReward\Nightmare\Yujin\Focus.cs" />
+    <Compile Include="Source Code\ContractReward\Nightmare\Yujin\PassiveAbility_1510007.cs" />
+    <Compile Include="Source Code\ContractReward\Nightmare\Yujin\PassiveAbility_1510008.cs" />
+    <Compile Include="Source Code\ContractReward\Nightmare\Yujin\PassiveAbility_1510006.cs" />
+    <Compile Include="Source Code\ContractReward\Nightmare\Yujin\PassiveAbility_1510005.cs" />
+    <Compile Include="Source Code\ContractReward\Nightmare\Yujin\PassiveAbility_1510101.cs" />
     <Compile Include="Source Code\ContractReward\Nightmare\Yujin\PassiveAbility_1510002.cs" />
     <Compile Include="Source Code\ContractReward\Nightmare\Yujin\PassiveAbility_1510003.cs" />
     <Compile Include="Source Code\ContractReward\Nightmare\Yujin\PassiveAbility_1510001.cs" />
@@ -181,7 +234,6 @@
     <Compile Include="Source Code\ContractReward\Reverberation\Oswald\DiceCardSelfAbility_Oswald_AllDraw1.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Oswald\DiceCardSelfAbility_Oswald_Mermaid.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Oswald\DiceCardSelfAbility_Oswald_Knife.cs" />
-    <Compile Include="Source Code\ContractReward\Reverberation\Oswald\PassiveAbility_1850011.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Philiph\DiceCardSelfAbility_Negative3.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Pluto\DiceCardSelfAbility_BreakProtection5.cs" />
     <Compile Include="Source Code\ContractReward\Roland\P1\PassiveAbility_1700013.cs" />
@@ -232,27 +284,21 @@
     <Compile Include="Source Code\ContractReward\Roland\P5\EmotionCardAbility_rolandYun.cs" />
     <Compile Include="Source Code\ContractReward\Roland\P5\PassiveAbility_1700051.cs" />
     <Compile Include="Source Code\ContractReward\Roland\PassiveAbility_1700000.cs" />
-    <Compile Include="Source Code\Fix\BehaviourAction_TwistedTanyaSpecialAtk_New.cs" />
-    <Compile Include="Source Code\Fix\DPluto_UC_New.cs" />
-    <Compile Include="Source Code\Fix\PassiveAbility_1302013_New.cs" />
-    <Compile Include="Source Code\Fix\PassiveAbility_1405011_New.cs" />
-    <Compile Include="Source Code\Fix\PassiveAbility_1410013_New.cs" />
-    <Compile Include="Source Code\Fix\PassiveAbility_170301_New.cs" />
-    <Compile Include="Source Code\Fix\RolandP3_Combo_New.cs" />
-    <Compile Include="Source Code\Fix\TanyaSuper_New.cs" />
+    <Compile Include="Source Code\Impurity\DPluto_UC_New.cs" />
+    <Compile Include="Source Code\Impurity\RolandP3_Combo_New.cs" />
     <Compile Include="Source Code\HarmonyPatch\ExtentionMethod.cs" />
     <Compile Include="Source Code\HarmonyPatch\HP_ContractSpecific.cs" />
     <Compile Include="Source Code\HarmonyPatch\HP_NewTrigger.cs" />
     <Compile Include="Source Code\HarmonyPatch\HP_RewardPage.cs" />
     <Compile Include="Source Code\HarmonyPatch\HP_StageController.cs" />
     <Compile Include="Source Code\HarmonyPatch\HP_RewardList.cs" />
-    <Compile Include="Source Code\HarmonyPatch\HP_SetCard.cs" />
+    <Compile Include="Source Code\HarmonyPatch\HP_ModifyOrigin.cs" />
     <Compile Include="Source Code\HarmonyPatch\HP_SplitDeck.cs" />
     <Compile Include="Source Code\HarmonyPatch\HP_Miscellaneous.cs" />
-    <Compile Include="Source Code\Fix\PassiveAbility_1404013_New.cs" />
     <Compile Include="Source Code\Impurity\ContractList_DistortedReverberationP2.cs" />
     <Compile Include="Source Code\Impurity\ContractList_DistortedReverberationP3.cs" />
     <Compile Include="Source Code\Impurity\ContractList_DistortedReverberationP1.cs" />
+    <Compile Include="Source Code\Impurity\ContractList_Hana.cs" />
     <Compile Include="Source Code\Impurity\ContractList_RolandP4.cs" />
     <Compile Include="Source Code\Impurity\ContractList_RolandP3.cs" />
     <Compile Include="Source Code\Impurity\ContractList_RolandP2.cs" />
@@ -265,8 +311,6 @@
     <Compile Include="Source Code\ContractReward\Reverberation\Oswald\PassiveAbility_1850002.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Oswald\PassiveAbility_1850001.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Oswald\PassiveAbility_1850003.cs" />
-    <Compile Include="Source Code\ExtraCondition.cs" />
-    <Compile Include="Source Code\Param.cs" />
     <Compile Include="Source Code\Plague\ContractList_LoveTown.cs" />
     <Compile Include="Source Code\Reverberation\ContractList_Bremen.cs" />
     <Compile Include="Source Code\Reverberation\ContractList_Greta.cs" />
@@ -306,8 +350,6 @@
     <Compile Include="Source Code\ContractReward\Reverberation\Oswald\DiceCardSelfAbility_Oswald_AllEnergy1.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Pluto\PassiveAbility_1890004.cs" />
     <Compile Include="Source Code\DeepCopyUtil.cs" />
-    <Compile Include="Source Code\Fix\PassiveAbility_1303013_New.cs" />
-    <Compile Include="Source Code\Fix\PassiveAbility_1303012_New.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Greta\BattleUnitBuf_FreshMeat.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Greta\DiceCardAbility_GretaTrample.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Greta\DiceCardSelfAbility_GretaMeatMeal.cs" />
@@ -333,7 +375,6 @@
     <Compile Include="Source Code\ContractReward\Reverberation\Philiph\DiceCardSelfAbility_BurnPowerUp.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Argalia\DiceCardSelfAbility_Insane1.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Argalia\DiceCardSelfAbility_Insane2.cs" />
-    <Compile Include="Source Code\Fix\DiceCardSelfAbility_Jaeheon_AreaDt_New.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Philiph\DiceCardSelfAbility_LoseBurn.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Argalia\DiceCardSelfAbility_PerfectResonanceActivate.cs" />
     <Compile Include="Source Code\ContractReward\Reverberation\Pluto\DiceCardSelfAbility_PlutoAoe.cs" />
@@ -378,11 +419,11 @@
     <Compile Include="Source Code\ContractAttribution.cs" />
     <Compile Include="Source Code\General\ContractList_Enemy.cs" />
     <Compile Include="Source Code\ContractLoader.cs" />
-    <Compile Include="Source Code\Contrasts.cs" />
+    <Compile Include="Source Code\JsonEntity.cs" />
     <Compile Include="Source Code\CCInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Source Code\StaticDataManager.cs" />
-    <PackageReference Include="Krafs.Publicizer" Version="1.0.2">
+    <PackageReference Include="Krafs.Publicizer" Version="2.3.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>

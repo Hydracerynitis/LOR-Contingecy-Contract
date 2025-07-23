@@ -13,10 +13,6 @@ namespace Contingecy_Contract
     public class ContingecyContract_Roland3rd_Unity : ContingecyContract
     {
         private int pattern=0;
-        public ContingecyContract_Roland3rd_Unity(int level)
-        {
-            Level = level;
-        }
         public override string[] GetFormatParam(string language) => new string[] { (Level-1).ToString() };
         public override int SpeedDiceNumAdder()
         {
@@ -91,10 +87,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_Roland3rd_Waltz : ContingecyContract
     {
-        public ContingecyContract_Roland3rd_Waltz(int level)
-        {
-            Level = level;
-        }
         public override string[] GetFormatParam(string language) => new string[] {(4-Level).ToString() };
         public override bool CheckEnemyId(LorId EnemyId)
         {
@@ -181,10 +173,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_Roland3rd: ContingecyContract
     {
-        public ContingecyContract_Roland3rd(int level)
-        {
-            Level = level;
-        }
         public override bool CheckEnemyId(LorId EnemyId)
         {
             return EnemyId == 60007 || EnemyId == 60107;

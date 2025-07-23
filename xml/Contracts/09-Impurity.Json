@@ -1,0 +1,81 @@
+{
+    "CCs":[
+        {
+            "Type":"Hana_Web",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"战术指挥网络",
+                    "desc":"美里奈的\"하나为一切\"改为使所有友方角色获得相同效果.\n哈罗德的\"一切为하나\"使所有友方单位获得对应攻击抗性修正.\n哈罗德的一切为하나使承伤最多的攻击抗性变为{0}."
+                },
+                {
+                    "language":"en",
+                    "name":"Tactical Command Network",
+                    "desc":"Mirinae's \"Hana for All\" now give the same status effect to all other allies.\n Harold's \"All for Hana\" will share resistances modification with all other allies.\n Harold's \"All for Hana\" now  change her resistances against the type that dealt the most damage to {0}."
+                }
+            ],
+            "Faction":0,
+            "Variation":3,
+            "BaseLevel":1,
+            "Conflict":["Hana_Protocol"],
+            "Stageid":60001
+        },
+        {
+            "Type":"Hana_Protocol",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"复仇协议",
+                    "desc":"\"하나为一切\"使自身获得的\"强壮\"\"忍耐\"\"守护\"\"振奋\"的层数翻倍\n并减少其他来宾30%的承受伤害和混乱伤害\n携带\"하나为一切\"的来宾死亡时将该被动传递到其他存活的来宾并替换其牌库.\n被传递被动的来宾在下一幕{0}."
+                },
+                {
+                    "language":"en",
+                    "name":"Avenging Protocol",
+                    "desc":"\"Hana for All\" double stacks when receiving \"Strength\"\"Endure\"\"Protection\"\"Break Protection\"\n reduce incomming damage and stagger damge of other enemies by 30%.\nWhen enemy with \"Hana for All\" die, the passive will be transfered to another alive enemy.\nThe enemy who receive the passive {0}."
+                }
+            ],
+            "Faction":0,
+            "Variation":3,
+            "BaseLevel":1,
+            "Conflict":["Hana_Web"],
+            "Stageid":60001
+        },
+        {
+            "Type":"Hana",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"兑艮震巽",
+                    "desc":"所有来宾能同一幕使用2张卦象书页,卦象书页效果提升."
+                },
+                {
+                    "language":"en",
+                    "name":"Full Trigrams",
+                    "desc":"Every enemies can play two Trigram Pages in one Scene. Trigram Pages have their effect boosted."
+                }
+            ],
+            "Faction":0,
+            "BaseLevel":4,
+            "Stageid":60001
+        },
+        {
+            "Type":"Hana_Olivier",
+            "desc":[
+                {
+                    "language":"cn",
+                    "name":"加班调休",
+                    "desc":"奥利维耶会在第二舞台加入战斗.\n\"战术指挥网络\"和\"复仇协议\"会获得额外的效果"
+                },
+                {
+                    "language":"en",
+                    "name":"Working Overtime",
+                    "desc":"Olivier will join the battle in the second Act.\n\"Tactical Command Network\" and \"Avenging Protocol\" will gain additional effect"
+                }
+            ],
+            "contractType":1,
+            "Faction":0,
+            "BaseLevel":4,
+            "Stageid":60001
+        }
+    ]
+}

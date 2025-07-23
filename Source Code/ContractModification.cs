@@ -12,13 +12,10 @@ namespace Contingecy_Contract
         public static StageClassInfo current;
         public static void Init(StageClassInfo info)
         {
-            foreach (Contract contract in Singleton<ContractLoader>.Instance.GetStageList())
+            List<Contract> StageContracts = Singleton<ContractLoader>.Instance.GetStageList().FindAll(x => x.modifier != null);
+            StageContracts.Sort((x, y) => y.modifier.GetPriority() - x.modifier.GetPriority());
+            foreach (Contract contract in StageContracts)
             {
-                if (contract.modifier == null)
-                {
-                    Debug.Log("{0} doesn't load modifier", contract.Type);
-                    continue;
-                }
                 if (!contract.modifier.IsValid(info))
                 {
                     Debug.Log("{0} doesn't match {1}'s requirement", Singleton<StageNameXmlList>.Instance.GetName(info.id), contract.Type);
@@ -33,10 +30,15 @@ namespace Contingecy_Contract
     public class StageModifier
     {
         public int Level;
+        public virtual int GetPriority() => 0;
         public virtual bool IsValid(StageClassInfo info) => true;
         public virtual void Modify(ref StageClassInfo info)
         {
 
+        }
+        public virtual void InitLevel(int level)
+        {
+            Level=level;
         }
     }
 }

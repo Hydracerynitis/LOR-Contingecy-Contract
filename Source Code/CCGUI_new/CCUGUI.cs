@@ -32,7 +32,7 @@ namespace Contingecy_Contract
         private static Image img_background;
 		private static Image img_CCLevel;
 		private static List<CCLevelUGUI> listeners = new List<CCLevelUGUI>();
-		public static InputField search;
+		private static CCRewardToggleGUI rewardButton;
 		private Text AllLevelUI;
 		private string nowdesc;
 		private Text NowDescUI;
@@ -91,28 +91,36 @@ namespace Contingecy_Contract
 		public void Start()
 		{
 		}
-        private bool IsBattleSetting()
+        private bool IsAppropiate()
         {
 			if (UI.UIController.Instance == null)
 				return true;
             UIPhase CurrentPhase = UI.UIController.Instance.CurrentUIPhase;
-            return CurrentPhase == UIPhase.DUMMY || CurrentPhase == UIPhase.BattleSetting || CurrentPhase == UIPhase.Sepiroth;
+            return CurrentPhase == UIPhase.DUMMY || CurrentPhase == UIPhase.BattleSetting || CurrentPhase == UIPhase.Sepiroth
+				|| CurrentPhase==UIPhase.Main_ItemList || CurrentPhase==UIPhase.Librarian_CardList || CurrentPhase==UIPhase.Librarian;
         }
+		public void UpdateRewardState()
+		{
+			if(rewardButton != null)
+			{
+                rewardButton.OnValueChange();
+            }
+		}
         public void Update()
 		{
-			if (!IsBattleSetting() && !UIPopupWindow.IsOpened())
+			if (!IsAppropiate() && !UIAlarmPopup.instance.IsOpened())
 			{
 				if (Input.GetKeyDown(KeyCode.F9))
 				{
 					CCGUI_Background.SetActive(!CCGUI_Background.activeSelf);
-					OnValueChanged();
+					if(CCGUI_Background.activeSelf)
+						OnValueChanged();
 				}
 				else if (CCGUI_Background.activeSelf)
                 {
                     if (Input.GetKeyDown(KeyCode.Escape))
                     {
 						CCGUI_Background.SetActive(false);
-						OnValueChanged();
 					}
 					else if (Input.GetAxis("Mouse ScrollWheel")!=0)
                     {
@@ -134,13 +142,14 @@ namespace Contingecy_Contract
 		{
 			if (CCGUI_Background.activeSelf)
             {
-				string lang= TextDataModel.CurrentLanguage.EndsWith("cn") ? "cn" : "en";
+				string lang= StaticDataManager.GetSupportedLanguage();
                 if (language != lang)
                 {
 					language = lang;
 					img_background.sprite = BH.ArtWorks[language + "_CCGUI_Background"];
 					img_CCLevel.sprite = BH.ArtWorks[language + "_CCGUI_Level"];
 					listeners.ForEach(x => x.UpdateLanguage(language));
+					rewardButton.UpdateLanguage(language);
 				}			
 				CCManager.nowshowlevels.Clear();
 				listeners.ForEach(x => x.OnEnable());
@@ -168,6 +177,17 @@ namespace Contingecy_Contract
 				AllLevelUI.text = alllevel.ToString();
 			}
 		}
+		private void AddLevelFilterUI(string backgroundImage,float x_displacement,int FilterVariant)
+		{
+            Image background = CCGUI_Background.CreateImage(language + backgroundImage);
+            background.transform.localPosition = new Vector2(x_displacement, 163f);
+            Image background_isOn = background.gameObject.CreateImage(CC_On);//选中
+            background_isOn.transform.localScale = new Vector2(0.6f, 0.6f);
+            background_isOn.transform.localPosition = new Vector2(-42.8f, 0.6f);
+            CCLevelUGUI listener = background.gameObject.AddComponent<CCLevelUGUI>();
+            listener.Init(background, background_isOn, FilterVariant);
+            listeners.Add(listener);
+        }
 		public void MakeContractPanel()
 		{
 			//背景
@@ -180,62 +200,37 @@ namespace Contingecy_Contract
 			background.transform.localPosition = new Vector2(0f, 0f);
 			img_background = img_bg;
 			CCGUI_Background = background;
-			//合约等级
-			Image img_level = background.CreateImage(language+"_CCGUI_Level");
+            //合约奖励开关
+            Image img_reward = background.CreateImage(language + "_CCGUI_Reward");
+            img_reward.transform.localScale = new Vector2(1.5f, 1.5f);
+            img_reward.transform.localPosition = new Vector2(205f, 233f);
+			Image img_reward_on = img_reward.gameObject.CreateImage("tick");
+			img_reward_on.transform.localScale = new Vector2(0.8f, 0.8f);
+			img_reward_on.transform.localPosition = new Vector2(37.5f, 0f);
+			CCRewardToggleGUI rewardToggle= img_reward.gameObject.AddComponent<CCRewardToggleGUI>();
+			rewardToggle.Init(img_reward,img_reward_on);
+            rewardButton = rewardToggle;
+            //合约等级
+            Image img_level = background.CreateImage(language+"_CCGUI_Level");
 			img_level.transform.localScale = new Vector2(1.5f, 1.5f);
 			img_level.transform.localPosition = new Vector2(369f, 233f);
 			img_CCLevel = img_level;
 			Text txt_level = new GameObject("CCGUI_Level_Text").AddComponent<Text>();
 			txt_level.rectTransform.SetParent(img_level.transform);
+			txt_level.alignment = TextAnchor.MiddleRight;
 			txt_level.font = DefFont;
-			txt_level.color = Color.white;
-			txt_level.transform.localPosition = new Vector2(66.5f, -28.6f);
+			txt_level.color = new Color(1f, 0.9333334f, 0.5490196f, 1f);
+            txt_level.transform.localPosition = new Vector2(12f, -1f);
+			txt_level.fontSize = 30;
 			txt_level.text = alllevel.ToString();
 			AllLevelUI = txt_level;
 			//顶端栏
 			//你应该为以下几个添加点击事件
-			Image img_1level = CCGUI_Background.CreateImage(language+"_CCGUI_1stLevel");
-			img_1level.transform.localPosition = new Vector2(-412f, 163f);
-			Image img_1level_isOn = img_1level.gameObject.CreateImage(CC_On);//选中
-			img_1level_isOn.transform.localScale = new Vector2(0.6f, 0.6f);
-			img_1level_isOn.transform.localPosition = new Vector2(-42.8f, 0.6f);
-			CCLevelUGUI listener = img_1level.gameObject.AddComponent<CCLevelUGUI>();
-			listener.Init(img_1level, img_1level_isOn, 1);
-			listeners.Add(listener);
-			Image img_2level = CCGUI_Background.CreateImage(language+"_CCGUI_2ndLevel");
-			img_2level.transform.localPosition = new Vector2(-293f, 163f);
-			Image img_2level_isOn = img_2level.gameObject.CreateImage(CC_On);
-			img_2level_isOn.transform.localScale = new Vector2(0.6f, 0.6f);
-			img_2level_isOn.transform.localPosition = new Vector2(-42.8f, 0.6f);
-			listener = img_2level.gameObject.AddComponent<CCLevelUGUI>();
-			listener.Init(img_2level, img_2level_isOn, 2);
-			listeners.Add(listener);
-			Image img_3level = CCGUI_Background.CreateImage(language+"_CCGUI_3rdLevel");
-			img_3level.transform.localPosition = new Vector2(-177f, 163f);
-			Image img_3level_isOn = img_3level.gameObject.CreateImage(CC_On);
-			img_3level_isOn.transform.localScale = new Vector2(0.6f, 0.6f);
-			img_3level_isOn.transform.localPosition = new Vector2(-42.8f, 0.6f);
-			listener = img_3level.gameObject.AddComponent<CCLevelUGUI>();
-			listener.Init(img_3level, img_3level_isOn, 3);
-			listeners.Add(listener);
-			Image img_4level = CCGUI_Background.CreateImage(language+"_CCGUI_4thLevel");
-			img_4level.transform.localPosition = new Vector2(-59f, 163f);
-			Image img_4level_isOn = img_4level.gameObject.CreateImage(CC_On);
-			img_4level_isOn.transform.localScale = new Vector2(0.6f, 0.6f);
-			img_4level_isOn.transform.localPosition = new Vector2(-42.8f, 0.6f);
-			listener = img_4level.gameObject.AddComponent<CCLevelUGUI>();
-			listener.Init(img_4level, img_4level_isOn, 4);
-			listeners.Add(listener);
-			//搜索框
-			Image img_search = CCGUI_Background.CreateImage("CCGUI_Search");
-            img_search.transform.localPosition = new Vector2(45.5f, 164f);
-            InputField inputField = img_search.gameObject.CreateInputField("InputField", "...");
-			inputField.placeholder.color = new Color(0.5f, 0.5f, 0.5f, 0.5f);
-            inputField.transform.localPosition = new Vector2(79f, 0.6f);
-            inputField.targetGraphic.enabled = false;
-			inputField.lineType = InputField.LineType.SingleLine;
-			inputField.onValueChanged.AddListener(delegate { CCManager.FilterList(); });
-			search = inputField;
+			AddLevelFilterUI("_CCGUI_1stLevel", -412f, 1);
+            AddLevelFilterUI("_CCGUI_2ndLevel", -292f, 2);
+            AddLevelFilterUI("_CCGUI_3rdLevel", -172f, 3);
+            AddLevelFilterUI("_CCGUI_4thLevel", -52f, 4);
+            AddLevelFilterUI("_CCGUI_0thLevel", 68f, 0);
 			//描述栏
 			DescUI = new GameObject("DescUI");
 			DescUI.transform.SetParent(CCGUI_Background.transform);

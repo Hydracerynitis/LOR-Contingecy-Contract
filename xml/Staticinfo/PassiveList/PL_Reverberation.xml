@@ -109,7 +109,7 @@
 		<Cost>2</Cost>
   	</Passive>
 	<!--奥斯瓦尔德-->
-		<Passive ID="1850001">
+	<Passive ID="1850001">
 		<Rarity>Unique</Rarity>
     		<CanGivePassive>false</CanGivePassive>
 		<Cost>4</Cost>
@@ -133,7 +133,8 @@
   	</Passive>
 	<Passive ID="1860002">
 		<Rarity>Unique</Rarity>
-    		<CanGivePassive>false</CanGivePassive>
+    	<CanGivePassive>false</CanGivePassive>
+		<CopyInnerType Pid="@origin">260011</CopyInnerType>
 		<Cost>8</Cost>
   	</Passive>
 	<Passive ID="1860003">
@@ -213,7 +214,8 @@
 	<!-- 普鲁托-->
 	<Passive ID="1890001">
 		<Rarity>Unique</Rarity>
-    		<CanGivePassive>false</CanGivePassive>
+    	<CanGivePassive>false</CanGivePassive>
+		<CopyInnerType Pid="@origin">260014</CopyInnerType>
 		<Cost>6</Cost>
   	</Passive>
 	<Passive ID="1890002">

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BookDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<bookDescList>
+		<BookDesc BookID="17100000">
+			<BookName>The Page of Mirinae in Section 1</BookName>
+			<TextList />
+			<PassiveList />
+		</BookDesc>
+		<BookDesc BookID="17100001">
+			<BookName>The Page of Harold in Section 1</BookName>
+			<TextList />
+			<PassiveList />
+		</BookDesc>
+		<BookDesc BookID="17100002">
+			<BookName>The Page of Olivier in Section 1</BookName>
+			<TextList />
+			<PassiveList />
+		</BookDesc>
+	</bookDescList>
+</BookDescRoot>

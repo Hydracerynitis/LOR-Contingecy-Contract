@@ -17,14 +17,13 @@ namespace Contingecy_Contract
         {
             PassiveList.Clear();
             StageList.Clear();
-            Debug.PathDebug("/ContractLoader.txt", PathType.File);
             Debug.Log("----- Start Loading Contract -----");
             foreach (string readAllLine in File.ReadAllLines(CCInitializer.ModPath + "/ContractLoader.txt"))
             {
                 string str = readAllLine.Trim();
                 if (str == "")
                     continue;
-                Contract New = StaticDataManager.JsonList.Find(x => x.Id==str);
+                Contract New = StaticDataManager.ContractList.Find(x => x.Id==str);
                 if (New == null)
                 {
                     Debug.Log("{0} is not found",str);
@@ -74,14 +73,15 @@ namespace Contingecy_Contract
                             StageList.Remove(Old);
                         }
                     }
-                    System.Type type = System.Type.GetType("Contingecy_Contract.StageModifier_" + New.Type);
+                    System.Type type = StaticDataManager.GetStageModifier(New.Type);
                     if (type == (System.Type)null)
                     {
                         Debug.Log(type.Name+ " is not found");
                         continue;
                     }
                     Debug.Log(type.Name+ " is found");
-                    New.modifier = (StageModifier)Activator.CreateInstance(type, new object[] { New.Variant });
+                    New.modifier = (StageModifier)Activator.CreateInstance(type, new object[] {  });
+                    New.modifier.InitLevel(New.Variant);
                     StageList.Add(New);
                     Debug.Log("Contract {0} Added to Stage", name);
                 }
@@ -108,6 +108,27 @@ namespace Contingecy_Contract
                     return true;
                 return false;
             }
+            return false;
+        }
+        public bool ExistContract(string type)
+        {
+            List<Contract> list = new List<Contract>();
+            list.AddRange(PassiveList);
+            list.AddRange(StageList);
+            return list.Exists(x => x.Type == type) || list.Exists(x => x.Type.StartsWith(type));
+        }
+        public bool FindContract(string type, out Contract output)
+        {
+            output = null;
+            List<Contract> list = new List<Contract>();
+            list.AddRange(PassiveList);
+            list.AddRange(StageList);
+            output = list.Find(x => x.Type == type);
+            if (output!=null)
+                return true;
+            output = list.Find(x => x.Type.StartsWith(type));
+            if (output != null)
+                return true;
             return false;
         }
         public int GetLevel(StageClassInfo info)

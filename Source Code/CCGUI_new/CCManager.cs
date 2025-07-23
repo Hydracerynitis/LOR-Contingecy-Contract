@@ -28,7 +28,7 @@ namespace Contingecy_Contract
 		public static void LoadandInitCCTag()
 		{
 			tagUGUIs = new List<CCTagUGUI>();
-			foreach (Contract contract in StaticDataManager.JsonList)
+			foreach (Contract contract in StaticDataManager.ContractList)
 			{
 				tagUGUIs.Add(CCTagUGUI.Add(CCUGUI.CCItemViewport, contract));
 			}
@@ -37,7 +37,7 @@ namespace Contingecy_Contract
 		}
 		public static void LoadCC()
         {	
-			foreach (Contract cc in StaticDataManager.JsonList)
+			foreach (Contract cc in StaticDataManager.ContractList)
 			{
 				cc.isConflict = false;
 				cc.isOn = false;
@@ -63,12 +63,11 @@ namespace Contingecy_Contract
 		public static void FilterList()
         {
 			Predicate<CCTagUGUI> True = x => true;
-			Predicate<CCTagUGUI> filterLevel = nowshowlevels.Count <= 0 ? True : x => x.CC.Level >= 4 ? nowshowlevels.Contains(4) : nowshowlevels.Contains(x.CC.Level);
-			string s = CCUGUI.search.text;
-			Predicate<CCTagUGUI> filterText = string.IsNullOrWhiteSpace(s) ? True : x => x.CC.Id.ToLower().Contains(s.ToLower());
+			Predicate<CCTagUGUI> filterLevel = nowshowlevels.Count <= 0 ? True : 
+				x => x.CC.Variant  >= 4 ? nowshowlevels.Contains(4) : nowshowlevels.Contains(x.CC.Variant);
 			foreach(CCTagUGUI tag in tagUGUIs)
 				tag.gameObject.SetActive(false);
-			foreach (CCTagUGUI tag in tagUGUIs.FindAll(filterLevel).FindAll(filterText))
+			foreach (CCTagUGUI tag in tagUGUIs.FindAll(filterLevel))
 				tag.gameObject.SetActive(true);
 		}
 		public static void Clear()

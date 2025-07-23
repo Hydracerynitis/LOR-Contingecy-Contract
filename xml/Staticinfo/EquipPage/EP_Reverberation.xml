@@ -4,8 +4,8 @@
     		<Name>苍蓝残响</Name>
    		 <TextId>18000000</TextId>
     		<EquipEffect>
-      			<HP>200</HP>
-      			<Break>90</Break>
+      			<HP>132</HP>
+      			<Break>66</Break>
       			<SpeedMin>4</SpeedMin>
       			<Speed>6</Speed>
       			<SResist>Normal</SResist>
@@ -43,8 +43,8 @@
    		 <TextId>18100000</TextId>
     		<Option>MultiDeck</Option>
     		<EquipEffect>
-      			<HP>180</HP>
-      			<Break>80</Break>
+      			<HP>140</HP>
+      			<Break>63</Break>
       			<SpeedMin>2</SpeedMin>
       			<Speed>7</Speed>
       			<SResist>Endure</SResist>
@@ -85,8 +85,8 @@
     		<Option>MultiDeck</Option>
 			<RangeType>Range</RangeType>
     		<EquipEffect>
-      			<HP>150</HP>
-      			<Break>80</Break>
+      			<HP>129</HP>
+      			<Break>64</Break>
       			<SpeedMin>2</SpeedMin>
       			<Speed>7</Speed>
       			<SResist>Normal</SResist>
@@ -146,7 +146,7 @@
    		 	<TextId>18300000</TextId>
     		<EquipEffect>
       			<HP>200</HP>
-      			<Break>100</Break>
+      			<Break>50</Break>
       			<SpeedMin>2</SpeedMin>
       			<Speed>5</Speed>
       			<SResist>Endure</SResist>
@@ -181,7 +181,7 @@
     		<Name>不来梅</Name>
    		 	<TextId>18400000</TextId>
     		<EquipEffect>
-      			<HP>250</HP>
+      			<HP>180</HP>
       			<Break>30</Break>
       			<SpeedMin>2</SpeedMin>
       			<Speed>7</Speed>
@@ -216,8 +216,8 @@
    		 	<TextId>18500000</TextId>
 			<Option>MultiDeck</Option>
     		<EquipEffect>
-      			<HP>150</HP>
-      			<Break>100</Break>
+      			<HP>120</HP>
+      			<Break>52</Break>
       			<SpeedMin>2</SpeedMin>
       			<Speed>5</Speed>
 				<SResist>Endure</SResist>
@@ -263,7 +263,7 @@
 			<TextId>18510000</TextId>
 			<EquipEffect>
 				<HP>90</HP>
-				<Break>45</Break>
+				<Break>60</Break>
 				<SpeedMin>3</SpeedMin>
 				<Speed>5</Speed>
 				<SResist>Endure</SResist>
@@ -273,7 +273,6 @@
 				<PBResist>Vulnerable</PBResist>
 				<HBResist>Normal</HBResist>
 				<Passive Pid="@origin">10001</Passive>
-				<Passive>1850011</Passive>
 				<StartPlayPoint>4</StartPlayPoint>
 				<MaxPlayPoint>4</MaxPlayPoint>
 			</EquipEffect>
@@ -298,7 +297,6 @@
 				<PBResist>Vulnerable</PBResist>
 				<HBResist>Endure</HBResist>
 				<Passive Pid="@origin">10001</Passive>
-				<Passive>1850011</Passive>
 			<StartPlayPoint>4</StartPlayPoint>
 			<MaxPlayPoint>4</MaxPlayPoint>
 			</EquipEffect>
@@ -312,8 +310,8 @@
 		<Name>塔尼亚</Name>
 		<TextId>18600000</TextId>
     		<EquipEffect>
-      			<HP>125</HP>
-      			<Break>100</Break>
+      			<HP>141</HP>
+      			<Break>70</Break>
       			<SpeedMin>3</SpeedMin>
       			<Speed>9</Speed>
       			<SResist>Normal</SResist>
@@ -342,12 +340,12 @@
     		<CharacterSkin>Tanya</CharacterSkin>
  	 </Book>
   	<Book ID="18700000">
-    		<Name>在宪</Name>
-   		 <TextId>18700000</TextId>
+		<Name>在宪</Name>
+   		<TextId>18700000</TextId>
     		<Option>MultiDeck</Option>
     		<EquipEffect>
-      			<HP>160</HP>
-      			<Break>70</Break>
+      			<HP>135</HP>
+      			<Break>54</Break>
       			<SpeedMin>2</SpeedMin>
       			<Speed>7</Speed>
       			<SResist>Endure</SResist>
@@ -394,8 +392,8 @@
    		 <TextId>18710000</TextId>
     		<Category>DeckFixed</Category>
     		<EquipEffect>
-      			<HP>120</HP>
-      			<Break>80</Break>
+      			<HP>125</HP>
+      			<Break>63</Break>
       			<SpeedMin>2</SpeedMin>
       			<Speed>7</Speed>
       			<SResist>Endure</SResist>
@@ -421,8 +419,8 @@
     	<Name>伊莲娜</Name>
    		<TextId>18800000</TextId>
     	<EquipEffect>
-      		<HP>180</HP>
-      		<Break>70</Break>
+      		<HP>100</HP>
+      		<Break>65</Break>
       		<SpeedMin>2</SpeedMin>
       		<Speed>7</Speed>
       		<SResist>Endure</SResist>
@@ -455,8 +453,8 @@
     	<Name>朱红十字</Name>
     	<TextId>18810000</TextId>
     	<EquipEffect>
-      		<HP>550</HP>
-      		<Break>200</Break>
+      		<HP>220</HP>
+      		<Break>80</Break>
       		<SpeedMin>2</SpeedMin>
       		<Speed>7</Speed>
       		<SResist>Normal</SResist>
@@ -487,8 +485,8 @@
     		<Name>普鲁托</Name>
    		 <TextId>18900000</TextId>
     		<EquipEffect>
-      			<HP>150</HP>
-      			<Break>200</Break>
+      			<HP>128</HP>
+      			<Break>76</Break>
       			<SpeedMin>4</SpeedMin>
       			<Speed>7</Speed>
       			<SResist>Normal</SResist>

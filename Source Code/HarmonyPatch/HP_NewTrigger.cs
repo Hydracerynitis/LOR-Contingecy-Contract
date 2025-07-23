@@ -9,14 +9,78 @@ namespace Contingecy_Contract
     [HarmonyPatch]
     class HP_NewTrigger
     {
+        [HarmonyPatch(typeof(BattleAllyCardDetail),nameof(BattleAllyCardDetail.AddCardToHand))]
+        [HarmonyPostfix]
+        public static void OnAddToHandTrigger(BattleAllyCardDetail __instance, BattleDiceCardModel card)
+        {
+            foreach(BattleDiceCardBuf cardBuf in card._bufList)
+            {
+                if (cardBuf is OnAddToHandBuf)
+                    (cardBuf as OnAddToHandBuf).OnAddToHand(__instance._self);
+            }
+        }
+        [HarmonyPatch(typeof(BattleUnitModel),nameof(BattleUnitModel.GetBreakDamageReductionAll))]
+        [HarmonyPostfix]
+        public static void StaggerDamageReductionAllTrigger(BattleUnitModel __instance, ref int __result, int dmg, DamageType dmgType, BattleUnitModel attacker)
+        {
+            foreach(BattleUnitBuf buf in __instance.bufListDetail._bufList)
+            {
+                if (buf is StaggerDamageReductionAllBuf)
+                    __result += (buf as StaggerDamageReductionAllBuf).GetBreakDamageReductionAll(dmg, dmgType, attacker);
+            }
+        }
+        [HarmonyPatch(typeof(BattleDiceCardModel),nameof(BattleDiceCardModel.OnUseOtherCard_inHand))]
+        [HarmonyPostfix]
+        public static void OnUseOtherCardTrigger(BattleDiceCardModel __instance, BattleUnitModel unit, BattlePlayingCardDataInUnitModel curCard)
+        {
+            foreach(BattleDiceCardBuf cardBuf in __instance._bufList)
+            {
+                if (cardBuf is OnUseOtherCardInHand)
+                    (cardBuf as OnUseOtherCardInHand).OnUseOtherCardInHand(unit, curCard);
+            }
+        }
         [HarmonyPatch(typeof(BattleUnitModel), nameof(BattleUnitModel.OnStartBattle))]
         [HarmonyPostfix]
         public static void OnStartBattleTrigger(BattleUnitModel __instance)
         {
+            List<StartBattleBuf> new_triggers= new List<StartBattleBuf>();
+            List<StartBattleInHandBuf> new_triggers_inHand= new List<StartBattleInHandBuf>();
             foreach (BattleUnitBuf buf in __instance.bufListDetail.GetActivatedBufList())
             {
                 if (buf is StartBattleBuf)
-                    (buf as StartBattleBuf).OnStartBattle();
+                    new_triggers.Add((StartBattleBuf)buf);
+
+            }
+            foreach(BattlePlayingCardDataInUnitModel pages in __instance.cardSlotDetail.cardAry)
+            {
+                if(pages != null && pages.card!=null)
+                {
+                    foreach(BattleDiceCardBuf cardBuf in pages.card._bufList)
+                    {
+                        if (cardBuf is StartBattleBuf)
+                            new_triggers.Add((StartBattleBuf)cardBuf);
+                    }
+                }
+            }
+            foreach (BattleDiceCardModel cards in __instance.allyCardDetail.GetHand())
+            {
+                if (cards != null)
+                {
+                    foreach (BattleDiceCardBuf cardBuf in cards._bufList)
+                    {
+                        if (cardBuf is StartBattleInHandBuf)
+                            new_triggers_inHand.Add((StartBattleInHandBuf)cardBuf);
+                    }
+                }
+            }
+            try
+            {
+                new_triggers.ForEach(x => x.OnStartBattle(__instance));
+                new_triggers_inHand.ForEach(x => x.OnStartBattle_inHand(__instance));
+            }
+            catch(Exception ex)
+            {
+                Debug.Error("OnStartBattle", ex);
             }
         }
         [HarmonyPatch(typeof(BattlePlayingCardDataInUnitModel), nameof(BattlePlayingCardDataInUnitModel.OnActivateResonance))]

@@ -13,10 +13,6 @@ namespace Contingecy_Contract
     //死协会
     public class ContingecyContract_Philip_Burn : ContingecyContract
     {
-        public ContingecyContract_Philip_Burn(int level)
-        {
-            this.Level = level;
-        }
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1301011;
         public override string[] GetFormatParam(string language) => new string[] {TextDataModel.GetText(Param1),(1 + 2 * Level).ToString() };
         private string Param1
@@ -101,10 +97,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_Philip_Silence : ContingecyContract
     {
-        public ContingecyContract_Philip_Silence(int level)
-        {
-            this.Level = level;
-        }
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1301021;
         public override string[] GetFormatParam(string language) => new string[] { StaticDataManager.GetParam("Philip_Silence_param" + Level.ToString(), language), (20 * Level).ToString() };
         public override int SpeedDiceNumAdder()
@@ -138,10 +130,6 @@ namespace Contingecy_Contract
         private int phase;
         private int pattern;
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1301011;
-        public ContingecyContract_Philip(int level)
-        {
-            this.Level = level;
-        }
         public override void Init(BattleUnitModel self)
         {
             base.Init(self);
@@ -225,22 +213,24 @@ namespace Contingecy_Contract
             base.OnRoundStart();
             if(phase==1 && this.owner.IsBreakLifeZero())
             {
-                PassiveAbilityBase contract = new ContingecyContract_Philip(Level)
+                PassiveAbilityBase contract = new ContingecyContract_Philip()
                 {
                     name = name,
                     desc = desc,
-                    rare = Rarity.Unique
+                    rare = Rarity.Unique,
+                    Level=Level
                 };
                 this.owner.passiveDetail.AddPassive(contract);
                 this.owner.passiveDetail.DestroyPassive(this);
             }
             if (phase == 2 && this.owner.IsBreakLifeZero())
             {
-                PassiveAbilityBase contract = new ContingecyContract_Philip(Level)
+                PassiveAbilityBase contract = new ContingecyContract_Philip()
                 {
                     name = name,
                     desc = desc,
-                    rare = Rarity.Unique
+                    rare = Rarity.Unique,
+                    Level = Level
                 };
                 owner.passiveDetail.AddPassive(contract);
                 owner.passiveDetail.DestroyPassive(this);

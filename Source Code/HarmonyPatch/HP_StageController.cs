@@ -100,8 +100,8 @@ namespace Contingecy_Contract
             ContractModification.Init(stage); //施加合约对接待的改动
         }
         [HarmonyPatch(typeof(StageController), nameof(StageController.EndBattlePhase))]
-        [HarmonyPrefix]
-        public static bool StageController_EndBattlePhase_Pre() //战后更新所有单位的血量
+        [HarmonyPostfix]
+        public static void StageController_EndBattlePhase_Post() //战后更新所有单位的血量
         {
             foreach (BattleUnitModel unit in BattleObjectManager.instance.GetAliveList())
             {
@@ -121,13 +121,13 @@ namespace Contingecy_Contract
             if (DiceCardSelfAbility_OswaldHide.HidingOswald != null)
                 DiceCardSelfAbility_OswaldHide.HidingOswald.UpdateUnitData();
             DiceCardSelfAbility_OswaldHide.HidingOswald = null; 
-            return true;
         }
         [HarmonyPatch(typeof(StageController), nameof(StageController.GameOver))]
         [HarmonyPostfix]
         public static void StageController_GameOver_Post(bool iswin)
         {
             CCInitializer.CombaltData.Clear();
+            ContractAttribution.OswaldHp = -1;
             SynphonyOrchestra._oldEnemytheme = null;
             if(PassiveAbility_1810002._loopSound != null)
             {
@@ -165,40 +165,8 @@ namespace Contingecy_Contract
         public static void PlayHistoryModel_LoadFromSaveData(SaveData data)
         {
             ModifyLocalize();
-            List<int> bmSave = ContractSaveManager.Load<List<int>>("RewardList");
-            if (bmSave != null && bmSave.Count > 0)
-            {
-                bmSave.ForEach(x => ContractRewardSystem.ClearList.Add(x));
-                return;
-            }
-            LegacySaveCompatible(data);
-        }
-        public static void LegacySaveCompatible(SaveData data)
-        {
-            SaveData save = data.GetData("ContingecyContract_ChallengeProgress");
-            if (save == null)
-                return;
-            if (save.GetInt("Philiph_Risk") >= 1)
-                ContractRewardSystem.ClearList.Add(18100000);
-            if (save.GetInt("Eileen_Risk") >= 1)
-                ContractRewardSystem.ClearList.Add(18200000);
-            if (save.GetInt("Greta_Risk") >= 1)
-                ContractRewardSystem.ClearList.Add(18300000);
-            if (save.GetInt("Bremen_Risk") >= 1)
-                ContractRewardSystem.ClearList.Add(18400000);
-            if (save.GetInt("Tanya_Risk") >= 1)
-                ContractRewardSystem.ClearList.Add(18600000);
-            if (save.GetInt("Jaeheon_Risk") >= 1)
-                ContractRewardSystem.ClearList.Add(18700000);
-            if (save.GetInt("Elena_Risk") >= 1)
-                ContractRewardSystem.ClearList.Add(18800000);
-            if (save.GetInt("Orange_Path") >= 1)
-                ContractRewardSystem.ClearList.Add(18810000);
-            if (save.GetInt("Pluto_Risk") >= 1)
-                ContractRewardSystem.ClearList.Add(18900000);
-            if (save.GetInt("Ensemble_Complete") >= 1)
-                ContractRewardSystem.ClearList.Add(18000000);
-            ContractSaveManager.Save(new List<int>(ContractRewardSystem.ClearList), "RewardList");
+            ContractSaveManager.Load("RewardList_V2");
+            CCUGUI.Instance.UpdateRewardState();
         }
         [HarmonyPatch(typeof(BattleObjectManager), nameof(BattleObjectManager.Clear))]
         [HarmonyPrefix]
@@ -275,7 +243,7 @@ namespace Contingecy_Contract
         public static bool Duel = false;
         public static bool CheckDuel(LorId stageId)
         {
-            return stageId == 60002 || stageId == 70010 || stageId == 60007;
+            return stageId == 60002 || stageId == 70010 || stageId == 60007 || stageId == 610000;
         }
         public static bool CheckPlaceHolder(LorId stageId)
         {

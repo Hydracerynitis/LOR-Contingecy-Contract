@@ -26,5 +26,8 @@
 		<BattleCardDesc ID="15100011">
 			<LocalizedName>Deflect Assault</LocalizedName>
 		</BattleCardDesc>
+		<BattleCardDesc ID="15100012">
+			<LocalizedName>Extreme Edge</LocalizedName>
+		</BattleCardDesc>
  	</cardDescList>
 </BattleCardDescRoot>

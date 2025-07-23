@@ -32,7 +32,7 @@ All dice on every third Combat Page used gain +2 Power.</Desc>
     <!--P2-->
     <PassiveDesc ID="1700021">
         <Name>The Hatching Dead</Name>
-        <Desc>Whenever another characer is defeated, Spend 15 Hp to spawn a Smoldering Byproduct to replace it next Scene. 
+        <Desc>Whenever another characer is defeated, Spend 20 Hp to spawn a Smoldering Byproduct to replace it next Scene. 
 At the start of each Scene, inflict 1 Suffocating Haze on all other characters.</Desc>
     </PassiveDesc>
     <PassiveDesc ID="1700022">

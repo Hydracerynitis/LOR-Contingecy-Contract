@@ -5,8 +5,8 @@
    		 <TextId>17000001</TextId>
     		<Category>DeckFixed</Category>
     		<EquipEffect>
-      			<HP>150</HP>
-      			<Break>90</Break>
+      			<HP>144</HP>
+      			<Break>72</Break>
       			<SpeedMin>2</SpeedMin>
       			<Speed>7</Speed>
       			<SResist>Normal</SResist>
@@ -35,7 +35,7 @@
     		<Name>肮脏巨兽</Name>
    		 <TextId>17000002</TextId>
     		<EquipEffect>
-      			<HP>300</HP>
+      			<HP>200</HP>
       			<Break>150</Break>
       			<SpeedMin>2</SpeedMin>
       			<Speed>4</Speed>
@@ -71,7 +71,7 @@
     		<Option>MultiDeck</Option>
     		<EquipEffect>
       			<HP>130</HP>
-      			<Break>50</Break>
+      			<Break>60</Break>
       			<SpeedMin>2</SpeedMin>
       			<Speed>7</Speed>
       			<SResist>Normal</SResist>
@@ -118,7 +118,7 @@
    		 <TextId>17000103</TextId>
     		<Category>DeckFixed</Category>
     		<EquipEffect>
-      			<HP>110</HP>
+      			<HP>130</HP>
       			<Break>60</Break>
       			<SpeedMin>2</SpeedMin>
       			<Speed>7</Speed>
@@ -146,8 +146,8 @@
    		 <TextId>17000004</TextId>
     		<Category>DeckFixed</Category>
     		<EquipEffect>
-      			<HP>100</HP>
-      			<Break>50</Break>
+      			<HP>112</HP>
+      			<Break>58</Break>
       			<SpeedMin>2</SpeedMin>
       			<Speed>7</Speed>
       			<SResist>Endure</SResist>
@@ -173,8 +173,8 @@
     		<Name>失落天使</Name>
    		 <TextId>17000005</TextId>
     		<EquipEffect>
-      			<HP>140</HP>
-      			<Break>70</Break>
+      			<HP>125</HP>
+      			<Break>56</Break>
       			<SpeedMin>2</SpeedMin>
       			<Speed>7</Speed>
       			<SResist>Normal</SResist>

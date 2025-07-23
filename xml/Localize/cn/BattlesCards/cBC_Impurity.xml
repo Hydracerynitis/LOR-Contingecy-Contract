@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleCardDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	 <cardDescList>
+		<!--Hana-->
+		<BattleCardDesc ID="17100101">
+			<LocalizedName>否</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100102">
+			<LocalizedName>讼</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100103">
+			<LocalizedName>同人</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100104">
+			<LocalizedName>泰</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100105">
+			<LocalizedName>师</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100106">
+			<LocalizedName>明夷</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100107">
+			<LocalizedName>需</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100108">
+			<LocalizedName>比</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100109">
+			<LocalizedName>既济</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100110">
+			<LocalizedName>大有</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100111">
+			<LocalizedName>晋</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100112">
+			<LocalizedName>未济</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100001">
+			<LocalizedName>真-叠卦</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100002">
+			<LocalizedName>孤注一掷</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100003">
+			<LocalizedName>针锋相对</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100004">
+			<LocalizedName>八卦挥斩</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100005">
+			<LocalizedName>驭卦旋踢</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100006">
+			<LocalizedName>天穹之矛</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100007">
+			<LocalizedName>快拳速杀</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100008">
+			<LocalizedName>颅脑搅拌</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100009">
+			<LocalizedName>镜花水月</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100010">
+			<LocalizedName>如箭在弦</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100011">
+			<LocalizedName>踏入战争</LocalizedName>
+		</BattleCardDesc>
+ 	</cardDescList>
+</BattleCardDescRoot>

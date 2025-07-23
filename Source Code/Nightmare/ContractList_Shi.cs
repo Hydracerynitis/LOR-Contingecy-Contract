@@ -13,10 +13,6 @@ namespace Contingecy_Contract
     //死协会
     public class ContingecyContract_Shi_Yujin : ContingecyContract
     {
-        public ContingecyContract_Shi_Yujin(int level)
-        {
-            this.Level = level;
-        }
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 40001;
         public override string[] GetFormatParam(string language) => new string[] { (Level - 1).ToString(), Level.ToString() };
         public override void Init(BattleUnitModel self)
@@ -32,10 +28,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_Shi_ValTem : ContingecyContract
     {
-        public ContingecyContract_Shi_ValTem(int level)
-        {
-            this.Level = level;
-        }
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 40002 || EnemyId ==40003;
         public override string[] GetFormatParam(string language) => new string[] { (20*Level).ToString(),(1+2*Level).ToString(),Level.ToString()};
         private bool IsVal() => this.owner.UnitData.unitData.EnemyUnitId == 40002;
@@ -65,10 +57,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_Shi : ContingecyContract
     {
-        public ContingecyContract_Shi(int level)
-        {
-            this.Level = level;
-        }
         public class Enhanced_passive_241301 : PassiveAbilityBase
         {
             private int _stack;

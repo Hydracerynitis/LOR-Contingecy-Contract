@@ -70,7 +70,7 @@ Gain three special Combat Pages that can be used to benifit the user. Replenish 
 	<PassiveDesc ID="1830002">
 		<Name>Unstoppable Viciousness</Name> 
 		<Desc>Gain 3 Protection each Scene. Take +3 additional damage from attacks while afflicted with Bleed.
-Cannot be Staggered. When Stagger Resist falls to 0, lose 100 Hp instead and gain 1 Strength next Scene.</Desc>
+Cannot be Staggered. When Stagger Resist falls to 0, lose 50 Hp instead and gain 1 Strength next Scene.</Desc>
 	</PassiveDesc>
   	<PassiveDesc ID="1830003">
     	<Name>Feast and Furious</Name>
@@ -101,20 +101,16 @@ This Character's Maximun Light is not affected by Emotion Level, and draw 1 less
 	<!--奥斯瓦尔德-->
   	<PassiveDesc ID="1850001">
     	<Name>There’s No Time for Staggering Struts!</Name>
-   		<Desc>Takes half as much Stagger damage from attacks and deflects. Take 30 Stagger Damage whenever an ally dies.</Desc>
+   		<Desc>Takes half as much Stagger damage from attacks and deflects. Take 20 Stagger Damage whenever an ally dies.</Desc>
   	</PassiveDesc>
   	<PassiveDesc ID="1850002">
     	<Name>We Could Use a Helping Hand, Actually~?</Name>
    		<Desc>Gain a copy of "We Need You, You Know~? that can only be used when there are no stupidfied allies.
-At the start of the Scene: give 2 Strength, 2 Endurance, and 3 Protection to the Stupefied ally. When the ally is Staggered: take 30 Stagger damage at the end of the Scene.</Desc>
+At the start of the Scene: give 2 Strength, 2 Endurance, and 3 Protection to the Stupefied ally. When the ally is Staggered: take 20 Stagger damage at the end of the Scene.</Desc>
   	</PassiveDesc>
   	<PassiveDesc ID="1850003">
     	<Name>Collaborative Performance</Name>
 		<Desc>Able to choose summon Mr. Knife or Ms. Mermaid. Mr. Knife and Mrs. Mermaid will use their editable decks. (Once per Act)</Desc>
-  	</PassiveDesc>
-	<PassiveDesc ID="1850011">
-    	<Name>T'was a Joy to Perform by Your Side…!</Name>
-		<Desc>When this character is defeated, Oswald takes 30 Stagger damage at the end of the Scene.</Desc>
   	</PassiveDesc>
 	<!--塔尼亚-->
 	<PassiveDesc ID="1860001">
@@ -174,7 +170,7 @@ When Jae-heon dies, die as well.</Desc>
 	<!--伊莲娜-->
 	<PassiveDesc ID="1880001">
 		<Name>Gnawing Hunger</Name> 
-		<Desc>On hit recover amount Hp equal to 2% Max HP.
+		<Desc>On hit recover 4 HP.
 Offensive Dice gain +1 Power for every 25% Max HP lost (Max 3).</Desc>
 	</PassiveDesc>
 	<PassiveDesc ID="1880002">

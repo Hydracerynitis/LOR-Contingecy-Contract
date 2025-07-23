@@ -1,0 +1,29 @@
+{
+    "RCLs":[
+        {
+            "RewardPid":"ContingencyConract", "RewardId":18000000,
+            "RequirementPid":"ContingencyConract",
+            "Requirements":[ 18100000, 18200000, 18300000, 18400000, 18500000, 18600000, 18700000, 18800000, 18900000 ]
+        },
+        {
+            "RewardPid":"ContingencyConract", "RewardId":17000005,
+            "RequirementPid":"ContingencyConract",
+            "Requirements":[ 17000001, 17000002, 17000003, 17000004 ]
+        },
+        {
+            "RewardPid":"ContingencyConract", "RewardId":17100001,
+            "RequirementPid":"ContingencyConract",
+            "Requirements":[ 17100000 ]
+        },
+        {
+            "RewardPid":"ContingencyConract", "RewardId":15100001,
+            "RequirementPid":"ContingencyConract",
+            "Requirements":[ 15100000 ]
+        },
+        {
+            "RewardPid":"ContingencyConract", "RewardId":15100002,
+            "RequirementPid":"ContingencyConract",
+            "Requirements":[ 15100000 ]
+        }
+    ]
+}

@@ -92,18 +92,16 @@
                 {
                     "language":"cn",
                     "name":"陷入漆黑",
-                    "desc":"所有司书舞台开启时只有{0}点光芒"
+                    "desc":"所有司书第一次登场时舞台开启时只有{0}点光芒"
                 },
                 {
                     "language":"en",
                     "name":"Engulfed by Darkness",
-                    "desc":"Librarians start all acts with just {0} Light"
+                    "desc":"Librarians start their first act with just {0} Light"
                 }
             ],
             "Faction":1,
-            "Variation":4,
-            "BaseLevel":-1,
-            "Step":2
+            "Variation":4
         },
         {
             "Type":"NoBuff",

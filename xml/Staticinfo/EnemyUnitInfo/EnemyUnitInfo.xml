@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <EnemyUnitClassRoot>
+  <!--加班调休-奥利维耶-->
+  <Enemy ID="60004">
+    <NameID>154</NameID>
+    <MinHeight>188</MinHeight>
+    <MaxHeight>188</MaxHeight>
+    <BookId>60004</BookId>
+    <Retreat>true</Retreat>
+  </Enemy>
+
   <!--艾琳-血肉齿轮-->
   <Enemy ID="18210000">
     <NameID>222</NameID>

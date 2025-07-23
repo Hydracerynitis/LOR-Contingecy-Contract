@@ -24,7 +24,7 @@ namespace ContractReward
         {
             base.OnDieOtherUnit(unit);
             if (unit.faction == owner.faction)
-                owner.breakDetail.TakeBreakDamage(16);
+                owner.breakDetail.TakeBreakDamage(20);
         }
     }
 }

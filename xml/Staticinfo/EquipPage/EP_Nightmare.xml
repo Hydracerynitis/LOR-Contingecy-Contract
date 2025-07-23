@@ -5,7 +5,7 @@
    		<TextId>15100000</TextId>
     	<EquipEffect>
       	    <HP>348</HP>
-      		<Break>62</Break>
+      		<Break>42</Break>
       		<SpeedMin>2</SpeedMin>
       		<Speed>7</Speed>
       		<SResist>Normal</SResist>
@@ -34,5 +34,73 @@
     	<Episode>1800005</Episode>
     	<Rarity>Unique</Rarity>
     	<CharacterSkin>Yujin</CharacterSkin>
+ 	 </Book>
+	 <Book ID="15100001">
+    	<Name>瓦伦汀</Name>
+   		<TextId>15100001</TextId>
+    	<EquipEffect>
+      	    <HP>129</HP>
+      		<Break>59</Break>
+      		<SpeedMin>2</SpeedMin>
+      		<Speed>7</Speed>
+      		<SResist>Endure</SResist>
+			<PResist>Normal</PResist>
+			<HResist>Normal</HResist>
+			<SBResist>Normal</SBResist>
+			<PBResist>Normal</PBResist>
+			<HBResist>Normal</HBResist>
+      		<StartPlayPoint>4</StartPlayPoint>
+      		<MaxPlayPoint>4</MaxPlayPoint>
+      		<Passive Pid="@origin">10008</Passive>
+            <Passive>1510101</Passive>
+      		<Passive>1510005</Passive>
+			<Passive>1510006</Passive>
+			<Passive>1510004</Passive>
+			<OnlyCard>15100002</OnlyCard>
+			<OnlyCard>15100003</OnlyCard>
+			<OnlyCard>15100004</OnlyCard>
+			<OnlyCard>15100005</OnlyCard>
+			<OnlyCard>15100006</OnlyCard>
+			<OnlyCard>15100007</OnlyCard>
+    	</EquipEffect>
+    	<BookIcon>ShiReward</BookIcon>
+    	<Chapter>5</Chapter>
+    	<Episode>1800005</Episode>
+    	<Rarity>Unique</Rarity>
+    	<CharacterSkin>Valentin</CharacterSkin>
+ 	 </Book>
+	 <Book ID="15100002">
+    	<Name>天满</Name>
+   		<TextId>15100002</TextId>
+    	<EquipEffect>
+      	    <HP>121</HP>
+      		<Break>63</Break>
+      		<SpeedMin>1</SpeedMin>
+      		<Speed>8</Speed>
+      		<SResist>Normal</SResist>
+			<PResist>Normal</PResist>
+			<HResist>Endure</HResist>
+			<SBResist>Normal</SBResist>
+			<PBResist>Normal</PBResist>
+			<HBResist>Normal</HBResist>
+      		<StartPlayPoint>4</StartPlayPoint>
+      		<MaxPlayPoint>4</MaxPlayPoint>
+      		<Passive Pid="@origin">10008</Passive>
+            <Passive>1510101</Passive>
+			<Passive>1510007</Passive>
+			<Passive>1510008</Passive>
+			<Passive>1510004</Passive>
+			<OnlyCard>15100002</OnlyCard>
+			<OnlyCard>15100003</OnlyCard>
+			<OnlyCard>15100004</OnlyCard>
+			<OnlyCard>15100005</OnlyCard>
+			<OnlyCard>15100006</OnlyCard>
+			<OnlyCard>15100007</OnlyCard>
+    	</EquipEffect>
+    	<BookIcon>ShiReward</BookIcon>
+    	<Chapter>5</Chapter>
+    	<Episode>1800005</Episode>
+    	<Rarity>Unique</Rarity>
+    	<CharacterSkin>Tenma</CharacterSkin>
  	 </Book>
 </BookXmlRoot>

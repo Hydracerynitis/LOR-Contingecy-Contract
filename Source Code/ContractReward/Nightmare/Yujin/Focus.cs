@@ -9,6 +9,7 @@ namespace ContractReward
 {
     public class Focus: BattleUnitBuf
     {
+        private bool isTriggered = false;
         public override string keywordId => "shiFocus";
         public override void ChangeDiceResult(BattleDiceBehavior behavior, ref int diceResult)
         {
@@ -31,7 +32,12 @@ namespace ContractReward
                     power = num
                 });
             }
-            Destroy();
+            isTriggered = true;
+        }
+        public override void AfterDiceAction(BattleDiceBehavior behavior)
+        {
+            if(isTriggered)
+                Destroy();
         }
         public static void AddStack(BattleUnitModel unit, int stack)
         {

@@ -7,13 +7,17 @@ using System.Threading.Tasks;
 using BaseMod;
 using System;
 using UnityEngine;
+using AutoKeywordUtil;
 
 namespace ContractReward
 {
-    public class UnjustSwift: BattleUnitBuf
+    public class UnjustSwift: BattleUnitBuf, IAutoKeywordBuf
     {
         public override string keywordIconId => "PlutoUnfairLight";
         public override string keywordId => "UnjustSwift";
+        public string KeywordBufName => "CC_UnjustSwift";
+        public override KeywordBuf bufType => AutoKeywordUtils.GetAutoKeyword(typeof(UnjustSwift));
+
         public override void OnRoundStart()
         {
             base.OnRoundStart();
@@ -40,7 +44,7 @@ namespace ContractReward
         {
             base.OnEndBattle();
             if (hit)
-                card.target.bufListDetail.AddBufByCard<UnjustSwift>(2, readyType: BufReadyType.NextRound);
+                card.target.bufListDetail.AddAutoBufByCard<UnjustSwift>(2, readyType: BufReadyType.NextRound);
         }
     }
     public class UnjustSwiftDividend : BattleUnitBuf

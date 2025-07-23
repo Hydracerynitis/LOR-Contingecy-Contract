@@ -6,5 +6,15 @@
 			<TextList />
 			<PassiveList />
 		</BookDesc>
+		<BookDesc BookID="15100001">
+			<BookName>2科瓦伦丁之页</BookName>
+			<TextList />
+			<PassiveList />
+		</BookDesc>
+		<BookDesc BookID="15100002">
+			<BookName>2科天满之页</BookName>
+			<TextList />
+			<PassiveList />
+		</BookDesc>
 	</bookDescList>
 </BookDescRoot>

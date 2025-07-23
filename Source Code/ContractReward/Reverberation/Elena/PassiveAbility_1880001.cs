@@ -11,7 +11,7 @@ namespace ContractReward
         public override void OnSucceedAttack(BattleDiceBehavior behavior)
         {
             base.OnSucceedAttack(behavior);
-            this.owner.RecoverHP((int)(this.owner.MaxHp * 0.02));
+            this.owner.RecoverHP(4);
         }
         public override void BeforeRollDice(BattleDiceBehavior behavior)
         {

@@ -2,8 +2,11 @@
 <PassiveDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <PassiveDesc ID="1510001">
 		<Name>现死之眼</Name> 
-		<Desc>骰子威力+1.每一幕结束时若这一幕内没有受到敌人的攻击则获得3层"专注"(上限8层，8层时使下一个基础值大于8的进攻骰最终点数x2并消耗所有专注)
-    </Desc>
+		<Desc>骰子威力+1.每一幕结束时若这一幕内没有受到敌人的攻击则获得3层"专注"(上限8层，8层时使下一个基础值大于8的进攻骰最终点数x2并消耗所有专注)</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="1510101">
+		<Name>刺客专注</Name> 
+		<Desc>每一幕结束时若这一幕内没有受到敌人的攻击则获得3层"专注"(上限8层，8层时使下一个基础值大于8的进攻骰最终点数x2并消耗所有专注)</Desc>
 	</PassiveDesc>
     <PassiveDesc ID="1510002">
 		<Name>平稳呼吸</Name> 
@@ -14,8 +17,31 @@
 		<Desc>被单方面攻击时以一颗招架骰子(3~8)迎击(每一幕至多触发一次,每有一个未使用的速度骰额外触发2次).
 防御骰子拼点胜利时获得1层"专注"</Desc>
 	</PassiveDesc>
+	
     <PassiveDesc ID="1510004">
 		<Name>手足之情</Name> 
 		<Desc>在同—舞台中每有1名友方角色死亡便在每一幕开始时使自身获得1层"强壮"与"忍耐"(至多2层)</Desc>
 	</PassiveDesc>
+
+	<PassiveDesc ID="1510005">
+		<Name>一刀毙命</Name> 
+		<Desc>使用初始骰子数为1的书页时使该书页的所有骰子威力+2并在拼点时获得双倍情感点数(不计入反击骰子且无法对反击骰子生效).
+使用该书页拼点胜利时获得2层"专注"</Desc>
+	</PassiveDesc>
+
+	<PassiveDesc ID="1510006">
+		<Name>剑走偏锋</Name> 
+		<Desc>被单方面攻击时以一颗斩击骰子(6~12 [拼点胜利]摧毁目标当前书页的所有骰子 [拼点失败]摧毁自身守备池的所有骰子)迎击(每一幕至多触发一次).</Desc>
+	</PassiveDesc>
+
+	<PassiveDesc ID="1510007">
+		<Name>喘息未定</Name> 
+		<Desc>每一幕结束时若光芒为0则额外恢复2点光芒并获得3层专注.</Desc>
+	</PassiveDesc>
+
+	<PassiveDesc ID="1510008">
+		<Name>谨慎感官</Name> 
+		<Desc>被单方面攻击时以一颗反击闪避骰子(3~9)迎击(每一幕至多触发一次).</Desc>
+	</PassiveDesc>
+
 </PassiveDescRoot>

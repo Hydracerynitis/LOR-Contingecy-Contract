@@ -12,10 +12,6 @@ namespace Contingecy_Contract
 {
     public class ContingecyContract_Pluto_Shadow : ContingecyContract
     {
-        public ContingecyContract_Pluto_Shadow(int level)
-        {
-            Level = level;
-        }
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1309021;
         private PassiveAbility_1309021 copypassive;
         public override string[] GetFormatParam(string language) => new string[] { (35 + 15 * Level).ToString(), Level.ToString() };
@@ -44,10 +40,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_Pluto_Barrier : ContingecyContract
     {
-        public ContingecyContract_Pluto_Barrier(int level)
-        {
-            Level = level;
-        }
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1309011;
         public override string[] GetFormatParam(string language) => new string[] { (5*Level).ToString(), (20 + Level * 10).ToString() };
         public override StatBonus GetStatBonus(BattleUnitModel owner)
@@ -88,10 +80,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_Pluto: ContingecyContract
     {
-        public ContingecyContract_Pluto(int level)
-        {
-            this.Level = level;
-        }
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1309011;
         public override int SpeedDiceNumAdder() => Activate? 1 : 0;
         private bool Activate => (Singleton<StageController>.Instance.RoundTurn - 1) % 3 == 0;

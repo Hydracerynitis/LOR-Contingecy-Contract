@@ -6,15 +6,12 @@ using System.Linq;
 using LOR_DiceSystem;
 using System.Text;
 using BaseMod;
+using UI;
 
 namespace Contingecy_Contract
 {
     public class ContingecyContract_DElena_Hp : ContingecyContract
     {
-        public ContingecyContract_DElena_Hp(int level)
-        {
-            Level = level;
-        }
         public override bool CheckEnemyId(LorId EnemyId)
         {
             return EnemyId == 1408011;
@@ -30,10 +27,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_DElena_Aoe : ContingecyContract
     {
-        public ContingecyContract_DElena_Aoe(int level)
-        {
-            Level = level;
-        }
         public override bool CheckEnemyId(LorId EnemyId)
         {
             return EnemyId == 1408011;
@@ -49,10 +42,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_DPluto_Contract : ContingecyContract
     {
-        public ContingecyContract_DPluto_Contract(int level)
-        {
-            Level = level;
-        }
         public override bool CheckEnemyId(LorId EnemyId)
         {
             return EnemyId == 1409011;
@@ -70,10 +59,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_DPluto_Shade : ContingecyContract
     {
-        public ContingecyContract_DPluto_Shade(int level)
-        {
-            Level = level;
-        }
         public override bool CheckEnemyId(LorId EnemyId)
         {
             return EnemyId==1409011;
@@ -81,10 +66,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_DArgalia_Sonata : ContingecyContract
     {
-        public ContingecyContract_DArgalia_Sonata(int level)
-        {
-            Level = level;
-        }
         public override bool CheckEnemyId(LorId EnemyId)
         {
             return EnemyId == 1410011;
@@ -93,15 +74,32 @@ namespace Contingecy_Contract
         {
             base.Init(self);
             foreach (BattleUnitModel unit in BattleObjectManager.instance.GetAliveList())
-                unit.emotionDetail.LevelUp_Forcely(2);
+            {
+                unit.emotionDetail.LevelUp();
+                unit.emotionDetail.LevelUp();
+            }
+        }
+        public class PassiveAbility_1410013_New : PassiveAbility_1410013
+        {
+            public override void OnRoundStart()
+            {
+                if (PassiveAbility_1410014.IsBattleEnd())
+                    return;
+                ++this._elapsedRound;
+                if (this._elapsedRound % 2 != 0)
+                    return;
+                this._elapsedRound = 0;
+                foreach (BattleUnitModel alive in BattleObjectManager.instance.GetAliveList(this.owner.faction))
+                {
+                    BattleUnitModel u = alive;
+                    if (this._idList.Exists((Predicate<int>)(x => u.UnitData.unitData.EnemyUnitId == x)))
+                        u.bufListDetail.AddKeywordBufThisRoundByEtc(KeywordBuf.UpSurge, 1, this.owner);
+                }
+            }
         }
     }
     public class ContingecyContract_DArgalia_Ternaria : ContingecyContract
     {
-        public ContingecyContract_DArgalia_Ternaria(int level)
-        {
-            Level = level;
-        }
         public override bool CheckEnemyId(LorId EnemyId)
         {
             return EnemyId == 1410011;

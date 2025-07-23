@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleEffectTextRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<effectTextList>
+		<BattleEffectText ID="CC_NewHanaPassive1">
+			<Name>Geon</Name>
+      		<Desc>Gain 1 Strength, and deal 3 more damage and Stagger damage with attacks this Scene.</Desc>
+		</BattleEffectText>
+        <BattleEffectText ID="CC_NewHanaPassive2">
+			<Name>Gon</Name>
+      		<Desc>Gain 2 Endurance, and take 30% less damage and Stagger damage from attacks this Scene.</Desc>
+		</BattleEffectText>
+        <BattleEffectText ID="CC_NewHanaPassive3">
+			<Name>Gam</Name>
+      		<Desc>Restore 1 Light. If full Light, then recover 1 Light of other allies with lowest Light.</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="CC_NewHanaPassive4">
+			<Name>Ri</Name>
+      		<Desc>Draw 1 page. Reduce the cost of drawed page by 1 (Reset when use)</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="Tooltip_Hexagram">
+			<Name>Hexagram Page</Name>
+            <Desc>Play on slotted Speed Dice to apply extra ability to the slotted page. Incompatible with EGO, Mass Attack or Passive-related pages.</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="Tooltip_Qian">
+			<Name>[Full Trigrams] "Geon" Used</Name>
+            <Desc>Play following Trigram Pages to gain pages that apply respective enhancement to slotted pages:
+"Gon": Pǐ (The page has a chance to be played again)
+"Gam": Sòng (The page's [On Use] effect trigger twice when played)
+"Ri": Tóng Rén (Dice of the page gain Power for every other copy used)</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="Tooltip_Kun">
+			<Name>[Full Trigrams] "Gon" Used</Name>
+            <Desc>Play following Trigram Pages to gain pages that apply respective enhancement to slotted pages:
+"Geon": Tài (Keeping the page in hand increase Damage dealt in this Scene)	
+"Gam": Shī (Keeping the page in hand trigger its [On Use] effect on random enemy)	
+"Ri": Míng Yí (Keeping the page in hand permantly boost all dice of its copies)</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="Tooltip_Kan">
+			<Name>[Full Trigrams] "Gam" Used</Name>
+            <Desc>Play following Trigram Pages to gain pages that apply respective enhancement to slotted pages:
+"Geon": Xū (Upgrad the page to deal extra Stagger Damage by using other Pages that cost more)
+"Gon": Bǐ (Upgrad the page to gain a shield to absorb Stagger Damage by using other Pages that cost more)
+"Ri": Jì Jì (Permantly reduce the page's cost by using other Pages that cost more)</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="Tooltip_Li">
+			<Name>[Full Trigrams] "Ri" Used</Name>
+            <Desc>Play following Trigram Pages to gain pages that apply respective enhancement to slotted pages:
+"Geon": Dà Yǒu (If the page is played on the Scene it is drawn, boost all dice's Power)		
+"Gon": Jìn (If the page is played on the Scene it is drawn, gain Couter version of the page)	
+"Gam": Wèi Jì (If the page is played on the Scene it is drawn, draw this page on the next Scene)</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="CardBuf_HanaPi">
+			<Name>Pǐ</Name>
+            <Desc>After using the page, reuse the page against a random enemy at 50% chance. (Once per Scene)</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="CardBuf_HanaSong">
+			<Name>Sòng</Name>
+            <Desc>The page's [On Use] effect trigger twice (Once per Scene)</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="CardBuf_HanaTongRen">
+			<Name>Tóng Rén</Name>
+            <Desc>[On Use] For each other copy of the page played this Scene by the character, all dice of the page gain +2 Power</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="CardBuf_HanaTai">
+			<Name>Tài</Name>
+            <Desc>[Combat Start] If this page remain in hand, discard this page to boost your Damage dealt in this Scene by +35%</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="CardBuf_HanaShi">
+			<Name>Shī</Name>
+            <Desc>[Combat Start] If this page remain in hand, discard this page to trigger its [On Use] effect on random enemy</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="CardBuf_HanaMingYi">
+			<Name>Míng Yí</Name>
+            <Desc>[Combat Start] If this page remain in hand, discard this page to permantly uplift all dice of its copies by 1</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="CardBuf_HanaXu">
+			<Name>Xū</Name>
+            <Desc>When using Pages with cost larger than the cost of this Page, gain 1 stack of "Xū"			
+[On Use] Based on Xū's stack, inflict {0} Stagger Damage per stack to target. Reset all stacks after use</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="CardBuf_HanaBi">
+			<Name>Bǐ</Name>
+            <Desc>When using Pages with cost larger than the cost of this Page, gain 1 stack of "Bǐ"			
+[On Use] Based on Bǐ's stack, gain shield that can absorb {0} Stagger Damage per stack. Reset all stacks after use</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="staggerShield">
+			<Name>Stagger Sheild</Name>
+            <Desc>Can absorb {0} Stagger Damage</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="CardBuf_HanaJiJi">
+			<Name>Jì Jì</Name>
+            <Desc>When using Pages with more than {0} cost while this page is in hand, permantly reduce the cost of this page by 1</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="CardBuf_HanaDaYou">
+			<Name>Dà Yǒu</Name>
+            <Desc>[On Use] All dice gain +2 Power
+[Combat Start] If this page remain in hand, temporarily disable this effect until this Page return to hand again</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="CardBuf_HanaJin">
+			<Name>Jìn</Name>
+            <Desc>[Combat Start] Retain copies of all dice as Counter dice;
+If this page remain in hand, temporarily disable this effect until this Page return to hand again</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="CardBuf_HanaWeiJi">
+			<Name>Wèi Jì</Name>
+            <Desc>[On Use] Draw this page at the start of next Scene
+[Combat Start] If this page remain in hand, temporarily disable this effect until this Page return to hand again</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="newHanaSpecial1">
+			<Name>Bonus Effect</Name>
+            <Desc>Geon - 'Combat Start: All dice of the character gain +1 Power this Scene'
+Gon - 'Combat Start: All allies gain 3 Protection and Stagger Protection'.</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="newHanaSpecial2">
+			<Name>Bonus Effect</Name>
+            <Desc>Gam - 'Combat Start: Reduce Cost of all pages by 1 for the next Scene'
+Ri - 'Combat Start: Draw 3 pages'</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="newHanaUltimate1">
+			<Name>Bonus Effect</Name>
+            <Desc>Geon - 'Recycle all dice on this page (Up to 1 times)'
+Gon - 'Recover 30% Max HP and all Stagger Resist'.</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="newHanaUltimate2">
+			<Name>Bonus Effect</Name>
+            <Desc>Gam - 'All allies recover 2 Light'
+Ri - 'Draw 3 pages at the start of next Scene'</Desc>
+		</BattleEffectText>
+	</effectTextList>
+</BattleEffectTextRoot>

@@ -9,12 +9,59 @@ using BaseMod;
 
 namespace Contingecy_Contract
 {
+    //Replace Passive
+    public class PassiveAbility_1405011_New : PassiveAbility_1405011
+    {
+        private bool isContractFriend => ContractLoader.Instance.ExistContract("DOswald_Friend");
+
+        private bool isContractShow => ContractLoader.Instance.ExistContract("DOswald_Show");
+        private int MinHp = -1;
+        public override bool BeforeTakeDamage(BattleUnitModel attacker, int dmg)
+        {
+            _dmgReduction = 0;
+            int exceedDmg = (int)owner.hp - dmg;
+            if (exceedDmg <= MinHp)
+                _dmgReduction = MinHp - exceedDmg;
+            return false;
+        }
+        public override int GetDamageReductionAll() => owner.hp > MinHp ? _dmgReduction : 10000;
+        public override void OnRoundStart()
+        {
+            _summonUsed = false;
+            _summonhideUsed = false;
+            if (isContractShow)
+                MinHp = (int)owner.hp - owner.MaxHp / 4;
+            else
+                MinHp = (int)owner.hp - owner.MaxHp / 2;
+        }
+        public override void OnRoundEnd()
+        {
+            int BreakDmg = isContractShow ? RandomUtil.Range(4, 8) : RandomUtil.Range(2, 4);
+            foreach (BattleUnitModel alive in BattleObjectManager.instance.GetAliveList_opponent(owner.faction))
+                alive.TakeBreakDamage(BreakDmg, DamageType.Passive, owner);
+        }
+        public override void OnRoundEndTheLast()
+        {
+            ContractAttribution.OswaldHp = (int)owner.hp;
+            if (_summonUsed)
+            {
+                Stage?.AddSpecialChild();
+            }
+            else
+            {
+                if (!_summonhideUsed)
+                    return;
+                if (isContractFriend)
+                {
+                    BattleUnitModel Bunny = SummonLiberation.Harmony_Patch.SummonUnit(Faction.Enemy, new LorId(1405041), new LorId(1405041), 5);
+                    Bunny.formation.ChangePos(new Vector2Int(5, 15));
+                }
+                Stage?.AddChilds(Owner);
+            }
+        }
+    }
     public class ContingecyContract_DOswald_Friend : ContingecyContract
     {
-        public ContingecyContract_DOswald_Friend(int level)
-        {
-            Level = level;
-        }
         public override bool CheckEnemyId(LorId EnemyId)
         {
             return EnemyId.GreaterEqual(1405011) && EnemyId.LesserEqual(1405041);
@@ -29,10 +76,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_DOswald_Show : ContingecyContract
     {
-        public ContingecyContract_DOswald_Show(int level)
-        {
-            Level = level;
-        }
         public override bool CheckEnemyId(LorId EnemyId)
         {
             return EnemyId == 1405011;
@@ -42,9 +85,8 @@ namespace Contingecy_Contract
     {
         private Queue<int> Priority = new Queue<int>();
         EnemyTeamStageManager_TwistedReverberationBand_Middle _stage;
-        public ContingecyContract_DTanya_Warrior(int level)
+        public ContingecyContract_DTanya_Warrior()
         {
-            Level = level;
             _stage = Singleton<StageController>.Instance.EnemyStageManager as EnemyTeamStageManager_TwistedReverberationBand_Middle;
         }
         public override bool CheckEnemyId(LorId EnemyId)
@@ -261,10 +303,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_DTanya_Sand: ContingecyContract
     {
-        public ContingecyContract_DTanya_Sand(int level)
-        {
-            Level = level;
-        }
         public override bool CheckEnemyId(LorId EnemyId)
         {
             return EnemyId == 1406011;
@@ -282,10 +320,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_DJaeheon_Control : ContingecyContract
     {
-        public ContingecyContract_DJaeheon_Control(int level)
-        {
-            Level = level;
-        }
         public override bool CheckEnemyId(LorId EnemyId)
         {
             return EnemyId == 1407011;
@@ -341,10 +375,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_DJaeheon_Tangle : ContingecyContract
     {
-        public ContingecyContract_DJaeheon_Tangle(int level)
-        {
-            Level = level;
-        }
         public override bool CheckEnemyId(LorId EnemyId)
         {
             return EnemyId == 1407011;

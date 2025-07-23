@@ -26,11 +26,13 @@ namespace Contingecy_Contract
         [HarmonyPostfix]
         static void AppendDemonstrationPage(List<BookModel> __result)
         {
-            foreach((string, int) pair in StaticDataManager.RewardCondition.Keys)
+            if (!ContractRewardSystem.Instance.Active)
+                return;
+            foreach (LorId rewardPage in StaticDataManager.Glossary)
             {
-                if (TextDataModel.CurrentLanguage==pair.Item1 && !ContractRewardSystem.ClearList.Contains(pair.Item2))
+                if (!ContractRewardSystem.Instance.ClearList.Contains(rewardPage))
                 {
-                    BookModel demo = new BookModel(BookXmlList.Instance.GetData(Tools.MakeLorId(pair.Item2)).CopyForDemo());
+                    BookModel demo = new BookModel(BookXmlList.Instance.GetData(rewardPage).CopyForDemo());
                     DeckXmlInfo deck = DeckXmlList.Instance.GetData(demo.GetBookClassInfoId());
                     if(deck != null)
                         foreach (LorId id in deck.cardIdList)
@@ -43,7 +45,7 @@ namespace Contingecy_Contract
         [HarmonyPostfix]
         static void RemoveRewardPageFromPassiveAttribute(List<BookModel> __result)
         {
-            __result.RemoveAll(x => x.ClassInfo.workshopID == "ContingencyConract");
+            __result.RemoveAll(x => StaticDataManager.Glossary.Contains(x.GetBookClassInfoId()));
         }
         [HarmonyPatch(typeof(UISettingInvenEquipPageSlot), nameof(UISettingInvenEquipPageSlot.SetOperatingPanel))]
         [HarmonyPostfix]
@@ -191,10 +193,14 @@ namespace Contingecy_Contract
         [HarmonyPrefix]
         static bool DisplayRewardCondition_ILEPS(UIInvenLeftEquipPageSlot __instance)
         {
-            if(__instance.BookDataModel.ClassInfo.workshopID== "ContingencyConract" && __instance.BookDataModel.ClassInfo.isError)
+            if(__instance.BookDataModel.ClassInfo.isError)
             {
-                UIAlarmPopup.instance.SetAlarmText(StaticDataManager.RewardCondition[(TextDataModel.CurrentLanguage, __instance.BookDataModel.ClassInfo._id)]);
-                return false;
+                string lanagugae = StaticDataManager.GetSupportedLanguage();
+                if (StaticDataManager.RewardCondition[lanagugae].ContainsKey(__instance.BookDataModel.ClassInfo.id))
+                {
+                    UIAlarmPopup.instance.SetAlarmText(StaticDataManager.RewardCondition[lanagugae][__instance.BookDataModel.ClassInfo.id]);
+                    return false;
+                }
             }
             return true;
         }
@@ -202,10 +208,14 @@ namespace Contingecy_Contract
         [HarmonyPrefix]
         static bool DisplayRewardCondition_IEPS(UIInvenEquipPageSlot __instance)
         {
-            if (__instance.BookDataModel.ClassInfo.workshopID == "ContingencyConract" && __instance.BookDataModel.ClassInfo.isError)
+            if (__instance.BookDataModel.ClassInfo.isError)
             {
-                UIAlarmPopup.instance.SetAlarmText(StaticDataManager.RewardCondition[(TextDataModel.CurrentLanguage, __instance.BookDataModel.ClassInfo._id)]);
-                return false;
+                string lanagugae = StaticDataManager.GetSupportedLanguage();
+                if (StaticDataManager.RewardCondition[lanagugae].ContainsKey(__instance.BookDataModel.ClassInfo.id))
+                {
+                    UIAlarmPopup.instance.SetAlarmText(StaticDataManager.RewardCondition[lanagugae][__instance.BookDataModel.ClassInfo.id]);
+                    return false;
+                }
             }
             return true;
         }
@@ -213,10 +223,14 @@ namespace Contingecy_Contract
         [HarmonyPrefix]
         static bool DisplayRewardCondition_SIEPLS(UISettingInvenEquipPageLeftSlot __instance)
         {
-            if (__instance.BookDataModel.ClassInfo.workshopID == "ContingencyConract" && __instance.BookDataModel.ClassInfo.isError)
+            if (__instance.BookDataModel.ClassInfo.isError)
             {
-                UIAlarmPopup.instance.SetAlarmText(StaticDataManager.RewardCondition[(TextDataModel.CurrentLanguage, __instance.BookDataModel.ClassInfo._id)]);
-                return false;
+                string lanagugae = StaticDataManager.GetSupportedLanguage();
+                if (StaticDataManager.RewardCondition[lanagugae].ContainsKey(__instance.BookDataModel.ClassInfo.id))
+                {
+                    UIAlarmPopup.instance.SetAlarmText(StaticDataManager.RewardCondition[lanagugae][__instance.BookDataModel.ClassInfo.id]);
+                    return false;
+                }
             }
             return true;
         }
@@ -224,10 +238,14 @@ namespace Contingecy_Contract
         [HarmonyPrefix]
         static bool DisplayRewardCondition_ILEPS_SIEPS(UISettingInvenEquipPageSlot __instance)
         {
-            if (__instance.BookDataModel.ClassInfo.workshopID == "ContingencyConract" && __instance.BookDataModel.ClassInfo.isError)
+            if (__instance.BookDataModel.ClassInfo.isError)
             {
-                UIAlarmPopup.instance.SetAlarmText(StaticDataManager.RewardCondition[(TextDataModel.CurrentLanguage, __instance.BookDataModel.ClassInfo._id)]);
-                return false;
+                string lanagugae = StaticDataManager.GetSupportedLanguage();
+                if (StaticDataManager.RewardCondition[lanagugae].ContainsKey(__instance.BookDataModel.ClassInfo.id))
+                {
+                    UIAlarmPopup.instance.SetAlarmText(StaticDataManager.RewardCondition[lanagugae][__instance.BookDataModel.ClassInfo.id]);
+                    return false;
+                }
             }
             return true;
         }

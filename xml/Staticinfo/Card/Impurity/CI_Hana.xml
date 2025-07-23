@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Card ID="17100101">
+		<Name>否</Name>
+		<Artwork>否</Artwork>
+		<Rarity>Unique</Rarity>
+		<Spec Range="Instance" Cost="0" />
+		<Script>HanaPi</Script>
+		<Option>ExhaustOnUse</Option>
+		<ScriptDesc/>
+		<BehaviourList>
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>2</Priority>
+		<SortPriority>1</SortPriority>
+	</Card>
+	<Card ID="17100102">
+		<Name>讼</Name>
+		<Artwork>讼</Artwork>
+		<Rarity>Unique</Rarity>
+		<Spec Range="Instance" Cost="0" />
+		<Script>HanaSong</Script>
+		<Option>ExhaustOnUse</Option>
+		<ScriptDesc/>
+		<BehaviourList>
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>2</Priority>
+		<SortPriority>1</SortPriority>
+	</Card>
+	<Card ID="17100103">
+		<Name>同人</Name>
+		<Artwork>同人</Artwork>
+		<Rarity>Unique</Rarity>
+		<Spec Range="Instance" Cost="0" />
+		<Script>HanaTongRen</Script>
+		<Option>ExhaustOnUse</Option>
+		<ScriptDesc/>
+		<BehaviourList>
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>2</Priority>
+		<SortPriority>1</SortPriority>
+	</Card>
+	<Card ID="17100104">
+		<Name>泰</Name>
+		<Artwork>泰</Artwork>
+		<Rarity>Unique</Rarity>
+		<Spec Range="Instance" Cost="0" />
+		<Script>HanaTai</Script>
+		<Option>ExhaustOnUse</Option>
+		<ScriptDesc/>
+		<BehaviourList>
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>2</Priority>
+		<SortPriority>1</SortPriority>
+	</Card>
+	<Card ID="17100105">
+		<Name>师</Name>
+		<Artwork>师</Artwork>
+		<Rarity>Unique</Rarity>
+		<Spec Range="Instance" Cost="0" />
+		<Script>HanaShi</Script>
+		<Option>ExhaustOnUse</Option>
+		<ScriptDesc/>
+		<BehaviourList>
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>2</Priority>
+		<SortPriority>1</SortPriority>
+	</Card>
+	<Card ID="17100106">
+		<Name>明夷</Name>
+		<Artwork>明夷</Artwork>
+		<Rarity>Unique</Rarity>
+		<Spec Range="Instance" Cost="0" />
+		<Script>HanaMingYi</Script>
+		<Option>ExhaustOnUse</Option>
+		<ScriptDesc/>
+		<BehaviourList>
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>2</Priority>
+		<SortPriority>1</SortPriority>
+	</Card>
+	<Card ID="17100107">
+		<Name>需</Name>
+		<Artwork>需</Artwork>
+		<Rarity>Unique</Rarity>
+		<Spec Range="Instance" Cost="0" />
+		<Script>HanaXu</Script>
+		<Option>ExhaustOnUse</Option>
+		<ScriptDesc/>
+		<BehaviourList>
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>2</Priority>
+		<SortPriority>1</SortPriority>
+	</Card>
+	<Card ID="17100108">
+		<Name>比</Name>
+		<Artwork>比</Artwork>
+		<Rarity>Unique</Rarity>
+		<Spec Range="Instance" Cost="0" />
+		<Script>HanaBi</Script>
+		<Option>ExhaustOnUse</Option>
+		<ScriptDesc/>
+		<BehaviourList>
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>2</Priority>
+		<SortPriority>1</SortPriority>
+	</Card>
+	<Card ID="17100109">
+		<Name>既济</Name>
+		<Artwork>既济</Artwork>
+		<Rarity>Unique</Rarity>
+		<Spec Range="Instance" Cost="0" />
+		<Script>HanaJiJi</Script>
+		<Option>ExhaustOnUse</Option>
+		<ScriptDesc/>
+		<BehaviourList>
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>2</Priority>
+		<SortPriority>1</SortPriority>
+	</Card>
+	<Card ID="17100110">
+		<Name>大有</Name>
+		<Artwork>大有</Artwork>
+		<Rarity>Unique</Rarity>
+		<Spec Range="Instance" Cost="0" />
+		<Script>HanaDaYou</Script>
+		<Option>ExhaustOnUse</Option>
+		<ScriptDesc/>
+		<BehaviourList>
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>2</Priority>
+		<SortPriority>1</SortPriority>
+	</Card>
+	<Card ID="17100111">
+		<Name>晋</Name>
+		<Artwork>晋</Artwork>
+		<Rarity>Unique</Rarity>
+		<Spec Range="Instance" Cost="0" />
+		<Script>HanaJin</Script>
+		<Option>ExhaustOnUse</Option>
+		<ScriptDesc/>
+		<BehaviourList>
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>2</Priority>
+		<SortPriority>1</SortPriority>
+	</Card>
+	<Card ID="17100112">
+		<Name>未济</Name>
+		<Artwork>未济</Artwork>
+		<Rarity>Unique</Rarity>
+		<Spec Range="Instance" Cost="0" />
+		<Script>HanaWeiJi</Script>
+		<Option>ExhaustOnUse</Option>
+		<ScriptDesc/>
+		<BehaviourList>
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>2</Priority>
+		<SortPriority>1</SortPriority>
+	</Card>
+	<Card ID="17100001">
+		<Name>真-叠卦</Name>
+		<Artwork>Hana1</Artwork>
+		<Rarity>Unique</Rarity>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
+		<Spec Range="Near" Cost="4" />
+		<Script>newHanaSpecial</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="7" Dice="10" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Hana_Z" Script="" ActionScript="HanaSpecial" Desc="" />
+			<Behaviour Min="8" Dice="11" Type="Atk" Detail="Slash" Motion="J" EffectRes="Hana_J" Script="damage5atk" ActionScript="HanaSpecial" Desc="" />
+			<Behaviour Min="6" Dice="9" Type="Def" Detail="Guard" Motion="G" EffectRes="Hana_G" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+  	</Card>
+	<Card ID="17100002">
+		<Name>孤注一掷</Name>
+		<Artwork>Hana2</Artwork>
+		<Rarity>Unique</Rarity>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
+		<Spec Range="Near" Cost="4" />
+		<Script>HanaUltimate</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="5" Dice="9" Type="Atk" Detail="Slash" Motion="H" EffectRes="Hana_H" Script="" ActionScript="" Desc="" />
+			<Behaviour Min="5" Dice="9" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Hana_Z" Script="" ActionScript="" Desc="" />
+			<Behaviour Min="5" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="Hana_J" Script="" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="7" Type="Standby" Detail="Hit" Motion="J" EffectRes="Hana_J" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+		<PriorityScript>handless</PriorityScript>
+	</Card>
+	<Card ID="17100003">
+		<Name>针锋相对</Name>
+		<Artwork>Hana3</Artwork>
+		<Rarity>Rare</Rarity>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
+		<Spec Range="Near" Cost="3" />
+		<Script>HanaUpgrade</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="7" Dice="10" Type="Def" Detail="Guard" Motion="G" EffectRes="Hana_G" Script="GonPower" ActionScript="" Desc="" />
+			<Behaviour Min="6" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="Hana_J" Script="" ActionScript="" Desc="" />
+			<Behaviour Min="5" Dice="8" Type="Atk" Detail="Slash" Motion="H" EffectRes="Hana_H" Script="GeonDmg" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+	</Card>
+	<Card ID="17100004">
+		<Name>八卦挥斩</Name>
+		<Artwork>Hana4</Artwork>
+		<Rarity>Rare</Rarity>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
+		<Spec Range="Near" Cost="5" />
+		<Script>HanaCostdown</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+		<Behaviour Min="7" Dice="10" Type="Atk" Detail="Slash" Motion="H" EffectRes="Hana_H" Script="" ActionScript="" Desc="" />
+		<Behaviour Min="6" Dice="10" Type="Def" Detail="Guard" Motion="G" EffectRes="Hana_G" Script="" ActionScript="" Desc="" />
+		<Behaviour Min="6" Dice="10" Type="Atk" Detail="Hit" Motion="J" EffectRes="Hana_J" Script="" ActionScript="" Desc="" />
+		<Behaviour Min="6" Dice="9" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Hana_Z" Script="" ActionScript="" Desc="" />
+		<Behaviour Min="5" Dice="9" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+		<PriorityScript>cost5</PriorityScript>
+	</Card>
+	<Card ID="17100005">
+		<Name>驭卦上挑</Name>
+		<Artwork>Hana5</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
+		<Spec Range="Near" Cost="3" />
+		<Script>HanaBuf</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="7" Dice="12" Type="Atk" Detail="Hit" Motion="J" EffectRes="Hana_J" Script="HanaBufAtk" ActionScript="" Desc="" />
+			<Behaviour Min="6" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="Hana_G" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+	</Card>
+	<Card ID="17100006">
+		<Name>天穹之矛</Name>
+		<Artwork>Hana6</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
+		<Spec Range="Near" Cost="3" />
+		<Script>HanaDraw</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="9" Dice="20" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="Hana_H" Script="HanaSpear" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="Hana_G" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+	</Card>
+	<Card ID="17100007">
+		<Name>快拳速杀</Name>
+		<Artwork>Hana7</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
+		<Spec Range="Near" Cost="1" />
+		<Script>HanaHaste</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="3" Dice="8" Type="Atk" Detail="Slash" Motion="H" EffectRes="Hana_H" Script="RiLight" ActionScript="" Desc="" />
+			<Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Hana_Z" Script="GamDraw" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+	</Card>
+	<Card ID="17100008">
+		<Name>颅脑搅拌</Name>
+		<Artwork>Hana8</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
+		<Spec Range="Near" Cost="3" />
+		<Script>HanaSkull</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="5" Dice="9" Type="Atk" Detail="Slash" Motion="H" EffectRes="Hana_H" Script="RiDmg" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="H" EffectRes="Hana_H" Script="RiDmg" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="Hana_G" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+	</Card>
+	<Card ID="17100009">
+		<Name>镜花水月</Name>
+		<Artwork>Hana9</Artwork>
+		<Rarity>Common</Rarity>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
+		<Spec Range="Near" Cost="2" />
+		<Script>HanaDebufClear</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="4" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+			<Behaviour Min="5" Dice="9" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="Hana_H" Script="RiDraw" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+	</Card>
+	<Card ID="17100010">
+		<Name>如箭在弦</Name>
+		<Artwork>Hana10</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
+		<Spec Range="Near" Cost="2" />
+		<Script>HanaFriend</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="3" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="Hana_G" Script="" ActionScript="" Desc="" />
+			<Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Hana_Z" Script="GonBreak" ActionScript="" Desc="" />
+			<Behaviour Min="3" Dice="7" Type="Atk" Detail="Slash" Motion="H" EffectRes="Hana_H" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>-1</Priority>
+	</Card>
+	<Card ID="17100011">
+		<Name>踏入战争</Name>
+		<Artwork>Hana11</Artwork>
+		<Rarity>Common</Rarity>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
+		<Spec Range="Near" Cost="0" />
+		<Script>HanaEnergy</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="3" Dice="6" Type="Atk" Detail="Hit" Motion="J" EffectRes="Hana_J" Script="GeonReuse" ActionScript="" Desc="" />
+			<Behaviour Min="2" Dice="5" Type="Atk" Detail="Slash" Motion="H" EffectRes="Hana_H" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+	</Card>
+	<Card ID="17100012">
+		<Name>泰然自若</Name>
+		<Artwork>Hana12</Artwork>
+		<Rarity>Common</Rarity>
+		<Option>OnlyPage</Option>
+		<Option>Basic</Option>
+		<Spec Range="Near" Cost="0" />
+		<Script>newHanaDiscardDraw</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="3" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Hana_Z" Script="GonBrace" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>7</Chapter>
+		<Priority>0</Priority>
+	</Card>
+</DiceCardXmlRoot>

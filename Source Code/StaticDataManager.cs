@@ -1,4 +1,5 @@
 ﻿using BaseMod;
+using LitJson;
 using MyJsonTool;
 using System;
 using System.Collections.Generic;
@@ -16,58 +17,93 @@ namespace Contingecy_Contract
     {
         public static Dictionary<string, GameObject> VanilaGameObject=new Dictionary<string, GameObject>();
         public static Dictionary<string, AudioClip> VanilaAudio = new Dictionary<string, AudioClip>();
-        public static List<Contract> JsonList = new List<Contract>();
+        public static List<Contract> ContractList = new List<Contract>();
         public static Dictionary<LorId , Sprite> NonThumbSprite = new Dictionary<LorId, Sprite>();
-        public static Dictionary<LorId, int> RewardDic = new Dictionary<LorId, int>();
+        public static Dictionary<LorId, LorId> RewardDic = new Dictionary<LorId, LorId>();
         public static List<RewardConfig> ExtraCondition=new List<RewardConfig>();
-        public static Dictionary<(string,int), string> RewardCondition= new Dictionary<(string, int), string>();
+        public static Dictionary<string,Dictionary<LorId,string>> RewardCondition= new Dictionary<string, Dictionary<LorId, string>>();
         public static Dictionary<(string, string), string> ContractParam = new Dictionary<(string, string), string>();
+        public static List<RewardClearList> rewardClearLists = new List<RewardClearList>();
         public static AudioClip[] reverberation;
+        public static List<LorId> Glossary
+        {
+            get
+            {
+                if(RewardCondition.ContainsKey(GetSupportedLanguage()))
+                    return RewardCondition[GetSupportedLanguage()].Keys.ToList();
+                else
+                    return new List<LorId>();
+            }
+        }
         public static System.Type GetContingencyContract(string ContractType)
         {
             return System.Type.GetType("Contingecy_Contract.ContingecyContract_" + ContractType);
         }
-        public static void LoadStaticData()
+        public static System.Type GetStageModifier(string ContractType)
         {
-            LoadContractParam();
-            LoadContract();
-            InitNonThumbDic();
-            LoadReward();
-            LoadExtraCondition();
-            LoadGameObject();
+            return System.Type.GetType("Contingecy_Contract.StageModifier_" + ContractType);
         }
-        public static void LoadContract()
+        public static string GetSupportedLanguage()
         {
-
-            Debug.PathDebug("/Contracts", PathType.Directory);
-            Debug.XmlFileDebug("/Contracts");
-            foreach (FileInfo file in new DirectoryInfo(CCInitializer.ModPath + "/Contracts").GetFiles())
+            return TextDataModel.CurrentLanguage.EndsWith("cn") ? "cn" : "en";
+        }
+        public static void LoadStaticData(string dllPath)
+        {
+            LoadContractParam(dllPath);
+            LoadContract(dllPath);
+            LoadReward(dllPath);
+            LoadExtraCondition(dllPath);
+            LoadClearList(dllPath);
+        }
+        public static void LoadContract(string dllPath)
+        {
+            foreach (FileInfo file in new DirectoryInfo(dllPath + "/Contracts").GetFiles())
             {
                 try
                 {
-                    ContractBluePrintList list = File.ReadAllText(file.FullName).ToObject<ContractBluePrintList>();
+                    ContractBluePrintCollection list = File.ReadAllText(file.FullName).ToObject<ContractBluePrintCollection>();
                     foreach (ContractBluePrint bluePrint in list.CCs)
                     {
                         System.Type type = GetContingencyContract(bluePrint.Type);
                         if (type == null)
                             continue;
+                        ContingecyContract contract = Activator.CreateInstance(type, new object[] { }) as ContingecyContract;
+                        contract.Level = 0;
                         if (bluePrint.Variation <= 0)
                         {
-                            JsonList.Add(new Contract() { Type = bluePrint.Type, Variant = 0, desc = bluePrint.desc, contractType = bluePrint.contractType, Faction = bluePrint.Faction, Level = bluePrint.BaseLevel 
-                                ,Pid=bluePrint.Pid, Stageid = bluePrint.Stageid, Conflict = bluePrint.Conflict });
+                            
+                            Contract item = new Contract()
+                            {
+                                Type = bluePrint.Type,
+                                Variant = 0,
+                                contractType = bluePrint.contractType,
+                                Faction = bluePrint.Faction,
+                                Level = bluePrint.BaseLevel,
+                                Pid = bluePrint.Pid,
+                                Stageid = bluePrint.Stageid,
+                                Conflict = bluePrint.Conflict
+                            };
+                            bluePrint.desc.ForEach(x => item.desc.Add(new ContractDesc() { language = x.language, name = x.name, desc = string.Format(x.desc, contract.GetFormatParam(x.language)) }));
+                            ContractList.Add(item);
                             Debug.Log("Contract: {0} Added", bluePrint.Type);
                         }
-                        else
                         {
-                            ContingecyContract contract = Activator.CreateInstance(type, new object[] { 0 }) as ContingecyContract;
                             for (int i = 1; i <= bluePrint.Variation; i++)
                             {
                                 contract.Level = i;
-                                Contract item = new Contract() { Type = bluePrint.Type, Variant = i, contractType = bluePrint.contractType, Faction = bluePrint.Faction, Level = bluePrint.BaseLevel + i * bluePrint.Step, 
-                                     Stageid = bluePrint.Stageid, Pid=bluePrint.Pid,
-                                    Conflict = bluePrint.Conflict };
+                                Contract item = new Contract()
+                                {
+                                    Type = bluePrint.Type,
+                                    Variant = i,
+                                    contractType = bluePrint.contractType,
+                                    Faction = bluePrint.Faction,
+                                    Level = bluePrint.BaseLevel + i * bluePrint.Step,
+                                    Stageid = bluePrint.Stageid,
+                                    Pid = bluePrint.Pid,
+                                    Conflict = bluePrint.Conflict
+                                };
                                 bluePrint.desc.ForEach(x => item.desc.Add(new ContractDesc() { language = x.language, name = x.name + " " + i.ToString(), desc = string.Format(x.desc, contract.GetFormatParam(x.language)) }));
-                                JsonList.Add(item);
+                                ContractList.Add(item);
                                 Debug.Log("Contract: {0} Added", item.Id);
                             }
                         }
@@ -84,37 +120,25 @@ namespace Contingecy_Contract
             foreach (int i in CCInitializer.NoThumbPage)
                 NonThumbSprite.Add(Tools.MakeLorId(i), null);
         }
-        public static void LoadReward()
+        public static void LoadReward(string dllPath)
         {
-            Debug.PathDebug("/Staticinfo/RewardList", PathType.Directory);
-            Debug.XmlFileDebug("/Staticinfo/RewardList");
-            foreach (FileInfo file in new DirectoryInfo(CCInitializer.ModPath + "/Staticinfo/RewardList").GetFiles())
+            foreach (FileInfo file in new DirectoryInfo(dllPath + "/Contracts/ContractReward/RewardList").GetFiles())
             {
                 try
                 {
-                    XmlDocument xml = new XmlDocument();
-                    xml.LoadXml(File.ReadAllText(file.FullName));
-                    foreach (XmlNode node in xml.SelectNodes("RewardList/Reward"))
-                    {
-                        string Pid = "";
-                        if (node.Attributes.GetNamedItem("Pid") != null)
-                            Pid = node.Attributes.GetNamedItem("Pid").InnerText;
-                        string id = string.Empty;
-                        if (node.Attributes.GetNamedItem("id") != null)
-                            id = node.Attributes.GetNamedItem("id").InnerText;
-                        LorId key = new LorId(Pid, Int32.Parse(id));
-                        int value = Int32.Parse(node.InnerText);
-                        RewardDic[key] = value;
-                    }
+                    ContractRewardCollection list = JsonMapper.ToObject<ContractRewardCollection>(File.ReadAllText(file.FullName));
+                    foreach (ContractReward CR in list.CRs)
+                        RewardDic.Add(new LorId(CR.stagePid,CR.stageId), new LorId(CR.rewardPid,CR.rewardId));
                 }
                 catch (Exception ex)
                 {
-                    Debug.Error("RewardError", ex);
+                    Debug.Error("Reward", ex);
                 }
             }
             foreach (string lang in TextDataModel._supported)
             {
-                string path = CCInitializer.ModPath + "/Localize/" + lang + "/RewardCondition";
+                RewardCondition[lang] = new Dictionary<LorId, string>();
+                string path = dllPath + "/Contracts/ContractReward/RewardCondition/"+lang;
                 if (!Directory.Exists(path))
                     continue;
                 foreach (FileInfo file in new DirectoryInfo(path).GetFiles())
@@ -125,11 +149,14 @@ namespace Contingecy_Contract
                         xml.LoadXml(File.ReadAllText(file.FullName));
                         foreach (XmlNode node in xml.SelectNodes("RewardCondition/Reward"))
                         {
+                            string Pid = "";
+                            if (node.Attributes.GetNamedItem("Pid") != null)
+                                Pid = node.Attributes.GetNamedItem("Pid").InnerText;
                             string id = string.Empty;
                             if (node.Attributes.GetNamedItem("id") != null)
                                 id = node.Attributes.GetNamedItem("id").InnerText;
-                            int key = Int32.Parse(id);
-                            RewardCondition[(lang,key)] = node.InnerText;
+                            LorId key = new LorId(Pid, Int32.Parse(id));
+                            RewardCondition[lang][key] = node.InnerText;
                         }
                     }
                     catch (Exception ex)
@@ -139,15 +166,13 @@ namespace Contingecy_Contract
                 }
             }     
         }
-        public static void LoadExtraCondition()
+        public static void LoadExtraCondition(string dllPath)
         {
-            Debug.PathDebug("/Staticinfo/ExtraCondition", PathType.Directory);
-            Debug.XmlFileDebug("/Staticinfo/ExtraCondition");
-            foreach (FileInfo file in new DirectoryInfo(CCInitializer.ModPath + "/Staticinfo/ExtraCondition").GetFiles())
+            foreach (FileInfo file in new DirectoryInfo(dllPath + "/Contracts/ContractReward/ExtraCondition").GetFiles())
             {
                 try
                 {
-                    RewardConditionList list = File.ReadAllText(file.FullName).ToObject<RewardConditionList>();
+                    RewardConditionCollection list = File.ReadAllText(file.FullName).ToObject<RewardConditionCollection>();
                     ExtraCondition.AddRange(list.RCs);
                 }
                 catch (Exception ex)
@@ -156,21 +181,34 @@ namespace Contingecy_Contract
                 }
             }
         }
-        public static void LoadContractParam()
+        public static void LoadContractParam(string dllPath)
         {
-            Debug.PathDebug("/Contracts/ContractParams", PathType.Directory);
-            Debug.XmlFileDebug("/Contracts/ContractParams");
-            foreach (FileInfo file in new DirectoryInfo(CCInitializer.ModPath + "/Contracts/ContractParams").GetFiles())
+            foreach (FileInfo file in new DirectoryInfo(dllPath + "/Contracts/ContractParams").GetFiles())
             {
                 try
                 {
-                    ParamList list = File.ReadAllText(file.FullName).ToObject<ParamList>();
+                    ParamCollection list = File.ReadAllText(file.FullName).ToObject<ParamCollection>();
                     foreach(Params p in list.Ps)
                         p.Desc.ForEach(x => ContractParam.Add((p.Id, x.Language), x.Content));
                 }
                 catch (Exception ex)
                 {
                     Debug.Error("ContractParam", ex);
+                }
+            }
+        }
+        public static void LoadClearList(string dllPath)
+        {
+            foreach (FileInfo file in new DirectoryInfo(dllPath + "/Contracts/ContractReward/ClearList").GetFiles())
+            {
+                try
+                {
+                    ClearListCollection list = JsonMapper.ToObject<ClearListCollection>(File.ReadAllText(file.FullName));
+                    rewardClearLists.AddRange(list.RCLs);
+                }
+                catch (Exception ex)
+                {
+                    Debug.Error("ClearList", ex);
                 }
             }
         }

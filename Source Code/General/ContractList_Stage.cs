@@ -11,13 +11,13 @@ namespace Contingecy_Contract
 {
     public class StageModifier_Duplicate : StageModifier
     {
-        public StageModifier_Duplicate(int Level)
+        public override int GetPriority()
         {
-            this.Level = Level;
+            return -5;
         }
         public override void Modify(ref StageClassInfo info)
         {
-            int index = UnityEngine.Random.Range(0, info.waveList.Count);
+            int index = info.waveList.Count-1;
             StageWaveInfo reinforce = info.waveList[index];
             info.waveList.Insert(index,DeepCopyUtil.CopyXml(reinforce));
         }
@@ -28,17 +28,9 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_Duplicate : ContingecyContract
     {
-        public ContingecyContract_Duplicate(int level)
-        {
-            this.Level = level;
-        }
     }
     public class StageModifier_Last: StageModifier
     {
-        public StageModifier_Last(int Level)
-        {
-            this.Level = Level;
-        }
         public override bool IsValid(StageClassInfo info)
         {
             return info.floorNum!=1;
@@ -50,17 +42,10 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_Last : ContingecyContract
     {
-        public ContingecyContract_Last(int level)
-        {
-            this.Level = level;
-        }
+
     }
     public class StageModifier_LowFloor : StageModifier
     {
-        public StageModifier_LowFloor(int Level)
-        {
-            this.Level = Level;
-        }
         public override bool IsValid(StageClassInfo info)
         {
             if (Level == 1)
@@ -88,18 +73,10 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_LowFloor : ContingecyContract
     {
-        public ContingecyContract_LowFloor(int level)
-        {
-            this.Level = level;
-        }
         public override string[] GetFormatParam(string language) => Level==1? new string[] {"5"} : new string[] { "9"};
     }
     public class StageModifier_LowPeople: StageModifier
     {
-        public StageModifier_LowPeople(int Level)
-        {
-            this.Level = Level;
-        }
         public override bool IsValid(StageClassInfo info)
         {
             foreach(StageWaveInfo wave in info.waveList)
@@ -120,9 +97,5 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_LowPeople: ContingecyContract
     {
-        public ContingecyContract_LowPeople(int level)
-        {
-            this.Level = level;
-        }
     }
 }

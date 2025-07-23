@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleCardDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	 <cardDescList>
+		<!--Hana-->
+		<BattleCardDesc ID="17100101">
+			<LocalizedName>Pǐ</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100102">
+			<LocalizedName>Sòng</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100103">
+			<LocalizedName>Tóng Rén</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100104">
+			<LocalizedName>Tài</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100105">
+			<LocalizedName>Shī</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100106">
+			<LocalizedName>Míng Yí</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100107">
+			<LocalizedName>Xū</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100108">
+			<LocalizedName>比</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100109">
+			<LocalizedName>Jì Jì</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100110">
+			<LocalizedName>Dà Yǒu</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100111">
+			<LocalizedName>Jìn</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100112">
+			<LocalizedName>WèiJì</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100001">
+			<LocalizedName>True Hexagram Formation</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100002">
+			<LocalizedName>Impugnatio Totus</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100003">
+			<LocalizedName>Double-edged Strife</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100004">
+			<LocalizedName>Oracular Assault</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100005">
+			<LocalizedName>Harbinging Kick</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100006">
+			<LocalizedName>Ethereal Javelin</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100007">
+			<LocalizedName>Speedy Rushdown</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100008">
+			<LocalizedName>Relentless Pummel</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100009">
+			<LocalizedName>Mirage</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100010">
+			<LocalizedName>Standoff</LocalizedName>
+		</BattleCardDesc>
+		<BattleCardDesc ID="17100011">
+			<LocalizedName>Forward Parade</LocalizedName>
+		</BattleCardDesc>
+ 	</cardDescList>
+</BattleCardDescRoot>

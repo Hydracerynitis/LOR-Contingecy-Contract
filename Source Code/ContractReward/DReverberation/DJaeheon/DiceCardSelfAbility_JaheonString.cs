@@ -6,6 +6,7 @@ using HarmonyLib;
 using System.Text;
 using LOR_DiceSystem;
 using BaseMod;
+using Contingecy_Contract;
 
 namespace ContractReward
 {
@@ -21,7 +22,7 @@ namespace ContractReward
         {
             base.OnEndBattle();
             if (hit)
-                card.target.bufListDetail.AddBufByCard<BattleUnitBuf_JaeheonControl>(1, readyType: BufReadyType.NextRound);
+                card.target.bufListDetail.AddAutoBufByCard<BattleUnitBuf_JaeheonControl>(1, readyType: BufReadyType.NextRound);
         }
     }
 }

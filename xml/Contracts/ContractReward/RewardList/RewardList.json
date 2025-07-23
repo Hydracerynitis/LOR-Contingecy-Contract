@@ -1,0 +1,16 @@
+{
+    "CRs":[
+        { "stageId":40001, "rewardPid":"ContingencyConract", "rewardId":15100000 },
+        { "stageId":60001, "rewardPid":"ContingencyConract", "rewardId":17100000 },
+        { "stageId":70001, "rewardPid":"ContingencyConract", "rewardId":18100000 },
+        { "stageId":70002, "rewardPid":"ContingencyConract", "rewardId":18200000 },
+        { "stageId":70003, "rewardPid":"ContingencyConract", "rewardId":18300000 },
+        { "stageId":70004, "rewardPid":"ContingencyConract", "rewardId":18400000 },
+        { "stageId":70005, "rewardPid":"ContingencyConract", "rewardId":18500000 },
+        { "stageId":70006, "rewardPid":"ContingencyConract", "rewardId":18600000 },
+        { "stageId":70007, "rewardPid":"ContingencyConract", "rewardId":18700000 },
+        { "stageId":70008, "rewardPid":"ContingencyConract", "rewardId":18800000 },
+        { "stageId":70009, "rewardPid":"ContingencyConract", "rewardId":18900000 },
+        { "stageId":60003, "rewardPid":"ContingencyConract", "rewardId":17000001 }
+    ]
+}

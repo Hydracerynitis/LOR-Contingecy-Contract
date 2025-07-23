@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleCardAbilityDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!--Hana-->
+	<BattleCardAbility ID="HanaPi">
+    	<Desc>[装备时] 让装备在该速度骰上的战斗书页获得以下能力:
+"使用该书页后有1/2的几率再次对随机敌人使用一次 (一幕仅一次)"</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaSong">
+    	<Desc>[装备时] 让装备在该速度骰上的战斗书页获得以下能力:
+"该书页的[使用时]效果额外触发一次 (一幕仅一次)"</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaTongRen">
+    	<Desc>[装备时] 让装备在该速度骰上的战斗书页获得以下能力:
+"[使用时] 这一幕内自己每使用一张其他同名书页,该书页使的所有骰子威力+2"</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaTai">
+    	<Desc>[装备时] 让装备在该速度骰上的战斗书页获得以下能力:
+"[战斗开始] 若该书页仍在手牌里,则丢弃该书页并使在这幕内造成的伤害+35%"</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaShi">
+    	<Desc>[装备时] 让装备在该速度骰上的战斗书页获得以下能力:
+"[战斗开始] 若该书页仍在手牌里,则丢弃该书页并对随机敌人触发其[使用时]效果"</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaMingYi">
+    	<Desc>[装备时] 让装备在该速度骰上的战斗书页获得以下能力:
+"[战斗开始] 若该书页仍在手牌里,则丢弃该书页并永久提升所有同名书页骰子数值1点"</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaXu">
+    	<Desc>[装备时] 让装备在该速度骰上的战斗书页获得以下能力:
+"当该书页在手牌中时每使用一张费用高于当前费用的书页自身获得1层"需"
+[使用时] 根据"需"的层数,对目标追加每层(2+该书页当前费用*4)点混乱伤害,使用后层数清零."</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaBi">
+    	<Desc>[装备时] 让装备在该速度骰上的战斗书页获得以下能力:
+"该书页在手牌中时每使用一张费用高于当前费用的书页自身获得1层"比"
+[使用时] 根据"比"的层数每层获得能吸收(3+该书页当前费用*6)点混乱伤害的护盾,使用后层数清零."</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaJiJi">
+    	<Desc>[装备时] 让装备在该速度骰上的战斗书页获得以下能力:
+"该书页在手牌时,每使用一张当前费用高于其的书页书页便让该书页费用减少1点"</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaDaYou">
+    	<Desc>[装备时] 让装备在该速度骰上的战斗书页获得以下能力:
+"[使用时] 该书页所有骰子威力+2
+[战斗开始] 若该书页在手牌里则该效果暂时失效,直至重新回到手牌上"</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaJin">
+    	<Desc>[装备时] 让装备在该速度骰上的战斗书页获得以下能力:
+"[战斗开始] 将该书页的骰子的复制以反击骰形式洗入反击池;
+若该书页在手牌里则该效果暂时失效,直至重新回到手牌上"</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaWeiJi">
+    	<Desc>[装备时] 让装备在该速度骰上的战斗书页获得以下能力:
+"[使用时] 下一幕开始时抽取该书页
+[战斗开始] 若该书页在手牌里则该效果暂时失效,直至重新回到手牌上"</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="newHanaSpecial">
+    	<Desc>[战斗开始] 根据这一幕中装备的卦象书页获得额外效果
+[使用时] 刷新所有使用过的卦象书页</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaUltimate">
+    	<Desc>[使用时] 丢弃所有书页并使本书页的所有骰子威力+2;若丢弃了多于4张书页,根据这一幕中装备的卦象书页获得额外效果</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaUpgrade">
+    	<Desc>[拼点胜利] 使自身当前书页的下一颗骰子最大值+3</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="GonPower">
+    	<Desc>若这一幕装备了"坤"卦象书页,该骰子威力+3</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="GeonDmg">
+    	<Desc>若这一幕装备了"乾"卦象书页,该骰子造成的伤害+50%</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaCostdown">
+    	<Desc>每一幕结束时若自身装备了卦象书页,则该书页费用-1 (使用后复原)</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaBuf">
+    	<Desc>[战斗开始] 若这一幕装备了"坎"卦象书页,将该书页费用设为2
+[使用时] 下一幕中使自身获得1层强壮</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaBufAtk">
+    	<Desc>[命中时] 下一幕中使自身获得2层[强壮];若这一幕装备了[坤]卦象书页,则额外获得3层[忍耐]</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaDraw">
+    	<Desc>[使用时] 抽取一张书页
+若这一幕装备了[坤]卦象书页,将2颗防御骰子(5~8)置入本书页末尾</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaSpear">
+    	<Desc>[命中时] 追加5点伤害;若这一幕装备了[乾]卦象书页,额外追加该骰子最终威力的伤害</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaHaste">
+    	<Desc>[使用时] 下一幕中使自身获得2层迅捷
+若自身速度不低于7点 则使本书页的所有骰子威力+2</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="RiLight">
+    	<Desc>[命中时] 若这一幕装备了[離]卦象书页,恢复3点光芒</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="GamDraw">
+    	<Desc>[命中时] 若这一幕装备了[坎]卦象书页,抽取2张书页</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaSkull">
+    	<Desc>[使用时] 恢复一点光芒
+若这一幕装备了[乾]卦象书页,该书页所有进攻骰上限+3</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="RiDmg">
+    	<Desc>若这一幕装备了"離"卦象书页,该骰子伤害+(手牌数量*2)</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaDebufClear">
+    	<Desc>[战斗开始] 清除自身所有负面状态
+若这一幕装备了[坎]卦象书页,每清除一个负面状态便在下一幕开始时恢复1点光芒</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="RiDraw">
+    	<Desc>[命中时] 若这一幕装备了"離"卦象书页且手上书页数量小于4,则抽取2张书页</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaFriend">
+    	<Desc>[战斗开始] 使所有友方角色获得2层[守护]
+若这一幕装备了[乾]卦象书页,使所有友方角色额外获得1层[强壮]</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="GonBreak">
+    	<Desc>[命中时] 恢复5点混乱抗性;若这一幕装备了[坤]卦象书页,则额外恢复所有我方5点混乱抗性</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="HanaEnergy">
+    	<Desc>[使用时] 恢复1点光芒
+若这一幕装备了[坎]卦象书页,则额外恢复1点光芒</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="GeonReuse">
+    	<Desc>[命中时] 若这一幕装备了"乾"卦象书页,则额外投掷一次 (至多1次)</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="newHanaDiscardDraw">
+    	<Desc>[使用时] 随机丢弃1张书页;下一幕开始时抽取2张书页
+若这一幕装备了[離]卦象书页,则下一幕手牌抽取上限暂时+2</Desc>
+  	</BattleCardAbility>
+	<BattleCardAbility ID="GonBrace">
+    	<Desc>[拼点失败] 减少目标骰5点伤害;若这一幕装备了[坤]卦象书页,则减少目标书页剩余骰子5点伤害</Desc>
+  	</BattleCardAbility>
+</BattleCardAbilityDescRoot>

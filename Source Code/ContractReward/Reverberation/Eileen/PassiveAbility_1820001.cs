@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BaseMod;
+using Contingecy_Contract;
 
 namespace ContractReward
 {
@@ -84,6 +85,7 @@ namespace ContractReward
             Gear[index].allyCardDetail.Init(owner.UnitData.unitData.GetDeckForBattle(1));
             Gear[index].allyCardDetail.ReturnAllToDeck();
             Gear[index].allyCardDetail.DrawCards(4);
+            ContractAttribution.Init(Gear[index]);
         }
     }
 }

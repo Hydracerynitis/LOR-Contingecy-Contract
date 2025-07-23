@@ -13,10 +13,6 @@ namespace Contingecy_Contract
     public class ContingecyContract_Roland2nd_Smoke : ContingecyContract
     {
         private int _dmgreduction;
-        public ContingecyContract_Roland2nd_Smoke(int level)
-        {
-            Level = level;
-        }
         public override string[] GetFormatParam(string language) => new string[] { (2+Level).ToString(), (2 + 2*Level).ToString(), (Level*50).ToString() };
         public override bool CheckEnemyId(LorId EnemyId)
         {
@@ -69,10 +65,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_Roland2nd_Secret : ContingecyContract
     {
-        public ContingecyContract_Roland2nd_Secret(int level)
-        {
-            Level = level;
-        }
         public override string[] GetFormatParam(string language) => new string[] { (25 + Level * 25).ToString() };
         public override bool CheckEnemyId(LorId EnemyId)
         {
@@ -127,10 +119,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_Roland2nd : ContingecyContract
     {
-        public ContingecyContract_Roland2nd(int level)
-        {
-            Level = level;
-        }
         public override bool CheckEnemyId(LorId EnemyId)
         {
             return EnemyId == 60106 || EnemyId == 60006;

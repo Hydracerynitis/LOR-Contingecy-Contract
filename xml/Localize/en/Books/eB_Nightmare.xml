@@ -6,5 +6,15 @@
 			<TextList />
 			<PassiveList />
 		</BookDesc>
+		<BookDesc BookID="15100001">
+			<BookName>The Page of Valentin in Section 2</BookName>
+			<TextList />
+			<PassiveList />
+		</BookDesc>
+		<BookDesc BookID="15100002">
+			<BookName>The Page of Tenma in Section 2</BookName>
+			<TextList />
+			<PassiveList />
+		</BookDesc>
 	</bookDescList>
 </BookDescRoot>

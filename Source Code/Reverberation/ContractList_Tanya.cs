@@ -5,16 +5,12 @@ using Sound;
 using HarmonyLib;
 using LOR_DiceSystem;
 using System.Text;
-using System.Threading.Tasks;
+using ContractReward;
 
 namespace Contingecy_Contract
 {
     public class ContingecyContract_Tanya_Solo : ContingecyContract, Retaliater
     {
-        public ContingecyContract_Tanya_Solo(int level)
-        {
-            Level = level;
-        }
         public override string[] GetFormatParam(string language) => new string[] { GetParam(language)};
         private string GetParam(string language)
         {
@@ -96,10 +92,6 @@ namespace Contingecy_Contract
             return s;
         }
         
-        public ContingecyContract_Tanya_Brawl(int level)
-        {
-            Level = level;
-        }
         public override void Init(BattleUnitModel self)
         {
             base.Init(self);
@@ -220,7 +212,7 @@ namespace Contingecy_Contract
                 if (activate.Contains(card.target))
                 {
                     SingletonBehavior<SoundEffectManager>.Instance.PlayClip("Creature/Wolf_Bite");
-                    card.target.currentDiceAction.ApplyDiceAbility(DiceMatch.AllDice, new ContractReward.DiceCardAbility_invalid());
+                    card.target.currentDiceAction.ApplyDiceAbility(DiceMatch.AllDice, new DiceCardAbility_invalid());
                 }                
                 if (info.ContainsKey(card.target))
                     info[card.target] += 1;
@@ -251,10 +243,6 @@ namespace Contingecy_Contract
         private int activate = 0;
         private bool _nextPhase;
         private int TanyaPhase => TanyaPassive._phase;
-        public ContingecyContract_Tanya(int level)
-        {
-            Level = level;
-        }
         public override bool OnBreakGageZero() => TanyaPhase == 2 && activate == 1;
         public override void Init(BattleUnitModel self)
         {
