@@ -1,0 +1,109 @@
+{
+    "CDs":[
+        {
+            "contract":"Roland1st_Furioso",
+            "name":"Furioso",
+            "desc":"Speed III is upgraded to Speed Furioso with effect of {0}\n and all dice on the page selected in the sixth Speed dice slot gain +2 Power;\nUse an additional Furiose every 4 Scene.",
+            "param":[
+                {"Level":1, "Content":"\"Speed Dice Slot +2; \nGain an additional Speed die at Emotion Level 3\";\nIn phase 1 Roland's Attack Pattern becomes more aggressive"},
+                {"Level":2, "Content":"\"Speed Dice Slot +3\";\nIn phase 1 Roland's Attack Pattern becomes much more aggressive"},
+                {"Level":3, "Content":"\"Speed Dice Slot +4;\nDoes not gain Speed dice from Emotion Level bonuses\";\nIn phase 1 Roland's Attack Pattern becomes extremely aggressive"}
+            ]
+        },
+        {
+            "contract":"Roland1st_Durandal",
+            "name":"Sword of Charlemagne",
+            "desc":"Roland in phase 1 will {0};\nRetaliate trigger twice.",
+            "param":[
+                {"Level":1, "Content":"use 1 more Durandal per Scene"},
+                {"Level":2, "Content":"use 1 more Durandal per Scene;\nWhen gaining Strength using Combat Pages, gain +1 additional stack"},
+                {"Level":3, "Content":"use 1 more Durandal per Scene;\nWhen gaining Strength using Combat Pages, gain +1 additional stack; Dice from Durandal increase their natural value by 2"}
+            ]
+        },
+        {
+            "contract":"Roland1st",
+            "name":"That’s that, and this is this",
+            "desc":"Clenched Grudge has the ability \"Recover 10 Stagger Resist on hit\" instead;\nRoland's MaxHp changes to 700 in the first phase."
+        },
+        {
+            "contract":"Roland2nd_Smoke",
+            "name":"Hazy Mist",
+            "desc":"Wielder of Suffocating Haze has ability \"When attacking, if target has 'Suffocating Haze', deal +{0} damage;\nWhen hit, if attacker has Suffocating Haze, take {1} less damage\";\nSmoldering Byproduct gain +1 Speed Dice, Maximun Hp and Stagger Resist increased by {2}%.\nDice can't be destroyed.",
+            "param":[
+                {"Level":1, "Content":["3","4","50"]},
+                {"Level":2, "Content":["4","6","100"]},
+                {"Level":3, "Content":["5","8","150"]}
+            ]
+        },
+        {
+            "contract":"Roland2nd_Secret",
+            "name":"The Everlasting War",
+            "desc":"Librarians lose {0}% of Max Stagger Resist upon killing a Smoldering Byproduct;\nRoland's Max Stagger Resist change to 500 in the Phase 2 and gain +2 Speed Dice.\nEnhance Smoldering Byproduct's Combat Pages",
+            "param":[
+                {"Level":1, "Content":["50"]},
+                {"Level":2, "Content":["75"]},
+                {"Level":3, "Content":["100"]}
+            ]
+        },
+        {
+            "contract":"Roland2nd",
+            "name":"The Smoke War",
+            "desc":"In phase 2, all Librarians gain 3 'Suffocating Haze' at the start of each Scene;\nThe 'Weak/Fatal' resistances of Roland and Smoldering Byproduct change to 'Endured/Ineffective';\nUplift dice values of Combat Pages by 1."
+        },
+        {
+            "contract":"Roland3rd_Unity",
+            "name":"Wife in Arm",
+            "desc":"In phase 3, when Roland and Angelica use Combo pages attacking same character,\n Roland will gain all dices from Angelica's Pages while Angelica gain counter dices from Rolands' pages.\n{0}",
+            "param":[
+                {"Level":1, "Content":[""]},
+                {"Level":2, "Content":["Roland and Angelica will use 1 more pages."]},
+                {"Level":3, "Content":["Roland and Angelica will use 2 more pages."]}
+            ]
+        },
+        {
+            "contract":"Roland3rd_Waltz",
+            "name":"Waltz in Black and White",
+            "desc":"Roland and Angelica will inflict 1 Dark or White Corrosion to enemy on rolling a die;\nBoth Corrosion deal 1 Damage and Stagger Damage per stack at the End of the Scene and subtract 1 stack;\nIf a character has both Corrosion and the difference between their stacks is less than {0},\nthey will take no Damage and Stagger Damage from them",
+            "param":[
+                {"Level":1, "Content":["3"]},
+                {"Level":2, "Content":["2"]},
+                {"Level":3, "Content":["1"]}
+            ]
+        },
+        {
+            "contract":"Roland3rd",
+            "name":"Blink of Breath",
+            "desc":"Each librarian can gain a Presence only once for 3 Scenes;\nAngelica will leave 'Dark Mark' to the libriarian still able to gain Energy at the start of each Scene."
+        },
+        {
+            "contract":"Roland4th_BlackSilence",
+            "name":"Memory: The Black Silence",
+            "desc":"In phase 4, Roland's Max Hp increased by {0}, Max Stagger Resist increased by {1} and he will use Furioso one Scene earlier.",
+            "param":[
+                {"Level":1, "Content":["100","50"]},
+                {"Level":2, "Content":["250","125"]},
+                {"Level":3, "Content":["400","200"]}
+            ]
+        },
+        {
+            "contract":"Roland4th_Servant",
+            "name":"Memory: Grade 9 Fixer",
+            "desc":"In phase 5, increase Max Hp and Max Stagger Resist of all Images of the Bygone by 100%\n and they gain the Abilities: \"Hammer and Nail\"{0}",
+            "param":[
+                {"Level":1, "Content":[""]},
+                {"Level":2, "Content":["and \"Guilt\""]},
+                {"Level":3, "Content":[",\"Guilt\" and \"Blizzard\""]}
+            ]
+        },
+        {
+            "contract":"Roland4th",
+            "name":"Memory: Gone Angels",
+            "desc":"From phase 4 onwards, Roland gain Passive Ability \"Half-baked Courage\", \"Your Shield\",\n\"Light of Daybreak\",\"Adaptation\", \"Force of a Wildfire\", \"Eye of Death\",\n\"The Twelve Fixers\", \"Manipulator of Odds\" and \"The Blue Reverberation\""
+        },
+        {
+            "contract":"Roland",
+            "name":"End of the Line",
+            "desc":"The Black Slence Recpetion will start from phase 4"
+        }
+    ]
+}

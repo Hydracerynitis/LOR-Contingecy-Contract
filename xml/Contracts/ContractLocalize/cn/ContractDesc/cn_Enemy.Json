@@ -1,0 +1,93 @@
+{
+    "CDs":[
+        {
+            "contract":"Damage",
+            "name":"研磨锋刃",
+            "desc":"所有来宾造成伤害+{0}%",
+            "param":[
+                {"Level":1, "Content":["25"]},
+                {"Level":2, "Content":["50"]},
+                {"Level":3, "Content":["75"]},
+                {"Level":4, "Content":["100"]}
+            ]
+        },
+        {
+            "contract":"BreakDamage",
+            "name":"震荡猛击",
+            "desc":"所有来宾造成混乱伤害+{0}%",
+            "param":[
+                {"Level":1, "Content":["25"]},
+                {"Level":2, "Content":["50"]},
+                {"Level":3, "Content":["75"]},
+                {"Level":4, "Content":["100"]}
+            ]
+        },
+        {
+            "contract":"Power",
+            "name":"强力压制",
+            "desc":"所有来宾骰子威力提升{0}",
+            "param":[
+                {"Level":1, "Content":["1"]},
+                {"Level":2, "Content":["2"]},
+                {"Level":3, "Content":["3"]}
+            ]
+        },
+        {
+            "contract":"Hp",
+            "name":"手术强化",
+            "desc":"所有来宾最大血量提升{0}%",
+            "param":[
+                {"Level":1, "Content":["25"]},
+                {"Level":2, "Content":["50"]},
+                {"Level":3, "Content":["75"]},
+                {"Level":4, "Content":["100"]}
+            ]
+        },
+        {
+            "contract":"Bp",
+            "name":"身经百战",
+            "desc":"所有来宾最大混乱抗性提升{0}%",
+            "param":[
+                {"Level":1, "Content":["25"]},
+                {"Level":2, "Content":["50"]},
+                {"Level":3, "Content":["75"]},
+                {"Level":4, "Content":["100"]}
+            ]
+        },
+        {
+            "contract":"NoBreak",
+            "name":"临危不乱",
+            "desc":"所有来宾陷入混乱时不改变伤害抗性"
+        },
+        {
+            "contract":"NoDebuff",
+            "name":"纯洁",
+            "desc":"所有来宾免疫负面效果加成"
+        },
+        {
+            "contract":"Quick",
+            "name":"闪电战",
+            "desc":"所有来宾速度骰子数值设为无限大"
+        },
+        {
+            "contract":"Angry",
+            "name":"激昂",
+            "desc":"所有来宾情感等级若低于{0}级则直接提升至{1}级",
+            "param":[
+                {"Level":1, "Content":["1","1"]},
+                {"Level":2, "Content":["2","2"]},
+                {"Level":3, "Content":["3","3"]}
+            ]
+        },
+        {
+            "contract":"SpeedDice",
+            "name":"速战速决",
+            "desc":"所有来宾速度骰子数量至少为{0}\n每一幕开始时额外抽取1张书页",
+            "param":[
+                {"Level":1, "Content":["2"]},
+                {"Level":2, "Content":["2,情感等级到3时至少为3"]},
+                {"Level":3, "Content":["3"]}
+            ]
+        }
+    ]
+}

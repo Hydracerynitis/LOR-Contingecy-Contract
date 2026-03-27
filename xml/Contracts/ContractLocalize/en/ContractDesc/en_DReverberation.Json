@@ -1,0 +1,104 @@
+{
+    "CDs":[
+        {
+            "contract":"DPhilip_Helios",
+            "name":"Rekindled Ember",
+            "desc":"Philip's Max Hp and Stagger Resist increase by +100%.\nAt the end of each Scene, Philip recovers health equal to his Burn stacks."
+        },
+        {
+            "contract":"DPhilip_Restraint",
+            "name":"Endless Shackle",
+            "desc":"After Philip wins 2 clashes with one Page, inflict 1 Restraint upon target this Scene."
+        },
+        {
+            "contract":"DEileen_Smoke",
+            "name":"Smoke Manufacturer",
+            "desc":"Eileen's attack pattern switches to one specifying in gaining Smoke."
+        },
+        {
+            "contract":"DEileen_DeusEx",
+            "name":"Deus ex Calces",
+            "desc":"Eileen will use 'Thought Gear: Advent' every 4 Scenes instead.\nThe die of 'Thought Gear: Advent' is enhanced to 16-28."
+        },
+        {
+            "contract":"DGreta_Prot",
+            "name":"Wish of Guardianship",
+            "desc":"'Knight in Shining Denticles' will instead give 5 Protection and Stagger Protection"
+        },
+        {
+            "contract":"DGreta_Eat",
+            "name":"Wish of Gluttery",
+            "desc":"Greta will use 'Tackle Mount' every Scene.\nIncrease Tackle Mount's last 3 dice natural roll by +3."
+        },
+        {
+            "contract":"DBremen_Self",
+            "name":"Solo Jazz",
+            "desc":"Increase Bremen's Stagger Resist by 90.\nReduce Strength, Endurance, Haste gained from 'Erlöschend Dirge of a War Grave' to 1 stack."
+        },
+        {
+            "contract":"DBremen_Other",
+            "name":"Gospel Choir",
+            "desc":"When Bremen uses a Page on an ally unit, recover 30 Stagger Resist for all allies."
+        },
+        {
+            "contract":"DOswald_Friend",
+            "name":"It's Showtime!",
+            "desc":"After Oswald using 'Shall We Start the Show ~ ?', additional Mx. Bunny is summoned.\nMr. Knife, Mrs. Mermaid and Mx. Bunny's Max Hp is increased by 100, Max Stagger Resist is increased by 50."
+        },
+        {
+            "contract":"DOswald_Show",
+            "name":"Top Show",
+            "desc":"Stagger Damage from Oswald's 'Showtime~' is boosted to 4-8.\nCan take at most 25% of max hp of damage each scene."
+        },
+        {
+            "contract":"DTanya_Warrior",
+            "name":"Matriarch Wolf",
+            "desc":"Tanya's attack pattern become more aggressive.\nHer Offensive Dice gain +1 Power and deal 3-5 additional Damage on Hit."
+        },
+        {
+            "contract":"DTanya_Sand",
+            "name":"Eroding Sandstorm",
+            "desc":"Damage from Tanya's 'Fierce Sandstorm' is boosted to 6-10.\nGain three Counter die (Defense, 5-8) at combat start."
+        },
+        {
+            "contract":"DJaeheon_Control",
+            "name":"Puppet Show",
+            "desc":"At the start of each Scene if Jaeheon is alive, all librarians without Red String will be inflicted 1 'Puppet String'.\nIncrease cost of Pages used by uncontrolled die from 'Puppet String' by +2."
+        },
+        {
+            "contract":"DJaeheon_Tangle",
+            "name":"Entangled Mess",
+            "desc":"Cost of 'Red String' is increased by 2, and its die's natural roll reduce to 23-23. \nIncrease Jaeheon's Max Hp and Stagger Resist by +100%."
+        },
+        {
+            "contract":"DElena_Hp",
+            "name":"Unending Legend",
+            "desc":"Increase Elena's Max Hp by 200. Reduce incoming Damage by 25%."
+        },
+        {
+            "contract":"DElena_Aoe",
+            "name":"Blood is Fuel",
+            "desc":"Elena recover health equal to Damage dealt with Melee Page succesful hits.\nIf hp is lower than 50% then health recovered through this way is doubled."
+        },
+        {
+            "contract":"DPluto_Contract",
+            "name":"Aggressive Negotiation",
+            "desc":"Pluto will instead inflict 'Unjust Contract' when using specific Pages. \nLibrarians' Unjust Counterpart Pages have their cost increased by +2."
+        },
+        {
+            "contract":"DPluto_Shade",
+            "name":"Perfect Replica",
+            "desc":"Pluto will copy all passives the target librarian has when spawning a shade."
+        },
+        {
+            "contract":"DArgalia_Sonata",
+            "name":"Forma-sonata",
+            "desc":"Argalia's 'Emozioni Intensificantesi' will be triggered at the end of every 2 Scenes.\n At the start of each Act, all characters' Emotion Levels rise by 2."
+        },
+        {
+            "contract":"DArgalia_Ternaria",
+            "name":"Forma-Ternaria",
+            "desc":"Argalia's 'Emozioni Intensificantesi' will grant increased Damage and Stagger Damage by +25% for all allies when triggered.\nAll characters' Max Hp is increased by 100 and Max Stagger Resist is increased by 50."
+        }
+    ]
+}

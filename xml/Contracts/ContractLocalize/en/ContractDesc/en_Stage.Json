@@ -1,0 +1,28 @@
+{
+    "CDs":[
+        {
+            "contract":"Duplicate",
+            "name":"REINFORCE!",
+            "desc":"Last Act of the reception is duplicated"
+        },
+        {
+            "contract":"Last",
+            "name":"Last Stand",
+            "desc":"只能用一层司书完成接待"
+        },
+        {
+            "contract":"LowFloor",
+            "name":"Ambush",
+            "desc":"{0} random floors are unavailabe for the reception",
+            "param":[
+                {"Level":1, "Content":["5"]},
+                {"Level":2, "Content":["9"]}
+            ]
+        },
+        {
+            "contract":"LowPeople",
+            "name":"Oversleep",
+            "desc":"Reduce the number of available Librarians by 1"
+        }
+    ]
+}

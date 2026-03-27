@@ -13,7 +13,6 @@ namespace Contingecy_Contract
     public class ContingecyContract_Bremen_Self : ContingecyContract
     {
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1304011;
-        public override string[] GetFormatParam(string language) => new string[] { Level.ToString(), GetParam(language) };
         private PassiveAbility_1304012 passive=null;
         public override void Init(BattleUnitModel self)
         {
@@ -51,17 +50,6 @@ namespace Contingecy_Contract
                 owner.passiveDetail.DestroyPassive(this);
             }
         }
-        private string GetParam(string language)
-        {
-            string s = "";
-            if (Level >= 1)
-                s += StaticDataManager.GetParam("Bremen_Self_param1", language);
-            if (Level >= 2)
-                s += StaticDataManager.GetParam("Bremen_Self_param2", language);
-            if (Level >= 3)
-                s += StaticDataManager.GetParam("Bremen_Self_param3", language);
-            return s;
-        }
 
         private void GetCard(List<int> ids)
         {
@@ -82,18 +70,6 @@ namespace Contingecy_Contract
             Level = level;
             name = Name;
             desc = Desc;
-        }
-        public override string[] GetFormatParam(string language) => new string[] { Level.ToString(), GetParam(language) };
-        private string GetParam(string language)
-        {
-            string s = "";
-            if (Level >= 1)
-                s += StaticDataManager.GetParam("Bremen_Self_param1", language); 
-            if (Level >= 2)
-                s += StaticDataManager.GetParam("Bremen_Self_param2", language);
-            if (Level >= 3)
-                s += StaticDataManager.GetParam("Bremen_Self_param3", language);
-            return s;
         }
         public override int SpeedDiceNumAdder()
         {
@@ -142,18 +118,6 @@ namespace Contingecy_Contract
         private bool isBremen => owner.UnitData.unitData.EnemyUnitId == 1304011;
         private List<BattleUnitModel> dead = new List<BattleUnitModel>();
         private int count;
-        public override string[] GetFormatParam(string language) => new string[] { GetParam(language), Level.ToString() };
-        private string GetParam(string language)
-        {
-            string s = "";
-            if (Level >= 1)
-                s += StaticDataManager.GetParam("Bremen_Group_param1", language);
-            if (Level >= 2)
-                s += StaticDataManager.GetParam("Bremen_Group_param2", language);
-            if (Level >= 3)
-                s += StaticDataManager.GetParam("Bremen_Group_param3", language);
-            return s;
-        }
         public override void Init(BattleUnitModel self)
         {
             base.Init(self);
@@ -231,12 +195,12 @@ namespace Contingecy_Contract
         }
         public override double ChangeDamage(BattleUnitModel attacker, double dmg)
         {
-            if (accumulateDamage >= owner.MaxHp * 0.15)
+            if (accumulateDamage >= owner.MaxHp * 0.2)
                 return 0;
-            if (accumulateDamage + dmg > owner.MaxHp * 0.15)
+            if (accumulateDamage + dmg > owner.MaxHp * 0.2)
             {
-                double output = owner.MaxHp*0.15 - accumulateDamage;
-                accumulateDamage = owner.MaxHp * 0.15;
+                double output = owner.MaxHp*0.2 - accumulateDamage;
+                accumulateDamage = owner.MaxHp * 0.2;
                 return output;
             }
             accumulateDamage += dmg;

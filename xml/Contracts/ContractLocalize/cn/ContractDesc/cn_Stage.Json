@@ -1,0 +1,28 @@
+{
+    "CDs":[
+        {
+            "contract":"Duplicate",
+            "name":"呼叫增援",
+            "desc":"额外接待最后舞台来宾的复制"
+        },
+        {
+            "contract":"Last",
+            "name":"最后防线",
+            "desc":"只能用一层司书完成接待"
+        },
+        {
+            "contract":"LowFloor",
+            "name":"伏击",
+            "desc":"图书馆随机{0}个楼层无法接待",
+            "param":[
+                {"Level":1, "Content":["5"]},
+                {"Level":2, "Content":["9"]}
+            ]
+        },
+        {
+            "contract":"LowPeople",
+            "name":"瞌睡虫",
+            "desc":"每层最多接待可用的司书-1"
+        }
+    ]
+}

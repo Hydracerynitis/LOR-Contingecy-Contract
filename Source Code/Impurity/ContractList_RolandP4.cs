@@ -13,7 +13,7 @@ namespace Contingecy_Contract
 {
     public class ContingecyContract_Roland4th_BlackSilence : ContingecyContract
     {
-        public override string[] GetFormatParam(string language) => new string[] {(150* Level-50).ToString(),(75*Level-25).ToString() };
+        //public override string[] GetFormatParam(string language) => new string[] {(150* Level-50).ToString(),(75*Level-25).ToString() };
         public override bool CheckEnemyId(LorId EnemyId)
         {
             return EnemyId == 60008;
@@ -219,18 +219,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_Roland4th_Servant : ContingecyContract
     {
-        public override string[] GetFormatParam(string language) => new string[] { GetParam(language) };
-        private string GetParam(string language)
-        {
-            string s = "";
-            if (Level >= 1)
-                s += StaticDataManager.GetParam("Roland4th_Servant_param1", language);
-            if (Level >= 2)
-                s += StaticDataManager.GetParam("Roland4th_Servant_param2", language);
-            if (Level >= 3)
-                s += StaticDataManager.GetParam("Roland4th_Servant_param3", language);
-            return s;
-        }
         public override bool CheckEnemyId(LorId EnemyId)
         {
             return EnemyId.IsBasic() && EnemyId.id >= 60208 && EnemyId.id <= 60238;

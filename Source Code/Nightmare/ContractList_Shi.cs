@@ -14,7 +14,6 @@ namespace Contingecy_Contract
     public class ContingecyContract_Shi_Yujin : ContingecyContract
     {
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 40001;
-        public override string[] GetFormatParam(string language) => new string[] { (Level - 1).ToString(), Level.ToString() };
         public override void Init(BattleUnitModel self)
         {
             base.Init(self);
@@ -29,7 +28,6 @@ namespace Contingecy_Contract
     public class ContingecyContract_Shi_ValTem : ContingecyContract
     {
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 40002 || EnemyId ==40003;
-        public override string[] GetFormatParam(string language) => new string[] { (20*Level).ToString(),(1+2*Level).ToString(),Level.ToString()};
         private bool IsVal() => this.owner.UnitData.unitData.EnemyUnitId == 40002;
         public override void OnWinParrying(BattleDiceBehavior behavior)
         {
@@ -52,7 +50,7 @@ namespace Contingecy_Contract
         }
         public override StatBonus GetStatBonus(BattleUnitModel owner)
         {
-            return new StatBonus() { hpRate = 20 * Level, breakRate = 20 * Level };
+            return new StatBonus() { hpRate = 20 * Level+20, breakRate = 20 * Level+20 };
         }
     }
     public class ContingecyContract_Shi : ContingecyContract

@@ -3,11 +3,8 @@ using LitJson;
 using MyJsonTool;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics.Contracts;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 using UnityEngine;
 
@@ -15,16 +12,22 @@ namespace Contingecy_Contract
 {
     public class StaticDataManager
     {
+        //原版资源
         public static Dictionary<string, GameObject> VanilaGameObject=new Dictionary<string, GameObject>();
         public static Dictionary<string, AudioClip> VanilaAudio = new Dictionary<string, AudioClip>();
-        public static List<Contract> ContractList = new List<Contract>();
-        public static Dictionary<LorId , Sprite> NonThumbSprite = new Dictionary<LorId, Sprite>();
-        public static Dictionary<LorId, LorId> RewardDic = new Dictionary<LorId, LorId>();
-        public static List<RewardConfig> ExtraCondition=new List<RewardConfig>();
-        public static Dictionary<string,Dictionary<LorId,string>> RewardCondition= new Dictionary<string, Dictionary<LorId, string>>();
-        public static Dictionary<(string, string), string> ContractParam = new Dictionary<(string, string), string>();
-        public static List<RewardClearList> rewardClearLists = new List<RewardClearList>();
+        public static Dictionary<LorId, Sprite> NonThumbSprite = new Dictionary<LorId, Sprite>();
         public static AudioClip[] reverberation;
+
+        //合约信息
+        public static List<Contract> ContractList = new List<Contract>();
+        public static Dictionary<string,List<ContractDescBluePrint>> CDBluePrintList = new Dictionary<string, List<ContractDescBluePrint>>();
+        public static Dictionary<(string, string), string> ContractParam = new Dictionary<(string, string), string>();
+
+        //奖励信息
+        public static Dictionary<LorId, LorId> RewardDic = new Dictionary<LorId, LorId>();
+        public static List<RewardConfig> ExtraCondition = new List<RewardConfig>();
+        public static Dictionary<string, Dictionary<LorId, string>> RewardCondition = new Dictionary<string, Dictionary<LorId, string>>();
+        public static List<RewardClearList> rewardClearLists = new List<RewardClearList>();
         public static List<LorId> Glossary
         {
             get
@@ -49,15 +52,18 @@ namespace Contingecy_Contract
         }
         public static void LoadStaticData(string dllPath)
         {
-            LoadContractParam(dllPath);
+            LoadContractDesc(dllPath);
             LoadContract(dllPath);
+            bool debug=false;
+            if(!debug)
+                CDBluePrintList.Clear();
             LoadReward(dllPath);
             LoadExtraCondition(dllPath);
             LoadClearList(dllPath);
         }
         public static void LoadContract(string dllPath)
         {
-            foreach (FileInfo file in new DirectoryInfo(dllPath + "/Contracts").GetFiles())
+            foreach (FileInfo file in new DirectoryInfo(dllPath + "/Contracts/ContractInfo").GetFiles())
             {
                 try
                 {
@@ -67,8 +73,6 @@ namespace Contingecy_Contract
                         System.Type type = GetContingencyContract(bluePrint.Type);
                         if (type == null)
                             continue;
-                        ContingecyContract contract = Activator.CreateInstance(type, new object[] { }) as ContingecyContract;
-                        contract.Level = 0;
                         if (bluePrint.Variation <= 0)
                         {
                             
@@ -83,14 +87,18 @@ namespace Contingecy_Contract
                                 Stageid = bluePrint.Stageid,
                                 Conflict = bluePrint.Conflict
                             };
-                            bluePrint.desc.ForEach(x => item.desc.Add(new ContractDesc() { language = x.language, name = x.name, desc = string.Format(x.desc, contract.GetFormatParam(x.language)) }));
+                            foreach (string supported_lang in CDBluePrintList.Keys)
+                            {
+                                ContractDescBluePrint cdBP = CDBluePrintList[supported_lang].Find(x => x.contract == bluePrint.Type);
+                                if(cdBP != null)
+                                    item.desc.Add(new ContractDesc() { language = supported_lang, name = cdBP.name, desc = cdBP.desc });
+                            }
                             ContractList.Add(item);
                             Debug.Log("Contract: {0} Added", bluePrint.Type);
                         }
-                        {
+                        else {
                             for (int i = 1; i <= bluePrint.Variation; i++)
                             {
-                                contract.Level = i;
                                 Contract item = new Contract()
                                 {
                                     Type = bluePrint.Type,
@@ -102,7 +110,16 @@ namespace Contingecy_Contract
                                     Pid = bluePrint.Pid,
                                     Conflict = bluePrint.Conflict
                                 };
-                                bluePrint.desc.ForEach(x => item.desc.Add(new ContractDesc() { language = x.language, name = x.name + " " + i.ToString(), desc = string.Format(x.desc, contract.GetFormatParam(x.language)) }));
+                                foreach (string supported_lang in CDBluePrintList.Keys)
+                                {
+                                    ContractDescBluePrint cdBP = CDBluePrintList[supported_lang].Find(x => x.contract == bluePrint.Type);
+                                    if (cdBP != null) 
+                                    {
+                                        object[] formatParam = cdBP.param.Find(x => x.Level == i).Content.ToArray();
+                                        item.desc.Add(new ContractDesc() { language = supported_lang, name = cdBP.name, 
+                                            desc = string.Format(cdBP.desc, formatParam) });
+                                    }
+                                }
                                 ContractList.Add(item);
                                 Debug.Log("Contract: {0} Added", item.Id);
                             }
@@ -111,15 +128,47 @@ namespace Contingecy_Contract
                 }
                 catch (Exception ex)
                 {
-                    Debug.Error("JSON", ex);
+                    Debug.Error("JSON_"+ file.Name, ex);
                 }
             }
         }
-        public static void InitNonThumbDic()
+        public static void LoadContractDesc(string dllPath)
         {
-            foreach (int i in CCInitializer.NoThumbPage)
-                NonThumbSprite.Add(Tools.MakeLorId(i), null);
+            foreach(string lang in TextDataModel._supported)
+            {
+                string localpath = dllPath + "/Contracts/ContractLocalize/" + lang + "/ContractDesc/";
+                if (!Directory.Exists(localpath))
+                    continue;
+                foreach (FileInfo file in new DirectoryInfo(localpath).GetFiles())
+                {
+                    try
+                    {
+                        ContractDescCollection list = File.ReadAllText(file.FullName).ToObject<ContractDescCollection>();
+                        foreach (ContractDescBluePrint item in list.CDs)
+                        {
+                            if(CDBluePrintList.Keys.Contains(lang))
+                                CDBluePrintList[lang].Add(item);
+                            else
+                                CDBluePrintList.Add(lang, new List<ContractDescBluePrint>() { item });
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Debug.Error("ContractParam", ex);
+                    }
+                }
+            }
+            
         }
+        public static string GetParam(string ID, string Language)
+        {
+            if (Language == "en" || Language == "kr" || Language == "jp")
+                return ContractParam[(ID, "en")];
+            else if (Language == "cn" || Language == "trcn")
+                return ContractParam[(ID, "cn")];
+            return "";
+        }
+
         public static void LoadReward(string dllPath)
         {
             foreach (FileInfo file in new DirectoryInfo(dllPath + "/Contracts/ContractReward/RewardList").GetFiles())
@@ -138,7 +187,7 @@ namespace Contingecy_Contract
             foreach (string lang in TextDataModel._supported)
             {
                 RewardCondition[lang] = new Dictionary<LorId, string>();
-                string path = dllPath + "/Contracts/ContractReward/RewardCondition/"+lang;
+                string path = dllPath + "/Contracts/ContractLocalize/"+ lang + "/RewardCondition/";
                 if (!Directory.Exists(path))
                     continue;
                 foreach (FileInfo file in new DirectoryInfo(path).GetFiles())
@@ -181,22 +230,6 @@ namespace Contingecy_Contract
                 }
             }
         }
-        public static void LoadContractParam(string dllPath)
-        {
-            foreach (FileInfo file in new DirectoryInfo(dllPath + "/Contracts/ContractParams").GetFiles())
-            {
-                try
-                {
-                    ParamCollection list = File.ReadAllText(file.FullName).ToObject<ParamCollection>();
-                    foreach(Params p in list.Ps)
-                        p.Desc.ForEach(x => ContractParam.Add((p.Id, x.Language), x.Content));
-                }
-                catch (Exception ex)
-                {
-                    Debug.Error("ContractParam", ex);
-                }
-            }
-        }
         public static void LoadClearList(string dllPath)
         {
             foreach (FileInfo file in new DirectoryInfo(dllPath + "/Contracts/ContractReward/ClearList").GetFiles())
@@ -212,6 +245,11 @@ namespace Contingecy_Contract
                 }
             }
         }
+        public static void InitNonThumbDic()
+        {
+            foreach (int i in CCInitializer.NoThumbPage)
+                NonThumbSprite.Add(Tools.MakeLorId(i), null);
+        }
         public static void LoadGameObject()
         {
             GameObject BSA = Util.LoadPrefab("InvitationMaps/InvitationMap_BlackSilence4");
@@ -224,14 +262,6 @@ namespace Contingecy_Contract
             reverberation = new AudioClip[4] { Resources.Load<AudioClip>("Sounds/Battle/Reverberation1st_Asiyah"),
             Resources.Load<AudioClip>("Sounds/Battle/Reverberation1st_Briah"),Resources.Load<AudioClip>("Sounds/Battle/Reverberation1st_Atziluth"),
             Resources.Load<AudioClip>("Sounds/Battle/Reverberation1st_Argalia")};
-        }
-        public static string GetParam(string ID, string Language)
-        {
-            if (Language == "en" || Language == "kr" || Language == "jp")
-                return ContractParam[(ID, "en")];
-            else if (Language == "cn" || Language == "trcn")
-                return ContractParam[(ID, "cn")];
-            return "";
         }
     }
 }

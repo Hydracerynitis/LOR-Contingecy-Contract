@@ -1,0 +1,26 @@
+{
+    "CCs":[
+        {
+            "Type":"Shi_Yujin",
+            "Faction":0,
+            "Variation":3,
+            "BaseLevel":1,
+            "Conflict":["Shi_ValTem"],
+            "Stageid":40001
+        },
+        {
+            "Type":"Shi_ValTem",
+            "Faction":0,
+            "Variation":3,
+            "BaseLevel":1,
+            "Conflict":["Shi_Yujin"],
+            "Stageid":40001
+        },
+        {
+            "Type":"Shi",
+            "Faction":0,
+            "BaseLevel":4,
+            "Stageid":40001
+        }
+    ]
+}

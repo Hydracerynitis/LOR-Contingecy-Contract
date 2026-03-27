@@ -1,0 +1,34 @@
+{
+    "CDs":[
+        {
+            "contract":"Hana_Web",
+            "name":"Tactical Command Network",
+            "desc":"Mirinae's \"Hana for All\" now give the same status effect to all other allies.\n Harold's \"All for Hana\" will share resistances modification with all other allies.\n Harold's \"All for Hana\" now  change her resistances against the type that dealt the most damage to {0}.",
+            "param":[
+                {"Level":1, "Content":["Endured"]},
+                {"Level":2, "Content":["Ineffective"]},
+                {"Level":3, "Content":["Immune"]}
+            ]
+        },
+        {
+            "contract":"Hana_Protocol",
+            "name":"Avenging Protocol",
+            "desc":"\"Hana for All\" double stacks when receiving \"Strength\"\"Endure\"\"Protection\"\"Break Protection\"\n reduce incomming damage and stagger damge of other enemies by 30%.\nWhen enemy with \"Hana for All\" die, the passive will be transfered to another alive enemy.\nThe enemy who receive the passive {0}.",
+            "param":[
+                {"Level":1, "Content":["gain additional Speed Dice"]},
+                {"Level":2, "Content":["gain additional Speed Dice, heal all HP and recover from Stagger"]},
+                {"Level":3, "Content":["gain additional Speed Dice, all Pages' cost become 0 for the duration of the Scene"]}
+            ]
+        },
+        {
+            "contract":"Hana_Protocol",
+            "name":"Full Trigrams",
+            "desc":"Every enemies can play two Trigram Pages in one Scene. Trigram Pages have their effect boosted."
+        },
+        {
+            "contract":"Hana_Olivier",
+            "name":"Working Overtime",
+            "desc":"Olivier will join the battle in the second Act.\n\"Tactical Command Network\" and \"Avenging Protocol\" will gain additional effect"
+        }
+    ]
+}

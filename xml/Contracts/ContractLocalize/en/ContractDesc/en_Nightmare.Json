@@ -1,0 +1,29 @@
+{
+    "CDs":[
+        {
+            "contract":"Shi_Yujin",
+            "name":"Past Glory",
+            "desc":"Yujin's deck contain one additional 'Boundry of Death'\n Increase the minimun value of 'Boundry of Death' by {0}",
+            "param":[
+                {"Level":1, "Content":["1"]},
+                {"Level":2, "Content":["2 and reduce its cost by 1"]},
+                {"Level":3, "Content":["3 and reduce its cost by 2"]}
+            ]
+        },
+        {
+            "contract":"Shi_ValTem",
+            "name":"Shi Assocation's Backbones",
+            "desc":"Increase Max HP and Stagger Resist of Tenma and Valentin by {0}%.\nSpeed of Tenma won't be lower than {1};\nOn win clash using a Combat Page with one non-Counter die, Valentin Destroy targets next {2} die",
+            "param":[
+                {"Level":1, "Content":["40","3","1"]},
+                {"Level":2, "Content":["60","5","2"]},
+                {"Level":3, "Content":["80","7","3"]}
+            ]
+        },
+        {
+            "contract":"Shi",
+            "name":"Work Life Balance",
+            "desc":"All enemies lose passive \"Extreme Fatigue\".\n Whenever their passive \"Kizuna\" triggers, they gain additional 3 Protection, Break Protection"
+        }
+    ]
+}

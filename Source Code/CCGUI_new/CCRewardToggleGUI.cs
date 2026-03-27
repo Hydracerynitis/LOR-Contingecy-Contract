@@ -26,7 +26,6 @@ namespace Contingecy_Contract
             bool active = isOn.gameObject.activeSelf;
             UIAlarmPopup.instance.SetYesNoAlert(active? TextDataModel.GetText("ui_disable_reward") : TextDataModel.GetText("ui_enable_reward")
                 ,  (bool yesno) =>  { 
-                    Debug.Log("YesNO Alert Test: " + yesno.ToString());
                     if (yesno)
                     {
                         List<LorId> glossry = StaticDataManager.Glossary;

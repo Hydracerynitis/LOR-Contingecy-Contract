@@ -12,6 +12,8 @@ Enabling Contract Reward Pages will reward you powerful Equip Page after future 
 	<text id="ui_Jeaheon_counter">Counter Form</text>
 	<text id="ui_PrimeSoul_1">First Page</text>
 	<text id="ui_PrimeSoul_2">Second Page</text>
+	<text id="ui_Hana_Olivier_Web">Olivier will join the battle in the second Act.\nAll ally units gain \"The Twelve Fixers\" passive when Olivier is alive.</text>
+	<text id="ui_Hana_Olivier_Protocol">Olivier will join the battle in the second Act.\nMirinae gain additional \"The Twelve Fixers\" and \"All for Hana\" passives.\nWhen transfering passives, these passives will also be transferred.</text>
 	<text id="Tanya_Brawl_none">None</text>
 	<text id="Speed_Furioso">Speed Furioso</text>
 	<text id="Enhance_HeavySmoke_Passive">When attacking, if target has Suffocating Haze, deal +{0} damage.

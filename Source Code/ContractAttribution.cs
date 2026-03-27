@@ -30,10 +30,18 @@ namespace Contingecy_Contract
                 LorId stageId = StageController.Instance.GetStageModel().ClassInfo.id;
                 if (contract.Stageid!=-1 && stageId != new LorId(contract.Pid, contract.Stageid))
                     continue;
-                System.Type type = StaticDataManager.GetContingencyContract(contract.Type);
-                if (type == (System.Type)null)
-                    continue;
-                ContingecyContract instance = (ContingecyContract)Activator.CreateInstance(type, new object[] { });
+                ContingecyContract instance;
+                if (contract.contractType == ContractXmlType.Passive)
+                {
+                    System.Type type = StaticDataManager.GetContingencyContract(contract.Type);
+                    if (type == (System.Type)null)
+                        continue;
+                    instance = (ContingecyContract)Activator.CreateInstance(type, new object[] { });
+                }
+                else
+                {
+                    instance=new ContingecyContract();
+                }
                 instance.Level = contract.Variant;
                 if (instance!=null)
                 {
@@ -49,17 +57,6 @@ namespace Contingecy_Contract
             List<PassiveAbilityBase> passiveList = Model.passiveDetail.PassiveList;
             passiveList.AddRange(Contracts);
             Model.passiveDetail._passiveList = passiveList;
-            /*foreach (PassiveAbilityBase contract in Contracts)
-            {
-                try
-                {
-                    contract.OnWaveStart();
-                }
-                catch
-                {
-
-                }
-            }*/
             if (Contracts.Count > 0)
             {
                 Model.bufListDetail.AddBuf(new ContractStatBonus(Contracts));
@@ -78,12 +75,6 @@ namespace Contingecy_Contract
                     Model.SetHp((int)Model.passiveDetail.GetStartHp(Model.MaxHp));
             }
         }
-
-/*        private static bool IsNewTwistedOswald(BattleUnitModel unit)
-        {
-            return StageController.Instance.EnemyStageManager is EnemyTeamStageManager_TwistedReverberationBand_Middle TRM &&  && unit.hp==TRM._oswaldHp ;
-        }*/
-
         public static void ChangePhaseTransitionThreshold(BattleUnitModel unit)
         {
             if (unit.passiveDetail.PassiveList.Find(x => x is PassiveAbility_250022) is PassiveAbility_250022 Red)
@@ -138,6 +129,5 @@ namespace Contingecy_Contract
         public virtual StatBonus GetStatBonus(BattleUnitModel owner) => new StatBonus();
         public virtual int GetDamageReductionRate() => 0;
         public virtual int GetBreakDamageReductionRate() => 0;
-        public virtual string[] GetFormatParam(string language) => Array.Empty<string>();
     }
 }

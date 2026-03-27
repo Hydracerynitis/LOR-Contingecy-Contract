@@ -1,0 +1,33 @@
+{
+    "CCs":[
+        {
+            "Type":"Hana_Web",
+            "Faction":0,
+            "Variation":3,
+            "BaseLevel":1,
+            "Conflict":["Hana_Protocol"],
+            "Stageid":60001
+        },
+        {
+            "Type":"Hana_Protocol",
+            "Faction":0,
+            "Variation":3,
+            "BaseLevel":1,
+            "Conflict":["Hana_Web"],
+            "Stageid":60001
+        },
+        {
+            "Type":"Hana",
+            "Faction":0,
+            "BaseLevel":4,
+            "Stageid":60001
+        },
+        {
+            "Type":"Hana_Olivier",
+            "contractType":1,
+            "Faction":0,
+            "BaseLevel":4,
+            "Stageid":60001
+        }
+    ]
+}

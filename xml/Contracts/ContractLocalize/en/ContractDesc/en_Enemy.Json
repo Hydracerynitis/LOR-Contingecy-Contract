@@ -1,0 +1,93 @@
+{
+    "CDs":[
+        {
+            "contract":"Damage",
+            "name":"Sharpened Blades",
+            "desc":"Guests deal {0}% more Damage",
+            "param":[
+                {"Level":1, "Content":["25"]},
+                {"Level":2, "Content":["50"]},
+                {"Level":3, "Content":["75"]},
+                {"Level":4, "Content":["100"]}
+            ]
+        },
+        {
+            "contract":"BreakDamage",
+            "name":"Concussing Strike",
+            "desc":"Guests deal {0}% more Stagger Damage",
+            "param":[
+                {"Level":1, "Content":["25"]},
+                {"Level":2, "Content":["50"]},
+                {"Level":3, "Content":["75"]},
+                {"Level":4, "Content":["100"]}
+            ]
+        },
+        {
+            "contract":"Power",
+            "name":"Powerful",
+            "desc":"All Guests gain +{0} Dice Power",
+            "param":[
+                {"Level":1, "Content":["1"]},
+                {"Level":2, "Content":["2"]},
+                {"Level":3, "Content":["3"]}
+            ]
+        },
+        {
+            "contract":"Hp",
+            "name":"Surgery Enhancement",
+            "desc":"All Guests gain +{0}% max HP",
+            "param":[
+                {"Level":1, "Content":["25"]},
+                {"Level":2, "Content":["50"]},
+                {"Level":3, "Content":["75"]},
+                {"Level":4, "Content":["100"]}
+            ]
+        },
+        {
+            "contract":"Bp",
+            "name":"Experienced Combatant",
+            "desc":"All Guests gain +{0}% max Stagger Resist",
+            "param":[
+                {"Level":1, "Content":["25"]},
+                {"Level":2, "Content":["50"]},
+                {"Level":3, "Content":["75"]},
+                {"Level":4, "Content":["100"]}
+            ]
+        },
+        {
+            "contract":"NoBreak",
+            "name":"Unflappable",
+            "desc":"For all Guests, becoming Staggered does not temporarily change the character's resistances."
+        },
+        {
+            "contract":"NoDebuff",
+            "name":"Purity",
+            "desc":"All Guests are immune to status ailment."
+        },
+        {
+            "contract":"Quick",
+            "name":"Blitzkrieg",
+            "desc":"Speed dice of all Guests become the highest possible value"
+        },
+        {
+            "contract":"Angry",
+            "name":"Agitated",
+            "desc":"All Guests' Emotion Level is set to {0} if their Emotion Level is lower than {1}",
+            "param":[
+                {"Level":1, "Content":["1","1"]},
+                {"Level":2, "Content":["2","2"]},
+                {"Level":3, "Content":["3","3"]}
+            ]
+        },
+        {
+            "contract":"SpeedDice",
+            "name":"Speedy",
+            "desc":"All Guests have at least {0}\nAt the start of each Scene, draw 1 Page",
+            "param":[
+                {"Level":1, "Content":["2 speed dice"]},
+                {"Level":2, "Content":["2 speed dice, 3 speed dice if their Emotion Level has reached 3"]},
+                {"Level":3, "Content":["3 speed dice"]}
+            ]
+        }
+    ]
+}

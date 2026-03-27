@@ -113,8 +113,7 @@ namespace Contingecy_Contract
 				if (Input.GetKeyDown(KeyCode.F9))
 				{
 					CCGUI_Background.SetActive(!CCGUI_Background.activeSelf);
-					if(CCGUI_Background.activeSelf)
-						OnValueChanged();
+					OnValueChanged();
 				}
 				else if (CCGUI_Background.activeSelf)
                 {

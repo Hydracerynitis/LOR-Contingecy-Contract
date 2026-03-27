@@ -1,0 +1,85 @@
+{
+    "CDs":[
+        {
+            "contract":"Damage_L",
+            "name":"保养不佳",
+            "desc":"所有司书造成伤害-{0}%",
+            "param":[
+                {"Level":1, "Content":["20"]},
+                {"Level":2, "Content":["40"]},
+                {"Level":3, "Content":["60"]}
+            ]
+        },
+        {
+            "contract":"BreakDamage_L",
+            "name":"恍惚失神",
+            "desc":"所有司书造成混乱伤害-{0}%",
+            "param":[
+                {"Level":1, "Content":["20"]},
+                {"Level":2, "Content":["40"]},
+                {"Level":3, "Content":["60"]}
+            ]
+        },
+        {
+            "contract":"Power_L",
+            "name":"手脚乏力",
+            "desc":"所有司书骰子威力减少{0}",
+            "param":[
+                {"Level":1, "Content":["1"]},
+                {"Level":2, "Content":["2"]},
+                {"Level":3, "Content":["3"]}
+            ]
+        },
+        {
+            "contract":"Hp_L",
+            "name":"破碎残躯",
+            "desc":"所有司书血量上限减少-{0}%",
+            "param":[
+                {"Level":1, "Content":["20"]},
+                {"Level":2, "Content":["40"]},
+                {"Level":3, "Content":["60"]}
+            ]
+        },
+        {
+            "contract":"Bp_L",
+            "name":"形态失衡",
+            "desc":"所有司书混乱抗性上限减少-{0}%",
+            "param":[
+                {"Level":1, "Content":["20"]},
+                {"Level":2, "Content":["40"]},
+                {"Level":3, "Content":["60"]}
+            ]
+        },
+        {
+            "contract":"Darkness",
+            "name":"陷入黑暗",
+            "desc":"所有司书第一次登场时舞台开启时只有{0}点光芒",
+            "param":[
+                {"Level":1, "Content":["3"]},
+                {"Level":2, "Content":["2"]},
+                {"Level":3, "Content":["1"]},
+                {"Level":4, "Content":["0"]}
+            ]
+        },
+        {
+            "contract":"NoBuff",
+            "name":"崩溃",
+            "desc":"所有司书免疫正面效果加成"
+        },
+        {
+            "contract":"NoEGO",
+            "name":"自卑",
+            "desc":"所有司书无法使用EGO书页"
+        },
+        {
+            "contract":"NoEmotion",
+            "name":"冷漠",
+            "desc":"所有司书无法获取本楼层{0}异想体书页",
+            "param":[
+                {"Level":1, "Content":["3阶"]},
+                {"Level":2, "Content":["3阶和2阶"]},
+                {"Level":3, "Content":["3阶,2阶和1阶"]}
+            ]
+        }
+    ]
+}

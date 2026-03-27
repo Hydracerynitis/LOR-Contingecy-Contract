@@ -13,7 +13,6 @@ namespace Contingecy_Contract
     public class ContingecyContract_Roland3rd_Unity : ContingecyContract
     {
         private int pattern=0;
-        public override string[] GetFormatParam(string language) => new string[] { (Level-1).ToString() };
         public override int SpeedDiceNumAdder()
         {
             if (!owner.bufListDetail.HasBuf<BattleUnitBuf_SpiritLink>() || StageController.Instance.EnemyStageManager is EnemyTeamStageManager_BlackSilence roland && roland.thirdPhaseElapsed==2)
@@ -87,7 +86,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_Roland3rd_Waltz : ContingecyContract
     {
-        public override string[] GetFormatParam(string language) => new string[] {(4-Level).ToString() };
         public override bool CheckEnemyId(LorId EnemyId)
         {
             return EnemyId == 60007 || EnemyId == 60107;

@@ -16,7 +16,6 @@ namespace Contingecy_Contract
     {
         private bool ExtraHit;
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1308021;
-        public override string[] GetFormatParam(string language) => new string[] { Level.ToString(),((Level - 1)*25).ToString() };
         private readonly List<BattlePlayingCardDataInUnitModel> extrahit = new List<BattlePlayingCardDataInUnitModel>();
         public override void OnRoundStart()
         {
@@ -85,7 +84,6 @@ namespace Contingecy_Contract
     }
     public class ContingecyContract_Elena_Zombie : ContingecyContract
     {
-        public override string[] GetFormatParam(string language) => new string[] { ( 15+ 5*Level).ToString(), (Level * 20).ToString() };
         public override int SpeedDiceNumAdder() => IsElena? this.GetVictimList().Count: 0;
         private bool IsElena => this.owner.UnitData.unitData.EnemyUnitId == 1308011;
         private List<BattleUnitModel> GetVictimList()

@@ -12,8 +12,6 @@ namespace Contingecy_Contract
     public class ContingecyContract_Oswald_Debut : ContingecyContract
     {
         private Queue<int> Priority;
-
-        public override string[] GetFormatParam(string language) => new string[] {  StaticDataManager.GetParam("Oswald_Debut_param" + Level.ToString(),language) };
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId==1305021 || EnemyId==1305031;
         private bool IsMermaid => owner.UnitData.unitData.EnemyUnitId == 1305031;
         public override int SpeedDiceNumAdder()
@@ -88,19 +86,7 @@ namespace Contingecy_Contract
     public class ContingecyContract_Oswald_Troll : ContingecyContract
     {
         private Dictionary<BattleUnitModel, int> DPSScore = new Dictionary<BattleUnitModel, int>();
-        public override string[] GetFormatParam(string language) => new string[] { GetParam(language) };
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1305011;
-        private string GetParam(string langugae)
-        {
-            string s = "";
-            if (Level >= 1)
-                s += StaticDataManager.GetParam("Oswald_Troll_param1", langugae);
-            if (Level >= 2)
-                s += StaticDataManager.GetParam("Oswald_Troll_param2", langugae);
-            if (Level >= 3)
-                s += StaticDataManager.GetParam("Oswald_Troll_param3", langugae);
-            return s;
-        }
         public override void OnRoundEnd()
         {
             foreach (BattleUnitModel unit in BattleObjectManager.instance.GetAliveList_opponent(owner.faction))

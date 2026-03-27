@@ -14,23 +14,6 @@ namespace Contingecy_Contract
     public class ContingecyContract_Philip_Burn : ContingecyContract
     {
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1301011;
-        public override string[] GetFormatParam(string language) => new string[] {TextDataModel.GetText(Param1),(1 + 2 * Level).ToString() };
-        private string Param1
-        {
-            get
-            {
-                switch (Level)
-                {
-                    case (1):
-                        return "ui_resistance_vulnerable";
-                    case (2):
-                        return "ui_resistance_normal";
-                    case (3):
-                        return "ui_resistance_endure";
-                }
-                return "";
-            }
-        }
         public override StatBonus GetStatBonus(BattleUnitModel owner)
         {
             return new StatBonus() { breakRate = 50};
@@ -98,7 +81,6 @@ namespace Contingecy_Contract
     public class ContingecyContract_Philip_Silence : ContingecyContract
     {
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1301021;
-        public override string[] GetFormatParam(string language) => new string[] { StaticDataManager.GetParam("Philip_Silence_param" + Level.ToString(), language), (20 * Level).ToString() };
         public override int SpeedDiceNumAdder()
         {
             return 1;

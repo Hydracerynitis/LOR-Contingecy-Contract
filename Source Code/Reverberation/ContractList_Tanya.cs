@@ -11,18 +11,6 @@ namespace Contingecy_Contract
 {
     public class ContingecyContract_Tanya_Solo : ContingecyContract, Retaliater
     {
-        public override string[] GetFormatParam(string language) => new string[] { GetParam(language)};
-        private string GetParam(string language)
-        {
-            string s = "";
-            if (Level >= 1)
-                s += StaticDataManager.GetParam("Tanya_Solo_param1", language);
-            if (Level >= 2)
-                s += StaticDataManager.GetParam("Tanya_Solo_param2", language);
-            if (Level >= 3)
-                s += StaticDataManager.GetParam("Tanya_Solo_param3", language);
-            return s;
-        }
         public override void OnDrawCard()
         {
             base.OnDrawCard();
@@ -79,18 +67,6 @@ namespace Contingecy_Contract
         private Queue<int> Priority;
         private int Ultimate_interval => Level >= 3 ? 3 : 4;
         private int TanyaPhase => TanyaPassive._phase;
-        public override string[] GetFormatParam(string language) => new string[] { GetParam(language), (10 + 10 * Level).ToString() };
-        private string GetParam(string language)
-        {
-            string s = "";
-            if (Level >= 1)
-                s = StaticDataManager.GetParam("Philip_Silence_param1", language);
-            if (Level >= 2)
-                s = StaticDataManager.GetParam("Philip_Silence_param2", language);
-            if (Level >= 3)
-                s = StaticDataManager.GetParam("Philip_Silence_param3", language);
-            return s;
-        }
         
         public override void Init(BattleUnitModel self)
         {

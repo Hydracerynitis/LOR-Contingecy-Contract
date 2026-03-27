@@ -1,0 +1,85 @@
+{
+    "CDs":[
+        {
+            "contract":"Damage_L",
+            "name":"Poor Maintaince",
+            "desc":"Librarians deal {0}% less Damage",
+            "param":[
+                {"Level":1, "Content":["20"]},
+                {"Level":2, "Content":["40"]},
+                {"Level":3, "Content":["60"]}
+            ]
+        },
+        {
+            "contract":"BreakDamage_L",
+            "name":"Unfocused",
+            "desc":"Librarians deal {0}% less Stagger Damage",
+            "param":[
+                {"Level":1, "Content":["20"]},
+                {"Level":2, "Content":["40"]},
+                {"Level":3, "Content":["60"]}
+            ]
+        },
+        {
+            "contract":"Power_L",
+            "name":"Fatigue",
+            "desc":"All Librarians lose {0} dice Power.",
+            "param":[
+                {"Level":1, "Content":["1"]},
+                {"Level":2, "Content":["2"]},
+                {"Level":3, "Content":["3"]}
+            ]
+        },
+        {
+            "contract":"Hp_L",
+            "name":"Fragile",
+            "desc":"Reduce max HP of all Librarians by {0}%",
+            "param":[
+                {"Level":1, "Content":["20"]},
+                {"Level":2, "Content":["40"]},
+                {"Level":3, "Content":["60"]}
+            ]
+        },
+        {
+            "contract":"Bp_L",
+            "name":"Unbalanced Stance",
+            "desc":"Reduce max Stagger Resist of all Librarians by {0}%",
+            "param":[
+                {"Level":1, "Content":["20"]},
+                {"Level":2, "Content":["40"]},
+                {"Level":3, "Content":["60"]}
+            ]
+        },
+        {
+            "contract":"Darkness",
+            "name":"Engulfed by Darkness",
+            "desc":"Librarians start their first act with just {0} Light",
+            "param":[
+                {"Level":1, "Content":["3"]},
+                {"Level":2, "Content":["2"]},
+                {"Level":3, "Content":["1"]},
+                {"Level":4, "Content":["0"]}
+            ]
+        },
+        {
+            "contract":"NoBuff",
+            "name":"Affliction",
+            "desc":"All Librarians are immune to postivie status effects"
+        },
+        {
+            "contract":"NoEGO",
+            "name":"Lack of Self",
+            "desc":"Librarians can no longer use EGO pages"
+        },
+        {
+            "contract":"NoEmotion",
+            "name":"Stoicism",
+            "desc":"Librarians are no longer susceptible to {0} Abnormality Card",
+            "param":[
+                {"Level":1, "Content":["Tier 3"]},
+                {"Level":2, "Content":["Tier 3 and Tier 2"]},
+                {"Level":3, "Content":["Tier 3, Tier 2 and Tier 1"]}
+            ]
+        }
+    ]
+}

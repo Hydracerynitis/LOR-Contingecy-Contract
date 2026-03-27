@@ -26,9 +26,6 @@ namespace Contingecy_Contract
             return info.stageType == StageType.Invitation;
         }
     }
-    public class ContingecyContract_Duplicate : ContingecyContract
-    {
-    }
     public class StageModifier_Last: StageModifier
     {
         public override bool IsValid(StageClassInfo info)
@@ -39,10 +36,6 @@ namespace Contingecy_Contract
         {
             info.floorNum = 1;
         }
-    }
-    public class ContingecyContract_Last : ContingecyContract
-    {
-
     }
     public class StageModifier_LowFloor : StageModifier
     {
@@ -71,10 +64,6 @@ namespace Contingecy_Contract
             }
         }
     }
-    public class ContingecyContract_LowFloor : ContingecyContract
-    {
-        public override string[] GetFormatParam(string language) => Level==1? new string[] {"5"} : new string[] { "9"};
-    }
     public class StageModifier_LowPeople: StageModifier
     {
         public override bool IsValid(StageClassInfo info)
@@ -94,8 +83,5 @@ namespace Contingecy_Contract
                     wave.availableNumber -= 1;
             }
         }
-    }
-    public class ContingecyContract_LowPeople: ContingecyContract
-    {
     }
 }

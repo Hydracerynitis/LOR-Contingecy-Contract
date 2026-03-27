@@ -12,7 +12,6 @@ namespace Contingecy_Contract
     public class ContingecyContract_Jaeheon_Thread : ContingecyContract
     {
         public override bool CheckEnemyId(LorId EnemyId) => EnemyId == 1307011;
-        public override string[] GetFormatParam(string language) => new string[] { Level.ToString(), (Level - 1).ToString() };
         public override bool isInvincibleHp => BattleObjectManager.instance.GetAliveList(this.owner.faction).Count > 1;
         public override bool isInvincibleBp => BattleObjectManager.instance.GetAliveList(this.owner.faction).Count > 1;
         public override void OnRoundStart()
@@ -53,7 +52,6 @@ namespace Contingecy_Contract
     public class ContingecyContract_Jaeheon_Puppet : ContingecyContract
     {
         private List<WaitThread> waitThreads = new List<WaitThread>();
-        public override string[] GetFormatParam(string language) => new string[] { (4 - Level).ToString(), (10+30*Level).ToString() };
         private bool IsJaeheon => this.owner.UnitData.unitData.EnemyUnitId == new LorId(1307011);
         private bool HasThread(BattleUnitModel unit) => unit.bufListDetail.GetActivatedBuf(KeywordBuf.JaeheonPuppetThread) != null;
         public override int SpeedDiceNumAdder() => HasThread(this.owner) ? 1 : 0;

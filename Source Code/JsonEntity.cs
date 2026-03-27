@@ -17,7 +17,6 @@ namespace Contingecy_Contract
     public class ContractBluePrint
     {
         public string Type;
-        public List<ContractDesc> desc = new List<ContractDesc>();
         public ContractXmlType contractType = ContractXmlType.Passive;
         public Faction Faction;
         public int Variation = 0;
@@ -48,7 +47,7 @@ namespace Contingecy_Contract
         {
             if (desc.Find(x => x.language == TextDataModel.CurrentLanguage) is ContractDesc Desc)
                 return Desc;
-            else if(TextDataModel.CurrentLanguage=="trcn")
+            else if (TextDataModel.CurrentLanguage == "trcn")
                 return desc.Find(x => x.language == "cn");
             else
                 return desc.Find(x => x.language == "en");
@@ -59,36 +58,28 @@ namespace Contingecy_Contract
         public string language;
         public string name;
         public string desc;
-        public ContractDesc Copy()
-        {
-            ContractDesc copy = new ContractDesc
-            {
-                language = language,
-                name = name,
-                desc = desc
-            };
-            return copy;
-        }
     }
     public enum ContractXmlType
     {
-        Passive =0,
-        Stage =1 
+        Passive = 0,
+        Stage = 1
     }
-    // ContractParam
-    public class ParamCollection
+    //ContractDesc
+    public class ContractDescCollection
     {
-        public List<Params> Ps = new List<Params>();
+        public List<ContractDescBluePrint> CDs = new List<ContractDescBluePrint>();
+    }
+    public class ContractDescBluePrint
+    {
+        public string contract;
+        public string name;
+        public string desc;
+        public List<Params> param=new List<Params>();
     }
     public class Params
     {
-        public string Id;
-        public List<ParamDesc> Desc = new List<ParamDesc>();
-    }
-    public class ParamDesc
-    {
-        public string Language;
-        public string Content;
+        public int Level;
+        public List<string> Content;
     }
     //ContractReward
     public class ContractRewardCollection

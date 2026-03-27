@@ -12,6 +12,8 @@
 	<text id="ui_Jeaheon_counter">反击架势</text>
 	<text id="ui_PrimeSoul_1">第一页</text>
 	<text id="ui_PrimeSoul_2">第二页</text>
+	<text id="ui_Hana_Olivier_Web">奥利维耶会在第二舞台加入战斗.\n奥利维耶存活时使所有友方单位获得\"十二收尾人\"被动.</text>
+	<text id="ui_Hana_Olivier_Protocol">奥利维耶会在第二舞台加入战斗.\n美里奈获得\"十二收尾人\"和\"一切为하나\"被动并且也会在传递\"하나为一切\"时也会传递这些被动.</text>
 	<text id="Tanya_Brawl_none">无</text>
 	<text id="Speed_Furioso">速战速决 Furioso</text>
 	<text id="Enhance_HeavySmoke_Passive">击中处于“浓烟”状态下的目标时伤害+{0}

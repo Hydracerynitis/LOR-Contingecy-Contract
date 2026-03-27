@@ -1,0 +1,229 @@
+{
+    "CDs":[
+        {
+            "contract":"Philip_Burn",
+            "name":"Immolation",
+            "desc":"Increase Philip's max Stagger Resist by 50%;\nOverHeat will change Stagger Resisteance to {0}; Increase Damage dealt by {1} when Overheated",
+            "param":[
+                {"Level":1, "Content":["Vulnerable","3"]},
+                {"Level":2, "Content":["Normal","5"]},
+                {"Level":3, "Content":["Endured","7"]}
+            ]
+        },
+        {
+            "contract":"Philip_Silence",
+            "name":"Them Not Speak",
+            "desc":"Increase Unspeaking Childs gain +1 speed die and their attack pattern becomes {0} aggressive; \nIncrease Max HP and Max Stagger Resist by {1}%",
+            "param":[
+                {"Level":1, "Content":["more","20"]},
+                {"Level":2, "Content":["much more","40"]},
+                {"Level":3, "Content":["extremely","60"]}
+            ]
+        },
+        {
+            "contract":"Philip",
+            "name":"Weighty Cello",
+            "desc":"Philip's attack pattern becomes more aggressive."
+        },
+        {
+            "contract":"Eileen_Production",
+            "name":"Fanatic Faith",
+            "desc":"Increase Eileen's max Hp by {0}%;\nThe Gear Worshippers gain an additional speed die and +2 max Light.{1}",
+            "param":[
+                {"Level":1, "Content":["50",""]},
+                {"Level":2, "Content":["75","\nAt the start of each Scene, gain 2 Smoke"]},
+                {"Level":3, "Content":["100","\nAt the start of each Scene, gain 2 Smoke, recover 2 light and draw 2 cards"]}
+            ]
+        },
+        {
+            "contract":"Eileen_BodyGuard",
+            "name":"Body Guard",
+            "desc":"Increase Gear Whorshipper's Max HP and Max Stagger Resist by {0}\nIf a Gear Worshipper is alive, damage inflicted to Eileen will be transferred to a Gear Worshipper.",
+            "param":[
+                {"Level":1, "Content":["50%;"]},
+                {"Level":2, "Content":["75%; \nIncrease the maximun value of the second die of 'Thought Gear: Brainwash' by 3;"]},
+                {"Level":3, "Content":["100%; \nIncrease the maximun value of the second die of 'Thought Gear: Brainwash' by 6;"]}
+            ]
+        },
+        {
+            "contract":"Eileen",
+            "name":"Sharp Harp",
+            "desc":"The Gear Worshippers gain an unique deck of combat pages."
+        },
+        {
+            "contract":"Greta_Salt",
+            "name":"Season and Spice",
+            "desc":"On Clash Win inflict 1 Paralyzed/Fragile/Bind randomly;Increase Inflicted Bleeding Stack by {0};\nLibrarians who got staggered or turned into Fresh Meat will be inflicted permantly {1} Feeble and Disarmed (Stackable);\nPrioritize Librarian without status ailment and uses 'Mealtime' on Fresh Meat immediately.",
+            "param":[
+                {"Level":1, "Content":["1","1"]},
+                {"Level":2, "Content":["2","2"]},
+                {"Level":3, "Content":["3","3"]}
+            ]
+        },
+        {
+            "contract":"Greta_Feast",
+            "name":"Mince and Mash",
+            "desc":"In the first phase, HP does not fall below 50% and if it's at or below 60%, proceed to the next phase;\n{0} Increase Hp recovered from Fresh Meat by {1}%.",
+            "param":[
+                {"Level":1, "Content":["","50"]},
+                {"Level":2, "Content":["When using “Into the Sack you go!”, use it to 1 more librarins;","100"]},
+                {"Level":3, "Content":["When using “Into the Sack you go!”, use it to 2 more librarins;","200"]}
+            ]
+        },
+        {
+            "contract":"Greta",
+            "name":"Menacing Percussion",
+            "desc":"At the Start of the Act, Gain 100 Resistance instead;\nAt the start of every third Scene, If this character has no Resistance, Gain 50 Resistance\n and Purge all status ailment."
+        },
+        {
+            "contract":"Bremen_Self",
+            "name":"Immersive Performance",
+            "desc":"Speed Dice +{0} and attack pattern becom more aggressive.\nChorus at the Climax's effect will be applied to all targets and inflict extra 2 Bind{1} next Scene.",
+            "param":[
+                {"Level":1, "Content":["1",""]},
+                {"Level":2, "Content":["2"," and Disarm"]},
+                {"Level":3, "Content":["3",", Disarm and Feeble"]}
+            ]
+        },
+        {
+            "contract":"Bremen_Group",
+            "name":"Passionate Influence",
+            "desc":"Allies except Bremen will be revived with Bremen's Emotion Level\n 2 Scene after their death as long as Bremen is alive.\nBremen's allies gain 3 copies of 'Everlasting Melody'{0};\nWhen gaining Strength, Endurance, Haste, or Protection through Combat Pages,\ngive the same status effect to a random other ally\n(At most {1} times per Scene).",
+            "param":[
+                {"Level":1, "Content":["","1"]},
+                {"Level":2, "Content":[" and 3 copies of 'Dark Shrine to Music'","2"]},
+                {"Level":3, "Content":[", 3 copies of 'Dark Shrine to Music' and a copy of 'Trio'","3"]}
+            ]
+        },
+        {
+            "contract":"Bremen",
+            "name":"Horn, Tuba and Trombone",
+            "desc":"Increase Max Stagger Resist to 200, Ignore 'Untargetable' effect while using Melee Page.\nTake at most 20% of Max HP in one Scene."
+        },
+        {
+            "contract":"Oswald_Debut",
+            "name":"Newcommers' Debut",
+            "desc":"Mr. Knife's combat pages are enhanced{0}",
+            "param":[
+                {"Level":1, "Content":["."]},
+                {"Level":2, "Content":[";\nMs. Mermaid gain +2 Speed Dice and becomes more aggressive."]},
+                {"Level":3, "Content":[", gain +1 Speed Dice and becomes more aggressive;\nMs. Mermaid gain +2 Speed Dice and becomes much more aggressive."]}
+            ]
+        },
+        {
+            "contract":"Oswald_Troll",
+            "name":"Improvised Flash mob",
+            "desc":"Oswald will render the librarian who dealt the most damage Stupified instead;\nReception will conclude if there are no non-stupified librarians left.\nStupified Librarian gain +2 dice Power{0}.",
+            "param":[
+                {"Level":1, "Content":[""]},
+                {"Level":2, "Content":[" and deals 50% more Damage as well as Stagger Damage"]},
+                {"Level":3, "Content":[" and deals 50% more Damage as well as Stagger Damage;\nAlso, they gain +2 speed dice and draw 2 more pages at the start of each Scene"]}
+            ]
+        },
+        {
+            "contract":"Oswald",
+            "name":"Throaty Clarinet",
+            "desc":"Emma &amp; Noah will appear and their combat pages will be enhanced"
+        },
+        {
+            "contract":"Tanya_Solo",
+            "name":"One Man Army",
+            "desc":"Remove counter dice from all Combat Pages.\nUpon being targeted by a one-sideed attack, respond with 'Fistcuffs', 'Kick and Stomp', 'Lupine Onslaught' or 'Intimidate';\nAll Offensive Dice Gain 4 Power after the first Scene{0}.",
+            "param":[
+                {"Level":1, "Content":[""]},
+                {"Level":2, "Content":["and gain extra 3 Power at Emotion Level 3"]},
+                {"Level":3, "Content":[", gain extra 3 Power at Emotion Level 3, gain extra 2 Power at Emotion Level 5."]}
+            ]
+        },
+        {
+            "contract":"Tanya_Brawl",
+            "name":"Code of Brawling",
+            "desc":"Gain +2 Speed Dice; The attack pattern becomes {0} aggressive;\nReduce incoming Damage and Stagger Damage by {1}%;\nIf Tanya uses combat pages against the same Librarian 4 times in one Scene, she will “see through” that librarian's attacks;\nNext scene, upon clashing with Tanya, she will destroy all dice from that librarian's combat pages",
+            "param":[
+                {"Level":1, "Content":["more","20"]},
+                {"Level":2, "Content":["much more","30"]},
+                {"Level":3, "Content":["extremely","40"]}
+            ]
+        },
+        {
+            "contract":"Tanya",
+            "name":"Dark Viola",
+            "desc":"'Time for Round Two' can be triggered again;\nTanya will recover 10% of max HP every Scene and become unstaggerable afterwards"
+        },
+        {
+            "contract":"Jaeheon_Thread",
+            "name":"Puppet Performance",
+            "desc":"Boost Jae-heon's Counter dices' Power by +{0};\nImmune to Damage and Stagger Damage as he has other allies{1}",
+            "param":[
+                {"Level":1, "Content":["1",""]},
+                {"Level":2, "Content":["2",";\nIncrease Puppet Strings stack by 1 when it's first applied to Puppets."]},
+                {"Level":3, "Content":["3",";\nIncrease Puppet Strings stack by 2 when it's first applied to Puppets."]}
+            ]
+        },
+        {
+            "contract":"Jaeheon_Puppet",
+            "name":"Strings Dexterity",
+            "desc":"{0} Scene after Puppets lose Puppet Strings, Jae-heon will apply new Puppet Strings to them;\nPuppets with Puppet Strings gain + 1 speed dice; Increase Jae-heon's Max Stagger Resist by {1}%.",
+            "param":[
+                {"Level":1, "Content":["3","40"]},
+                {"Level":2, "Content":["2","70"]},
+                {"Level":3, "Content":["1","100"]}
+            ]
+        },
+        {
+            "contract":"Jaeheon",
+            "name":"Outraged Second Violin",
+            "desc":"Jae-heon's Attack Pattern becomes more aggressive."
+        },
+        {
+            "contract":"Elena_Cross",
+            "name":"Scorching Cross",
+            "desc":"Upon being hit by The Vermilion Cross 3 times will gain {0} Scorched the next Scene\n(Upon Hit by The Vermilion Cross reduce the stack by 1\n and make him attack a random other Librarian{1}).",
+            "param":[
+                {"Level":1, "Content":["1",""]},
+                {"Level":2, "Content":["2"," with Damage boosted by 25%"]},
+                {"Level":3, "Content":["3"," with Damage boosted by 50%"]}
+            ]
+        },
+        {
+            "contract":"Elena_Zombie",
+            "name":"Feast",
+            "desc":"Elena will use Feast against Librarian with {0}% max HP or lower,\nturning them into Nameless Shell that will attack other Librarians;\nIncrease Elena's max HP by {1}%.",
+            "param":[
+                {"Level":1, "Content":["20","20"]},
+                {"Level":2, "Content":["25","40"]},
+                {"Level":3, "Content":["30","50"]}
+            ]
+        },
+        {
+            "contract":"Elena",
+            "name":"Elegant First Violin",
+            "desc":"The Vermilion Cross and Elena's Attack Pattern becomes more aggressive."
+        },
+        {
+            "contract":"Pluto_Shadow",
+            "name":"Indifference",
+            "desc":"Increase Shades' max HP and Stagger Resist by {0}%;\nBoost dice Power against the Libarian copied from by {1}.",
+            "param":[
+                {"Level":1, "Content":["50","1"]},
+                {"Level":2, "Content":["65","2"]},
+                {"Level":3, "Content":["80","3"]}
+            ]
+        },
+        {
+            "contract":"Pluto_Barrier",
+            "name":"Crashing Barrier",
+            "desc":"Librarians in the Sealing Barrier take Damage equal to {0}% of their max HP;\nIncrease Pluto's max HP by 100%; Increase max Stagger Resist Librarian sent to Sealing Barrier by {1}%.",
+            "param":[
+                {"Level":1, "Content":["5","30"]},
+                {"Level":2, "Content":["10","40"]},
+                {"Level":3, "Content":["15","50"]}
+            ]
+        },
+        {
+            "contract":"Pluto",
+            "name":"Grand Pipe Organ",
+            "desc":"Release a new Random Contract per 3 Scene."
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "CCs":[
+        {
+            "Type":"LoveTown",
+            "Faction":0,
+            "BaseLevel":4,
+            "Stageid":30005
+        }
+    ]
+}

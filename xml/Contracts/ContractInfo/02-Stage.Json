@@ -1,0 +1,32 @@
+{
+    "CCs":[
+        {
+            "Type":"Duplicate",
+            "contractType":1,
+            "Faction":0,
+            "BaseLevel":4
+        },
+        {
+            "Type":"Last",
+            "contractType":1,
+            "Faction":1,
+            "BaseLevel":4,
+            "Conflict":["LowFloor"]
+        },
+        {
+            "Type":"LowFloor",
+            "contractType":1,
+            "Faction":1,
+            "Variation":2,
+            "Step":2,
+            "BaseLevel":2,
+            "Conflict":["Last"]
+        },
+        {
+            "Type":"LowPeople",
+            "contractType":1,
+            "Faction":1,
+            "BaseLevel":4
+        }
+    ]
+}

@@ -11,7 +11,6 @@ namespace Contingecy_Contract
 {
     public class ContingecyContract_Hana_Web : ContingecyContract
     {
-        public override string[] GetFormatParam(string language) => new string[] { StaticDataManager.GetParam("Hana_Web_param" + Level.ToString(), language)};
         public class New_Passive_260002 : PassiveAbilityBase
         {
             public override void OnAddKeywordBufByCardForEvent( KeywordBuf keywordBuf, int stack, BufReadyType readyType)
@@ -127,7 +126,6 @@ namespace Contingecy_Contract
     public class ContingecyContract_Hana_Protocol : ContingecyContract
     {
         public BattleAllyCardDetail gainPassiveAllyCard=null;
-        public override string[] GetFormatParam(string language) => new string[] { GetParam(language) };
         private string GetParam(string language)
         {
             string s = "";
@@ -397,11 +395,11 @@ namespace Contingecy_Contract
                     if (unit == self) continue;
                     unit.bufListDetail.AddBuf(new TwelveFixers());
                 }
-                desc = StaticDataManager.GetParam("Hana_Olivier_Web", TextDataModel.CurrentLanguage);
+                desc = TextDataModel.GetText("Hana_Olivier_Web");
             }
             if (ContractLoader.Instance.ExistContract("Hana_Protocol"))
             {
-                desc = StaticDataManager.GetParam("Hana_Olivier_Protocol", TextDataModel.CurrentLanguage);
+                desc = TextDataModel.GetText("Hana_Olivier_Protocol");
             }
         }
         public override void OnDie()

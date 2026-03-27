@@ -24,7 +24,6 @@ namespace Contingecy_Contract
                 num -= 1;
             return num;
         }
-        public override string[] GetFormatParam(string language) => new string[] { StaticDataManager.GetParam("Roland1st_Furioso_param" + Level.ToString(), language), StaticDataManager.GetParam("Philip_Silence_param" + Level.ToString(), language)};
         public override bool CheckEnemyId(LorId EnemyId)
         {
             return EnemyId== 60005;
@@ -127,18 +126,6 @@ namespace Contingecy_Contract
     public class ContingecyContract_Roland1st_Durandal : ContingecyContract
     {
         private Queue<int> Priority = new Queue<int>();
-        public override string[] GetFormatParam(string language) => new string[] {  GetParam(language) };
-        private string GetParam(string language)
-        {
-            string s = "";
-            if (Level >= 1)
-                s += StaticDataManager.GetParam("Roland1st_Durandal_param1", language);
-            if (Level >= 2)
-                s += StaticDataManager.GetParam("Roland1st_Durandal_param2", language);
-            if (Level >= 3)
-                s += StaticDataManager.GetParam("Roland1st_Durandal_param3", language);
-            return s;
-        }
         public override bool CheckEnemyId(LorId EnemyId)
         {
             return EnemyId == 60005;
